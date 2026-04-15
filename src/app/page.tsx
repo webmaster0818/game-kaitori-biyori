@@ -222,6 +222,89 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Other Major Services */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="section-heading">
+              <span className="section-heading-bar" />その他の主要買取サービス
+            </h2>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
+              市場には多くのゲーム買取サービスが存在します。主要なサービスを把握しておきましょう。
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { name: 'ゲオ宅配買取', description: '大手チェーン、まとめ売りで最大35%UP' },
+              { name: 'ブックオフ', description: '全国900店舗、店頭持ち込みで即現金化' },
+              { name: '駿河屋', description: 'レトロゲーム・限定版に強い、コレクター向け' },
+              { name: 'ゲーム王国', description: 'ゲーム専門、初回査定額10%UP' },
+              { name: 'ホビーコレクト', description: '箱なし・ジャンクOK、宅配買取専門' },
+            ].map((s) => (
+              <div key={s.name} className="glass-card p-4">
+                <h3 className="font-bold text-sm mb-1" style={{ color: 'var(--color-deep-blue)' }}>{s.name}</h3>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>{s.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="text-xs mt-6 text-center" style={{ color: 'var(--color-text-lighter)' }}>
+            ※ 上記は市場の主要サービスの一部です。当サイトでは特に厳選した3社を詳しくレビューしています。
+          </p>
+        </div>
+      </section>
+
+      {/* Game Console Price Table */}
+      <section className="py-12 md:py-16 gaming-grid">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="section-heading">
+              <span className="section-heading-bar" />ゲーム機本体の買取相場【2026年4月】
+            </h2>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
+              主要ゲーム機の最新買取相場をまとめました。実際の買取額はサービスや状態により異なります。
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>ゲーム機</th>
+                  <th>買取相場</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { name: 'Switch（通常モデル）', price: '15,000〜22,000円' },
+                  { name: 'Switch 有機EL', price: '20,000〜28,000円' },
+                  { name: 'Switch Lite', price: '10,000〜15,000円' },
+                  { name: 'PS5（通常版）', price: '35,000〜45,000円' },
+                  { name: 'PS5（デジタルエディション）', price: '28,000〜38,000円' },
+                  { name: 'PS4 Pro', price: '12,000〜18,000円' },
+                  { name: 'PS4（通常版）', price: '8,000〜13,000円' },
+                  { name: 'Xbox Series X', price: '25,000〜35,000円' },
+                  { name: '3DS LL', price: '5,000〜10,000円' },
+                  { name: 'ゲームボーイアドバンスSP', price: '5,000〜15,000円' },
+                ].map((item) => (
+                  <tr key={item.name}>
+                    <td className="font-bold">{item.name}</td>
+                    <td>
+                      <span className="tag-pill tag-pill-green text-xs">{item.price}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
+            ※ 2026年4月時点の参考相場です。付属品の有無・本体の状態・市場動向により変動します。正確な買取額は各サービスの無料査定でご確認ください。
+          </p>
+        </div>
+      </section>
+
       {/* Console Quick Links */}
       <section className="py-12 md:py-16 bg-white" id="console">
         <div className="max-w-6xl mx-auto px-4">

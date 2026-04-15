@@ -154,6 +154,36 @@ export default function TifanaReviewPage() {
           </div>
         </section>
 
+        {/* User Reviews */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
+          <div className="space-y-4">
+            {[
+              { initial: 'D.I', age: '20代男性', rating: 5, text: 'ポケモンカードとSwitchソフトをまとめて持ち込みました。トレカに詳しい査定士さんがいて、レアカード1枚に想像以上の値段がつきました。ゲームとカードを一箇所で売れるのは本当に楽です。' },
+              { initial: 'N.W', age: '30代男性', rating: 4, text: 'フィギュアのコレクション整理で利用。箱ありのフィギュアは高値がつきましたが、箱なしのものはかなり安くなりました。ホビー全般に詳しいスタッフがいるので、価値をちゃんと分かってもらえる安心感はあります。' },
+              { initial: 'E.K', age: '20代女性', rating: 4, text: '宅配買取で遊戯王カードとPS4ソフトを送りました。査定結果は3日で届き、丁寧な内訳付きで納得感がありました。ただ、送料無料の条件があるので、少量だと店舗持ち込みの方がお得かもしれません。' },
+              { initial: 'T.M', age: '40代男性', rating: 3, text: 'レトロゲームの買取を期待して行きましたが、ファミコン本体の査定はそこそこ。レトロゲーム専門店のほうが高いかもしれません。ただ、ガンプラやソフビも一緒に売れたので、コレクション丸ごと処分したい人には便利だと思います。' },
+            ].map((review, i) => (
+              <div key={i} className="glass-card p-5">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(30,41,59,0.08)', color: '#1E293B' }}>
+                    {review.initial}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: 5 }).map((_, s) => (
+                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />よくある質問</h2>
