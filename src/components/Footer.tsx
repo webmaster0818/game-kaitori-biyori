@@ -22,6 +22,9 @@ const footerSections = [
     title: 'サイト情報',
     links: [
       { label: 'トップページ', href: '/' },
+      { label: '利用規約', href: '/terms/' },
+      { label: 'プライバシーポリシー', href: '/privacy/' },
+      { label: '記事制作ポリシー', href: '/content-policy/' },
     ],
   },
 ];
