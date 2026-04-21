@@ -40,10 +40,101 @@ const services = [
     pros: ['ホビー系の査定に強い', 'トレカやフィギュアもまとめて売れる', '店舗持ち込みで即現金化'],
     cons: ['出張買取非対応', '東京近郊がメイン'],
   },
+  {
+    rank: 4,
+    name: 'ゲオ宅配買取',
+    url: 'https://geo-online.co.jp/kaitori/',
+    tagline: '大手チェーン、まとめ売りで最大35%UP、宅配買取、全国対応',
+    reviewPath: '/review/geo/',
+    features: ['まとめ売りで最大35%UP', '大手チェーンの安心感', '宅配買取専門', '全国対応'],
+    buyMethods: ['宅配買取'],
+    target: 'ゲームソフト・ゲーム機・DVD・Blu-ray',
+    recommend: 'まとめて大量に売りたい方・大手の安心感を重視する方',
+    pros: ['まとめ売りボーナスが大きい', '大手チェーンで信頼性が高い', '送料無料・ダンボール無料'],
+    cons: ['店頭買取は別サービス', '査定に数日かかる場合あり'],
+  },
+  {
+    rank: 5,
+    name: 'ブックオフ',
+    url: 'https://www.bookoff.co.jp/',
+    tagline: '全国900店舗、店頭即現金化、宅配買取も対応',
+    reviewPath: '/review/bookoff/',
+    features: ['全国900店舗以上', '店頭持ち込みで即現金化', '宅配買取対応', '本・DVD・ゲーム幅広い'],
+    buyMethods: ['店舗買取', '宅配買取'],
+    target: 'ゲームソフト・本・DVD・CD・トレカなど幅広いジャンル',
+    recommend: '店舗に持ち込んですぐ現金化したい方',
+    pros: ['全国どこでも店舗がある', 'その場で現金が受け取れる', 'ゲーム以外もまとめて売れる'],
+    cons: ['専門店より買取額が低い傾向', '人気商品以外は査定が安め'],
+  },
+  {
+    rank: 6,
+    name: '駿河屋',
+    url: 'https://www.suruga-ya.jp/',
+    tagline: 'レトロゲーム・限定版に強い、コレクター向け、宅配/店舗',
+    reviewPath: '/review/surugaya/',
+    features: ['レトロゲームに強い', '限定版・希少品の高額査定', 'コレクター向け', '宅配/店舗対応'],
+    buyMethods: ['宅配買取', '店舗買取'],
+    target: 'レトロゲーム・限定版・コレクターズアイテム',
+    recommend: 'レトロゲームや希少品を適正価格で売りたい方',
+    pros: ['レトロゲームの査定に定評あり', '希少品に高値がつきやすい', 'コレクター市場に精通'],
+    cons: ['一般的なゲームは平均的な価格', '査定に時間がかかることがある'],
+  },
+  {
+    rank: 7,
+    name: 'ゲーム王国',
+    url: 'https://www.game-oukoku.jp/',
+    tagline: 'ゲーム専門、初回査定額10%UP、宅配買取',
+    reviewPath: '/review/game-oukoku/',
+    features: ['ゲーム専門買取', '初回査定額10%UP', '宅配買取対応', 'ゲーム機・ソフト幅広い'],
+    buyMethods: ['宅配買取'],
+    target: 'ゲームソフト・ゲーム機・周辺機器',
+    recommend: '初めてゲーム買取を利用する方・ゲーム専門店に任せたい方',
+    pros: ['ゲーム専門で査定が的確', '初回ボーナスがお得', '送料無料で手軽'],
+    cons: ['店舗持ち込み非対応', '知名度が大手より低い'],
+  },
+  {
+    rank: 8,
+    name: 'ホビーコレクト',
+    url: 'https://hobby-collect.jp/',
+    tagline: '箱なし・ジャンクOK、宅配買取専門',
+    reviewPath: '/review/hobby-collect/',
+    features: ['箱なし・ジャンクOK', '宅配買取専門', '幅広いジャンル対応', '送料無料'],
+    buyMethods: ['宅配買取'],
+    target: 'ゲーム・フィギュア・トレカ・ホビー全般',
+    recommend: '箱や説明書がなくても売りたい方・状態が悪いゲームを処分したい方',
+    pros: ['箱なし・ジャンクでも買取OK', '幅広いホビーに対応', '梱包キット無料'],
+    cons: ['店舗買取非対応', '高額査定は期待しにくい'],
+  },
+  {
+    rank: 9,
+    name: 'カイトリワールド',
+    url: 'https://kaitori-world.jp/',
+    tagline: 'フィギュア・ホビー強い、宅配専門、最短即日入金',
+    reviewPath: '/review/kaitori-world/',
+    features: ['フィギュア・ホビーに強い', '最短即日入金', '宅配買取専門', '送料無料'],
+    buyMethods: ['宅配買取'],
+    target: 'ゲーム・フィギュア・プラモデル・ホビー全般',
+    recommend: '早く現金が欲しい方・フィギュアとゲームをまとめて売りたい方',
+    pros: ['最短即日入金のスピード感', 'フィギュア・ホビーの査定が高い', '送料・手数料すべて無料'],
+    cons: ['店舗買取非対応', 'ゲーム単体だと他社の方が高い場合あり'],
+  },
+  {
+    rank: 10,
+    name: 'ネットオフ',
+    url: 'https://www.netoff.co.jp/',
+    tagline: 'ゲーム・本・DVD一括、まとめ売りボーナス',
+    reviewPath: '/review/netoff/',
+    features: ['ゲーム・本・DVD一括買取', 'まとめ売りボーナスあり', '宅配買取専門', '集荷対応'],
+    buyMethods: ['宅配買取'],
+    target: 'ゲーム・本・CD・DVD・ブルーレイなど',
+    recommend: '引っ越しや断捨離でゲーム・本・DVDをまとめて売りたい方',
+    pros: ['ジャンルをまたいでまとめ売りできる', 'まとめ売りボーナスがお得', '自宅集荷で手間いらず'],
+    cons: ['専門店より単品の査定額は低い', '買取不可品は処分費用がかかる場合あり'],
+  },
 ];
 
 const stats = [
-  { value: '3社', label: '厳選サービス' },
+  { value: '10社', label: '厳選サービス' },
   { value: '最大20社', label: '一括比較' },
   { value: '出張対応', label: '自宅で完結' },
   { value: '宅配対応', label: '全国どこでも' },
@@ -129,7 +220,7 @@ export default function HomePage() {
             <h2 className="section-heading">
               <span className="section-heading-bar" />ゲーム買取おすすめ比較ランキング
             </h2>
-            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>3社を厳選して徹底比較しました</p>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>10社を厳選して徹底比較しました</p>
           </div>
 
           <div className="overflow-x-auto mb-12">
@@ -222,39 +313,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Other Major Services */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="section-heading">
-              <span className="section-heading-bar" />その他の主要買取サービス
-            </h2>
-            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              市場には多くのゲーム買取サービスが存在します。主要なサービスを把握しておきましょう。
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { name: 'ゲオ宅配買取', description: '大手チェーン、まとめ売りで最大35%UP' },
-              { name: 'ブックオフ', description: '全国900店舗、店頭持ち込みで即現金化' },
-              { name: '駿河屋', description: 'レトロゲーム・限定版に強い、コレクター向け' },
-              { name: 'ゲーム王国', description: 'ゲーム専門、初回査定額10%UP' },
-              { name: 'ホビーコレクト', description: '箱なし・ジャンクOK、宅配買取専門' },
-            ].map((s) => (
-              <div key={s.name} className="glass-card p-4">
-                <h3 className="font-bold text-sm mb-1" style={{ color: 'var(--color-deep-blue)' }}>{s.name}</h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>{s.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-xs mt-6 text-center" style={{ color: 'var(--color-text-lighter)' }}>
-            ※ 上記は市場の主要サービスの一部です。当サイトでは特に厳選した3社を詳しくレビューしています。
-          </p>
-        </div>
-      </section>
-
       {/* Game Console Price Table */}
       <section className="py-12 md:py-16 gaming-grid">
         <div className="max-w-6xl mx-auto px-4">
@@ -287,6 +345,7 @@ export default function HomePage() {
                   { name: 'Xbox Series X', price: '25,000〜35,000円' },
                   { name: '3DS LL', price: '5,000〜10,000円' },
                   { name: 'ゲームボーイアドバンスSP', price: '5,000〜15,000円' },
+                  { name: 'Switch 2（予約受付中）', price: '発売前 ※2026年6月発売予定' },
                 ].map((item) => (
                   <tr key={item.name}>
                     <td className="font-bold">{item.name}</td>
@@ -302,6 +361,13 @@ export default function HomePage() {
           <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
             ※ 2026年4月時点の参考相場です。付属品の有無・本体の状態・市場動向により変動します。正確な買取額は各サービスの無料査定でご確認ください。
           </p>
+
+          <div className="glass-card p-5 mt-6">
+            <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-accent-orange)' }}>Switch 2発売による買取相場への影響</h3>
+            <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
+              2026年6月のSwitch 2発売に伴い、旧型Switchの買取相場は下落傾向にあります。売却を検討中の方は早めの査定をおすすめします。
+            </p>
+          </div>
         </div>
       </section>
 
@@ -377,6 +443,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Diagnostic */}
+      <section className="py-12 md:py-16 bg-white" id="diagnosis">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="text-center mb-10">
+            <h2 className="section-heading">
+              <span className="section-heading-bar" />あなたに合った売り方診断
+            </h2>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
+              お持ちのゲームや希望に合わせて、おすすめの買取方法をご提案します
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/method/takuhai/" className="glass-card p-6 text-center card-hover block">
+              <div className="text-3xl mb-3">📦</div>
+              <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>自宅から送りたい</h3>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>宅配買取がおすすめ。送料無料・ダンボール無料のサービスも。</p>
+              <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">宅配買取ガイドへ</span>
+            </Link>
+            <Link href="/method/tenpo/" className="glass-card p-6 text-center card-hover block">
+              <div className="text-3xl mb-3">🏪</div>
+              <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>今すぐ現金化したい</h3>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>店舗買取なら即日現金化。ゲオやブックオフが便利。</p>
+              <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">店舗買取ガイドへ</span>
+            </Link>
+            <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-6 text-center card-hover block">
+              <div className="text-3xl mb-3">📱</div>
+              <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>手間をかけてでも高く売りたい</h3>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>フリマアプリなら自分で価格設定可能。手数料と手間を考慮して。</p>
+              <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">フリマvs業者比較へ</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-12 md:py-16 bg-white" id="faq">
         <div className="max-w-3xl mx-auto px-4">
@@ -412,6 +512,36 @@ export default function HomePage() {
               }),
             }}
           />
+        </div>
+      </section>
+
+      {/* Editorial Note - E-E-A-T */}
+      <section className="py-12 bg-white">
+        <div className="max-w-3xl mx-auto px-4">
+          <div className="glass-card p-6">
+            <h2 className="text-lg font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>当サイトの評価基準について</h2>
+            <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+              ゲーム買取びよりでは、以下の6つの基準でゲーム買取サービスを評価しています。
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {[
+                { label: '買取価格', desc: '実際の査定額の高さ' },
+                { label: '対応スピード', desc: '査定・入金までの速さ' },
+                { label: '口コミ評価', desc: 'ユーザーの満足度' },
+                { label: '取扱品目', desc: '対応ジャンルの広さ' },
+                { label: '利用しやすさ', desc: '申込み・梱包の手軽さ' },
+                { label: '信頼性', desc: '実績・運営体制の安定性' },
+              ].map((c) => (
+                <div key={c.label} className="text-center p-3" style={{ background: 'var(--color-bg-subtle)', borderRadius: '8px' }}>
+                  <p className="text-sm font-bold" style={{ color: 'var(--color-electric-green)' }}>{c.label}</p>
+                  <p className="text-xs mt-1" style={{ color: 'var(--color-text-light)' }}>{c.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
+              最終更新日: 2026年4月21日 ｜ 掲載情報は各サービスの公式サイトを参照しています。
+            </p>
+          </div>
         </div>
       </section>
 
