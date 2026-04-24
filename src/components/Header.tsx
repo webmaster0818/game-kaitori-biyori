@@ -35,9 +35,12 @@ export default function Header() {
               {item.label}
             </Link>
           ))}
-          <Link href="/#ranking" className="btn-primary text-sm py-2 px-4">
-            おすすめを見る
-          </Link>
+          <div className="flex flex-col items-end">
+            <Link href="/#ranking" className="btn-primary text-sm py-2 px-4">
+              おすすめを見る
+            </Link>
+            <span style={{ fontSize: '10px', color: '#999', marginTop: '2px' }}>PRを含みます</span>
+          </div>
         </nav>
 
         {/* Mobile Hamburger */}
