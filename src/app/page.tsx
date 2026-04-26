@@ -13,6 +13,7 @@ const services = [
     recommend: '複数社を比較して最高値で売りたい方',
     pros: ['一括査定で最高値が見つかる', '対応業者数が圧倒的', '利用無料'],
     cons: ['業者から連絡が来る', '地域により対応業者に差あり'],
+    charaComment: 'ユウト：「一括査定は鉄板。まず最初に試してほしいサービスだよ！」',
   },
   {
     rank: 2,
@@ -26,6 +27,7 @@ const services = [
     recommend: '自宅にいながらまとめて売りたい方',
     pros: ['出張買取で手間いらず', 'その場で現金化', 'ゲーム以外もまとめて売れる'],
     cons: ['対応エリアが関東・関西中心', 'ゲーム専門ではない'],
+    charaComment: 'ユウト：「家から出なくていいのは最高。ゲーム以外もまとめて売れるのが強い！」',
   },
   {
     rank: 3,
@@ -39,6 +41,7 @@ const services = [
     recommend: 'ゲームと一緒にホビーグッズも売りたい方',
     pros: ['ホビー系の査定に強い', 'トレカやフィギュアもまとめて売れる', '店舗持ち込みで即現金化'],
     cons: ['出張買取非対応', '東京近郊がメイン'],
+    charaComment: 'ユウト：「フィギュアやトレカも一緒に売れるのがうれしい。ホビー好きにはここ！」',
   },
   {
     rank: 4,
@@ -52,6 +55,7 @@ const services = [
     recommend: 'まとめて大量に売りたい方・大手の安心感を重視する方',
     pros: ['まとめ売りボーナスが大きい', '大手チェーンで信頼性が高い', '送料無料・ダンボール無料'],
     cons: ['店頭買取は別サービス', '査定に数日かかる場合あり'],
+    charaComment: 'ミク：「大手の安心感ならゲオ！まとめ売りボーナスがお得だよ～」',
   },
   {
     rank: 5,
@@ -65,6 +69,7 @@ const services = [
     recommend: '店舗に持ち込んですぐ現金化したい方',
     pros: ['全国どこでも店舗がある', 'その場で現金が受け取れる', 'ゲーム以外もまとめて売れる'],
     cons: ['専門店より買取額が低い傾向', '人気商品以外は査定が安め'],
+    charaComment: 'ミク：「近所にあるから気軽に持ち込めるのがいいよね！即現金化もうれしい」',
   },
   {
     rank: 6,
@@ -78,6 +83,7 @@ const services = [
     recommend: 'レトロゲームや希少品を適正価格で売りたい方',
     pros: ['レトロゲームの査定に定評あり', '希少品に高値がつきやすい', 'コレクター市場に精通'],
     cons: ['一般的なゲームは平均的な価格', '査定に時間がかかることがある'],
+    charaComment: 'ミク：「レトロゲーム好きの私としては、駿河屋の目利きは信頼できる！」',
   },
   {
     rank: 7,
@@ -134,17 +140,17 @@ const services = [
 ];
 
 const stats = [
-  { value: '10社', label: '厳選サービス' },
-  { value: '最大20社', label: '一括比較' },
-  { value: '出張対応', label: '自宅で完結' },
-  { value: '宅配対応', label: '全国どこでも' },
+  { value: '10社', label: '厳選サービス', icon: 'PICK' },
+  { value: '最大20社', label: '一括比較', icon: 'VS' },
+  { value: '出張対応', label: '自宅で完結', icon: 'HOME' },
+  { value: '宅配対応', label: '全国どこでも', icon: 'POST' },
 ];
 
 const consoles = [
-  { name: 'Nintendo Switch', tag: 'Switch' },
-  { name: 'PlayStation 5', tag: 'PS5' },
-  { name: 'PlayStation 4', tag: 'PS4' },
-  { name: 'レトロゲーム', tag: 'レトロ' },
+  { name: 'Nintendo Switch', tag: 'Switch', abbr: 'SW' },
+  { name: 'PlayStation 5', tag: 'PS5', abbr: 'PS5' },
+  { name: 'PlayStation 4', tag: 'PS4', abbr: 'PS4' },
+  { name: 'レトロゲーム', tag: 'レトロ', abbr: 'RTO' },
 ];
 
 const steps = [
@@ -174,27 +180,39 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="hero-gradient text-white py-16 md:py-24">
         <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="text-center max-w-3xl mx-auto">
-            <p className="tag-pill tag-pill-green mb-4 mx-auto inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>
-              2026年最新版
-            </p>
-            <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight">
-              ゲームを高く売るなら<br className="md:hidden" />
-              <span style={{ color: 'var(--color-electric-green)' }}>ここ！</span>
-            </h1>
-            <p className="text-base md:text-lg mb-8 leading-relaxed" style={{ color: '#CBD5E1' }}>
-              ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
-              あなたのゲームを最も高く売れるサービスが見つかります。
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>Switch 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>PS5 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>レトロゲーム 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>ゲーム機 売る</span>
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-1 text-center md:text-left">
+              <p className="tag-pill tag-pill-green mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.2)', color: '#69F0AE' }}>
+                2026年最新版
+              </p>
+              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight">
+                ゲームを高く売るなら<br className="md:hidden" />
+                <span style={{ color: 'var(--color-electric-green)' }}>ここ！</span>
+              </h1>
+              <p className="text-base md:text-lg mb-8 leading-relaxed" style={{ color: '#CBD5E1' }}>
+                ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
+                あなたのゲームを最も高く売れるサービスが見つかります。
+              </p>
+              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
+                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>Switch 買取</span>
+                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>PS5 買取</span>
+                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>レトロゲーム 買取</span>
+                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>ゲーム機 売る</span>
+              </div>
+              <Link href="#ranking" className="btn-primary text-base py-3 px-8">
+                おすすめランキングを見る
+              </Link>
             </div>
-            <Link href="#ranking" className="btn-primary text-base py-3 px-8">
-              おすすめランキングを見る
-            </Link>
+            <div className="flex-shrink-0">
+              <img
+                src="/chara-main.jpg"
+                alt="ゲーム買取びよりナビゲーター ユウト"
+                className="chara-avatar-lg"
+                width={160}
+                height={160}
+              />
+              <p className="text-center text-xs mt-2 font-bold" style={{ color: '#69F0AE' }}>ナビゲーター ユウト</p>
+            </div>
           </div>
         </div>
       </section>
@@ -205,6 +223,9 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-2 text-xs font-black" style={{ background: 'linear-gradient(135deg, #0F1923, #1A2A3A)', color: '#00E676' }}>
+                  {s.icon}
+                </div>
                 <p className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--color-electric-green)' }}>{s.value}</p>
                 <p className="text-xs mt-1 font-semibold" style={{ color: 'var(--color-text-light)' }}>{s.label}</p>
               </div>
@@ -299,7 +320,24 @@ export default function HomePage() {
                   <span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>こんな方におすすめ：</span>{s.recommend}
                 </p>
 
-                <div className="flex flex-wrap gap-3">
+                {/* Character comment speech bubble */}
+                {s.charaComment && (
+                  <div className={`flex items-start gap-3 mt-4 p-3 rounded-lg ${s.rank <= 3 ? 'speech-bubble' : 'speech-bubble speech-bubble-miku'}`}>
+                    <img
+                      src={s.rank <= 3 ? '/chara-main.jpg' : '/chara-sub.jpg'}
+                      alt={s.rank <= 3 ? 'ユウト' : 'ミク'}
+                      className="chara-avatar"
+                    />
+                    <div>
+                      <span className="text-xs font-bold" style={{ color: s.rank <= 3 ? 'var(--color-electric-green)' : 'var(--color-accent-orange)' }}>
+                        {s.rank <= 3 ? 'ユウトのコメント' : 'ミクのコメント'}
+                      </span>
+                      <p className="text-sm mt-1" style={{ color: 'var(--color-text-light)' }}>{s.charaComment.split('：')[1]?.replace(/^「/, '').replace(/」$/, '') || s.charaComment}</p>
+                    </div>
+                  </div>
+                )}
+
+                <div className="flex flex-wrap gap-3 mt-4">
                   <Link href={s.reviewPath} className="btn-primary text-sm py-2 px-5">
                     {s.name}の詳細レビュー
                   </Link>
@@ -386,11 +424,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {consoles.map((c) => (
               <div key={c.tag} className="glass-card p-6 text-center card-hover cursor-pointer">
-                <div className="text-3xl mb-3">
-                  {c.tag === 'Switch' && '🎮'}
-                  {c.tag === 'PS5' && '🕹️'}
-                  {c.tag === 'PS4' && '🎯'}
-                  {c.tag === 'レトロ' && '👾'}
+                <div className="console-icon mx-auto mb-3">
+                  {c.abbr}
                 </div>
                 <h3 className="text-sm font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>{c.name}</h3>
                 <span className="tag-pill tag-pill-green text-xs">{c.tag} 買取</span>
@@ -398,16 +433,28 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8 glass-card p-6">
-            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>ハード別の買取ポイント</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <div>
-                <p className="mb-2"><strong>Nintendo Switch：</strong>有機ELモデルは特に高額査定。Joy-Con・ドック・箱ありで買取額アップ。限定カラーモデルはプレミア価格になることも。</p>
-                <p><strong>PlayStation 5：</strong>需要が安定しており比較的高額。デジタルエディションよりディスクドライブ搭載モデルが高値傾向。コントローラー・ケーブル類の付属品も重要です。</p>
-              </div>
-              <div>
-                <p className="mb-2"><strong>PlayStation 4：</strong>Proモデルは通常版より高値。SSD換装済みモデルは評価が分かれるため事前確認を。ソフトとセットでの買取がおすすめ。</p>
-                <p><strong>レトロゲーム：</strong>ファミコン・スーファミ・ゲームボーイなど、箱・説明書ありは数倍の価格差に。希少タイトルはコレクター需要で高額査定の可能性あり。ヒカカク！がおすすめ。</p>
+          <div className="mt-8 flex flex-col md:flex-row gap-6">
+            <div className="flex-shrink-0 flex justify-center">
+              <img
+                src="/game-consoles.jpg"
+                alt="レトロゲームからモダンゲーム機まで"
+                className="rounded-lg"
+                width={280}
+                height={200}
+                style={{ objectFit: 'cover', border: '2px solid var(--color-border)' }}
+              />
+            </div>
+            <div className="glass-card p-6 flex-1">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>ハード別の買取ポイント</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <div>
+                  <p className="mb-2"><strong>Nintendo Switch：</strong>有機ELモデルは特に高額査定。Joy-Con・ドック・箱ありで買取額アップ。限定カラーモデルはプレミア価格になることも。</p>
+                  <p><strong>PlayStation 5：</strong>需要が安定しており比較的高額。デジタルエディションよりディスクドライブ搭載モデルが高値傾向。コントローラー・ケーブル類の付属品も重要です。</p>
+                </div>
+                <div>
+                  <p className="mb-2"><strong>PlayStation 4：</strong>Proモデルは通常版より高値。SSD換装済みモデルは評価が分かれるため事前確認を。ソフトとセットでの買取がおすすめ。</p>
+                  <p><strong>レトロゲーム：</strong>ファミコン・スーファミ・ゲームボーイなど、箱・説明書ありは数倍の価格差に。希少タイトルはコレクター需要で高額査定の可能性あり。ヒカカク！がおすすめ。</p>
+                </div>
               </div>
             </div>
           </div>
@@ -429,11 +476,8 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {steps.map((s) => (
               <div key={s.step} className="glass-card p-5 card-hover relative">
-                <div
-                  className="text-4xl font-black mb-3 opacity-15"
-                  style={{ color: 'var(--color-electric-green)' }}
-                >
-                  {String(s.step).padStart(2, '0')}
+                <div className="step-number mb-3">
+                  {s.step}
                 </div>
                 <h3 className="text-sm font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>{s.title}</h3>
                 <p className="text-xs leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{s.description}</p>
@@ -454,21 +498,31 @@ export default function HomePage() {
               お持ちのゲームや希望に合わせて、おすすめの買取方法をご提案します
             </p>
           </div>
+          <div className="flex items-center gap-3 mb-6 justify-center">
+            <img src="/chara-sub.jpg" alt="ミク" className="chara-avatar" />
+            <p className="text-sm font-bold" style={{ color: 'var(--color-accent-orange)' }}>ミクがあなたにぴったりの売り方をナビします！</p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/method/takuhai/" className="glass-card p-6 text-center card-hover block">
-              <div className="text-3xl mb-3">📦</div>
+              <div className="diag-icon mx-auto mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="22" height="14" rx="2"/><path d="M1 10h22"/><path d="M8 6V2h8v4"/></svg>
+              </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>自宅から送りたい</h3>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>宅配買取がおすすめ。送料無料・ダンボール無料のサービスも。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">宅配買取ガイドへ</span>
             </Link>
             <Link href="/method/tenpo/" className="glass-card p-6 text-center card-hover block">
-              <div className="text-3xl mb-3">🏪</div>
+              <div className="diag-icon mx-auto mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>今すぐ現金化したい</h3>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>店舗買取なら即日現金化。ゲオやブックオフが便利。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">店舗買取ガイドへ</span>
             </Link>
             <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-6 text-center card-hover block">
-              <div className="text-3xl mb-3">📱</div>
+              <div className="diag-icon mx-auto mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
+              </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>手間をかけてでも高く売りたい</h3>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>フリマアプリなら自分で価格設定可能。手数料と手間を考慮して。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">フリマvs業者比較へ</span>
@@ -532,7 +586,7 @@ export default function HomePage() {
                 { label: '利用しやすさ', desc: '申込み・梱包の手軽さ' },
                 { label: '信頼性', desc: '実績・運営体制の安定性' },
               ].map((c) => (
-                <div key={c.label} className="text-center p-3" style={{ background: 'var(--color-bg-subtle)', borderRadius: '8px' }}>
+                <div key={c.label} className="text-center p-3 rounded-lg" style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border-light)' }}>
                   <p className="text-sm font-bold" style={{ color: 'var(--color-electric-green)' }}>{c.label}</p>
                   <p className="text-xs mt-1" style={{ color: 'var(--color-text-light)' }}>{c.desc}</p>
                 </div>
@@ -547,20 +601,34 @@ export default function HomePage() {
 
       {/* CTA */}
       <section className="py-16 md:py-20 hero-gradient text-white">
-        <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
-            あなたのゲーム、<span style={{ color: 'var(--color-electric-green)' }}>もっと高く</span>売れるかも
-          </h2>
-          <p className="text-sm md:text-base mb-8" style={{ color: '#CBD5E1' }}>
-            まずは無料査定で買取価格をチェック。複数サービスを比較して最高値を見つけましょう。
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8 text-base">
-              ヒカカク！で一括査定
-            </a>
-            <Link href="#ranking" className="btn-outline py-3 px-8 text-base" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}>
-              ランキングに戻る
-            </Link>
+        <div className="max-w-4xl mx-auto px-4 relative z-10">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex-1 text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
+                あなたのゲーム、<span style={{ color: 'var(--color-electric-green)' }}>もっと高く</span>売れるかも
+              </h2>
+              <p className="text-sm md:text-base mb-8" style={{ color: '#CBD5E1' }}>
+                まずは無料査定で買取価格をチェック。複数サービスを比較して最高値を見つけましょう。
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8 text-base">
+                  ヒカカク！で一括査定
+                </a>
+                <Link href="#ranking" className="btn-outline py-3 px-8 text-base" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}>
+                  ランキングに戻る
+                </Link>
+              </div>
+            </div>
+            <div className="flex-shrink-0">
+              <img
+                src="/chara-main.jpg"
+                alt="ユウト"
+                className="chara-avatar-lg"
+                width={140}
+                height={140}
+                style={{ width: '140px', height: '140px' }}
+              />
+            </div>
           </div>
         </div>
       </section>
