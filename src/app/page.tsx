@@ -178,7 +178,7 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FFF9E6 0%, #E8FFF0 50%, #FFF0F5 100%)' }}>
+      <section className="relative overflow-hidden" style={{ backgroundImage: 'url(/hero-bg-pattern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
           <div className="text-center">
             <p className="tag-pill tag-pill-green mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.15)', color: '#00C853' }}>
