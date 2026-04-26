@@ -178,41 +178,35 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-16 md:py-24">
-        <div className="max-w-6xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-1 text-center md:text-left">
-              <p className="tag-pill tag-pill-green mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.2)', color: '#69F0AE' }}>
-                2026年最新版
-              </p>
-              <h1 className="text-3xl md:text-5xl font-extrabold leading-tight mb-6 tracking-tight">
-                ゲームを高く売るなら<br className="md:hidden" />
-                <span style={{ color: 'var(--color-electric-green)' }}>ここ！</span>
-              </h1>
-              <p className="text-base md:text-lg mb-8 leading-relaxed" style={{ color: '#CBD5E1' }}>
-                ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
-                あなたのゲームを最も高く売れるサービスが見つかります。
-              </p>
-              <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 mb-8">
-                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>Switch 買取</span>
-                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>PS5 買取</span>
-                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>レトロゲーム 買取</span>
-                <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.1)', color: '#E2E8F0' }}>ゲーム機 売る</span>
-              </div>
-              <Link href="#ranking" className="btn-primary text-base py-3 px-8">
-                おすすめランキングを見る
-              </Link>
+      <section className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #FFF9E6 0%, #E8FFF0 50%, #FFF0F5 100%)' }}>
+        <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
+          <div className="text-center">
+            <p className="tag-pill tag-pill-green mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.15)', color: '#00C853' }}>
+              2026年最新版
+            </p>
+            <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-4 tracking-tight" style={{ color: '#1A1A2E' }}>
+              ゲームを高く売るなら<span style={{ color: '#FF6D00' }}>ここ！</span>
+            </h1>
+            <p className="text-sm md:text-base mb-6 leading-relaxed" style={{ color: '#666' }}>
+              ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
+              あなたのゲームを最も高く売れるサービスが見つかります。
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>Switch 買取</span>
+              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>PS5 買取</span>
+              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>レトロゲーム 買取</span>
+              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>ゲーム機 売る</span>
             </div>
-            <div className="flex-shrink-0">
-              <img
-                src="/chara-main.jpg"
-                alt="ゲーム買取びよりナビゲーター ユウト"
-                className="chara-avatar-lg"
-                width={160}
-                height={160}
-              />
-              <p className="text-center text-xs mt-2 font-bold" style={{ color: '#69F0AE' }}>ナビゲーター ユウト</p>
-            </div>
+            <Link href="#ranking" className="btn-primary text-base py-3 px-8 mb-6 inline-block">
+              おすすめランキングを見る
+            </Link>
+          </div>
+          <div className="flex justify-center">
+            <img
+              src="/hero-d.jpg"
+              alt="ゲーム買取びより - ナビゲーター ユウト"
+              style={{ maxWidth: '600px', width: '100%', height: 'auto' }}
+            />
           </div>
         </div>
       </section>
