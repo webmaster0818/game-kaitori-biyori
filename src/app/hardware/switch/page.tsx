@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2025年】',
+  title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】',
   description:
     'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を徹底比較。スイッチ本体を高く売るコツ5つ、Joy-ConやProコントローラーの買取情報、初期化手順まで完全解説。',
   keywords: ['Switch 買取', 'ニンテンドースイッチ 売る', 'Switch 買取相場', 'Switch Lite 買取', 'Switch OLED 買取'],
   openGraph: {
-    title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2025年】',
+    title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】',
     description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツを徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -17,9 +18,9 @@ export const metadata: Metadata = {
 };
 
 const priceData = [
-  { model: 'Nintendo Switch（通常モデル）', good: '18,000〜22,000円', fair: '12,000〜17,000円', poor: '5,000〜11,000円' },
-  { model: 'Nintendo Switch Lite', good: '10,000〜14,000円', fair: '7,000〜9,000円', poor: '3,000〜6,000円' },
-  { model: 'Nintendo Switch（有機ELモデル）', good: '25,000〜32,000円', fair: '18,000〜24,000円', poor: '10,000〜17,000円' },
+  { model: 'Nintendo Switch（通常モデル）', good: '14,000〜18,000円', fair: '9,000〜13,000円', poor: '4,000〜8,000円' },
+  { model: 'Nintendo Switch Lite', good: '8,000〜12,000円', fair: '5,000〜7,000円', poor: '2,000〜4,000円' },
+  { model: 'Nintendo Switch（有機ELモデル）', good: '22,000〜28,000円', fair: '15,000〜21,000円', poor: '8,000〜14,000円' },
 ];
 
 const tips = [
@@ -48,6 +49,7 @@ const faqs = [
 export default function SwitchPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo Switch' }]} />
 
       {/* Hero */}
@@ -72,7 +74,7 @@ export default function SwitchPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -137,6 +139,40 @@ export default function SwitchPage() {
                     <td>{s.area}</td>
                     <td>{s.method}</td>
                     <td>{s.switchPoint}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Price Comparison by Service */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />業者別買取価格比較</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ Nintendo Switch（通常モデル）の参考買取価格です。時期・在庫状況により変動します。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>業者名</th>
+                  <th>美品</th>
+                  <th>良品</th>
+                  <th>備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { name: 'ヒカカク！', good: '最大22,000円', fair: '最大18,000円', note: '一括査定で最高値を比較' },
+                  { name: 'ゲオ', good: '~18,000円', fair: '~14,000円', note: 'まとめ売りでUP' },
+                  { name: 'ブックオフ', good: '~16,000円', fair: '~12,000円', note: '店舗により変動' },
+                  { name: '駿河屋', good: '~17,000円', fair: '~13,000円', note: 'レトロに強い' },
+                  { name: '買取ウリエル', good: '~19,000円', fair: '~15,000円', note: '出張対応' },
+                ].map((row) => (
+                  <tr key={row.name}>
+                    <td className="font-bold">{row.name}</td>
+                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
+                    <td>{row.fair}</td>
+                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{row.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -258,6 +294,7 @@ export default function SwitchPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

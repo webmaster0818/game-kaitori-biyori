@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2025年】',
+  title: 'ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】',
   description:
     'ゲーム機・ソフトの売り時を月別カレンダーで徹底解説。新型発表前後の価格変動、新作ソフトの価格下落カーブ、年末年始・夏休みの需要上昇など、最適な売却タイミングを完全ガイド。',
   keywords: ['ゲーム 売り時', 'いつ売るのがベスト', 'ゲーム 売るタイミング', 'ゲーム機 売り時'],
   openGraph: {
-    title: 'ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2025年】',
+    title: 'ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】',
     description: 'ゲーム機・ソフトの売り時を月別カレンダーで徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -58,6 +59,7 @@ const faqs = [
 export default function TimingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '売り時ガイド' }]} />
 
       {/* Hero */}
@@ -233,6 +235,7 @@ export default function TimingPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

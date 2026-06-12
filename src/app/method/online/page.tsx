@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2025年】',
+  title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】',
   description:
     'ゲームソフト・本体の宅配買取を徹底解説。ネット買取の流れ4ステップ、梱包のコツ、送料負担の比較、メリット・デメリットからおすすめ3社の比較まで完全ガイド。自宅にいながらゲームを高く売る方法がわかります。',
   keywords: ['ゲーム 宅配買取', 'ゲーム ネット買取', 'ゲーム 宅配 おすすめ', 'ゲーム買取 送料無料', 'ゲーム 郵送買取'],
   openGraph: {
-    title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2025年】',
+    title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】',
     description: 'ゲームの宅配買取の流れ、梱包のコツ、おすすめ3社を徹底比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -62,6 +63,7 @@ const faqs = [
 export default function OnlinePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: '宅配買取' }]} />
 
       {/* Hero */}
@@ -241,6 +243,7 @@ export default function OnlinePage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

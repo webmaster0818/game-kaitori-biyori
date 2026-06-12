@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム店舗買取ガイド｜即日現金化・持ち込み時の注意点【2025年】',
+  title: 'ゲーム店舗買取ガイド｜即日現金化・持ち込み時の注意点【2026年】',
   description:
     'ゲームの店舗買取（持ち込み買取）を完全解説。即日現金化の流れ、メリット・デメリット、ティファナの店舗情報、持ち込み時の注意点まで。近くのゲーム買取店をお探しの方必見です。',
   keywords: ['ゲーム 店舗買取', '近くのゲーム買取店', 'ゲーム 持ち込み買取', 'ゲーム 即日現金化', 'ゲーム買取 店頭'],
   openGraph: {
-    title: 'ゲーム店舗買取ガイド｜即日現金化・持ち込み時の注意点【2025年】',
+    title: 'ゲーム店舗買取ガイド｜即日現金化・持ち込み時の注意点【2026年】',
     description: 'ゲームの店舗買取の流れ、即日現金化のコツ、持ち込み時の注意点を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -67,6 +68,7 @@ const faqs = [
 export default function ShopPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム店舗買取ガイド｜即日現金化・持ち込み時の注意点【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: '店舗買取' }]} />
 
       {/* Hero */}
@@ -271,6 +273,7 @@ export default function ShopPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

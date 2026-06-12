@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ポケモンゲームソフトの買取相場｜高く売れるタイトルと時期【2026年版】',
@@ -54,6 +55,7 @@ const faqs = [
 export default function PokemonPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ポケモンゲームソフトの買取相場｜高く売れるタイトルと時期【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ポケモン買取相場' }]} />
 
       {/* Hero */}
@@ -207,6 +209,7 @@ export default function PokemonPage() {
         </section>
 
         <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年5月</p>
+        <AuthorBox />
       </div>
     </>
   );

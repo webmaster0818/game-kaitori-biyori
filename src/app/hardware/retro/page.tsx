@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2025年】',
+  title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】',
   description:
     'ファミコン・スーファミ・メガドライブ・PCエンジン・ネオジオなどレトロゲームの買取相場とおすすめ買取サービス3社を比較。プレミアがつく条件5つ、高く売るコツ、注意点を徹底解説。',
   keywords: ['レトロゲーム 買取', 'ファミコン 売る', 'スーファミ 買取', 'レトロゲーム 買取相場', 'ネオジオ 買取'],
   openGraph: {
-    title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2025年】',
+    title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】',
     description: 'レトロゲーム機の買取相場とプレミアがつく条件を徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -61,6 +62,7 @@ const faqs = [
 export default function RetroPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'レトロゲーム' }]} />
 
       {/* Hero */}
@@ -279,6 +281,7 @@ export default function RetroPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'メルカリ vs 買取業者｜ゲームを売るならどっちが得？徹底比較【2025年】',
+  title: 'ゲームはメルカリと買取業者どっちで売る？【2026年6月】手数料・手取り額・入金日数を実データ比較',
   description:
-    'メルカリと買取業者を12項目で徹底比較。手取り額・手数料・送料・手間・時間・トラブルリスク・大量売り・レトロゲーム・新作ゲーム・周辺機器・返品リスク・個人情報の違いを解説。Switch売却時の手取り金額シミュレーション付き。',
-  keywords: ['メルカリ vs 買取業者 どっちが得', 'メルカリ ゲーム 手数料', 'メルカリ 買取 比較', 'ゲーム メルカリ 買取業者'],
+    'メルカリと買取業者を12項目で徹底比較。2026年現在の正確な手数料（販売手数料10%・振込手数料200円・ネコポス210円）で手取り額をシミュレーション。未開封品の扱いや入金スピードの違いなど見落としがちな差も公式情報をもとに解説します。',
+  keywords: ['メルカリ vs 買取業者 どっちが得', 'メルカリ ゲーム 手数料', 'メルカリ 買取 比較', 'ゲーム メルカリ 買取業者', 'ゲーム 売る どっち'],
   openGraph: {
-    title: 'メルカリ vs 買取業者｜ゲームを売るならどっちが得？徹底比較【2025年】',
-    description: 'メルカリと買取業者の12項目比較とSwitch売却シミュレーション。',
+    title: 'ゲームはメルカリと買取業者どっちで売る？【2026年6月】手数料・手取り額を実データ比較',
+    description: '2026年現在の正確な手数料でメルカリと買取業者の手取り額を比較。未開封品・入金スピードの違いも解説。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
 
 const comparisonItems = [
   { item: '手取り額', mercari: '販売価格から手数料10%+送料を引いた額', kaitori: '査定額がそのまま手取り（手数料無料が多い）', winner: '商品による' },
-  { item: '手数料', mercari: '販売価格の10%', kaitori: '無料が多い', winner: '買取業者' },
-  { item: '送料', mercari: '出品者負担が主流（750円〜1,700円）', kaitori: '送料無料が多い', winner: '買取業者' },
+  { item: '手数料', mercari: '販売価格の10% + 振込手数料200円', kaitori: '無料が多い（例外: 駿河屋は銀行振込880円）', winner: '買取業者' },
+  { item: '送料', mercari: '出品者負担が主流（ソフト1本ネコポス210円、本体60サイズ750円〜）', kaitori: '送料無料が多い（金額条件付きの場合あり）', winner: '買取業者' },
   { item: '手間', mercari: '撮影・出品文作成・質問対応・梱包・発送', kaitori: '申し込み→送るだけ / 持ち込むだけ', winner: '買取業者' },
   { item: '売却までの時間', mercari: '数時間〜数週間（いつ売れるか不明）', kaitori: '宅配: 3〜7日 / 店舗: 即日', winner: '買取業者' },
   { item: 'トラブルリスク', mercari: '値下げ交渉・受取評価遅延・すり替え詐欺', kaitori: '業者との取引でトラブル極少', winner: '買取業者' },
@@ -32,12 +33,13 @@ const comparisonItems = [
 ];
 
 const simulation = {
-  title: 'Nintendo Switch（通常モデル・美品）売却シミュレーション',
+  title: 'Nintendo Switch（通常モデル・美品）売却シミュレーション【2026年6月の現行料金で計算】',
   mercari: {
     salePrice: '25,000円',
-    fee: '-2,500円（10%）',
-    shipping: '-1,000円（らくらくメルカリ便）',
-    total: '21,500円',
+    fee: '-2,500円（販売手数料10%）',
+    shipping: '-750円（らくらくメルカリ便 宅急便60サイズ）',
+    transfer: '-200円（振込手数料）',
+    total: '21,550円',
   },
   kaitori: {
     hikakaku: '20,000〜22,000円（最大20社比較）',
@@ -57,7 +59,8 @@ const matrix = [
 
 const faqs = [
   { q: 'メルカリと買取業者、手取り額はどちらが多い？', a: '商品によります。人気の新作ゲームや限定版はメルカリのほうが高くなりがちです。ただしメルカリは手数料10%+送料がかかるため、実際の手取りは表示価格より3,000円以上少なくなることも。一方、買取業者は手数料・送料無料が多く、査定額がそのまま手取りになります。' },
-  { q: 'メルカリの手数料10%は高すぎませんか？', a: '手数料10%は一見高く感じますが、メルカリのユーザー数（月間2,000万人以上）による「売れやすさ」を考えると妥当ともいえます。ただし1万円のゲームを売ると手数料1,000円+送料750円=1,750円が引かれるため、手取りは8,250円。買取業者の査定額が9,000円なら業者のほうが得です。' },
+  { q: 'メルカリの手数料10%は高すぎませんか？', a: '手数料10%は一見高く感じますが、メルカリの利用者数による「売れやすさ」を考えると妥当ともいえます。ただし1万円のゲーム機を売ると手数料1,000円+送料750円（60サイズ）+振込手数料200円=1,950円が引かれ、手取りは8,050円。買取業者の査定額が8,500円なら業者のほうが得です。' },
+  { q: '未開封のゲームソフトはどちらで売るべきですか？', a: 'メルカリが有利なケースが多いです。ゲオの宅配買取は公式ガイドラインで未開封品の買取不可・同一タイトルの複数買取不可と明記しており、買取店では未開封品を断られることがあります。メルカリなら未開封のまま出品でき、未開封品はむしろ高値がつきやすい傾向があります。' },
   { q: 'メルカリで売れなかった場合はどうすればいい？', a: '1〜2週間出品して売れなければ、値下げするか買取業者に切り替えるのがおすすめです。メルカリで売れ残っている間にも商品の価値は下がっていくため、早めの判断が大切。ヒカカク！で一括査定すれば最高値の業者がすぐ見つかります。' },
   { q: 'メルカリのすり替え詐欺とは？', a: '購入者が「不良品だった」と偽って別の商品（壊れた同型機等）を返送してくる詐欺です。ゲーム機本体で特に報告があります。メルカリ事務局に相談すれば対応してもらえる場合もありますが、完全には防げません。買取業者ではこのリスクはゼロです。' },
   { q: 'ゲーム機本体はメルカリと買取業者どちらがお得？', a: 'Switch等の人気機種はメルカリで高値が狙えますが、送料（大型サイズ1,000〜1,700円）+手数料10%を引くと、買取業者とほぼ同等か業者が有利になるケースも多いです。梱包の手間やトラブルリスクを加味すると、トータルでは買取業者がおすすめです。' },
@@ -67,6 +70,7 @@ const faqs = [
 export default function MercariVsKaitoriPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームはメルカリと買取業者どっちで売る？手数料・手取り額・入金日数を実データ比較", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'メルカリ vs 買取業者' }]} />
 
       {/* Hero */}
@@ -127,6 +131,7 @@ export default function MercariVsKaitoriPage() {
                   <div className="flex justify-between"><span>販売価格</span><span>{simulation.mercari.salePrice}</span></div>
                   <div className="flex justify-between"><span>手数料</span><span style={{ color: '#F87171' }}>{simulation.mercari.fee}</span></div>
                   <div className="flex justify-between"><span>送料</span><span style={{ color: '#F87171' }}>{simulation.mercari.shipping}</span></div>
+                  <div className="flex justify-between"><span>振込手数料</span><span style={{ color: '#F87171' }}>{simulation.mercari.transfer}</span></div>
                   <div className="border-t pt-2 mt-2 flex justify-between font-bold" style={{ borderColor: 'var(--color-border)', color: 'var(--color-deep-blue)' }}>
                     <span>手取り</span><span style={{ color: '#60A5FA' }}>{simulation.mercari.total}</span>
                   </div>
@@ -143,8 +148,58 @@ export default function MercariVsKaitoriPage() {
               </div>
             </div>
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
-              メルカリで25,000円で売れた場合の手取りは21,500円。ヒカカク！で22,000円の査定が出れば、手間もリスクも少ない買取業者のほうがお得になります。
+              メルカリで25,000円で売れた場合の手取りは21,550円。買取業者で22,000円の査定が出れば、手間もリスクも少ない買取業者のほうがお得になります。
             </p>
+          </div>
+        </section>
+
+        {/* Current Fees (Information Gain) */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />2026年6月時点の正確な手数料・送料データ</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>ネット上の比較記事には旧料金（ネコポス175円・振込手数料210円など）のままのものが多く残っています。以下は2026年6月時点でメルカリ公式ヘルプ・公式コラムに記載されている現行料金です。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr><th>項目</th><th>料金</th><th>ゲームを売るときの目安</th></tr>
+              </thead>
+              <tbody>
+                <tr><td className="font-bold text-sm">販売手数料</td><td className="text-sm">販売価格の10%</td><td className="text-sm">3,000円で売れたら300円</td></tr>
+                <tr><td className="font-bold text-sm">振込手数料</td><td className="text-sm">一律200円（お急ぎ振込はさらに+200円）</td><td className="text-sm">売上金を現金化するたびに発生</td></tr>
+                <tr><td className="font-bold text-sm">ネコポス（らくらくメルカリ便）</td><td className="text-sm">全国一律210円</td><td className="text-sm">ゲームソフト1〜2本の発送に最適</td></tr>
+                <tr><td className="font-bold text-sm">ゆうパケットポスト</td><td className="text-sm">215円 + 専用箱65円</td><td className="text-sm">ソフト数本ならこちらも選択肢</td></tr>
+                <tr><td className="font-bold text-sm">宅急便コンパクト</td><td className="text-sm">450円 + 専用BOX70円</td><td className="text-sm">ソフト5〜10本程度</td></tr>
+                <tr><td className="font-bold text-sm">宅急便60サイズ</td><td className="text-sm">750円</td><td className="text-sm">Switch本体など小型のゲーム機</td></tr>
+                <tr><td className="font-bold text-sm">宅急便80〜100サイズ</td><td className="text-sm">850〜1,050円</td><td className="text-sm">PS5本体・箱付きの本体セット</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：メルカリ公式ヘルプ「メルカリの手数料」、メルカリ公式コラム「メルカリの送料一覧」（2026年1月23日更新版）を2026年6月12日に確認。</p>
+          <div className="glass-card p-5 mt-4">
+            <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>ソフト1本（3,000円で売れた場合）の実質手取り</h3>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              3,000円 − 販売手数料300円 − ネコポス210円 = 2,490円。さらに現金化するなら振込手数料200円が引かれて実質2,290円です。買取店の査定が2,300円を超えるなら、撮影・出品・梱包・発送の手間を考えると買取店の方が合理的という計算になります。
+            </p>
+          </div>
+        </section>
+
+        {/* Overlooked differences */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />見落としがちな2つの違い：未開封品と入金スピード</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>未開封品・複数本の扱い</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+                ゲオの宅配買取は公式ガイドラインで「未開封品は売却不可」「同一タイトルの複数買取は不可」と明記しています。買ったまま遊ばなかった未開封ソフトや同じソフトの複数本は、買取店では断られることがあるため、メルカリの方が向いているケースです。逆に開封済みの通常中古品はどちらでも売れます。
+              </p>
+              <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲオ宅配買取サービスガイドライン（2026年6月12日確認）</p>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>現金化までのスピード差</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+                買取店でも入金スピードには大差があります。ゲーム買取ブラザーズは「査定承認後24時間以内に振込」、カイトリワールドは「承諾後すぐ振込手続き」と公式に明記する一方、ゲオの宅配買取は「商品到着後、最短5営業日以内に査定結果を連絡」のため、発送から入金まで1週間以上かかることもあります。メルカリは売れるまでの期間が読めず、売れても振込申請から着金まで数日かかります。
+              </p>
+              <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各社公式サイト・FAQ（2026年6月12日確認）</p>
+            </div>
           </div>
         </section>
 
@@ -246,6 +301,7 @@ export default function MercariVsKaitoriPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

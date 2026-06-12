@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド',
+  title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド【2026年6月】',
   description:
     '大阪でゲームを高く売れる買取店舗をエリア別に徹底紹介。日本橋でんでんタウン、梅田、難波の人気店舗と特徴を比較。大阪ローカルチェーンやオンライン代替サービスも紹介。',
   keywords: ['ゲーム買取 大阪', 'ゲーム買取 おすすめ 大阪', 'ゲーム買取 日本橋', 'ゲーム買取 梅田', 'ゲーム買取 難波'],
   openGraph: {
-    title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド',
+    title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド【2026年6月】',
     description: '大阪のゲーム買取店をエリア別に紹介。日本橋・梅田・難波の人気店舗を比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -67,6 +68,7 @@ const faqs = [
 export default function OsakaPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'エリア別', href: '/' }, { name: '大阪' }]} />
 
       {/* Hero */}
@@ -215,6 +217,7 @@ export default function OsakaPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

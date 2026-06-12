@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AuthorBox from '@/components/AuthorBox'
 
 const services = [
   {
@@ -177,6 +178,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取びより｜ゲーム買取おすすめ比較ランキング2026", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       <section className="relative overflow-hidden" style={{ backgroundImage: 'url(/hero-bg-pattern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
@@ -625,6 +627,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <AuthorBox />
       </section>
     </>
   );

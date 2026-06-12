@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'フリマアプリ vs 買取業者｜メルカリ・ラクマとゲーム買取を徹底比較【2025年】',
+  title: 'フリマアプリ vs 買取業者｜メルカリ・ラクマとゲーム買取を徹底比較【2026年】',
   description:
     'メルカリ・ラクマなどのフリマアプリとゲーム買取業者を10項目で徹底比較。手間・時間・手数料・送料・トラブルリスク・価格差まで。それぞれ向いている人と最適な使い分けがわかります。',
   keywords: ['ゲーム 買取アプリ', 'メルカリ vs 買取', 'メルカリ ゲーム売る', 'ラクマ ゲーム買取', 'フリマアプリ 買取業者 比較'],
   openGraph: {
-    title: 'フリマアプリ vs 買取業者｜メルカリ・ラクマとゲーム買取を徹底比較【2025年】',
+    title: 'フリマアプリ vs 買取業者｜メルカリ・ラクマとゲーム買取を徹底比較【2026年】',
     description: 'メルカリ・ラクマと買取業者、ゲームを売るならどっちがお得？10項目で比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -57,6 +58,7 @@ const faqs = [
 export default function AppPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "フリマアプリ vs 買取業者｜メルカリ・ラクマとゲーム買取を徹底比較【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: 'フリマアプリ vs 買取業者' }]} />
 
       {/* Hero */}
@@ -231,6 +233,7 @@ export default function AppPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

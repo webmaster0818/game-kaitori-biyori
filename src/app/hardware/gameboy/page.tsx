@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2025年】',
+  title: 'ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】',
   description:
     'ゲームボーイ・ゲームボーイカラー・ゲームボーイアドバンス・GBA SPの買取相場とおすすめ買取サービス3社を比較。コレクター人気の理由、プレミアソフト情報、状態による価格差を徹底解説。',
   keywords: ['ゲームボーイ 買取', 'ゲームボーイアドバンス 買取', 'GBA 買取', 'ゲームボーイカラー 買取', 'GB 売る'],
   openGraph: {
-    title: 'ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2025年】',
+    title: 'ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】',
     description: 'ゲームボーイ各モデルの買取相場とコレクター人気の理由を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -64,6 +65,7 @@ const faqs = [
 export default function GameboyPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'ゲームボーイ' }]} />
 
       {/* Hero */}
@@ -88,7 +90,7 @@ export default function GameboyPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。限定カラーや特別モデルはさらに高額になる場合があります。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。限定カラーや特別モデルはさらに高額になる場合があります。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -279,6 +281,7 @@ export default function GameboyPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

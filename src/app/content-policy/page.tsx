@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: '記事制作ポリシー | ゲーム買取びより',
@@ -300,6 +301,7 @@ export default function ContentPolicyPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる！【2025年相場】',
+  title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる！【2026年相場】',
   description:
     'PS4・PS4 Slim・PS4 Proの買取相場とおすすめ買取サービス3社を比較。古いPS4でもまだ売れる理由、高く売るコツ、初期化手順までプレステ4を売る前に知っておきたい情報を完全解説。',
   keywords: ['PS4 買取', 'プレステ4 売る いくら', 'PS4 買取相場', 'PS4 Pro 買取', 'PS4 Slim 買取'],
   openGraph: {
-    title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる！【2025年相場】',
+    title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる！【2026年相場】',
     description: 'PS4・PS4 Slim・PS4 Proの買取相場と古くても売れる理由を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -55,6 +56,7 @@ const faqs = [
 export default function PS4Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4買取おすすめ3選｜プレステ4はまだ売れる！【2026年相場】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'PlayStation 4' }]} />
 
       {/* Hero */}
@@ -79,7 +81,7 @@ export default function PS4Page() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -157,6 +159,40 @@ export default function PS4Page() {
                     <td>{s.area}</td>
                     <td>{s.method}</td>
                     <td>{s.point}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Price Comparison by Service */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />業者別買取価格比較</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ PS4 Slim（CUH-2000系）の参考買取価格です。時期・在庫状況により変動します。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>業者名</th>
+                  <th>美品</th>
+                  <th>良品</th>
+                  <th>備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { name: 'ヒカカク！', good: '最大18,000円', fair: '最大13,000円', note: '一括査定で最高値を比較' },
+                  { name: 'ゲオ', good: '~14,000円', fair: '~10,000円', note: 'まとめ売りでUP' },
+                  { name: 'ブックオフ', good: '~12,000円', fair: '~8,000円', note: '店舗により変動' },
+                  { name: '駿河屋', good: '~13,000円', fair: '~9,000円', note: '宅配買取対応' },
+                  { name: '買取ウリエル', good: '~15,000円', fair: '~11,000円', note: '出張対応・古いPS4も歓迎' },
+                ].map((row) => (
+                  <tr key={row.name}>
+                    <td className="font-bold">{row.name}</td>
+                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
+                    <td>{row.fair}</td>
+                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{row.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -244,6 +280,7 @@ export default function PS4Page() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

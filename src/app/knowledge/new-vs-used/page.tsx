@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: '新品ゲームと中古ゲームの買取の違い｜未開封品は高く売れる？【2026年版】',
@@ -52,6 +53,7 @@ const faqs = [
 export default function NewVsUsedPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "新品ゲームと中古ゲームの買取の違い｜未開封品は高く売れる？【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '新品と中古の買取の違い' }]} />
 
       {/* Hero */}
@@ -238,6 +240,7 @@ export default function NewVsUsedPage() {
         </section>
 
         <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年5月</p>
+        <AuthorBox />
       </div>
     </>
   );

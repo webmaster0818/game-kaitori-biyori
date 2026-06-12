@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2025年】',
+  title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】',
   description:
     '3DS・3DS LL・New 3DS・2DS・DS・DS Liteの買取相場とおすすめ買取サービス3社を比較。生産終了ハードの今後の価値、SDカードのデータ消去方法、高く売るコツを徹底解説。',
   keywords: ['3DS 買取', 'DS 売る', '3DS 買取相場', 'New 3DS 買取', 'DS Lite 買取'],
   openGraph: {
-    title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2025年】',
+    title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】',
     description: '3DS/DS各モデルの買取相場と生産終了ハードの値上がりの可能性を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -50,6 +51,7 @@ const faqs = [
 export default function ThreeDSPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo 3DS・DS' }]} />
 
       {/* Hero */}
@@ -74,7 +76,7 @@ export default function ThreeDSPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。限定モデルや特別カラーはさらに高額になる場合があります。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。限定モデルや特別カラーはさらに高額になる場合があります。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -235,6 +237,7 @@ export default function ThreeDSPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

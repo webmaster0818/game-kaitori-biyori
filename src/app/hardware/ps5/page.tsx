@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2025年】',
+  title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
   description:
     'PS5通常版・デジタルエディション・PS5 Proの買取相場とおすすめ買取サービス3社を比較。プレステ5を高く売るコツ、コントローラー・PS VR2の買取、初期化手順まで完全解説。',
   keywords: ['PS5 買取', 'プレステ5 売る', 'PS5 買取相場', 'PS5 デジタルエディション 買取', 'PS5 Pro 買取'],
   openGraph: {
-    title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2025年】',
+    title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
     description: 'PS5通常版・デジタルエディション・PS5 Proの買取相場と高く売るコツを解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -48,6 +49,7 @@ const faqs = [
 export default function PS5Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'PlayStation 5' }]} />
 
       {/* Hero */}
@@ -72,7 +74,7 @@ export default function PS5Page() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -137,6 +139,40 @@ export default function PS5Page() {
                     <td>{s.area}</td>
                     <td>{s.method}</td>
                     <td>{s.point}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Price Comparison by Service */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />業者別買取価格比較</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ PS5（通常版・ディスクドライブ搭載）の参考買取価格です。時期・在庫状況により変動します。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>業者名</th>
+                  <th>美品</th>
+                  <th>良品</th>
+                  <th>備考</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[
+                  { name: 'ヒカカク！', good: '最大45,000円', fair: '最大38,000円', note: '一括査定で最高値を比較' },
+                  { name: 'ゲオ', good: '~38,000円', fair: '~30,000円', note: 'まとめ売りでUP' },
+                  { name: 'ブックオフ', good: '~35,000円', fair: '~28,000円', note: '店舗により変動' },
+                  { name: '駿河屋', good: '~36,000円', fair: '~29,000円', note: '宅配買取対応' },
+                  { name: '買取ウリエル', good: '~40,000円', fair: '~33,000円', note: '出張対応・梱包不要' },
+                ].map((row) => (
+                  <tr key={row.name}>
+                    <td className="font-bold">{row.name}</td>
+                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
+                    <td>{row.fair}</td>
+                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{row.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -260,6 +296,7 @@ export default function PS5Page() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

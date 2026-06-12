@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームを売る前にやること10項目｜初期化・データ消去の手順【2025年】',
+  title: 'ゲームを売る前にやること10項目｜初期化・データ消去の手順【2026年】',
   description:
     'ゲーム機を売る前にやるべき準備を10項目のチェックリストで徹底解説。Switch・PS5・PS4・3DSの機種別初期化手順、アカウント解除、データ消去方法まで完全網羅。やり忘れるとどうなるかも解説。',
   keywords: ['ゲーム 売る前にやること', '初期化', 'データ消去', 'Switch 初期化', 'PS5 初期化'],
   openGraph: {
-    title: 'ゲームを売る前にやること10項目｜初期化・データ消去の手順【2025年】',
+    title: 'ゲームを売る前にやること10項目｜初期化・データ消去の手順【2026年】',
     description: 'ゲーム機を売る前にやるべき準備を10項目のチェックリストで徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -86,6 +87,7 @@ const faqs = [
 export default function PreparationPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームを売る前にやること10項目｜初期化・データ消去の手順【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '売る前の準備' }]} />
 
       {/* Hero */}
@@ -219,6 +221,7 @@ export default function PreparationPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

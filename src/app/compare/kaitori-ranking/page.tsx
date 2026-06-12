@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: '【2026年最新】ゲーム買取おすすめランキング15選',
@@ -215,21 +216,21 @@ const rankings = [
 ];
 
 const comparisonTable = [
-  { name: 'ヒカカク！', shipping: '業者による', speed: '2〜7日', genre: '全ジャンル', method: '宅配（一括査定）' },
-  { name: 'ウリエル', shipping: '無料', speed: '即日〜5日', genre: '全ジャンル', method: '出張/宅配/店舗' },
-  { name: 'ゲオ', shipping: '無料（5点〜）', speed: '即日〜5日', genre: '新作中心', method: '店舗/宅配' },
-  { name: '駿河屋', shipping: '条件付き無料', speed: '5〜14日', genre: 'レトロ・レア', method: '店舗/宅配' },
-  { name: 'ブックオフ', shipping: '無料（10点〜）', speed: '即日〜7日', genre: '全般', method: '店舗/宅配' },
-  { name: 'ネットオフ', shipping: '無料（5点〜）', speed: '2〜5日', genre: '全般', method: '宅配' },
-  { name: 'ホビーコレクト', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム・ホビー', method: '宅配' },
-  { name: '買取王子', shipping: '無料（1点〜）', speed: '3〜7日', genre: '60ジャンル+', method: '宅配' },
-  { name: 'ゲーム王国', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム専門', method: '宅配' },
-  { name: '買取ワールド', shipping: '無料', speed: '1〜3日', genre: 'ゲーム・ホビー', method: '宅配' },
-  { name: 'ハードオフ', shipping: '店舗持込', speed: '即日', genre: '本体・ジャンク', method: '店舗' },
-  { name: 'トレジャーファクトリー', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '店舗/宅配' },
-  { name: 'お宝創庫', shipping: '無料', speed: '即日〜5日', genre: 'ゲーム・ホビー', method: '店舗/宅配' },
-  { name: 'まんだらけ', shipping: '条件付き無料', speed: '即日〜14日', genre: 'レトロ・プレミア', method: '店舗/宅配' },
-  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/宅配' },
+  { name: 'ヒカカク！', shipping: '業者による', speed: '2〜7日', genre: '全ジャンル', method: '宅配（一括査定）', packingKit: '業者による', returnFee: '業者による', dataWipe: '業者による', campaign: '一括査定で最高値保証' },
+  { name: 'ウリエル', shipping: '無料', speed: '即日〜5日', genre: '全ジャンル', method: '出張/宅配/店舗', packingKit: 'なし（出張）', returnFee: '-', dataWipe: '相談可', campaign: '出張買取強化中' },
+  { name: 'ゲオ', shipping: '無料（5点〜）', speed: '即日〜5日', genre: '新作中心', method: '店舗/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: 'まとめ売り最大35%UP' },
+  { name: '駿河屋', shipping: '条件付き無料', speed: '5〜14日', genre: 'レトロ・レア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: '買取30%UPキャンペーン（不定期）' },
+  { name: 'ブックオフ', shipping: '無料（10点〜）', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: 'なし（店舗持込）', returnFee: '無料（宅配）', dataWipe: '対応あり', campaign: '買取金額20%UPクーポン（不定期）' },
+  { name: 'ネットオフ', shipping: '無料（5点〜）', speed: '2〜5日', genre: '全般', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: 'まとめ売りボーナスUP' },
+  { name: 'ホビーコレクト', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム・ホビー', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '非対応', campaign: '初回利用10%UP' },
+  { name: '買取王子', shipping: '無料（1点〜）', speed: '3〜7日', genre: '60ジャンル+', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '非対応', campaign: 'まとめ売り最大6万円ボーナス' },
+  { name: 'ゲーム王国', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム専門', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: 'ゲーム専門高額査定' },
+  { name: '買取ワールド', shipping: '無料', speed: '1〜3日', genre: 'ゲーム・ホビー', method: '宅配', packingKit: '無料', returnFee: '条件付き無料', dataWipe: '非対応', campaign: 'スピード査定キャンペーン' },
+  { name: 'ハードオフ', shipping: '店舗持込', speed: '即日', genre: '本体・ジャンク', method: '店舗', packingKit: 'なし（店舗持込）', returnFee: '-', dataWipe: '対応あり', campaign: '店舗限定セール連動' },
+  { name: 'トレジャーファクトリー', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: '無料', returnFee: '有料', dataWipe: '非対応', campaign: '引っ越しシーズンUP' },
+  { name: 'お宝創庫', shipping: '無料', speed: '即日〜5日', genre: 'ゲーム・ホビー', method: '店舗/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '東海・関西限定強化中' },
+  { name: 'まんだらけ', shipping: '条件付き無料', speed: '即日〜14日', genre: 'レトロ・プレミア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: 'プレミア品特別査定' },
+  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '出張買取キャンペーン中' },
 ];
 
 const userTypeRecommendations = [
@@ -280,6 +281,8 @@ const faqs = [
 export default function KaitoriRankingPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "【2026年最新】ゲーム買取おすすめランキング15選", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "ItemList", "name": "ゲーム買取おすすめランキング2026", "numberOfItems": 15, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ヒカカク！", "url": "/review/hikakaku/"}, {"@type": "ListItem", "position": 2, "name": "ウリエル", "url": "/review/uriel/"}, {"@type": "ListItem", "position": 3, "name": "ゲオ", "url": "/review/geo/"}, {"@type": "ListItem", "position": 4, "name": "駿河屋", "url": "/review/surugaya/"}, {"@type": "ListItem", "position": 5, "name": "ブックオフ", "url": "/review/bookoff/"}, {"@type": "ListItem", "position": 6, "name": "ネットオフ", "url": "/review/netoff/"}, {"@type": "ListItem", "position": 7, "name": "ホビーコレクト", "url": "/review/hobby-collect/"}, {"@type": "ListItem", "position": 8, "name": "買取王子", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 9, "name": "ゲーム王国", "url": "/review/game-oukoku/"}, {"@type": "ListItem", "position": 10, "name": "買取ワールド", "url": "/review/kaitori-world/"}, {"@type": "ListItem", "position": 11, "name": "ハードオフ", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 12, "name": "トレジャーファクトリー", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 13, "name": "お宝創庫", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 14, "name": "まんだらけ", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 15, "name": "ティファナ", "url": "/review/tifana/"}]}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: '買取おすすめランキング' }]} />
 
       {/* Hero */}
@@ -315,6 +318,10 @@ export default function KaitoriRankingPage() {
                   <th>入金速度</th>
                   <th>対応ジャンル</th>
                   <th>買取方法</th>
+                  <th>梱包キット</th>
+                  <th>返送手数料</th>
+                  <th>データ消去</th>
+                  <th>キャンペーン</th>
                 </tr>
               </thead>
               <tbody>
@@ -326,6 +333,10 @@ export default function KaitoriRankingPage() {
                     <td className="text-sm">{row.speed}</td>
                     <td className="text-sm">{row.genre}</td>
                     <td className="text-sm">{row.method}</td>
+                    <td className="text-sm">{row.packingKit}</td>
+                    <td className="text-sm">{row.returnFee}</td>
+                    <td className="text-sm">{row.dataWipe}</td>
+                    <td className="text-sm">{row.campaign}</td>
                   </tr>
                 ))}
               </tbody>
@@ -529,6 +540,7 @@ export default function KaitoriRankingPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

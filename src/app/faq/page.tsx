@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取よくある質問30選｜疑問を全て解決【2025年】',
+  title: 'ゲーム買取よくある質問30選｜疑問を全て解決【2026年】',
   description:
     'ゲーム買取に関するよくある質問30問を6カテゴリ（基本・方法・相場・準備・トラブル・その他）で徹底解説。初めてゲームを売る方から経験者まで、全ての疑問にお答えします。',
   keywords: ['ゲーム買取 よくある質問', 'ゲーム 売る 質問', 'ゲーム買取 FAQ'],
   openGraph: {
-    title: 'ゲーム買取よくある質問30選｜疑問を全て解決【2025年】',
+    title: 'ゲーム買取よくある質問30選｜疑問を全て解決【2026年】',
     description: 'ゲーム買取に関するよくある質問30問を6カテゴリで徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -84,6 +85,7 @@ const allFaqs = faqCategories.flatMap((cat) => cat.faqs);
 export default function FAQPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取よくある質問30選｜疑問を全て解決【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'よくある質問' }]} />
 
       {/* Hero */}
@@ -199,6 +201,7 @@ export default function FAQPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2025年】',
+  title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
   description:
     'Xbox Series X・Series S・Xbox Oneの買取相場とおすすめ買取サービス3社を比較。日本でのXbox需要の実態、Game Passの注意点、高く売るコツを徹底解説。',
   keywords: ['Xbox 買取', 'Xbox Series X 買取', 'Xbox Series S 買取', 'Xbox One 買取', 'Xbox 売る'],
   openGraph: {
-    title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2025年】',
+    title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
     description: 'Xbox Series X/S・Xbox Oneの買取相場とXbox需要の実態を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -48,6 +49,7 @@ const faqs = [
 export default function XboxPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Xbox' }]} />
 
       {/* Hero */}
@@ -72,7 +74,7 @@ export default function XboxPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -235,6 +237,7 @@ export default function XboxPage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

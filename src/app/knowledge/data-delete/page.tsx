@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド',
@@ -126,6 +127,7 @@ const faqs = [
 export default function DataDeletePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'データ削除・初期化' }]} />
 
       {/* Hero */}
@@ -286,6 +288,7 @@ export default function DataDeletePage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

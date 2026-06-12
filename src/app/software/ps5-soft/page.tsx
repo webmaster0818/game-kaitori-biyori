@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2025年】',
+  title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】',
   description:
     'PS5ソフトの買取相場と人気タイトル10本の価格目安を徹底解説。FF・バイオハザード・エルデンリングなど高額買取タイトル、限定版の価値、DL版は売れない注意点、おすすめ買取サービス3社比較まで完全網羅。',
   keywords: ['PS5ソフト 買取', 'プレステ5 ソフト 売る', 'PS5 ソフト 買取相場'],
   openGraph: {
-    title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2025年】',
+    title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】',
     description: 'PS5ソフトの買取相場と人気タイトル10本の価格目安を徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -53,6 +54,7 @@ const faqs = [
 export default function PS5SoftPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'PS5ソフト' }]} />
 
       {/* Hero */}
@@ -77,7 +79,7 @@ export default function PS5SoftPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />人気タイトル買取相場10選</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -220,6 +222,7 @@ export default function PS5SoftPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

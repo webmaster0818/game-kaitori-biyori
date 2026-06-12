@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ゲーム買取の年齢制限｜未成年でも売れる方法と必要書類',
@@ -62,6 +63,7 @@ const faqs = [
 export default function AgeRestrictionPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取の年齢制限｜未成年でも売れる方法と必要書類", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '年齢制限・未成年の買取' }]} />
 
       {/* Hero */}
@@ -227,6 +229,7 @@ export default function AgeRestrictionPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

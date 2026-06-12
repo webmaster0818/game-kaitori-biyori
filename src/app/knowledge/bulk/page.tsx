@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームまとめ売りガイド｜大量買取のメリットとコツ【2025年】',
+  title: 'ゲームまとめ売りガイド｜大量買取のメリットとコツ【2026年】',
   description:
     'ゲーム機・ソフトのまとめ売りのメリット5つとコツを徹底解説。3社のまとめ売りボーナス比較、最適な梱包方法、引越し時の大量処分ガイドまで完全網羅。まとめ売りで買取価格を最大化しましょう。',
   keywords: ['ゲーム まとめ売り', '大量 買取', 'ゲーム 一括買取', 'ゲーム 大量処分'],
   openGraph: {
-    title: 'ゲームまとめ売りガイド｜大量買取のメリットとコツ【2025年】',
+    title: 'ゲームまとめ売りガイド｜大量買取のメリットとコツ【2026年】',
     description: 'ゲームのまとめ売りメリット5つとコツを徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -57,6 +58,7 @@ const faqs = [
 export default function BulkPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームまとめ売りガイド｜大量買取のメリットとコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'まとめ売り' }]} />
 
       {/* Hero */}
@@ -218,6 +220,7 @@ export default function BulkPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

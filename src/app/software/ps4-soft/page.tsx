@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2025年】',
+  title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】',
   description:
     'PS4ソフトの買取相場と人気タイトルの価格目安を徹底解説。値崩れしにくいソフトの特徴、廉価版との違い、おすすめ買取サービス3社比較まで完全網羅。古いソフトでもまだ売れます。',
   keywords: ['PS4ソフト 買取', 'プレステ4 ソフト 売る', 'PS4 ソフト 買取相場'],
   openGraph: {
-    title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2025年】',
+    title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】',
     description: 'PS4ソフトの買取相場と値崩れしにくいソフトの特徴を徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -60,6 +61,7 @@ const faqs = [
 export default function PS4SoftPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'PS4ソフト' }]} />
 
       {/* Hero */}
@@ -84,7 +86,7 @@ export default function PS4SoftPage() {
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />人気タイトル買取相場</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2025年時点の参考相場です。状態・付属品・時期により変動します。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -235,6 +237,7 @@ export default function PS4SoftPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

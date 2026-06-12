@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
   title: 'ゲームを高く売る10のコツ｜高価買取のテクニック完全版【2026年】',
@@ -49,6 +50,7 @@ const faqs = [
 export default function HighPricePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームを高く売る10のコツ｜高価買取のテクニック完全版【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: '高く売るコツ' }]} />
 
       {/* Hero */}
@@ -186,6 +188,7 @@ export default function HighPricePage() {
             </div>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

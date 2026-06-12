@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2025年】',
+  title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】',
   description:
     '壊れたゲーム機やジャンク品でも買取できる理由と、買取可能な故障の種類を徹底解説。3社のジャンク対応比較、査定額の目安（正常品の何%か）まで完全網羅。諦める前に確認を。',
   keywords: ['壊れたゲーム機 買取', 'ジャンク 売れる', 'ゲーム機 故障 買取', 'Switch 壊れた 売る'],
   openGraph: {
-    title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2025年】',
+    title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】',
     description: '壊れたゲーム機やジャンク品でも買取できる理由と対応業者を徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -62,6 +63,7 @@ const faqs = [
 export default function BrokenPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'ジャンク品買取' }]} />
 
       {/* Hero */}
@@ -238,6 +240,7 @@ export default function BrokenPage() {
             </Link>
           </div>
         </section>
+        <AuthorBox />
       </div>
     </>
   );

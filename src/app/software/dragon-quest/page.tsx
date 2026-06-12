@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年版】',
+  title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】',
   description:
     'ドラクエ3リメイク・DQ11等の全タイトル買取相場を一覧表で掲載。店舗別比較、レトロドラクエの価値、価格推移まで徹底解説。',
   keywords: ['ドラクエ 買取 相場', 'ドラゴンクエスト 買取', 'DQ3 リメイク 買取', 'ドラクエ 売る'],
   openGraph: {
-    title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年版】',
+    title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】',
     description: 'ドラクエシリーズ全タイトルの買取相場を店舗別に徹底比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -57,6 +58,7 @@ const faqs = [
 export default function DragonQuestPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ドラクエ買取相場' }]} />
 
       {/* Hero */}
@@ -251,6 +253,7 @@ export default function DragonQuestPage() {
         </section>
 
         <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年5月</p>
+        <AuthorBox />
       </div>
     </>
   );
