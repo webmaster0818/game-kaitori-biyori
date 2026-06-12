@@ -83,7 +83,7 @@ const tips = [
 
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '複数業者の競争で最高値を狙える。Switch売却時に特におすすめ。' },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西・福岡', method: '出張買取', point: '自宅まで来てくれてその場で現金化。Switch 2購入資金にすぐ充てられる。' },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・中部・近畿・岡山（ゲームは関東1都3県）', method: '出張買取', point: '自宅まで来てくれてその場で現金化。Switch 2購入資金にすぐ充てられる。' },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム周辺機器もまとめて売れる。Switch本体+ソフトのセット売りに便利。' },
 ];
 

@@ -59,7 +59,7 @@ const highPriceTips = [
 const faqs = [
   { q: '福岡でゲームを最も高く買い取ってくれる店はどこですか？', a: 'ゲームの種類によって異なります。新作ゲームならトレーダー博多店、レトロゲームなら駿河屋福岡天神店やまんだらけ福岡店が高額査定の傾向があります。複数店で査定してもらい比較するのがおすすめです。' },
   { q: '天神で即日現金化できる店はありますか？', a: 'はい、ブックオフ天神店やゲオ天神店では身分証提示で即日現金化が可能です。査定時間は10点程度なら15〜30分で完了します。' },
-  { q: '福岡で出張買取に対応している業者はありますか？', a: '買取ウリエルが福岡市内で出張買取に対応しています。出張費・査定費無料で、大量のゲームを売りたい場合に便利です。' },
+  { q: '福岡で出張買取に対応している業者はありますか？', a: '大手の出張買取は対応エリアが変わりやすいため、申込前に各社公式サイトでの確認が必要です（例：買取ウリエルの出張対応エリアは2026年6月時点で関東・中部・近畿・岡山と公式記載されており、福岡は記載がありません）。福岡では送料無料の宅配買取（カイトリワールド・ゲーム王国・駿河屋など）の活用が確実です。' },
   { q: '九州在住ですが宅配買取のほうがお得ですか？', a: '宅配買取は店舗運営コストが低い分、買取価格が高めになる傾向があります。ヒカカク！なら最大20社に一括査定でき、送料無料の業者も多いため九州在住でも十分お得です。' },
   { q: '北九州（小倉）からゲームを売る場合のおすすめは？', a: '小倉駅周辺のブックオフやゲオで即日売却するか、宅配買取を利用するのがおすすめです。天神まで出る場合は駿河屋やまんだらけでレトロゲームの高額査定が期待できます。' },
 ];
@@ -128,8 +128,8 @@ export default function FukuokaPage() {
                 <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最大20社に一括査定。自宅から最高値を見つけられる。送料無料の業者多数。</p>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>ウリエル（出張買取）</h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>福岡市内で出張対応。自宅で査定・即金化。出張費無料。</p>
+                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国（宅配買取）</h3>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>福岡からも送料無料（佐川集荷）。故障品・箱なしもOKで最短当日入金。</p>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
                 <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>駿河屋（宅配買取）</h3>

@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '買取ウリエルの口コミ・評判｜出張買取でゲームを即日現金化',
+  title: '買取ウリエルの評判・口コミはやばい？【2026年6月】出張買取の実態・対応エリア・費用を徹底検証',
   description:
-    '買取ウリエルのゲーム買取を徹底レビュー。出張買取対応・経験豊富な査定士・即日現金化が魅力。関東・関西エリア対応。ゲーム以外も含め20種類以上の品目をまとめて売れる総合買取サービスの特徴を詳しく解説。',
+    '買取ウリエルの評判・口コミを徹底調査。「やばい」と言われる理由の実態、出張買取の対応エリア（関東・中部・近畿・岡山）、ゲーム買取は関東限定である点、出張費・査定料・キャンセル料無料、クーリングオフ対応まで公式情報（2026年6月12日確認）で検証します。',
   keywords: ['買取ウリエル', 'ウリエル 口コミ', 'ウリエル ゲーム買取', '出張買取 ゲーム', 'ゲーム 即日現金化'],
   openGraph: {
-    title: '買取ウリエルの口コミ・評判｜出張買取でゲームを即日現金化',
-    description: '買取ウリエルのゲーム買取を徹底レビュー。出張買取・即日現金化の特徴を解説。',
+    title: '買取ウリエルの評判・口コミはやばい？【2026年6月】徹底検証',
+    description: '買取ウリエルの評判と「やばい」と言われる理由の実態を公式情報で検証。出張買取・即日現金化の条件を解説。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
 const features = [
   { title: '出張買取対応', description: '自宅にいながらプロの査定士が訪問して査定・買取を行います。重いゲーム機や大量のソフトを運ぶ手間がなく、忙しい方や荷物が多い方に最適です。予約も簡単にWebから行えます。' },
   { title: '経験豊富な査定士', description: '買取業界で経験を積んだプロの査定士が担当。ゲームだけでなく幅広いジャンルの知識を持っているため、付加価値を見逃さず適正な価格で査定してくれます。' },
-  { title: '即日現金化', description: '出張買取・店舗買取なら査定後その場で現金を受け取れます。急な出費や引っ越し前の処分など、すぐに現金が必要な場面で非常に便利です。宅配買取の場合も最短翌営業日に振込対応。' },
-  { title: '関東・関西エリア対応', description: '出張買取は関東・関西の主要都市をカバー。東京・神奈川・千葉・埼玉・大阪・京都・兵庫など、都市部を中心に広いエリアで利用できます。宅配買取なら全国対応です。' },
+  { title: '即日現金化', description: '出張買取なら査定後その場で現金を受け取れます。急な出費や引っ越し前の処分など、すぐに現金が必要な場面で非常に便利です。査定額を聞いてから断ってもキャンセル料はかかりません。' },
+  { title: '買取方法は出張・催事の2種類', description: '現在の買取方法は出張買取と催事買取の2種類です（公式サイトの宅配・店頭買取ページは2026年6月時点で案内終了）。出張は関東・中部・近畿・岡山に対応していますが、ゲーム買取の対象エリアは東京・神奈川・千葉・埼玉と公式に記載されています。' },
 ];
 
 const steps = [
-  { step: 1, title: 'Web・電話で申込み', description: '公式サイトのフォームまたは電話で出張買取・宅配買取を申し込みます。希望日時や売りたい品目を伝えましょう。相談だけでもOKです。' },
-  { step: 2, title: '査定士が訪問（出張の場合）', description: '指定日時に査定士が自宅に訪問。玄関先での査定も可能です。宅配買取の場合は無料キットが届くので、商品を梱包して発送します。' },
+  { step: 1, title: 'Web・電話で申込み', description: '公式サイトのフォームまたは電話で出張買取を申し込みます。希望日時や売りたい品目を伝えましょう。最短で翌日以降の訪問に対応、相談だけでもOKです。' },
+  { step: 2, title: '査定士が訪問', description: '指定日時に査定士が自宅に訪問。玄関先での査定や女性スタッフの指名も可能と公式に明記されています。' },
   { step: 3, title: 'その場で査定・価格提示', description: '一点一点丁寧に査定し、その場で買取価格を提示。不明点があれば質問できます。まとめ売りでの上乗せ交渉も可能です。' },
-  { step: 4, title: '現金受取り・完了', description: '査定額に納得したらその場で現金を受け取り。キャンセルも無料なので、価格に満足できない場合はお断りできます。' },
+  { step: 4, title: '現金受取り・完了', description: '査定額に納得したらその場で現金を受け取り。キャンセル無料で、買取成立後も8日以内ならクーリングオフ制度の対象です。' },
 ];
 
 const targets = [
@@ -39,17 +39,19 @@ const targets = [
 
 const faqs = [
   { q: '出張買取は本当に無料ですか？', a: 'はい、出張費・査定料・キャンセル料すべて無料です。査定結果に納得できなければ、その場でお断りいただいて構いません。費用は一切発生しません。' },
-  { q: '出張買取の対応エリアはどこですか？', a: '関東エリア（東京・神奈川・千葉・埼玉・茨城・栃木・群馬）と関西エリア（大阪・京都・兵庫・奈良・滋賀・和歌山）が主な対応エリアです。詳細は公式サイトでご確認ください。' },
+  { q: '出張買取の対応エリアはどこですか？', a: '公式サイトでは関東（茨城・栃木・埼玉・千葉・東京・神奈川）、中部（岐阜・静岡・愛知）、近畿（三重・滋賀・京都・大阪・兵庫・奈良・和歌山）、中国（岡山）が出張対応エリアとされています。ただしゲーム買取ページの対象エリアは東京・神奈川・千葉・埼玉の1都3県に限定されているため、ゲーム目的の方は事前確認をおすすめします。' },
+  { q: '宅配買取や店頭買取はできますか？', a: '2026年6月時点で、公式サイトの宅配買取・店頭買取の案内ページは閉鎖されており、現在の買取方法は出張買取と催事買取の2種類です。宅配で売りたい場合は宅配対応の他社（カイトリワールド・ゲーム王国等）を検討しましょう。' },
+  { q: 'ウリエルは「やばい」「怪しい」という評判は本当ですか？', a: '運営元は株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）で、正規の買取事業者です。「やばい」と言われる背景には、出張買取業界全体への警戒感、フリマ相場と買取査定額の差、対面交渉で断りにくいと感じる人がいることが挙げられます。出張費・査定料・キャンセル料は無料で、クーリングオフにも対応しているため、査定額に納得できなければその場で断れば費用は発生しません。' },
   { q: 'ゲーム以外のものも一緒に売れますか？', a: 'はい、買取ウリエルは20種類以上の品目に対応しています。ブランド品・貴金属・家電・楽器など、ゲームと一緒にまとめて売ることで査定額がアップする場合もあります。' },
   { q: '査定にはどのくらいの時間がかかりますか？', a: '出張買取の場合、品数にもよりますが通常30分〜1時間程度です。ゲームソフトが大量にある場合はもう少し時間がかかることがあります。事前に品数をお伝えいただけるとスムーズです。' },
   { q: '箱や付属品がなくても買取してもらえますか？', a: 'はい、箱・説明書・付属品がなくても買取可能です。ただし、付属品が揃っている方が査定額は高くなります。特にゲーム機本体は付属品の有無が査定額に大きく影響します。' },
-  { q: '宅配買取の場合、入金までどのくらいかかりますか？', a: '商品到着後、通常1〜3営業日で査定結果をご連絡します。買取成立後は最短翌営業日に指定口座へ振込みいたします。' },
+  { q: '楽器も買い取ってもらえますか？', a: 'はい、ギター・ベース・バイオリンなどの弦楽器、サックス・フルートなどの管楽器、三味線・琴などの和楽器、電子楽器が買取対象です。ただし楽器買取の対応エリアは公式ページで関東（東京・埼玉・千葉・神奈川）限定とされています。ゲームと楽器をまとめて売れるのはウリエルの特徴です。' },
 ];
 
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの口コミ・評判｜出張買取でゲームを即日現金化", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
@@ -87,6 +89,44 @@ export default function UrielReviewPage() {
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{f.description}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* Company Info */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営会社情報（公式サイトより）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社クオーレ（CUORE GROUP・2011年3月設立）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">愛知県大府市柊山町8-53-2</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">愛知県公安委員会 第542791100800号</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方法</th><td className="py-2">出張買取・催事買取（宅配・店頭の案内ページは2026年6月時点で終了）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張エリア</th><td className="py-2">関東（茨城・栃木・埼玉・千葉・東京・神奈川）/中部（岐阜・静岡・愛知）/近畿（三重・滋賀・京都・大阪・兵庫・奈良・和歌山）/岡山 ※ゲーム買取の対象エリアは東京・神奈川・千葉・埼玉</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">出張費・査定料・キャンセル料すべて無料。その場で現金払い</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>その他</th><td className="py-2">女性スタッフ指名・玄関先査定可。買取成立後8日以内はクーリングオフ対応</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（会社概要・出張買取・ゲーム買取ページ）2026年6月12日確認</p>
+          </div>
+        </section>
+
+        {/* Suspicious? */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />「やばい・怪しい」と言われる理由と実態</h2>
+          <div className="space-y-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由1：出張買取業界全体への警戒感</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>過去に業界で問題になった「押し買い」のイメージから、出張買取そのものを警戒する人が多いのが実情です。ウリエル自体は古物商許可を持つ正規事業者で、査定額を聞いてから断ってもキャンセル料はかからず、買取成立後8日以内のクーリングオフにも対応しています。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由2：フリマ相場と査定額のギャップ</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>レビューサイトでは「思ったより査定が低かった」という声が一定数あります。買取店は在庫リスクや人件費を差し引いて査定するため、メルカリ等の販売相場より低くなるのは構造的なものです。即日現金化・手間ゼロの対価と考えるのが現実的です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由3：対面で断りにくいと感じる人がいる</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>口コミには「その場の流れで売ってしまった」という声もあります。査定額に納得できなければその場で断ってよく、費用は一切かかりません。不安な場合は玄関先査定や女性スタッフの指名を活用しましょう。</p>
+            </div>
           </div>
         </section>
 
