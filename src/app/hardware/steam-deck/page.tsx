@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Steam Deckの買取相場｜モデル別価格とお得な売り方【2026年6月版】',
+  title: 'Steam Deckの買取相場【2026年6月】値上げ・LCD生産終了で高騰中｜モデル別価格と売り方',
   description:
-    'Steam Deck LCD/OLEDモデル別・容量別の買取相場を一覧表で紹介。売却前の準備（SteamOS初期化・アカウント解除）、メルカリvs買取店比較まで徹底解説。',
+    'Steam Deckの買取相場を2026年6月12日に調査。6月1日の定価値上げ（OLED 512GB 137,980円）とLCDモデル生産終了で買取価格は上昇局面。新品はOLED 512GBで11万円超の実例も。モデル別価格・初期化手順・売り方まで解説します。',
   keywords: ['Steam Deck 買取 相場', 'Steam Deck 売る', 'スチームデック 買取', 'Steam Deck 買取価格'],
   openGraph: {
-    title: 'Steam Deckの買取相場｜モデル別価格とお得な売り方【2026年6月版】',
+    title: 'Steam Deckの買取相場【2026年6月】値上げ・LCD生産終了で高騰中｜モデル別価格と売り方',
     description: 'Steam Deck LCD/OLEDモデル別の買取相場を比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   },
 };
 
+// 2026年6月12日調査。新品=買取ルデヤ公式(6/12 21時時点表記)、中古=家電高く売れるドットコム公式の状態別レンジ
 const priceData = [
-  { model: 'Steam Deck LCD 64GB', good: '20,000〜28,000円', fair: '15,000〜19,000円', poor: '8,000〜14,000円', note: 'eMMCストレージ。microSD運用が基本' },
-  { model: 'Steam Deck LCD 256GB', good: '25,000〜33,000円', fair: '18,000〜24,000円', poor: '10,000〜17,000円', note: 'NVMe SSD。最も流通量が多い' },
-  { model: 'Steam Deck LCD 512GB', good: '30,000〜40,000円', fair: '22,000〜29,000円', poor: '13,000〜21,000円', note: '防眩ガラス搭載。限定キャリングケース付き' },
-  { model: 'Steam Deck OLED 512GB', good: '45,000〜55,000円', fair: '35,000〜44,000円', poor: '25,000〜34,000円', note: 'OLED画面。バッテリー50Wh' },
-  { model: 'Steam Deck OLED 1TB', good: '55,000〜68,000円', fair: '42,000〜54,000円', poor: '30,000〜41,000円', note: '最上位モデル。スモークブラック仕上げ' },
-  { model: 'Steam Deck OLED 1TB（限定版）', good: '65,000〜80,000円', fair: '50,000〜64,000円', poor: '35,000〜49,000円', note: 'ホワイトモデル等の限定カラー' },
+  { model: 'Steam Deck LCD 64GB', new: '—', used: '10,000〜35,000円', note: 'eMMC。LCDは生産終了済みで流通減' },
+  { model: 'Steam Deck LCD 256GB', new: '50,200円', used: '20,000〜50,000円', note: '生産終了。新品在庫は希少' },
+  { model: 'Steam Deck OLED 512GB', new: '118,400円', used: '40,000〜86,000円', note: '現行モデル。定価137,980円（6/1値上げ後）' },
+  { model: 'Steam Deck OLED 1TB', new: '131,400円', used: '55,000〜105,000円', note: '現行最上位。定価167,980円（6/1値上げ後）' },
+  { model: 'Steam Deck OLED 1TB（白・限定）', new: '131,400円', used: '70,000〜119,000円', note: '限定カラーは中古でも最高値帯' },
 ];
 
 const preparationSteps = [
@@ -45,7 +45,9 @@ const mercariVsBuyback = [
 ];
 
 const faqs = [
-  { q: 'Steam Deckの買取相場はいくらですか？', a: 'LCD 256GBモデルで25,000〜33,000円（良品）、OLED 512GBモデルで45,000〜55,000円（良品）が目安です。容量とモデル（LCD/OLED）で大きく異なり、OLEDモデルはLCDの1.5〜2倍の買取価格になります。外箱・付属品完備だとさらに3,000〜5,000円プラスされます。' },
+  { q: 'Steam Deckの買取相場はいくらですか？', a: '2026年6月12日の調査では、新品・未開封ならOLED 512GBで118,400円、OLED 1TBで131,400円の実例があります（買取ルデヤ公式掲載価格）。中古は状態によりOLED 512GBで40,000〜86,000円、OLED 1TBで55,000〜105,000円のレンジです（家電高く売れるドットコム公式）。2026年6月1日の定価値上げ後は買取相場も上昇局面にあるため、売る前に複数社の最新価格を確認しましょう。' },
+  { q: '定価の値上げで買取価格は上がりますか？', a: '上昇圧力がかかっています。2026年6月1日にOLED 512GBの定価が99,800円から137,980円へ約4割値上げされ（3月に続き2回目）、新品の入手コストが大幅に上がったため、値上げ前に購入した本体は相対的に高く売れる状況です。品薄も続いており、売り時としては追い風です。' },
+  { q: 'LCDモデルは生産終了しましたが、まだ売れますか？', a: 'はい、売れます。LCDモデルは2026年2月頃に生産終了と報じられ新品の入手ができなくなったため、状態の良い中古はむしろ価値が見直されています。LCD 256GBは新品未開封なら50,200円、中古でも状態次第で20,000〜50,000円のレンジです（2026年6月12日調査）。' },
   { q: 'Steam Deckを売る前にやるべきことは？', a: '必ず行うべきことは3つです。1つ目はSteamアカウントからのログアウト、2つ目はSteamOS初期化（ファクトリーリセット）、3つ目はmicroSDカードの取り出しです。個人情報保護とスムーズな査定のため、これらは必須です。加えて外観クリーニングと付属品の確認もおすすめします。' },
   { q: 'メルカリと買取店、どちらで売るのがお得ですか？', a: '手取り額はほぼ同等です。メルカリは高値で売れますが10%の手数料と送料がかかるため、実質手取りは相場の75〜85%。買取店は買取価格自体は低めですが手数料ゼロのため実質70〜85%。手間やトラブルリスクを考えると、初めてなら買取店がおすすめです。' },
   { q: 'LCDモデルとOLEDモデルで買取価格はどれくらい違いますか？', a: '同容量で比較するとOLEDモデルはLCDモデルの約1.5〜2倍の買取価格です。例えば512GBの場合、LCDモデルが30,000〜40,000円に対し、OLEDモデルは45,000〜55,000円です。OLEDの画面品質とバッテリー性能の向上が高く評価されています。' },
@@ -86,9 +88,8 @@ export default function SteamDeckPage() {
               <thead>
                 <tr>
                   <th>モデル</th>
-                  <th>良品</th>
-                  <th>並品</th>
-                  <th>難あり</th>
+                  <th>新品買取の実例</th>
+                  <th>中古買取レンジ（状態別）</th>
                   <th>備考</th>
                 </tr>
               </thead>
@@ -96,9 +97,8 @@ export default function SteamDeckPage() {
                 {priceData.map((row) => (
                   <tr key={row.model}>
                     <td className="font-bold text-sm">{row.model}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.good}</td>
-                    <td className="text-sm">{row.fair}</td>
-                    <td className="text-sm">{row.poor}</td>
+                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.new}</td>
+                    <td className="text-sm">{row.used}</td>
                     <td className="text-xs">{row.note}</td>
                   </tr>
                 ))}
@@ -130,6 +130,17 @@ export default function SteamDeckPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：新品実例は買取ルデヤ公式（2026年6月12日21時時点の掲載価格・未開封完品）、中古レンジは家電高く売れるドットコム公式の状態別買取価格（2026年6月12日閲覧）。状態・在庫により変動します。</p>
+
+          <div className="glass-card p-6 mt-6">
+            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>いま相場が動いている3つの理由（2026年6月）</h3>
+            <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>① 6月1日に定価が大幅値上げ：</span>国内販売元KOMODOが2026年6月1日に価格改定し、OLED 512GBは137,980円（旧99,800円）、1TBは167,980円（旧114,800円）に。2026年3月に続き3ヶ月で2回目の値上げで、理由はメモリ・ストレージのコスト上昇とされています。新品が高くなった分、中古・買取相場には上昇圧力がかかっています。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② LCDモデルの生産終了：</span>最後まで残っていたLCD 256GBも2026年2月頃に在庫切れ・生産終了が報じられ、現行ラインナップはOLED 512GB/1TBの2モデルのみ。LCDは新品が手に入らないため、状態の良い中古の価値が見直されています。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ 国内は品薄が継続：</span>公式ストアでは売り切れと再入荷が繰り返されており、すぐ入手したい層が中古市場に流れています。なおValveの新型（Steam Machine・Steam Frame）は2026年夏出荷予定ですが、Steam Deck後継機の公式発表はありません（2026年6月12日時点）。</li>
+            </ul>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ファミ通（2026年6月価格改定報道）、TechPowerUp（LCD生産終了）、テクノエッジ（再入荷）、VGC（Valve新型2026年夏出荷）。2026年6月12日確認</p>
           </div>
         </section>
 

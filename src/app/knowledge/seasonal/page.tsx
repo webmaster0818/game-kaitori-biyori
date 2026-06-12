@@ -23,7 +23,7 @@ const monthlyCalendar = [
   { month: '3月', score: 4, label: 'おすすめ', event: '春休み・引越し', detail: '春休みで需要UP。引越しシーズンで手放す人が増えるが、同時に買い手も多い。卒業祝い需要も。' },
   { month: '4月', score: 2, label: '普通', event: '新学期', detail: '新生活で落ち着かず需要やや低下。GW前に購入需要がじわじわ上昇し始める。' },
   { month: '5月', score: 3, label: 'やや良い', event: 'GW', detail: 'ゴールデンウィーク中は在宅ゲーム需要が高まる。GW前半に売るのがベスト。' },
-  { month: '6月', score: 1, label: '低調', event: '梅雨・E3', detail: '年間で最も需要が低い時期の一つ。ゲームイベント後に新作発表で旧作の価格が下がることも。' },
+  { month: '6月', score: 2, label: '普通', event: '梅雨・夏商戦前', detail: '需要は落ち着く時期ですが、2026年は5月末の任天堂値上げで中古需要が増し、例年より相場が堅い状況です。夏休み需要の先回りで6月下旬の売却も有効。' },
   { month: '7月', score: 5, label: '最高', event: '夏休み・ボーナス', detail: '夏休み突入とボーナス時期が重なり、年間トップクラスの需要。7月上旬〜中旬が狙い目。' },
   { month: '8月', score: 4, label: 'おすすめ', event: '夏休み・お盆', detail: '夏休み継続で需要は高水準。お盆期間中は特にゲーム需要が集中する。' },
   { month: '9月', score: 2, label: '普通', event: '新学期', detail: '夏休み明けで一時的に需要低下。秋の新作ラッシュに備える買い替え需要が底を支える。' },
@@ -115,6 +115,30 @@ export default function SeasonalPage() {
         </section>
 
         {/* ジャンル別変動 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />2026年の売り時を左右する具体イベント（実データ付き）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>一般的なカレンダーに加え、2026年は相場を動かす確定イベントが複数あります。すべて公式発表・報道で確認済みの事実です（2026年6月12日確認）。</p>
+          <div className="space-y-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>5月25日: 任天堂が全Switchモデルを値上げ → 旧型の買取相場が実際に上昇</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>Switch2が49,980円→59,980円、有機ELが37,980円→47,980円、通常モデルが32,978円→43,980円、Liteが21,978円→29,980円に値上げ（任天堂公式発表）。新品が高くなった結果、買取業者の調査では2019年型Switchの買取相場が4月の約3,000〜12,000円から5月には約5,000〜19,000円へ上昇した実例が報告されています。「新型が出ると旧型は下がる」という一般論と逆の動きで、<strong>旧型Switchはいまが近年で有利な売り時</strong>です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>11月19日: GTA6発売（PS5/Xbox Series X|S）</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>年末商戦の最大級タイトル。PS5本体・周辺の需要が高まる一方、遊ばなくなった他のPS5ソフトを処分して購入資金にする動きも出ます。PS5関連を売るなら需要が立ち上がる10月〜11月中旬が狙い目です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>その他の確定イベント</h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・7月1日: Nintendo Switch Online料金改定（任天堂公式発表）</li>
+                <li>・9月1日: Switch2の海外価格値上げ（米国449.99→499.99ドル）</li>
+                <li>・2月に大作ラッシュ実績（ドラクエVII Reimagined、仁王3、バイオハザード レクイエム等）→ 続編・関連旧作は発売前が売り時</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、出張買取のアシスト相場調査（2026年5月20日更新）、AUTOMATON（GTA6発売日報道）。2026年6月12日確認</p>
+        </section>
+
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ジャンル別 価格変動パターン</h2>
           <div className="overflow-x-auto">
