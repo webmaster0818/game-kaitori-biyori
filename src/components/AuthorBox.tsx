@@ -42,6 +42,7 @@ export default function AuthorBox() {
           <p className="text-sm leading-relaxed" style={{ color: 'var(--color-navy)', opacity: 0.7 }}>
             15年以上のゲームコレクション経験を持ち、レトロゲームから最新ゲームまで幅広く精通。買取サービスは30社以上を実際に利用し比較しています。
           </p>
+          <a href="/about/" className="text-xs font-bold inline-block mt-2" style={{ color: 'var(--color-electric-green)' }}>運営者情報・編集方針 →</a>
         </div>
       </div>
     </div>
