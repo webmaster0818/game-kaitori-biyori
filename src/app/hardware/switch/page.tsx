@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】',
+  title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
   description:
     'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を徹底比較。スイッチ本体を高く売るコツ5つ、Joy-ConやProコントローラーの買取情報、初期化手順まで完全解説。',
   keywords: ['Switch 買取', 'ニンテンドースイッチ 売る', 'Switch 買取相場', 'Switch Lite 買取', 'Switch OLED 買取'],
   openGraph: {
-    title: 'Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】',
+    title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
     description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツを徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -49,7 +49,7 @@ const faqs = [
 export default function SwitchPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo Switch' }]} />
 
       {/* Hero */}
@@ -96,6 +96,23 @@ export default function SwitchPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+        </section>
+
+        {/* 値上げで相場上昇 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />今が売り時：値上げで旧型Switchの買取相場が上昇中</h2>
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
+              2026年5月25日に任天堂が全Switchモデルを値上げ（Switch2は49,980円→59,980円、有機ELは37,980円→47,980円、通常モデルは32,978円→43,980円、Liteは21,978円→29,980円）。新品が高くなった影響で、<strong>遊ばなくなった旧型Switchの買取相場も上昇しています。</strong>
+            </p>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
+              買取業者10社を調査した実例では、旧型Switch本体の買取相場は<strong>4月の約3,000〜12,000円から、5月には約5,000〜19,000円まで上昇</strong>したと報告されています。「新型が出たら旧型は下がる」という通説と逆の動きが起きており、遊んでいないSwitchがある方にとっては近年で有利な売り時です。
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              ただしSwitch2の供給が安定すれば下落に転じる可能性が高いため、使っていないなら早めの売却が合理的です。ダウンロード版のソフトはアカウントに紐づくため、本体を売ってもSwitch2で引き継げます。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、出張買取のアシスト10社相場調査（2026年5月20日更新）。2026年6月14日確認。上の相場表は当サイト調べの目安で、実際の査定額は各社公式の最新価格をご確認ください。</p>
           </div>
         </section>
 

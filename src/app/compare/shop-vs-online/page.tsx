@@ -56,7 +56,7 @@ const faqs = [
 export default function ShopVsOnlinePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: '店舗 vs 宅配' }]} />
 
       {/* Hero */}
@@ -158,6 +158,29 @@ export default function ShopVsOnlinePage() {
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
               <strong style={{ color: 'var(--color-deep-blue)' }}>買取ウリエル</strong>が出張買取に対応しています。関東・関西エリアで出張費無料、査定だけでもOKです。
             </p>
+          </div>
+        </section>
+
+        {/* 見落としがちな違い */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />比較記事が見落としがちな4つの実務的な違い</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>① 本人確認の手続き</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>古物営業法により店頭・宅配とも本人確認が必須です。店頭は身分証の提示、宅配は申込時に身分証画像のアップロードや同梱が必要。いずれも18歳未満は売却不可が一般的です。宅配は書類不備だと査定が止まるため、事前準備が重要です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>② キャンセル時の返送料</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は断ってそのまま持ち帰れますが、宅配は査定額に納得できない場合の返送料や返送条件が業者で異なります（ゲオは査定後キャンセルの返送料が無料、一部業者は自己負担）。「7日以内に返事がないと自動承認」などの期限がある業者もあるため、申込前に必ず確認しましょう。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>③ ゲーム機本体のデータ初期化</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>本体を売る前にはアカウント連携の解除と初期化（データ消去）が必須です。店頭ならスタッフに確認しながら作業できますが、宅配は発送前に自分で済ませる必要があります。Switchは「いつも遊ぶ本体」の解除、PS5はアカウントのサインアウトを忘れずに。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>④ 同じソフトでも査定額に差</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は店舗ごとの在庫状況、宅配は全国相場とキャンペーンが反映されます。当サイトの調査でも、同じソフトがチェーン間で1,000円以上違う例がありました。即金性を取るなら店頭、最高値を狙うなら宅配で複数社を比較、が基本です。</p>
+            </div>
           </div>
         </section>
 

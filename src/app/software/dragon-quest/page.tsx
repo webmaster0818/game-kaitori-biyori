@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】',
+  title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
   description:
     'ドラクエ3リメイク・DQ11等の全タイトル買取相場を一覧表で掲載。店舗別比較、レトロドラクエの価値、価格推移まで徹底解説。',
   keywords: ['ドラクエ 買取 相場', 'ドラゴンクエスト 買取', 'DQ3 リメイク 買取', 'ドラクエ 売る'],
   openGraph: {
-    title: 'ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】',
+    title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
     description: 'ドラクエシリーズ全タイトルの買取相場を店舗別に徹底比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -58,7 +58,7 @@ const faqs = [
 export default function DragonQuestPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ドラクエ買取相場' }]} />
 
       {/* Hero */}
@@ -108,6 +108,28 @@ export default function DragonQuestPage() {
             </table>
           </div>
           <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>※ 2026年5月時点の参考価格。状態・付属品により変動します。</p>
+        </section>
+
+        {/* 公式買取価格（実値） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />各社公式の実買取価格【2026年6月14日調査】</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>各社の公式買取ページで実際に確認できた価格です（完品・状態良好が前提。状態により変動）。上の相場一覧と違い、これは「いま公式に出ている実額」です。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr><th>タイトル</th><th>ハード</th><th>買取価格</th><th>店舗</th></tr>
+              </thead>
+              <tbody>
+                <tr><td className="font-bold text-sm">ドラゴンクエストIII そして伝説へ… HD-2D版</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>4,500円</td><td className="text-sm">買取ルデヤ（未開封）</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストVII リイマジンド</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,000円</td><td className="text-sm">ゲオ</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストVII Reimagined</td><td className="text-sm">Switch2</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>2,500円</td><td className="text-sm">ブックオフ</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストXI 過ぎ去りし時を求めて S</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,000円</td><td className="text-sm">ゲオ</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストI＆II</td><td className="text-sm">Switch2</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>2,500円</td><td className="text-sm">ブックオフ</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストヒーローズ I・II</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,000円</td><td className="text-sm">ゲオ</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ルデヤ公式・ゲオ公式高価買取品一覧・ブックオフ公式「ゲームの高価買取情報」（2026年6月11〜14日確認）。同じVIIでもゲオ(Switch版3,000円)とブックオフ(Switch2版2,500円)で差があり、複数社の確認がおすすめです。</p>
         </section>
 
         {/* 店舗別比較 */}

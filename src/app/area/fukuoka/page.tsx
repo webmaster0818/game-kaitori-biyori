@@ -24,7 +24,7 @@ const areas = [
     shops: [
       { name: 'ブックオフ 天神店', feature: '天神の中心部に位置する大型店舗。ゲーム・書籍・DVDを一括で売れる。まとめ売りボーナスあり。', genre: '全般', priceLevel: '中' },
       { name: 'ゲオ 天神店', feature: '全国チェーンの安定感。ゲームソフト・本体の買取価格をアプリで事前確認可能。スマホ買取も対応。', genre: '全般・スマホ', priceLevel: '中' },
-      { name: '駿河屋 福岡天神店', feature: 'レトロゲーム・フィギュアの買取に定評あり。ネット通販のデータに基づく高精度査定。九州唯一の駿河屋店舗。', genre: 'レトロ・フィギュア', priceLevel: '中〜高' },
+      { name: '駿河屋 博多マルイ店（博多駅直結）', feature: 'レトロゲーム・フィギュアの買取に定評あり。ネット通販のデータに基づく高精度査定。九州唯一の駿河屋店舗。', genre: 'レトロ・フィギュア', priceLevel: '中〜高' },
       { name: 'まんだらけ 福岡店', feature: 'レトロゲーム・限定版・プレミアソフトの買取に強い。コレクター向けの査定に定評あり。', genre: 'レトロ・プレミア', priceLevel: '高（レア品）' },
     ],
   },
@@ -67,7 +67,7 @@ const faqs = [
 export default function FukuokaPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド", "datePublished": "2026-05-19", "dateModified": "2026-06-14", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'エリア別', href: '/' }, { name: '福岡' }]} />
 
       {/* Hero */}
