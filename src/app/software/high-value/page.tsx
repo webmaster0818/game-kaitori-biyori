@@ -315,6 +315,15 @@ export default function HighValueSoftwarePage() {
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>値上げ後の最新相場を解説</p>
             </Link>
           </div>
+          <h3 className="font-bold mb-4 mt-8" style={{ color: 'var(--color-deep-blue)' }}>シリーズ別の買取相場</h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <Link href="/software/zelda/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゼルダの伝説</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ティアキン・ブレワイの相場</p></Link>
+            <Link href="/software/splatoon/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>スプラトゥーン</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>スプラ3・2の相場と売り時</p></Link>
+            <Link href="/software/monster-hunter/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>モンスターハンター</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ワイルズ・ライズの相場</p></Link>
+            <Link href="/software/dragon-quest/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ドラゴンクエスト</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>DQ3リメイク等の相場</p></Link>
+            <Link href="/software/pokemon/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ポケモン</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ポケモンソフトの相場</p></Link>
+            <Link href="/software/ff/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ファイナルファンタジー</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>FFソフトの相場</p></Link>
+          </div>
         </section>
         <AuthorBox />
       </div>
