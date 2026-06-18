@@ -49,7 +49,7 @@ const faqs = [
 export default function TifanaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナの口コミ・評判｜ゲーム・トレカ・フィギュアのホビー系買取", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナの口コミ・評判｜ゲーム・トレカ・フィギュアのホビー系買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ティファナ' }]} />
 
       {/* Hero */}
@@ -156,33 +156,53 @@ export default function TifanaReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'D.I', age: '20代男性', rating: 5, text: 'ポケモンカードとSwitchソフトをまとめて持ち込みました。トレカに詳しい査定士さんがいて、レアカード1枚に想像以上の値段がつきました。ゲームとカードを一箇所で売れるのは本当に楽です。' },
-              { initial: 'N.W', age: '30代男性', rating: 4, text: 'フィギュアのコレクション整理で利用。箱ありのフィギュアは高値がつきましたが、箱なしのものはかなり安くなりました。ホビー全般に詳しいスタッフがいるので、価値をちゃんと分かってもらえる安心感はあります。' },
-              { initial: 'E.K', age: '20代女性', rating: 4, text: '宅配買取で遊戯王カードとPS4ソフトを送りました。査定結果は3日で届き、丁寧な内訳付きで納得感がありました。ただ、送料無料の条件があるので、少量だと店舗持ち込みの方がお得かもしれません。' },
-              { initial: 'T.M', age: '40代男性', rating: 3, text: 'レトロゲームの買取を期待して行きましたが、ファミコン本体の査定はそこそこ。レトロゲーム専門店のほうが高いかもしれません。ただ、ガンプラやソフビも一緒に売れたので、コレクション丸ごと処分したい人には便利だと思います。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(30,41,59,0.08)', color: '#1E293B' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ティファナの公式仕様・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">株式会社ゼロプラス（1999年設立）</td></tr>
+                <tr><th>古物商許可</th><td className="text-sm">東京都公安委員会 第304409905763号</td></tr>
+                <tr><th>所在地</th><td className="text-sm">東京都中野区新井4-13-23</td></tr>
+                <tr><th>買取方法</th><td className="text-sm">出張買取・宅配買取・店頭買取の3方式（東京都内19店舗＋埼玉4店舗）。宅配はブランド品・洋服中心の運用</td></tr>
+                <tr><th>送料・宅配キット</th><td className="text-sm">宅配買取は送料・宅配キット無料。出張費も無料</td></tr>
+                <tr><th>入金</th><td className="text-sm">査定完了後 最短即日〜3営業日以内</td></tr>
+                <tr><th>キャンセル返送料</th><td className="text-sm"><strong>全額会社負担（返送料・キャンセル費用なし）</strong></td></tr>
+                <tr><th>対応品目</th><td className="text-sm">ゲーム機・ソフト（Switch/3DS/PS5/PS4/Vita）、フィギュア、トレカ、ミニカー・鉄道模型、プラモ等。おもちゃ・ホビー全般に対応</td></tr>
+                <tr><th>本人確認</th><td className="text-sm">本人確認書類をWEBアップロード（住所・申込・集荷の3点一致が必要）</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ティファナ公式（tifana.net・会社概要・FAQ・本人確認案内）、ヒカカク!（2026年6月18日閲覧）。返送料・キャンセル費用が無料な点が特徴です。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              買取比較サイトでの評価は分かれます。「ヒカカク!」は<strong>総合4.03点・501件（否定的17%）</strong>、一方「みん評」は2.68点・57件（2026年6月18日閲覧）。ゲーム・トレカ・フィギュアを<strong>まとめて一箇所で売りたい層</strong>に向くサービスです。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・出張買取が丁寧・迅速</li>
+                  <li>・ゲーム＋トレカ＋ホビーを一括で売れる</li>
+                  <li>・返送料・キャンセル費用が無料で試しやすい</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・買取価格が低いという声もある（評価が二分）</li>
+                  <li>・箱なしフィギュア等は安くなりやすい</li>
+                  <li>・レトロゲーム単体は専門店が高い場合も</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク!「ティファナ」・みん評（2026年6月18日閲覧）。評価サイトにより点数差があるため両論を併記しています。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 

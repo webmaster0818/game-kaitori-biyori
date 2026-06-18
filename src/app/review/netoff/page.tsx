@@ -43,7 +43,7 @@ const faqs = [
 export default function NetoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの口コミ・評判｜ゲーム・本・DVD一括買取の実績1億点超", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの口コミ・評判｜ゲーム・本・DVD一括買取の実績1億点超", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ネットオフ' }]} />
 
       {/* Hero */}
@@ -141,33 +141,54 @@ export default function NetoffReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'S.K', age: '30代男性', rating: 4, text: '引っ越しでゲームソフト20本、本100冊、DVD30枚をまとめて送りました。段ボール5箱分。まとめ売りボーナスが30%ついて合計15,000円に。個別に見ると安い商品もありますが、トータルで考えると手間いらずで満足です。' },
-              { initial: 'K.Y', age: '20代女性', rating: 5, text: 'Tポイントで受取りを選んだらボーナスポイントもついてお得でした。ゲーム8本と漫画50冊で8,000ポイント。ファミマやTSUTAYAで使えるので、現金より便利に感じます。申込みから入金まで10日ほどで完了しました。' },
-              { initial: 'R.M', age: '40代男性', rating: 3, text: 'ゲームの査定額だけで見ると正直安いです。Switchソフト5本で3,000円弱。ゲーム専門店なら4,000円以上はつくと思います。ただ、本やDVDもまとめて処分できる便利さは代えがたいです。ゲームだけなら専門店の方がいいかも。' },
-              { initial: 'E.T', age: '30代女性', rating: 4, text: '子どもが大きくなって不要になったDSのソフトと絵本を大量に。値段がつかない物は無料で引き取ってくれるオプションを選んだので、全部スッキリ処分できました。まとめ売りボーナスのおかげで思ったより良い金額になりました。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ネットオフ宅配買取の公式仕様・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">ネットオフ株式会社（リネットジャパングループ）</td></tr>
+                <tr><th>古物商許可</th><td className="text-sm">愛知県公安委員会 第542782100600号</td></tr>
+                <tr><th>所在地</th><td className="text-sm">愛知県大府市柊山町三丁目33番地</td></tr>
+                <tr><th>送料・集荷</th><td className="text-sm">本＆ゲーム買取コースは送料無料。自宅集荷・コンビニ持込とも無料</td></tr>
+                <tr><th>梱包キット</th><td className="text-sm">本・ゲーム・DVD買取用ダンボール 6箱まで無料</td></tr>
+                <tr><th>申込点数の条件</th><td className="text-sm">ソフト類だけなら3点から（本のみの場合は30点から）</td></tr>
+                <tr><th>入金</th><td className="text-sm">最短2日。自動承認は査定案内後の翌営業日に支払手続→3営業日以内（楽天銀行は当日）</td></tr>
+                <tr><th>キャンセル返送料</th><td className="text-sm">自己負担（関東800円〜北海道1,200円・沖縄2,400円）。「自動承認」を選ぶと返送不可</td></tr>
+                <tr><th>対応ハード</th><td className="text-sm">Switch2/Switch/3DS、PS5/PS4/Vita/PSP、Xbox One ほか旧ハードも対応</td></tr>
+                <tr><th>本人確認</th><td className="text-sm">運転免許証・マイナンバーカード等の画像アップロード、またはオンライン本人確認</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ネットオフ公式（買取案内・ダンボールプレゼント・買取Q&A・本人確認案内、2026年6月18日閲覧）。本＆ゲーム買取コースの内容です。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              ネットオフは「本・ゲーム・DVDをまとめて手軽に処分したい」層に向くサービスです。送料・集荷・無料ダンボールの手軽さが評価される一方、<strong>1点あたりの査定額はゲーム専門店より控えめ</strong>になりやすい傾向があります。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・送料・集荷・ダンボール無料で手軽</li>
+                  <li>・本・DVDと一緒にまとめて処分できる</li>
+                  <li>・自動承認なら最短2日のスピード入金</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・1点ごとの査定額は安いという声がある</li>
+                  <li>・人気タイトル以外は値がつきにくい</li>
+                  <li>・ゲームだけを高く売りたいなら専門店が有利な場合も</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>参考：ヒカカク!（ネットオフ・家電カテゴリ 総合2.53点/393件、2026年6月18日閲覧）。ゲーム買取コース単独の第三者評点は口コミ件数が少なく、上記は公式仕様と一般的傾向に基づく整理です。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 

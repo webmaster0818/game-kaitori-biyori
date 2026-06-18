@@ -27,12 +27,12 @@ const features = [
 const steps = [
   { step: 1, title: '買取申込み', description: '駿河屋公式サイトの「かんたん買取」から申込み。売りたい商品のジャンルや点数を入力します。事前に買取価格を検索して確認することもできます。' },
   { step: 2, title: '梱包・発送', description: '商品を丁寧に梱包して発送します。送料は買取点数や金額の条件を満たせば無料。レトロゲームは特に緩衝材でしっかり保護して送りましょう。' },
-  { step: 3, title: '査定', description: '到着後、専門スタッフが1点ずつ丁寧に査定。レトロゲームや希少品は特に時間をかけて評価されます。査定完了までは通常2〜3週間程度かかります。' },
+  { step: 3, title: '査定', description: '到着後、専門スタッフが1点ずつ丁寧に査定。公式の査定目安は到着後4〜14日程度ですが、点数が多い場合や繁忙期はさらにかかることがあります。' },
   { step: 4, title: '入金', description: '査定結果に同意したら、銀行口座への振込で入金。査定結果はマイページで商品ごとの内訳を確認できます。' },
 ];
 
 const faqs = [
-  { q: '駿河屋の査定にはどのくらい時間がかかりますか？', a: '通常2〜3週間程度です。繁忙期（年末年始・大型連休前後）はさらに時間がかかることがあります。査定を急ぐ方は「スピード買取」オプション（買取価格が通常より低め）もあります。' },
+  { q: '駿河屋の査定にはどのくらい時間がかかりますか？', a: '公式の査定目安は商品到着後4〜14日程度、査定承諾後の入金は3営業日以内です。ただし繁忙期（年末年始・大型連休前後）はさらに時間がかかったという口コミもあります。急ぎの方は注意が必要です。' },
   { q: 'レトロゲームの箱なし・説明書なしでも買取できますか？', a: 'はい、ソフト単体でも買取可能です。ただし、箱・説明書付きの完品と比べると査定額は大幅に下がります。特にレトロゲームは完品かどうかで10倍以上の差がつくこともあります。' },
   { q: '買取価格の事前確認はどこでできますか？', a: '駿河屋公式サイトの「買取検索」から商品名やJANコードで検索できます。ただし表示価格は「完品・美品」の場合の上限価格であり、実際の査定では状態に応じて変動します。' },
   { q: '送料は無料ですか？', a: '買取点数30点以上または見積もり金額3,000円以上の場合、送料無料となります。条件を満たさない場合は送料がお客様負担となりますのでご注意ください。' },
@@ -43,7 +43,7 @@ const faqs = [
 export default function SurugayaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の口コミ・評判｜レトロゲーム・限定版に強い老舗買取", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の口コミ・評判｜レトロゲーム・限定版に強い老舗買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '駿河屋' }]} />
 
       {/* Hero */}
@@ -141,33 +141,53 @@ export default function SurugayaReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'N.T', age: '40代男性', rating: 5, text: 'ファミコンソフト50本とスーパーファミコンソフト30本を買取に出しました。一般のリサイクルショップでは全部で3,000円と言われたものが、駿河屋では合計42,000円に。レアタイトルの価値をしっかり理解してくれる唯一の存在だと思います。' },
-              { initial: 'K.M', age: '30代男性', rating: 4, text: 'PCエンジンのソフトを中心に20本ほど送りました。事前にサイトで買取価格を確認してから送ったので、ほぼ想定通りの金額でした。ただ査定完了まで3週間かかったのが少しストレスでした。急ぎでなければ問題ないです。' },
-              { initial: 'S.H', age: '50代男性', rating: 5, text: '30年以上大切にしてきたゲームコレクションの一部を整理。限定版の箱・説明書付き完品はかなりの高額査定がつきました。商品ごとの内訳も確認でき、納得感がありました。コレクターなら駿河屋一択です。' },
-              { initial: 'Y.A', age: '20代女性', rating: 3, text: 'Switchのソフト10本を売りましたが、駿河屋では現行タイトルの査定は普通でした。レトロゲーム向けのサービスなので、最新ゲームだけなら他のサービスの方が良いかもしれません。査定に時間がかかるのもマイナスポイント。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />駿河屋の公式仕様・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">株式会社駿河屋（旧・株式会社エーツー、2025年5月1日社名変更）</td></tr>
+                <tr><th>古物商許可</th><td className="text-sm">静岡県公安委員会 第491140002748号</td></tr>
+                <tr><th>所在地</th><td className="text-sm">静岡県静岡市葵区伝馬町5-4</td></tr>
+                <tr><th>送料無料の条件</th><td className="text-sm">「あんしん買取」＝見積金額3,000円以上で無料（着払い）／「かんたん買取」＝買取点数30点以上で無料（ゆうパック着払い）。1箱あたり買取額1,500円未満は別途送料の場合あり</td></tr>
+                <tr><th>査定日数</th><td className="text-sm">商品到着後 通常4〜14日程度（繁忙期はさらに遅延の口コミあり）</td></tr>
+                <tr><th>入金</th><td className="text-sm">査定承諾後、3営業日以内に振込</td></tr>
+                <tr><th>キャンセル返送料</th><td className="text-sm">あんしん・かんたんとも自己負担。「自動承諾」を選ぶとキャンセル・返送不可</td></tr>
+                <tr><th>本人確認</th><td className="text-sm">身分証画像のアップロード（2025年12月2日以降、健康保険証は不可・資格確認書は可）</td></tr>
+                <tr><th>事前価格確認</th><td className="text-sm">「あんしん買取」は事前見積もり可／「かんたん買取」は合計のみで個別価格は不可。商品ページに買取価格表示あり</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式（特定商取引法表記・あんしん買取/かんたん買取案内・買取Q&A・本人確認案内、2026年6月18日閲覧）。※調査時点で公式に「かんたん買取の一時停止」告知が出ているため、利用前に公式の最新状況をご確認ください。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              買取比較サイト「ヒカカク!」での駿河屋の総合評価は<strong>2.57点（5点満点）・口コミ493件</strong>（2026年6月18日閲覧）。星5が95件に対し星1が213件と<strong>評価が二極化</strong>しているのが特徴です。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・あんしん買取で事前見積もり通りの金額がついた</li>
+                  <li>・レア・限定版で他社より高い査定になった</li>
+                  <li>・減額時に理由を説明してくれた</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・手数料・送料の実費で手取りが目減りした</li>
+                  <li>・事前見積もりと最終査定額に差が出た（完品前提のため）</li>
+                  <li>・繁忙期は査定・入金に時間がかかった</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク!「駿河屋」口コミページ（2026年6月18日閲覧）。評価は個人の体験に基づくもので、状態・時期により異なります。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 

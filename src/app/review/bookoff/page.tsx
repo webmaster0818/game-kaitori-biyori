@@ -43,7 +43,7 @@ const faqs = [
 export default function BookoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ブックオフ' }]} />
 
       {/* Hero */}
@@ -141,33 +141,53 @@ export default function BookoffReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'Y.K', age: '20代男性', rating: 4, text: '引っ越し前日にSwitch本体とソフト5本、漫画30冊を持ち込みました。1時間くらいで全部査定してもらえて、合計8,500円。急いでいたので即現金化できたのは本当に助かりました。ゲームの査定額はまあまあですが、利便性は最高です。' },
-              { initial: 'M.I', age: '30代女性', rating: 3, text: 'PS4ソフト10本を持ち込みましたが、人気タイトル以外は100円以下の査定が多くてがっかり。有名な作品は1,000円以上つきましたが、マイナーなものはほぼ値段がつかず。大量に売るなら他のサービスと比較した方がいいかも。' },
-              { initial: 'T.S', age: '40代男性', rating: 2, text: 'スーパーファミコンのソフトを30本ほど持ち込んだのですが、ほとんど値段がつきませんでした。中にはプレミア価格のタイトルもあったのに、一律で安く査定された印象。レトロゲームは専門店に持っていくべきだと学びました。' },
-              { initial: 'A.W', age: '20代女性', rating: 5, text: 'アプリ会員クーポンで買取20%UPの時に利用。Switchソフト8本で9,200円になりました。クーポンなしだと7,600円くらいだったそうなので、キャンペーン時期を狙うのがおすすめです。スタッフさんの対応も丁寧でした。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ブックオフ宅配買取の公式仕様・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">ブックオフコーポレーション株式会社</td></tr>
+                <tr><th>古物商許可</th><td className="text-sm">神奈川県公安委員会 第452760001146号</td></tr>
+                <tr><th>所在地</th><td className="text-sm">神奈川県相模原市南区古淵2-14-20</td></tr>
+                <tr><th>送料</th><td className="text-sm">宅配買取は集荷・振込手数料とも無料（お客様負担なし）。1申込で最大19箱まで</td></tr>
+                <tr><th>申込点数の条件</th><td className="text-sm">書籍・コミック10点以上／ゲーム・DVD・CDのいずれか3点以上／買取1,000円以上のソフト1点、ほかジャンルは1点から</td></tr>
+                <tr><th>入金</th><td className="text-sm">商品到着（集荷）から1週間程度で振込</td></tr>
+                <tr><th>キャンセル返送料</th><td className="text-sm">返送はお客様負担（目安1箱1,300円前後）。「かんたん承認」コースは返却不可で、返送を残すには「あんしん返送コース」を選択</td></tr>
+                <tr><th>梱包キット</th><td className="text-sm">無料ダンボール提供は終了。手持ちの箱・厚手紙袋を利用、または公式で1枚200円（税込）購入</td></tr>
+                <tr><th>本人確認</th><td className="text-sm">運転免許証・マイナンバーカード（表面）等の画像アップロード</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ宅配買取公式（sell.bookoff.co.jp）・規制対応開示・サポートFAQ（2026年6月18日閲覧）。※公式の「ゲーム高価買取情報」に載る価格は<strong>店舗での買取価格</strong>で、宅配買取の価格とは異なる旨が公式に明記されています。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              買取比較サイト「ヒカカク!」でのブックオフの総合評価は<strong>3.32点（5点満点）・口コミ1,759件</strong>、否定的評価は約23.4%（2026年6月18日閲覧）。賛否が分かれる「使い方次第」のサービスです。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・集荷無料・送料無料で手軽に大量処分できる</li>
+                  <li>・対応が早く、まとめて引き取ってもらえる</li>
+                  <li>・最新ゲーム（Switch/PS5新作）は高価買取の対象</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・査定額の低さへの不満が最多</li>
+                  <li>・古いソフト・状態の悪いものは値がつきにくい</li>
+                  <li>・専門店に比べレトロ・希少タイトルは安くなりがち</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク!「ブックオフ」口コミページ（2026年6月18日閲覧）。評価は個人の体験に基づくもので、品目・状態により異なります。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 

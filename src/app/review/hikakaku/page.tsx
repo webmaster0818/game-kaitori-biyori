@@ -49,7 +49,7 @@ const faqs = [
 export default function HikakakuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の口コミ・評判｜最大20社一括査定のゲーム買取比較", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の口コミ・評判｜最大20社一括査定のゲーム買取比較", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ヒカカク！' }]} />
 
       {/* Hero */}
@@ -150,33 +150,50 @@ export default function HikakakuReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* サービス概要・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'T.K', age: '30代男性', rating: 4, text: 'Switchソフト15本をまとめて査定に出しました。一括で複数社の見積もりが届くのは本当に便利。最高値と最安値で4,000円以上の差があり、比較して正解でした。ただ、業者からの電話が立て続けに来たのは少し面倒でした。' },
-              { initial: 'M.S', age: '20代女性', rating: 5, text: '引っ越し前にPS4本体とソフトをまとめて売りたくて利用。申込みが簡単で、翌日には5社から見積もりが届きました。結果、近所のゲームショップより8,000円も高く売れて大満足です。' },
-              { initial: 'Y.N', age: '40代男性', rating: 4, text: 'ファミコンソフトのコレクションを整理するために使いました。レトロゲーム専門の業者が複数見つかり、希少タイトルの価値をしっかり評価してもらえたのが嬉しかったです。一般のリサイクルショップとは査定額が全然違いました。' },
-              { initial: 'A.H', age: '30代女性', rating: 3, text: '査定自体は便利ですが、地方在住のため対応してくれる業者が3社しかなく、都市部との差を感じました。宅配買取メインの業者は全国対応でしたが、もう少し選択肢があると嬉しいです。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ヒカカク!のサービス概要・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">株式会社じげん（2024年にヒカカク!事業を承継・合併。旧運営は株式会社ジラフ）</td></tr>
+                <tr><th>所在地</th><td className="text-sm">東京都港区虎ノ門三丁目4番8号</td></tr>
+                <tr><th>サービス形態</th><td className="text-sm">買取価格の比較・最大20社への一括査定を仲介するプラットフォーム（<strong>ヒカカク!自身は買い取らず</strong>、複数の買取業者を仲介）</td></tr>
+                <tr><th>利用料金</th><td className="text-sm">完全無料</td></tr>
+                <tr><th>申込フロー</th><td className="text-sm">商品情報を入力→最短1日で各社からメール→価格を比較→業者を選んで宅配・出張・店頭で買取（電話番号の入力が必須）</td></tr>
+                <tr><th>注意点</th><td className="text-sm">表示・査定額は参考値で保証されない（仮査定と本査定に差が出ることがある）</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク!公式（サービス案内・運営会社変更のお知らせ）、株式会社ジラフ プレスリリース（2026年6月18日閲覧）。ヒカカク!は買取業者ではなく「買取の比較・一括査定サイト」です。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向（営業電話の実態も）</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              ヒカカク!公式掲載の総合評価は<strong>3.4点（5点満点）</strong>で、悪い評価が約32.5%（2026年6月18日閲覧）。「最大20社に一括依頼する」仕組み上、<strong>複数業者から営業電話が集中しやすい</strong>のが最大の注意点です（公式の口コミページ自体が主要な課題として明記）。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・一度の入力で複数社の査定を比較でき、高い店を探しやすい</li>
+                  <li>・完全無料で、査定のみの利用も可能</li>
+                  <li>・買取相場や業者の口コミを調べられる</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・<strong>複数業者からの営業電話が集中しやすい</strong></li>
+                  <li>・表示価格は参考値で、本査定と差が出ることがある</li>
+                  <li>・電話番号の入力が必須</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>営業電話が苦手な方は、申込時に「連絡はメール希望」と明記するのが有効です（強引に電話する業者もいるとの指摘あり）。出典：ヒカカク!口コミページ（2026年6月18日閲覧）。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 

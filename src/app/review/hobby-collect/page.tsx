@@ -43,7 +43,7 @@ const faqs = [
 export default function HobbyCollectReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの口コミ・評判｜箱なし・ジャンクOKの宅配買取", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの口コミ・評判｜箱なし・ジャンクOKの宅配買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ホビーコレクト' }]} />
 
       {/* Hero */}
@@ -141,33 +141,54 @@ export default function HobbyCollectReviewPage() {
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'T.M', age: '30代男性', rating: 4, text: '電源の入らないPS4を他社では断られ続けていましたが、ホビーコレクトでは2,500円の値段がつきました。壊れていても買い取ってくれるのはありがたい。事前査定で「2,000〜3,000円」と言われていたので、ほぼ想定通りでした。' },
-              { initial: 'Y.I', age: '20代女性', rating: 5, text: '引っ越しで箱を全部捨ててしまったSwitchソフト15本を買取に。箱なしでも全部値段がつきました。もちろん箱ありより安くなりましたが、捨てるよりずっと良いです。送料も返送料も無料なのが良心的。' },
-              { initial: 'K.O', age: '40代男性', rating: 3, text: 'ジャンクのPS3とPSP、ソフト10本を送りました。ジャンク品は1台500円程度とかなり安かったですが、引き取ってもらえるだけ助かります。ソフトの方は普通の査定額でした。ジャンク品の査定額にはあまり期待しない方がいいです。' },
-              { initial: 'A.K', age: '30代女性', rating: 4, text: '事前査定ができるのが決め手で利用しました。フォームに商品の写真と状態を入力すると、翌日には査定額の目安が届きました。実際の査定額もほぼ同じで安心。3日で入金されたのもポイント高いです。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ホビーコレクトの公式仕様・会社情報（2026年6月18日時点）</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <tbody>
+                <tr><th>運営会社</th><td className="text-sm">株式会社JUSTY</td></tr>
+                <tr><th>古物商許可</th><td className="text-sm">石川県公安委員会 第511010011942号</td></tr>
+                <tr><th>所在地</th><td className="text-sm">石川県金沢市泉2丁目6-7</td></tr>
+                <tr><th>送料・集荷</th><td className="text-sm">送料無料（往路を会社負担）。佐川急便が自宅集荷・日時指定可</td></tr>
+                <tr><th>梱包キット</th><td className="text-sm">無料（申込時に依頼可）</td></tr>
+                <tr><th>査定</th><td className="text-sm">商品到着後 最短当日〜7日目安（繁忙期は2週間程度の口コミあり）</td></tr>
+                <tr><th>入金</th><td className="text-sm">買取承諾後 最短24時間〜数日で振込（振込手数料無料）</td></tr>
+                <tr><th>キャンセル返送料</th><td className="text-sm">自己負担（大量・大型だと1箱2,000円前後の指摘あり）</td></tr>
+                <tr><th>対応品目</th><td className="text-sm">ゲーム（レトロ機・ソフト）対応。得意ジャンルはフィギュア・ホビー・レトロ玩具・鉄道模型・トレカ</td></tr>
+                <tr><th>買取方法</th><td className="text-sm">宅配買取・出張買取（エリア限定）。店頭買取は無し</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ホビーコレクト公式（recycle-net.jp/hobby/・会社概要）、ヒカカク!（2026年6月18日閲覧）。※古物商番号・出張対応エリア等は出典間で表記揺れがあるため、利用前に公式の最新情報をご確認ください。</p>
+        </section>
+
+        {/* 口コミ傾向（出典付き） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              買取比較サイト「ヒカカク!」での総合評価は<strong>4.13点（5点満点）・口コミ1,825件</strong>、否定的評価は約2.6%と<strong>比較的高評価</strong>（2026年6月18日閲覧）。フィギュア・ホビーと一緒にゲームをまとめて手放したい層に向きます。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・送料・集荷・梱包キットが無料で手軽</li>
+                  <li>・フィギュア・ホビー・レトロに詳しい</li>
+                  <li>・対応が丁寧・入金が早いという声</li>
+                </ul>
               </div>
-            ))}
+              <div>
+                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・キャンセル時の返送料が自己負担</li>
+                  <li>・開封済み・箱なしは安くなりやすい</li>
+                  <li>・繁忙期は査定連絡が遅れることがある</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク!「ホビーコレクト」口コミページ（2026年6月18日閲覧）。評価は個人の体験に基づくもので、品目・状態により異なります。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 
