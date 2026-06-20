@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import { SeriesPriceTable } from '@/components/PriceIndex'
 
 export const metadata: Metadata = {
   title: 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧',
@@ -77,6 +78,9 @@ export default function ZeldaPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* 店舗横断の実測価格（価格DBから動的挿入） */}
+        <SeriesPriceTable keyword="ゼルダ" heading="ゼルダの店舗別 買取価格【毎週更新の実測データ】" />
+
         {/* Price Table */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゼルダ主要タイトルの買取相場一覧</h2>

@@ -302,6 +302,10 @@ export default function HighValueSoftwarePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <Link href="/price-index/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+            </Link>
             <Link href="/compare/kaitori-ranking/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取おすすめランキング15選</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>15社を徹底比較</p>
