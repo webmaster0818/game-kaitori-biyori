@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import TakehomeSimulator from '@/components/TakehomeSimulator'
 
 export const metadata: Metadata = {
   title: 'ゲームはメルカリと買取業者どっちで売る？【2026年6月】手数料・手取り額・入金日数を実データ比較',
@@ -70,7 +71,7 @@ const faqs = [
 export default function MercariVsKaitoriPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームはメルカリと買取業者どっちで売る？手数料・手取り額・入金日数を実データ比較", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームはメルカリと買取業者どっちで売る？手数料・手取り額・入金日数を実データ比較", "datePublished": "2026-03-15", "dateModified": "2026-06-21", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'メルカリ vs 買取業者' }]} />
 
       {/* Hero */}
@@ -151,6 +152,13 @@ export default function MercariVsKaitoriPage() {
               メルカリで25,000円で売れた場合の手取りは21,550円。買取業者で22,000円の査定が出れば、手間もリスクも少ない買取業者のほうがお得になります。
             </p>
           </div>
+
+          {/* インタラクティブ手取りシミュレーター（柱3） */}
+          <h3 className="font-bold text-lg mt-8 mb-3" style={{ color: 'var(--color-deep-blue)' }}>あなたの場合で計算：実質手取りシミュレーター</h3>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            メルカリの想定売値・配送方法・買取査定額を入れると、手数料・送料・振込手数料を引いた<strong>実質手取り</strong>をその場で比較できます。「表示価格は高いのに、手取りは買取とほぼ同じ」がひと目でわかります。
+          </p>
+          <TakehomeSimulator />
         </section>
 
         {/* Current Fees (Information Gain) */}

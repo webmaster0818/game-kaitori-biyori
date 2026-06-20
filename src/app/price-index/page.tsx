@@ -77,12 +77,26 @@ export default function PriceIndexPage() {
           </div>
         </section>
 
-        {/* 関連 */}
+        {/* 業者レビューへの導線（ブランドクラスタ連携） */}
         <section className="mt-12">
+          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>各買取業者の評判・口コミを見る</h3>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>価格を確認したら、実際に売る業者の送料・入金日数・減額条件・口コミもチェックしましょう。</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <Link href="/review/kaitori-world/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>カイトリワールドの評判</Link>
+            <Link href="/review/geo/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>ゲオ宅配買取の評判</Link>
+            <Link href="/review/surugaya/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>駿河屋の評判</Link>
+            <Link href="/review/bookoff/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>ブックオフの評判</Link>
+            <Link href="/review/game-oukoku/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国の評判</Link>
+            <Link href="/review/hikakaku/" className="glass-card p-3 card-hover block text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>ヒカカク！の評判</Link>
+          </div>
+        </section>
+
+        {/* 関連 */}
+        <section className="mt-8">
           <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>関連ガイド</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/software/high-value/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売れるソフトランキング</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式買取価格で横断比較</p></Link>
-            <Link href="/compare/kaitori-ranking/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取おすすめランキング</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>15社を徹底比較</p></Link>
+            <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>メルカリvs買取 手取り比較</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実質手取りシミュレーター</p></Link>
             <Link href="/method/high-price/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売るコツ</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>買取価格を最大化</p></Link>
           </div>
         </section>
