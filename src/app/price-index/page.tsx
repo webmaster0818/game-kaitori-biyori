@@ -95,9 +95,9 @@ export default function PriceIndexPage() {
         <section className="mt-8">
           <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>関連ガイド</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link href="/software/high-value/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売れるソフトランキング</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式買取価格で横断比較</p></Link>
+            <Link href="/condition-guide/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷・ジャンクはどこで売れる？</p></Link>
             <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>メルカリvs買取 手取り比較</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実質手取りシミュレーター</p></Link>
-            <Link href="/method/high-price/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売るコツ</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>買取価格を最大化</p></Link>
+            <Link href="/software/high-value/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売れるソフトランキング</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式買取価格で横断比較</p></Link>
           </div>
         </section>
         <AuthorBox />
