@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】',
+  title: 'ゲーム宅配買取おすすめ比較7選｜送料・査定スピード・梱包のコツ【2026年】',
   description:
-    'ゲームソフト・本体の宅配買取を徹底解説。ネット買取の流れ4ステップ、梱包のコツ、送料負担の比較、メリット・デメリットからおすすめ3社の比較まで完全ガイド。自宅にいながらゲームを高く売る方法がわかります。',
+    'ゲームソフト・本体の宅配買取を徹底解説。ネット買取の流れ4ステップ、梱包のコツ、送料負担の比較、メリット・デメリットから主要7サービスの比較まで完全ガイド。自宅にいながらゲームを高く売る方法がわかります。',
   keywords: ['ゲーム 宅配買取', 'ゲーム ネット買取', 'ゲーム 宅配 おすすめ', 'ゲーム買取 送料無料', 'ゲーム 郵送買取'],
   openGraph: {
-    title: 'ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】',
-    description: 'ゲームの宅配買取の流れ、梱包のコツ、おすすめ3社を徹底比較。',
+    title: 'ゲーム宅配買取おすすめ比較7選｜送料・査定スピード・梱包のコツ【2026年】',
+    description: 'ゲームの宅配買取の流れ、梱包のコツ、主要7サービスを徹底比較。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -39,9 +39,13 @@ const demerits = [
 ];
 
 const serviceComparison = [
-  { name: 'ヒカカク！', shipping: '業者による（多くは無料）', kit: '業者による', speed: '1〜5営業日', cancel: '業者による', point: '最大20社一括査定で最高値を狙える' },
+  { name: '駿河屋', shipping: '条件付き無料（点数・金額による）', kit: 'あんしん／かんたん宅配', speed: '混雑時は長め（数日〜2週間程度）', cancel: '返送料の扱いに注意', point: '在庫・取扱品目が膨大。プレミア/レトロに強い' },
+  { name: 'ネットオフ', shipping: '無料（ソフト3点以上等の条件）', kit: '無料キット＋自宅集荷', speed: '1〜数営業日', cancel: '事前査定後に判断可', point: '集荷まで自宅完結。本もまとめて売れる' },
+  { name: 'カイトリワールド', shipping: '無料（査定3,000円以上）', kit: 'あり', speed: '入金が早めとの評判', cancel: '7日で自動承認に注意', point: 'ゲーム特化。減額条件は事前確認を' },
+  { name: 'ブックオフ宅配', shipping: '無料', kit: '無料ダンボール提供は終了（自前梱包）', speed: '1〜数営業日', cancel: '点数により返送料負担あり', point: '大手の安心感。店舗持ち込みとの併用も' },
   { name: '買取ウリエル', shipping: '送料無料', kit: '無料キットあり', speed: '1〜3営業日', cancel: '返送無料', point: '宅配のほか出張買取も選べる' },
-  { name: 'ティファナ', shipping: '送料無料', kit: '無料キットあり', speed: '1〜3営業日', cancel: '返送無料', point: 'ゲーム以外のホビー品もまとめ売り可' },
+  { name: 'ティファナ', shipping: '送料無料', kit: '無料キットあり', speed: '1〜3営業日', cancel: '返送無料', point: 'ジャンク・ホビー品もまとめ売り可' },
+  { name: 'ヒカカク！（一括査定）', shipping: '業者による（多くは無料）', kit: '業者による', speed: '1〜5営業日', cancel: '業者による', point: '最大20社へ一括査定して最高値を比較できる' },
 ];
 
 const packingTips = [
@@ -63,7 +67,7 @@ const faqs = [
 export default function OnlinePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム宅配買取おすすめ3選｜ネット買取の流れ・梱包のコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム宅配買取おすすめ比較7選｜送料・査定スピード・梱包のコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: '宅配買取' }]} />
 
       {/* Hero */}
@@ -71,10 +75,10 @@ export default function OnlinePage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>売り方ガイド</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ゲーム宅配買取 完全ガイド
+            ゲーム宅配買取おすすめ比較7選｜完全ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            自宅から一歩も出ずにゲームを売れる宅配買取。ネット買取の流れ4ステップ、梱包のコツ、送料比較、おすすめ3社の違いまで、初めての方にもわかりやすく解説します。
+            自宅から一歩も出ずにゲームを売れる宅配買取。主要7サービスの送料・宅配キット・査定スピード・キャンセル条件の比較表に加え、ネット買取の流れ4ステップ・梱包のコツまで、初めての方にもわかりやすく解説します。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -141,7 +145,7 @@ export default function OnlinePage() {
 
         {/* Service Comparison */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />3社の宅配買取対応比較</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム宅配買取 主要7サービス比較</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
