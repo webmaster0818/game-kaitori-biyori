@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import { PriceMatrix, PriceDiffRanking, PriceFreshnessNote } from '@/components/PriceIndex';
-import { PRICE_SURVEY_DATE, crossStorePrices, priceDiffRanking } from '@/data/prices';
+import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, STORE_LABELS, crossStorePrices, priceDiffRanking, priceMoves } from '@/data/prices';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較',
@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 };
 
 const topGap = priceDiffRanking()[0];
+const moves = priceMoves();
+const risers = moves.filter((m) => m.delta > 0);
+const fallers = moves.filter((m) => m.delta < 0);
 
 export default function PriceIndexPage() {
   return (
@@ -45,6 +48,43 @@ export default function PriceIndexPage() {
               💡 今週の注目: <strong>「{topGap.title}」は店によって最大 {topGap.gap.toLocaleString()}円の差</strong>。今いちばん高いのは{topGap.best.price.toLocaleString()}円の店舗です。下の比較表で各ソフトの最高値店をチェックしましょう。
             </p>
           </div>
+        )}
+
+        {/* 今週の値動き（先週比） */}
+        {PRICE_PREV_SURVEY_DATE && moves.length > 0 && (
+          <section className="mb-12">
+            <h2 className="section-heading mb-6"><span className="section-heading-bar" />今週の値動き（先週比）</h2>
+            <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+              前回調査（{PRICE_PREV_SURVEY_DATE}）から今回（{PRICE_SURVEY_DATE}）で買取価格が動いたタイトルです。<strong>上がっているうちに売る</strong>のが基本戦略です。
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="glass-card p-5">
+                <h3 className="font-bold mb-3" style={{ color: '#00E676' }}>📈 高騰（先週比プラス）</h3>
+                {risers.length > 0 ? (
+                  <ul className="space-y-2">
+                    {risers.map((m) => (
+                      <li key={m.title + m.store} className="text-sm" style={{ color: 'var(--color-text-light)' }}>
+                        <strong>{m.title}</strong>（{STORE_LABELS[m.store]}）：{m.from.toLocaleString()}円 → <strong>{m.to.toLocaleString()}円</strong> <span style={{ color: '#00E676' }}>(+{m.delta.toLocaleString()}円)</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今週は上昇したタイトルはありませんでした。</p>}
+              </div>
+              <div className="glass-card p-5">
+                <h3 className="font-bold mb-3" style={{ color: '#F87171' }}>📉 急落（先週比マイナス）</h3>
+                {fallers.length > 0 ? (
+                  <ul className="space-y-2">
+                    {fallers.map((m) => (
+                      <li key={m.title + m.store} className="text-sm" style={{ color: 'var(--color-text-light)' }}>
+                        <strong>{m.title}</strong>（{STORE_LABELS[m.store]}）：{m.from.toLocaleString()}円 → <strong>{m.to.toLocaleString()}円</strong> <span style={{ color: '#F87171' }}>({m.delta.toLocaleString()}円)</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今週は下落したタイトルはありませんでした。</p>}
+              </div>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※ブックオフ・ゲオの公式買取価格の先週比。駿河屋は今回自動取得できなかったため先週比の対象外です。価格は完品想定の参考値で変動します。</p>
+          </section>
         )}
 
         {/* 価格差ランキング（柱1の核） */}

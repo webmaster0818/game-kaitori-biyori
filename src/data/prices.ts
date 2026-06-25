@@ -6,8 +6,8 @@
 //   - ブックオフ=高価買取情報ページの店頭参考価格 / ゲオ・駿河屋=宅配(通信)買取の参考価格
 // ============================================================
 
-export const PRICE_SURVEY_DATE = '2026-06-20'; // 最終調査日
-export const PRICE_PREV_SURVEY_DATE: string | null = null; // 前回調査日（2回目以降に設定→先週比が有効化）
+export const PRICE_SURVEY_DATE = '2026-06-25'; // 最終調査日
+export const PRICE_PREV_SURVEY_DATE: string | null = '2026-06-20'; // 前回調査日（2回目以降に設定→先週比が有効化）
 
 export type StoreKey = 'bookoff' | 'geo' | 'surugaya' | 'retrog';
 
@@ -28,18 +28,36 @@ export type TitlePrice = {
 };
 
 // 2026-06-20 各社公式買取ページで確認（店舗横断マトリクス）
+// prices=2026-06-25調査値 / prevPrices=2026-06-20調査値（先週比用）。surugayaは6/25に自動取得不可のため6/20値を継続。
 export const crossStorePrices: TitlePrice[] = [
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 4000, geo: 4500, surugaya: 4500 } },
-  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { geo: 4500, surugaya: 4500 } },
-  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3300, geo: 3800, surugaya: 3800 } },
-  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3500, geo: 3800, surugaya: 3500 } },
-  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 2800, geo: 3500, surugaya: 3300 } },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2500, geo: 3000, surugaya: 3400 } },
-  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2800, geo: 3000, surugaya: 2600 } },
-  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1500, geo: 2000, surugaya: 2500 } },
-  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1800, geo: 2000, surugaya: 2000 } },
-  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1500, geo: 1500, surugaya: 2000 } },
+  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 4000, geo: 4500, surugaya: 4500 }, prevPrices: { bookoff: 4000, geo: 4500, surugaya: 4500 } },
+  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { geo: 4500, surugaya: 4500 }, prevPrices: { geo: 4500, surugaya: 4500 } },
+  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3300, geo: 3800, surugaya: 3800 }, prevPrices: { bookoff: 3300, geo: 3800, surugaya: 3800 } },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3500, geo: 3800, surugaya: 3500 }, prevPrices: { bookoff: 3500, geo: 3800, surugaya: 3500 } },
+  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3000, geo: 3500, surugaya: 3300 }, prevPrices: { bookoff: 2800, geo: 3500, surugaya: 3300 } },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2500, geo: 3000, surugaya: 3400 }, prevPrices: { bookoff: 2500, geo: 3000, surugaya: 3400 } },
+  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 2600 }, prevPrices: { bookoff: 2800, geo: 3000, surugaya: 2600 } },
+  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1500, geo: 2000, surugaya: 2500 }, prevPrices: { bookoff: 1500, geo: 2000, surugaya: 2500 } },
+  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1700, geo: 2000, surugaya: 2000 }, prevPrices: { bookoff: 1800, geo: 2000, surugaya: 2000 } },
+  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1500, geo: 1500, surugaya: 2000 }, prevPrices: { bookoff: 1500, geo: 1500, surugaya: 2000 } },
 ];
+
+// ---- 先週比（高騰/急落）ヘルパー ----
+export type PriceMove = { title: string; platform: string; store: StoreKey; from: number; to: number; delta: number };
+// 各タイトル・店舗で前回比の変動を抽出（delta != 0 のみ）。降順=高騰、昇順=急落で使う。
+export function priceMoves(list: TitlePrice[] = crossStorePrices): PriceMove[] {
+  const moves: PriceMove[] = [];
+  for (const t of list) {
+    if (!t.prevPrices) continue;
+    for (const [store, to] of Object.entries(t.prices) as [StoreKey, number][]) {
+      const from = t.prevPrices[store];
+      if (typeof from === 'number' && typeof to === 'number' && from !== to) {
+        moves.push({ title: t.title, platform: t.platform, store, from, to, delta: to - from });
+      }
+    }
+  }
+  return moves.sort((a, b) => b.delta - a.delta);
+}
 
 // ---- 集計ヘルパー（柱1: 価格インデックス） ----
 export type PriceAnalysis = {
