@@ -516,6 +516,10 @@ export default function KaitoriRankingPage() {
         <section className="mt-12">
           <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>関連する比較・ガイド</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/compare/which-is-best/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取はどこがいい？用途別比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高く・早く・レトロ・箱なし等、目的別に最適な売り先</p>
+            </Link>
             <Link href="/compare/shop-vs-online/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>店舗 vs 宅配買取</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>どっちがお得か徹底比較</p>

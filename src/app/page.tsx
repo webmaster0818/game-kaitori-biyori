@@ -238,6 +238,11 @@ export default function HomePage() {
               <span className="section-heading-bar" />ゲーム買取おすすめ比較ランキング
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>10社を厳選して徹底比較しました</p>
+            <div className="mt-5">
+              <Link href="/compare/which-is-best/" className="btn-primary py-2.5 px-6 inline-block">
+                ゲーム買取はどこがいい？用途別おすすめ比較を見る
+              </Link>
+            </div>
           </div>
 
           <div className="overflow-x-auto mb-12">
