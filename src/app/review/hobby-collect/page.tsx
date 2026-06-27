@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ホビーコレクトの口コミ・評判｜箱なし・ジャンクOKの宅配買取',
+  title: 'ホビーコレクトの評判・口コミは怪しい？【2026年6月】箱なし・ジャンクの査定額・古物商番号で検証',
   description:
-    'ホビーコレクトのゲーム買取を徹底レビュー。箱なし・ジャンク品もOKの宅配買取サービスの特徴・メリット・デメリット・利用手順を詳しく解説。事前査定で安心、送料無料、最短3日入金。',
-  keywords: ['ホビーコレクト 買取', 'ホビーコレクト 口コミ', 'ゲーム ジャンク 買取', '箱なし ゲーム買取', 'ホビーコレクト 評判'],
+    'ホビーコレクトの評判・口コミを徹底検証。「怪しい」と言われる理由の実態、ヒカカク!4.13点の口コミ傾向、古物商許可番号、箱なし・ジャンク品の査定額、送料・返送料・キャンセル条件まで公式情報（2026年6月確認）で整理。おすすめできる人・できない人も明記。',
+  keywords: ['ホビーコレクト 評判', 'ホビーコレクト 口コミ', 'ホビーコレクト 怪しい', 'ホビーコレクト 買取', 'ゲーム ジャンク 買取', '箱なし ゲーム買取'],
   openGraph: {
-    title: 'ホビーコレクトの口コミ・評判｜箱なし・ジャンクOKの宅配買取',
-    description: 'ホビーコレクトのゲーム買取を徹底レビュー。箱なし・ジャンクOKの特徴を解説。',
+    title: 'ホビーコレクトの評判・口コミは怪しい？【2026年6月】査定額・古物商番号で検証',
+    description: 'ホビーコレクトの評判と「怪しい」の実態を公式情報で検証。口コミ傾向・古物商番号・箱なし/ジャンクの査定額・送料/返送条件まで解説。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -43,7 +43,7 @@ const faqs = [
 export default function HobbyCollectReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの口コミ・評判｜箱なし・ジャンクOKの宅配買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの評判・口コミは怪しい？箱なし・ジャンクの査定額・古物商番号で検証", "datePublished": "2026-03-15", "dateModified": "2026-06-27", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ホビーコレクト' }]} />
 
       {/* Hero */}
@@ -51,12 +51,13 @@ export default function HobbyCollectReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>ジャンクOK</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年6月27日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ホビーコレクト<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>徹底レビュー</span>
+            ホビーコレクトの評判・口コミ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「怪しい」は本当か徹底検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            箱なし・説明書なし・ジャンク品でも買取OKの宅配買取サービス。壊れたゲーム機も査定対象で、他社で断られた商品にも値段がつく可能性があります。事前査定で金額を確認してから送れる安心感と、最短3日の入金スピードが魅力です。
+            箱なし・説明書なし・ジャンク品でも買取OKの宅配買取サービス「ホビーコレクト」。検索すると「怪しい」という言葉も出てきますが、実態はどうなのか。運営会社・古物商許可番号・口コミ傾向・箱なし/ジャンク品の査定額・送料/返送料の条件を、公式情報と比較サイトの一次情報をもとに整理しました。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://hobby-collect.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -70,6 +71,41 @@ export default function HobbyCollectReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：怪しい業者ではない。箱なし・ジャンクの「最後の受け皿」として使える</h2>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+              ホビーコレクトは、石川県金沢市の株式会社JUSTYが運営する正規の宅配買取サービスです（古物商許可：石川県公安委員会 第511010011942号）。箱なし・説明書なし・壊れたジャンク品でも買取対象になる点が最大の強みで、他社で断られた商品の「最後の受け皿」になります。買取比較サイト「ヒカカク!」の総合評価は<strong>4.13点（口コミ1,825件）</strong>と比較的高評価です（2026年6月18日閲覧）。一方で、キャンセル時の返送料が自己負担になる点と、箱なし・開封済みは査定額が下がりやすい点は理解して使う必要があります。
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm mb-4">
+              <div className="p-3 rounded-lg" style={{ background: 'rgba(16,185,129,0.06)' }}>
+                <p className="font-bold mb-2" style={{ color: 'var(--color-electric-green)' }}>おすすめできる人</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・箱なし・説明書なしのゲームを売りたい</li>
+                  <li>・壊れたゲーム機（ジャンク品）を処分したい</li>
+                  <li>・他社で買取を断られた商品がある</li>
+                  <li>・フィギュア・ホビーもまとめて売りたい</li>
+                </ul>
+              </div>
+              <div className="p-3 rounded-lg" style={{ background: 'rgba(245,158,11,0.06)' }}>
+                <p className="font-bold mb-2" style={{ color: 'var(--color-accent-orange)' }}>おすすめできない人</p>
+                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・完品の人気ソフトを最高値で売りたい（専門店が有利）</li>
+                  <li>・店頭でその場で現金化したい（宅配のみ）</li>
+                  <li>・キャンセル前提で査定だけ試したい（返送料は自己負担）</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-sm leading-relaxed mb-2" style={{ color: 'var(--color-text-light)' }}>
+              <strong style={{ color: 'var(--color-deep-blue)' }}>「怪しい・詐欺」は本当？：</strong>運営会社・所在地・古物商許可番号がいずれも公式に明記されており、詐欺をうかがわせる事実は確認できません。「怪しい」という検索が出るのは、宅配買取への一般的な警戒感と、箱なし・開封済みで査定額が想定より下がるケースが「怪しい」という印象につながりやすいためと考えられます（断定ではなく確認項目ベースの評価）。
+            </p>
+            <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷あり・ジャンクでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+            </p>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ホビーコレクトの4つの特徴</h2>
@@ -257,6 +293,9 @@ export default function HobbyCollectReviewPage() {
         <section style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(0,230,118,0.05)', borderRadius: '12px', borderLeft: '3px solid var(--color-electric-green)' }}>
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（今どこが一番高い？）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリ vs 買取 手取り額シミュレーション</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/kaitori-ranking/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめランキング15選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/ps4/" style={{ color: 'var(--color-electric-green)' }}>PS4買取おすすめ3選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/method/online/" style={{ color: 'var(--color-electric-green)' }}>宅配買取の流れとコツ</Link></li>

@@ -51,7 +51,7 @@ const faqs = [
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-06-27", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
@@ -79,6 +79,19 @@ export default function UrielReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：1都3県で出張・即日現金化したい人向け。古物商許可ありの正規事業者</h2>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              買取ウリエルは株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）が運営する正規の買取事業者です。出張費・査定料・キャンセル料はすべて無料で、買取成立後8日以内のクーリングオフにも対応しているため、「やばい・怪しい」という検索が出るほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ゲーム買取の対象エリアが<strong>東京・神奈川・千葉・埼玉</strong>に限定されている点と、宅配・店頭は2026年6月時点で案内終了している点だけは事前に確認してください。重い荷物を運ばずその場で現金化したい1都3県の方に向きます。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+            </p>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />買取ウリエルの4つの特徴</h2>
@@ -288,6 +301,9 @@ export default function UrielReviewPage() {
         <section style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(0,230,118,0.05)', borderRadius: '12px', borderLeft: '3px solid var(--color-electric-green)' }}>
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（今どこが一番高い？）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリ vs 買取 手取り額シミュレーション</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/kaitori-ranking/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめランキング15選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/ps5/" style={{ color: 'var(--color-electric-green)' }}>PS5買取おすすめ3選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch/" style={{ color: 'var(--color-electric-green)' }}>Switch買取おすすめ3選</Link></li>

@@ -30,6 +30,7 @@ const rankings = [
     speed: '2〜7日',
     genre: '全ジャンル対応',
     bestFor: '最高値で売りたい人',
+    reviewPath: '/review/hikakaku/',
   },
   {
     rank: 2,
@@ -43,6 +44,7 @@ const rankings = [
     speed: '出張: 即日 / 宅配: 3〜5日',
     genre: '全ジャンル対応',
     bestFor: '出張買取で楽に売りたい人',
+    reviewPath: '/review/uriel/',
   },
   {
     rank: 3,
@@ -56,6 +58,7 @@ const rankings = [
     speed: '店舗: 即日 / 宅配: 3〜5日',
     genre: '新作ゲーム中心',
     bestFor: '手軽に即日現金化したい人',
+    reviewPath: '/review/geo/',
   },
   {
     rank: 4,
@@ -69,6 +72,7 @@ const rankings = [
     speed: '5〜14日',
     genre: 'レトロゲーム・フィギュア',
     bestFor: 'レトロゲーム・レアソフトを売りたい人',
+    reviewPath: '/review/surugaya/',
   },
   {
     rank: 5,
@@ -82,6 +86,7 @@ const rankings = [
     speed: '店舗: 即日 / 宅配: 3〜7日',
     genre: '全般（書籍・DVD含む）',
     bestFor: 'ゲーム以外もまとめて売りたい人',
+    reviewPath: '/review/bookoff/',
   },
   {
     rank: 6,
@@ -95,6 +100,7 @@ const rankings = [
     speed: '2〜5日',
     genre: '全般（新作中心）',
     bestFor: '宅配で手軽に売りたい人',
+    reviewPath: '/review/netoff/',
   },
   {
     rank: 7,
@@ -108,6 +114,7 @@ const rankings = [
     speed: '3〜5日',
     genre: 'ゲーム・フィギュア・トレカ',
     bestFor: 'リスクゼロで査定を試したい人',
+    reviewPath: '/review/hobby-collect/',
   },
   {
     rank: 8,
@@ -134,6 +141,7 @@ const rankings = [
     speed: '3〜5日',
     genre: 'ゲーム専門',
     bestFor: 'ゲームだけを専門的に売りたい人',
+    reviewPath: '/review/game-oukoku/',
   },
   {
     rank: 10,
@@ -147,6 +155,7 @@ const rankings = [
     speed: '1〜3日',
     genre: 'ゲーム・ホビー全般',
     bestFor: 'スピード重視の人',
+    reviewPath: '/review/kaitori-world/',
   },
   {
     rank: 11,
@@ -212,6 +221,7 @@ const rankings = [
     speed: '出張: 即日 / 宅配: 3〜7日',
     genre: '全般',
     bestFor: '幅広いジャンルをまとめて売りたい人',
+    reviewPath: '/review/tifana/',
   },
 ];
 
@@ -388,6 +398,14 @@ export default function KaitoriRankingPage() {
                   <span className="px-3 py-1 rounded-full" style={{ background: 'var(--color-bg-alt)', color: 'var(--color-deep-blue)' }}>ジャンル: {service.genre}</span>
                   <span className="px-3 py-1 rounded-full font-bold" style={{ background: 'rgba(16,185,129,0.1)', color: 'var(--color-electric-green)' }}>おすすめ: {service.bestFor}</span>
                 </div>
+
+                {'reviewPath' in service && service.reviewPath ? (
+                  <div className="mt-4 pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
+                    <Link href={service.reviewPath} className="text-sm font-bold inline-flex items-center gap-1" style={{ color: 'var(--color-electric-green)' }}>
+                      {service.name}の評判・口コミを詳しく見る →
+                    </Link>
+                  </div>
+                ) : null}
               </div>
             ))}
           </div>
