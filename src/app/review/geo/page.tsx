@@ -44,7 +44,7 @@ const faqs = [
 export default function GeoReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取の評判・口コミ｜ダンボール・ポイント・梱包・入金まで徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取の評判・口コミ｜ダンボール・ポイント・梱包・入金まで徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-06-29", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲオ宅配買取' }]} />
 
       {/* Hero */}
@@ -57,7 +57,7 @@ export default function GeoReviewPage() {
             ゲオ宅配買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>徹底レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            全国約900店舗を展開するゲオグループの宅配買取サービス。まとめ売りで最大35%UPのボーナスが魅力で、段ボール無料・送料無料と手軽に利用できます。Pontaポイント連携で日常使いにも便利な大手ならではの安心サービスです。
+            全国約900店舗を展開するゲオグループの宅配買取サービス。送料・査定料・振込手数料が無料で1点から申し込める手軽さが魅力です。一方で「ダンボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年6月12日確認）で正確に解説します。梱包・ダンボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://geo-online.co.jp/kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -149,43 +149,44 @@ export default function GeoReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />こんな方におすすめ</h2>
           <div className="glass-card p-6">
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li>・ゲームソフトをまとめて売りたい方</li>
+              <li>・ゲームソフトをまとめて売りたい方（キャンペーン時はまとめ売りボーナスあり）</li>
               <li>・大手の安心感を重視する方</li>
-              <li>・Pontaポイントを貯めている・使いたい方</li>
-              <li>・自宅から手軽に宅配買取を利用したい方</li>
+              <li>・送料・査定料・振込手数料の無料を重視する方（受け取りは銀行振込のみ）</li>
+              <li>・自宅から手軽に宅配買取を利用したい方（ダンボールは自分で用意）</li>
               <li>・近くにゲオ店舗があり、店舗持ち込みも検討している方</li>
             </ul>
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* 評判の傾向 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'K.T', age: '20代男性', rating: 4, text: 'Switchソフト12本をまとめて宅配買取に出しました。まとめ売りボーナスで20%UPになり、合計で12,000円に。段ボールも無料で届くし、集荷も自宅に来てくれるので楽でした。ただ、個別の査定額を見ると専門店より少し安いかなという印象。' },
-              { initial: 'S.M', age: '30代女性', rating: 5, text: '引っ越し前にPS4本体とソフト8本を売りました。Pontaポイントで受取りを選んだら手数料がかからず、全額ポイントで受取れました。ローソンでの買い物に使えて便利です。申込みからすべてスマホで完結したのも良かったです。' },
-              { initial: 'H.Y', age: '40代男性', rating: 3, text: 'ゲーム機2台とソフト20本をまとめて出しました。35%UPボーナスが付いたのは嬉しかったですが、レトロゲーム（PS2ソフト）は値段がほとんどつかず。現行機のソフトなら問題ないですが、古いゲームは他で売った方がいいかもしれません。' },
-              { initial: 'R.N', age: '20代女性', rating: 4, text: '初めての宅配買取で不安でしたが、大手のゲオなので安心して利用できました。査定結果も3日で届いて思ったより早かったです。金額は可もなく不可もなくですが、手軽さを考えたら十分満足です。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
-              </div>
-            ))}
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲオ宅配買取の評判の傾向</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            「ゲオ宅配買取 評判」で調べる方が気になりやすいポイントを、公式情報と一般的に語られる傾向の範囲で整理しました。具体的な評点・件数は確認できる一次情報がないため記載していません。実際の査定額や対応は時期・商品により変わるため、最終的には公式サイトでご確認ください。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好評として挙がりやすい点</h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・送料・査定料・振込手数料が無料で1点から出せる手軽さ</li>
+                <li>・佐川急便が送り状を持参するので伝票記入が不要</li>
+                <li>・全国約900店舗の大手グループという安心感</li>
+                <li>・キャンペーン期間中のまとめ売りボーナス</li>
+                <li>・申込時点の買取価格が保証される（状態による減額はあり）</li>
+              </ul>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>不満・注意として挙がりやすい点</h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・ダンボールは自分で用意する必要がある（無料キットなし）</li>
+                <li>・査定額が専門店より低めになることがある</li>
+                <li>・レトロゲーム（PS3・Wii世代より前）は対象外の場合がある</li>
+                <li>・繁忙期は査定に時間がかかる（2026年6月は公式が遅延を告知）</li>
+                <li>・受け取りは銀行振込のみ（ポイント受取・店頭受取は不可）</li>
+              </ul>
+            </div>
           </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※公式仕様は「ゲオの宅配買取 公式FAQ・キャンペーンページ（2026年6月12日確認）」に基づきます。評判の傾向は一般的に語られる内容の整理で、断定するものではありません。</p>
         </section>
 
         {/* FAQ */}
@@ -235,8 +236,13 @@ export default function GeoReviewPage() {
 
         {/* Internal Links */}
         <section className="mt-12">
-          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスもチェック</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスと比較する</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/method/online/" className="glass-card p-4 card-hover block">
+              <span className="tag-pill tag-pill-blue text-xs mb-2 inline-block">比較ハブ</span>
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>宅配買取おすすめ比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>送料・返送料・キャンセル・箱なし対応で7社比較</p>
+            </Link>
             <Link href="/review/bookoff/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-orange text-xs mb-2 inline-block">大手</span>
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ</p>
@@ -256,7 +262,7 @@ export default function GeoReviewPage() {
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/kaitori-ranking/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめランキング15選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch/" style={{ color: 'var(--color-electric-green)' }}>Switch買取おすすめ3選</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/ps4/" style={{ color: 'var(--color-electric-green)' }}>PS4買取おすすめ3選</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/method/online/" style={{ color: 'var(--color-electric-green)' }}>宅配買取の流れとコツ</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/method/online/" style={{ color: 'var(--color-electric-green)' }}>宅配買取おすすめ比較（送料・返送料・キャンセル・箱なし）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/knowledge/bulk/" style={{ color: 'var(--color-electric-green)' }}>まとめ売りで高く売るコツ</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/knowledge/preparation/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取前の準備ガイド</Link></li>
           </ul>
