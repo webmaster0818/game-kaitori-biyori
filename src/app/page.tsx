@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AuthorBox from '@/components/AuthorBox'
+import { crossStorePrices, analyzeTitle, PRICE_SURVEY_DATE, STORE_LABELS, type PriceAnalysis } from '@/data/prices';
 
 const services = [
   {
@@ -178,7 +179,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取びより｜ゲーム買取おすすめ比較ランキング2026", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】毎週実測の買取価格で解説", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       <section className="relative overflow-hidden" style={{ backgroundImage: 'url(/hero-bg-pattern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
@@ -187,7 +188,7 @@ export default function HomePage() {
               2026年最新版
             </p>
             <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-4 tracking-tight" style={{ color: '#1A1A2E' }}>
-              ゲームを高く売るなら<span style={{ color: '#FF6D00' }}>ここ！</span>
+              ゲーム買取のおすすめは<span style={{ color: '#FF6D00' }}>ここ！</span>
             </h1>
             <p className="text-sm md:text-base mb-6 leading-relaxed" style={{ color: '#666' }}>
               ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
@@ -209,6 +210,51 @@ export default function HomePage() {
               alt="ゲーム買取びより - ナビゲーター ユウト"
               style={{ maxWidth: '600px', width: '100%', height: 'auto' }}
             />
+          </div>
+        </div>
+      </section>
+
+      {/* Conclusion: おすすめはどこ？直答 + 今週の実測最高値 */}
+      <section className="py-10 bg-white border-b border-[var(--color-border)]">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <h2 className="text-lg md:text-xl font-extrabold mb-3" style={{ color: 'var(--color-deep-blue)' }}>
+              結論：ゲーム買取のおすすめは「何を・どう売るか」で変わります
+            </h2>
+            <ul className="text-sm space-y-2 mb-5" style={{ color: 'var(--color-text-light)' }}>
+              <li>・<span className="font-bold">1円でも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>今週の実測買取価格</Link>で最高値の店を確認（下表）。複数社比較なら一括査定（ヒカカク！）</li>
+              <li>・<span className="font-bold">箱なし・傷あり・ジャンク</span> → 減額に寛容な店が有利。<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>状態別の許容度マップ</Link>で確認</li>
+              <li>・<span className="font-bold">メルカリと迷っている</span> → 手数料・送料を引いた<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>実質手取りシミュレーター</Link>で比較</li>
+              <li>・<span className="font-bold">用途別の詳しい使い分け</span>（早く売る・まとめ売り・レトロ等） → <Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>どこがいい？用途別比較</Link></li>
+            </ul>
+            <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>
+              今週の実測・最高値の店（{PRICE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提の参考価格）
+            </h3>
+            <div className="overflow-x-auto">
+              <table className="comparison-table text-sm">
+                <thead>
+                  <tr><th>タイトル</th><th>最高値の店</th><th>参考買取価格</th></tr>
+                </thead>
+                <tbody>
+                  {crossStorePrices
+                    .map(analyzeTitle)
+                    .filter((x): x is PriceAnalysis => x !== null)
+                    .sort((a, b) => b.best.price - a.best.price)
+                    .slice(0, 5)
+                    .map((a) => (
+                      <tr key={a.title}>
+                        <td className="text-sm">{a.title}（{a.platform}）</td>
+                        <td className="font-bold">{STORE_LABELS[a.best.store]}</td>
+                        <td className="font-bold" style={{ color: 'var(--color-accent-orange)' }}>{a.best.price.toLocaleString()}円</td>
+                      </tr>
+                    ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              ※当サイトが各社公式買取ページで毎週実測している参考価格です（店舗・在庫・状態で変動）。全タイトル・全店舗の比較と先週比の値動きは
+              <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>へ。
+            </p>
           </div>
         </div>
       </section>

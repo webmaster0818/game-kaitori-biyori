@@ -6,8 +6,8 @@
 //   - ブックオフ=高価買取情報ページの店頭参考価格 / ゲオ・駿河屋=宅配(通信)買取の参考価格
 // ============================================================
 
-export const PRICE_SURVEY_DATE = '2026-06-25'; // 最終調査日
-export const PRICE_PREV_SURVEY_DATE: string | null = '2026-06-20'; // 前回調査日（2回目以降に設定→先週比が有効化）
+export const PRICE_SURVEY_DATE = '2026-07-02'; // 最終調査日
+export const PRICE_PREV_SURVEY_DATE: string | null = '2026-06-25'; // 前回調査日（2回目以降に設定→先週比が有効化）
 
 export type StoreKey = 'bookoff' | 'geo' | 'surugaya' | 'retrog';
 
@@ -27,19 +27,20 @@ export type TitlePrice = {
   note?: string;
 };
 
-// 2026-06-20 各社公式買取ページで確認（店舗横断マトリクス）
-// prices=2026-06-25調査値 / prevPrices=2026-06-20調査値（先週比用）。surugayaは6/25に自動取得不可のため6/20値を継続。
+// 2026-07-02 各社公式買取ページで確認（店舗横断マトリクス）
+// prices=2026-07-02調査値 / prevPrices=2026-06-25調査値（先週比用）。
+// 駿河屋は公式買取検索から取得（7/2・通常版単品）。ゲオは「Switchの高価買取品」リスト掲載分のみ＝掲載落ちしたタイトルは省略。
 export const crossStorePrices: TitlePrice[] = [
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 4000, geo: 4500, surugaya: 4500 }, prevPrices: { bookoff: 4000, geo: 4500, surugaya: 4500 } },
+  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 4000, geo: 4500 }, prevPrices: { bookoff: 4000, geo: 4500 }, note: '駿河屋は公式買取検索でメール見積のみのため非掲載（2026-07-02時点）' },
   { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { geo: 4500, surugaya: 4500 }, prevPrices: { geo: 4500, surugaya: 4500 } },
-  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3300, geo: 3800, surugaya: 3800 }, prevPrices: { bookoff: 3300, geo: 3800, surugaya: 3800 } },
+  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3000, geo: 3800, surugaya: 2700 }, prevPrices: { bookoff: 3300, geo: 3800, surugaya: 3800 } },
   { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3500, geo: 3800, surugaya: 3500 }, prevPrices: { bookoff: 3500, geo: 3800, surugaya: 3500 } },
-  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3000, geo: 3500, surugaya: 3300 }, prevPrices: { bookoff: 2800, geo: 3500, surugaya: 3300 } },
+  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3000, geo: 4000, surugaya: 3500 }, prevPrices: { bookoff: 3000, geo: 3500, surugaya: 3300 } },
   { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2500, geo: 3000, surugaya: 3400 }, prevPrices: { bookoff: 2500, geo: 3000, surugaya: 3400 } },
-  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 2600 }, prevPrices: { bookoff: 2800, geo: 3000, surugaya: 2600 } },
-  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1500, geo: 2000, surugaya: 2500 }, prevPrices: { bookoff: 1500, geo: 2000, surugaya: 2500 } },
-  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1700, geo: 2000, surugaya: 2000 }, prevPrices: { bookoff: 1800, geo: 2000, surugaya: 2000 } },
-  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1500, geo: 1500, surugaya: 2000 }, prevPrices: { bookoff: 1500, geo: 1500, surugaya: 2000 } },
+  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 2400 }, prevPrices: { bookoff: 2700, geo: 3000, surugaya: 2600 } },
+  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1500, surugaya: 2100 }, prevPrices: { bookoff: 1500, geo: 2000, surugaya: 2500 }, note: 'ゲオは今週の高価買取リストに掲載なし（2026-07-02時点）' },
+  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1700, surugaya: 1800 }, prevPrices: { bookoff: 1700, geo: 2000, surugaya: 2000 }, note: 'ゲオは今週の高価買取リストに掲載なし（2026-07-02時点）' },
+  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1200, surugaya: 1400 }, prevPrices: { bookoff: 1500, geo: 1500, surugaya: 2000 }, note: 'ゲオは今週の高価買取リストに掲載なし（2026-07-02時点）' },
 ];
 
 // ---- 先週比（高騰/急落）ヘルパー ----

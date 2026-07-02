@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'カイトリワールドの評判・口コミは怪しい？高く売れる？【2026年6月】減額・入金日数を実測DBで検証',
+  title: 'カイトリワールドの評判・口コミは怪しい？【2026年7月】運営会社メディアワールドの実態・減額を検証',
   description:
-    'カイトリワールドの評判・口コミは？怪しい？高く売れる？という疑問に直答。古物商許可のある正規業者である実態、「怪しい」と言われる理由、送料無料の条件（査定3,000円以上）、入金日数、減額基準、7日自動承認ルールを公式情報で解説。さらに当サイトが毎週実測する買取価格DBで、カイトリワールドが今どこより高いかを比較できます（2026年6月確認）。',
-  keywords: ['カイトリワールド 評判', 'カイトリワールド 口コミ', 'カイトリワールド 怪しい', 'カイトリワールド 買取', 'カイトリワールド 入金'],
+    'カイトリワールド（「買取ワールド」と検索されることも）の評判・口コミは？怪しい？に直答。運営会社メディアワールド株式会社の実態（古物商許可・ゲーム専門店22年）、「怪しい」と言われる理由、送料無料の条件（査定3,000円以上）、入金日数、減額基準、7日自動承認ルールを公式情報で解説。当サイトが毎週実測する買取価格DBで今どこより高いかも比較できます（2026年7月確認）。',
+  keywords: ['カイトリワールド 評判', 'カイトリワールド 口コミ', 'カイトリワールド 怪しい', 'メディアワールド 怪しい', '買取ワールド 評判', 'カイトリワールド 入金'],
   openGraph: {
-    title: 'カイトリワールドの評判・口コミは怪しい？【2026年6月】徹底解説',
-    description: 'カイトリワールドの評判と「怪しい」と言われる理由の実態を公式情報をもとに徹底調査。送料条件・入金日数・減額基準まで解説。',
+    title: 'カイトリワールドの評判・口コミは怪しい？【2026年7月】運営会社の実態を徹底解説',
+    description: 'カイトリワールドの評判と「怪しい」と言われる理由、運営会社メディアワールドの実態を公式情報をもとに徹底調査。送料条件・入金日数・減額基準まで解説。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -46,12 +46,14 @@ const faqs = [
   { q: '梱包ダンボールは無料ですか？', a: 'はい、買取用ダンボールは最大10箱まで無料で送ってもらえます。集荷時に持参してもらうことも可能です。' },
   { q: '箱なしのゲームやフィギュアでも買取できますか？', a: '箱なしでも買取対象になる場合がありますが、掲載されている買取価格は完品状態が前提のため減額されます。箱・説明書・付属品はできる限り揃えて送るのが高価買取のコツです。' },
   { q: '価格保証買取とは何ですか？', a: '申込時点の買取価格を5日間保証してくれる買取方式です。相場が変動しやすい新作ソフトや人気商品を売るときに、発送までの値下がりリスクを避けられます。' },
+  { q: '運営会社のメディアワールドは怪しい会社ですか？', a: 'メディアワールド株式会社は東京都足立区に所在する実在の事業者で、東京都公安委員会の古物商許可（第306701605637号）を取得しています。東京でゲーム専門店を22年間運営してきた会社で、2015年8月からネット宅配買取「カイトリワールド」を展開しています。公式サイトに会社案内・特定商取引法に基づく表記が掲載されており、いわゆる無許可・実態不明の業者ではありません。' },
+  { q: '「買取ワールド」とカイトリワールドは同じサービスですか？', a: '検索では「買取ワールド」と呼ばれることがありますが、本ページで扱っているのはメディアワールド株式会社が運営する宅配買取サービス「カイトリワールド」（kaitori-world.jp）です。似た名称の別サービスと区別するため、申し込みの際は公式サイトのURLと運営会社名（メディアワールド株式会社）を確認してください。' },
 ];
 
 export default function KaitoriWorldReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？送料・入金日数・減額条件を徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-06-27", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？運営会社メディアワールドの実態・送料・入金日数・減額条件を徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'カイトリワールド' }]} />
 
       {/* Hero */}
@@ -59,7 +61,7 @@ export default function KaitoriWorldReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>ホビー総合</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年6月27日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年7月2日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             カイトリワールドの評判・口コミ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「怪しい」は本当か徹底検証</span>
@@ -107,7 +109,10 @@ export default function KaitoriWorldReviewPage() {
 
         {/* Company Info */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営会社情報（公式サイトより）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営会社「メディアワールド株式会社」は怪しい？（会社情報）</h2>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+            「メディアワールド 怪しい」と検索されることもありますが、運営元のメディアワールド株式会社は東京都公安委員会の古物商許可を持つ実在の事業者で、東京でゲーム専門店を22年間運営してきた会社です。なお、カイトリワールドは検索で「買取ワールド」と表記されることもあります（本ページで扱うのは kaitori-world.jp のサービスです）。公式サイト記載の会社情報は以下のとおりです。
+          </p>
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <tbody>

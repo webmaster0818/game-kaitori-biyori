@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'モンハンの買取価格【2026年6月】ワイルズ・ライズ等の相場と売り時',
+  title: 'モンハンの買取価格はいくら？【2026年7月】ワイルズ・ライズの相場を店舗横断で比較・売り時も解説',
   description:
     'モンスターハンターシリーズの買取相場を2026年6月の調査データで一覧化。ワイルズ・ライズ・サンブレイク・ストーリーズ2・ワールド/アイスボーンを店舗横断で比較。新作の影響と高く売るコツも解説します。',
   keywords: ['モンハン 買取', 'モンスターハンター 買取価格', 'モンハンワイルズ 買取', 'モンハンライズ 売る', 'モンハン 相場'],
   openGraph: {
-    title: 'モンハンの買取価格【2026年6月】ワイルズ・ライズ等の相場',
+    title: 'モンハンの買取価格はいくら？【2026年7月】店舗横断で相場比較',
     description: 'モンハンシリーズの買取相場を店舗横断で比較。新作の影響も解説。',
     type: 'article',
     locale: 'ja_JP',

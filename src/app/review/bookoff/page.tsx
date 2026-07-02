@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取',
+  title: 'ブックオフのゲーム買取は安い？評判・口コミ【2026年7月】高価買取リストと減額の実態を検証',
   description:
     'ブックオフのゲーム買取を徹底レビュー。全国900店舗超を展開する最大手リサイクルショップの特徴・メリット・デメリット・利用手順を詳しく解説。店頭即現金化や本・DVDとのまとめ売りも可能。',
   keywords: ['ブックオフ 買取', 'ブックオフ ゲーム買取 口コミ', 'ブックオフ 査定', 'ゲーム 店頭買取', 'ブックオフ 評判'],
   openGraph: {
-    title: 'ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取',
+    title: 'ブックオフのゲーム買取は安い？評判・口コミ【2026年7月】減額の実態を検証',
     description: 'ブックオフのゲーム買取を徹底レビュー。全国900店舗超の店頭買取と宅配買取を解説。',
     type: 'article',
     locale: 'ja_JP',
