@@ -27,3 +27,11 @@
 - X(Twitter)週次投稿への転用（柱6）
 
 ※cron(セッション内・木曜10:23)は7日で失効するため、新セッションでは本ランブックを参照して再設定すること。
+
+## 価格履歴の蓄積（2026-07-03追加・戦略③）
+- prices.ts更新後に必ず実行: `python3 scripts/append-price-history.py`（data/price-history.csv にPRICE_SURVEY_DATE日付で追記・同日重複は自動スキップ）
+- 蓄積したCSVは将来「価格推移グラフ」ページの一次データ資産になる（過去に遡れないため毎週欠かさず実行）
+
+## IndexNow（2026-07-03追加・戦略④）
+- キー: data/indexnow-key.txt（public/<key>.txt を配信）
+- デプロイ後のping例: sitemap URLをapi.indexnow.orgへPOST（Bing/Yandex即時通知）
