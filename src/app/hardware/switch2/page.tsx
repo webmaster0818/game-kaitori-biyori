@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { PriceMatrix } from '@/components/PriceIndex';
+import { hardwarePrices, HARDWARE_SURVEY_DATE } from '@/data/prices';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
@@ -350,7 +352,14 @@ export default function Switch2Page() {
             </Link>
           </div>
         </section>
-        <AuthorBox />
+              {/* 本体実測価格（毎週更新・2026-07-04開始） */}
+      <section className="mb-12">
+        <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch2本体の店舗別 買取価格【週次実測】</h2>
+        <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>当サイトが各社公式買取ページで実測した本体の参考買取価格です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提）。最新の全機種比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>へ。</p>
+        <PriceMatrix list={hardwarePrices.filter((h) => h.title.includes('Switch'))} />
+      </section>
+
+      <AuthorBox />
       </div>
     </>
   );

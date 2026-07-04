@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import { PriceMatrix, PriceDiffRanking, PriceFreshnessNote } from '@/components/PriceIndex';
-import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, STORE_LABELS, crossStorePrices, priceDiffRanking, priceMoves } from '@/data/prices';
+import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, crossStorePrices, hardwarePrices, priceDiffRanking, priceMoves } from '@/data/prices';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較',
@@ -105,6 +105,21 @@ export default function PriceIndexPage() {
           </p>
           <PriceMatrix list={crossStorePrices} />
           <PriceFreshnessNote />
+        </section>
+
+        {/* ゲーム機本体の実測価格（v5 S1・2026-07-04開始） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム機本体の店舗横断 買取価格（週次実測）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            Switch→Switch 2の世代交代期に合わせて、<strong>本体の買取価格も週次実測を開始しました</strong>（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査）。完品（箱・付属品あり・正常動作）前提の参考価格です。
+          </p>
+          <PriceMatrix list={hardwarePrices} />
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+            ※ゲオは店頭参考買取価格（傷・汚れが目立たず付属品欠品なしの場合）。レトログはレトロゲーム特化のため現行機は他店より大幅に低めです。PS5旧型（CFI-1000〜1200）の通常品はゲオが価格を公表していません。状態・店舗・時期により変動するため、売却前に各公式でご確認ください。
+          </p>
+          <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
+            Switch 2はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万とほぼ横並び。旧型Switch・有機ELの売却を検討中の方は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch2時代の旧型の売り時解説</Link>もどうぞ。
+          </p>
         </section>
 
         {/* 使い方・売り方 */}

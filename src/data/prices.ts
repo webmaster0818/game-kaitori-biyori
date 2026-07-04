@@ -43,6 +43,20 @@ export const crossStorePrices: TitlePrice[] = [
   { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1200, surugaya: 1400 }, prevPrices: { bookoff: 1500, geo: 1500, surugaya: 2000 }, note: 'ゲオは今週の高価買取リストに掲載なし（2026-07-02時点）' },
 ];
 
+
+// ---- ゲーム機本体の週次実測（2026-07-04調査開始・v5 S1） ----
+// ブックオフ=高価買取リスト(7/2更新表記) / ゲオ=店頭参考買取価格(完品・正常動作前提) / 駿河屋=公式買取検索 / レトログ=宅配(レトロ特化のため現行機は低め)
+export const HARDWARE_SURVEY_DATE = '2026-07-04';
+export const hardwarePrices: TitlePrice[] = [
+  { title: 'Nintendo Switch 2 本体', platform: '本体', prices: { bookoff: 40000, geo: 40000, surugaya: 41000 } },
+  { title: 'Switch 有機ELモデル（ホワイト/ネオン）', platform: '本体', prices: { geo: 25000, surugaya: 22000, retrog: 6900 }, note: '駿河屋はネオン24,000円' },
+  { title: 'Nintendo Switch（旧型・ネオン 現行パッケージ）', platform: '本体', prices: { geo: 20000, surugaya: 18000, retrog: 4500 } },
+  { title: 'Nintendo Switch Lite', platform: '本体', prices: { geo: 15000, surugaya: 15000, retrog: 3200 }, note: '駿河屋は色・限定版により15,000〜19,000円' },
+  { title: 'PS5 Slim 通常版（CFI-2000）', platform: '本体', prices: { geo: 60000, surugaya: 55000 } },
+  { title: 'PS5 Slim デジタル・エディション（CFI-2000B）', platform: '本体', prices: { geo: 53000, surugaya: 50000 } },
+  { title: 'PS5 旧型 通常版（CFI-1000〜1200）', platform: '本体', prices: { surugaya: 48000, retrog: 36000 }, note: 'ゲオは旧型通常品の公表なし（ジャンク価格のみ）' },
+];
+
 // ---- 先週比（高騰/急落）ヘルパー ----
 export type PriceMove = { title: string; platform: string; store: StoreKey; from: number; to: number; delta: number };
 // 各タイトル・店舗で前回比の変動を抽出（delta != 0 のみ）。降順=高騰、昇順=急落で使う。
