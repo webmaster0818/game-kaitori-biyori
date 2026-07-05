@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年6月】データで見る最適タイミング',
+  title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年7月】データで見る最適タイミング',
   description:
     'ゲーム機・ソフトの売り時を月別カレンダーで徹底解説。新型発表前後の価格変動、新作ソフトの価格下落カーブ、年末年始・夏休みの需要上昇など、最適な売却タイミングを完全ガイド。',
   keywords: ['ゲーム 売り時', 'いつ売るのがベスト', 'ゲーム 売るタイミング', 'ゲーム機 売り時'],
   openGraph: {
-    title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年6月】データで見る最適タイミング',
+    title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年7月】データで見る最適タイミング',
     description: 'ゲーム機・ソフトの売り時を月別カレンダーで徹底解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -176,19 +176,20 @@ export default function TimingPage() {
         </section>
         {/* Switch direct answer */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switchはいつ売るべき？【2026年6月の結論】</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switchはいつ売るべき？【2026年7月の結論】</h2>
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
               <strong>結論：遊ばなくなった旧型Switchは、いまが近年で最も有利な売り時です。</strong>理由は2つあります。
             </p>
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>① 2026年5月25日の任天堂値上げで旧型相場が上昇：</span>通常モデルの定価が32,978円→43,980円になるなど全モデルが値上げされ（任天堂公式）、買取業者の調査では2019年型の買取相場が4月の約3,000〜12,000円から5月に約5,000〜19,000円へ上昇した実例が報告されています。</li>
-              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② Switch2発売後も旧型は暴落していない：</span>「新型が出たら旧型は暴落する」が通説ですが、Switch2の品薄と値上げの影響で旧型の需要が残り、発売から1年経った現在も相場は底堅く推移しています。ただしこの追い風が続く保証はなく、Switch2の供給が安定すれば下落に転じる可能性が高いため、遊んでいないなら早めの売却が合理的です。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② Switch2発売後も旧型は暴落していない（当サイト実測）：</span>当サイトが2026年7月4日に各社公式買取ページで実測した本体価格は、旧型Switch（ネオン現行版）がゲオ20,000円・駿河屋18,000円、有機ELがゲオ25,000円・駿河屋22,000〜24,000円と底堅い水準です。Switch2本体はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万の横並びでした。ただしこの追い風が続く保証はなく、Switch2の供給が安定すれば旧型は下落に転じる可能性が高いため、遊んでいないなら早めの売却が合理的です（本体の週次実測は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>で毎週更新）。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ ポケモン旧作（SV）の下落が実測で始まっている：</span>当サイトの週次実測で、ポケモンスカーレットは駿河屋2,000円→1,800円（6/25→7/2）、バイオレットはブックオフ1,500円→1,200円・駿河屋2,000円→1,400円と下落が観測されました。Switch2版の新作ポケモン（LEGENDS Z-A）のセット品が既に買取市場に流通しており、新作サイクル前の「旧作から先に下がる」動きです。SVを遊び終えているなら、これ以上待たないのが実測データの答えです。</li>
             </ul>
             <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>
               なお、ダウンロード版のソフト資産はニンテンドーアカウントに紐づくため、本体を売ってもSwitch2で再ダウンロードできます。売却前は本体の初期化とSDカードの抜き取りを忘れずに。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、出張買取のアシスト10社相場調査（2026年5月20日更新）。2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、当サイト週次実測（ソフト2026年7月2日・本体2026年7月4日、各社公式買取ページ）</p>
           </div>
         </section>
 

@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年6月版】',
+  title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】',
   description:
     'ゲーム買取の月別売り時カレンダー。ジャンル別（スポーツ/RPG）の価格変動パターン、新作発売2週間ルール、年末年始・GW・夏休みのピーク時期を視覚的に解説。',
   keywords: ['ゲーム買取 時期 いつがいい', 'ゲーム 売り時 カレンダー', 'ゲーム 買取 月別', 'ゲーム 売る時期'],
   openGraph: {
-    title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年6月版】',
+    title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】',
     description: 'ゲーム買取の月別売り時カレンダーで最適な売却タイミングを解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -62,7 +62,7 @@ const faqs = [
 export default function SeasonalPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '買取時期カレンダー' }]} />
 
       {/* Hero */}
@@ -117,11 +117,19 @@ export default function SeasonalPage() {
         {/* ジャンル別変動 */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />2026年の売り時を左右する具体イベント（実データ付き）</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>一般的なカレンダーに加え、2026年は相場を動かす確定イベントが複数あります。すべて公式発表・報道で確認済みの事実です（2026年6月12日確認）。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>一般的なカレンダーに加え、2026年は相場を動かす確定イベントが複数あります。公式発表・報道と当サイトの週次実測で確認済みの事実のみ掲載しています（2026年7月5日更新）。</p>
           <div className="space-y-4">
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>5月25日: 任天堂が全Switchモデルを値上げ → 旧型の買取相場が実際に上昇</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>Switch2が49,980円→59,980円、有機ELが37,980円→47,980円、通常モデルが32,978円→43,980円、Liteが21,978円→29,980円に値上げ（任天堂公式発表）。新品が高くなった結果、買取業者の調査では2019年型Switchの買取相場が4月の約3,000〜12,000円から5月には約5,000〜19,000円へ上昇した実例が報告されています。「新型が出ると旧型は下がる」という一般論と逆の動きで、<strong>旧型Switchはいまが近年で有利な売り時</strong>です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>7月: ポケモン旧作（SV）の下落が実測で開始 — 新作サイクルの初動</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>当サイトの週次実測（6/25→7/2）で、ポケモンスカーレット駿河屋2,000円→1,800円、バイオレット ブックオフ1,500円→1,200円・駿河屋2,000円→1,400円の下落を観測。Switch2版新作「Pokémon LEGENDS Z-A」のSwitch2セット品が既に買取市場に流通しており（駿河屋で41,000〜43,000円・7/4実測）、<strong>新作の足音とともに旧作から先に下がる</strong>典型パターンが始まっています。ポケモン旧作の売却は先送りしないのが実測の答えです。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>7月〜: 本体の買取価格も週次実測を開始（Switch→Switch2世代交代ウォッチ）</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>Switch2本体はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万の横並び、旧型Switchはゲオ2.0万・駿河屋1.8万で底堅い水準（2026年7月4日実測）。世代交代期の本体相場は「Switch2の供給安定＝旧型下落」の転換点がいつ来るかが焦点で、当サイトの<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>で毎週追跡します。旧型の売り時シグナルが出たらこのページでも更新します。</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>11月19日: GTA6発売（PS5/Xbox Series X|S）</h3>
@@ -136,7 +144,7 @@ export default function SeasonalPage() {
               </ul>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、出張買取のアシスト相場調査（2026年5月20日更新）、AUTOMATON（GTA6発売日報道）。2026年6月12日確認</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、AUTOMATON（GTA6発売日報道）、当サイト週次実測（ソフト2026年7月2日・本体2026年7月4日）</p>
         </section>
 
         <section className="mb-12">
