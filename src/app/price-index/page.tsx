@@ -1,3 +1,4 @@
+import PriceTrendChart from "@/components/PriceTrendChart";
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -86,6 +87,11 @@ export default function PriceIndexPage() {
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※ブックオフ・ゲオの公式買取価格の先週比。駿河屋は今回自動取得できなかったため先週比の対象外です。価格は完品想定の参考値で変動します。</p>
           </section>
         )}
+
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />価格推移グラフ（週次実測）</h2>
+          <PriceTrendChart />
+        </section>
 
         {/* 価格差ランキング（柱1の核） */}
         <section className="mb-12">
