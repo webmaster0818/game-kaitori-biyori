@@ -17,30 +17,29 @@ export const metadata: Metadata = {
   },
 };
 
-// 2026年7月2日に各社公式買取ページで確認した価格（駿河屋の限定版リストのみ6/18確認値を継続）。完品前提・店舗/在庫状況により変動
+// 2026年7月9日に各社公式買取ページで確認した価格（駿河屋の限定版リストのみ6/18確認値を継続＝7/9はアクセス不可で再確認できず）。完品前提・店舗/在庫状況により変動
 const bookoffList = [
   { title: 'マリオカート ワールド', platform: 'Switch2', price: '5,800円' },
   { title: '真・三國無双 ORIGINS', platform: 'Switch2', price: '5,000円' },
-  { title: 'イナズマイレブン 英雄たちのヴィクトリーロード', platform: 'Switch2', price: '4,500円' },
-  { title: 'ゼルダの伝説 ブレス オブ ザ ワイルド', platform: 'Switch2', price: '4,500円' },
-  { title: 'プラグマタ（通常版）', platform: 'Switch2', price: '4,500円' },
-  { title: '星のカービィ ディスカバリー', platform: 'Switch2', price: '4,500円' },
-  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch2', price: '4,500円' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム Switch2 Edition', platform: 'Switch2', price: '4,800円' },
+  { title: 'プラグマタ（通常版）', platform: 'Switch2', price: '4,800円' },
+  { title: 'イナズマイレブン 英雄たちのヴィクトリーロード Switch2 Edition', platform: 'Switch2', price: '4,500円' },
+  { title: 'スーパーマリオパーティ ジャンボリー Switch2 Edition＋ジャンボリーTV', platform: 'Switch2', price: '4,500円' },
+  { title: 'ゼルダの伝説 ブレス オブ ザ ワイルド Switch2 Edition', platform: 'Switch2', price: '4,500円' },
   { title: 'ぽこ あ ポケモン', platform: 'Switch2', price: '4,500円' },
-  { title: 'ヨッシーとフカシギの図鑑', platform: 'Switch2', price: '4,300円' },
-  { title: 'スーパーマリオブラザーズ ワンダー', platform: 'Switch2', price: '4,000円' },
+  { title: '星のカービィ ディスカバリー Switch2 Edition＋スターリーワールド', platform: 'Switch2', price: '4,500円' },
 ];
 
 const geoList = [
   { title: 'ファイナルファンタジータクティクス イヴァリースクロニクルズ', platform: 'Switch', price: '6,000円' },
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', price: '4,500円' },
   { title: 'パワフルプロ野球 2026-2027', platform: 'Switch', price: '4,500円' },
-  { title: 'スーパーマリオギャラクシー1+2', platform: 'Switch', price: '4,500円' },
   { title: '空の軌跡 the 1st', platform: 'Switch', price: '4,500円' },
+  { title: 'スーパーマリオギャラクシー1+2', platform: 'Switch', price: '4,500円' },
+  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', price: '4,500円' },
   { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', price: '4,500円' },
   { title: 'トモダチコレクション わくわく生活', platform: 'Switch', price: '4,300円' },
-  { title: '桃太郎電鉄2 東日本編+西日本編', platform: 'Switch', price: '4,000円' },
   { title: 'スプラトゥーン3', platform: 'Switch', price: '4,000円' },
+  { title: '桃太郎電鉄2 東日本編+西日本編', platform: 'Switch', price: '4,000円' },
   { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', price: '3,800円' },
 ];
 
@@ -56,11 +55,11 @@ const surugayaList = [
 ];
 
 const crossCompare = [
-  { title: 'スプラトゥーン3', bookoff: '3,000円', geo: '4,000円', diff: 'ゲオが+1,000円' },
-  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,000円', geo: '3,800円', diff: 'ゲオが+800円' },
-  { title: 'スーパーマリオ 3Dコレクション', bookoff: '4,000円', geo: '4,500円', diff: 'ゲオが+500円' },
+  { title: 'スプラトゥーン3', bookoff: '3,300円', geo: '4,000円', diff: 'ゲオが+700円' },
+  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,300円', geo: '3,800円', diff: 'ゲオが+500円' },
+  { title: 'スーパーマリオ 3Dコレクション', bookoff: '3,800円', geo: '4,500円', diff: 'ゲオが+700円' },
   { title: '大乱闘スマッシュブラザーズ SPECIAL', bookoff: '3,500円', geo: '3,800円', diff: 'ゲオが+300円' },
-  { title: 'トモダチコレクション わくわく生活', bookoff: '4,500円', geo: '4,300円', diff: 'ブックオフが+200円' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', bookoff: '2,800円', geo: '3,000円', diff: 'ゲオが+200円' },
 ];
 
 const tips = [
@@ -72,8 +71,8 @@ const tips = [
 ];
 
 const faqs = [
-  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年7月2日調査時点の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ」（ゲオで6,000円）やSwitch2の「マリオカート ワールド」（ブックオフで5,800円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」38,000円など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
-  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。当サイトの調査では、同じ「スーパーマリオ 3Dコレクション」でもブックオフ4,000円・ゲオ4,500円と500円の差がありました。逆にトモダチコレクションはブックオフの方が高いなど、店ごとに得意・不得意があります。複数店の公式価格を見比べるのが確実です。' },
+  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年7月9日調査時点の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ」（ゲオで6,000円）やSwitch2の「マリオカート ワールド」（ブックオフで5,800円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」38,000円など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
+  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。当サイトの調査では、同じ「スーパーマリオ 3Dコレクション」でもブックオフ3,800円・ゲオ4,500円と700円の差がありました。逆にトモダチコレクションはブックオフの方が高いなど、店ごとに得意・不得意があります。複数店の公式価格を見比べるのが確実です。' },
   { q: '箱なしのレトロゲームでも高く売れますか？', a: '箱なし（裸カセット）でも人気タイトルなら値段がつきますが、箱・説明書付きの完品と比べると買取価格は大幅に下がります。完品なら2〜10倍の差がつくことも珍しくありません。' },
   { q: 'ゲームの買取価格は今後上がりますか？', a: 'レトロゲームや限定版は流通量が減るため、人気タイトルは長期的に上昇する傾向があります。一方、最新タイトルは時間の経過とともに下がるのが基本なので、遊び終わったら早めの売却がおすすめです。' },
   { q: '大量のゲームをまとめて売りたい場合はどうすればいいですか？', a: '宅配買取が便利です。駿河屋のあんしん買取は見積金額3,000円以上で送料無料（着払い）になります。カイトリワールドも査定3,000円以上で送料無料・梱包ダンボール最大10箱無料です。各社の送料条件を確認してまとめて送りましょう。' },
@@ -82,7 +81,7 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-07-02", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
@@ -93,9 +92,9 @@ export default function HighValueSoftwarePage() {
             高く売れるゲームソフトランキング【2026年7月】
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年7月2日に調査し（駿河屋の限定版リストのみ6/18確認値を継続）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
+            ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年7月9日に調査し（駿河屋の限定版リストのみ6/18確認値を継続（7/9はアクセス不可で再確認できず））、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: 2026年7月2日（各社公式買取ページ）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: 2026年7月9日（各社公式買取ページ）</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る
@@ -108,7 +107,7 @@ export default function HighValueSoftwarePage() {
         {/* Cross-store comparison (Information Gain) */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />同じソフトでも店で差がつく：ブックオフ vs ゲオ 横断比較</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>2026年7月2日に両社の公式買取価格ページで確認した、同一タイトルの買取価格比較です。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>2026年7月9日に両社の公式買取価格ページで確認した、同一タイトルの買取価格比較です。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -131,12 +130,12 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ「ゲームの高価買取情報」（2026年7月2日閲覧・店舗買取価格）、ゲオ店舗情報サイト「Switchの高価買取品」（2026年7月2日閲覧・店頭参考買取価格）。店舗・状態により変動します。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ「ゲームの高価買取情報」（2026年7月9日閲覧・店舗買取価格）、ゲオ店舗情報サイト「Switchの高価買取品」（2026年7月9日閲覧・店頭参考買取価格）。店舗・状態により変動します。</p>
         </section>
 
         {/* BookOff */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ブックオフの高価買取ソフトTOP10（Switch2・2026年7月2日閲覧）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ブックオフの高価買取ソフト上位（Switch2・2026年7月9日閲覧）</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -153,12 +152,12 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ公式「ゲームの高価買取情報」（2026年7月2日閲覧・店舗買取価格）。Switch2の「マリオカート ワールド」5,800円が最高値で、上位はSwitch2の新作・話題作が中心。発売から日が浅いタイトルほど高値がつく傾向です。店舗により異なり、予告なく変更されます。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ公式「ゲームの高価買取情報」（2026年7月9日閲覧・店舗買取価格）。Switch2の「マリオカート ワールド」5,800円が最高値で、上位はSwitch2の新作・話題作が中心。発売から日が浅いタイトルほど高値がつく傾向です。店舗により異なり、予告なく変更されます。</p>
         </section>
 
         {/* GEO */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲオの高価買取ソフトTOP10（Switch・2026年7月2日閲覧）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲオの高価買取ソフトTOP10（Switch・2026年7月9日閲覧）</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -175,7 +174,7 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲオ店舗情報サイト「Switchの高価買取品」（2026年7月2日閲覧）。「FFタクティクス イヴァリースクロニクルズ」が6,000円でトップを維持。「スプラトゥーン3」が3,500円→4,000円に上昇しランクイン。任天堂の定番タイトルは発売から年数が経っても値崩れしにくいことが分かります。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲオ店舗情報サイト「Switchの高価買取品」（2026年7月9日閲覧）。「FFタクティクス イヴァリースクロニクルズ」が6,000円でトップを維持。「スプラトゥーン3」は4,000円を維持。任天堂の定番タイトルは発売から年数が経っても値崩れしにくいことが分かります。</p>
         </section>
 
         {/* Surugaya */}
