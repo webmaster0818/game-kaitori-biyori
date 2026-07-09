@@ -72,6 +72,19 @@ export default function GameOukokuReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：宅配専業で手数料ゼロ、全国どこからでも送って売れる。古物商許可ありの正規事業者</h2>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              ゲーム王国は株式会社Ultimate Life（大阪府公安委員会 古物商許可 第621180142468号・2013年設立）が運営する正規の宅配買取事業者です。査定料・キャンセル料・返送料・振込手数料はすべて無料で、査定額に納得できなければ無料で返送してもらえるため、「怪しい・詐欺」とされるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。送料無料が<strong>佐川急便の集荷を利用した場合に限る</strong>点と、キャンセル時の返送は<strong>全商品一括返却（一部だけ返してもらうことは不可）</strong>である点だけは事前に確認してください。宅配専業なので、全国どこからでもまとめて送って売りたい人に向きます。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どのソフトが高く売れるか毎週実測で確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を比較する</Link>
+            </p>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム王国の4つの特徴</h2>
@@ -100,6 +113,22 @@ export default function GameOukokuReviewPage() {
               </tbody>
             </table>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ）2026年6月12日確認</p>
+          </div>
+        </section>
+
+        {/* Fee 4-point */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />手数料は？出張費・査定料・キャンセル料・返送料【4点チェック】</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">－（宅配買取専業のため出張買取なし）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料（当社負担）。ただし佐川急便の集荷利用が条件で、返送は<strong>全商品一括返却（一部返却不可）</strong></td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・利用規約）2026年7月9日確認。査定額に納得できなければ費用負担なしで返送してもらえます。</p>
           </div>
         </section>
 

@@ -199,6 +199,22 @@ export default function HobbyCollectReviewPage() {
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ホビーコレクト公式（recycle-net.jp/hobby/・会社概要）、ヒカカク!（2026年6月18日閲覧）。※古物商番号・出張対応エリア等は出典間で表記揺れがあるため、利用前に公式の最新情報をご確認ください。</p>
         </section>
 
+        {/* Fee 4-point */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />手数料は？出張費・査定料・キャンセル料・返送料【4点チェック】</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">確認不可（宅配・出張に対応。出張費の明記は公式で確認できず）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料（発送時の送料も無料）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">手数料としての明示なし（実質は下記の返送料負担のみ）</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: '#B91C1C' }}>返送料（売らない場合）</th><td className="py-2"><strong style={{ color: '#B91C1C' }}>お客様負担（着払い）</strong>。査定額に納得できずキャンセルする場合、返送は着払いで自己負担になる点が最大の注意点です</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ホビーコレクト公式（recycle-net.jp/hobby/）2026年7月9日確認。発送時の送料は無料ですが、キャンセル時の返送のみお客様負担です。少額・査定額に自信がない品は、返送料無料の業者（例：ゲーム王国）と比較検討を。</p>
+          </div>
+        </section>
+
         {/* 口コミ傾向（出典付き） */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>

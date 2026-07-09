@@ -128,6 +128,22 @@ export default function KaitoriWorldReviewPage() {
           </div>
         </section>
 
+        {/* Fee 4-point */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />手数料は？出張費・査定料・キャンセル料・返送料【4点チェック】</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">－（宅配買取のため出張買取なし）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料。ただし公式FAQに「買取額が5,000円未満の場合など返送に条件がある」旨の記載があるため、キャンセル前提の少額品は事前確認を推奨</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（会社案内・FAQ）2026年7月9日確認。送料無料は査定合計3,000円以上が条件です。</p>
+          </div>
+        </section>
+
         {/* Suspicious? */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />「カイトリワールドは怪しい」と言われる3つの理由と実態</h2>
