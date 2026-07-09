@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '駿河屋の口コミ・評判｜レトロゲーム・限定版に強い老舗買取',
+  title: '駿河屋の買取の評判・口コミは？【2026年7月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証',
   description:
     '駿河屋のゲーム買取を徹底レビュー。レトロゲーム・限定版・コレクターアイテムに強い老舗の特徴・メリット・デメリット・利用手順を詳しく解説。買取価格公開で安心の査定。',
   keywords: ['駿河屋 買取', '駿河屋 口コミ', '駿河屋 ゲーム買取', 'レトロゲーム 買取', '駿河屋 査定'],
   openGraph: {
-    title: '駿河屋の口コミ・評判｜レトロゲーム・限定版に強い老舗買取',
+    title: '駿河屋の買取の評判・口コミは？【2026年7月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証',
     description: '駿河屋のゲーム買取を徹底レビュー。レトロゲーム高額査定の老舗サービスを解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -43,7 +43,7 @@ const faqs = [
 export default function SurugayaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の口コミ・評判｜レトロゲーム・限定版に強い老舗買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の買取の評判・口コミは？【2026年7月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '駿河屋' }]} />
 
       {/* Hero */}

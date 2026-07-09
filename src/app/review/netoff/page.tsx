@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ネットオフの口コミ・評判｜ゲーム・本・DVD一括買取の実績1億点超',
+  title: 'ネットオフの買取の評判・口コミは？【2026年7月】ゲーム・本の一括査定の入金日数・デメリットを徹底検証',
   description:
     'ネットオフのゲーム買取を徹底レビュー。ゲーム・本・CD・DVDまとめ買取サービスの特徴・メリット・デメリット・利用手順を詳しく解説。買取実績1億点超、まとめ売りボーナス、Tポイント連携が魅力。',
   keywords: ['ネットオフ 買取', 'ネットオフ 口コミ', 'ネットオフ ゲーム買取', 'ゲーム 本 まとめ売り', 'ネットオフ 評判'],
   openGraph: {
-    title: 'ネットオフの口コミ・評判｜ゲーム・本・DVD一括買取の実績1億点超',
+    title: 'ネットオフの買取の評判・口コミは？【2026年7月】ゲーム・本の一括査定の入金日数・デメリットを徹底検証',
     description: 'ネットオフのゲーム買取を徹底レビュー。まとめ買取の特徴とTポイント連携を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -43,7 +43,7 @@ const faqs = [
 export default function NetoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの口コミ・評判｜ゲーム・本・DVD一括買取の実績1億点超", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの買取の評判・口コミは？【2026年7月】ゲーム・本の一括査定の入金日数・デメリットを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ネットオフ' }]} />
 
       {/* Hero */}

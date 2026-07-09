@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ティファナの口コミ・評判｜ゲーム・トレカ・フィギュアのホビー系買取',
+  title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証',
   description:
     'ティファナのゲーム買取を徹底レビュー。ゲーム・トレカ・フィギュア・レトロ玩具など幅広いホビー系アイテムの買取に対応するリサイクルショップ。店舗買取・宅配買取の特徴・メリット・利用手順を詳しく解説。',
   keywords: ['ティファナ', 'ティファナ 口コミ', 'ティファナ ゲーム買取', 'トレカ 買取', 'フィギュア 買取', 'ホビー 買取'],
   openGraph: {
-    title: 'ティファナの口コミ・評判｜ゲーム・トレカ・フィギュアのホビー系買取',
+    title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証',
     description: 'ティファナのゲーム買取を徹底レビュー。ホビー系買取の特徴と使い方を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -49,7 +49,7 @@ const faqs = [
 export default function TifanaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナの口コミ・評判｜ゲーム・トレカ・フィギュアのホビー系買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ティファナ' }]} />
 
       {/* Hero */}

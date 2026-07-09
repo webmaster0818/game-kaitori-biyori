@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム王国の買取の口コミ・評判は？【2026年6月】送料条件・入金日数・故障品買取まで徹底解説',
+  title: 'ゲーム王国の買取の口コミ・評判は？【2026年7月】送料条件・入金日数・故障品買取まで徹底解説',
   description:
     'ゲーム王国の口コミ・評判を徹底調査。ヒカカク総合4.64点の実力、故障品・箱なしOKの買取範囲、送料無料の条件（佐川急便集荷限定）、最短当日入金、査定後キャンセル返送無料まで、公式情報（2026年6月12日確認）をもとに解説します。',
   keywords: ['ゲーム王国 買取', 'ゲーム王国 口コミ', 'ゲーム王国 査定', 'ゲーム買取 専門', 'ゲーム王国 評判'],
   openGraph: {
-    title: 'ゲーム王国の買取の口コミ・評判は？【2026年6月】徹底解説',
+    title: 'ゲーム王国の買取の口コミ・評判は？【2026年7月】徹底解説',
     description: 'ゲーム王国の口コミ評判と買取条件を公式情報で徹底検証。故障品・箱なしOK、最短当日入金。',
     type: 'article',
     locale: 'ja_JP',
@@ -45,7 +45,7 @@ const faqs = [
 export default function GameOukokuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の買取の口コミ・評判は？送料条件・入金日数・故障品買取まで徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の買取の口コミ・評判は？送料条件・入金日数・故障品買取まで徹底解説", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲーム王国' }]} />
 
       {/* Hero */}
