@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ブックオフのゲーム買取は安い？評判・口コミ【2026年7月】高価買取リストと減額の実態を検証',
   description:
-    'ブックオフのゲーム買取を徹底レビュー。全国900店舗超を展開する最大手リサイクルショップの特徴・メリット・デメリット・利用手順を詳しく解説。店頭即現金化や本・DVDとのまとめ売りも可能。',
+    'ブックオフのゲーム買取は安い？全国900店舗超の最大手を公式仕様と口コミで徹底検証。店頭即日現金化・本やDVDのまとめ売りが強みな一方、人気作以外やレトロは査定が伸びにくい傾向も。宅配の送料・返送料・古物商許可番号（神奈川県公安委員会 第452760001146号）まで掲載。送る前に毎週実測の価格DBで相場を確認できます。',
   keywords: ['ブックオフ 買取', 'ブックオフ ゲーム買取 口コミ', 'ブックオフ 査定', 'ゲーム 店頭買取', 'ブックオフ 評判'],
   openGraph: {
     title: 'ブックオフのゲーム買取は安い？評判・口コミ【2026年7月】減額の実態を検証',
@@ -70,6 +70,19 @@ export default function BookoffReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Conclusion */}
+        <section className="mb-12">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「近くで今すぐ・まとめて処分」に強い最大手。ただし査定は相場次第</h2>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              ブックオフは全国900店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります。「安いのでは？」と不安な方は、送る前に当サイトが<strong>毎週実測している買取価格DB</strong>で今の相場と他店の価格を確認してから決めるのが安全です。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高い？ゲーム買取価格DB（実測）で確認する</Link>／<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週の買取価格インデックスを見る</Link>
+            </p>
+          </div>
+        </section>
+
         {/* Features */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ブックオフの4つの特徴</h2>

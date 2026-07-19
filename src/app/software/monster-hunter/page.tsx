@@ -176,6 +176,18 @@ export default function MonsterHunterPage() {
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゼルダの伝説買取価格</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>シリーズの相場一覧</p>
             </Link>
+            <Link href="/price-index/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+            </Link>
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>人気タイトルを高く売る業者</p>
+            </Link>
+            <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありの査定影響</p>
+            </Link>
           </div>
         </section>
         <AuthorBox />

@@ -136,6 +136,8 @@ export default function KobePage() {
             <Link href="/area/osaka/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>大阪のゲーム買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>日本橋・梅田・難波エリア別ガイド</p></Link>
             <Link href="/area/kyoto/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>京都のゲーム買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>河原町・寺町・京都駅エリア別ガイド</p></Link>
             <Link href="/area/hiroshima/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>広島のゲーム買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>紙屋町・広島駅・西区エリア別ガイド</p></Link>
+            <Link href="/price-index/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>持ち込む前に今どこが高いか確認</p></Link>
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>宅配で高く売るなら</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>買取ワールドの評判と使い方</p></Link>
           </div>
         </section>
         <AuthorBox />

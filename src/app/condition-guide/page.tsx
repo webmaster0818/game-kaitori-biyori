@@ -139,6 +139,8 @@ export default function ConditionGuidePage() {
             <Link href="/knowledge/boxless/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>箱なしゲームの買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも高く売るコツ</p></Link>
             <Link href="/knowledge/broken/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>故障・ジャンク品の買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>壊れたゲームの売り方</p></Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが高い？</p></Link>
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>状態が悪めでも売れる宅配買取</p></Link>
+            <Link href="/review/uriel/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ウリエルの評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高額査定で名前が挙がる店</p></Link>
           </div>
         </section>
         <AuthorBox />

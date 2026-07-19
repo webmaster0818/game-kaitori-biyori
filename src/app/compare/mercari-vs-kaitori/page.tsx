@@ -234,6 +234,11 @@ export default function MercariVsKaitoriPage() {
               </tbody>
             </table>
           </div>
+          <div className="glass-card p-5 mt-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              <strong>買取に出すと決めたら、次は「今どこが一番高いか」。</strong>当サイトが<strong>毎週実測している</strong><Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格DB</Link>で、人気ソフトの店舗別買取価格を比較できます。あわせて<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週の買取価格インデックス</Link>もどうぞ。
+            </p>
+          </div>
         </section>
 
         {/* FAQ */}

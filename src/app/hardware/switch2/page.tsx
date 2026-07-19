@@ -6,7 +6,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時',
+  title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場【2026年7月】',
   description:
     'Nintendo Switch 2本体の買取価格相場を2026年6月に調査。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時判断まで徹底解説します。',
   keywords: ['Switch2 買取', 'スイッチ2 買取価格', 'Switch 2 買取相場', 'Switch2 マリオカートセット 買取', 'Switch 売り時'],
@@ -349,6 +349,21 @@ export default function Switch2Page() {
             <Link href="/compare/shop-vs-online/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>店舗 vs 宅配買取</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>どっちがお得か徹底比較</p>
+            </Link>
+          </div>
+          <h3 className="font-bold mb-4 mt-8" style={{ color: 'var(--color-deep-blue)' }}>Switch 2を高く売る業者・状態別の査定</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switch2本体に強い宅配買取の実態</p>
+            </Link>
+            <Link href="/review/uriel/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ウリエルの評判</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>本体の高額買取で名前が挙がる店</p>
+            </Link>
+            <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありでいくら下がる？</p>
             </Link>
           </div>
         </section>

@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'トレーダーのゲーム買取の評判・口コミ【2026年7月】秋葉原の老舗の送料条件と注意点',
+  title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年7月】秋葉原の老舗',
   description:
     '秋葉原の老舗トレーダー（TRADER）のゲーム買取を徹底検証。宅配は5点以上で送料無料・キャンセル返送は着払い（利用者負担）という条件、マリオカート8DX 3,800円等の参考価格（2026年7月7日確認）、レトロ・海外ゲームまで扱う品揃えを公式情報で解説します。',
   keywords: ['トレーダー 買取 評判', 'トレーダー ゲーム買取', 'トレーダー 秋葉原 買取', 'e-trader 買取', 'トレーダー 宅配買取'],
   openGraph: {
-    title: 'トレーダーのゲーム買取の評判・口コミ【2026年7月】検証',
+    title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年7月】',
     description: '秋葉原の老舗トレーダーのゲーム買取を公式情報と参考価格で徹底検証。',
     type: 'article',
     locale: 'ja_JP',

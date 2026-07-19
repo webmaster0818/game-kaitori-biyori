@@ -214,7 +214,7 @@ export default function SofmapReviewPage() {
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱらの評判・口コミ（同グループ・本体特化）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（今どこが一番高い？）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch2-sell-guide/" style={{ color: 'var(--color-electric-green)' }}>Switch 2を売るならいつ・どこ？</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch 2を売るならいつ・どこ？</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取はどこがいい？用途別おすすめ比較</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/review/geo/" style={{ color: 'var(--color-electric-green)' }}>ゲオのゲーム買取の評判を検証</Link></li>
           </ul>

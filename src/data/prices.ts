@@ -6,8 +6,8 @@
 //   - ブックオフ=高価買取情報ページの店頭参考価格 / ゲオ・駿河屋=宅配(通信)買取の参考価格
 // ============================================================
 
-export const PRICE_SURVEY_DATE = '2026-07-09'; // 最終調査日
-export const PRICE_PREV_SURVEY_DATE: string | null = '2026-07-02'; // 前回調査日（2回目以降に設定→先週比が有効化）
+export const PRICE_SURVEY_DATE = '2026-07-19'; // 最終調査日
+export const PRICE_PREV_SURVEY_DATE: string | null = '2026-07-09'; // 前回調査日（2回目以降に設定→先週比が有効化）
 
 export type StoreKey = 'bookoff' | 'geo' | 'surugaya' | 'retrog';
 
@@ -27,36 +27,36 @@ export type TitlePrice = {
   note?: string;
 };
 
-// 2026-07-09 各社公式買取ページで確認（店舗横断マトリクス）
-// prices=2026-07-09調査値 / prevPrices=2026-07-02調査値（先週比用）。
-// bookoff=高価買取情報ページ(2026-07-09更新表記の店頭参考価格) / geo=「Switchの高価買取品」リスト掲載分のみ(掲載落ちは省略)。
-// ★駿河屋(surugaya)は2026-07-09に公式買取ページがアクセス不可(HTTP 403)で再確認できず→7/2時点の値を継続掲載（今週の変動判定からは除外）。
-// ★レトログ(retrog)は取得結果が不整合のため通常版単品は非掲載（確認不可）。
+// 2026-07-19 各社公式買取ページで確認（店舗横断マトリクス）
+// prices=2026-07-19調査値 / prevPrices=2026-07-09調査値（先週比用）。
+// bookoff=高価買取情報ページ(2026-07-16最終更新表記の店頭参考価格・selllist/game全6ページ) / geo=「Switchの高価買取品」リスト掲載分のみ(掲載落ちは省略・更新日表記なし)。
+// ★駿河屋(surugaya)は7/9のHTTP 403が解消し2026-07-19に公式買取検索で全件再実測（7/2以来のフル実測復帰）。
+// ★レトログ(retrog)の正ドメインは kaitori-retrog.jp（retrog.jpはDNS不可）。ソフト通常版単品は引き続き非掲載（本体のみ実測）。
 export const crossStorePrices: TitlePrice[] = [
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 3800, geo: 4500 }, prevPrices: { bookoff: 4000, geo: 4500 }, note: '駿河屋は公式買取検索でメール見積のみのため非掲載' },
-  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { geo: 4500, surugaya: 4500 }, prevPrices: { geo: 4500, surugaya: 4500 }, note: 'ブックオフは今週の高価買取リストに掲載なし。駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3300, geo: 3800, surugaya: 2700 }, prevPrices: { bookoff: 3000, geo: 3800, surugaya: 2700 }, note: '駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3500, geo: 3800, surugaya: 3500 }, prevPrices: { bookoff: 3500, geo: 3800, surugaya: 3500 }, note: '駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3300, geo: 4000, surugaya: 3500 }, prevPrices: { bookoff: 3000, geo: 4000, surugaya: 3500 }, note: '駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2800, geo: 3000, surugaya: 3400 }, prevPrices: { bookoff: 2500, geo: 3000, surugaya: 3400 }, note: '駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2800, geo: 3000, surugaya: 2400 }, prevPrices: { bookoff: 2700, geo: 3000, surugaya: 2400 }, note: '駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 2000, surugaya: 2100 }, prevPrices: { bookoff: 1500, surugaya: 2100 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 2000, surugaya: 1800 }, prevPrices: { bookoff: 1700, surugaya: 1800 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋は7/2時点の継続値（7/9再確認不可）' },
-  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1500, surugaya: 1400 }, prevPrices: { bookoff: 1200, surugaya: 1400 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋は7/2時点の継続値（7/9再確認不可）' },
+  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 3800 }, prevPrices: { bookoff: 3800, geo: 4500 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋は公式買取検索でメール見積のみのため非掲載' },
+  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { bookoff: 3800, geo: 4500, surugaya: 4500 }, prevPrices: { geo: 4500, surugaya: 4500 }, note: 'ブックオフは今週から高価買取リストに掲載復帰(3,800円)' },
+  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 3300, geo: 3500, surugaya: 2700 }, prevPrices: { bookoff: 3300, geo: 3800, surugaya: 2700 }, note: '駿河屋のSwitch 2 Edition+ジャンボリーTVは4,500円' },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3500, geo: 3800, surugaya: 3500 }, prevPrices: { bookoff: 3500, geo: 3800, surugaya: 3500 } },
+  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3300, geo: 3500, surugaya: 3800 }, prevPrices: { bookoff: 3300, geo: 4000, surugaya: 3500 }, note: '駿河屋のエキスパンション・パス版は5,000円' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2500, geo: 3000, surugaya: 3400 }, prevPrices: { bookoff: 2800, geo: 3000, surugaya: 3400 }, note: 'Switch 2 Editionは駿河屋5,000円/ブックオフ4,500円' },
+  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2500, geo: 2800, surugaya: 2400 }, prevPrices: { bookoff: 2800, geo: 3000, surugaya: 2400 } },
+  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1700, surugaya: 2100 }, prevPrices: { bookoff: 2000, surugaya: 2100 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋の+コース追加パス版は6,500円' },
+  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1700, surugaya: 1800 }, prevPrices: { bookoff: 2000, surugaya: 1800 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋の+ゼロの秘宝版は6,000円' },
+  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1000, surugaya: 1700 }, prevPrices: { bookoff: 1500, surugaya: 1400 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋の+ゼロの秘宝版は5,500円' },
 ];
 
 
 // ---- ゲーム機本体の週次実測（2026-07-04調査開始・v5 S1） ----
-// ブックオフ=高価買取リスト(7/2更新表記) / ゲオ=店頭参考買取価格(完品・正常動作前提) / 駿河屋=公式買取検索 / レトログ=宅配(レトロ特化のため現行機は低め)
-export const HARDWARE_SURVEY_DATE = '2026-07-04';
+// 2026-07-19実測: ブックオフ=高価買取リスト(7/16更新表記・Switch 2本体のみ掲載) / ゲオ=本体・周辺機器の高価買取品(店頭参考) / 駿河屋=公式買取検索(403解消・全件実測) / レトログ=kaitori-retrog.jp価格表(7/18更新表記・レトロ特化のため現行機は低め)
+export const HARDWARE_SURVEY_DATE = '2026-07-19';
 export const hardwarePrices: TitlePrice[] = [
-  { title: 'Nintendo Switch 2 本体', platform: '本体', prices: { bookoff: 40000, geo: 40000, surugaya: 41000 } },
-  { title: 'Switch 有機ELモデル（ホワイト/ネオン）', platform: '本体', prices: { geo: 25000, surugaya: 22000, retrog: 6900 }, note: '駿河屋はネオン24,000円' },
-  { title: 'Nintendo Switch（旧型・ネオン 現行パッケージ）', platform: '本体', prices: { geo: 20000, surugaya: 18000, retrog: 4500 } },
-  { title: 'Nintendo Switch Lite', platform: '本体', prices: { geo: 15000, surugaya: 15000, retrog: 3200 }, note: '駿河屋は色・限定版により15,000〜19,000円' },
+  { title: 'Nintendo Switch 2 本体', platform: '本体', prices: { bookoff: 38000, geo: 40000, surugaya: 41000 }, note: '駿河屋の多言語対応版は60,000円/マリオカート ワールドセットも41,000円' },
+  { title: 'Switch 有機ELモデル（ホワイト/ネオン）', platform: '本体', prices: { geo: 25000, surugaya: 20000, retrog: 6900 }, note: '駿河屋のスカーレット・バイオレットエディションは24,000円。レトログはネオン8,000円/ホワイト6,900円' },
+  { title: 'Nintendo Switch（旧型・ネオン 現行パッケージ）', platform: '本体', prices: { geo: 20000, surugaya: 13000, retrog: 5000 }, note: '駿河屋のグレー(小型パッケージ)は18,000円' },
+  { title: 'Nintendo Switch Lite', platform: '本体', prices: { geo: 15000, surugaya: 15000, retrog: 3200 }, note: '駿河屋は色・限定版により15,000〜19,000円。レトログは色により3,200〜4,000円' },
   { title: 'PS5 Slim 通常版（CFI-2000）', platform: '本体', prices: { geo: 60000, surugaya: 55000 } },
   { title: 'PS5 Slim デジタル・エディション（CFI-2000B）', platform: '本体', prices: { geo: 53000, surugaya: 50000 } },
-  { title: 'PS5 旧型 通常版（CFI-1000〜1200）', platform: '本体', prices: { surugaya: 48000, retrog: 36000 }, note: 'ゲオは旧型通常品の公表なし（ジャンク価格のみ）' },
+  { title: 'PS5 旧型 通常版（CFI-1000〜1200）', platform: '本体', prices: { surugaya: 48000, retrog: 36000 }, note: 'ゲオは旧型通常品の公表なし（ジャンク価格のみ）。駿河屋CFI-1000番台は50,000円/レトログCFI-1000・1100は32,000円' },
 ];
 
 // ---- 先週比（高騰/急落）ヘルパー ----

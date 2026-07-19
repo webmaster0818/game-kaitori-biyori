@@ -158,7 +158,7 @@ export default function JanparaReviewPage() {
               <li>・スマホ・PCなどデジタル機器も一緒に売りたい方</li>
             </ul>
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
-              本体の売却先は同グループの<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>の公開価格とも見比べを。売り時の判断は<Link href="/hardware/switch2-sell-guide/" style={{ color: 'var(--color-electric-green)' }}>Switch 2売却ガイド</Link>と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>価格インデックス（本体実測表）</Link>が参考になります。
+              本体の売却先は同グループの<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>の公開価格とも見比べを。売り時の判断は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch 2売却ガイド</Link>と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>価格インデックス（本体実測表）</Link>が参考になります。
             </p>
           </div>
         </section>
@@ -213,7 +213,7 @@ export default function JanparaReviewPage() {
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）の評判・口コミ（同グループ）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch2-sell-guide/" style={{ color: 'var(--color-electric-green)' }}>Switch 2を売るならいつ・どこ？</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch 2を売るならいつ・どこ？</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（本体実測表あり）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取はどこがいい？用途別おすすめ比較</Link></li>

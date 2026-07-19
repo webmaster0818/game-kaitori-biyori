@@ -124,6 +124,22 @@ export default function UrielReviewPage() {
           </div>
         </section>
 
+        {/* Fee 4-point */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />手数料は？出張費・査定料・キャンセル料・返送料【4点チェック】</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料。査定額を聞いてから断ってもよく、買取成立後8日以内はクーリングオフに対応</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料</th><td className="py-2">－（出張買取のため該当なし。宅配・店頭は2026年6月時点で案内終了）</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（出張費・査定料・キャンセル料すべて無料）2026年6月12日確認。ゲーム単体を高く売りたい場合は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の買取価格インデックス</Link>でゲーム専門店の価格とも比較を。</p>
+          </div>
+        </section>
+
         {/* Suspicious? */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />「やばい・怪しい」と言われる理由と実態</h2>

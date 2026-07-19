@@ -271,6 +271,14 @@ export default function DragonQuestPage() {
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>売り時ガイド</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最適な売却タイミング</p>
             </Link>
+            <Link href="/price-index/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+            </Link>
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>人気ソフトを高く売る業者</p>
+            </Link>
           </div>
         </section>
 

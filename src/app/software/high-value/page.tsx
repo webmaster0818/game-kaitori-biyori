@@ -318,6 +318,14 @@ export default function HighValueSoftwarePage() {
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Switch2本体の買取相場</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>値上げ後の最新相場を解説</p>
             </Link>
+            <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありでいくら下がる？</p>
+            </Link>
+            <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高額ソフトを高く売る業者の実態</p>
+            </Link>
           </div>
           <h3 className="font-bold mb-4 mt-8" style={{ color: 'var(--color-deep-blue)' }}>シリーズ別の買取相場</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

@@ -185,6 +185,14 @@ export default function HighPricePage() {
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>レトロゲーム</p>
                 <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ファミコン・スーファミの買取相場</p>
               </Link>
+              <Link href="/price-index/" className="glass-card p-4 card-hover block">
+                <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+              </Link>
+              <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
+                <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高価買取をうたう業者の実態</p>
+              </Link>
             </div>
           </div>
         </section>
