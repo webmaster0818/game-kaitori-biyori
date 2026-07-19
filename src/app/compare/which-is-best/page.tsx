@@ -4,12 +4,12 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取はどこがいい？用途別おすすめ比較【2026年】',
+  title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】毎週実測の価格で比較',
   description:
     'ゲーム買取はどこがいい？高く売りたい・早く売りたい・レトロ・箱なしジャンク・まとめ売り・宅配・店舗で即現金・フリマと迷う、の用途別に最適な売り先を提示。送料・返送料・キャンセル・査定期間・古物商番号を主要サービスで横断比較（各社公式・確認日つき）。どこで売るか迷ったら本ハブで決められます。',
   keywords: ['ゲーム買取 どこがいい', 'ゲーム買取 おすすめ', 'ゲームを売るならどこがいい', 'ゲーム買取 どこで売る', 'ゲーム買取 比較', 'ゲーム買取 用途別'],
   openGraph: {
-    title: 'ゲーム買取はどこがいい？用途別おすすめ比較【2026年】',
+    title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】毎週実測の価格で比較',
     description: '高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較。用途別に最適な売り先を提示し、送料/返送料/キャンセル/査定期間/古物商を横断比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -251,12 +251,12 @@ export default function WhichIsBestPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(96,165,250,0.2)', color: '#60A5FA' }}>用途別比較ハブ</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ゲーム買取はどこがいい？用途別おすすめ比較【2026年】
+            ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「ゲーム買取はどこがいい？」「どこで売るのが正解？」——答えは<strong>売りたい物と優先したいこと</strong>で変わります。ランキングを上から眺めるのではなく、<strong>高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較</strong>の用途別に最適な売り先を提示。送料・返送料・キャンセル・査定期間・古物商番号は各社公式と確認日つきで横断比較できます。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年6月27日</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年7月19日</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/price-index/" className="btn-primary py-2.5 px-6">
               今週の買取価格を確認する
@@ -266,6 +266,19 @@ export default function WhichIsBestPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* 先に結論（2026-07 P3: ヘッドクエリ直答） */}
+        <section className="mb-12">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <h2 className="font-bold text-lg mb-3" style={{ color: 'var(--color-deep-blue)' }}>先に結論：迷ったらこの3択</h2>
+            <ul className="text-sm leading-relaxed space-y-2" style={{ color: 'var(--color-text-light)' }}>
+              <li>・<strong>1円でも高く売りたい</strong> → 店ごとに価格が毎週動きます。<Link href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>今週の実測価格比較（2026年7月19日更新）</Link>で「今どこが高いか」を確認してから売るのが最短です</li>
+              <li>・<strong>宅配でまとめて手軽に</strong> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>カイトリワールド</Link>（いずれも公式確認済みの条件）</li>
+              <li>・<strong>今日中に現金化したい</strong> → 全国900店舗超の<Link href="/review/bookoff/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
+            </ul>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※条件は各社公式の確認日つきで下の比較表に整理しています。レトロ・箱なし・フリマとの比較など、あなたの状況別の正解は次の8パターンからどうぞ。</p>
+          </div>
+        </section>
+
         {/* Use-case quick nav */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />用途から最適な売り先を選ぶ</h2>

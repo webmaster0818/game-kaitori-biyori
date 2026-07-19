@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年7月】秋葉原の老舗',
   description:
-    '秋葉原の老舗トレーダー（TRADER）のゲーム買取を徹底検証。宅配は5点以上で送料無料・キャンセル返送は着払い（利用者負担）という条件、マリオカート8DX 3,800円等の参考価格（2026年7月7日確認）、レトロ・海外ゲームまで扱う品揃えを公式情報で解説します。',
+    'トレーダー（秋葉原）のゲーム買取価格は公式e-trader.jpの検索で確認可能（1日1回程度更新と公式注記・実測例マリオカート8DX 3,800円）。店頭持ち込みと宅配（5点以上で送料無料・キャンセル返送は着払い）のやり方、査定3日以内・振込2〜3日の流れ、評判・注意点まで公式情報で解説します。',
   keywords: ['トレーダー 買取 評判', 'トレーダー ゲーム買取', 'トレーダー 秋葉原 買取', 'e-trader 買取', 'トレーダー 宅配買取'],
   openGraph: {
     title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年7月】',
@@ -91,6 +91,36 @@ export default function TraderReviewPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* 使い方・価格の調べ方（2026-07 追加: 「トレーダー 買取」の利用意図に直答） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />トレーダー買取の使い方と価格の調べ方</h2>
+          <div className="glass-card p-6 mb-4">
+            <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取価格を調べる：公式の買取価格検索（e-trader.jp）</h3>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              トレーダーの買取価格は、買取サイト<strong>e-trader.jp</strong>の買取価格検索で公開されています。公式に「数日前の参考買取価格・1日1回程度更新」と注記されているとおり、目安として使うのが正解です（実際の査定額は商品の状態で変わります）。当サイト実測（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機EL 26,000円等が掲載されていました。他社と比べたい場合は、当サイトの<a href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>今週の実測価格比較（毎週更新）</a>とあわせて確認すると「今どこが高いか」まで分かります。
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>店頭買取（秋葉原本店・2号店）</h3>
+              <ol className="text-sm leading-relaxed space-y-1.5" style={{ color: 'var(--color-text-light)' }}>
+                <li>1. 売りたい商品と本人確認書類（古物営業法で必要）を持って店舗へ</li>
+                <li>2. 店頭で査定を受け、金額に納得すればその場で現金化</li>
+                <li>3. レトロ・海外ゲームなど珍しいタイトルの持ち込みにも対応してきた老舗です</li>
+              </ol>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>宅配（通信）買取</h3>
+              <ol className="text-sm leading-relaxed space-y-1.5" style={{ color: 'var(--color-text-light)' }}>
+                <li>1. <strong>対象商品5点以上で送料無料</strong>（5点未満は条件を要確認）</li>
+                <li>2. 商品を発送 → <strong>到着日を含め3日以内に査定案内</strong></li>
+                <li>3. 承諾後<strong>2〜3日で振込</strong>。キャンセル時の返送は<strong>着払い（利用者負担）</strong>な点だけ注意</li>
+              </ol>
+            </div>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：トレーダー公式（e-trader.jp 通信買取ガイド・買取規約）2026年7月7日確認。手順・条件は変更される場合があります。</p>
         </section>
 
         {/* Company Info */}
