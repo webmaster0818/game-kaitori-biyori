@@ -23,6 +23,7 @@ const footerSections = [
     links: [
       { label: 'トップページ', href: '/' },
       { label: '運営者情報・編集方針', href: '/about/' },
+      { label: '掲載・提携のお問い合わせ', href: '/contact/' },
       { label: '利用規約', href: '/terms/' },
       { label: 'プライバシーポリシー', href: '/privacy/' },
       { label: '記事制作ポリシー', href: '/content-policy/' },
