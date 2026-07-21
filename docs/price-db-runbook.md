@@ -17,7 +17,7 @@
    - `crossCompare`（同一タイトルのブックオフvsゲオ差）を再計算
    - Hero・本文中の「調査日」表記、Article JSON-LDの `dateModified`
 3. `public/sitemap.xml` の `/software/high-value/` の lastmod を更新
-4. `npm run build` → `cp public/sitemap.xml out/` → `rsync -a --delete --exclude='.git' out/ ../game-kaitori-biyori-deploy/`
+4. `npm run build` → `cp public/sitemap.xml out/` → `rsync -a --delete --exclude='.git' --exclude='functions' out/ ../game-kaitori-biyori-deploy/  # ★--exclude=functions必須(CF Function消さない)`
 5. 両リポを commit + push（webmaster0818）→ 本番反映を確認
 6. GSC sitemap送信: `sc-domain:gamekaitori-biyori.com`（gsc-api/venv + `secrets/gsc-token.json`）
 7. Discordチャンネル `1492366657555796191` に「今週の買取価格DB更新」を報告（主な変動を箇条書き。変動なしならその旨を簡潔に）
