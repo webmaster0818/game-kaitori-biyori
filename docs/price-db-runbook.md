@@ -11,6 +11,7 @@
 | レトログ 価格表 | https://kaitori-retrog.jp/buypricelist/nintendoswitch | 更新日表記あり |
 
 ## 手順
+0. **（2026-07-25組み込み）`/software/high-value/`（高く売れるゲームソフトランキング）も毎週更新対象**。src/app/software/high-value/page.tsx の `bookoffList`(ブックオフのSwitch2高額上位)・`geoList`(ゲオのSwitch高額上位)・`surugayaList`(駿河屋の限定版高額上位)・`crossCompare`(重複タイトルのブックオフvsゲオ差=週次実測値から)を各社の高価買取上位で再実測して更新。Hero/FAQ/価格調査日/Article dateModified の日付も同日に更新。※prices.ts の10タイトル定点とは別の"広い上位リスト"なので、上位リスト用に3社の高価買取ページ上位を別途実測すること（駿河屋はブラウザUA付きcurl）。
 1. 調査エージェントで上記4ソースの最新価格を収集（タイトル・価格・確認日・出典URL）
 2. `src/app/software/high-value/page.tsx` を更新:
    - `bookoffList` / `geoList` / `surugayaList` 配列の価格・タイトル

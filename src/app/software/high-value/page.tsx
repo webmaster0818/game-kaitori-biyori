@@ -21,45 +21,45 @@ export const metadata: Metadata = {
 const bookoffList = [
   { title: 'マリオカート ワールド', platform: 'Switch2', price: '5,800円' },
   { title: '真・三國無双 ORIGINS', platform: 'Switch2', price: '5,000円' },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム Switch2 Edition', platform: 'Switch2', price: '4,800円' },
-  { title: 'プラグマタ（通常版）', platform: 'Switch2', price: '4,800円' },
+  { title: 'Winning Post 10 2026', platform: 'Switch2', price: '5,000円' },
+  { title: 'パワフルプロ野球2026-2027', platform: 'Switch', price: '4,500円' },
   { title: 'イナズマイレブン 英雄たちのヴィクトリーロード Switch2 Edition', platform: 'Switch2', price: '4,500円' },
-  { title: 'スーパーマリオパーティ ジャンボリー Switch2 Edition＋ジャンボリーTV', platform: 'Switch2', price: '4,500円' },
-  { title: 'ゼルダの伝説 ブレス オブ ザ ワイルド Switch2 Edition', platform: 'Switch2', price: '4,500円' },
-  { title: 'ぽこ あ ポケモン', platform: 'Switch2', price: '4,500円' },
-  { title: '星のカービィ ディスカバリー Switch2 Edition＋スターリーワールド', platform: 'Switch2', price: '4,500円' },
+  { title: 'インディ・ジョーンズ／大いなる円環', platform: 'Switch2', price: '4,500円' },
+  { title: 'プラグマタ（通常版）', platform: 'Switch2', price: '4,500円' },
+  { title: 'スプラトゥーン レイダース', platform: 'Switch2', price: '4,500円' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム Switch2 Edition', platform: 'Switch2', price: '4,500円' },
 ];
 
 const geoList = [
-  { title: 'ファイナルファンタジータクティクス イヴァリースクロニクルズ', platform: 'Switch', price: '6,000円' },
-  { title: 'パワフルプロ野球 2026-2027', platform: 'Switch', price: '4,500円' },
-  { title: '空の軌跡 the 1st', platform: 'Switch', price: '4,500円' },
+  { title: 'ファイナルファンタジータクティクス イヴァリースクロニクルズ DXED', platform: 'Switch', price: '6,000円' },
   { title: 'スーパーマリオギャラクシー1+2', platform: 'Switch', price: '4,500円' },
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', price: '4,500円' },
   { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', price: '4,500円' },
+  { title: '空の軌跡 the 1st', platform: 'Switch', price: '4,500円' },
   { title: 'トモダチコレクション わくわく生活', platform: 'Switch', price: '4,300円' },
-  { title: 'スプラトゥーン3', platform: 'Switch', price: '4,000円' },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', price: '4,000円' },
   { title: '桃太郎電鉄2 東日本編+西日本編', platform: 'Switch', price: '4,000円' },
-  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', price: '3,800円' },
+  { title: 'パワフルプロ野球2026-2027', platform: 'Switch', price: '4,000円' },
+  { title: 'スプラトゥーン3', platform: 'Switch', price: '3,500円' },
+  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', price: '3,500円' },
 ];
 
 const surugayaList = [
   { title: 'ロックマン&ロックマンX 5in1 スペシャルBOX', platform: 'Switch', price: '38,000円' },
   { title: 'メモリーズオフ 双想［超限定版］', platform: 'Switch', price: '37,000円' },
-  { title: 'ふたごうさぎのご近所ツーリズモ［限定特装版］', platform: 'Switch', price: '34,000円' },
+  { title: 'ふたごうさぎのご近所ツーリズモ［限定特装版］', platform: 'Switch', price: '32,000円' },
   { title: '逆転裁判123 成歩堂セレクション コンプリート・エディション', platform: 'Switch', price: '32,000円' },
   { title: 'ゼルダの伝説 ブレス オブ ザ ワイルド DELUXE COLLECTOR\'S EDITION', platform: 'Switch', price: '30,000円' },
-  { title: 'ENDER LILIES［数量限定版］', platform: 'Switch', price: '28,000円' },
   { title: 'FF I-VI ピクセルリマスター FF35周年記念限定特装版', platform: 'Switch', price: '27,000円' },
-  { title: '北米版 PERSONA 4 GOLDEN［Midnight Channel Edition］', platform: 'Switch', price: '26,400円' },
+  { title: '遙かなる時空の中で6 DX その先の未来へBOX', platform: 'Switch', price: '24,000円' },
+  { title: 'エスプレイドΨ［限定版］', platform: 'Switch', price: '24,000円' },
 ];
 
 const crossCompare = [
-  { title: 'スプラトゥーン3', bookoff: '3,300円', geo: '4,000円', diff: 'ゲオが+700円' },
-  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,300円', geo: '3,800円', diff: 'ゲオが+500円' },
-  { title: 'スーパーマリオ 3Dコレクション', bookoff: '3,800円', geo: '4,500円', diff: 'ゲオが+700円' },
+  { title: 'ファイアーエムブレム 風花雪月', bookoff: '3,500円', geo: '4,500円', diff: 'ゲオが+1,000円' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', bookoff: '2,500円', geo: '3,000円', diff: 'ゲオが+500円' },
+  { title: 'スプラトゥーン3', bookoff: '3,200円', geo: '3,500円', diff: 'ゲオが+300円' },
+  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,200円', geo: '3,500円', diff: 'ゲオが+300円' },
   { title: '大乱闘スマッシュブラザーズ SPECIAL', bookoff: '3,500円', geo: '3,800円', diff: 'ゲオが+300円' },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', bookoff: '2,800円', geo: '3,000円', diff: 'ゲオが+200円' },
 ];
 
 const tips = [
@@ -71,8 +71,8 @@ const tips = [
 ];
 
 const faqs = [
-  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年7月9日調査時点の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ」（ゲオで6,000円）やSwitch2の「マリオカート ワールド」（ブックオフで5,800円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」38,000円など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
-  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。当サイトの調査では、同じ「スーパーマリオ 3Dコレクション」でもブックオフ3,800円・ゲオ4,500円と700円の差がありました。逆にトモダチコレクションはブックオフの方が高いなど、店ごとに得意・不得意があります。複数店の公式価格を見比べるのが確実です。' },
+  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年7月25日調査時点の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ DXED」（ゲオで6,000円）やSwitch2の「マリオカート ワールド」（ブックオフで5,800円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」38,000円など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
+  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。2026年7月25日調査では、同じ「ファイアーエムブレム 風花雪月」でもブックオフ3,500円・ゲオ4,500円と1,000円の差がありました。同じソフトでも店によって数百〜千円以上の差がつくため、売る前に複数店の公式価格を見比べるのが確実です。' },
   { q: '箱なしのレトロゲームでも高く売れますか？', a: '箱なし（裸カセット）でも人気タイトルなら値段がつきますが、箱・説明書付きの完品と比べると買取価格は大幅に下がります。完品なら2〜10倍の差がつくことも珍しくありません。' },
   { q: 'ゲームの買取価格は今後上がりますか？', a: 'レトロゲームや限定版は流通量が減るため、人気タイトルは長期的に上昇する傾向があります。一方、最新タイトルは時間の経過とともに下がるのが基本なので、遊び終わったら早めの売却がおすすめです。' },
   { q: '大量のゲームをまとめて売りたい場合はどうすればいいですか？', a: '宅配買取が便利です。駿河屋のあんしん買取は見積金額3,000円以上で送料無料（着払い）になります。カイトリワールドも査定3,000円以上で送料無料・梱包ダンボール最大10箱無料です。各社の送料条件を確認してまとめて送りましょう。' },
@@ -81,7 +81,7 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-07-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-07-25", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
@@ -92,9 +92,9 @@ export default function HighValueSoftwarePage() {
             高く売れるゲームソフトランキング【2026年7月】
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年7月9日に調査し（駿河屋の限定版リストのみ6/18確認値を継続（7/9はアクセス不可で再確認できず））、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
+            ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年7月25日に調査し（各社公式の高価買取ページで確認・駿河屋はブラウザ経由で全件実測）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: 2026年7月9日（各社公式買取ページ）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: 2026年7月25日（各社公式買取ページ）</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る
