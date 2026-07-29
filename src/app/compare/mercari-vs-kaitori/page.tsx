@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import TakehomeSimulator from '@/components/TakehomeSimulator'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ゲームはメルカリと買取どっちが得？【手取り計算機つき】手数料を引いた実質手取りで比較【2026年7月】',
@@ -314,6 +315,7 @@ export default function MercariVsKaitoriPage() {
             </div>
           </div>
         </section>
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

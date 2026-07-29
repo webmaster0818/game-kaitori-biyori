@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ゲーム宅配買取おすすめ15社比較【2026年7月】送料・返送料・ダンボール無料・査定日数で選ぶ',
@@ -425,6 +426,7 @@ export default function OnlinePage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

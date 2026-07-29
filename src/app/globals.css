@@ -395,3 +395,36 @@ html {
     height: 120px;
   }
 }
+
+/* カイトリワールド アフィリCTA(KaitoriWorldCta.tsx) — 支給コードのHTMLは不変・装飾はCSSのみで行う */
+.kw-cta {
+  border: 2px solid #10B981;
+  background: linear-gradient(135deg, #ECFDF5, #F0FDF4);
+  border-radius: 14px;
+  padding: 1.1rem 1.25rem;
+  margin: 22px 0;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+}
+.kw-cta-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.kw-cta-pr { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; background: #374151; color: #fff; border-radius: 4px; padding: 2px 7px; }
+.kw-cta-label { font-size: 12px; font-weight: 700; color: #047857; }
+.kw-cta-copy { font-size: 13px; color: #374151; margin: 0 0 10px; line-height: 1.7; }
+.kw-cta-main a {
+  display: block;
+  text-align: center;
+  background: linear-gradient(180deg, #34D399, #10B981);
+  color: #fff !important;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 13px 20px;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.kw-cta-main a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(16, 185, 129, 0.45); }
+.kw-cta-sub { text-align: center; margin-top: 8px; }
+.kw-cta-sub a { font-size: 12.5px; color: #047857; font-weight: 700; }
+.kw-cta img { display: inline; }
+.kw-cta-compact { padding: 0.9rem 1rem; margin: 16px 0; }
+.kw-cta-compact .kw-cta-main a { font-size: 13.5px; padding: 11px 16px; }

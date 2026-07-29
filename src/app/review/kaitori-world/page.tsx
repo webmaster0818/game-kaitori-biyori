@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'カイトリワールドの評判・口コミは怪しい？【2026年7月】運営会社メディアワールドの実態・減額を検証',
@@ -93,6 +94,8 @@ export default function KaitoriWorldReviewPage() {
             </p>
           </div>
         </section>
+
+        <KaitoriWorldCta />
 
         {/* Features */}
         <section className="mb-12">
@@ -346,6 +349,7 @@ export default function KaitoriWorldReviewPage() {
           </ul>
         </section>
 
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

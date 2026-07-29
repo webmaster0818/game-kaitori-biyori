@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】毎週実測の価格で比較',
@@ -447,6 +448,7 @@ export default function WhichIsBestPage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

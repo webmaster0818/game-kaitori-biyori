@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
@@ -337,6 +338,7 @@ export default function HighValueSoftwarePage() {
             <Link href="/software/ff/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ファイナルファンタジー</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>FFソフトの相場</p></Link>
           </div>
         </section>
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import { SeriesPriceTable } from '@/components/PriceIndex'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧',
@@ -185,6 +186,7 @@ export default function ZeldaPage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

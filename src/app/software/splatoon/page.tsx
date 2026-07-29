@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import { SeriesPriceTable } from '@/components/PriceIndex'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'スプラトゥーンの買取価格【2026年6月】スプラ3・2の相場と売り時',
@@ -180,6 +181,7 @@ export default function SplatoonPage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

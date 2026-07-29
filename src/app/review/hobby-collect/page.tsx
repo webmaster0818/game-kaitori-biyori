@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ホビーコレクトの評判・口コミは怪しい？箱なし・ジャンクでも高く売れる？【2026年6月】古物商番号で検証',
@@ -322,6 +323,7 @@ export default function HobbyCollectReviewPage() {
           </ul>
         </section>
 
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

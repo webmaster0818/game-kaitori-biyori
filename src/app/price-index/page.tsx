@@ -5,6 +5,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import { PriceMatrix, PriceDiffRanking, PriceFreshnessNote } from '@/components/PriceIndex';
 import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, crossStorePrices, hardwarePrices, priceDiffRanking, priceMoves } from '@/data/prices';
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較',
@@ -161,6 +162,7 @@ export default function PriceIndexPage() {
             <Link href="/software/high-value/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売れるソフトランキング</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式買取価格で横断比較</p></Link>
           </div>
         </section>
+        <KaitoriWorldCta />
         <AuthorBox />
       </div>
     </>

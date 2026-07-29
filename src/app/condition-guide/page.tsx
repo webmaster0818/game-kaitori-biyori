@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '状態別 ゲーム買取 許容度マップ【2026年6月】箱なし・傷・ジャンクはどこで売れる？',
@@ -143,6 +144,7 @@ export default function ConditionGuidePage() {
             <Link href="/review/uriel/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ウリエルの評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高額査定で名前が挙がる店</p></Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド【2026年6月】',
@@ -217,6 +218,7 @@ export default function FukuokaPage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

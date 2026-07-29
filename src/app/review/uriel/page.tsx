@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '買取ウリエルの評判・口コミはやばい？【2026年6月】出張買取の実態・対応エリア・費用を徹底検証',
@@ -324,6 +325,7 @@ export default function UrielReviewPage() {
           </ul>
         </section>
 
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

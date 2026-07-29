@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】',
@@ -129,6 +130,7 @@ export default function RetroSellGuidePage() {
             <Link href="/review/surugaya/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>駿河屋の評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>レトロ・限定版に強い専門店</p></Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

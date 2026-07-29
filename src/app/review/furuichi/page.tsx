@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: '古本市場（ふるいち）のゲーム買取の評判・口コミは？【2026年7月】店頭買取の実態・宅配終了を検証',
@@ -164,6 +165,7 @@ export default function FuruichiReviewPage() {
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※買取方式・条件・取扱いは店舗や時期により変わります。来店前に公式サイトで最新情報をご確認ください。</p>
         </section>
 
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>

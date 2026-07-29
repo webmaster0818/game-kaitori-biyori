@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import AuthorBox from '@/components/AuthorBox'
 import { crossStorePrices, analyzeTitle, PRICE_SURVEY_DATE, STORE_LABELS, type PriceAnalysis } from '@/data/prices';
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 const services = [
   {
@@ -678,6 +679,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <KaitoriWorldCta />
         <AuthorBox />
       </section>
     </>
