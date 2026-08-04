@@ -1,3 +1,4 @@
+import FuruichiCta from '@/components/FuruichiCta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { PriceMatrix } from '@/components/PriceIndex';
@@ -122,7 +123,8 @@ export default function Switch2Page() {
             </Link>
           </div>
         </div>
-      </section>
+        <FuruichiCta variant="strip" />
+        </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Switch 2 Overview */}

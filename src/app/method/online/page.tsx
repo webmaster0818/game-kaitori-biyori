@@ -1,3 +1,4 @@
+import FuruichiCta from '@/components/FuruichiCta';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -287,6 +288,7 @@ export default function OnlinePage() {
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
             出典：各社公式サイト（買取案内・FAQ・特定商取引法に基づく表記）。確認日は各社レビュー記事に明記（2026年6月12日〜7月28日）。キャンペーン・送料条件は変更される場合があるため、申込前に必ず公式サイトの最新情報をご確認ください。「要確認」は公式に明示がない・出典間で表記揺れがある項目です。なお、ウリエル（出張買取専門）・古本市場ふるいち（宅配ふるいちオンライン2026年6月30日終了・店頭中心）・ワンダーレックス（宅配でのゲーム買取可否が公式に明記なし）は宅配買取の比較表から除外しています。一括査定のヒカカクは買取店ではないため別枠です。
           </p>
+          <FuruichiCta variant="compact" />
         </section>
 
         {/* 価格DB導線（差別化の核） */}
