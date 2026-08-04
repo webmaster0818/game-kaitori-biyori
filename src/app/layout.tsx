@@ -59,6 +59,11 @@ export default function RootLayout({
       </head>
       <body className={`${zenKaku.className} min-h-full flex flex-col`}>
         <Header />
+        <div style={{ background: "#f3f4f6", borderBottom: "1px solid rgba(0,0,0,0.06)" }}>
+          <p style={{ maxWidth: 1152, margin: "0 auto", padding: "4px 16px", fontSize: 11, color: "#6b7280" }}>
+            本サイトはプロモーション(PR)を含みます。掲載情報は各社公式サイトの確認値にもとづきます。
+          </p>
+        </div>
         <div className="md:hidden text-right py-1 pr-4" style={{ fontSize: '11px', color: '#999', background: '#f8f8f8', borderBottom: '1px solid #eee' }}>PRを含みます</div>
         <main className="flex-1">{children}</main>
         <Footer />
