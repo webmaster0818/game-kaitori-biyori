@@ -221,4 +221,12 @@ export default function PokemonPage() {
       </div>
     </>
   );
+      <section className="py-8 px-4">
+        <div className="max-w-3xl mx-auto">
+          <Link href="/software/high-value/" className="block bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-5 text-center shadow hover:opacity-95 transition">
+            <span className="font-bold text-lg">📈 今週の「高く売れるゲームソフト」ランキングを見る</span>
+            <span className="block text-sm opacity-90 mt-1">ブックオフ・ゲオ・駿河屋の公式買取価格を毎週金曜に実測更新中</span>
+          </Link>
+        </div>
+      </section>
 }
