@@ -3,14 +3,15 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import { crossStorePrices, analyzeTitle, STORE_LABELS, PRICE_SURVEY_DATE } from '@/data/prices';
 
 export const metadata: Metadata = {
-  title: 'ゲームソフト高価買取ランキング【2026年8月】高く売れるソフトを毎週実測｜ブックオフ・ゲオ・駿河屋比較',
+  title: 'ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測比較(ブックオフ・ゲオ・駿河屋)',
   description:
     '2026年7月調査の公式買取価格にもとづく、高く売れるゲームソフトランキング。ブックオフ・ゲオ・駿河屋・レトログの最新買取価格を横断比較。同じソフトでも店によって最大1,000円の差が出る実例も掲載。',
   keywords: ['ゲームソフト 高く売れる', '高価買取 ゲーム ランキング', 'ゲーム 買取 高額', 'プレミアソフト 買取', 'ゲームソフト 買取相場'],
   openGraph: {
-    title: 'ゲームソフト高価買取ランキング【2026年8月】毎週実測で比較',
+    title: 'ゲームソフト高額買取ランキング【2026年8月】毎週実測で比較',
     description: 'ブックオフ・ゲオ・駿河屋・レトログの2026年7月時点の公式買取価格を横断比較。高く売れるソフトをデータで紹介。',
     type: 'article',
     locale: 'ja_JP',
@@ -84,16 +85,14 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年7月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-07-25", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測比較", "datePublished": "2026-05-19", "dateModified": "2026-08-09", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(245,158,11,0.2)', color: '#F59E0B' }}>高価買取ランキング</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            高く売れるゲームソフトランキング【2026年7月】
-          </h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年8月7日に調査し（各社公式の高価買取ページで確認・駿河屋はブラウザ経由で全件実測）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
           </p>
@@ -108,6 +107,50 @@ export default function HighValueSoftwarePage() {
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Cross-store comparison (Information Gain) */}
+
+        {/* 高額買取TOPランキング(DB連動・毎週自動更新) */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-2"><span className="section-heading-bar" />今週の高額買取ランキングTOP10（4社横断・{PRICE_SURVEY_DATE}実測）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>ブックオフ・ゲオ・駿河屋・レトログの公式買取価格を毎週金曜に実測し、<strong>4社の中で最も高い価格</strong>の順に並べたランキングです。どの店に売れば一番高いかまで一目でわかります。</p>
+          {(() => {
+            const ranked = crossStorePrices
+              .map((tp) => analyzeTitle(tp))
+              .filter((a): a is NonNullable<typeof a> => a !== null)
+              .sort((a, b) => b.best.price - a.best.price)
+              .slice(0, 10);
+            return (
+              <>
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'ItemList',
+                  name: `ゲームソフト高額買取ランキング（${PRICE_SURVEY_DATE}実測）`,
+                  itemListOrder: 'https://schema.org/ItemListOrderDescending',
+                  numberOfItems: ranked.length,
+                  itemListElement: ranked.map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: `${r.title}（${r.platform}）最高${r.best.price.toLocaleString()}円/${STORE_LABELS[r.best.store]}` })),
+                }) }} />
+                <div className="overflow-x-auto">
+                  <table className="comparison-table">
+                    <thead>
+                      <tr><th>順位</th><th>タイトル</th><th>最高買取価格</th><th>最高値の店</th><th>店舗間の差</th></tr>
+                    </thead>
+                    <tbody>
+                      {ranked.map((r, i) => (
+                        <tr key={r.title}>
+                          <td className="font-bold text-center">{i + 1}</td>
+                          <td className="font-bold text-sm">{r.title}<span className="text-xs font-normal ml-1" style={{ color: 'var(--color-text-light)' }}>({r.platform})</span></td>
+                          <td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>{r.best.price.toLocaleString()}円</td>
+                          <td className="text-sm">{STORE_LABELS[r.best.store]}</td>
+                          <td className="text-sm">{r.gap > 0 ? `${r.gap.toLocaleString()}円` : '—'}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※各社公式買取ページの掲載価格({PRICE_SURVEY_DATE}実測・完品前提)。「店舗間の差」は同一ソフトの最高値と最安値の差=見比べるだけで得する金額です。掲載のない店は比較対象外。</p>
+              </>
+            );
+          })()}
+        </section>
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />同じソフトでも店で差がつく：ブックオフ vs ゲオ 横断比較</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>2026年8月7日に両社の公式買取価格ページで確認した、同一タイトルの買取価格比較です（毎週金曜更新）。</p>

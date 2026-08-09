@@ -49,6 +49,30 @@ function TypingText({ text }: { text: string }) {
   return <span>{shown}</span>;
 }
 
+const IDLE_MESSAGES = [
+  "今いちばん高く売れるソフト、知ってますか？🎮",
+  "3つの質問でピッタリの買取先を診断します！",
+  "フィギュアもゲームも、まとめ売りもOK📦",
+];
+
+function TypingLoop() {
+  const [msgIdx, setMsgIdx] = useState(0);
+  const [shown, setShown] = useState("");
+  useEffect(() => {
+    const text = IDLE_MESSAGES[msgIdx];
+    let i = 0;
+    setShown("");
+    const typer = setInterval(() => {
+      i++;
+      setShown(text.slice(0, i));
+      if (i >= text.length) clearInterval(typer);
+    }, 55);
+    const next = setTimeout(() => setMsgIdx((m) => (m + 1) % IDLE_MESSAGES.length), text.length * 55 + 2600);
+    return () => { clearInterval(typer); clearTimeout(next); };
+  }, [msgIdx]);
+  return <span>{shown}<span style={{ display: "inline-block", width: 2, height: 12, marginLeft: 2, verticalAlign: "middle", background: "var(--color-electric-green, #22c55e)", animation: "pulse 1s infinite" }} /></span>;
+}
+
 export default function KaitoriConcierge() {
   const [open, setOpen] = useState(false);
   const [step, setStep] = useState<Step>("item");
@@ -103,17 +127,33 @@ export default function KaitoriConcierge() {
 
   return (
     <>
+      {!open && (
+        <div
+          style={{
+            position: "fixed", right: 16, bottom: 148, zIndex: 60,
+            maxWidth: 230, background: "#ffffff", borderRadius: "14px 14px 2px 14px",
+            border: "1.5px solid var(--color-electric-green, #22c55e)",
+            boxShadow: "0 4px 14px rgba(0,0,0,0.18)", padding: "10px 12px",
+            fontSize: 12.5, lineHeight: 1.6, color: "#111827", cursor: "pointer",
+          }}
+          onClick={() => setOpen(true)}
+        >
+          <span style={{ fontWeight: 700, color: "#059669" }}>カイちゃん</span>：<TypingLoop />
+        </div>
+      )}
       <button
         onClick={() => setOpen(!open)}
         aria-label="買取AI診断を開く"
         style={{
           position: "fixed", right: 16, bottom: 76, zIndex: 60,
           background: "var(--color-electric-green, #22c55e)", color: "#0a0a0a",
-          borderRadius: 9999, padding: "10px 16px", fontWeight: 700, fontSize: 13,
+          borderRadius: 9999, padding: "8px 14px 8px 8px", fontWeight: 700, fontSize: 13,
           boxShadow: "0 4px 14px rgba(0,0,0,0.25)", border: "none", cursor: "pointer",
+          display: "flex", alignItems: "center", gap: 8,
         }}
       >
-        {open ? "✕ 閉じる" : "🎮 買取AI診断"}
+        <img src="/kai-chan.svg" alt="買取AI診断 カイちゃん" width={40} height={40} style={{ display: "block" }} />
+        {open ? "✕ 閉じる" : "買取AI診断"}
       </button>
 
       {open && (
@@ -132,7 +172,7 @@ export default function KaitoriConcierge() {
           <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
             {msgs.map((m, i) => (
               <div key={i} style={{ display: "flex", justifyContent: m.role === "user" ? "flex-end" : "flex-start", gap: 6 }}>
-                {m.role === "bot" && <span style={{ fontSize: 20 }}>🤖</span>}
+                {m.role === "bot" && <img src="/kai-chan.svg" alt="カイちゃん" width={28} height={28} style={{ flexShrink: 0 }} />}
                 <div
                   style={{
                     maxWidth: "85%", fontSize: 13, lineHeight: 1.7, padding: "8px 12px", borderRadius: 12,
