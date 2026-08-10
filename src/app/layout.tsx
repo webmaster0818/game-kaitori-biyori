@@ -69,6 +69,18 @@ export default function RootLayout({
         <Footer />
         <KaitoriConcierge />
         <Analytics />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "ゲーム買取びより",
+              alternateName: "ゲーム買取びより｜毎週実測の買取価格比較",
+              url: "https://gamekaitori-biyori.com/",
+            }),
+          }}
+        />
       </body>
     </html>
   );
