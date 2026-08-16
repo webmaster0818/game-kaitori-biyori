@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import { SeriesPriceTable, TodayBestBanner } from '@/components/PriceIndex'
 
 export const metadata: Metadata = {
   title: 'ポケモンゲームソフトの買取相場｜高く売れるタイトルと時期【2026年版】',
@@ -77,6 +78,8 @@ export default function PokemonPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        <TodayBestBanner keyword="ポケットモンスター" />
+        <SeriesPriceTable keyword="ポケットモンスター" heading="ポケモン(SV)の店舗別 買取価格【毎週更新の実測データ】" />
         {/* 買取相場表 */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ポケモンソフト買取相場一覧</h2>

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
-import { SeriesPriceTable } from '@/components/PriceIndex'
+import { SeriesPriceTable, TodayBestBanner } from '@/components/PriceIndex'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
@@ -75,6 +75,7 @@ export default function SplatoonPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* 店舗横断の実測価格（価格DBから動的挿入） */}
+        <TodayBestBanner keyword="スプラトゥーン" />
         <SeriesPriceTable keyword="スプラトゥーン" heading="スプラトゥーンの店舗別 買取価格【毎週更新の実測データ】" />
 
         {/* Price Table */}

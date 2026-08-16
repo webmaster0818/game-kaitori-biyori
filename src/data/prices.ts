@@ -40,6 +40,7 @@ export const crossStorePrices: TitlePrice[] = [
   { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 3000, geo: 3000, surugaya: 3100 }, prevPrices: { bookoff: 3000, geo: 3000, surugaya: 3800 }, note: '駿河屋3,800→3,100円に大幅軟化(今週最大の下げ)。駿河屋のエキスパンション・パス版は5,000円据置' },
   { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 3000 }, prevPrices: { bookoff: 2700, geo: 3000, surugaya: 3400 }, note: '駿河屋3,400→3,000円に軟化。Switch 2 Editionは駿河屋5,000円/ゲオ4,500円で据置(ブックオフの掲載落ちは継続)' },
   { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 2000, geo: 2500, surugaya: 2400 }, prevPrices: { bookoff: 2200, geo: 2500, surugaya: 2400 }, note: 'ブックオフ2,200→2,000円に軟化。Switch 2 Editionはブ2,500円/駿2,700円で据置' },
+  { title: 'マリオカート ワールド', platform: 'Switch2', prices: { bookoff: 5500, geo: 5500, surugaya: 5500 }, prevPrices: { bookoff: 5500, geo: 5500, surugaya: 5500 }, note: '2026-08-16に定点へ追加(3社とも5,500円で横並び)。ブックオフは前週5,800円からの軟化。駿河屋はBEE-P-AAAAA' },
   { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 2000, surugaya: 2100 }, prevPrices: { bookoff: 2000, surugaya: 2100 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋の+コース追加パス版は6,500円据置' },
   { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 2000, surugaya: 1800 }, prevPrices: { bookoff: 2000, surugaya: 1800 }, note: '両社据置。駿河屋の+ゼロの秘宝版は5,500→6,000円に増額' },
   { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1200, surugaya: 1700 }, prevPrices: { bookoff: 1200, surugaya: 1700 }, note: 'ゲオは今週の高価買取リストに掲載なし。駿河屋の+ゼロの秘宝版は5,500円据置' },
