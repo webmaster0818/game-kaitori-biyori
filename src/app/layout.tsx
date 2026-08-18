@@ -4,7 +4,7 @@ import { Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import KaitoriConcierge from "@/components/KaitoriConcierge";
+// AI診断コンシェルジュは2026-08-18に撤去(8/5からのimp急落の第1容疑・GSC日次とデプロイ時刻一致)。復活時はKaitoriConcierge.tsxを再importする
 
 const zenKaku = Zen_Kaku_Gothic_New({
   weight: ['400', '500', '700'],
@@ -67,7 +67,6 @@ export default function RootLayout({
         <div className="md:hidden text-right py-1 pr-4" style={{ fontSize: '11px', color: '#999', background: '#f8f8f8', borderBottom: '1px solid #eee' }}>PRを含みます</div>
         <main className="flex-1">{children}</main>
         <Footer />
-        <KaitoriConcierge />
         <Analytics />
         <script
           type="application/ld+json"
