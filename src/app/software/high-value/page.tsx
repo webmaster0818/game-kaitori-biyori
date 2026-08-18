@@ -6,12 +6,12 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 import { crossStorePrices, analyzeTitle, STORE_LABELS, PRICE_SURVEY_DATE } from '@/data/prices';
 
 export const metadata: Metadata = {
-  title: 'ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測比較(ブックオフ・ゲオ・駿河屋)',
+  title: '高く売れるゲームソフトランキング【2026年8月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
   description:
     '2026年7月調査の公式買取価格にもとづく、高く売れるゲームソフトランキング。ブックオフ・ゲオ・駿河屋・レトログの最新買取価格を横断比較。同じソフトでも店によって最大1,000円の差が出る実例も掲載。',
   keywords: ['ゲームソフト 高く売れる', '高価買取 ゲーム ランキング', 'ゲーム 買取 高額', 'プレミアソフト 買取', 'ゲームソフト 買取相場'],
   openGraph: {
-    title: 'ゲームソフト高額買取ランキング【2026年8月】毎週実測で比較',
+    title: '高く売れるゲームソフトランキング【2026年8月】公式買取価格で比較',
     description: 'ブックオフ・ゲオ・駿河屋・レトログの2026年7月時点の公式買取価格を横断比較。高く売れるソフトをデータで紹介。',
     type: 'article',
     locale: 'ja_JP',
@@ -85,14 +85,16 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測比較", "datePublished": "2026-05-19", "dateModified": "2026-08-16", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年8月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-08-16", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(245,158,11,0.2)', color: '#F59E0B' }}>高価買取ランキング</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゲームソフト高額買取ランキング【2026年8月】高く売れるソフトを毎週実測</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
+            高く売れるゲームソフトランキング【2026年8月】
+          </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年8月7日に調査し（各社公式の高価買取ページで確認・駿河屋はブラウザ経由で全件実測）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
           </p>
