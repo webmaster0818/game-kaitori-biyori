@@ -350,6 +350,10 @@ export default function HighValueSoftwarePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+            <Link href="/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取おすすめ比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>迷ったらこの3択・今週の最高値つき</p>
+            </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>

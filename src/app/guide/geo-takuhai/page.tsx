@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 
 export const metadata: Metadata = {
-  title: 'ゲオ宅配買取のやり方【2026年7月】ダンボールは自前？日数は何日？梱包・本人確認・キャンセルまで完全ガイド',
+  title: 'ゲオ宅配買取は何日で入金？【2026年8月】やり方・ダンボールは自前？査定日数・梱包・キャンセルまで完全ガイド',
   description:
-    'ゲオ宅配買取のやり方を公式情報（2026年7月28日確認）で完全ガイド。ダンボールは自分で用意（紙袋も可・スマホ買取はヤマトが無料の箱を届ける別系統）、査定は商品到着の翌営業日から5営業日以内、送料・査定料・振込手数料・査定不満時の返送料は無料。本人確認書類（健康保険証は不可）、キャンセルと14日ルール、梱包の手順まで実務目線で解説します。',
+    'ゲオ宅配買取の入金は査定承認後すみやかに振込（規定上は取引成立から7営業日以内）、査定は商品到着の翌営業日から5営業日以内にメール連絡（公式情報2026年7月28日確認）。ダンボールは自分で用意（紙袋も可・スマホ買取はヤマトが無料の箱を届ける別系統）、送料・査定料・振込手数料・査定不満時の返送料は無料。本人確認書類（健康保険証は不可）、キャンセルと14日ルール、梱包の手順まで実務目線で解説します。',
   keywords: ['ゲオ 宅配買取 やり方', 'ゲオ 宅配買取 ダンボール', 'ゲオ 宅配買取 日数', 'ゲオ 宅配買取 梱包', 'ゲオ 宅配買取 キャンセル'],
   openGraph: {
-    title: 'ゲオ宅配買取のやり方【2026年7月】ダンボール・日数・梱包・キャンセルまで完全ガイド',
-    description: 'ダンボールは自前（紙袋も可）、査定は到着翌営業日から5営業日以内、送料・返送料無料。公式情報（2026年7月28日確認）で手順を完全ガイド。',
+    title: 'ゲオ宅配買取は何日で入金？【2026年8月】やり方・ダンボール・査定日数・キャンセルまで完全ガイド',
+    description: '入金は査定承認後すみやかに振込（規定上は成立から7営業日以内）・査定は到着翌営業日から5営業日以内。ダンボールは自前（紙袋も可）・送料/返送料無料。公式情報（2026年7月28日確認）で完全ガイド。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -78,7 +78,7 @@ const faqs = [
 export default function GeoTakuhaiGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取のやり方｜ダンボール・日数・梱包・本人確認・キャンセルまで完全ガイド", "datePublished": "2026-07-28", "dateModified": "2026-07-28", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取は何日で入金？やり方・ダンボール・査定日数・梱包・キャンセルまで完全ガイド", "datePublished": "2026-07-28", "dateModified": "2026-08-24", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ガイド', href: '/' }, { name: 'ゲオ宅配買取のやり方' }]} />
 
       {/* Hero */}
@@ -86,7 +86,7 @@ export default function GeoTakuhaiGuidePage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>使い方 完全ガイド</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ゲオ宅配買取のやり方<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>ダンボール・日数・キャンセルまで</span>
+            ゲオ宅配買取は何日で入金？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>やり方・ダンボール・キャンセルまで</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「ダンボールはもらえる？」「何日で入金される？」「キャンセルしたら返送料は？」——ゲオ宅配買取で迷うポイントを、公式サイト・サービスガイドライン・公式FAQ全100問の一次情報（<strong>2026年7月28日確認</strong>）だけで正確に解説します。評判・口コミは<Link href="/review/geo/" style={{ color: '#34D399' }}>ゲオ宅配買取の評判レビュー</Link>へ。
