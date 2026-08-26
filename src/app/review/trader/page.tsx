@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'トレーダーのゲーム買取｜買取価格の調べ方・使い方・送料【2026年】秋葉原の老舗',
+  title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年8月】秋葉原の老舗',
   description:
-    'トレーダー（秋葉原）のゲーム買取価格は公式e-trader.jpの買取価格検索で調べられます（1日1回程度更新・実測例マリオカート8DX 3,800円）。店頭持ち込みと宅配のやり方、送料（5点以上で無料・キャンセル返送は着払い）、査定3日以内・振込2〜3日の流れまで公式情報で解説。他社との今週の価格比較も。',
-  keywords: ['トレーダー 買取', 'トレーダー 買取価格', 'トレーダー 買取検索', 'トレーダー 秋葉原 買取', 'e-trader 買取', 'トレーダー ゲーム買取'],
+    'トレーダー（秋葉原）のゲーム買取価格は公式e-trader.jpの検索で確認可能（1日1回程度更新と公式注記・実測例マリオカート8DX 3,800円）。店頭持ち込みと宅配（5点以上で送料無料・キャンセル返送は着払い）のやり方、査定3日以内・振込2〜3日の流れ、評判・注意点まで公式情報で解説します。',
+  keywords: ['トレーダー 買取 評判', 'トレーダー ゲーム買取', 'トレーダー 買取価格', 'トレーダー 秋葉原 買取', 'e-trader 買取', 'トレーダー 宅配買取'],
   openGraph: {
-    title: 'トレーダーのゲーム買取｜買取価格の調べ方・使い方・送料【2026年】',
-    description: '秋葉原の老舗トレーダーのゲーム買取価格の調べ方・宅配のやり方・送料を公式情報で解説。',
+    title: 'トレーダーのゲーム買取の評判は？口コミ・買取価格を徹底検証【2026年8月】',
+    description: '秋葉原の老舗トレーダーのゲーム買取を公式情報と参考価格で徹底検証。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -53,7 +53,7 @@ export default function TraderReviewPage() {
             <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年7月7日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            トレーダーのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>秋葉原の老舗｜買取価格の調べ方・使い方・送料</span>
+            トレーダーのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>秋葉原の老舗の実力と送料条件を検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             1999年設立・秋葉原に実店舗を構える老舗トレーダー。レトロから海外ゲームまで届く品揃えと毎日更新の参考価格公開が強みですが、宅配買取には「5点以上で送料無料」「キャンセル返送は着払い」という他社と異なる条件があります。公式情報（2026年7月7日確認）で使いどころを整理しました。

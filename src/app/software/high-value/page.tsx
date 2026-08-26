@@ -370,6 +370,10 @@ export default function HighValueSoftwarePage() {
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Switch2本体の買取相場</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>値上げ後の最新相場を解説</p>
             </Link>
+            <Link href="/hardware/steam-deck/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Steam Deckの買取相場</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>OLED/LCD別の売り時を解説</p>
+            </Link>
             <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありでいくら下がる？</p>
