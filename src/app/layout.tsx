@@ -15,7 +15,7 @@ const zenKaku = Zen_Kaku_Gothic_New({
 
 export const metadata: Metadata = {
   title: {
-    default: "ゲーム買取おすすめはどこ？比較ランキング【2026年7月】毎週実測の買取価格で解説｜ゲーム買取びより",
+    default: "ゲーム買取おすすめはどこ？比較ランキング【2026年9月】毎週実測の買取価格で解説｜ゲーム買取びより",
     template: "%s｜ゲーム買取びより",
   },
   description:
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "レトロゲーム 買取",
   ],
   openGraph: {
-    title: "ゲーム買取おすすめはどこ？比較ランキング【2026年7月】｜ゲーム買取びより",
+    title: "ゲーム買取おすすめはどこ？比較ランキング【2026年9月】｜ゲーム買取びより",
     description:
       "毎週実測の買取価格DBで「今どこが一番高いか」を確認しながら、用途別にゲーム買取10社を比較。実質手取りシミュレーターつき。",
     type: "website",

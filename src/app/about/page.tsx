@@ -88,18 +88,18 @@ export default function AboutPage() {
 
         {/* 監修者 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />記事の監修者</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営体制</h2>
           <div className="glass-card p-6">
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold shrink-0 border-2" style={{ borderColor: 'var(--color-electric-green)', color: 'var(--color-deep-blue)', background: 'rgba(0, 230, 118, 0.08)' }}>中</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold shrink-0 border-2" style={{ borderColor: 'var(--color-electric-green)', color: 'var(--color-deep-blue)', background: 'rgba(0, 230, 118, 0.08)' }}>編</div>
               <div className="flex-1">
-                <p className="font-bold text-base mb-1" style={{ color: 'var(--color-deep-blue)' }}>中村 大輝<span className="text-xs font-normal ml-2" style={{ color: 'var(--color-navy)', opacity: 0.5 }}>（なかむら だいき）</span></p>
+                <p className="font-bold text-base mb-1" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取びより編集部</p>
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>ゲームコレクター歴15年</span>
-                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>レトロゲーム買取査定経験者</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>毎週の公式価格実測</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>公式一次情報のみ採用</span>
                 </div>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--color-navy)', opacity: 0.8 }}>
-                  15年以上のゲームコレクション経験を持ち、レトロゲームから最新ゲームまで幅広く精通。買取サービスは30社以上を実際に利用・比較してきた経験をもとに、各記事の事実確認と買取の実務的な観点からの監修を担当しています。
+                  当サイトは、ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を毎週実測し、確認日つきで比較する編集部が運営しています。特定個人の経験談ではなく「誰でも公式サイトで検証できる一次情報」だけを掲載し、確認できなかった項目は確認できずと明記します。
                 </p>
               </div>
             </div>

@@ -48,7 +48,7 @@ const faqs = [
 export default function RetroSellGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '実家のレトロゲームを売るなら' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">

@@ -180,7 +180,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】毎週実測の買取価格で解説", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】毎週実測の買取価格で解説", "datePublished": "2026-03-15", "dateModified": "2026-09-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       <section className="relative overflow-hidden" style={{ backgroundImage: 'url(/hero-bg-pattern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
@@ -438,7 +438,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-heading">
-              <span className="section-heading-bar" />ゲーム機本体の買取相場【2026年4月】
+              <span className="section-heading-bar" />ゲーム機本体の買取相場【2026年9月】
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
               主要ゲーム機の最新買取相場をまとめました。実際の買取額はサービスや状態により異なります。

@@ -16,31 +16,29 @@ export default function AuthorBox() {
             background: 'rgba(0, 230, 118, 0.08)',
           }}
         >
-          中
+          編
         </div>
         <div className="flex-1">
           <p className="font-bold text-base mb-1" style={{ color: 'var(--color-deep-blue)' }}>
-            中村 大輝
-            <span className="text-xs font-normal ml-2" style={{ color: 'var(--color-navy)', opacity: 0.5 }}>
-              （なかむら だいき）
-            </span>
+            ゲーム買取びより編集部
+            
           </p>
           <div className="flex flex-wrap gap-2 mb-3">
             <span
               className="text-[10px] px-2 py-0.5 rounded-full border"
               style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}
             >
-              ゲームコレクター歴15年
+              毎週の公式価格実測
             </span>
             <span
               className="text-[10px] px-2 py-0.5 rounded-full border"
               style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}
             >
-              レトロゲーム買取査定経験者
+              公式一次情報のみ採用
             </span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--color-navy)', opacity: 0.7 }}>
-            15年以上のゲームコレクション経験を持ち、レトロゲームから最新ゲームまで幅広く精通。買取サービスは30社以上を実際に利用し比較しています。
+            ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を毎週実測し、確認日つきで比較しています。掲載価格は全て公式サイトで確認できる一次情報のみで、推定・創作はありません。
           </p>
           <a href="/about/" className="text-xs font-bold inline-block mt-2" style={{ color: 'var(--color-electric-green)' }}>運営者情報・編集方針 →</a>
         </div>

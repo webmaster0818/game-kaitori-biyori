@@ -29,7 +29,7 @@ const fallers = moves.filter((m) => m.delta < 0);
 export default function PriceIndexPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較", "datePublished": "2026-06-20", "dateModified": PRICE_SURVEY_DATE, "author": {"@type": "Person", "name": "中村 大輝", "description": "ゲームコレクター歴15年、レトロゲーム買取査定経験者"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較", "datePublished": "2026-06-20", "dateModified": PRICE_SURVEY_DATE, "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ゲーム買取価格インデックス' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
