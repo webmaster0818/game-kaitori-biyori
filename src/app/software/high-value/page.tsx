@@ -6,12 +6,12 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 import { crossStorePrices, analyzeTitle, STORE_LABELS, PRICE_SURVEY_DATE } from '@/data/prices';
 
 export const metadata: Metadata = {
-  title: '高く売れるゲームソフトランキング【2026年8月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
+  title: '高く売れるゲームソフトランキング【2026年9月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
   description:
     '2026年7月調査の公式買取価格にもとづく、高く売れるゲームソフトランキング。ブックオフ・ゲオ・駿河屋・レトログの最新買取価格を横断比較。同じソフトでも店によって最大1,000円の差が出る実例も掲載。',
   keywords: ['ゲームソフト 高く売れる', '高価買取 ゲーム ランキング', 'ゲーム 買取 高額', 'プレミアソフト 買取', 'ゲームソフト 買取相場'],
   openGraph: {
-    title: '高く売れるゲームソフトランキング【2026年8月】公式買取価格で比較',
+    title: '高く売れるゲームソフトランキング【2026年9月】公式買取価格で比較',
     description: 'ブックオフ・ゲオ・駿河屋・レトログの2026年7月時点の公式買取価格を横断比較。高く売れるソフトをデータで紹介。',
     type: 'article',
     locale: 'ja_JP',
@@ -60,11 +60,25 @@ const surugayaList = [
 ];
 
 const crossCompare = [
-  { title: 'ファイアーエムブレム 風花雪月', bookoff: '掲載なし（掲載落ち継続）', geo: '5,000円', diff: 'ゲオのみ掲載・4,500→5,000円に増額' },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', bookoff: '2,700円', geo: '3,000円', diff: 'ゲオが+300円' },
-  { title: 'スプラトゥーン3', bookoff: '3,000円', geo: '3,000円', diff: '同額' },
-  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,200円', geo: '3,500円', diff: 'ゲオが+300円' },
-  { title: '大乱闘スマッシュブラザーズ SPECIAL', bookoff: '3,300円', geo: '4,000円', diff: 'ゲオが+700円' },
+  { title: 'ファイアーエムブレム 風花雪月', bookoff: '掲載なし（掲載落ち継続）', geo: '5,000円', diff: 'ゲオのみ掲載・5,000円据置' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', bookoff: '2,500円', geo: '3,000円', diff: 'ゲオが+500円' },
+  { title: 'スプラトゥーン3', bookoff: '2,700円', geo: '3,000円', diff: 'ゲオが+300円' },
+  { title: 'スーパーマリオパーティ ジャンボリー（Switch版）', bookoff: '3,000円', geo: '3,500円', diff: 'ゲオが+500円' },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', bookoff: '3,500円', geo: '4,000円', diff: 'ゲオが+500円' },
+];
+
+// ゲオで高く売れるSwitchソフト(2026-09-16 高価買取品リスト実測・ゲオ掲載分の上位)
+const geoRanking = [
+  { title: 'ファイナルファンタジータクティクス イヴァリース クロニクルズ DXED', price: '6,500円' },
+  { title: 'ファイアーエムブレム 風花雪月', price: '5,000円' },
+  { title: '真・三國無双 オリジンズ(Switch2)', price: '5,000円' },
+  { title: 'マリオカート ワールド(Switch2)', price: '5,000円' },
+  { title: 'デジモンストーリー タイムストレンジャー', price: '4,500円' },
+  { title: '空の軌跡 the 1st', price: '4,500円' },
+  { title: 'パワフルプロ野球2026-2027', price: '4,300円' },
+  { title: 'トモダチコレクション わくわく生活', price: '4,300円' },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', price: '4,000円' },
+  { title: 'ヨッシーとフカシギの図鑑(Switch2)', price: '4,000円' },
 ];
 
 const tips = [
@@ -76,8 +90,8 @@ const tips = [
 ];
 
 const faqs = [
-  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年9月5日の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ DXED」（ゲオで6,500円）やDSの「ポケットモンスター ハートゴールド」（ブックオフで8,400円に増額）が高値です。発売直後の「鬼武者 ウェイ オブ ザ ソード」もゲオ5,500円と高水準。限定版では駿河屋の「FF I-VIピクセルリマスター 35周年限定特装版」42,000円（8/2実測）など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
-  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。2026年9月5日の実測では、同じ「大乱闘スマッシュブラザーズ SPECIAL」でもブックオフ3,300円・ゲオ4,000円と700円の差がありました。さらに「あつまれ どうぶつの森」のようにブックオフが1,700円へ下げる一方で駿河屋は2,200円を維持し、最高値の店が入れ替わるケースもあります。同じソフトでも店によって数百〜千円以上の差がつくため、売る前に複数店の公式価格を見比べるのが確実です。' },
+  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年9月16日の公式買取価格では、通常流通のソフトなら「ファイナルファンタジータクティクス イヴァリースクロニクルズ DXED」（ゲオで6,500円）やDSの「ポケットモンスター ハートゴールド」（ブックオフで8,400円に増額）が高値です。発売直後の「鬼武者 ウェイ オブ ザ ソード」もゲオ5,500円・ブックオフ5,800円と高水準。限定版では駿河屋の「FF I-VIピクセルリマスター 35周年限定特装版」42,000円（8/2実測）など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
+  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。2026年9月16日の実測では、同じ「大乱闘スマッシュブラザーズ SPECIAL」でもブックオフ3,500円・ゲオ4,000円・駿河屋2,400円と最大1,600円の差がありました。しかも駿河屋は前週3,300円から900円下げており、最高値の店は週単位で入れ替わります。同じソフトでも店によって数百〜千円以上の差がつくため、売る前に複数店の公式価格を見比べるのが確実です。' },
   { q: '箱なしのレトロゲームでも高く売れますか？', a: '箱なし（裸カセット）でも人気タイトルなら値段がつきますが、箱・説明書付きの完品と比べると買取価格は大幅に下がります。完品なら2〜10倍の差がつくことも珍しくありません。' },
   { q: 'ゲームの買取価格は今後上がりますか？', a: 'レトロゲームや限定版は流通量が減るため、人気タイトルは長期的に上昇する傾向があります。一方、最新タイトルは時間の経過とともに下がるのが基本なので、遊び終わったら早めの売却がおすすめです。' },
   { q: '大量のゲームをまとめて売りたい場合はどうすればいいですか？', a: '宅配買取が便利です。駿河屋のあんしん買取は見積金額3,000円以上で送料無料（着払い）になります。カイトリワールドも査定3,000円以上で送料無料・梱包ダンボール最大10箱無料です。各社の送料条件を確認してまとめて送りましょう。' },
@@ -86,7 +100,7 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年8月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-09-05", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年9月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-09-05", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
@@ -94,7 +108,7 @@ export default function HighValueSoftwarePage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(245,158,11,0.2)', color: '#F59E0B' }}>高価買取ランキング</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            高く売れるゲームソフトランキング【2026年8月】
+            高く売れるゲームソフトランキング【2026年9月】
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年9月5日に調査し（各社公式の高価買取ページで確認・駿河屋はブラウザ経由で全件実測）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
@@ -179,6 +193,24 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
+
+      <h2 id="geo-ranking" className="section-heading mb-6 mt-12"><span className="section-heading-bar" />ゲオで高く売れるSwitchソフトランキング【2026年9月16日実測】</h2>
+      <p className="text-sm mb-4" style={{ color: 'var(--color-navy)', opacity: 0.75 }}>ゲオの「高価買取品」リスト(公式)に掲載されているSwitch/Switch2ソフトの上位です。ゲオは店頭参考価格のため、店舗・状態により変動します。</p>
+      <div className="glass-card p-5 mb-4 overflow-x-auto">
+        <table className="w-full text-sm min-w-[420px]">
+          <thead><tr className="text-left border-b" style={{ borderColor: 'rgba(0,0,0,0.08)' }}><th className="py-2 pr-3">順位</th><th className="py-2 pr-3">ソフト</th><th className="py-2">ゲオ参考買取価格</th></tr></thead>
+          <tbody>
+            {geoRanking.map((g, i) => (
+              <tr key={g.title} className="border-b" style={{ borderColor: 'rgba(0,0,0,0.05)' }}>
+                <td className="py-2 pr-3 font-bold">{i + 1}位</td>
+                <td className="py-2 pr-3">{g.title}</td>
+                <td className="py-2 font-bold" style={{ color: 'var(--color-deep-blue)' }}>{g.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p className="text-xs mb-8" style={{ color: 'var(--color-navy)', opacity: 0.55 }}>出典: ゲオ公式「高価買取品」リスト(2026年9月16日確認・掲載分のみ)。カイトリワールドの評判が気になる方は<a href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-electric-green)' }}>「カイトリワールドは怪しい？」の検証記事</a>もどうぞ。</p>
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ「ゲームの高価買取情報」（2026年8月7日閲覧・8/6更新表記・店舗買取価格）、ゲオ店舗情報サイト「Switchの高価買取品」（2026年8月7日閲覧・店頭参考買取価格）。店舗・状態により変動します。</p>
         </section>
 

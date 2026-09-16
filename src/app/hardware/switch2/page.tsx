@@ -7,7 +7,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場【2026年7月】',
+  title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場【2026年9月】',
   description:
     'Nintendo Switch 2本体の買取価格相場を2026年6月に調査。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時判断まで徹底解説します。',
   keywords: ['Switch2 買取', 'スイッチ2 買取価格', 'Switch 2 買取相場', 'Switch2 マリオカートセット 買取', 'Switch 売り時'],
