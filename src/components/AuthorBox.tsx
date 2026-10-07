@@ -13,7 +13,7 @@ export default function AuthorBox() {
           style={{
             borderColor: 'var(--color-electric-green)',
             color: 'var(--color-deep-blue)',
-            background: 'rgba(0, 230, 118, 0.08)',
+            background: 'var(--color-accent-soft)',
           }}
         >
           編

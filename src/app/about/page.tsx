@@ -91,7 +91,7 @@ export default function AboutPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営体制</h2>
           <div className="glass-card p-6">
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold shrink-0 border-2" style={{ borderColor: 'var(--color-electric-green)', color: 'var(--color-deep-blue)', background: 'rgba(0, 230, 118, 0.08)' }}>編</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold shrink-0 border-2" style={{ borderColor: 'var(--color-electric-green)', color: 'var(--color-deep-blue)', background: 'var(--color-accent-soft)' }}>編</div>
               <div className="flex-1">
                 <p className="font-bold text-base mb-1" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取びより編集部</p>
                 <div className="flex flex-wrap gap-2 mb-3">

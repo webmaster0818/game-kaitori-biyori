@@ -45,7 +45,7 @@ export default function ContactForm() {
 
   if (status === 'ok') {
     return (
-      <div className="rounded-xl p-6 text-center" style={{ background: 'rgba(0,230,118,0.08)', border: '1px solid var(--color-electric-green)' }}>
+      <div className="rounded-xl p-6 text-center" style={{ background: 'var(--color-accent-soft)', border: '1px solid var(--color-electric-green)' }}>
         <p className="font-bold text-lg mb-2" style={{ color: 'var(--color-electric-green)' }}>送信が完了しました</p>
         <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>お問い合わせありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。</p>
       </div>

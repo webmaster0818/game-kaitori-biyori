@@ -53,7 +53,7 @@ export default function RetroSellGuidePage() {
 
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.2)', color: '#00E676' }}>レトロ買取ガイド</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'var(--color-accent-soft-strong)', color: 'var(--color-accent)' }}>レトロ買取ガイド</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">実家のレトロゲームを売るなら？</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             押し入れや実家に眠るファミコン・スーファミ・N64・ゲームボーイ。これらの<strong>レトロゲームは「専門店」が大手より高い</strong>のが鉄則です。箱なし・黄ばみ・動作不良でも諦めず、適正に評価してくれる店の選び方とまとめ売りのコツを解説します。

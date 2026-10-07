@@ -34,7 +34,7 @@ export default function PriceIndexPage() {
 
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.2)', color: '#00E676' }}>毎週更新・実測データ</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'var(--color-accent-soft-strong)', color: 'var(--color-accent)' }}>毎週更新・実測データ</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゲーム買取価格インデックス</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋が公式に公開している買取価格を<strong>毎週調査</strong>し、人気ソフトを店舗横断で比較。「売る前に、今どこが一番高いか」が一目でわかります。同じソフトでも店によって差がつくのが中古ゲーム買取の実態です。
@@ -61,12 +61,12 @@ export default function PriceIndexPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="glass-card p-5">
-                <h3 className="font-bold mb-3" style={{ color: '#00E676' }}>📈 高騰（先週比プラス）</h3>
+                <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent)' }}>📈 高騰（先週比プラス）</h3>
                 {risers.length > 0 ? (
                   <ul className="space-y-2">
                     {risers.map((m) => (
                       <li key={m.title + m.store} className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-                        <strong>{m.title}</strong>（{STORE_LABELS[m.store]}）：{m.from.toLocaleString()}円 → <strong>{m.to.toLocaleString()}円</strong> <span style={{ color: '#00E676' }}>(+{m.delta.toLocaleString()}円)</span>
+                        <strong>{m.title}</strong>（{STORE_LABELS[m.store]}）：{m.from.toLocaleString()}円 → <strong>{m.to.toLocaleString()}円</strong> <span style={{ color: 'var(--color-accent)' }}>(+{m.delta.toLocaleString()}円)</span>
                       </li>
                     ))}
                   </ul>

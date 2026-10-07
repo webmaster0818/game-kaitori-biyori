@@ -53,7 +53,7 @@ export default function ConditionGuidePage() {
 
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.2)', color: '#00E676' }}>状態別・公式情報で比較</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'var(--color-accent-soft-strong)', color: 'var(--color-accent)' }}>状態別・公式情報で比較</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">状態別 ゲーム買取 許容度マップ</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             箱なし・説明書なし・ディスク傷・付属品欠品・ジャンク（故障）・未初期化——「この状態、どこなら売れる？」を各社公式情報で一覧化。大手の比較サイトが追いきれない、状態別の"買取の本音"をまとめました。

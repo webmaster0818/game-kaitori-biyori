@@ -75,7 +75,7 @@ export default function TakehomeSimulator() {
         </div>
       </div>
 
-      <div className="p-4 rounded-lg text-center" style={{ background: 'rgba(0,230,118,0.08)' }}>
+      <div className="p-4 rounded-lg text-center" style={{ background: 'var(--color-accent-soft)' }}>
         {winner === 'tie' ? (
           <p className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>手取りはほぼ同額です。手間・トラブルリスクを考えると買取業者が無難です。</p>
         ) : winner === 'mercari' ? (

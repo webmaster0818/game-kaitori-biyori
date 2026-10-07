@@ -39,6 +39,8 @@
   --color-accent: #0F62D6;
   --color-accent-hover: #0B4FAE;
   --color-accent-soft: rgba(15, 98, 214, 0.10);
+  --color-accent-soft-weak: rgba(15, 98, 214, 0.05);
+  --color-accent-soft-strong: rgba(15, 98, 214, 0.16);
 
   /* 旧トークン互換。全部アクセント／無彩色に寄せて、緑と橙を画面から消す。
      各ページの className は変えずに色だけ入れ替えるための対応表。 */
@@ -467,6 +469,66 @@ table, .comparison-table, .rank-badge, .step-number {
   border-radius: var(--radius-sm);
 }
 
+/* ==========================================================================
+   日本語の改行（2026-10-07）
+   スマホで「詳細を見る」が1文字ずつ縦に並ぶ問題への対応。
+   原因は .comparison-table の width:100% で、列が多い表が
+   .overflow-x-auto の中で横スクロールせずに潰れていたこと。
+   ========================================================================== */
+
+/* 文節で折り返す（対応ブラウザのみ有効。非対応では従来どおり） */
+body {
+  word-break: auto-phrase;
+  line-break: strict;
+}
+
+/* タグ・バッジは途中で折らない（短いので画面幅を超えない） */
+.tag-pill,
+.rank-badge,
+.console-icon,
+.kw-cta-pr {
+  white-space: nowrap;
+}
+
+/* ボタンは文言が長いものがあるので折り返しは許すが、
+   画面幅は絶対に超えさせない（横スクロールの原因になるため）。
+   折り返したときに中央で2行になるよう text-align も指定する。 */
+.btn-primary,
+.btn-accent,
+.btn-outline {
+  max-width: 100%;
+  text-align: center;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  height: auto;
+}
+
+/* 表の中のボタンとタグは、セルが狭くても潰れないようにする */
+.comparison-table .btn-outline,
+.comparison-table .btn-primary,
+.comparison-table .btn-accent {
+  padding: 0 12px;
+  min-height: 32px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.comparison-table .tag-pill {
+  white-space: nowrap;
+}
+
+/* 横スクロールする表の中は慣性スクロールを有効に */
+.overflow-x-auto {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* grid/flex の子は既定で min-content 未満に縮まないため、
+   中に truncate(white-space:nowrap)があると親の幅を超えて画面からはみ出す。
+   min-width:0 を与えて、親の幅まで縮むようにする。 */
+.grid > *,
+.truncate {
+  min-width: 0;
+}
+
 /* --- レスポンシブ --- */
 @media (max-width: 768px) {
   .section-heading {
@@ -477,6 +539,7 @@ table, .comparison-table, .rank-badge, .step-number {
   .comparison-table td {
     padding: 10px 10px;
     font-size: 12px;
+    line-height: 19px;
   }
   .chara-avatar-lg {
     width: 120px;
@@ -484,6 +547,25 @@ table, .comparison-table, .rank-badge, .step-number {
   }
   .hero-gradient {
     background-position: center 38%, center 38%, 72% 40%, center;
+  }
+
+  /* 列が多い表は画面幅に押し込めず、親(.overflow-x-auto)を横スクロールさせる。
+     列数ごとに必要な最小幅を与える。3列までは画面内に収まるのでそのまま。 */
+  .comparison-table:has(thead th:nth-child(4)) { min-width: 560px; }
+  .comparison-table:has(thead th:nth-child(5)) { min-width: 700px; }
+  .comparison-table:has(thead th:nth-child(6)) { min-width: 740px; }
+  .comparison-table:has(thead th:nth-child(7)) { min-width: 840px; }
+
+  /* :has() が使えないブラウザ向けの保険。
+     表が潰れても1文字ずつの縦積みにはならないようにする。 */
+  @supports not selector(:has(*)) {
+    .comparison-table { min-width: 660px; }
+  }
+
+  /* 3列の価格表は収まるので、数値側だけ折り返さない */
+  .comparison-table td:last-child,
+  .comparison-table th:last-child {
+    white-space: nowrap;
   }
 }
 
