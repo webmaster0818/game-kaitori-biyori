@@ -1,430 +1,522 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   G案（playstation.com/ja-jp の実測値ベース）2026-10-07
+   --------------------------------------------------------------------------
+   このファイルだけで全92ページの見た目を差し替える。
+   クラス名は一切変えていないため、各ページの文言・リンク・見出し・
+   構造化データ・アフィリエイトコードには手を触れていない。
+
+   実測して採用した値:
+     本文 14px / 行21px / 字間 -0.2px
+     ウエイトは 300 / 400 / 500 中心（700はほぼ使わない）
+     角丸は 4 / 8 / 16 / 32px の倍々
+     色は 白・#1F1F1F・#6B6B6B・暗面 #0E1317・アクセント1色 の5つだけ
+     文字そのものには色を付けず、色はボタンとリンクだけに使う
+   ========================================================================== */
+
 :root {
-  --color-deep-blue: #0F1923;
-  --color-dark-blue: #0F1923;
-  --color-navy: #1A2A3A;
-  --color-electric-green: #00E676;
-  --color-green-light: #69F0AE;
-  --color-green-dark: #00C853;
-  --color-accent-orange: #FF6D00;
-  --color-orange-light: #FF9E40;
-  --color-orange-dark: #E65100;
-  --color-bg: #F5F7FA;
-  --color-bg-alt: #EDF0F5;
-  --color-text: #1A2A3A;
-  --color-text-light: #546E7A;
-  --color-text-lighter: #90A4AE;
+  /* ---- 面と線 ---- */
   --color-white: #FFFFFF;
-  --color-border: #D0D9E2;
-  --color-border-light: #E8EDF2;
-  --radius-sm: 0.5rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --color-bg: #FFFFFF;
+  --color-bg-alt: #F4F5F6;
+  --color-border: #E3E3E3;
+  --color-border-light: #EFEFEF;
+  --color-border-strong: #CCCCCC;
+
+  /* ---- 文字（無彩色のみ） ---- */
+  --color-text: #1F1F1F;
+  --color-text-light: #6B6B6B;
+  --color-text-lighter: #9A9A9A;
+
+  /* ---- 暗面 ---- */
+  --color-deep-blue: #0E1317;
+  --color-dark-blue: #0E1317;
+  --color-navy: #161C21;
+  --color-dark-line: rgba(255, 255, 255, 0.14);
+
+  /* ---- アクセント（サイトで唯一の色）---- */
+  --color-accent: #0F62D6;
+  --color-accent-hover: #0B4FAE;
+  --color-accent-soft: rgba(15, 98, 214, 0.10);
+
+  /* 旧トークン互換。全部アクセント／無彩色に寄せて、緑と橙を画面から消す。
+     各ページの className は変えずに色だけ入れ替えるための対応表。 */
+  --color-electric-green: #0F62D6;
+  --color-green-light: #3C82E4;
+  --color-green-dark: #0B4FAE;
+  --color-accent-orange: #0F62D6;
+  --color-orange-light: #3C82E4;
+  --color-orange-dark: #0B4FAE;
+
+  /* ---- 状態色（増減の表示にだけ使う）---- */
+  --color-up: #1F8A4D;
+  --color-down: #C4423A;
+
+  /* ---- 角丸: 4 / 8 / 16 / 32 ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 32px;
+
+  /* ---- 影はほぼ使わない。区切りは1pxの線で行う ---- */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
 }
 
 @theme inline {
   --color-background: var(--color-bg);
   --color-foreground: var(--color-text);
   --font-sans: var(--font-zen-kaku);
+
+  /* 直書きのTailwindユーティリティ（from-emerald-600 / to-teal-600 など）も
+     アクセント1色に寄せる。ページ側の className は書き換えない。 */
+  --color-emerald-50: #F2F6FD;
+  --color-emerald-100: #E1EBFA;
+  --color-emerald-400: #4C87E0;
+  --color-emerald-500: #1F6FDA;
+  --color-emerald-600: #0F62D6;
+  --color-emerald-700: #0B4FAE;
+  --color-emerald-800: #0A4494;
+  --color-teal-500: #1F6FDA;
+  --color-teal-600: #0F62D6;
+  --color-teal-700: #0B4FAE;
+  --color-green-500: #1F8A4D;
+  --color-green-600: #1F8A4D;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-zen-kaku), 'Helvetica Neue', sans-serif;
+  font-family: var(--font-zen-kaku), 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.2px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* --- Glass Card --- */
+/* 見出しも太らせすぎない。階層はサイズで作る */
+h1, h2, h3, h4, h5 {
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+
+/* 金額の桁を揃える（等幅数字） */
+table, .comparison-table, .rank-badge, .step-number {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Glass Card → 白い面＋1pxの線（ぼかしと影をやめる） --- */
 .glass-card {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 2px solid var(--color-border);
+  background: var(--color-white);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: none;
   position: relative;
 }
 
 .glass-card-dark {
-  background: rgba(15, 25, 35, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 2px solid rgba(0, 230, 118, 0.15);
+  background: var(--color-deep-blue);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: 1px solid var(--color-dark-line);
   border-radius: var(--radius-lg);
-  color: #F5F7FA;
+  color: #FFFFFF;
 }
 
-/* --- Pixel-art inspired border utility --- */
+/* --- 旧ピクセル風ボーダー → ただの1px枠 --- */
 .pixel-border {
-  border: 3px solid var(--color-deep-blue);
-  border-radius: 4px;
-  box-shadow:
-    3px 3px 0 0 var(--color-deep-blue),
-    inset 0 0 0 1px rgba(0, 230, 118, 0.1);
-}
-
-/* --- Buttons --- */
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  background: linear-gradient(135deg, #00E676, #00C853);
-  color: #0F1923;
-  font-weight: 800;
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  box-shadow: 0 4px 14px 0 rgba(0, 230, 118, 0.35);
-  transition: all 0.2s ease;
-  text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-}
-.btn-primary:hover {
-  background: linear-gradient(135deg, #69F0AE, #00E676);
-  box-shadow: 0 6px 20px 0 rgba(0, 230, 118, 0.5);
-  transform: translateY(-2px);
+  box-shadow: none;
 }
 
+/* --- ボタン: 3種類だけ。色は変えない --- */
+.btn-primary,
 .btn-accent {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
-  background: linear-gradient(135deg, #FF6D00, #E65100);
+  gap: 8px;
+  padding: 0 22px;
+  min-height: 40px;
+  background: var(--color-accent);
   color: #FFFFFF;
-  font-weight: 800;
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 14px 0 rgba(255, 109, 0, 0.35);
-  transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.2px;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  box-shadow: none;
   text-decoration: none;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
 }
+.btn-primary:hover,
 .btn-accent:hover {
-  background: linear-gradient(135deg, #FF9E40, #FF6D00);
-  box-shadow: 0 6px 20px 0 rgba(255, 109, 0, 0.45);
-  transform: translateY(-2px);
+  background: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: none;
+  transform: none;
 }
 
 .btn-outline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.625rem 1.5rem;
-  background: transparent;
-  color: var(--color-deep-blue);
-  font-weight: 600;
-  border-radius: var(--radius-md);
-  border: 2px solid var(--color-border);
-  transition: all 0.2s ease;
+  gap: 8px;
+  padding: 0 22px;
+  min-height: 40px;
+  background: var(--color-white);
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.2px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-xl);
   text-decoration: none;
-  font-size: 0.9rem;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .btn-outline:hover {
-  border-color: var(--color-electric-green);
-  color: var(--color-electric-green);
-  background: rgba(0, 230, 118, 0.05);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
 }
 
-/* --- Card Hover --- */
+/* 暗い面の上に置かれたボタンは白枠に反転させる */
+.glass-card-dark .btn-outline,
+.hero-gradient .btn-outline {
+  background: transparent;
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.55);
+}
+.glass-card-dark .btn-outline:hover,
+.hero-gradient .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.10);
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+/* --- カードのホバー: 浮かせずに枠の色を変える --- */
 .card-hover {
-  transition: all 0.25s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
   border-radius: var(--radius-lg);
 }
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl), 0 0 0 2px rgba(0, 230, 118, 0.15);
+  transform: none;
+  box-shadow: none;
+  border-color: var(--color-border-strong);
 }
 
-/* --- Tag Pill --- */
+/* --- タグ: 丸ピル → 角丸4pxの枠 --- */
 .tag-pill {
   display: inline-flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  padding: 1px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 400;
+  letter-spacing: -0.1px;
+  border: 1px solid var(--color-border-strong);
+  background: transparent;
+  color: var(--color-text-light);
 }
 .tag-pill-green {
-  background: rgba(0, 230, 118, 0.12);
-  color: #00C853;
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 .tag-pill-orange {
-  background: rgba(255, 109, 0, 0.12);
-  color: #E65100;
+  background: transparent;
+  color: var(--color-text-light);
+  border-color: var(--color-border-strong);
 }
 .tag-pill-blue {
-  background: rgba(15, 25, 35, 0.08);
-  color: #1A2A3A;
+  background: transparent;
+  color: var(--color-text-light);
+  border-color: var(--color-border-strong);
+}
+.glass-card-dark .tag-pill,
+.hero-gradient .tag-pill {
+  color: rgba(255, 255, 255, 0.80);
+  border-color: rgba(255, 255, 255, 0.30);
 }
 
-/* --- Section Heading --- */
+/* --- セクション見出し --- */
 .section-heading {
-  font-size: 1.75rem;
-  font-weight: 800;
-  color: var(--color-deep-blue);
-  line-height: 1.3;
-  letter-spacing: -0.02em;
+  font-size: 31px;
+  line-height: 39px;
+  font-weight: 400;
+  color: var(--color-text);
+  letter-spacing: -0.6px;
 }
+.glass-card-dark .section-heading,
+.hero-gradient .section-heading {
+  color: #FFFFFF;
+}
+/* 見出し左のグラデーション棒 → 細い単色の罫 */
 .section-heading-bar {
   display: inline-block;
-  width: 4px;
-  height: 1.5em;
-  background: linear-gradient(180deg, #00E676, #FF6D00);
-  border-radius: 2px;
-  margin-right: 0.75rem;
-  vertical-align: middle;
+  width: 3px;
+  height: 0.9em;
+  background: var(--color-accent);
+  border-radius: 0;
+  margin-right: 12px;
+  vertical-align: baseline;
 }
 
-/* --- Hero Gradient --- */
+/* --- ヒーロー: ゲーム機の写真を暗く敷き、左側は文字が乗るので黒で落とす --- */
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(15, 25, 35, 0.92) 0%, rgba(15, 25, 35, 0.85) 50%, rgba(15, 25, 35, 0.92) 100%),
-              url('/hero-banner.jpg') center/cover no-repeat;
+  background:
+    radial-gradient(1100px 440px at 74% 6%, rgba(15, 98, 214, 0.26), transparent 64%),
+    linear-gradient(90deg, #0E1317 0%, rgba(14, 19, 23, 0.94) 28%, rgba(14, 19, 23, 0.58) 50%, rgba(14, 19, 23, 0.30) 72%, rgba(14, 19, 23, 0.40) 100%),
+    url('/hero-consoles.jpg') center 38% / cover no-repeat,
+    linear-gradient(180deg, #121A21 0%, #0E1317 100%);
   position: relative;
   overflow: hidden;
+  color: #FFFFFF;
 }
+/* 旧デザインの動く光彩は止める（機械的な見え方を優先） */
 .hero-gradient::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 30% 50%, rgba(0, 230, 118, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(255, 109, 0, 0.08) 0%, transparent 50%);
-  animation: hero-glow 8s ease-in-out infinite alternate;
-}
-@keyframes hero-glow {
-  0% { transform: translate(0, 0); }
-  100% { transform: translate(2%, 2%); }
+  content: none;
 }
 
-/* --- Gaming grid pattern overlay --- */
+/* --- 旧グリッド模様のオーバーレイは出さない --- */
 .gaming-grid {
-  background-image:
-    linear-gradient(rgba(0, 230, 118, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 230, 118, 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: none;
 }
 
-/* --- Comparison Table --- */
+/* --- 比較表 --- */
 .comparison-table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 2px solid var(--color-border);
+  border: 1px solid var(--color-border);
+  font-size: 13px;
 }
 .comparison-table thead {
-  background: linear-gradient(135deg, #0F1923, #1A2A3A);
-  color: #FFFFFF;
+  background: var(--color-bg-alt);
+  color: var(--color-text-light);
 }
 .comparison-table th {
-  padding: 1rem 1.25rem;
-  font-weight: 700;
+  padding: 12px 16px;
+  font-weight: 500;
   text-align: left;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0;
+  text-transform: none;
+  border-bottom: 1px solid var(--color-border);
 }
 .comparison-table td {
-  padding: 1rem 1.25rem;
+  padding: 14px 16px;
   border-bottom: 1px solid var(--color-border-light);
-  font-size: 0.9rem;
+  font-size: 13px;
+  line-height: 21px;
 }
 .comparison-table tbody tr:nth-child(even) {
-  background: rgba(245, 247, 250, 0.5);
+  background: transparent;
 }
 .comparison-table tbody tr:hover {
-  background: rgba(0, 230, 118, 0.04);
+  background: var(--color-bg-alt);
+}
+.comparison-table tbody tr:last-child td {
+  border-bottom: 0;
 }
 
-/* --- FAQ Accordion --- */
+/* --- FAQ --- */
 .faq-item {
   border-bottom: 1px solid var(--color-border);
 }
 .faq-item summary {
   cursor: pointer;
-  padding: 1rem 0;
-  font-weight: 700;
-  color: var(--color-deep-blue);
+  padding: 16px 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-text);
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
 .faq-item summary::after {
   content: '+';
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--color-electric-green);
-  transition: transform 0.2s ease;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-text-lighter);
+  transition: none;
 }
 .faq-item[open] summary::after {
-  content: '-';
+  content: '−';
 }
 .faq-item .faq-answer {
-  padding: 0 0 1rem 0;
+  padding: 0 0 18px 0;
   color: var(--color-text-light);
-  line-height: 1.8;
-  font-size: 0.9rem;
+  line-height: 23px;
+  font-size: 13px;
 }
 
-/* --- Rank Badge --- */
+/* --- 順位バッジ: 丸 → 角丸4pxの四角。順位ごとの色分けをやめる --- */
 .rank-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  font-weight: 900;
-  font-size: 1.1rem;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  font-size: 13px;
   color: #FFFFFF;
+  background: var(--color-text);
 }
-.rank-badge-1 { background: linear-gradient(135deg, #FF6D00, #E65100); }
-.rank-badge-2 { background: linear-gradient(135deg, #90A4AE, #546E7A); }
-.rank-badge-3 { background: linear-gradient(135deg, #C2884D, #92601B); }
+.rank-badge-1 { background: var(--color-text); }
+.rank-badge-2 { background: var(--color-text-light); }
+.rank-badge-3 { background: var(--color-text-light); }
 
-/* --- Character avatar --- */
+/* --- キャラクターまわり: 角丸を落として枠線も無彩色に --- */
 .chara-avatar {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid rgba(0, 230, 118, 0.3);
+  border: 1px solid var(--color-border);
 }
 .chara-avatar-lg {
   width: 160px;
   height: 160px;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   object-fit: cover;
-  border: 3px solid rgba(0, 230, 118, 0.3);
-  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.15);
+  border: 1px solid var(--color-border);
+  box-shadow: none;
 }
 
-/* --- Speech bubble --- */
+/* --- 吹き出し: 色面 → 1pxの枠 --- */
 .speech-bubble {
-  background: rgba(0, 230, 118, 0.08);
-  border: 1px solid rgba(0, 230, 118, 0.2);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 0.75rem;
+  padding: 12px 14px;
+  font-size: 13px;
+  line-height: 21px;
 }
 .speech-bubble-miku {
-  background: rgba(255, 109, 0, 0.08);
-  border: 1px solid rgba(255, 109, 0, 0.2);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
 }
 
-/* --- Step number --- */
+/* --- 手順番号 --- */
 .step-number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
-  background: linear-gradient(135deg, #0F1923, #1A2A3A);
-  color: #00E676;
-  font-weight: 900;
-  font-size: 1.25rem;
-  border-radius: 50%;
-  border: 2px solid rgba(0, 230, 118, 0.3);
+  width: 36px;
+  height: 36px;
+  background: var(--color-text);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  border: 0;
 }
 
-/* --- Console icon --- */
+/* --- 機種アイコン --- */
 .console-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: linear-gradient(135deg, #0F1923, #1A2A3A);
-  color: #00E676;
-  font-weight: 900;
-  font-size: 0.7rem;
+  width: 52px;
+  height: 52px;
+  background: var(--color-deep-blue);
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 11px;
   border-radius: var(--radius-md);
-  border: 2px solid rgba(0, 230, 118, 0.2);
-  letter-spacing: 0.05em;
+  border: 0;
+  letter-spacing: 0.4px;
 }
 
-/* --- Diagnostic icon --- */
+/* --- 診断アイコン --- */
 .diag-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: linear-gradient(135deg, #00E676, #00C853);
-  color: #0F1923;
-  font-weight: 900;
-  font-size: 1rem;
-  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  background: var(--color-accent);
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
 }
 
-/* --- Smooth scroll --- */
-html {
-  scroll-behavior: smooth;
-}
-
-/* --- Responsive --- */
+/* --- レスポンシブ --- */
 @media (max-width: 768px) {
   .section-heading {
-    font-size: 1.35rem;
+    font-size: 22px;
+    line-height: 30px;
   }
   .comparison-table th,
   .comparison-table td {
-    padding: 0.75rem 0.75rem;
-    font-size: 0.8rem;
+    padding: 10px 10px;
+    font-size: 12px;
   }
   .chara-avatar-lg {
     width: 120px;
     height: 120px;
   }
+  .hero-gradient {
+    background-position: center 38%, center 38%, 72% 40%, center;
+  }
 }
 
-/* カイトリワールド アフィリCTA(KaitoriWorldCta.tsx) — 支給コードのHTMLは不変・装飾はCSSのみで行う */
+/* カイトリワールド アフィリCTA(KaitoriWorldCta.tsx)
+   — 支給コードのHTMLは不変・装飾はCSSのみで行う（この方針は維持） */
 .kw-cta {
-  border: 2px solid #10B981;
-  background: linear-gradient(135deg, #ECFDF5, #F0FDF4);
-  border-radius: 14px;
-  padding: 1.1rem 1.25rem;
-  margin: 22px 0;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.15);
+  border: 1px solid var(--color-border);
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin: 24px 0;
+  box-shadow: none;
 }
 .kw-cta-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
-.kw-cta-pr { font-size: 10px; font-weight: 800; letter-spacing: 0.08em; background: #374151; color: #fff; border-radius: 4px; padding: 2px 7px; }
-.kw-cta-label { font-size: 12px; font-weight: 700; color: #047857; }
-.kw-cta-copy { font-size: 13px; color: #374151; margin: 0 0 10px; line-height: 1.7; }
+.kw-cta-pr { font-size: 10px; font-weight: 500; letter-spacing: 0.4px; background: var(--color-text); color: #fff; border-radius: var(--radius-sm); padding: 2px 7px; }
+.kw-cta-label { font-size: 12px; font-weight: 500; color: var(--color-text-light); }
+.kw-cta-copy { font-size: 13px; color: var(--color-text-light); margin: 0 0 12px; line-height: 21px; }
 .kw-cta-main a {
   display: block;
   text-align: center;
-  background: linear-gradient(180deg, #34D399, #10B981);
+  background: var(--color-accent);
   color: #fff !important;
-  font-weight: 800;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 14px;
   text-decoration: none;
-  border-radius: 999px;
-  padding: 13px 20px;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35);
-  transition: transform 0.15s, box-shadow 0.15s;
+  border-radius: var(--radius-xl);
+  padding: 12px 20px;
+  box-shadow: none;
+  transition: background-color 0.15s ease;
 }
-.kw-cta-main a:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(16, 185, 129, 0.45); }
-.kw-cta-sub { text-align: center; margin-top: 8px; }
-.kw-cta-sub a { font-size: 12.5px; color: #047857; font-weight: 700; }
+.kw-cta-main a:hover { background: var(--color-accent-hover); transform: none; box-shadow: none; }
+.kw-cta-sub { text-align: center; margin-top: 10px; }
+.kw-cta-sub a { font-size: 12.5px; color: var(--color-accent); font-weight: 500; }
 .kw-cta img { display: inline; }
-.kw-cta-compact { padding: 0.9rem 1rem; margin: 16px 0; }
+.kw-cta-compact { padding: 14px 16px; margin: 18px 0; }
 .kw-cta-compact .kw-cta-main a { font-size: 13.5px; padding: 11px 16px; }

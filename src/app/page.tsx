@@ -182,35 +182,30 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】毎週実測の買取価格で解説", "datePublished": "2026-03-15", "dateModified": "2026-09-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
-      <section className="relative overflow-hidden" style={{ backgroundImage: 'url(/hero-bg-pattern.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-        <div className="max-w-6xl mx-auto px-4 pt-8 pb-0 relative z-10">
-          <div className="text-center">
-            <p className="tag-pill tag-pill-green mb-4 inline-block" style={{ background: 'rgba(0,230,118,0.15)', color: '#00C853' }}>
+      {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
+          背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
+      <section className="hero-gradient">
+        <div className="max-w-6xl mx-auto px-4 py-14 md:py-20 relative z-10">
+          <div className="max-w-2xl">
+            <p className="tag-pill mb-5 inline-block">
               2026年最新版
             </p>
-            <h1 className="text-2xl md:text-4xl font-extrabold leading-tight mb-4 tracking-tight" style={{ color: '#1A1A2E' }}>
-              ゲーム買取のおすすめは<span style={{ color: '#FF6D00' }}>ここ！</span>
+            <h1 className="text-3xl md:text-5xl font-normal leading-tight mb-5" style={{ letterSpacing: '-1.2px' }}>
+              ゲーム買取のおすすめは<span style={{ fontWeight: 500 }}>ここ！</span>
             </h1>
-            <p className="text-sm md:text-base mb-6 leading-relaxed" style={{ color: '#666' }}>
+            <p className="text-sm md:text-base mb-7" style={{ color: 'rgba(255,255,255,0.76)', lineHeight: '25px' }}>
               ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
               あなたのゲームを最も高く売れるサービスが見つかります。
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
-              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>Switch 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>PS5 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>レトロゲーム 買取</span>
-              <span className="tag-pill text-xs" style={{ background: 'rgba(0,0,0,0.06)', color: '#555' }}>ゲーム機 売る</span>
+            <div className="flex flex-wrap items-center gap-2 mb-8">
+              <span className="tag-pill text-xs">Switch 買取</span>
+              <span className="tag-pill text-xs">PS5 買取</span>
+              <span className="tag-pill text-xs">レトロゲーム 買取</span>
+              <span className="tag-pill text-xs">ゲーム機 売る</span>
             </div>
-            <Link href="#ranking" className="btn-primary text-base py-3 px-8 mb-6 inline-block">
+            <Link href="#ranking" className="btn-primary text-base inline-block" style={{ minHeight: '48px', padding: '0 30px' }}>
               おすすめランキングを見る
             </Link>
-          </div>
-          <div className="flex justify-center">
-            <img
-              src="/hero-d.jpg"
-              alt="ゲーム買取びより - ナビゲーター ユウト"
-              style={{ maxWidth: '600px', width: '100%', height: 'auto' }}
-            />
           </div>
         </div>
       </section>
