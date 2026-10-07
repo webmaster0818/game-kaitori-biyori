@@ -1,0 +1,312 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== G案: playstation.com/ja-jp の実測値から作成 =====
+   本文14px/行21px・字間-0.2px・ウエイトは300/400/500中心(700はほぼ使わない)
+   角丸は 4 / 8 / 16 / 32 の倍々・コンテンツ幅1320・画像の上は黒20%のスクリム
+   色は 白 / #1F1F1F / #6B6B6B / アクセント1色 / 暗面 #0E1317 のみ */
+:root{
+  --ink:#1F1F1F; --ink2:#6B6B6B; --line:#E3E3E3; --line2:#CCCCCC;
+  --paper:#FFFFFF; --wash:#F4F5F6;
+  --dark:#0E1317; --dark2:#161C21; --dark-line:rgba(255,255,255,.14);
+  --acc:#0F62D6; --acc-h:#0B4FAE; --acc-soft:rgba(15,98,214,.10);
+  --scrim:rgba(0,0,0,.2);
+  --up:#1F8A4D; --down:#C4423A;
+  --w:1320px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1440px;background:var(--paper);color:var(--ink);
+  font-family:"Noto Sans JP",sans-serif;font-size:14px;line-height:21px;letter-spacing:-0.2px;font-weight:400}
+.num{font-family:"Inter","Noto Sans JP",sans-serif;font-feature-settings:"tnum" 1;letter-spacing:-0.4px}
+.wrap{width:var(--w);margin:0 auto}
+.note{background:#000;color:#fff;padding:11px 60px;font-size:12px;line-height:18px}
+.note b{color:#7FB2F5;font-weight:500}
+.pr{background:var(--paper);border-bottom:1px solid var(--line);font-size:12px;line-height:18px;color:var(--ink2)}
+.pr div{width:var(--w);margin:0 auto;padding:7px 0}
+
+/* ヘッダー */
+header{background:var(--paper);border-bottom:1px solid var(--line);position:relative;z-index:3}
+.hd{height:64px;display:flex;align-items:center;gap:40px}
+.logo{font-size:17px;font-weight:500;letter-spacing:-0.3px}
+.logo span{color:var(--acc)}
+.hd nav{display:flex;gap:28px;font-size:14px;color:var(--ink);flex:1}
+.hd nav a{text-decoration:none;color:inherit;height:64px;display:flex;align-items:center;border-bottom:2px solid transparent}
+.hd nav a.on{border-bottom-color:var(--acc);font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:40px;padding:0 22px;
+  border-radius:32px;font-size:14px;font-weight:500;letter-spacing:-0.2px;border:1px solid transparent}
+.btn.pri{background:var(--acc);color:#fff}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}
+.btn.onDark{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn.lg{height:48px;padding:0 30px;font-size:15px}
+
+/* ヒーロー(全幅・暗面) */
+.hero{position:relative;background:var(--dark);color:#fff;overflow:hidden}
+.hero .bgimg{position:absolute;inset:0;background:
+  radial-gradient(1200px 480px at 78% 12%, rgba(15,98,214,.40), transparent 62%),
+  radial-gradient(900px 420px at 10% 90%, rgba(255,255,255,.06), transparent 60%),
+  linear-gradient(180deg,#121A21 0%, #0E1317 100%)}
+.hero .scrim{position:absolute;inset:0;background:var(--scrim)}
+.hero .in{position:relative;width:var(--w);margin:0 auto;padding:76px 0 68px;display:grid;
+  grid-template-columns:1fr 440px;gap:64px;align-items:center}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;line-height:18px;font-weight:500;
+  color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:32px;padding:5px 14px;margin-bottom:22px}
+.kicker i{width:6px;height:6px;border-radius:50%;background:#49D18B;display:block}
+h1{font-size:52px;line-height:62px;font-weight:300;letter-spacing:-1.2px;margin-bottom:20px}
+h1 b{font-weight:500}
+.hero p{font-size:15px;line-height:25px;color:rgba(255,255,255,.76);max-width:560px;margin-bottom:30px}
+.hero .cta{display:flex;gap:12px}
+
+/* ヒーロー右の実測カード */
+.datacard{background:rgba(255,255,255,.06);border:1px solid var(--dark-line);border-radius:16px;overflow:hidden;
+  backdrop-filter:blur(8px)}
+.datacard .t{padding:14px 20px;border-bottom:1px solid var(--dark-line);display:flex;align-items:center;justify-content:space-between}
+.datacard .t b{font-size:13px;font-weight:500;letter-spacing:0}
+.datacard .t s{text-decoration:none;font-size:12px;color:rgba(255,255,255,.55)}
+.datacard .r{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid var(--dark-line)}
+.datacard .r:last-child{border-bottom:0}
+.datacard .r .n{font-size:13px;color:rgba(255,255,255,.80)}
+.datacard .r .v{font-size:20px;font-weight:500}
+.datacard .r .v small{font-size:12px;font-weight:400;color:rgba(255,255,255,.55);margin-left:4px}
+.datacard .r .s{font-size:11px;color:rgba(255,255,255,.55);display:block;text-align:right}
+
+/* 実測ストリップ */
+.strip{border-bottom:1px solid var(--line);background:var(--paper)}
+.strip .in{width:var(--w);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.strip .c{padding:26px 0;border-right:1px solid var(--line)}
+.strip .c:last-child{border-right:0}
+.strip .c .k{font-size:12px;line-height:18px;color:var(--ink2)}
+.strip .c .v{font-size:25px;line-height:31px;font-weight:500;margin-top:2px}
+.strip .c .v small{font-size:13px;font-weight:400;color:var(--ink2);margin-left:5px}
+
+/* セクション共通 */
+section{padding:72px 0}
+section.dark{background:var(--dark);color:#fff}
+.shead{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:28px}
+.shead h2{font-size:31px;line-height:39px;font-weight:400;letter-spacing:-0.6px}
+.shead .sub{font-size:13px;line-height:21px;color:var(--ink2);margin-top:6px}
+section.dark .shead .sub{color:rgba(255,255,255,.60)}
+.tabs{display:flex;gap:8px}
+.tab{height:34px;padding:0 16px;border-radius:32px;border:1px solid var(--line2);font-size:13px;
+  display:inline-flex;align-items:center;color:var(--ink)}
+.tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+section.dark .tab{border-color:rgba(255,255,255,.30);color:rgba(255,255,255,.85)}
+section.dark .tab.on{background:#fff;color:var(--dark);border-color:#fff}
+
+/* タイルウォール(PSのゲーム一覧グリッド相当) */
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tile{border-radius:8px;overflow:hidden;background:var(--dark2);border:1px solid var(--dark-line)}
+.tile .art{aspect-ratio:3/4;position:relative;display:grid;place-items:center;padding:14px;
+  background:linear-gradient(160deg,#1C242C 0%,#141A20 100%)}
+.tile .art .pf{position:absolute;top:10px;left:10px;font-size:10px;line-height:14px;letter-spacing:.4px;
+  color:rgba(255,255,255,.70);border:1px solid rgba(255,255,255,.28);border-radius:4px;padding:1px 6px}
+.tile .art .amt{font-size:28px;font-weight:500;letter-spacing:-1px;color:#fff}
+.tile .art .amt small{font-size:13px;font-weight:400;color:rgba(255,255,255,.65);margin-left:2px}
+.tile .art .st{position:absolute;bottom:12px;left:0;right:0;text-align:center;font-size:11px;color:rgba(255,255,255,.60)}
+.tile .art .dl{position:absolute;bottom:40px;left:0;right:0;text-align:center;font-size:11px}
+.tile .art .dl .u{color:#49D18B}.tile .art .dl .d{color:#FF8A80}
+.tile .lb{padding:10px 12px 12px;border-top:1px solid var(--dark-line)}
+.tile .lb b{display:block;font-size:12px;line-height:18px;font-weight:400;color:#fff;
+  overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;min-height:36px}
+.more{display:flex;justify-content:center;margin-top:36px}
+
+/* 本体レール */
+.rail{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.hw{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--paper)}
+.hw .ph{aspect-ratio:16/10;background:linear-gradient(160deg,#EDEFF1,#DFE3E7);display:grid;place-items:center}
+.hw .ph span{font-size:12px;color:#9AA2A9}
+.hw .b{padding:16px}
+.hw .b .n{font-size:14px;line-height:21px;font-weight:500}
+.hw .b .p{font-size:25px;line-height:31px;font-weight:500;margin-top:6px}
+.hw .b .p small{font-size:12px;font-weight:400;color:var(--ink2);margin-left:4px}
+.hw .b .s{font-size:12px;color:var(--ink2);margin-top:2px}
+
+/* 比較表 */
+.cmp{border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.cmp .row{display:grid;grid-template-columns:48px 1fr 150px 230px 150px;align-items:center;gap:20px;
+  padding:18px 24px;border-bottom:1px solid var(--line);background:var(--paper)}
+.cmp .row:last-child{border-bottom:0}
+.cmp .row.h{background:var(--wash);padding:12px 24px;font-size:12px;color:var(--ink2)}
+.cmp .rk{width:28px;height:28px;border-radius:4px;background:var(--ink);color:#fff;display:grid;place-items:center;
+  font-size:13px;font-weight:500}
+.cmp .nm{font-size:15px;font-weight:500}
+.cmp .nm s{display:block;text-decoration:none;font-size:12px;color:var(--ink2);font-weight:400;margin-top:2px}
+.cmp .tg{display:flex;gap:6px;flex-wrap:wrap}
+.cmp .tg span{font-size:11px;line-height:17px;border:1px solid var(--line2);border-radius:4px;padding:1px 7px;color:var(--ink2)}
+.cmp .act{display:flex;gap:8px;justify-content:flex-end}
+.cmp .act .btn{height:34px;padding:0 16px;font-size:13px}
+
+/* 選び方 */
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.pt{border-top:2px solid var(--ink);padding-top:16px}
+.pt .n{font-size:12px;color:var(--ink2);letter-spacing:1px}
+.pt h3{font-size:18px;line-height:27px;font-weight:500;margin:4px 0 8px}
+.pt p{font-size:13px;line-height:22px;color:var(--ink2)}
+
+footer{background:var(--dark);color:rgba(255,255,255,.65);padding:56px 0 40px;font-size:12px;line-height:20px}
+footer .in{width:var(--w);margin:0 auto}
+footer .cols{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;padding-bottom:32px;border-bottom:1px solid var(--dark-line)}
+footer h4{color:#fff;font-size:13px;font-weight:500;margin-bottom:10px}
+footer a{display:block;color:rgba(255,255,255,.65);text-decoration:none;padding:3px 0}
+footer .last{padding-top:20px;display:flex;justify-content:space-between}
+</style></head><body>
+
+<div class="note">G案「playstation.com/ja-jp の実測値から作成」／本文<b>14px・行21px・字間−0.2px</b>、ウエイトは<b>300/400/500</b>中心で700はほぼ使わない、角丸は<b>4/8/16/32</b>、コンテンツ幅<b>1320px</b>。色は 白・#1F1F1F・#6B6B6B・アクセント1色・暗面#0E1317 の5つだけ。</div>
+<div class="pr"><div>本サイトはプロモーション（PR）を含みます</div></div>
+
+<header><div class="wrap hd">
+  <div class="logo">ゲーム買取<span>日和</span></div>
+  <nav>
+    <a class="on" href="#">今週の買取価格</a><a href="#">ソフト相場</a><a href="#">本体相場</a>
+    <a href="#">買取サービス比較</a><a href="#">売り方ガイド</a>
+  </nav>
+  <a class="btn pri" href="#">今週の最高値を見る</a>
+</div></header>
+
+<div class="hero">
+  <div class="bgimg"></div><div class="scrim"></div>
+  <div class="in">
+    <div>
+      <div class="kicker"><i></i>2026年9月16日 実測・毎週更新</div>
+      <h1>今週、いちばん高いのは<br><b>どの店か。</b></h1>
+      <p>ブックオフ・ゲオ・駿河屋・レトログの4社の公表買取価格を、毎週こちらで実際に調べて並べています。推定値や広告の価格ではなく、その日に各社が出していた金額です。</p>
+      <div class="cta">
+        <a class="btn pri lg" href="#">今週の最高値ランキング</a>
+        <a class="btn onDark lg" href="#">買取サービスを比較する</a>
+      </div>
+    </div>
+    <div class="datacard">
+      <div class="t"><b>今週の最高値</b><s>2026/09/16 実測</s></div>
+      <div class="r"><div><div class="n">ソフト</div><div class="s">マリオカート ワールド</div></div>
+        <div style="text-align:right"><div class="v num">5,300<small>円</small></div><div class="s">駿河屋</div></div></div>
+      <div class="r"><div><div class="n">本体</div><div class="s">PS5 Slim 通常版</div></div>
+        <div style="text-align:right"><div class="v num">60,000<small>円</small></div><div class="s">駿河屋</div></div></div>
+      <div class="r"><div><div class="n">今週の最大の下げ</div><div class="s">大乱闘スマッシュブラザーズ SP</div></div>
+        <div style="text-align:right"><div class="v num" style="color:#FF8A80">−900<small>円</small></div><div class="s">駿河屋</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="strip"><div class="in">
+  <div class="c"><div class="k">最新の実測日</div><div class="v num">2026/09/16</div></div>
+  <div class="c"><div class="k">調査した店舗</div><div class="v num">4<small>社</small></div></div>
+  <div class="c"><div class="k">今週のデータ点数</div><div class="v num">41<small>件</small></div></div>
+  <div class="c"><div class="k">更新の頻度</div><div class="v">毎週金曜</div></div>
+</div></div>
+
+<section class="dark">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <h2>今週の最高値</h2>
+        <div class="sub">4社の公表価格のうち、いちばん高かった店と金額。前週からの増減つき</div>
+      </div>
+      <div class="tabs"><span class="tab on">ソフト</span><span class="tab">本体</span><span class="tab">Switch 2</span><span class="tab">レトロ</span></div>
+    </div>
+    <div class="tiles">
+      <div class="tile"><div class="art"><span class="pf">SWITCH 2</span><span class="amt num">5,300<small>円</small></span><span class="dl">据置</span><span class="st">駿河屋</span></div><div class="lb"><b>マリオカート ワールド</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">5,000<small>円</small></span><span class="dl"><span class="u">+500</span></span><span class="st">ゲオ</span></div><div class="lb"><b>ファイアーエムブレム 風花雪月</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">4,000<small>円</small></span><span class="dl">据置</span><span class="st">ゲオ</span></div><div class="lb"><b>大乱闘スマッシュブラザーズ SPECIAL</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">3,500<small>円</small></span><span class="dl">据置</span><span class="st">ゲオ</span></div><div class="lb"><b>スーパーマリオパーティ ジャンボリー</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">3,300<small>円</small></span><span class="dl">据置</span><span class="st">ブックオフ</span></div><div class="lb"><b>スーパーマリオ 3Dコレクション</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">3,000<small>円</small></span><span class="dl">据置</span><span class="st">ゲオ</span></div><div class="lb"><b>スプラトゥーン3</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">3,000<small>円</small></span><span class="dl">据置</span><span class="st">ゲオ</span></div><div class="lb"><b>ゼルダの伝説 ティアーズ オブ ザ キングダム</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">2,000<small>円</small></span><span class="dl">据置</span><span class="st">ブックオフ</span></div><div class="lb"><b>マリオカート8 デラックス</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">1,700<small>円</small></span><span class="dl"><span class="u">+200</span></span><span class="st">ブックオフ</span></div><div class="lb"><b>ポケットモンスター スカーレット</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">1,600<small>円</small></span><span class="dl"><span class="d">−100</span></span><span class="st">駿河屋</span></div><div class="lb"><b>ポケットモンスター バイオレット</b></div></div>
+      <div class="tile"><div class="art"><span class="pf">SWITCH</span><span class="amt num">1,500<small>円</small></span><span class="dl"><span class="d">−200</span></span><span class="st">ブックオフ</span></div><div class="lb"><b>あつまれ どうぶつの森</b></div></div>
+      <a class="tile" href="#" style="text-decoration:none"><div class="art" style="background:linear-gradient(160deg,#1A222A 0%,#11171C 100%)"><span class="amt" style="font-size:15px;font-weight:400;color:rgba(255,255,255,.85);text-align:center;line-height:24px">ソフトの相場<br>一覧へ</span><span class="st">全11タイトル・4社</span></div><div class="lb"><b style="color:rgba(255,255,255,.55)">今週の実測データをすべて見る</b></div></a>
+    </div>
+    <div class="more"><a class="btn onDark lg" href="#">ソフトの相場をすべて見る</a></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead">
+      <div><h2>本体の相場</h2>
+      <div class="sub">PS5・Switch 2 ほか7機種。金額はその機種で最も高かった店の公表価格</div></div>
+      <a class="btn ghost" href="#">本体相場の一覧へ</a>
+    </div>
+    <div class="rail">
+      <div class="hw"><div class="ph"><span>本体画像</span></div><div class="b"><div class="n">PS5 Slim 通常版（CFI-2000）</div><div class="p num">60,000<small>円</small></div><div class="s">駿河屋／前週比 据置</div></div></div>
+      <div class="hw"><div class="ph"><span>本体画像</span></div><div class="b"><div class="n">PS5 Slim デジタル・エディション</div><div class="p num">52,000<small>円</small></div><div class="s">駿河屋／前週比 据置</div></div></div>
+      <div class="hw"><div class="ph"><span>本体画像</span></div><div class="b"><div class="n">Nintendo Switch 2 本体</div><div class="p num">35,000<small>円</small></div><div class="s">ゲオ／駿河屋 −1,000円</div></div></div>
+      <div class="hw"><div class="ph"><span>本体画像</span></div><div class="b"><div class="n">Switch 有機ELモデル</div><div class="p num">25,000<small>円</small></div><div class="s">ゲオ／前週比 据置</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--wash);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="shead">
+      <div><h2>買取サービスの比較</h2>
+      <div class="sub">10社。一括査定・宅配・出張の対応と、得意な商材で並べています</div></div>
+      <div class="tabs"><span class="tab on">総合</span><span class="tab">宅配</span><span class="tab">出張</span><span class="tab">レトロ</span></div>
+    </div>
+    <div class="cmp">
+      <div class="row h"><div></div><div>サービス名</div><div>買取方法</div><div>得意な商材</div><div></div></div>
+      <div class="row">
+        <div class="rk num">1</div>
+        <div class="nm">ヒカカク！<s>最大20社に一括査定を出して比較できる</s></div>
+        <div class="tg"><span>宅配</span><span>店頭</span><span>出張</span></div>
+        <div class="tg"><span>ゲーム機</span><span>レトロ</span><span>ゲームソフト</span></div>
+        <div class="act"><a class="btn ghost" href="#">詳細</a><a class="btn pri" href="#">公式</a></div>
+      </div>
+      <div class="row">
+        <div class="rk num">2</div>
+        <div class="nm">買取クリエル<s>出張買取に対応・即日現金化</s></div>
+        <div class="tg"><span>出張</span><span>宅配</span></div>
+        <div class="tg"><span>20種類以上の品目</span></div>
+        <div class="act"><a class="btn ghost" href="#">詳細</a><a class="btn pri" href="#">公式</a></div>
+      </div>
+      <div class="row">
+        <div class="rk num">3</div>
+        <div class="nm">ティファナ<s>ホビー系買取に強いリサイクルショップ</s></div>
+        <div class="tg"><span>店頭</span><span>宅配</span></div>
+        <div class="tg"><span>ゲーム</span><span>トレカ</span><span>フィギュア</span></div>
+        <div class="act"><a class="btn ghost" href="#">詳細</a><a class="btn pri" href="#">公式</a></div>
+      </div>
+      <div class="row">
+        <div class="rk num" style="background:var(--ink2)">4</div>
+        <div class="nm">ゲオ宅配買取<s>大手チェーン。まとめ売りで最大35%UP</s></div>
+        <div class="tg"><span>店頭</span><span>宅配</span></div>
+        <div class="tg"><span>ゲームソフト</span><span>ゲーム機</span><span>DVD</span></div>
+        <div class="act"><a class="btn ghost" href="#">詳細</a><a class="btn pri" href="#">公式</a></div>
+      </div>
+      <div class="row">
+        <div class="rk num" style="background:var(--ink2)">5</div>
+        <div class="nm">駿河屋<s>レトロ・限定版に強い。価格を事前公開する老舗</s></div>
+        <div class="tg"><span>宅配</span><span>店頭</span></div>
+        <div class="tg"><span>レトロゲーム</span><span>限定版</span><span>コレクターズ</span></div>
+        <div class="act"><a class="btn ghost" href="#">詳細</a><a class="btn pri" href="#">公式</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="shead"><div><h2>売る前に決めること</h2>
+      <div class="sub">金額が変わるのはこの3つです</div></div></div>
+    <div class="pts">
+      <div class="pt"><div class="n">01</div><h3>まとめて売るか、1本ずつか</h3>
+        <p>ゲオは「まとめ売りで最大35%UP」のように点数で加算する方式。1〜2本なら最高値の店へ、10本以上ならまとめ売りの加算がある店のほうが総額で上回ることがあります。</p></div>
+      <div class="pt"><div class="n">02</div><h3>宅配か、店頭か、出張か</h3>
+        <p>宅配は送料無料の条件（査定額◯円以上など）を先に確認します。店頭はその場で現金化できる代わりに持ち込みの手間がかかります。</p></div>
+      <div class="pt"><div class="n">03</div><h3>いつ売るか</h3>
+        <p>買取価格は週単位で動きます。今週は駿河屋がソフト全般を軟化させ、ブックオフが一部を増額しました。1週間ずらすだけで数百円変わることがあります。</p></div>
+    </div>
+  </div>
+</section>
+
+<footer><div class="in">
+  <div class="cols">
+    <div><h4>今週の買取価格</h4><a href="#">ソフト最高値</a><a href="#">本体最高値</a><a href="#">価格の推移</a></div>
+    <div><h4>相場を調べる</h4><a href="#">Switch 2</a><a href="#">PS5</a><a href="#">レトロゲーム</a></div>
+    <div><h4>買取サービス</h4><a href="#">総合ランキング</a><a href="#">宅配買取</a><a href="#">出張買取</a></div>
+    <div><h4>売り方ガイド</h4><a href="#">宅配買取の流れ</a><a href="#">高く売るコツ</a><a href="#">よくある質問</a></div>
+    <div><h4>サイト情報</h4><a href="#">運営方針</a><a href="#">調査の方法</a><a href="#">プライバシー</a></div>
+  </div>
+  <div class="last"><div>価格は各社公式サイトの公表値を当サイトが毎週実測したものです。実際の査定額は状態により変動します。</div><div>© 2026 ゲーム買取日和</div></div>
+</div></footer>
+</body></html>

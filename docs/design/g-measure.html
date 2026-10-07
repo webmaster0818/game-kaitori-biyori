@@ -1,0 +1,139 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1F1F;--ink2:#6B6B6B;--line:#E3E3E3;--line2:#CCCCCC;--wash:#F4F5F6;--acc:#0F62D6;--bad:#C4423A}
+*{margin:0;padding:0;box-sizing:border-box}
+body{width:1440px;background:#fff;color:var(--ink);font-family:"Noto Sans JP",sans-serif;
+  font-size:14px;line-height:21px;letter-spacing:-0.2px;font-weight:400}
+.num{font-family:"Inter","Noto Sans JP",sans-serif;font-feature-settings:"tnum" 1}
+.note{background:#000;color:#fff;padding:12px 60px;font-size:12px;line-height:18px}
+.note b{color:#7FB2F5;font-weight:500}
+.wrap{width:1320px;margin:0 auto;padding:44px 0 56px}
+h1{font-size:39px;line-height:49px;font-weight:300;letter-spacing:-0.9px;margin-bottom:10px}
+h1 b{font-weight:500}
+.lead{font-size:14px;line-height:23px;color:var(--ink2);max-width:980px;margin-bottom:34px}
+h2{font-size:25px;line-height:31px;font-weight:400;letter-spacing:-0.4px;margin-bottom:4px}
+.sub{font-size:12px;line-height:18px;color:var(--ink2);margin-bottom:16px}
+.sec{margin-bottom:38px}
+.bar{width:40px;height:2px;background:var(--ink);margin-bottom:14px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{border:1px solid var(--line);padding:10px 14px;text-align:left;vertical-align:top;line-height:21px}
+th{background:var(--wash);font-weight:500;color:var(--ink2);font-size:12px}
+td.k{width:120px;background:#FAFBFC;color:var(--ink2);font-weight:500}
+td.bad{color:var(--bad)}
+td.good{color:#1F8A4D}
+.mono{font-family:ui-monospace,Menlo,monospace;letter-spacing:0;font-size:12px}
+.sw{display:inline-block;width:12px;height:12px;border:1px solid rgba(0,0,0,.18);vertical-align:-2px;margin-right:5px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.box{border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.box.b{border-left:3px solid var(--bad)}
+.box.g{border-left:3px solid var(--acc)}
+.box h3{font-size:14px;font-weight:500;margin-bottom:6px}
+.box p{font-size:12.5px;line-height:21px;color:var(--ink2)}
+.note2{font-size:12px;line-height:20px;color:var(--ink2);margin-top:9px}
+ul{margin:0;padding-left:1.1em}
+li{font-size:13px;line-height:22px;color:var(--ink2);margin-bottom:3px}
+li b{color:var(--ink);font-weight:500}
+.spec{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.spec .c{padding:16px 18px;border-right:1px solid var(--line)}
+.spec .c:last-child{border-right:0}
+.spec .k{font-size:11px;color:var(--ink2);line-height:17px}
+.spec .v{font-size:20px;line-height:28px;font-weight:500;margin-top:2px}
+.spec .v small{font-size:12px;font-weight:400;color:var(--ink2);margin-left:3px}
+</style></head><body>
+
+<div class="note">TOPデザイン案の前に／<b>ご提示の playstation.com/ja-jp と、現在の gamekaitori-biyori.com の両方を、ブラウザの算出スタイル（computed style）で全要素スキャンして比べました。</b>以下は実際に適用されている値で、推測は含みません。</div>
+
+<div class="wrap">
+<h1>「機械的で洗練された清潔感」を、<b>数値に分解しました</b></h1>
+<p class="lead">PlayStationのサイトが「ちゃんとしている」と感じる理由は、色づかいよりも<b>数値の揃え方</b>にあります。両サイトの全要素のフォント・字間・ウエイト・角丸・色を機械的に集計したところ、差がはっきり出ました。</p>
+
+<div class="sec">
+<div class="bar"></div>
+<h2>実測の比較</h2>
+<p class="sub">数字は「その値が適用されていた要素の数」</p>
+<table>
+<tr><th style="width:120px"></th><th style="width:46%">現在の gamekaitori-biyori.com</th><th>playstation.com/ja-jp</th></tr>
+<tr><td class="k">本文サイズ</td>
+ <td class="bad">14px×155・12px×132 に加えて <b>14.4px / 15.2px / 17.6px / 13.6px が計150件</b>。行間も <span class="mono">20.5714px / 21.7143px</span> など端数</td>
+ <td class="good">14px×130・12px×48・16px×38・15px×31・20px×23。<b>すべて整数</b>。行間も 21 / 16 / 18 / 25px の整数</td></tr>
+<tr><td class="k">ウエイト</td>
+ <td class="bad"><b>700×158・800×46・900×33 ＝ 太字が237要素</b>。400は151要素</td>
+ <td class="good">400×161・500×93・300×36。<b>700はわずか7要素</b>（＝ほぼ太字を使わない）</td></tr>
+<tr><td class="k">字間</td>
+ <td class="bad"><span class="mono">normal（＝0）</span> が360要素</td>
+ <td class="good"><span class="mono">−0.2px</span> が<b>248要素</b>。全面的にわずかに詰めている</td></tr>
+<tr><td class="k">文字色</td>
+ <td class="bad"><span class="sw" style="background:#546E7A"></span><span class="mono">#546E7A</span> <span class="sw" style="background:#1A2A3A"></span><span class="mono">#1A2A3A</span> に加え、<b>文字そのものに緑</b> <span class="sw" style="background:#00E676"></span><span class="mono">#00E676</span>×51 <span class="sw" style="background:#00C853"></span><span class="mono">#00C853</span>×36 と橙 <span class="sw" style="background:#FF6D00"></span><span class="mono">#FF6D00</span>×30</td>
+ <td class="good"><span class="sw" style="background:#FFFFFF"></span>白×116 <span class="sw" style="background:#000000"></span>黒×69 <span class="sw" style="background:#1F1F1F"></span><span class="mono">#1F1F1F</span>×63 <span class="sw" style="background:#6B6B6B"></span><span class="mono">#6B6B6B</span>×43。<b>文字はほぼ無彩色</b>、色は<span class="sw" style="background:#0070CC"></span><span class="mono">#0070CC</span>のボタンだけ</td></tr>
+<tr><td class="k">角丸</td>
+ <td class="bad"><b><span class="mono">9999px（完全な丸）×80</span>・<span class="mono">50%（円）×35</span></b>＋12px×45・16px×39。<b>丸いものが115要素</b></td>
+ <td class="good">16px×87・8px×73・4px×44・32px×17。<b>4の倍々</b>で、丸は小さなアイコンだけ</td></tr>
+<tr><td class="k">地色</td>
+ <td class="bad"><span class="sw" style="background:#F5F7FA"></span><span class="mono">#F5F7FA</span>（薄い青灰）＋半透明の緑面 <span class="mono">rgba(0,230,118,.12)</span>×35</td>
+ <td class="good"><span class="sw" style="background:#FFFFFF"></span>白。暗い帯 <span class="sw" style="background:#0E1317"></span><span class="mono">#0E1317</span> と交互に敷く</td></tr>
+<tr><td class="k">コンテンツ幅</td>
+ <td class="bad">1052px / 1120px / 1116px / 922px と<b>ばらついている</b></td>
+ <td class="good"><b>1320px</b>に固定（画像だけ1440pxの全幅）</td></tr>
+</table>
+</div>
+
+<div class="sec">
+<div class="bar"></div>
+<h2>つまり「機械的で洗練された清潔感」の正体</h2>
+<div class="cols2">
+<div class="box b"><h3>いま崩しているもの（4点）</h3>
+<p><b>1. 太字が多すぎる。</b>237要素が700〜900。全部が強調されると、何も強調されていないのと同じで、読み手は優先順位を自分で探すことになります。<br>
+<b>2. 丸みが強すぎる。</b>完全な丸（9999px）が80要素。丸は「やわらかい・親しみやすい」記号なので、精密さとは逆方向に働きます。<br>
+<b>3. 文字そのものに色がついている。</b>緑と橙の文字が87要素。色は「押せる場所」を示す合図として取っておかないと、どこが操作なのか分からなくなります。<br>
+<b>4. サイズが端数。</b>14.4px・15.2px・17.6px・20.5714px など、相対指定の掛け算で出た端数が150件。1pxの端数が積み上がると、線がわずかに揃わない「手作り感」になります。</p></div>
+<div class="box g"><h3>G案で適用した値</h3>
+<p><b>書体</b>　本文14px／行21px／字間 <span class="mono">−0.2px</span>。ウエイトは <b>300・400・500</b> のみ（700は原則使わない）。サイズは12/13/14/15/20/25/31/39/52pxの整数スケール<br>
+<b>色</b>　白・<span class="mono">#1F1F1F</span>・<span class="mono">#6B6B6B</span>・暗面<span class="mono">#0E1317</span>・アクセント1色の<b>5つだけ</b>。文字に色は使わず、色はボタンとリンクだけ<br>
+<b>角丸</b>　<b>4 / 8 / 16 / 32px</b>。丸（完全な円）はボタンの形状のみ<br>
+<b>幅</b>　コンテンツ1320px固定／画像と暗い帯は1440pxの全幅<br>
+<b>数字</b>　金額だけ等幅数字（<span class="mono">tabular-nums</span>）にして、縦に並べたとき桁が揃うようにしています</p></div>
+</div>
+</div>
+
+<div class="sec">
+<div class="bar"></div>
+<h2>構造として借りたもの</h2>
+<p class="sub">PlayStationのトップは「1つの帯＝1つの役割」で縦に積む構成です。これをこのサイトの資産に当てはめました</p>
+<table>
+<tr><th style="width:230px">PlayStationの要素</th><th style="width:230px">G案での置き換え</th><th>理由</th></tr>
+<tr><td>全幅の暗いヒーロー＋黒20%のスクリム</td><td>暗いヒーロー＋右に「今週の最高値」カード</td><td>このサイトの売りは<b>毎週の実測データ</b>。それを最初の画面に数字で出す</td></tr>
+<tr><td>白帯の中の製品ラインナップ</td><td>実測日・調査店舗数・データ点数・更新頻度の4数値</td><td>「本当に毎週調べているのか」への回答を、文章ではなく数値で置く</td></tr>
+<tr><td><b>暗い帯のゲームタイル一覧（等間隔の格子）</b></td><td><b>今週の最高値タイル（12マス）</b></td><td>このサイトで最も「機械的」に見せられる場所。タイトル・金額・店名・前週比が同じ形で並ぶ</td></tr>
+<tr><td>横一列の周辺機器レール</td><td>本体相場レール（PS5・Switch 2 ほか）</td><td>機種は点数が少ないので格子ではなく横並びが合う</td></tr>
+<tr><td>白帯のサービス紹介</td><td>買取サービス比較の表</td><td>行の高さ・タグの形を全行で統一し、順位の色分けをやめる</td></tr>
+</table>
+<p class="note2">※ ゲームのパッケージ画像は権利の問題があるため、タイルには<b>画像を使わず金額を主役</b>にしています。結果として、PlayStationの「画像の格子」と同じ整列感を、権利リスクなしで出せています。本体画像は差し替え前提のグレー面です。</p>
+</div>
+
+<div class="sec" style="margin-bottom:28px">
+<div class="bar"></div>
+<h2>掲載している数値はすべて実データです</h2>
+<div class="spec">
+  <div class="c"><div class="k">最新の実測日</div><div class="v num">2026/09/16</div></div>
+  <div class="c"><div class="k">調査した店舗</div><div class="v num">4<small>社</small></div></div>
+  <div class="c"><div class="k">今週のデータ点数</div><div class="v num">41<small>件</small></div></div>
+  <div class="c"><div class="k">ソフト最高値</div><div class="v num">5,300<small>円 / 駿河屋</small></div></div>
+  <div class="c"><div class="k">本体最高値</div><div class="v num">60,000<small>円 / 駿河屋</small></div></div>
+</div>
+<p class="note2">モック内のタイトル・金額・店名・前週比は、すべて <span class="mono">data/price-history.csv</span> の2026年9月16日実測分から生成しています。架空の数字は入れていません。</p>
+</div>
+
+<div class="sec" style="margin-bottom:0">
+<div class="bar"></div>
+<h2>決めていただきたいこと</h2>
+<ul>
+<li><b>アクセント色。</b>別紙のとおり <span class="mono">#0F62D6</span>（青・PlayStationに近い精密さ）と <span class="mono">#0C7A52</span>（深緑・現行ブランドの継承）の2案を同じ画面で出しています</li>
+<li><b>キャラクターの扱い。</b>現在トップとレビュー各所に置いているキャラクターのイラスト・吹き出しコメントは、この方向では外すことになります（残すなら方向を変える必要があります）</li>
+<li><b>本体画像。</b>グレーの面にしている箇所に、実機の写真を入れるかどうか</li>
+</ul>
+<p class="note2">方向が決まったら、同じ数値でスマホ表示と下層ページ（ソフト相場・本体相場・レビュー）のモックを作ります。</p>
+</div>
+
+</div>
+</body></html>
