@@ -46,16 +46,52 @@ export default function ScrollMotion() {
       if (kids.length >= 2 && kids.length <= 24) groups.push(kids);
     });
 
+    // 表示にする = その要素が持っている属性のほうを 'in' にする。
+    // （data-rv-item を持つ要素に data-rv="in" を付けても、CSSの
+    //   [data-rv-item=""] が効いたままで永久に透明になる。2026-10-07の不具合）
+    const reveal = (el: Element) => {
+      const h = el as HTMLElement;
+      // 1つの要素が data-rv と data-rv-item の両方を持つことがある
+      // （.grid の直下に <section> がある場合など）。片方だけ 'in' にすると
+      // もう片方の「非表示」が残り続けて、永久に透明になる。必ず両方を外す。
+      if (h.hasAttribute('data-rv-item')) h.setAttribute('data-rv-item', 'in');
+      if (h.hasAttribute('data-rv')) h.setAttribute('data-rv', 'in');
+    };
+
     const io = new IntersectionObserver(
       (entries) => {
         for (const e of entries) {
           if (!e.isIntersecting) continue;
-          (e.target as HTMLElement).setAttribute('data-rv', 'in');
+          reveal(e.target);
           io.unobserve(e.target);
         }
       },
-      { rootMargin: '0px 0px -8% 0px', threshold: 0.04 }
+      { rootMargin: '0px 0px -5% 0px', threshold: 0 }
     );
+
+    // 画面の下端より上に来たものは、監視の取りこぼしに関係なく必ず表示する。
+    // 勢いよくスクロールすると IntersectionObserver が要素を拾い損ねることがあり、
+    // そのまま透明で残ってしまうため（2026-10-07の不具合の本体）。
+    let sweeping = false;
+    const sweep = () => {
+      sweeping = false;
+      const left = document.querySelectorAll('[data-rv=""],[data-rv-item=""]');
+      if (!left.length) return;
+      const vh = window.innerHeight;
+      left.forEach((el) => {
+        if (el.getBoundingClientRect().top < vh) reveal(el);
+      });
+    };
+    const onScrollSweep = () => {
+      if (sweeping) return;
+      sweeping = true;
+      requestAnimationFrame(sweep);
+    };
+    window.addEventListener('scroll', onScrollSweep, { passive: true });
+    window.addEventListener('resize', onScrollSweep, { passive: true });
+
+    // 最後の保険: 何があっても1.5秒後には、画面に入っているものを全部表示する
+    const failsafe = window.setTimeout(sweep, 1500);
 
     for (const el of targets) {
       el.setAttribute('data-rv', '');
@@ -79,7 +115,10 @@ export default function ScrollMotion() {
 
     return () => {
       io.disconnect();
+      window.clearTimeout(failsafe);
       window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('scroll', onScrollSweep);
+      window.removeEventListener('resize', onScrollSweep);
     };
   }, []);
 
