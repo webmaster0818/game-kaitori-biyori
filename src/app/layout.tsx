@@ -4,6 +4,7 @@ import { Zen_Kaku_Gothic_New } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollMotion from "@/components/ScrollMotion";
 // AI診断コンシェルジュは2026-08-18に撤去(8/5からのimp急落の第1容疑・GSC日次とデプロイ時刻一致)。復活時はKaitoriConcierge.tsxを再importする
 
 const zenKaku = Zen_Kaku_Gothic_New({
@@ -68,6 +69,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Analytics />
+        <ScrollMotion />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

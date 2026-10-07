@@ -602,3 +602,91 @@ body {
 .kw-cta img { display: inline; }
 .kw-cta-compact { padding: 14px 16px; margin: 18px 0; }
 .kw-cta-compact .kw-cta-main a { font-size: 13.5px; padding: 11px 16px; }
+
+
+/* ==========================================================================
+   スクロールの動き（2026-10-07）
+   非表示の初期状態は ScrollMotion.tsx がJSで付ける。
+   JSが動かない環境では下のセレクタが一致しないので、常に表示されたままになる。
+   動かすのは transform と opacity だけなのでレイアウトは動かない。
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+
+  /* --- セクションのフェードアップ --- */
+  [data-rv=""] {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+    will-change: opacity, transform;
+  }
+  [data-rv="in"] {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+                transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  /* --- カード・表の行を少しずつ遅らせて出す --- */
+  [data-rv-item=""] {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+  [data-rv-item="in"] {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) var(--rv-delay, 0ms),
+                transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) var(--rv-delay, 0ms);
+  }
+
+  /* --- ヒーローの入場 --- */
+  .hero-gradient[data-hero=""] > * {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  .hero-gradient[data-hero="in"] > * {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s,
+                transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s;
+  }
+  /* 背景のゲーム機はゆっくり寄っていく（止まるので酔わない） */
+  .hero-gradient[data-hero=""] {
+    background-size: auto, auto, 112% auto, auto;
+  }
+  .hero-gradient[data-hero="in"] {
+    background-size: auto, auto, 104% auto, auto;
+    transition: background-size 2.4s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  /* --- スクロールに連動して背景が少し動く（対応ブラウザのみ） --- */
+  @supports (animation-timeline: scroll()) {
+    .hero-gradient {
+      animation: hero-drift linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 90vh;
+    }
+    @keyframes hero-drift {
+      from { background-position: center 38%, center 38%, 50% 36%, center; }
+      to   { background-position: center 38%, center 38%, 50% 52%, center; }
+    }
+  }
+
+  /* --- ヘッダー: 少しスクロールしたら線を濃くする --- */
+  header {
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  header[data-scrolled] {
+    border-bottom-color: var(--color-border-strong);
+  }
+}
+
+/* 「動きを減らす」設定の人には何も起こらないようにする */
+@media (prefers-reduced-motion: reduce) {
+  [data-rv],
+  [data-rv-item],
+  .hero-gradient[data-hero] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
