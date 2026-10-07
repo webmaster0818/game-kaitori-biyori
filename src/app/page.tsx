@@ -295,7 +295,7 @@ export default function HomePage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((s) => (
               <div key={s.label} className="text-center">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-2 text-xs font-black" style={{ background: 'var(--color-deep-blue)', color: 'var(--color-accent)' }}>
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-full mb-2 text-xs font-black" style={{ background: 'var(--color-deep-blue)', color: '#FFFFFF' }}>
                   {s.icon}
                 </div>
                 <p className="text-2xl md:text-3xl font-extrabold" style={{ color: 'var(--color-electric-green)' }}>{s.value}</p>
