@@ -2,6 +2,7 @@ import Link from 'next/link';
 import AuthorBox from '@/components/AuthorBox'
 import { crossStorePrices, hardwarePrices, analyzeTitle, PRICE_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, type PriceAnalysis } from '@/data/prices';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import ConsoleBuild from '@/components/ConsoleBuild';
 
 const services = [
   {
@@ -208,6 +209,8 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+        {/* スマホ用: 背景にcoverで敷くと機体が切れるので、元の比率のまま帯として置く */}
+        <div className="hero-shot md:hidden" aria-hidden="true" />
       </section>
 
       {/* Conclusion: おすすめはどこ？直答 + 今週の実測最高値 */}
@@ -487,6 +490,8 @@ export default function HomePage() {
       </section>
 
       {/* Console Quick Links */}
+      <ConsoleBuild />
+
       <section className="py-12 md:py-16 bg-white" id="console">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
