@@ -721,11 +721,13 @@ body {
 .console-build-stage {
   position: sticky;
   top: 0;
-  height: 100vh;
-  height: 100svh;
+  /* 固定の高さ＋overflow:hidden にすると、中身が画面より高い端末で
+     見出しの上と絵の下が切り落とされる（iPhoneで発生）。
+     min-height にして、はみ出す場合は切らずに出す。 */
+  min-height: 100svh;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  padding-block: 32px;
 }
 /* 3Dステージ。前面の絵の後ろに同じシルエットを translateZ で重ね、
    親の rotateX/rotateY で立体として回す（WebGLは使わない）。 */
@@ -775,7 +777,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  .console-build { height: 230vh; }
+  /* スマホは画面が縦に短く、見出し＋線画＋リンクが1画面に収まらない。
+     貼り付け(sticky)をやめて、ふつうに縦に並べる。
+     スクロールで描かれる動きは位置から計算しているので、そのまま動く。 */
+  .console-build { height: auto; }
+  .console-build-stage {
+    position: static;
+    min-height: 0;
+    padding-block: 56px 64px;
+  }
   .console-build-scene {
     grid-template-areas:
       "sw sw"
