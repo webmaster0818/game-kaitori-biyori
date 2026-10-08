@@ -730,7 +730,7 @@ body {
 .console-build-svg {
   display: block;
   width: 100%;
-  max-width: 900px;
+  max-width: 1040px;
   margin: 0 auto;
   height: auto;
   color: var(--color-deep-blue);
