@@ -727,28 +727,63 @@ body {
   align-items: center;
   overflow: hidden;
 }
-.console-build-svg {
-  display: block;
-  width: 100%;
-  max-width: 1040px;
-  margin: 0 auto;
-  height: auto;
+/* 3Dステージ。前面の絵の後ろに同じシルエットを translateZ で重ね、
+   親の rotateX/rotateY で立体として回す（WebGLは使わない）。 */
+.console-build-scene {
+  perspective: 1600px;
+  perspective-origin: 50% 46%;
+  display: grid;
+  grid-template-areas: "sw ps pd";
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 5vw, 76px);
   color: var(--color-deep-blue);
 }
-.console-build-svg [data-part] {
+.cb-obj {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--rx, 13deg)) rotateY(var(--ry, -24deg));
+  will-change: transform;
+}
+.cb-sw { grid-area: sw; width: clamp(210px, 29vw, 380px); }
+.cb-ps { grid-area: ps; width: clamp(104px, 13.5vw, 176px); }
+.cb-pd { grid-area: pd; width: clamp(170px, 22vw, 290px); }
+
+.cb-layer { display: block; width: 100%; height: auto; }
+.cb-layer:not(.cb-front) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.console-build-scene [data-part] {
   transition: stroke-dashoffset 0.12s linear, opacity 0.12s linear;
 }
+
 @media (max-width: 768px) {
-  .console-build { height: 200vh; }
-  .console-build-svg { max-width: none; }
+  .console-build { height: 230vh; }
+  .console-build-scene {
+    grid-template-areas:
+      "sw sw"
+      "ps pd";
+    grid-template-columns: auto auto;
+    gap: 22px 18px;
+    perspective: 1100px;
+  }
+  .cb-sw { width: min(300px, 76vw); justify-self: center; }
+  .cb-ps { width: min(108px, 26vw); justify-self: end; }
+  .cb-pd { width: min(188px, 46vw); justify-self: start; }
 }
+
 /* 「動きを減らす」設定の人には、最初から完成した線画だけを出す */
 @media (prefers-reduced-motion: reduce) {
   .console-build { height: auto; }
   .console-build-stage { position: static; height: auto; padding: 56px 0; }
-  .console-build-svg [data-part] {
+  .console-build-scene [data-part] {
     stroke-dashoffset: 0 !important;
     opacity: 1 !important;
     transition: none !important;
   }
+  .cb-obj { transform: none; }
 }

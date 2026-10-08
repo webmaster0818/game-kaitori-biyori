@@ -162,8 +162,32 @@ const SWITCH: Step[][] = [
   ],
   // 10. スピーカー
   [
-    { d: dots(84, 212, 5, 6, 1.3), w: 0.7 },
-    { d: dots(152, 212, 5, 6, 1.3), w: 0.7 },
+    { d: dots(82, 212, 7, 5.5, 1.2), w: 0.6 },
+    { d: dots(148, 212, 7, 5.5, 1.2), w: 0.6 },
+  ],
+  // 11. 内側の輪郭（厚みの見え方）
+  [
+    { d: rect(4, 14, 54, 202, 26), w: 0.6 },
+    { d: rect(202, 14, 54, 202, 26), w: 0.6 },
+    { d: rect(66, 14, 128, 202), w: 0.6 },
+  ],
+  // 12. レール内側の SL / SR
+  [
+    { d: rect(56, 68, 5, 20, 2), w: 0.8 },
+    { d: rect(56, 148, 5, 20, 2), w: 0.8 },
+    { d: rect(199, 68, 5, 20, 2), w: 0.8 },
+    { d: rect(199, 148, 5, 20, 2), w: 0.8 },
+  ],
+  // 13. ストラップ用レール・ネジ・吸気口・IR窓
+  [
+    { d: 'M 3 34 V 196 M 257 34 V 196', w: 0.5 },
+    { d: circle(69, 17, 1.5), w: 0.5 },
+    { d: circle(191, 17, 1.5), w: 0.5 },
+    { d: circle(69, 213, 1.5), w: 0.5 },
+    { d: circle(191, 213, 1.5), w: 0.5 },
+    { d: slats(108, 214, 4, 9, 4.5), w: 0.5 },
+    { d: rect(223, 212, 12, 6, 2), w: 0.6 },
+    { d: circle(92, 6.5, 1.4), w: 0.5 },
   ],
 ];
 
@@ -217,18 +241,27 @@ const PS5: Step[][] = [
       d: hatchBetween(
         [[24, 10], [44, 70], [44, 240], [24, 302]],
         [[33, 15], [51, 72], [51, 238], [33, 297]],
-        30
+        44
       ),
-      w: 0.4,
+      w: 0.35,
     },
     {
       d: hatchBetween(
         [[146, 10], [126, 70], [126, 240], [146, 302]],
         [[137, 15], [119, 72], [119, 238], [137, 297]],
-        30
+        44
       ),
-      w: 0.4,
+      w: 0.35,
     },
+  ],
+  // 11. 上下の通気口・継ぎ目・端子・台座の内側
+  [
+    { d: slats(56, 17, 6, 16, 4), w: 0.45 },
+    { d: slats(56, 286, 6, 16, 4), w: 0.45 },
+    { d: 'M 50 70 H 120', w: 0.5 },
+    { d: rect(60, 262, 11, 4, 2), w: 0.6 },
+    { d: 'M 26 309 Q 85 319 144 309', w: 0.5 },
+    { d: 'M 54 163 H 116 M 54 168 H 116', w: 0.4 },
   ],
 ];
 
@@ -302,12 +335,48 @@ const PAD: Step[][] = [
       d: hatchBetween(
         [[179, 58], [187, 84], [185, 108], [173, 122]],
         [[167, 60], [175, 84], [173, 104], [163, 115]],
-        16
+        18
       ),
-      w: 0.4,
+      w: 0.35,
     },
   ],
+  // 9. L2/R2 の張り出し・マイク穴・内側の輪郭
+  [
+    { d: 'M 28 3 C 36 -5 58 -5 66 3', w: 0.7 },
+    { d: 'M 134 3 C 142 -5 164 -5 172 3', w: 0.7 },
+    { d: circle(100, 112, 1.5), w: 0.5 },
+    {
+      d:
+        'M 46 12 C 30 12 21 26 17 43 C 10 76 10 107 21 121 C 31 133 46 126 53 112 ' +
+        'L 147 112 C 154 126 169 133 179 121 C 190 107 190 76 183 43 C 179 26 170 12 154 12',
+      w: 0.5,
+    },
+    { d: rect(66, 22, 68, 24, 3), w: 0.5 },
+  ],
 ];
+
+/* ===== 奥行き（厚み）用のシルエット =====
+   前面のパスと同じ形を translateZ で後ろに重ね、CSSの3D変換で厚みを出す。
+   SVGを3Dに投影し直すのではなく、同じ絵を奥に並べてブラウザに回してもらう方式。 */
+const SWITCH_SIL: string[] = [
+  rect(62, 10, 136, 210),
+  rect(0, 10, 62, 210, 30),
+  rect(198, 10, 62, 210, 30),
+];
+const PS5_SIL: string[] = [
+  rect(50, 14, 70, 284),
+  'M 24 10 C 44 70, 44 240, 24 302',
+  'M 146 10 C 126 70, 126 240, 146 302',
+  'M 24 10 L 50 16 M 146 10 L 120 16 M 24 302 L 50 296 M 146 302 L 120 296',
+];
+const PAD_SIL: string[] = [
+  'M 44 8 C 26 8 16 24 12 42 C 4 76 4 110 16 126 C 28 140 46 132 54 116 ' +
+    'L 146 116 C 154 132 172 140 184 126 C 196 110 196 76 188 42 C 184 24 174 8 156 8 Z',
+];
+
+/** 奥行きの層数と間隔(px)。多いほど「塊」に見える */
+const DEPTH = 16;
+const DEPTH_GAP = 1.9;
 
 /** 各デバイスのステップに、全体の進捗 [from,to] を割り当てて1本ずつのパスに展開する */
 function expand(steps: Step[][], from: number, to: number) {
@@ -328,6 +397,21 @@ const PS5_PARTS = expand(PS5, 0.42, 0.76);
 const PAD_PARTS = expand(PAD, 0.76, 1.0);
 
 let key = 0;
+
+/** 奥行き層。前面が描き終わるのに合わせて、奥から手前へ順に現れる */
+function depthLayers(sil: string[], from: number, to: number) {
+  const out: { z: number; parts: { d: string; s: number; e: number; w: number }[] }[] = [];
+  for (let i = 1; i <= DEPTH; i++) {
+    const t = i / DEPTH;
+    const s0 = from + (to - from) * (0.45 + 0.5 * (1 - t));
+    out.push({
+      z: -i * DEPTH_GAP,
+      parts: sil.map((d) => ({ d, s: s0, e: Math.min(1, s0 + 0.035), w: 0.5 })),
+    });
+  }
+  return out;
+}
+
 const draw = (p: { d: string; s: number; e: number; w: number }) => (
   <path
     key={`p${key++}`}
@@ -341,8 +425,36 @@ const draw = (p: { d: string; s: number; e: number; w: number }) => (
   />
 );
 
+/* 1台ぶん。前面の絵の後ろに、同じシルエットを translateZ で何枚も重ねて厚みを出す。
+   親に perspective と rotate をかけると、重ねた層がそのまま立体として回る。 */
+function Obj({
+  area, vb, sil, parts, from, to, label,
+}: {
+  area: string; vb: string; sil: string[];
+  parts: { d: string; s: number; e: number; w: number }[];
+  from: number; to: number; label: string;
+}) {
+  return (
+    <div className={`cb-obj cb-${area}`}>
+      {depthLayers(sil, from, to).map((l) => (
+        <svg key={l.z} className="cb-layer" viewBox={vb} aria-hidden="true" style={{ transform: `translateZ(${l.z}px)` }}>
+          <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+            {l.parts.map(draw)}
+          </g>
+        </svg>
+      ))}
+      <svg className="cb-layer cb-front" viewBox={vb} role="img" aria-label={label}>
+        <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+          {parts.map(draw)}
+        </g>
+      </svg>
+    </div>
+  );
+}
+
 export default function ConsoleBuild() {
   const wrap = useRef<HTMLDivElement>(null);
+  const scene = useRef<HTMLDivElement>(null);
   const [narrow, setNarrow] = useState(false);
 
   useEffect(() => {
@@ -374,6 +486,11 @@ export default function ConsoleBuild() {
         node.style.strokeDashoffset = String(1 - t);
         node.style.opacity = t > 0 ? '1' : '0';
       }
+      // スクロールに合わせて立体を回す。振り幅は小さめ（酔わせない）
+      if (scene.current) {
+        scene.current.style.setProperty('--ry', `${(-24 + 44 * p).toFixed(2)}deg`);
+        scene.current.style.setProperty('--rx', `${(13 - 17 * p).toFixed(2)}deg`);
+      }
     };
 
     apply();
@@ -390,6 +507,8 @@ export default function ConsoleBuild() {
         node.style.strokeDashoffset = '0';
         node.style.opacity = '1';
       }
+      scene.current?.style.removeProperty('--ry');
+      scene.current?.style.removeProperty('--rx');
     };
   }, [narrow]);
 
@@ -406,25 +525,14 @@ export default function ConsoleBuild() {
             </p>
           </div>
 
-          <svg
-            className="console-build-svg"
-            viewBox={narrow ? '0 0 420 700' : '0 0 920 360'}
-            role="img"
-            aria-label="Nintendo Switch と PlayStation 5、DualSense コントローラーの線画"
-          >
-            <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-              {/* スマホでは横1列だと小さすぎるので、Switchを上・PS5とコントローラーを下に組み替える */}
-              <g transform={narrow ? 'translate(78,30) scale(1.02)' : 'translate(20,62)'}>
-                {SWITCH_PARTS.map(draw)}
-              </g>
-              <g transform={narrow ? 'translate(30,300) scale(1.08)' : 'translate(380,22)'}>
-                {PS5_PARTS.map(draw)}
-              </g>
-              <g transform={narrow ? 'translate(200,450) scale(1.06)' : 'translate(640,108)'}>
-                {PAD_PARTS.map(draw)}
-              </g>
-            </g>
-          </svg>
+          <div className="console-build-scene" ref={scene}>
+            <Obj area="sw" vb="-8 -20 276 250" sil={SWITCH_SIL} parts={SWITCH_PARTS} from={0.0} to={0.42}
+                 label="Nintendo Switch の線画" />
+            <Obj area="ps" vb="10 2 150 324" sil={PS5_SIL} parts={PS5_PARTS} from={0.42} to={0.76}
+                 label="PlayStation 5 の線画" />
+            <Obj area="pd" vb="-2 -6 204 146" sil={PAD_SIL} parts={PAD_PARTS} from={0.76} to={1.0}
+                 label="DualSense コントローラーの線画" />
+          </div>
 
           <p className="text-xs text-center mt-5" style={{ color: 'var(--color-text-light)' }}>
             <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>

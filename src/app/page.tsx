@@ -515,18 +515,10 @@ export default function HomePage() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-col md:flex-row gap-6">
-            <div className="flex-shrink-0 flex justify-center">
-              <img
-                src="/game-consoles.jpg"
-                alt="レトロゲームからモダンゲーム機まで"
-                className="rounded-lg"
-                width={280}
-                height={200}
-                style={{ objectFit: 'cover', border: '2px solid var(--color-border)' }}
-              />
-            </div>
-            <div className="glass-card p-6 flex-1">
+          {/* 2026-10-08: ドット絵のゲーム機画像を撤去（施主指示）。
+              画像内に「FAMIC COMCUNT」など実在しない崩れた文字と他社商標が入っていたため、差し替えではなく削除した。 */}
+          <div className="mt-8">
+            <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>ハード別の買取ポイント</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <div>
