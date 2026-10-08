@@ -89,25 +89,59 @@ const hatchDiagonal = (x: number, y: number, w: number, h: number, n: number, dx
 type Step = { d: string; w?: number };
 
 // ============ Nintendo Switch（ローカル 0..260 × 0..240）============
-const SWITCH: Step[][] = [
+/* スクロールの後半で Joy-Con が左右に外れるので、
+   「本体」「左Joy-Con」「右Joy-Con」を別のグループに分けてある。 */
+
+const SWITCH_BODY: Step[][] = [
   // 1. 本体の外形
   [{ d: rect(62, 10, 136, 210), w: 2.2 }],
-  // 2. Joy-Con 左右
-  [{ d: rect(0, 10, 62, 210, 30), w: 2.2 }],
-  [{ d: rect(198, 10, 62, 210, 30), w: 2.2 }],
-  // 3. 画面
+  // 2. 画面
   [
     { d: rect(72, 22, 116, 186, 3), w: 1.5 },
     { d: rect(78, 28, 104, 174, 2), w: 1.1 },
   ],
-  // 4. 画面の映り込み
+  // 3. 画面の映り込み
   [{ d: hatchDiagonal(86, 34, 22, 162, 7, 36), w: 0.4 }],
-  // 5. 左スティックと十字ボタン
+  // 4. 内側の輪郭・レール止め
+  [
+    { d: rect(66, 14, 128, 202), w: 0.6 },
+    { d: rect(55, 198, 9, 14, 2), w: 1 },
+    { d: rect(196, 198, 9, 14, 2), w: 1 },
+  ],
+  // 5. 上面のカードスロット・排気・ヘッドホン端子
+  [
+    { d: rect(168, 4, 26, 5, 2.5), w: 1 },
+    { d: rect(102, 4, 42, 5, 2.5), w: 1 },
+    { d: slats(107, 5, 3, 7, 5), w: 0.6 },
+    { d: circle(92, 6.5, 3), w: 1 },
+    { d: circle(92, 6.5, 1.4), w: 0.5 },
+  ],
+  // 6. 下面のUSB-C・吸気口・スピーカー・ネジ
+  [
+    { d: rect(120, 215, 20, 5, 2.5), w: 1 },
+    { d: slats(108, 214, 4, 9, 4.5), w: 0.5 },
+    { d: dots(82, 212, 7, 5.5, 1.2), w: 0.6 },
+    { d: dots(148, 212, 7, 5.5, 1.2), w: 0.6 },
+    { d: circle(69, 17, 1.5), w: 0.5 },
+    { d: circle(191, 17, 1.5), w: 0.5 },
+    { d: circle(69, 213, 1.5), w: 0.5 },
+    { d: circle(191, 213, 1.5), w: 0.5 },
+  ],
+];
+
+const SWITCH_L: Step[][] = [
+  // 外形と内側の輪郭
+  [
+    { d: rect(0, 10, 62, 210, 30), w: 2.2 },
+    { d: rect(4, 14, 54, 202, 26), w: 0.6 },
+  ],
+  // スティック
   [
     { d: circle(31, 52, 14), w: 1.4 },
     { d: circle(31, 52, 8.5), w: 1 },
     { d: ticks(31, 52, 14, 16.5, 12), w: 0.7 },
   ],
+  // 十字ボタン
   [
     { d: circle(31, 126, 6) },
     { d: circle(31, 126, 1.6), w: 0.8 },
@@ -118,7 +152,26 @@ const SWITCH: Step[][] = [
     { d: circle(31, 154, 6) },
     { d: circle(31, 154, 1.6), w: 0.8 },
   ],
-  // 6. 右の4ボタンとスティック
+  // −ボタン・キャプチャー・L/ZL・SL/SR・ストラップレール
+  [
+    { d: 'M 24 30 H 38' },
+    { d: rect(26, 163, 10, 10, 2) },
+    { d: circle(31, 168, 2.5), w: 0.8 },
+    { d: rect(4, -4, 54, 12, 6), w: 1.3 },
+    { d: rect(7, -13, 48, 10, 5), w: 1.1 },
+    { d: rect(56, 68, 5, 20, 2), w: 0.8 },
+    { d: rect(56, 148, 5, 20, 2), w: 0.8 },
+    { d: 'M 3 34 V 196', w: 0.5 },
+  ],
+];
+
+const SWITCH_R: Step[][] = [
+  // 外形と内側の輪郭
+  [
+    { d: rect(198, 10, 62, 210, 30), w: 2.2 },
+    { d: rect(202, 14, 54, 202, 26), w: 0.6 },
+  ],
+  // 4ボタン
   [
     { d: circle(229, 40, 6.5) },
     { d: circle(229, 40, 1.8), w: 0.8 },
@@ -129,65 +182,23 @@ const SWITCH: Step[][] = [
     { d: circle(229, 68, 6.5) },
     { d: circle(229, 68, 1.8), w: 0.8 },
   ],
+  // スティック
   [
     { d: circle(229, 142, 14), w: 1.4 },
     { d: circle(229, 142, 8.5), w: 1 },
     { d: ticks(229, 142, 14, 16.5, 12), w: 0.7 },
   ],
-  // 7. ＋/−・ホーム・キャプチャ
+  // ＋ボタン・ホーム・R/ZR・SL/SR・ストラップレール・IR窓
   [
-    { d: 'M 24 30 H 38' },
     { d: 'M 229 24 V 36 M 223 30 H 235' },
     { d: circle(229, 168, 5) },
     { d: circle(229, 168, 2), w: 0.8 },
-    { d: rect(26, 163, 10, 10, 2) },
-    { d: circle(31, 168, 2.5), w: 0.8 },
-  ],
-  // 8. L / ZL / R / ZR
-  [
-    { d: rect(4, -4, 54, 12, 6), w: 1.3 },
-    { d: rect(7, -13, 48, 10, 5), w: 1.1 },
     { d: rect(202, -4, 54, 12, 6), w: 1.3 },
     { d: rect(205, -13, 48, 10, 5), w: 1.1 },
-  ],
-  // 9. レール止め・カードスロット・排気・端子
-  [
-    { d: rect(55, 198, 9, 14, 2), w: 1 },
-    { d: rect(196, 198, 9, 14, 2), w: 1 },
-    { d: rect(168, 4, 26, 5, 2.5), w: 1 },
-    { d: rect(102, 4, 42, 5, 2.5), w: 1 },
-    { d: slats(107, 5, 3, 7, 5), w: 0.6 },
-    { d: circle(92, 6.5, 3), w: 1 },
-    { d: rect(120, 215, 20, 5, 2.5), w: 1 },
-  ],
-  // 10. スピーカー
-  [
-    { d: dots(82, 212, 7, 5.5, 1.2), w: 0.6 },
-    { d: dots(148, 212, 7, 5.5, 1.2), w: 0.6 },
-  ],
-  // 11. 内側の輪郭（厚みの見え方）
-  [
-    { d: rect(4, 14, 54, 202, 26), w: 0.6 },
-    { d: rect(202, 14, 54, 202, 26), w: 0.6 },
-    { d: rect(66, 14, 128, 202), w: 0.6 },
-  ],
-  // 12. レール内側の SL / SR
-  [
-    { d: rect(56, 68, 5, 20, 2), w: 0.8 },
-    { d: rect(56, 148, 5, 20, 2), w: 0.8 },
     { d: rect(199, 68, 5, 20, 2), w: 0.8 },
     { d: rect(199, 148, 5, 20, 2), w: 0.8 },
-  ],
-  // 13. ストラップ用レール・ネジ・吸気口・IR窓
-  [
-    { d: 'M 3 34 V 196 M 257 34 V 196', w: 0.5 },
-    { d: circle(69, 17, 1.5), w: 0.5 },
-    { d: circle(191, 17, 1.5), w: 0.5 },
-    { d: circle(69, 213, 1.5), w: 0.5 },
-    { d: circle(191, 213, 1.5), w: 0.5 },
-    { d: slats(108, 214, 4, 9, 4.5), w: 0.5 },
+    { d: 'M 257 34 V 196', w: 0.5 },
     { d: rect(223, 212, 12, 6, 2), w: 0.6 },
-    { d: circle(92, 6.5, 1.4), w: 0.5 },
   ],
 ];
 
@@ -358,11 +369,9 @@ const PAD: Step[][] = [
 /* ===== 奥行き（厚み）用のシルエット =====
    前面のパスと同じ形を translateZ で後ろに重ね、CSSの3D変換で厚みを出す。
    SVGを3Dに投影し直すのではなく、同じ絵を奥に並べてブラウザに回してもらう方式。 */
-const SWITCH_SIL: string[] = [
-  rect(62, 10, 136, 210),
-  rect(0, 10, 62, 210, 30),
-  rect(198, 10, 62, 210, 30),
-];
+const SWITCH_BODY_SIL: string[] = [rect(62, 10, 136, 210)];
+const SWITCH_L_SIL: string[] = [rect(0, 10, 62, 210, 30)];
+const SWITCH_R_SIL: string[] = [rect(198, 10, 62, 210, 30)];
 const PS5_SIL: string[] = [
   rect(50, 14, 70, 284),
   'M 24 10 C 44 70, 44 240, 24 302',
@@ -392,25 +401,13 @@ function expand(steps: Step[][], from: number, to: number) {
   return out;
 }
 
-const SWITCH_PARTS = expand(SWITCH, 0.0, 0.42);
+const SWITCH_BODY_PARTS = expand(SWITCH_BODY, 0.0, 0.18);
+const SWITCH_L_PARTS = expand(SWITCH_L, 0.18, 0.30);
+const SWITCH_R_PARTS = expand(SWITCH_R, 0.30, 0.42);
 const PS5_PARTS = expand(PS5, 0.42, 0.76);
 const PAD_PARTS = expand(PAD, 0.76, 1.0);
 
 let key = 0;
-
-/** 奥行き層。前面が描き終わるのに合わせて、奥から手前へ順に現れる */
-function depthLayers(sil: string[], from: number, to: number) {
-  const out: { z: number; parts: { d: string; s: number; e: number; w: number }[] }[] = [];
-  for (let i = 1; i <= DEPTH; i++) {
-    const t = i / DEPTH;
-    const s0 = from + (to - from) * (0.45 + 0.5 * (1 - t));
-    out.push({
-      z: -i * DEPTH_GAP,
-      parts: sil.map((d) => ({ d, s: s0, e: Math.min(1, s0 + 0.035), w: 0.5 })),
-    });
-  }
-  return out;
-}
 
 const draw = (p: { d: string; s: number; e: number; w: number }) => (
   <path
@@ -425,27 +422,45 @@ const draw = (p: { d: string; s: number; e: number; w: number }) => (
   />
 );
 
-/* 1台ぶん。前面の絵の後ろに、同じシルエットを translateZ で何枚も重ねて厚みを出す。
-   親に perspective と rotate をかけると、重ねた層がそのまま立体として回る。 */
-function Obj({
-  area, vb, sil, parts, from, to, label,
-}: {
-  area: string; vb: string; sil: string[];
+type Grp = {
+  key: string;
+  sil: string[];
   parts: { d: string; s: number; e: number; w: number }[];
-  from: number; to: number; label: string;
-}) {
+  /** その塊の線が出そろう進捗。奥行きの層はこれに合わせて現れる */
+  from: number;
+  to: number;
+};
+
+/* 1台ぶん。前面の絵の後ろに、同じシルエットを translateZ で何枚も重ねて厚みを出す。
+   親に perspective と rotate をかけると、重ねた層がそのまま立体として回る。
+   Joy-Con のように動く塊は key を分けてあり、CSS変数で位置をずらせる。 */
+function Obj({ area, vb, groups, label }: { area: string; vb: string; groups: Grp[]; label: string }) {
+  const layers = [];
+  for (let i = 1; i <= DEPTH; i++) layers.push(i);
   return (
     <div className={`cb-obj cb-${area}`}>
-      {depthLayers(sil, from, to).map((l) => (
-        <svg key={l.z} className="cb-layer" viewBox={vb} aria-hidden="true" style={{ transform: `translateZ(${l.z}px)` }}>
+      {layers.map((i) => (
+        <svg key={i} className="cb-layer" viewBox={vb} aria-hidden="true" style={{ transform: `translateZ(${-i * DEPTH_GAP}px)` }}>
           <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-            {l.parts.map(draw)}
+            {groups.map((g) => {
+              const t = i / DEPTH;
+              const s0 = g.from + (g.to - g.from) * (0.45 + 0.5 * (1 - t));
+              return (
+                <g key={g.key} className={`cb-g cb-g-${g.key}`}>
+                  {g.sil.map((d) => draw({ d, s: s0, e: Math.min(1, s0 + 0.035), w: 0.5 }))}
+                </g>
+              );
+            })}
           </g>
         </svg>
       ))}
       <svg className="cb-layer cb-front" viewBox={vb} role="img" aria-label={label}>
         <g fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-          {parts.map(draw)}
+          {groups.map((g) => (
+            <g key={g.key} className={`cb-g cb-g-${g.key}`}>
+              {g.parts.map(draw)}
+            </g>
+          ))}
         </g>
       </svg>
     </div>
@@ -490,6 +505,11 @@ export default function ConsoleBuild() {
       if (scene.current) {
         scene.current.style.setProperty('--ry', `${(-24 + 44 * p).toFixed(2)}deg`);
         scene.current.style.setProperty('--rx', `${(13 - 17 * p).toFixed(2)}deg`);
+        // 本体が描き終わったあと、Joy-Con が左右に外れる
+        const k = Math.min(1, Math.max(0, (p - 0.46) / 0.3));
+        const ease = k * k * (3 - 2 * k); // なめらかに始まってなめらかに止まる
+        scene.current.style.setProperty('--jx', (30 * ease).toFixed(2) + 'px');
+        scene.current.style.setProperty('--jz', (3 * ease).toFixed(2) + 'deg');
       }
     };
 
@@ -509,6 +529,8 @@ export default function ConsoleBuild() {
       }
       scene.current?.style.removeProperty('--ry');
       scene.current?.style.removeProperty('--rx');
+      scene.current?.style.removeProperty('--jx');
+      scene.current?.style.removeProperty('--jz');
     };
   }, [narrow]);
 
@@ -526,12 +548,28 @@ export default function ConsoleBuild() {
           </div>
 
           <div className="console-build-scene" ref={scene}>
-            <Obj area="sw" vb="-8 -20 276 250" sil={SWITCH_SIL} parts={SWITCH_PARTS} from={0.0} to={0.42}
-                 label="Nintendo Switch の線画" />
-            <Obj area="ps" vb="10 2 150 324" sil={PS5_SIL} parts={PS5_PARTS} from={0.42} to={0.76}
-                 label="PlayStation 5 の線画" />
-            <Obj area="pd" vb="-2 -6 204 146" sil={PAD_SIL} parts={PAD_PARTS} from={0.76} to={1.0}
-                 label="DualSense コントローラーの線画" />
+            <Obj
+              area="sw"
+              vb="-8 -20 276 250"
+              label="Nintendo Switch の線画"
+              groups={[
+                { key: 'body', sil: SWITCH_BODY_SIL, parts: SWITCH_BODY_PARTS, from: 0.0, to: 0.18 },
+                { key: 'jl', sil: SWITCH_L_SIL, parts: SWITCH_L_PARTS, from: 0.18, to: 0.3 },
+                { key: 'jr', sil: SWITCH_R_SIL, parts: SWITCH_R_PARTS, from: 0.3, to: 0.42 },
+              ]}
+            />
+            <Obj
+              area="ps"
+              vb="10 2 150 324"
+              label="PlayStation 5 の線画"
+              groups={[{ key: 'ps', sil: PS5_SIL, parts: PS5_PARTS, from: 0.42, to: 0.76 }]}
+            />
+            <Obj
+              area="pd"
+              vb="-2 -6 204 146"
+              label="DualSense コントローラーの線画"
+              groups={[{ key: 'pd', sil: PAD_SIL, parts: PAD_PARTS, from: 0.76, to: 1.0 }]}
+            />
           </div>
 
           <p className="text-xs text-center mt-5" style={{ color: 'var(--color-text-light)' }}>

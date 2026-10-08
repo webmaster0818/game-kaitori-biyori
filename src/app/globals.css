@@ -743,12 +743,25 @@ body {
 .cb-obj {
   position: relative;
   transform-style: preserve-3d;
-  transform: rotateX(var(--rx, 13deg)) rotateY(var(--ry, -24deg));
   will-change: transform;
 }
+/* 機体ごとに回る速さを変えて、奥行きの差を出す */
+.cb-sw { transform: rotateX(var(--rx, 13deg)) rotateY(var(--ry, -24deg)); }
+.cb-ps { transform: rotateX(calc(var(--rx, 13deg) * 0.7)) rotateY(calc(var(--ry, -24deg) * 1.4)); }
+.cb-pd {
+  transform: rotateX(calc(var(--rx, 13deg) * 1.3)) rotateY(calc(var(--ry, -24deg) * 0.55))
+             rotateZ(calc(var(--ry, -24deg) * 0.1));
+}
+
+/* Joy-Con は本体が描き終わったあと、左右に外れる */
+.cb-g { transition: transform 0.12s linear; }
+.cb-g-jl { transform: translateX(calc(var(--jx, 0px) * -1)) rotate(calc(var(--jz, 0deg) * -1)); transform-origin: 31px 115px; }
+.cb-g-jr { transform: translateX(var(--jx, 0px)) rotate(var(--jz, 0deg)); transform-origin: 229px 115px; }
 .cb-sw { grid-area: sw; width: clamp(210px, 29vw, 380px); }
-.cb-ps { grid-area: ps; width: clamp(104px, 13.5vw, 176px); }
-.cb-pd { grid-area: pd; width: clamp(170px, 22vw, 290px); }
+.cb-ps { grid-area: ps; }
+.cb-pd { grid-area: pd; }
+.cb-ps { width: clamp(104px, 13.5vw, 176px); }
+.cb-pd { width: clamp(170px, 22vw, 290px); }
 
 .cb-layer { display: block; width: 100%; height: auto; }
 .cb-layer:not(.cb-front) {
@@ -785,5 +798,5 @@ body {
     opacity: 1 !important;
     transition: none !important;
   }
-  .cb-obj { transform: none; }
+  .cb-obj, .cb-sw, .cb-ps, .cb-pd, .cb-g { transform: none !important; }
 }
