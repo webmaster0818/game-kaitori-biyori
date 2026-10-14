@@ -184,6 +184,25 @@ export default function FuruichiReviewPage() {
           </div>
         </section>
 
+        {/* 第三者サイトの口コミ状況 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判：第三者サイトに何が載っているか（出典つき）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead><tr><th className="text-left p-2">サイト</th><th className="p-2">評価</th><th className="p-2">件数</th><th className="text-left p-2">中身</th></tr></thead>
+              <tbody>
+                <tr><td className="p-2">ウリドキ（古本市場）</td><td className="p-2 text-center">4.0</td><td className="p-2 text-center">4件</td><td className="p-2">投稿は2017年12月〜2019年12月。分類は古本3件・CD/DVD 1件で、<strong>ゲームの買取についての口コミは0件</strong></td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://uridoki.net/shops/3352/reviews" target="_blank" rel="noopener" className="underline">ウリドキ 古本市場の口コミ</a>（2026年10月14日取得）。点数・件数は投稿により変わります。</p>
+            <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
+              第三者サイトで読める古本市場の口コミは少なく、新しいものもありません。ゲームの買取に限った評判は、口コミからは判断しにくいのが現状です。
+              そのため当サイトでは、口コミの点数ではなく、上の「手数料」「宅配買取の条件」など<strong>公式に書かれている条件</strong>で判断することをおすすめしています。
+              店頭で売る場合は、減額があったときに「どの点で何円下がったか」をその場で確認しておくと、ほかの店と比べやすくなります。
+            </p>
+          </div>
+        </section>
+
         {/* FAQ */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />よくある質問</h2>
