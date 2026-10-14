@@ -23,6 +23,7 @@ export function generateMetadata(): Metadata {
     description: `大乱闘スマッシュブラザーズ SPECIALの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}店舗間の価格差と高く売るコツも、実測データだけで解説します。`,
     keywords: ['スマブラSP 買取', 'スマブラ 買取価格', '大乱闘スマッシュブラザーズ SPECIAL 買取', 'スマブラ 売る'],
     openGraph: {
+    images: ['/og.png'],
       title: `スマブラSPの買取価格はいくら？【${MONTH}】`,
       description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週実測して比較。',
       type: 'article',

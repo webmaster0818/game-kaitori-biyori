@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'PS5/Switch/Xbox用コントローラーの買取相場をプラットフォーム別に一覧表で掲載。限定カラープレミア、箱なしの影響、クリーニング方法、おすすめ買取店まで徹底解説。',
   keywords: ['コントローラー 買取', 'Joy-Con 買取', 'DualSense 買取', 'Xbox コントローラー 売る'],
   openGraph: {
+    images: ['/og.png'],
     title: 'ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】',
     description: 'ゲームコントローラーのプラットフォーム別買取相場を徹底比較。',
     type: 'article',

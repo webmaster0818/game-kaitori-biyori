@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     'Nintendo Switch 2本体の買取価格相場を2026年6月に調査。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時判断まで徹底解説します。',
   keywords: ['Switch2 買取', 'スイッチ2 買取価格', 'Switch 2 買取相場', 'Switch2 マリオカートセット 買取', 'Switch 売り時'],
   openGraph: {
+    images: ['/og.png'],
     title: 'Switch2の買取価格相場【2026年6月】値上げ後のモデル別相場と旧型の売り時',
     description: 'Switch2本体のモデル別買取相場（2026年6月調査）と定価値上げの影響、旧型Switchの売り時を解説。',
     type: 'article',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     'ゲーム買取びよりへの掲載をご希望の買取サービス事業者さま向けのお問い合わせ窓口です。掲載のご相談、掲載内容の修正、取材・提携のご相談を承っています。',
   alternates: { canonical: 'https://gamekaitori-biyori.com/contact/' },
   openGraph: {
+    images: ['/og.png'],
     title: '掲載・提携のお問い合わせ | ゲーム買取びより',
     description: '掲載をご希望の買取サービス事業者さま向けのお問い合わせ窓口です。',
     type: 'website',

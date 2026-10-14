@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を徹底比較。スイッチ本体を高く売るコツ5つ、Joy-ConやProコントローラーの買取情報、初期化手順まで完全解説。',
   keywords: ['Switch 買取', 'ニンテンドースイッチ 売る', 'Switch 買取相場', 'Switch Lite 買取', 'Switch OLED 買取'],
   openGraph: {
+    images: ['/og.png'],
     title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
     description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツを徹底解説。',
     type: 'article',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'PS5通常版・デジタルエディション・PS5 Proの買取相場とおすすめ買取サービス3社を比較。プレステ5を高く売るコツ、コントローラー・PS VR2の買取、初期化手順まで完全解説。',
   keywords: ['PS5 買取', 'プレステ5 売る', 'PS5 買取相場', 'PS5 デジタルエディション 買取', 'PS5 Pro 買取'],
   openGraph: {
+    images: ['/og.png'],
     title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
     description: 'PS5通常版・デジタルエディション・PS5 Proの買取相場と高く売るコツを解説。',
     type: 'article',

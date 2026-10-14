@@ -577,7 +577,7 @@ export default function HomePage() {
             <p className="text-sm font-bold" style={{ color: 'var(--color-accent-orange)' }}>ミクがあなたにぴったりの売り方をナビします！</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link href="/method/takuhai/" className="glass-card p-6 text-center card-hover block">
+            <Link href="/method/online/" className="glass-card p-6 text-center card-hover block">
               <div className="diag-icon mx-auto mb-3">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="22" height="14" rx="2"/><path d="M1 10h22"/><path d="M8 6V2h8v4"/></svg>
               </div>
@@ -585,7 +585,7 @@ export default function HomePage() {
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>宅配買取がおすすめ。送料無料・ダンボール無料のサービスも。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">宅配買取ガイドへ</span>
             </Link>
-            <Link href="/method/tenpo/" className="glass-card p-6 text-center card-hover block">
+            <Link href="/method/shop/" className="glass-card p-6 text-center card-hover block">
               <div className="diag-icon mx-auto mb-3">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Steam Deckの買取相場を2026年6月12日に調査。6月1日の定価値上げ（OLED 512GB 137,980円）とLCDモデル生産終了で買取価格は上昇局面。新品はOLED 512GBで11万円超の実例も。モデル別価格・初期化手順・売り方まで解説します。',
   keywords: ['Steam Deck 買取 相場', 'Steam Deck 売る', 'スチームデック 買取', 'Steam Deck 買取価格'],
   openGraph: {
+    images: ['/og.png'],
     title: 'Steam Deckの買取相場【2026年6月】値上げ・LCD生産終了で高騰中｜モデル別価格と売り方',
     description: 'Steam Deck LCD/OLEDモデル別の買取相場を比較。',
     type: 'article',

@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'ゲーム買取びよりの記事制作ポリシー。ユーザーファースト、正確且つ最新な情報発信、中立性、分かりやすさを軸にしたコンテンツ制作方針と、4ステップの記事制作フロー、買取サービス選びの評価基準を公開しています。',
   openGraph: {
+    images: ['/og.png'],
     title: '記事制作ポリシー | ゲーム買取びより',
     description: 'ゲーム買取びよりのコンテンツ制作方針・記事制作フロー・評価基準を掲載。',
     type: 'article',

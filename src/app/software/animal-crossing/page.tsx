@@ -23,6 +23,7 @@ export function generateMetadata(): Metadata {
     description: `あつまれ どうぶつの森の買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}Switch 2 Editionとの価格差や高く売るコツも、実測データだけで解説します。`,
     keywords: ['あつ森 買取', 'あつまれどうぶつの森 買取価格', 'あつ森 売る', 'どうぶつの森 買取相場'],
     openGraph: {
+    images: ['/og.png'],
       title: `あつ森の買取価格はいくら？【${MONTH}】`,
       description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週実測して比較。',
       type: 'article',

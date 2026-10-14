@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'FF7リバース・FF16・FFピクセルリマスター等の買取相場を一覧表で掲載。プラットフォーム別比較、限定版プレミア情報、値崩れしにくいタイトルの特徴まで徹底解説。',
   keywords: ['FF ファイナルファンタジー 買取', 'FF7リバース 買取', 'FF16 買取相場', 'FF 売る'],
   openGraph: {
+    images: ['/og.png'],
     title: 'ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】',
     description: 'FFシリーズ全タイトルの買取相場をプラットフォーム別に徹底比較。',
     type: 'article',

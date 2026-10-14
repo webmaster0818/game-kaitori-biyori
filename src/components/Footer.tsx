@@ -15,7 +15,7 @@ const footerSections = [
       { label: 'ランキング', href: '/#ranking' },
       { label: 'ハード別買取', href: '/#console' },
       { label: '売り方ガイド', href: '/#how-to-sell' },
-      { label: 'よくある質問', href: '/#faq' },
+      { label: 'よくある質問', href: '/faq/' },
     ],
   },
   {

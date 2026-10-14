@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'PS4・PS4 Slim・PS4 Proの買取相場とおすすめ買取サービス3社を比較。古いPS4でもまだ売れる理由、高く売るコツ、初期化手順までプレステ4を売る前に知っておきたい情報を完全解説。',
   keywords: ['PS4 買取', 'プレステ4 売る いくら', 'PS4 買取相場', 'PS4 Pro 買取', 'PS4 Slim 買取'],
   openGraph: {
+    images: ['/og.png'],
     title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる！【2026年相場】',
     description: 'PS4・PS4 Slim・PS4 Proの買取相場と古くても売れる理由を解説。',
     type: 'article',

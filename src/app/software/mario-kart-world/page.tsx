@@ -23,6 +23,7 @@ export function generateMetadata(): Metadata {
     description: `マリオカート ワールドの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}Switch2本体セットとの査定の違いや高く売るコツも、実測データだけで解説します。`,
     keywords: ['マリオカート ワールド 買取', 'マリカ8 買取価格', 'マリオカート 売る', 'マリオカート8 買取相場'],
     openGraph: {
+    images: ['/og.png'],
       title: `マリオカート ワールドの買取価格はいくら？【${MONTH}】`,
       description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週実測して比較。',
       type: 'article',

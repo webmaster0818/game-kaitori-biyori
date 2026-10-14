@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'ゲーム買取びよりにおける個人情報の取得・利用・管理・第三者提供、Cookieの利用方針、Microsoft Clarityの使用等についてのプライバシーポリシーを掲載しています。',
   openGraph: {
+    images: ['/og.png'],
     title: 'プライバシーポリシー | ゲーム買取びより',
     description: 'ゲーム買取びよりの個人情報保護方針・Cookie利用についてのご案内。',
     type: 'article',

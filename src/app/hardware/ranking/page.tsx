@@ -7,9 +7,10 @@ import { hardwarePrices, analyzeTitle, STORE_LABELS, HARDWARE_SURVEY_DATE } from
 export const metadata: Metadata = {
   title: 'ゲーム機本体の買取価格ランキング【毎週実測】Switch2・PS5はどこが高い？',
   description:
-    'ゲーム機本体(Nintendo Switch 2・Switch有機EL・旧型Switch・Switch Lite・PS5 Slim/旧型)の買取価格を、ブックオフ・ゲオ・駿河屋・レトログの公式公表値で毎週実測し、最高値順のランキングで比較。同じ本体でも店によって数千円の差がつく実例と、どこに売れば一番高いかが一目でわかります。',
+    'ゲーム機本体(Nintendo Switch 2・Switch有機EL・旧型Switch・Switch Lite・PS5 Slim/旧型)の買取価格を、ブックオフ・ゲオ・駿河屋・レトログの公式公表値で毎週実測し、最高値順のランキングで比較。',
   keywords: ['ゲーム機 買取 ランキング', '本体 買取 どこが高い', 'Switch2 買取 比較', 'PS5 買取 比較', 'ゲーム機本体 買取価格'],
   openGraph: {
+    images: ['/og.png'],
     title: 'ゲーム機本体の買取価格ランキング【毎週実測】Switch2・PS5はどこが高い？',
     description: '本体の公式買取価格を毎週実測し、最高値順のランキングで比較。',
     type: 'article',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     '3DS・3DS LL・New 3DS・2DS・DS・DS Liteの買取相場とおすすめ買取サービス3社を比較。生産終了ハードの今後の価値、SDカードのデータ消去方法、高く売るコツを徹底解説。',
   keywords: ['3DS 買取', 'DS 売る', '3DS 買取相場', 'New 3DS 買取', 'DS Lite 買取'],
   openGraph: {
+    images: ['/og.png'],
     title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】',
     description: '3DS/DS各モデルの買取相場と生産終了ハードの値上がりの可能性を解説。',
     type: 'article',

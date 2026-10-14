@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Xbox Series X・Series S・Xbox Oneの買取相場とおすすめ買取サービス3社を比較。日本でのXbox需要の実態、Game Passの注意点、高く売るコツを徹底解説。',
   keywords: ['Xbox 買取', 'Xbox Series X 買取', 'Xbox Series S 買取', 'Xbox One 買取', 'Xbox 売る'],
   openGraph: {
+    images: ['/og.png'],
     title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
     description: 'Xbox Series X/S・Xbox Oneの買取相場とXbox需要の実態を解説。',
     type: 'article',

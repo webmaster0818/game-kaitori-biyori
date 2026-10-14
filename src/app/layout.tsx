@@ -33,7 +33,10 @@ export const metadata: Metadata = {
     "PS5 買取",
     "レトロゲーム 買取",
   ],
+  metadataBase: new URL("https://gamekaitori-biyori.com"),
+  alternates: { canonical: "./" },
   openGraph: {
+    images: ['/og.png'],
     title: "ゲーム買取おすすめはどこ？比較ランキング【2026年9月】｜ゲーム買取びより",
     description:
       "毎週実測の買取価格DBで「今どこが一番高いか」を確認しながら、用途別にゲーム買取10社を比較。実質手取りシミュレーターつき。",

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   description:
     'ゲーム買取びよりの運営者情報と編集方針。買取価格は各社公式サイトの一次情報を調査日付き・出典付きで掲載し、月次で定点更新しています。情報収集の方法・更新体制・記事の作り方を透明性をもって公開します。',
   openGraph: {
+    images: ['/og.png'],
     title: '運営者情報・編集方針｜ゲーム買取びより',
     description: 'ゲーム買取びよりの運営者情報・編集方針・データ収集方法を公開。',
     type: 'article',

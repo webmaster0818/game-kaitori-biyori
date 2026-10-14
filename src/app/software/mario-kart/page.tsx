@@ -23,6 +23,7 @@ export function generateMetadata(): Metadata {
     description: `マリオカート8 デラックスの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}コース追加パス同梱版との価格差や高く売るコツも、実測データだけで解説します。`,
     keywords: ['マリオカート8 デラックス 買取', 'マリカ8 買取価格', 'マリオカート 売る', 'マリオカート8 買取相場'],
     openGraph: {
+    images: ['/og.png'],
       title: `マリオカート8 デラックスの買取価格はいくら？【${MONTH}】`,
       description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週実測して比較。',
       type: 'article',

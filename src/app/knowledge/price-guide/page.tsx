@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'ゲーム機・ソフトの買取相場をハード別・ソフト別に一覧表で徹底解説。Switch・PS5・PS4・3DS・レトロゲームの買取価格目安、相場が変動する5つの要因、相場の調べ方まで完全網羅。',
   keywords: ['ゲーム買取 相場', 'ゲーム いくらで売れる', 'ゲーム機 買取価格', 'Switch 買取相場'],
   openGraph: {
+    images: ['/og.png'],
     title: 'ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】',
     description: 'ゲーム機・ソフトの買取相場をハード別・ソフト別に一覧表で徹底解説。',
     type: 'article',

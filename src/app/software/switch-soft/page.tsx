@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'Nintendo Switchソフトの買取相場と人気タイトル10本の価格目安を徹底解説。ゼルダ・マリオ・ポケモンなど高く売れるソフトの特徴、新作を早めに売るべき理由、おすすめ買取サービス3社比較まで完全網羅。',
   keywords: ['Switchソフト 買取', '任天堂 ソフト 売る', 'Switch ソフト 買取相場', 'ニンテンドースイッチ ソフト 売る'],
   openGraph: {
+    images: ['/og.png'],
     title: 'Switchソフト買取おすすめ3選｜任天堂ソフトを高く売るコツ【2026年】',
     description: 'Switchソフトの買取相場と人気タイトル10本の価格目安を徹底解説。',
     type: 'article',

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     'ゲーム買取前に必須のデータ削除・初期化方法をSwitch・PS5・PS4・Xbox・3DSの機種別にステップバイステップで解説。個人情報保護の重要性、セーブデータのバックアップ方法、削除しないリスクまで完全網羅。',
   keywords: ['ゲーム 買取前 データ削除', 'ゲーム 初期化', 'Switch 初期化 方法', 'PS5 データ消去', '買取前 やること'],
   openGraph: {
+    images: ['/og.png'],
     title: 'ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド',
     description: 'Switch・PS5・PS4・Xbox・3DSの初期化手順をステップバイステップで解説。',
     type: 'article',

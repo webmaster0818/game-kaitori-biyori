@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description:
     'ゲーム買取びよりの利用規約です。本サイトをご利用になるすべてのお客様に適用される規約を全20条にわたり定めています。',
   openGraph: {
+    images: ['/og.png'],
     title: '利用規約 | ゲーム買取びより',
     description: 'ゲーム買取びよりの利用規約を掲載しています。',
     type: 'article',
