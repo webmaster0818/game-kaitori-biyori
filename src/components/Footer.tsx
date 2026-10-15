@@ -5,6 +5,8 @@ const footerSections = [
     title: 'サービス比較',
     links: [
       { label: 'ヒカカク！', href: '/review/hikakaku/' },
+      { label: '買取ワールド', href: '/review/kaitori-world/' },
+      { label: '古本市場（ふるいち）', href: '/review/furuichi/' },
       { label: '買取ウリエル', href: '/review/uriel/' },
       { label: 'ティファナ', href: '/review/tifana/' },
     ],

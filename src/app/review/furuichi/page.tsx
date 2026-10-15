@@ -6,13 +6,13 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 import FuruichiCta from '@/components/FuruichiCta';
 
 export const metadata: Metadata = {
-  title: '古本市場（ふるいち）のゲーム買取の評判・口コミは？【2026年8月】店頭＋宅配買取の条件を検証',
+  title: '古本市場（ふるいち）のゲーム買取の評判・口コミは？【2026年10月】店頭＋宅配買取の条件を検証',
   description:
     '古本市場（ふるいち）のゲーム買取を検証。運営は東証スタンダード上場の株式会社テイツー（埼玉県公安委員会 古物商許可 第431100002846号）。店頭でその場で現金化できる強みに加え、宅配も「ふるいち宅配買取」が稼働中（2026年8月4日確認）。',
   keywords: ['古本市場 買取', 'ふるいち 買取', 'ふるいち ゲーム 買取', 'ふるいち 宅配買取', '古本市場 評判', 'テイツー 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: '古本市場（ふるいち）のゲーム買取の評判・口コミは？【2026年8月】店頭＋宅配買取の条件を検証',
+    title: '古本市場（ふるいち）のゲーム買取の評判・口コミは？【2026年10月】店頭＋宅配買取の条件を検証',
     description: '古本市場（ふるいち）のゲーム買取を、上場運営テイツーの公式情報で検証。店頭買取の強みと、稼働中の「ふるいち宅配買取」の条件（査定額3,000円以上で送料無料）・注意点を解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -191,12 +191,13 @@ export default function FuruichiReviewPage() {
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <thead><tr><th className="text-left p-2">サイト</th><th className="p-2">評価</th><th className="p-2">件数</th><th className="text-left p-2">中身</th></tr></thead>
               <tbody>
+                <tr><td className="p-2">みん評（ふるいちオンライン）</td><td className="p-2 text-center">2.84</td><td className="p-2 text-center">118件</td><td className="p-2">2026年6月30日に終了した旧宅配「ふるいちオンライン」名義のページ。みん評自身の要約では<strong>低評価は店舗買取についてのものが多い</strong>とされています（検索結果の表示で確認。ページ本体は当サイトの環境から閲覧できませんでした）</td></tr>
                 <tr><td className="p-2">ウリドキ（古本市場）</td><td className="p-2 text-center">4.0</td><td className="p-2 text-center">4件</td><td className="p-2">投稿は2017年12月〜2019年12月。分類は古本3件・CD/DVD 1件で、<strong>ゲームの買取についての口コミは0件</strong></td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://uridoki.net/shops/3352/reviews" target="_blank" rel="noopener" className="underline">ウリドキ 古本市場の口コミ</a>（2026年10月14日取得）。点数・件数は投稿により変わります。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://minhyo.jp/furuichionline" target="_blank" rel="nofollow noopener" className="underline">みん評 ふるいちオンライン</a>（2026年10月15日・検索結果の表示）、<a href="https://uridoki.net/shops/3352/reviews" target="_blank" rel="noopener" className="underline">ウリドキ 古本市場の口コミ</a>（2026年10月14日取得）。点数・件数は投稿により変わります。</p>
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
-              第三者サイトで読める古本市場の口コミは少なく、新しいものもありません。ゲームの買取に限った評判は、口コミからは判断しにくいのが現状です。
+              口コミの件数が多いのはみん評（118件）で、評価は2.84と厳しめです。ウリドキは4件と少なく、ゲームの買取に限った口コミはありません。ゲームの買取に限った評判は、口コミからは判断しにくいのが現状です。
               そのため当サイトでは、口コミの点数ではなく、上の「手数料」「宅配買取の条件」など<strong>公式に書かれている条件</strong>で判断することをおすすめしています。
               店頭で売る場合は、減額があったときに「どの点で何円下がったか」をその場で確認しておくと、ほかの店と比べやすくなります。
             </p>
