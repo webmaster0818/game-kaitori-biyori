@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ヒカカク！の評判・口コミは怪しい？【2026年7月】一括査定のしつこい連絡・デメリットを徹底検証',
+  title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布で検証【2026年10月】しつこい連絡・デメリット',
   description:
     'ヒカカク！のゲーム一括査定の評判・口コミを徹底検証。「怪しい」「連絡がしつこい」と言われる理由の実態、最大20社一括査定の仕組み、ヒカカク自体は買取しない点、メリット・デメリットを整理。あわせて当サイトが定期的に実測する買取価格DBで、どこが今一番高いかも比較できます（2026年6月確認）。',
   keywords: ['ヒカカク 評判', 'ヒカカク 口コミ', 'ヒカカク 怪しい', 'ヒカカク ゲーム買取', 'ゲーム 一括査定', 'ゲーム買取 比較'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ヒカカク！の評判・口コミは怪しい？【2026年7月】一括査定のデメリットを徹底検証',
+    title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布で検証【2026年10月】',
     description: 'ヒカカク！の評判・口コミと「怪しい・連絡がしつこい」の実態を検証。最大20社一括査定の仕組みとデメリットを解説。',
     type: 'article',
     locale: 'ja_JP',
@@ -187,8 +187,21 @@ export default function HikakakuReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向（営業電話の実態も）</h2>
           <div className="glass-card p-6">
             <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
-              ヒカカク!公式掲載の総合評価は<strong>3.4点（5点満点）</strong>で、悪い評価が約32.5%（2026年6月18日閲覧）。「最大20社に一括依頼する」仕組み上、<strong>複数業者から営業電話が集中しやすい</strong>のが最大の注意点です（公式の口コミページ自体が主要な課題として明記）。
+              ヒカカク!公式のクチコミページでは、総合評価<strong>3.4点（5点満点）・1,083件</strong>、「悪い・ひどい・買取が安い」というクチコミが<strong>32.5%</strong>です（2026年10月15日閲覧）。星5と星1に分かれる<strong>二極化</strong>が特徴で、「最大20社に一括依頼する」仕組み上、<strong>複数業者から営業電話が集中しやすい</strong>のが最大の注意点です。
             </p>
+            <div className="overflow-x-auto mb-4">
+              <table className="comparison-table text-sm">
+                <thead><tr><th>評価</th><th>件数</th><th>割合</th></tr></thead>
+                <tbody>
+                  <tr><td>★5</td><td>425件</td><td>39.2%</td></tr>
+                  <tr><td>★4</td><td>200件</td><td>18.5%</td></tr>
+                  <tr><td>★3</td><td>106件</td><td>9.8%</td></tr>
+                  <tr><td>★2</td><td>86件</td><td>7.9%</td></tr>
+                  <tr><td>★1</td><td>266件</td><td>24.6%</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs mb-4" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/hikakaku_reviews/" target="_blank" rel="nofollow noopener" className="underline">ヒカカク!公式 クチコミページ</a>の星別件数（2026年10月15日閲覧・割合は当サイトが件数から計算）。最新の投稿は2026年3月19日です。第三者の口コミサイト「みん評」では平均2.73（7件・カテゴリ平均と同じ）と表示されています（検索結果の表示で確認。ページ本体は当サイトの環境から閲覧できませんでした）。</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
@@ -196,6 +209,7 @@ export default function HikakakuReviewPage() {
                   <li>・一度の入力で複数社の査定を比較でき、高い店を探しやすい</li>
                   <li>・完全無料で、査定のみの利用も可能</li>
                   <li>・買取相場や業者の口コミを調べられる</li>
+                  <li>・業者の対応が丁寧・親切だった（公式クチコミで多い声）</li>
                 </ul>
               </div>
               <div>
@@ -204,10 +218,12 @@ export default function HikakakuReviewPage() {
                   <li>・<strong>複数業者からの営業電話が集中しやすい</strong></li>
                   <li>・表示価格は参考値で、本査定と差が出ることがある</li>
                   <li>・電話番号の入力が必須</li>
+                  <li>・「値段が付かない」「チャットの提示額と本査定が違いすぎる」「返信がない業者がいる」（公式クチコミの低評価で多い声）</li>
+                  <li>・一度出した査定依頼を取り消せない・サイトが使いにくいという指摘</li>
                 </ul>
               </div>
             </div>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>営業電話が苦手な方は、申込時に「連絡はメール希望」と明記するのが有効です（強引に電話する業者もいるとの指摘あり）。出典：ヒカカク!口コミページ（2026年6月18日閲覧）。当サイトでは体験談の創作は行っていません。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>営業電話が苦手な方は、申込時に「連絡はメール希望」と明記するのが有効です（強引に電話する業者もいるとの指摘あり）。出典：ヒカカク!公式クチコミページ（2026年10月15日閲覧・表示分の口コミを当サイトが要約）。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 
