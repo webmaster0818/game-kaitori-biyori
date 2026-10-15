@@ -436,7 +436,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-heading">
-              <span className="section-heading-bar" />ゲーム機本体の買取相場【2026年9月】
+              <span className="section-heading-bar" />ゲーム機本体の買取相場（2026年4月時点の参考）
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
               主要ゲーム機の最新買取相場をまとめました。実際の買取額はサービスや状態により異なります。
@@ -463,7 +463,6 @@ export default function HomePage() {
                   { name: 'Xbox Series X', price: '25,000〜35,000円' },
                   { name: '3DS LL', price: '5,000〜10,000円' },
                   { name: 'ゲームボーイアドバンスSP', price: '5,000〜15,000円' },
-                  { name: 'Switch 2（予約受付中）', price: '発売前 ※2026年6月発売予定' },
                 ].map((item) => (
                   <tr key={item.name}>
                     <td className="font-bold">{item.name}</td>
@@ -483,7 +482,7 @@ export default function HomePage() {
           <div className="glass-card p-5 mt-6">
             <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-accent-orange)' }}>Switch 2発売による買取相場への影響</h3>
             <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-              2026年6月のSwitch 2発売に伴い、旧型Switchの買取相場は下落傾向にあります。売却を検討中の方は早めの査定をおすすめします。
+              2025年6月のSwitch 2発売以降、旧型Switchの買取相場は下落傾向にあります。Switch 2を含む本体の最新の実測価格は<Link href="/hardware/ranking/" className="underline">ゲーム機本体の買取価格ランキング</Link>で確認できます。売却を検討中の方は早めの査定をおすすめします。
             </p>
           </div>
         </div>
