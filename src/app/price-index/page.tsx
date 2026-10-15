@@ -8,14 +8,14 @@ import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較',
+  title: 'ゲーム買取価格インデックス【公式価格を実測】今どこが一番高い？店舗横断の実測比較',
   description:
-    'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週調査し、人気ゲームソフトを店舗横断で比較。同じソフトでも店で1,000円以上差がつく実測データを掲載。売る前に「今どこが一番高いか」が一目でわかります。',
+    'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に調査し、人気ゲームソフトを店舗横断で比較。同じソフトでも店で1,000円以上差がつく実測データを掲載。売る前に「今どこが一番高いか」が一目でわかります。',
   keywords: ['ゲーム 買取価格', 'ゲームソフト 買取 相場', 'ゲーム 買取 比較', '高く売れるゲームソフト', 'ゲーム 買取 どこが高い'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム買取価格インデックス【毎週更新】今どこが一番高い？',
-    description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週調査し店舗横断で比較。',
+    title: 'ゲーム買取価格インデックス【公式価格を実測】今どこが一番高い？',
+    description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に調査し店舗横断で比較。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -30,17 +30,17 @@ const fallers = moves.filter((m) => m.delta < 0);
 export default function PriceIndexPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取価格インデックス【毎週更新】今どこが一番高い？店舗横断の実測比較", "datePublished": "2026-06-20", "dateModified": PRICE_SURVEY_DATE, "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取価格インデックス【公式価格を実測】今どこが一番高い？店舗横断の実測比較", "datePublished": "2026-06-20", "dateModified": PRICE_SURVEY_DATE, "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ゲーム買取価格インデックス' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'var(--color-accent-soft-strong)', color: 'var(--color-accent)' }}>毎週更新・実測データ</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'var(--color-accent-soft-strong)', color: 'var(--color-accent)' }}>定期実測データ</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゲーム買取価格インデックス</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ブックオフ・ゲオ・駿河屋が公式に公開している買取価格を<strong>毎週調査</strong>し、人気ソフトを店舗横断で比較。「売る前に、今どこが一番高いか」が一目でわかります。同じソフトでも店によって差がつくのが中古ゲーム買取の実態です。
+            ブックオフ・ゲオ・駿河屋が公式に公開している買取価格を<strong>定期的に調査</strong>し、人気ソフトを店舗横断で比較。「売る前に、今どこが一番高いか」が一目でわかります。同じソフトでも店によって差がつくのが中古ゲーム買取の実態です。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終調査日: {PRICE_SURVEY_DATE}（各社公式買取ページ）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>各社公式の買取価格を定期的に実測（最終実測日: {PRICE_SURVEY_DATE}）</p>
         </div>
       </section>
 
@@ -48,21 +48,21 @@ export default function PriceIndexPage() {
         {topGap && (
           <div className="glass-card p-5 mb-10">
             <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-              💡 今週の注目: <strong>「{topGap.title}」は店によって最大 {topGap.gap.toLocaleString()}円の差</strong>。今いちばん高いのは{topGap.best.price.toLocaleString()}円の店舗です。下の比較表で各ソフトの最高値店をチェックしましょう。
+              💡 最新の注目: <strong>「{topGap.title}」は店によって最大 {topGap.gap.toLocaleString()}円の差</strong>。今いちばん高いのは{topGap.best.price.toLocaleString()}円の店舗です。下の比較表で各ソフトの最高値店をチェックしましょう。
             </p>
           </div>
         )}
 
-        {/* 今週の値動き（先週比） */}
+        {/* 前回実測からの値動き（前回比） */}
         {PRICE_PREV_SURVEY_DATE && moves.length > 0 && (
           <section className="mb-12">
-            <h2 className="section-heading mb-6"><span className="section-heading-bar" />今週の値動き（先週比）</h2>
+            <h2 className="section-heading mb-6"><span className="section-heading-bar" />前回実測からの値動き（前回比）</h2>
             <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
               前回調査（{PRICE_PREV_SURVEY_DATE}）から今回（{PRICE_SURVEY_DATE}）で買取価格が動いたタイトルです。<strong>上がっているうちに売る</strong>のが基本戦略です。
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="glass-card p-5">
-                <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent)' }}>📈 高騰（先週比プラス）</h3>
+                <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent)' }}>📈 高騰（前回比プラス）</h3>
                 {risers.length > 0 ? (
                   <ul className="space-y-2">
                     {risers.map((m) => (
@@ -71,10 +71,10 @@ export default function PriceIndexPage() {
                       </li>
                     ))}
                   </ul>
-                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今週は上昇したタイトルはありませんでした。</p>}
+                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今回は上昇したタイトルはありませんでした。</p>}
               </div>
               <div className="glass-card p-5">
-                <h3 className="font-bold mb-3" style={{ color: '#F87171' }}>📉 急落（先週比マイナス）</h3>
+                <h3 className="font-bold mb-3" style={{ color: '#F87171' }}>📉 急落（前回比マイナス）</h3>
                 {fallers.length > 0 ? (
                   <ul className="space-y-2">
                     {fallers.map((m) => (
@@ -83,15 +83,15 @@ export default function PriceIndexPage() {
                       </li>
                     ))}
                   </ul>
-                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今週は下落したタイトルはありませんでした。</p>}
+                ) : <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>今回は下落したタイトルはありませんでした。</p>}
               </div>
             </div>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※ブックオフ・ゲオの公式買取価格の先週比。駿河屋は今回自動取得できなかったため先週比の対象外です。価格は完品想定の参考値で変動します。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※ブックオフ・ゲオ・駿河屋の公式買取価格の前回比（前回{PRICE_PREV_SURVEY_DATE}→今回{PRICE_SURVEY_DATE}）。どちらかの調査で掲載がなかった店は対象外です。価格は完品想定の参考値で変動します。</p>
           </section>
         )}
 
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />価格推移グラフ（週次実測）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />価格推移グラフ（定期実測）</h2>
           <PriceTrendChart />
         </section>
 
@@ -117,16 +117,16 @@ export default function PriceIndexPage() {
 
         {/* ゲーム機本体の実測価格（v5 S1・2026-07-04開始） */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム機本体の店舗横断 買取価格（週次実測）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム機本体の店舗横断 買取価格（定期実測）</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
-            Switch→Switch 2の世代交代期に合わせて、<strong>本体の買取価格も週次実測を開始しました</strong>（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査）。完品（箱・付属品あり・正常動作）前提の参考価格です。
+            Switch→Switch 2の世代交代期に合わせて、<strong>本体の買取価格も定期実測を開始しました</strong>（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査）。完品（箱・付属品あり・正常動作）前提の参考価格です。
           </p>
           <PriceMatrix list={hardwarePrices} />
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
             ※ゲオは店頭参考買取価格（傷・汚れが目立たず付属品欠品なしの場合）。レトログはレトロゲーム特化のため現行機は他店より大幅に低めです。PS5旧型（CFI-1000〜1200）の通常品はゲオが価格を公表していません。状態・店舗・時期により変動するため、売却前に各公式でご確認ください。
           </p>
           <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-            Switch 2はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万とほぼ横並び。旧型Switch・有機ELの売却を検討中の方は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch2時代の旧型の売り時解説</Link>もどうぞ。
+            Switch 2はブックオフ3.5万・ゲオ3.5万・駿河屋3.8万（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}実測）。旧型Switch・有機ELの売却を検討中の方は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch2時代の旧型の売り時解説</Link>もどうぞ。
           </p>
         </section>
 
@@ -136,7 +136,7 @@ export default function PriceIndexPage() {
           <div className="space-y-4">
             <div className="glass-card p-5"><h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>1. 売りたいソフトの「最高値の店」を確認</h3><p className="text-sm" style={{ color: 'var(--color-text-light)' }}>マトリクスで◎が付いている店が、そのソフトで現在いちばん高い店です。同じソフトでも店で数百〜1,000円以上変わります。</p></div>
             <div className="glass-card p-5"><h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>2. 複数本まとめるなら「実質手取り」で判断</h3><p className="text-sm" style={{ color: 'var(--color-text-light)' }}>送料無料の条件・振込手数料・梱包材まで含めた手取りで比べると逆転することもあります。<Link href="/compare/mercari-vs-kaitori/" className="text-petrol" style={{ color: 'var(--color-electric-green)' }}>メルカリとの比較</Link>もあわせてどうぞ。</p></div>
-            <div className="glass-card p-5"><h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>3. 売り時を逃さない</h3><p className="text-sm" style={{ color: 'var(--color-text-light)' }}>新作は発売直後ほど高く、その後は下落します。当サイトは毎週価格を更新しているので、売る直前に最新の数字を確認してください。</p></div>
+            <div className="glass-card p-5"><h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>3. 売り時を逃さない</h3><p className="text-sm" style={{ color: 'var(--color-text-light)' }}>新作は発売直後ほど高く、その後は下落します。当サイトは定期的に価格を実測・更新しているので、売る直前に最新の数字を確認してください。</p></div>
           </div>
         </section>
 

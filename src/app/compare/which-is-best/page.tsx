@@ -5,13 +5,13 @@ import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】毎週実測の価格で比較',
+  title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】公式価格の実測で比較',
   description:
     'ゲーム買取はどこがいい？高く売りたい・早く売りたい・レトロ・箱なしジャンク・まとめ売り・宅配・店舗で即現金・フリマと迷う、の用途別に最適な売り先を提示。送料・返送料・キャンセル・査定期間・古物商番号を主要サービスで横断比較（各社公式・確認日つき）。どこで売るか迷ったら本ハブで決められます。',
   keywords: ['ゲーム買取 どこがいい', 'ゲーム買取 おすすめ', 'ゲームを売るならどこがいい', 'ゲーム買取 どこで売る', 'ゲーム買取 比較', 'ゲーム買取 用途別'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】毎週実測の価格で比較',
+    title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】公式価格の実測で比較',
     description: '高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較。用途別に最適な売り先を提示し、送料/返送料/キャンセル/査定期間/古物商を横断比較。',
     type: 'article',
     locale: 'ja_JP',
@@ -40,7 +40,7 @@ const useCases: UseCase[] = [
       { name: '駿河屋', reviewPath: '/review/surugaya/', why: 'ネット通販の相場データに基づく査定で、レトロ・限定版・希少品の評価が高い傾向。ただし条件未達だと送料が発生し返送料は自己負担のため、手取りは事前に確認を（2026年6月18日時点）。' },
       { name: 'ゲーム王国', reviewPath: '/review/game-oukoku/', why: '現行機（Switch 2/PS5等）からレトロまでゲーム専門の宅配買取。初回査定額10%UP特典あり（1人1回限り）。送料・査定料・振込手数料無料（2026年6月12日確認）。' },
     ],
-    toolLink: { href: '/price-index/', label: '今週のゲーム買取価格を確認する' },
+    toolLink: { href: '/price-index/', label: '最新のゲーム買取価格を確認する' },
   },
   {
     title: '早く売りたい',
@@ -210,7 +210,7 @@ const comparisonTable = [
 ];
 
 const tools = [
-  { href: '/price-index/', title: '今週の買取価格（価格インデックス）', desc: '主要ソフト・本体の最新買取価格の目安を毎週更新。売り時の判断に。' },
+  { href: '/price-index/', title: '最新の買取価格（価格インデックス）', desc: '主要ソフト・本体の最新買取価格の目安を定期的に実測・更新。売り時の判断に。' },
   { href: '/compare/mercari-vs-kaitori/', title: 'メルカリ vs 買取 実質手取りシミュ', desc: '手数料・送料を差し引いた実質手取りで、フリマと業者を比較。' },
   { href: '/condition-guide/', title: '状態別買取マップ（condition-guide）', desc: '箱なし・傷あり・ジャンクが「いくらで・どこで売れるか」を状態別に整理。' },
 ];
@@ -245,7 +245,7 @@ const faqs = [
 export default function WhichIsBestPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取はどこがいい？用途別おすすめ比較【2026年】", "datePublished": "2026-06-27", "dateModified": "2026-06-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取はどこがいい？用途別おすすめ比較【2026年】", "datePublished": "2026-06-27", "dateModified": "2026-06-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'ゲーム買取はどこがいい？用途別おすすめ比較' }]} />
 
       {/* Hero */}
@@ -261,7 +261,7 @@ export default function WhichIsBestPage() {
           <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年7月19日</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/price-index/" className="btn-primary py-2.5 px-6">
-              今週の買取価格を確認する
+              最新の買取価格を確認する
             </Link>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function WhichIsBestPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold text-lg mb-3" style={{ color: 'var(--color-deep-blue)' }}>先に結論：迷ったらこの3択</h2>
             <ul className="text-sm leading-relaxed space-y-2" style={{ color: 'var(--color-text-light)' }}>
-              <li>・<strong>1円でも高く売りたい</strong> → 店ごとに価格が毎週動きます。<Link href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>今週の実測価格比較（2026年7月19日更新）</Link>で「今どこが高いか」を確認してから売るのが最短です</li>
+              <li>・<strong>1円でも高く売りたい</strong> → 店ごとに価格が毎週動きます。<Link href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>最新の実測価格比較</Link>で「今どこが高いか」を確認してから売るのが最短です</li>
               <li>・<strong>宅配でまとめて手軽に</strong> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>カイトリワールド</Link>（いずれも公式確認済みの条件）</li>
               <li>・<strong>今日中に現金化したい</strong> → 全国900店舗超の<Link href="/review/bookoff/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
             </ul>
@@ -419,14 +419,14 @@ export default function WhichIsBestPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            迷ったら<span style={{ color: 'var(--color-electric-green)' }}>今週の買取価格</span>から確認
+            迷ったら<span style={{ color: 'var(--color-electric-green)' }}>最新の買取価格</span>から確認
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
             相場の目安をつかんでから、用途に合った売り先を選べば失敗しにくくなります。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/price-index/" className="btn-primary py-3 px-8">
-              今週の買取価格を見る
+              最新の買取価格を見る
             </Link>
           </div>
         </section>

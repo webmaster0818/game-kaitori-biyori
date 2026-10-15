@@ -43,14 +43,14 @@ const faqs = [
   { q: '送料は無料ですか？条件はありますか？', a: '公式のガイドラインでは、査定合計金額が2,000円以上の場合は送料無料です。2,000円未満の場合は1箱につき500円が査定額から差し引かれる扱いとなっているため、少量だけ送ると実質的な負担が生じることがあります。まとめて送るほど条件を満たしやすくなります（2026年7月時点の公式記載）。' },
   { q: '査定に納得できなかったら返してもらえますか？費用はかかりますか？', a: '承認前であればキャンセルが可能です。ただし、値段が付かない品や少額品を返送する場合は返送の送料負担が生じるケースがあり、また受取拒否・長期保管切れの場合はキャンセル料が発生すると公式に記載されています。金銭リスクを避けたい場合は、返送料まで完全無料の他社（買取王子など）と比較検討するのも一つの方法です。' },
   { q: '振込手数料はかかりますか？', a: '現在の公式トップページでは「振込＆査定手数料も無料」と明記されています。過去の一部情報では振込手数料が有料と紹介されていたケースもありますが、2026年7月時点の公式表記は無料です。料金は改定される場合があるため、申込前に公式サイトで最新の条件をご確認ください。' },
-  { q: 'ゲームソフトやゲーム機はどのくらいの値段が付きますか？', a: '個別タイトルの固定価格表は公開されておらず、送る前の「お試し査定」で目安額を確認する形です。買取価格は時期や在庫状況で変動します。ゲームを少しでも高く売りたい場合は、当サイトの毎週実測の買取価格インデックスで専門店の価格と比べてから判断するのがおすすめです。' },
+  { q: 'ゲームソフトやゲーム機はどのくらいの値段が付きますか？', a: '個別タイトルの固定価格表は公開されておらず、送る前の「お試し査定」で目安額を確認する形です。買取価格は時期や在庫状況で変動します。ゲームを少しでも高く売りたい場合は、当サイトの公式価格を実測した買取価格インデックスで専門店の価格と比べてから判断するのがおすすめです。' },
   { q: '箱や付属品がなくても買取してもらえますか？', a: '一般に宅配買取では、箱・説明書・付属品がなくても買取対象になりますが、揃っている方が査定額は高くなります。特にゲーム機本体は付属品の有無が査定額に影響しやすいため、可能な範囲で揃えて送るのがおすすめです。詳細な可否は公式のガイドラインをご確認ください。' },
 ];
 
 export default function BooksupplyReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックサプライの評判・口コミは悪い？ゲーム宅配買取の手数料・実態を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックサプライの評判・口コミは悪い？ゲーム宅配買取の手数料・実態を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ブックサプライ' }]} />
 
@@ -83,7 +83,7 @@ export default function BooksupplyReviewPage() {
               ブックサプライは株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号・2000年設立）が運営する宅配買取サービスです。査定料・振込手数料・ダンボールが無料で、Switch・PS5などのゲーム機・ソフトも本やCD・DVDとまとめて売れます。「悪い・怪しい」と検索されるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ただし<strong>送料無料は査定合計2,000円以上が条件</strong>で、少量だと1箱500円が差し引かれる点、<strong>値段が付かない品の返送には送料負担が生じる場合がある</strong>点は事前に押さえておきましょう。ゲーム単体を1点でも高く売りたい用途より、まとめ処分に向くサービスです。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで完全無料の宅配買取（買取王子）と比較する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を試算する</Link>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高いか価格を確認する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで完全無料の宅配買取（買取王子）と比較する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を試算する</Link>
             </p>
           </div>
         </section>
@@ -236,7 +236,7 @@ export default function BooksupplyReviewPage() {
               </ul>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の買取価格インデックス</Link>で専門店の価格と比較してから判断するのがおすすめです。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店の価格と比較してから判断するのがおすすめです。</p>
         </section>
 
         {/* FAQ */}

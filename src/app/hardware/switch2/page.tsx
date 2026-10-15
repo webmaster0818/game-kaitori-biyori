@@ -105,7 +105,7 @@ const faqs = [
 export default function Switch2Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Switch 2 売り時ガイド' }]} />
 
       {/* Hero */}
@@ -370,9 +370,9 @@ export default function Switch2Page() {
             </Link>
           </div>
         </section>
-              {/* 本体実測価格（毎週更新・2026-07-04開始） */}
+              {/* 本体実測価格（定期実測・2026-07-04開始） */}
       <section className="mb-12">
-        <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch2本体の店舗別 買取価格【週次実測】</h2>
+        <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch2本体の店舗別 買取価格【定期実測】</h2>
         <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>当サイトが各社公式買取ページで実測した本体の参考買取価格です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提）。最新の全機種比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>へ。</p>
         <PriceMatrix list={hardwarePrices.filter((h) => h.title.includes('Switch'))} />
       </section>

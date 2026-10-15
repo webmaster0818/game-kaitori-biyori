@@ -5,14 +5,14 @@ import AuthorBox from '@/components/AuthorBox';
 import { hardwarePrices, analyzeTitle, STORE_LABELS, HARDWARE_SURVEY_DATE } from '@/data/prices';
 
 export const metadata: Metadata = {
-  title: 'ゲーム機本体の買取価格ランキング【毎週実測】Switch2・PS5はどこが高い？',
+  title: 'ゲーム機本体の買取価格ランキング【公式価格の実測比較】Switch2・PS5はどこが高い？',
   description:
-    'ゲーム機本体(Nintendo Switch 2・Switch有機EL・旧型Switch・Switch Lite・PS5 Slim/旧型)の買取価格を、ブックオフ・ゲオ・駿河屋・レトログの公式公表値で毎週実測し、最高値順のランキングで比較。',
+    'ゲーム機本体(Nintendo Switch 2・Switch有機EL・旧型Switch・Switch Lite・PS5 Slim/旧型)の買取価格を、ブックオフ・ゲオ・駿河屋・レトログの公式公表値で定期実測し、最高値順のランキングで比較。',
   keywords: ['ゲーム機 買取 ランキング', '本体 買取 どこが高い', 'Switch2 買取 比較', 'PS5 買取 比較', 'ゲーム機本体 買取価格'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム機本体の買取価格ランキング【毎週実測】Switch2・PS5はどこが高い？',
-    description: '本体の公式買取価格を毎週実測し、最高値順のランキングで比較。',
+    title: 'ゲーム機本体の買取価格ランキング【公式価格の実測比較】Switch2・PS5はどこが高い？',
+    description: '本体の公式買取価格を定期実測し、最高値順のランキングで比較。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -39,7 +39,7 @@ export default function HardwareRankingPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム機本体の買取価格ランキング【毎週実測】Switch2・PS5はどこが高い？", "datePublished": "2026-09-01", "dateModified": HARDWARE_SURVEY_DATE, "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム機本体の買取価格ランキング【公式価格の実測比較】Switch2・PS5はどこが高い？", "datePublished": "2026-09-01", "dateModified": HARDWARE_SURVEY_DATE, "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '本体別', href: '/' }, { name: '本体買取価格ランキング' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -49,9 +49,9 @@ export default function HardwareRankingPage() {
             ゲーム機本体の買取価格ランキング
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ブックオフ・ゲオ・駿河屋・レトログが公式に公表している本体の買取価格を毎週実測し、<strong>4社の中で最も高い価格</strong>の順に並べたランキングです。同じ本体でも店によって数千円の差がつくため、売り先の比較が一目でできます。
+            ブックオフ・ゲオ・駿河屋・レトログが公式に公表している本体の買取価格を定期実測し、<strong>4社の中で最も高い価格</strong>の順に並べたランキングです。同じ本体でも店によって数千円の差がつくため、売り先の比較が一目でできます。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: {HARDWARE_SURVEY_DATE}（各社公式買取ページ・毎週更新）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>価格調査日: {HARDWARE_SURVEY_DATE}（各社公式買取ページで実測）</p>
         </div>
       </section>
 
@@ -114,7 +114,7 @@ export default function HardwareRankingPage() {
             </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが一番高い？</p>
             </Link>
           </div>
         </section>

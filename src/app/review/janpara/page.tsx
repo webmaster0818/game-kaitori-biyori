@@ -43,7 +43,7 @@ const faqs = [
 export default function JanparaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'じゃんぱら' }]} />
 
       {/* Hero */}
@@ -76,7 +76,7 @@ export default function JanparaReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：状態の良い「本体」を売る店。ソフトは他店へ</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              じゃんぱらは<strong>ゲーム機本体の売却に特化して使うべき店</strong>です。当サイト実測ではSwitch 2未使用 上限47,000円・PS5未使用46,000円等が公開されており（2026年7月7日）、店頭なら平均60分で現金化、<strong>毎週火曜は中古5%アップ（店頭限定）</strong>も狙えます。一方、査定は「完品・無傷」基準で細かく、外箱・保証書の欠品も減額対象。ソフトの価格掲載は確認できないため、ソフトはゲオ・ブックオフ等の公表価格と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の価格インデックス</Link>で比較し、本体だけをじゃんぱらと同グループの<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>で見比べるのが最適解です。
+              じゃんぱらは<strong>ゲーム機本体の売却に特化して使うべき店</strong>です。当サイト実測ではSwitch 2未使用 上限47,000円・PS5未使用46,000円等が公開されており（2026年7月7日）、店頭なら平均60分で現金化、<strong>毎週火曜は中古5%アップ（店頭限定）</strong>も狙えます。一方、査定は「完品・無傷」基準で細かく、外箱・保証書の欠品も減額対象。ソフトの価格掲載は確認できないため、ソフトはゲオ・ブックオフ等の公表価格と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で比較し、本体だけをじゃんぱらと同グループの<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>で見比べるのが最適解です。
             </p>
           </div>
         </section>

@@ -44,7 +44,7 @@ const faqs = [
 export default function BookoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ブックオフ' }]} />
 
       {/* Hero */}
@@ -76,10 +76,10 @@ export default function BookoffReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「近くで今すぐ・まとめて処分」に強い最大手。ただし査定は相場次第</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ブックオフは全国900店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります。「安いのでは？」と不安な方は、送る前に当サイトが<strong>毎週実測している買取価格DB</strong>で今の相場と他店の価格を確認してから決めるのが安全です。
+              ブックオフは全国900店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります。「安いのでは？」と不安な方は、送る前に当サイトが<strong>定期的に実測している買取価格DB</strong>で今の相場と他店の価格を確認してから決めるのが安全です。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高い？ゲーム買取価格DB（実測）で確認する</Link>／<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週の買取価格インデックスを見る</Link>
+              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高い？ゲーム買取価格DB（実測）で確認する</Link>／<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>最新の買取価格インデックスを見る</Link>
             </p>
           </div>
         </section>

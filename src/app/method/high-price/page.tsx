@@ -51,7 +51,7 @@ const faqs = [
 export default function HighPricePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームを高く売る10のコツ｜高価買取のテクニック完全版【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームを高く売る10のコツ｜高価買取のテクニック完全版【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '売り方', href: '/' }, { name: '高く売るコツ' }]} />
 
       {/* Hero */}
@@ -188,7 +188,7 @@ export default function HighPricePage() {
               </Link>
               <Link href="/price-index/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが一番高い？</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが一番高い？</p>
               </Link>
               <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>

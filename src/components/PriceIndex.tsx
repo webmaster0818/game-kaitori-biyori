@@ -94,13 +94,13 @@ export function SeriesPriceTable({ keyword, heading }: { keyword: string; headin
 export function PriceFreshnessNote() {
   return (
     <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-      出典：ブックオフ「ゲームの高価買取情報」（店頭参考価格）、ゲオ・駿河屋の各公式買取ページ（宅配/通信買取の参考価格）。<strong>最終調査日: {PRICE_SURVEY_DATE}</strong>（毎週更新）。{PRICE_PREV_SURVEY_DATE ? `前回調査日: ${PRICE_PREV_SURVEY_DATE}。` : ''}完品想定の参考価格で、店舗・在庫・状態・キャンペーンにより変動します。実際の査定額は売却直前に各社公式でご確認ください。
+      出典：ブックオフ「ゲームの高価買取情報」・ゲオ「高価買取品」（いずれも店頭参考価格）、駿河屋・レトログの各公式買取ページ。各社公式の買取価格を定期的に実測しています。<strong>最終実測日: {PRICE_SURVEY_DATE}</strong>。{PRICE_PREV_SURVEY_DATE ? `前回調査日: ${PRICE_PREV_SURVEY_DATE}。` : ''}完品想定の参考価格で、店舗・在庫・状態・キャンペーンにより変動します。実際の査定額は売却直前に各社公式でご確認ください。
     </p>
   );
 }
 
 
-// 「今週の最高値」直答バナー(キーワード一致の最上位行から自動生成・週次更新に連動)
+// 「最新の最高値」直答バナー(キーワード一致の最上位行から自動生成・実測更新に連動)
 export function TodayBestBanner({ keyword, label }: { keyword: string; label?: string }) {
   const rows = getPricesByKeyword(keyword);
   const best = rows
@@ -110,10 +110,10 @@ export function TodayBestBanner({ keyword, label }: { keyword: string; label?: s
   if (!best) return null;
   return (
     <div className="glass-card p-4 mb-8 flex flex-wrap items-center gap-3 border-l-4" style={{ borderLeftColor: 'var(--color-electric-green)' }}>
-      <span className="text-xs font-bold px-2 py-1 rounded" style={{ background: 'rgba(16,185,129,0.12)', color: '#047857' }}>今週の最高値({PRICE_SURVEY_DATE})</span>
+      <span className="text-xs font-bold px-2 py-1 rounded" style={{ background: 'rgba(16,185,129,0.12)', color: '#047857' }}>最新の最高値({PRICE_SURVEY_DATE})</span>
       <span className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{label ?? keyword}: {best.title}</span>
       <span className="text-lg font-extrabold" style={{ color: 'var(--color-electric-green)' }}>{best.best.price.toLocaleString()}円</span>
-      <span className="text-xs" style={{ color: 'var(--color-text-light)' }}>({STORE_LABELS[best.best.store]}・毎週実測で自動更新)</span>
+      <span className="text-xs" style={{ color: 'var(--color-text-light)' }}>({STORE_LABELS[best.best.store]}・実測ごとに更新)</span>
     </div>
   );
 }

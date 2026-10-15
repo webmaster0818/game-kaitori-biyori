@@ -43,7 +43,7 @@ const faqs = [
 export default function TraderReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "トレーダーのゲーム買取の評判・口コミと送料条件を徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "トレーダーのゲーム買取の評判・口コミと送料条件を徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'トレーダー' }]} />
 
       {/* Hero */}
@@ -76,7 +76,7 @@ export default function TraderReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「秋葉原に行ける人・5点以上まとめて送る人」の選択肢</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              トレーダーは秋葉原の店頭に持ち込めるならレトロ・海外ゲーム含め幅広く相談できる老舗です。宅配は<strong>5点以上で送料無料・査定3日以内・振込2〜3日</strong>と日数が明確な一方、<strong>キャンセル時の返送が着払い（利用者負担）</strong>のため、送る前に公式の参考価格で金額の目安を必ず確認しましょう。「少量だけ・査定を見てから決めたい」なら返送無料の<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>、人気作の相場比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の価格インデックス</Link>が便利です。
+              トレーダーは秋葉原の店頭に持ち込めるならレトロ・海外ゲーム含め幅広く相談できる老舗です。宅配は<strong>5点以上で送料無料・査定3日以内・振込2〜3日</strong>と日数が明確な一方、<strong>キャンセル時の返送が着払い（利用者負担）</strong>のため、送る前に公式の参考価格で金額の目安を必ず確認しましょう。「少量だけ・査定を見てから決めたい」なら返送無料の<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>、人気作の相場比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>が便利です。
             </p>
           </div>
         </section>
@@ -100,7 +100,7 @@ export default function TraderReviewPage() {
           <div className="glass-card p-6 mb-4">
             <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取価格を調べる：公式の買取価格検索（e-trader.jp）</h3>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              トレーダーの買取価格は、買取サイト<strong>e-trader.jp</strong>の買取価格検索で公開されています。公式に「数日前の参考買取価格・1日1回程度更新」と注記されているとおり、目安として使うのが正解です（実際の査定額は商品の状態で変わります）。当サイト実測（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機EL 26,000円等が掲載されていました。他社と比べたい場合は、当サイトの<a href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>今週の実測価格比較（毎週更新）</a>とあわせて確認すると「今どこが高いか」まで分かります。
+              トレーダーの買取価格は、買取サイト<strong>e-trader.jp</strong>の買取価格検索で公開されています。公式に「数日前の参考買取価格・1日1回程度更新」と注記されているとおり、目安として使うのが正解です（実際の査定額は商品の状態で変わります）。当サイト実測（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機EL 26,000円等が掲載されていました。他社と比べたい場合は、当サイトの<a href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>最新の実測価格比較</a>とあわせて確認すると「今どこが高いか」まで分かります。
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">

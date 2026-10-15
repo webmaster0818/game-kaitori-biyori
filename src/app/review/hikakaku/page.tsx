@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ヒカカク！の評判・口コミは怪しい？【2026年7月】一括査定のしつこい連絡・デメリットを徹底検証',
   description:
-    'ヒカカク！のゲーム一括査定の評判・口コミを徹底検証。「怪しい」「連絡がしつこい」と言われる理由の実態、最大20社一括査定の仕組み、ヒカカク自体は買取しない点、メリット・デメリットを整理。あわせて当サイトが毎週実測する買取価格DBで、どこが今一番高いかも比較できます（2026年6月確認）。',
+    'ヒカカク！のゲーム一括査定の評判・口コミを徹底検証。「怪しい」「連絡がしつこい」と言われる理由の実態、最大20社一括査定の仕組み、ヒカカク自体は買取しない点、メリット・デメリットを整理。あわせて当サイトが定期的に実測する買取価格DBで、どこが今一番高いかも比較できます（2026年6月確認）。',
   keywords: ['ヒカカク 評判', 'ヒカカク 口コミ', 'ヒカカク 怪しい', 'ヒカカク ゲーム買取', 'ゲーム 一括査定', 'ゲーム買取 比較'],
   openGraph: {
     images: ['/og.png'],
@@ -50,7 +50,7 @@ const faqs = [
 export default function HikakakuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の口コミ・評判｜最大20社一括査定のゲーム買取比較", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の口コミ・評判｜最大20社一括査定のゲーム買取比較", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ヒカカク！' }]} />
 
       {/* Hero */}
@@ -83,10 +83,10 @@ export default function HikakakuReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：ヒカカク！は買取業者ではなく「一括査定の窓口」。怪しくはないが仕組みの理解が必須</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ヒカカク！は最大20社に一括で査定依頼を送れる買取比較プラットフォームで、ヒカカク！自体が買取を行うわけではありません。「怪しい」「連絡がしつこい」という声は、申込後に複数の買取業者から個別に連絡が来る一括査定の仕組みに由来するもので、詐欺的なサービスという意味ではありません。手間なく相見積もりを取って最高値を狙いたい人に向きますが、連絡の多さが苦手な人には不向きです。まず「今どこが一番高いか」を知りたい方は、当サイトが<strong>毎週実測している買取価格DB</strong>で先に相場を確認してから使うと、査定額が妥当かどうか判断しやすくなります。
+              ヒカカク！は最大20社に一括で査定依頼を送れる買取比較プラットフォームで、ヒカカク！自体が買取を行うわけではありません。「怪しい」「連絡がしつこい」という声は、申込後に複数の買取業者から個別に連絡が来る一括査定の仕組みに由来するもので、詐欺的なサービスという意味ではありません。手間なく相見積もりを取って最高値を狙いたい人に向きますが、連絡の多さが苦手な人には不向きです。まず「今どこが一番高いか」を知りたい方は、当サイトが<strong>定期的に実測している買取価格DB</strong>で先に相場を確認してから使うと、査定額が妥当かどうか判断しやすくなります。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
             </p>
           </div>
         </section>

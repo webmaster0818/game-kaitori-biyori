@@ -96,11 +96,11 @@ export default function AboutPage() {
               <div className="flex-1">
                 <p className="font-bold text-base mb-1" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取びより編集部</p>
                 <div className="flex flex-wrap gap-2 mb-3">
-                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>毎週の公式価格実測</span>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>公式価格の定期実測</span>
                   <span className="text-[10px] px-2 py-0.5 rounded-full border" style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}>公式一次情報のみ採用</span>
                 </div>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--color-navy)', opacity: 0.8 }}>
-                  当サイトは、ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を毎週実測し、確認日つきで比較する編集部が運営しています。特定個人の経験談ではなく「誰でも公式サイトで検証できる一次情報」だけを掲載し、確認できなかった項目は確認できずと明記します。
+                  当サイトは、ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を定期的に実測し、確認日つきで比較する編集部が運営しています。特定個人の経験談ではなく「誰でも公式サイトで検証できる一次情報」だけを掲載し、確認できなかった項目は確認できずと明記します。
                 </p>
               </div>
             </div>

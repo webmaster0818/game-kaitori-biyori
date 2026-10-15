@@ -181,7 +181,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】毎週実測の買取価格で解説", "datePublished": "2026-03-15", "dateModified": "2026-09-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
           背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
@@ -213,7 +213,7 @@ export default function HomePage() {
         <div className="hero-shot md:hidden" aria-hidden="true" />
       </section>
 
-      {/* Conclusion: おすすめはどこ？直答 + 今週の実測最高値 */}
+      {/* Conclusion: おすすめはどこ？直答 + 最新の実測最高値 */}
       <section className="py-10 bg-white border-b border-[var(--color-border)]">
         <div className="max-w-5xl mx-auto px-4">
           <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
@@ -224,16 +224,16 @@ export default function HomePage() {
             <ul className="text-sm space-y-1.5 mb-4" style={{ color: 'var(--color-text-light)' }}>
               <li>①<span className="font-bold">宅配でまとめて手軽に</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
               <li>②<span className="font-bold">今日中に現金化</span> → 全国900店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
-              <li>③<span className="font-bold">1円でも高く</span> → 店ごとに価格が毎週動くため、下の<span className="font-bold">今週の実測・最高値の店</span>で「今どこが高いか」を見てから売るのが最短です</li>
+              <li>③<span className="font-bold">1円でも高く</span> → 店ごとに価格が毎週動くため、下の<span className="font-bold">最新の実測・最高値の店</span>で「今どこが高いか」を見てから売るのが最短です</li>
             </ul>
             <ul className="text-sm space-y-2 mb-5" style={{ color: 'var(--color-text-light)' }}>
-              <li>・<span className="font-bold">1円でも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>今週の実測買取価格</Link>で最高値の店を確認（下表）。複数社比較なら一括査定（ヒカカク！）</li>
+              <li>・<span className="font-bold">1円でも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>最新の実測買取価格</Link>で最高値の店を確認（下表）。複数社比較なら一括査定（ヒカカク！）</li>
               <li>・<span className="font-bold">箱なし・傷あり・ジャンク</span> → 減額に寛容な店が有利。<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>状態別の許容度マップ</Link>で確認</li>
               <li>・<span className="font-bold">メルカリと迷っている</span> → 手数料・送料を引いた<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>実質手取りシミュレーター</Link>で比較</li>
               <li>・<span className="font-bold">用途別の詳しい使い分け</span>（早く売る・まとめ売り・レトロ等） → <Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>どこがいい？用途別比較</Link></li>
             </ul>
             <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>
-              今週の実測・最高値の店（{PRICE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提の参考価格）
+              最新の実測・最高値の店（最終実測日: {PRICE_SURVEY_DATE.replace(/-/g, '/')}・完品前提の参考価格）
             </h3>
             <div className="overflow-x-auto">
               <table className="comparison-table text-sm">
@@ -257,7 +257,7 @@ export default function HomePage() {
               </table>
             </div>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              ※当サイトが各社公式買取ページで毎週実測している参考価格です（店舗・在庫・状態で変動）。全タイトル・全店舗の比較と先週比の値動きは
+              ※当サイトが各社公式買取ページで定期的に実測している参考価格です（店舗・在庫・状態で変動）。全タイトル・全店舗の比較と前回比の値動きは
               <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>へ。
             </p>
 

@@ -49,7 +49,7 @@ const faqs = [
 export default function RetroSellGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '実家のレトロゲームを売るなら' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -139,8 +139,8 @@ export default function RetroSellGuidePage() {
       <section className="py-8 px-4">
         <div className="max-w-3xl mx-auto">
           <Link href="/software/high-value/" className="block bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-5 text-center shadow hover:opacity-95 transition">
-            <span className="font-bold text-lg">📈 今週の「高く売れるゲームソフト」ランキングを見る</span>
-            <span className="block text-sm opacity-90 mt-1">ブックオフ・ゲオ・駿河屋の公式買取価格を毎週金曜に実測更新中</span>
+            <span className="font-bold text-lg">📈 最新の「高く売れるゲームソフト」ランキングを見る</span>
+            <span className="block text-sm opacity-90 mt-1">ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測更新中</span>
           </Link>
         </div>
       </section>

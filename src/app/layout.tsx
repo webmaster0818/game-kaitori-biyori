@@ -18,11 +18,11 @@ const zenKaku = Zen_Kaku_Gothic_New({
 
 export const metadata: Metadata = {
   title: {
-    default: "ゲーム買取おすすめはどこ？比較ランキング【2026年9月】毎週実測の買取価格で解説｜ゲーム買取びより",
+    default: "ゲーム買取おすすめはどこ？比較ランキング【2026年10月】各社公式の買取価格を実測して解説｜ゲーム買取びより",
     template: "%s｜ゲーム買取びより",
   },
   description:
-    "ゲーム買取のおすすめはどこがいい？に直答。毎週実測する買取価格DBで「今どこが一番高いか」を確認しながら、高く売る・早く売る・箱なしジャンク・まとめ売りなど用途別に10社を比較。手数料を引いた実質手取りのシミュレーターつき。",
+    "ゲーム買取のおすすめはどこがいい？に直答。定期的に実測する買取価格DBで「今どこが一番高いか」を確認しながら、高く売る・早く売る・箱なしジャンク・まとめ売りなど用途別に10社を比較。手数料を引いた実質手取りのシミュレーターつき。",
   keywords: [
     "ゲーム買取",
     "ゲーム買取 おすすめ",
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "./" },
   openGraph: {
     images: ['/og.png'],
-    title: "ゲーム買取おすすめはどこ？比較ランキング【2026年9月】｜ゲーム買取びより",
+    title: "ゲーム買取おすすめはどこ？比較ランキング【2026年10月】｜ゲーム買取びより",
     description:
-      "毎週実測の買取価格DBで「今どこが一番高いか」を確認しながら、用途別にゲーム買取10社を比較。実質手取りシミュレーターつき。",
+      "公式価格を実測した買取価格DBで「今どこが一番高いか」を確認しながら、用途別にゲーム買取10社を比較。実質手取りシミュレーターつき。",
     type: "website",
     locale: "ja_JP",
     siteName: "ゲーム買取びより",
@@ -81,7 +81,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "ゲーム買取びより",
-              alternateName: "ゲーム買取びより｜毎週実測の買取価格比較",
+              alternateName: "ゲーム買取びより｜公式買取価格の実測比較",
               url: "https://gamekaitori-biyori.com/",
             }),
           }}

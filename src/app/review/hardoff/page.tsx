@@ -26,7 +26,7 @@ const features = [
 ];
 
 const dislikeReasons = [
-  { reason: '「安い」と言われがち', fact: 'ゲームの買取価格表は公式に公開されておらず、実際に査定に出すまで金額が分かりません。人気タイトルや高額品では「専門店より安かった」という口コミ傾向が複数のレビューサイトで見られます。高く売りたい品は、当サイトの毎週実測の価格インデックスでゲオ・ブックオフ等の公表価格を確認してから持ち込むのが確実です。' },
+  { reason: '「安い」と言われがち', fact: 'ゲームの買取価格表は公式に公開されておらず、実際に査定に出すまで金額が分かりません。人気タイトルや高額品では「専門店より安かった」という口コミ傾向が複数のレビューサイトで見られます。高く売りたい品は、当サイトの公式価格を実測した価格インデックスでゲオ・ブックオフ等の公表価格を確認してから持ち込むのが確実です。' },
   { reason: '店舗・地域で査定に差がある', fact: '公式FAQが「店舗の地域性も価格変動の要因」と明記しているとおり、店舗による査定差は仕組み上のものです。時間があれば複数店舗・複数社での相見積もり（オファー買取の活用も含む）が有効です。' },
   { reason: '電話での事前査定は基本不可', fact: '公式FAQで電話査定は基本的に行っていないとされています。事前に金額を知りたい場合は、アプリの「オファー買取」で写真出品して見積もりを集める方法が公式の代替手段です。' },
 ];
@@ -43,7 +43,7 @@ const faqs = [
 export default function HardoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を徹底検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を徹底検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ハードオフ' }]} />
 
       {/* Hero */}
@@ -76,7 +76,7 @@ export default function HardoffReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「ジャンク・まとめ処分」に最強、人気作は相場確認してから</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ハードオフは、壊れたゲーム機や古い周辺機器まで「ジャンク」として買い取る公式方針を持つ、全国1,000店超の最大手です。近所の店で即日現金化でき、他店で断られる品の受け皿になります。一方で買取価格表は非公開で、査定はデータベース＋店舗の地域性で変動するため、<strong>人気タイトルは専門店やゲオ・ブックオフの公表価格より安くなることがあります</strong>。「動くか分からない品・大量処分」はハードオフ、「人気作・プレミア品」は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の価格インデックス</Link>で相場を見てから売り先を選ぶのが賢い使い分けです。
+              ハードオフは、壊れたゲーム機や古い周辺機器まで「ジャンク」として買い取る公式方針を持つ、全国1,000店超の最大手です。近所の店で即日現金化でき、他店で断られる品の受け皿になります。一方で買取価格表は非公開で、査定はデータベース＋店舗の地域性で変動するため、<strong>人気タイトルは専門店やゲオ・ブックオフの公表価格より安くなることがあります</strong>。「動くか分からない品・大量処分」はハードオフ、「人気作・プレミア品」は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場を見てから売り先を選ぶのが賢い使い分けです。
             </p>
           </div>
         </section>

@@ -60,7 +60,7 @@ const faqs = [
 export default function TimingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '売り時ガイド' }]} />
 
       {/* Hero */}
@@ -184,13 +184,13 @@ export default function TimingPage() {
             </p>
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>① 2026年5月25日の任天堂値上げで旧型相場が上昇：</span>通常モデルの定価が32,978円→43,980円になるなど全モデルが値上げされ（任天堂公式）、買取業者の調査では2019年型の買取相場が4月の約3,000〜12,000円から5月に約5,000〜19,000円へ上昇した実例が報告されています。</li>
-              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② Switch2発売後も旧型は暴落していない（当サイト実測）：</span>当サイトが2026年7月4日に各社公式買取ページで実測した本体価格は、旧型Switch（ネオン現行版）がゲオ20,000円・駿河屋18,000円、有機ELがゲオ25,000円・駿河屋22,000〜24,000円と底堅い水準です。Switch2本体はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万の横並びでした。ただしこの追い風が続く保証はなく、Switch2の供給が安定すれば旧型は下落に転じる可能性が高いため、遊んでいないなら早めの売却が合理的です（本体の週次実測は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>で毎週更新）。</li>
-              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ ポケモン旧作（SV）の下落が実測で始まっている：</span>当サイトの週次実測で、ポケモンスカーレットは駿河屋2,000円→1,800円（6/25→7/2）、バイオレットはブックオフ1,500円→1,200円・駿河屋2,000円→1,400円と下落が観測されました。Switch2版の新作ポケモン（LEGENDS Z-A）のセット品が既に買取市場に流通しており、新作サイクル前の「旧作から先に下がる」動きです。SVを遊び終えているなら、これ以上待たないのが実測データの答えです。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② Switch2発売後も旧型は暴落していない（当サイト実測）：</span>当サイトが2026年7月4日に各社公式買取ページで実測した本体価格は、旧型Switch（ネオン現行版）がゲオ20,000円・駿河屋18,000円、有機ELがゲオ25,000円・駿河屋22,000〜24,000円と底堅い水準です。Switch2本体はブックオフ4.0万・ゲオ4.0万・駿河屋4.1万の横並びでした。ただしこの追い風が続く保証はなく、Switch2の供給が安定すれば旧型は下落に転じる可能性が高いため、遊んでいないなら早めの売却が合理的です（本体の定期実測は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>で定期更新）。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ ポケモン旧作（SV）の下落が実測で始まっている：</span>当サイトの定期実測で、ポケモンスカーレットは駿河屋2,000円→1,800円（6/25→7/2）、バイオレットはブックオフ1,500円→1,200円・駿河屋2,000円→1,400円と下落が観測されました。Switch2版の新作ポケモン（LEGENDS Z-A）のセット品が既に買取市場に流通しており、新作サイクル前の「旧作から先に下がる」動きです。SVを遊び終えているなら、これ以上待たないのが実測データの答えです。</li>
             </ul>
             <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>
               なお、ダウンロード版のソフト資産はニンテンドーアカウントに紐づくため、本体を売ってもSwitch2で再ダウンロードできます。売却前は本体の初期化とSDカードの抜き取りを忘れずに。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、当サイト週次実測（ソフト2026年7月2日・本体2026年7月4日、各社公式買取ページ）</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、当サイト定期実測（ソフト2026年7月2日・本体2026年7月4日、各社公式買取ページ）</p>
           </div>
         </section>
 

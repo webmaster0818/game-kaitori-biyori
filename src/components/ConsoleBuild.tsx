@@ -543,7 +543,7 @@ export default function ConsoleBuild() {
               <span className="section-heading-bar" />使っていないゲーム機は、相場が高いうちに
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              買取価格は毎週動きます。当サイトは各社の実測価格を毎週更新しているので、今が高いのかを見てから売れます。
+              買取価格は毎週動きます。当サイトは各社の実測価格を定期的に更新しているので、今が高いのかを見てから売れます。
             </p>
           </div>
 
@@ -574,7 +574,7 @@ export default function ConsoleBuild() {
 
           <p className="text-xs text-center mt-5" style={{ color: 'var(--color-text-light)' }}>
             <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>
-              → 今週の実測買取価格を見る
+              → 最新の実測買取価格を見る
             </Link>
             <span className="mx-2" style={{ opacity: 0.4 }}>|</span>
             <Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>

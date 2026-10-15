@@ -53,7 +53,7 @@ const faqs = [
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
@@ -89,7 +89,7 @@ export default function UrielReviewPage() {
               買取ウリエルは株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）が運営する正規の買取事業者です。出張費・査定料・キャンセル料はすべて無料で、買取成立後8日以内のクーリングオフにも対応しているため、「やばい・怪しい」という検索が出るほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ゲーム買取の対象エリアが<strong>東京・神奈川・千葉・埼玉</strong>に限定されている点と、宅配・店頭は2026年6月時点で案内終了している点だけは事前に確認してください。重い荷物を運ばずその場で現金化したい1都3県の方に向きます。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
             </p>
           </div>
         </section>
@@ -138,7 +138,7 @@ export default function UrielReviewPage() {
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料</th><td className="py-2">－（出張買取のため該当なし。宅配・店頭は2026年6月時点で案内終了）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（出張費・査定料・キャンセル料すべて無料）2026年6月12日確認。ゲーム単体を高く売りたい場合は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の買取価格インデックス</Link>でゲーム専門店の価格とも比較を。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（出張費・査定料・キャンセル料すべて無料）2026年6月12日確認。ゲーム単体を高く売りたい場合は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>でゲーム専門店の価格とも比較を。</p>
           </div>
         </section>
 
@@ -246,7 +246,7 @@ export default function UrielReviewPage() {
               </ul>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲーム単体を高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の買取価格インデックス</Link>でゲーム専門店の価格と比較してから判断するのがおすすめです。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲーム単体を高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>でゲーム専門店の価格と比較してから判断するのがおすすめです。</p>
         </section>
 
         {/* FAQ */}
@@ -314,7 +314,7 @@ export default function UrielReviewPage() {
         <section style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--color-accent-soft-weak)', borderRadius: '12px', borderLeft: '3px solid var(--color-electric-green)' }}>
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめ比較（迷ったらこの3択・今週の最高値）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめ比較（迷ったらこの3択・最新の最高値）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（今どこが一番高い？）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリ vs 買取 手取り額シミュレーション</Link></li>

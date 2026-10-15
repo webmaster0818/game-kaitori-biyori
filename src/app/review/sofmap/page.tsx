@@ -43,7 +43,7 @@ const faqs = [
 export default function SofmapReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ソフマップ買取（ラクウル）の評判・口コミと送料無料の実態を徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ソフマップ買取（ラクウル）の評判・口コミと送料無料の実態を徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ソフマップ（ラクウル）' }]} />
 
       {/* Hero */}
@@ -76,7 +76,7 @@ export default function SofmapReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「比較しながら売りたい人」に優しい設計、受取方法だけ要注意</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ラクウルは<strong>キャンセル時の返送料まで無料</strong>なので、「査定額を見てから決めたい」比較検討派が使いやすい宅配買取です。買取上限価格も事前公開されており、当サイト実測ではSwitch 2本体 上限40,000円等を確認しました（2026年7月7日）。注意点は受取方法で、<strong>銀行振込は手数料250円/回</strong>。ビック買取マネー・店頭受取なら無料です。ソフト中心なら公表価格の高い店と、本体なら同グループの<Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱら</Link>とも比べて、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の価格インデックス</Link>で相場確認してから送るのが確実です。
+              ラクウルは<strong>キャンセル時の返送料まで無料</strong>なので、「査定額を見てから決めたい」比較検討派が使いやすい宅配買取です。買取上限価格も事前公開されており、当サイト実測ではSwitch 2本体 上限40,000円等を確認しました（2026年7月7日）。注意点は受取方法で、<strong>銀行振込は手数料250円/回</strong>。ビック買取マネー・店頭受取なら無料です。ソフト中心なら公表価格の高い店と、本体なら同グループの<Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱら</Link>とも比べて、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場確認してから送るのが確実です。
             </p>
           </div>
         </section>

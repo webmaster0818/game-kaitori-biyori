@@ -45,7 +45,7 @@ const faqs = [
 export default function HobbyCollectReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの評判・口コミは怪しい？箱なし・ジャンクの査定額・古物商番号で検証", "datePublished": "2026-03-15", "dateModified": "2026-06-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの評判・口コミは怪しい？箱なし・ジャンクの査定額・古物商番号で検証", "datePublished": "2026-03-15", "dateModified": "2026-06-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ホビーコレクト' }]} />
 
       {/* Hero */}
@@ -103,7 +103,7 @@ export default function HobbyCollectReviewPage() {
               <strong style={{ color: 'var(--color-deep-blue)' }}>「怪しい・詐欺」は本当？：</strong>運営会社・所在地・古物商許可番号がいずれも公式に明記されており、詐欺をうかがわせる事実は確認できません。「怪しい」という検索が出るのは、宅配買取への一般的な警戒感と、箱なし・開封済みで査定額が想定より下がるケースが「怪しい」という印象につながりやすいためと考えられます（断定ではなく確認項目ベースの評価）。
             </p>
             <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷あり・ジャンクでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高いか価格を確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷あり・ジャンクでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
             </p>
           </div>
         </section>

@@ -79,7 +79,7 @@ const faqs = [
 export default function GeoTakuhaiGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取は何日で入金？やり方・ダンボール・査定日数・梱包・キャンセルまで完全ガイド", "datePublished": "2026-07-28", "dateModified": "2026-08-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取は何日で入金？やり方・ダンボール・査定日数・梱包・キャンセルまで完全ガイド", "datePublished": "2026-07-28", "dateModified": "2026-08-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ガイド', href: '/' }, { name: 'ゲオ宅配買取のやり方' }]} />
 
       {/* Hero */}
@@ -344,14 +344,14 @@ export default function GeoTakuhaiGuidePage() {
         {/* CTA: 価格比較へ */}
         <section className="glass-card-dark p-8 text-center mb-12">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            送る前に<span style={{ color: 'var(--color-electric-green)' }}>今週の買取価格</span>を比較しよう
+            送る前に<span style={{ color: 'var(--color-electric-green)' }}>最新の買取価格</span>を比較しよう
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            同じソフトでも業者間で買取価格は大きく違います。当サイトは毎週各社公式の買取価格を実測しています。ゲオに送る前に他社の価格も確認するのが高く売るコツです。
+            同じソフトでも業者間で買取価格は大きく違います。当サイトは各社公式の買取価格を定期的に実測しています。ゲオに送る前に他社の価格も確認するのが高く売るコツです。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/price-index/" className="btn-primary py-3 px-8">
-              今週の買取価格DBを見る
+              最新の買取価格DBを見る
             </Link>
             <Link href="/software/high-value/" className="btn-outline py-3 px-8" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}>
               高く売れるソフトランキング

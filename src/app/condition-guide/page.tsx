@@ -49,7 +49,7 @@ const PAGE_TITLE = '状態別 ゲーム買取 許容度マップ【2026年6月�
 export default function ConditionGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-21", "dateModified": "2026-06-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-21", "dateModified": "2026-06-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '買い方ガイド', href: '/' }, { name: '状態別 買取許容度マップ' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -140,7 +140,7 @@ export default function ConditionGuidePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/knowledge/boxless/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>箱なしゲームの買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも高く売るコツ</p></Link>
             <Link href="/knowledge/broken/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>故障・ジャンク品の買取</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>壊れたゲームの売り方</p></Link>
-            <Link href="/price-index/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週更新・今どこが高い？</p></Link>
+            <Link href="/price-index/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが高い？</p></Link>
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>状態が悪めでも売れる宅配買取</p></Link>
             <Link href="/review/uriel/" className="glass-card p-4 card-hover block"><p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ウリエルの評判</p><p className="text-xs" style={{ color: 'var(--color-text-light)' }}>高額査定で名前が挙がる店</p></Link>
           </div>

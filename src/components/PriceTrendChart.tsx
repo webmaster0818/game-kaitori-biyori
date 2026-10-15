@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-// 週次実測CSV(data/price-history.csv)からタイトル別の最高買取値スパークラインを生成(ビルド時)
+// 定期実測CSV(data/price-history.csv)からタイトル別の最高買取値スパークラインを生成(ビルド時)
 type Row = { date: string; title: string; store: string; price: number };
 
 function loadHistory(): Row[] {
@@ -60,7 +60,7 @@ export default function PriceTrendChart() {
   return (
     <div>
       <p className="text-sm text-gray-600 mb-4">
-        当サイトが毎週実測している最高買取値（全店舗中の最高額）の推移です。計測日: {dates.map(fmtDate).join(" → ")}（データ点は毎週の実測ごとに増えます）。
+        当サイトが定期的に実測している最高買取値（全店舗中の最高額）の推移です。計測日: {dates.map(fmtDate).join(" → ")}（データ点は実測のたびに増えます）。
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {series.map((s) => (

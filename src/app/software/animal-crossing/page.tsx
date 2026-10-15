@@ -19,13 +19,13 @@ export function generateMetadata(): Metadata {
   const a = main();
   const best = a ? `${a.best.price.toLocaleString()}円(${STORE_LABELS[a.best.store]})` : '';
   return {
-    title: `あつ森(あつまれ どうぶつの森)の買取価格はいくら？【${MONTH}】毎週実測比較`,
-    description: `あつまれ どうぶつの森の買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}Switch 2 Editionとの価格差や高く売るコツも、実測データだけで解説します。`,
+    title: `あつ森(あつまれ どうぶつの森)の買取価格はいくら？【${MONTH}】公式買取価格を実測比較`,
+    description: `あつまれ どうぶつの森の買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}Switch 2 Editionとの価格差や高く売るコツも、実測データだけで解説します。`,
     keywords: ['あつ森 買取', 'あつまれどうぶつの森 買取価格', 'あつ森 売る', 'どうぶつの森 買取相場'],
     openGraph: {
     images: ['/og.png'],
       title: `あつ森の買取価格はいくら？【${MONTH}】`,
-      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を毎週実測して比較。',
+      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測して比較。',
       type: 'article',
       locale: 'ja_JP',
       siteName: 'ゲーム買取びより',
@@ -41,26 +41,26 @@ export default function AnimalCrossingPage() {
     {
       q: 'あつ森の買取価格は今いくらですか？',
       a: a
-        ? `${SURVEY}の実測では、公表買取価格の最高値は${bestTxt}です(完品・通常版基準)。3社とも公表リストに掲載がある定番タイトルで、当ページの表は毎週の実測で更新しています。`
-        : '当ページの表(毎週実測)をご覧ください。',
+        ? `${SURVEY}の実測では、公表買取価格の最高値は${bestTxt}です(完品・通常版基準)。3社とも公表リストに掲載がある定番タイトルで、当ページの表は定期的な実測で更新しています（最終実測日は表に記載）。`
+        : '当ページの表(公式価格の実測値・最終実測日つき)をご覧ください。',
     },
     {
       q: 'Switch 2 Editionのあつ森はいくらで売れますか？',
-      a: `${SURVEY}の実測では、Switch 2 Editionはブックオフ2,500円・駿河屋2,700円と、通常版(ブックオフ2,200円・駿河屋2,400円)より数百円高い公表価格でした。パッケージの版を確認してから査定に出しましょう。`,
+      a: `${SURVEY}の実測では、Switch 2 Editionはブックオフ2,500円・駿河屋2,700円と、通常版(ブックオフ1,200円・駿河屋2,200円)より高い公表価格でした。パッケージの版を確認してから査定に出しましょう。`,
     },
     {
       q: '発売から時間が経ったあつ森でも売れますか？',
-      a: '売れます。2020年発売ながら3社の公表買取リストに継続掲載されている定番タイトルです。直近の実測ではブックオフが2,000円→2,200円へ増額するなど、公表価格が動くことがあるため、売る直前に当ページの実測表で確認するのがおすすめです。',
+      a: '売れます。2020年発売ながら3社の公表買取リストに継続掲載されている定番タイトルです。前回(2026年9月16日)→今回(10月15日)の実測ではブックオフが1,500円→1,200円へ減額するなど、公表価格は上下するため、売る直前に当ページの実測表で確認するのがおすすめです。',
     },
     {
       q: 'あつ森を高く売るコツはありますか？',
-      a: '①パッケージ・説明書を揃えた完品にする ②通常版かSwitch 2 Editionかを確認する ③毎週の実測表で最高値の店を確認してから持ち込む——の3点です。同じソフトでも店舗間で公表価格に差があります。',
+      a: '①パッケージ・説明書を揃えた完品にする ②通常版かSwitch 2 Editionかを確認する ③最新の実測表で最高値の店を確認してから持ち込む——の3点です。同じソフトでも店舗間で公表価格に差があります。',
     },
   ];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `あつ森(あつまれ どうぶつの森)の買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-14', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を毎週実測して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `あつ森(あつまれ どうぶつの森)の買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-14', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'あつ森の買取価格' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -68,7 +68,7 @@ export default function AnimalCrossingPage() {
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>タイトル別買取相場</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">あつ森(あつまれ どうぶつの森)の買取価格【{MONTH}】</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            あつまれ どうぶつの森の買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで毎週実測して比較しています。
+            あつまれ どうぶつの森の買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較しています。
             {bestTxt && <>今回の実測({SURVEY})の公表最高値は<strong className="text-white">{bestTxt}</strong>。</>}
             Switch 2 Editionとの価格差も実測値で確認できます。
           </p>
@@ -80,14 +80,14 @@ export default function AnimalCrossingPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        <SeriesPriceTable keyword={KEYWORD} heading="あつまれ どうぶつの森の店舗別 買取価格【毎週更新の実測データ】" />
+        <SeriesPriceTable keyword={KEYWORD} heading="あつまれ どうぶつの森の店舗別 買取価格【公式価格の実測データ】" />
 
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />版違いに注意：通常版とSwitch 2 Edition</h2>
           <div className="glass-card p-5">
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               あつ森には従来のSwitch版のほかに「Nintendo Switch 2 Edition」があり、公表買取価格が異なります。
-              {SURVEY}の実測では<strong style={{ color: 'var(--color-deep-blue)' }}>Switch 2 Editionがブックオフ2,500円・駿河屋2,700円</strong>と、通常版より数百円高い水準でした。
+              {SURVEY}の実測では<strong style={{ color: 'var(--color-deep-blue)' }}>Switch 2 Editionがブックオフ2,500円・駿河屋2,700円</strong>と、通常版より高い水準でした。
               お手持ちのパッケージがどちらの版かを確認してから売却先を選びましょう。
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function AnimalCrossingPage() {
               { title: '3社の公表価格を見比べてから売る', description: 'あつ森は3社とも公表リストに載る定番タイトルで、店舗間で数百円の差があります(実測表参照)。売る店を選ぶだけで手取りが変わります。' },
               { title: '版(通常版/Switch 2 Edition)を確認する', description: 'Switch 2 Editionは通常版より高い公表価格(実測)。パッケージ表記で判別できます。' },
               { title: '完品状態で売る', description: '各社の公表価格はパッケージ・説明書ありの完品基準です。欠品は減額対象になります。' },
-              { title: '公表価格の増額タイミングを逃さない', description: '直近の実測ではブックオフが2,000円→2,200円へ増額しました。毎週の実測表で価格の動きを見て、上がったタイミングで売るのが有利です。' },
+              { title: '公表価格の動きを確認してから売る', description: '前回(2026年9月16日)→今回(10月15日)の実測ではブックオフが1,500円→1,200円へ減額しました。最新の実測表で価格の動きを見て、下がり続ける前に売るのが有利です。' },
             ].map((tip, i) => (
               <div key={tip.title} className="glass-card p-5 flex items-start gap-4">
                 <div className="text-2xl font-black shrink-0" style={{ color: 'var(--color-electric-green)', opacity: 0.3 }}>{String(i + 1).padStart(2, '0')}</div>
@@ -128,7 +128,7 @@ export default function AnimalCrossingPage() {
 
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>あつ森を<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版の違いと店舗差で手取りが変わります。売る前に毎週実測の公表価格をチェックしましょう。</p>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版の違いと店舗差で手取りが変わります。売る前に最新の実測価格をチェックしましょう。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>
@@ -147,7 +147,7 @@ export default function AnimalCrossingPage() {
             </Link>
             <Link href="/software/smash-bros/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>スマブラSPの買取価格</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>毎週実測の店舗比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式価格の実測比較</p>
             </Link>
           </div>
         </section>

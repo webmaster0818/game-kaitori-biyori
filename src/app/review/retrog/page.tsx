@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const features = [
   { title: 'レトロゲーム専門の宅配買取', description: 'ファミコン・スーパーファミコン・ディスクシステムなど約40機種を専門に扱う宅配買取サービス。箱に詰めて送るだけで自宅で完結し、店頭に持ち込む必要がありません。' },
-  { title: '機種別の買取価格表を公式公開', description: '公式サイトの買取価格リストで、機種ごとに本体・ソフト・周辺機器の高額買取価格を公開しています。「送ってみるまで分からない」業者が多い中、事前に相場を確認できるのは大きな安心材料です（当サイトの週次価格調査でも参照している公開データです）。' },
+  { title: '機種別の買取価格表を公式公開', description: '公式サイトの買取価格リストで、機種ごとに本体・ソフト・周辺機器の高額買取価格を公開しています。「送ってみるまで分からない」業者が多い中、事前に相場を確認できるのは大きな安心材料です（当サイトの定期価格調査でも参照している公開データです）。' },
   { title: '箱なし・説明書なし・ジャンク級もOKと公式明記', description: '公式サイトに、箱・説明書がなくても、汚れ・傷が多くても、電源が入らない・映像が映らない・音が出ない状態でも買取可能と明記されています。レトロゲーム特有の「状態が悪い品」の受け皿になります。' },
   { title: '無料の宅配キット最大10箱・スピード対応', description: '梱包用の無料宅配キット（小・大2サイズ）を最大10箱まで用意。査定は到着から通常1〜3営業日、買取了承・本人確認後2営業日以内に入金という明確なスピード表記があります。送料は買取成立時無料です。' },
 ];
@@ -44,7 +44,7 @@ const faqs = [
 export default function RetrogReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトログの評判・口コミは怪しい？レトロゲーム専門宅配買取の実態・公開価格表を徹底検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトログの評判・口コミは怪しい？レトロゲーム専門宅配買取の実態・公開価格表を徹底検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'レトログ' }]} />
 
       {/* Hero */}
@@ -220,7 +220,7 @@ export default function RetrogReviewPage() {
             <li style={{ marginBottom: '0.5rem' }}><Link href="/software/retro-sell-guide/" style={{ color: 'var(--color-electric-green)' }}>実家のレトロゲームを売るなら？高く売る4つのコツ</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/retro/" style={{ color: 'var(--color-electric-green)' }}>レトロゲームの買取相場</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（毎週実測）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（最終実測日つき）</Link></li>
           </ul>
         </section>
 

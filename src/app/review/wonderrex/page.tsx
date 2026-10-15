@@ -43,14 +43,14 @@ const faqs = [
   { q: '宅配買取でゲームは売れますか？', a: '公式の取扱品目にはゲーム／レトロゲーム、ゲーム機本体が明記されており、店頭ではゲームが買取対象です。ただし公式の宅配買取ページの訴求はブランド・貴金属・時計・カメラが中心で、宅配でのゲーム買取可否は公式に明記がありません（要確認）。ゲームは店頭導線が中心と考えられるため、宅配で送りたい場合は事前に公式へゲームの宅配買取が可能か問い合わせることをおすすめします。' },
   { q: '送料・返送料・査定料はかかりますか？', a: '査定料は店頭・宅配とも無料です。宅配買取の送料は無料、振込手数料も無料です。ただし宅配でキャンセル（成約しない）場合の返送料はお客様負担となります。店頭ではその場でのキャンセルも無料です。出張買取の出張費については公式に明記がないため、利用前に確認してください（要確認）。' },
   { q: '自前のダンボールで送ると得ですか？', a: '公式では、自分で用意したダンボールを使って宅配買取に送ると成約額に+500円が加算される特典があります（成約額3,000円以上が対象）。まとめて送って成約額が条件を満たす場合はお得になります。適用条件は変更される場合があるため、申込前に公式で最新の条件をご確認ください。' },
-  { q: 'ゲームは実際いくらで売れますか？', a: 'ゲーム系の個別タイトルの買取価格は公式に公開されておらず、実額は問い合わせベースです。買取価格は時期・在庫・状態で変動します。1点でも高く売りたい場合は、当サイトの毎週実測の買取価格インデックスで専門店の価格と比べてから判断するのがおすすめです。レトロゲームやプレミア価格が付くソフトは、ゲーム専門店の方が高くなるケースがあります。' },
+  { q: 'ゲームは実際いくらで売れますか？', a: 'ゲーム系の個別タイトルの買取価格は公式に公開されておらず、実額は問い合わせベースです。買取価格は時期・在庫・状態で変動します。1点でも高く売りたい場合は、当サイトの公式価格を実測した買取価格インデックスで専門店の価格と比べてから判断するのがおすすめです。レトロゲームやプレミア価格が付くソフトは、ゲーム専門店の方が高くなるケースがあります。' },
   { q: 'クーリングオフや店舗の場所を知りたいです。', a: '買取（売却）は原則クーリングオフの対象外で、ワンダーレックスの公式にクーリングオフに関する明示記載は確認できませんでした（確認不可）。店舗は茨城・千葉を中心に約36店舗を展開しています。最新の店舗一覧・営業時間・取扱可否は公式サイトでご確認ください。' },
 ];
 
 export default function WonderrexReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ワンダーレックス' }]} />
 
@@ -83,7 +83,7 @@ export default function WonderrexReviewPage() {
               ワンダーレックス（WonderREX）はREXT株式会社（RIZAPグループ企業／東京都公安委員会 古物商許可 第307732117178号）が運営する正規のリユース買取サービスです。店頭・宅配・出張の3方式に対応し、公式の取扱品目にゲーム／レトロゲーム、ゲーム機本体が明記されています。会社情報・許可番号が公開されており「怪しい」といえる根拠は確認できません（断定ではなく確認項目ベースの評価）。一方で<strong>ゲームは茨城・千葉中心の店頭導線が中心で、宅配でのゲーム買取可否は公式に明記がなく要確認</strong>、また<strong>ゲーム系の実際の買取価格は公式非公開で問い合わせベース</strong>という点は押さえておきましょう。近くに店舗がある人・まとめて処分したい人に向くサービスです。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週どこが一番高いか価格を確認する</Link>／<Link href="/review/hikakaku/" style={{ color: 'var(--color-electric-green)' }}>専門店の宅配買取（ヒカカク系）と比較する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで完全無料の宅配買取（買取王子）と比較する</Link>
+              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今どこが一番高いか価格を確認する</Link>／<Link href="/review/hikakaku/" style={{ color: 'var(--color-electric-green)' }}>専門店の宅配買取（ヒカカク系）と比較する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで完全無料の宅配買取（買取王子）と比較する</Link>
             </p>
           </div>
         </section>
@@ -236,7 +236,7 @@ export default function WonderrexReviewPage() {
               </ul>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>毎週実測の買取価格インデックス</Link>で専門店の価格と比較してから判断するのがおすすめです。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店の価格と比較してから判断するのがおすすめです。</p>
         </section>
 
         {/* FAQ */}

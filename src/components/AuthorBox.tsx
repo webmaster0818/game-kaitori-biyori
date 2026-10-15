@@ -28,7 +28,7 @@ export default function AuthorBox() {
               className="text-[10px] px-2 py-0.5 rounded-full border"
               style={{ borderColor: 'var(--color-accent-orange)', color: 'var(--color-accent-orange)' }}
             >
-              毎週の公式価格実測
+              公式価格の定期実測
             </span>
             <span
               className="text-[10px] px-2 py-0.5 rounded-full border"
@@ -38,7 +38,7 @@ export default function AuthorBox() {
             </span>
           </div>
           <p className="text-sm leading-relaxed" style={{ color: 'var(--color-navy)', opacity: 0.7 }}>
-            ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を毎週実測し、確認日つきで比較しています。掲載価格は全て公式サイトで確認できる一次情報のみで、推定・創作はありません。
+            ブックオフ・ゲオ・駿河屋など各社の公式買取ページに掲載された価格を定期的に実測し、確認日つきで比較しています。掲載価格は全て公式サイトで確認できる一次情報のみで、推定・創作はありません。
           </p>
           <a href="/about/" className="text-xs font-bold inline-block mt-2" style={{ color: 'var(--color-electric-green)' }}>運営者情報・編集方針 →</a>
         </div>

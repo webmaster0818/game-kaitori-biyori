@@ -36,7 +36,7 @@ const faqs = [
   { q: '買取王子は「ひどい」「怪しい」という評判は本当ですか？', a: '運営元は株式会社ティーバイティー（愛知県公安委員会 古物商許可 第542520A52400号）で、公式サイトに会社概要・特定商取引法に基づく表記が掲載された正規の買取事業者です。「ひどい」と言われる背景には、宅配買取全般で起こりやすい「フリマ相場より査定額が低い」「一括査定で個別金額が分かりにくい」といった不満が挙げられます。査定料・キャンセル料・返送料はすべて無料なので、金銭的な損失なく査定額を確認して判断できます。' },
   { q: '査定に納得できなかったら費用はかかりますか？', a: 'かかりません。査定料・キャンセル料・返送料はすべて無料で、買取が成立しなかった場合の返送料も買取王子が負担します。送料も点数・金額の条件なしで無料のため、査定に出す時点での金銭リスクはありません。' },
   { q: '送料は本当に無料ですか？条件はありますか？', a: '点数・金額の条件なしで全国送料無料です。「◯点以上」「◯円以上」といった条件を付ける宅配買取が多い中、買取王子は少量でも送料無料で送れる点が強みです（公式サービスページに記載）。' },
-  { q: 'ゲーム機やソフトも買い取ってもらえますか？', a: 'はい、ゲーム機本体・各種ソフトが買取対象です。本・DVD・家電・ブランド品などと一緒にまとめて送れるため、ゲーム以外の不用品もあわせて処分したい方に向いています。個別タイトルの高値を狙う場合は、当サイトの毎週実測の価格DBで各社を比較してから決めるのがおすすめです。' },
+  { q: 'ゲーム機やソフトも買い取ってもらえますか？', a: 'はい、ゲーム機本体・各種ソフトが買取対象です。本・DVD・家電・ブランド品などと一緒にまとめて送れるため、ゲーム以外の不用品もあわせて処分したい方に向いています。個別タイトルの高値を狙う場合は、当サイトの公式価格を実測した価格DBで各社を比較してから決めるのがおすすめです。' },
   { q: '店頭持ち込みや出張買取はできますか？', a: '買取王子は宅配買取専門で、店頭持ち込み・出張訪問はありません。自宅から送るだけで完結しますが、その場で現金化したい場合は出張買取対応の他社を検討してください。' },
   { q: '入金はどのくらいで届きますか？', a: '査定結果に承諾した後、順次振込が行われます。振込にかかる手数料も無料です。混雑状況により前後するため、急ぐ場合は申込時に納期を確認しましょう。' },
 ];
@@ -44,7 +44,7 @@ const faqs = [
 export default function KaitoriOujiReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取王子の評判・口コミはひどい？手数料完全無料の実態・運営会社を徹底検証", "datePublished": "2026-07-09", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取王子の評判・口コミはひどい？手数料完全無料の実態・運営会社を徹底検証", "datePublished": "2026-07-09", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取王子' }]} />
 
@@ -77,7 +77,7 @@ export default function KaitoriOujiReviewPage() {
               買取王子は株式会社ティーバイティー（愛知県公安委員会 古物商許可 第542520A52400号）が運営する宅配専門の買取サービスです。査定料・キャンセル料・返送料がすべて無料で、送料も<strong>点数・金額の条件なしで全国無料</strong>。買取不成立でも返送料は自社負担のため、「やってみて損する」リスクがなく、「ひどい・怪しい」とされるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。一方で<strong>宅配専門（店頭・出張なし）</strong>で、その場で現金化はできない点と、一括査定のため個別タイトルの高値を狙う用途には向かない点だけは押さえておきましょう。ゲームも本も家電もまとめて処分したい人に向きます。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どのソフトが高く売れるか毎週実測で確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を比較する</Link>
+              関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>今どのソフトが高く売れるか実測データで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を比較する</Link>
             </p>
           </div>
         </section>
@@ -133,7 +133,7 @@ export default function KaitoriOujiReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />「ひどい・怪しい」と言われる理由の実態</h2>
           <div className="glass-card p-6">
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              「買取王子 ひどい」と検索されるのは、宅配買取全般に共通する<strong>「フリマ相場より査定額が低く感じる」「一括査定でまとめて金額が出るため、1点ごとの評価が分かりにくい」</strong>といった不満が背景にあると考えられます（断定ではなく確認項目ベースの評価）。買取王子自体は古物商許可を持つ正規事業者で、査定料・キャンセル料・返送料・送料がすべて無料のため、<strong>納得できなければ費用ゼロで返してもらえます</strong>。高く売りたい特定タイトルがある場合は、フリマや専門店との比較・当サイトの毎週実測価格DBの併用で、損のない売り方を選べます。
+              「買取王子 ひどい」と検索されるのは、宅配買取全般に共通する<strong>「フリマ相場より査定額が低く感じる」「一括査定でまとめて金額が出るため、1点ごとの評価が分かりにくい」</strong>といった不満が背景にあると考えられます（断定ではなく確認項目ベースの評価）。買取王子自体は古物商許可を持つ正規事業者で、査定料・キャンセル料・返送料・送料がすべて無料のため、<strong>納得できなければ費用ゼロで返してもらえます</strong>。高く売りたい特定タイトルがある場合は、フリマや専門店との比較・当サイトの定期実測価格DBの併用で、損のない売り方を選べます。
             </p>
           </div>
         </section>

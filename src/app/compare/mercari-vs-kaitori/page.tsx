@@ -73,7 +73,7 @@ const faqs = [
 export default function MercariVsKaitoriPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームはメルカリと買取業者どっちで売る？手数料・手取り額・入金日数を実データ比較", "datePublished": "2026-03-15", "dateModified": "2026-06-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を毎週実測して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームはメルカリと買取業者どっちで売る？手数料・手取り額・入金日数を実データ比較", "datePublished": "2026-03-15", "dateModified": "2026-06-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'メルカリ vs 買取業者' }]} />
 
       {/* Hero */}
@@ -238,7 +238,7 @@ export default function MercariVsKaitoriPage() {
           </div>
           <div className="glass-card p-5 mt-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              <strong>買取に出すと決めたら、次は「今どこが一番高いか」。</strong>当サイトが<strong>毎週実測している</strong><Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格DB</Link>で、人気ソフトの店舗別買取価格を比較できます。あわせて<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>今週の買取価格インデックス</Link>もどうぞ。
+              <strong>買取に出すと決めたら、次は「今どこが一番高いか」。</strong>当サイトが<strong>定期的に実測している</strong><Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格DB</Link>で、人気ソフトの店舗別買取価格を比較できます。あわせて<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>最新の買取価格インデックス</Link>もどうぞ。
             </p>
           </div>
         </section>
