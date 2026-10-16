@@ -69,7 +69,7 @@ export default function TakehomeSimulator() {
           <h4 className="font-bold text-sm mb-3" style={{ color: 'var(--color-electric-green)' }}>買取業者の実質手取り</h4>
           <div className="space-y-1 text-sm">
             <div className="flex justify-between"><span>査定額</span><span>{yen(kaitori)}</span></div>
-            <div className="flex justify-between"><span>手数料・送料</span><span style={{ color: 'var(--color-electric-green)' }}>0円（無料が多い）</span></div>
+            <div className="flex justify-between"><span>手数料・送料</span><span style={{ color: 'var(--color-electric-green)' }}>0円（無料の業者が多い）</span></div>
             <div className="flex justify-between font-bold border-t mt-2 pt-2"><span>手取り</span><span style={{ color: 'var(--color-electric-green)' }}>{yen(kaitoriNet)}</span></div>
           </div>
         </div>
@@ -77,15 +77,15 @@ export default function TakehomeSimulator() {
 
       <div className="p-4 rounded-lg text-center" style={{ background: 'var(--color-accent-soft)' }}>
         {winner === 'tie' ? (
-          <p className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>手取りはほぼ同額です。手間・トラブルリスクを考えると買取業者が無難です。</p>
+          <p className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>手取りはほぼ同額です。出品の手間やトラブルのリスクを考慮すると、買取業者の利用をおすすめします。</p>
         ) : winner === 'mercari' ? (
-          <p className="font-bold" style={{ color: '#2563EB' }}>この条件では <span style={{ fontSize: '1.1em' }}>メルカリが +{yen(Math.abs(diff))}</span> 手取りが多い。<span className="font-normal text-sm">（ただし出品・梱包・発送・トラブル対応の手間はかかります）</span></p>
+          <p className="font-bold" style={{ color: '#2563EB' }}>この条件では、<span style={{ fontSize: '1.1em' }}>メルカリのほうが +{yen(Math.abs(diff))}</span> 手取りが多くなります。<span className="font-normal text-sm">（ただし、出品・梱包・発送・トラブル対応の手間がかかります）</span></p>
         ) : (
-          <p className="font-bold" style={{ color: 'var(--color-electric-green)' }}>この条件では <span style={{ fontSize: '1.1em' }}>買取業者が +{yen(Math.abs(diff))}</span> 手取りが多い。<span className="font-normal text-sm">（手数料・送料無料＋手間いらず）</span></p>
+          <p className="font-bold" style={{ color: 'var(--color-electric-green)' }}>この条件では、<span style={{ fontSize: '1.1em' }}>買取業者のほうが +{yen(Math.abs(diff))}</span> 手取りが多くなります。<span className="font-normal text-sm">（手数料・送料が無料の業者が多く、出品の手間もかかりません）</span></p>
         )}
       </div>
       <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-        ※メルカリの手数料は販売価格の10%、振込手数料200円、送料は配送方法別（2026年6月時点のメルカリ公式料金）で計算。買取は手数料・送料無料の業者を想定（駿河屋の銀行振込880円など一部例外あり）。査定額は <a href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>買取価格インデックス</a> で各ソフトの最高値店を確認して入力すると精度が上がります。
+        ※メルカリの手数料は販売価格の10%、振込手数料200円、送料は配送方法別（2026年6月時点のメルカリ公式料金）で計算しています。買取は手数料・送料無料の業者を想定しています（駿河屋の銀行振込880円など一部例外あり）。査定額は <a href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>買取価格インデックス</a> で各ソフトの最高値の店舗をご確認のうえ入力すると、より正確に試算できます。
       </p>
     </div>
   );

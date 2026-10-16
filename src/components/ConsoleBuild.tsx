@@ -540,10 +540,10 @@ export default function ConsoleBuild() {
         <div className="max-w-6xl mx-auto px-4 w-full">
           <div className="text-center mb-5 md:mb-8">
             <h2 className="section-heading">
-              <span className="section-heading-bar" />使っていないゲーム機は、相場が高いうちに
+              <span className="section-heading-bar" />ゲーム機を売却するタイミング
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              買取価格は毎週動きます。当サイトは各社の実測価格を定期的に更新しているので、今が高いのかを見てから売れます。
+              買取価格は毎週変動します。当サイトでは各社の実測価格を定期的に更新しているため、現在の価格水準を確認したうえで売却をご判断いただけます。
             </p>
           </div>
 
@@ -578,7 +578,7 @@ export default function ConsoleBuild() {
             </Link>
             <span className="mx-2" style={{ opacity: 0.4 }}>|</span>
             <Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>
-              付属品が欠けるといくら下がるか
+              付属品の欠品による減額の目安
             </Link>
           </p>
         </div>

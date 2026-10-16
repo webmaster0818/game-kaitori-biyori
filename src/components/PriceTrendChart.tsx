@@ -60,7 +60,7 @@ export default function PriceTrendChart() {
   return (
     <div>
       <p className="text-sm text-gray-600 mb-4">
-        当サイトが定期的に実測している最高買取値（全店舗中の最高額）の推移です。計測日: {dates.map(fmtDate).join(" → ")}（データ点は実測のたびに増えます）。
+        当サイトが定期的に実測している最高買取値（全店舗中の最高額）の推移です。計測日: {dates.map(fmtDate).join(" → ")}（実測のたびにデータを追加しています）。
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {series.map((s) => (
@@ -76,7 +76,7 @@ export default function PriceTrendChart() {
           </div>
         ))}
       </div>
-      <p className="text-xs text-gray-400 mt-3">※各社公式の買取価格ページを当サイトが実測した値（最高値ベース・税込）。実際の査定額は商品状態・付属品により変動します。</p>
+      <p className="text-xs text-gray-400 mt-3">※各社公式の買取価格ページを当サイトが実測した値です（最高値ベース・税込）。実際の査定額は商品状態・付属品により変動します。</p>
     </div>
   );
 }

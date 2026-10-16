@@ -8,12 +8,12 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 export const metadata: Metadata = {
   title: 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧',
   description:
-    'ゼルダの伝説シリーズの買取相場を2026年6月の調査データで一覧化。ティアーズ オブ ザ キングダム・ブレス オブ ザ ワイルド(通常版/Switch2 Edition/パス付き)・知恵のかりもの等を店舗横断で比較。高く売るコツも解説。',
+    'ゼルダの伝説シリーズの買取相場を2026年6月の調査データで一覧化しています。ティアーズ オブ ザ キングダム・ブレス オブ ザ ワイルド(通常版/Switch 2 Edition/パス付き)・知恵のかりもの等を店舗横断で比較し、高く売るコツについても解説します。',
   keywords: ['ゼルダ 買取', 'ゼルダの伝説 買取価格', 'ティアキン 買取', 'ブレワイ 買取', 'ゼルダ 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'ゼルダの伝説の買取価格【2026年6月】シリーズ相場一覧',
-    description: 'ティアキン・ブレワイ等ゼルダシリーズの買取相場を店舗横断で比較。',
+    description: 'ティアキン・ブレワイ等ゼルダシリーズの買取相場を店舗横断で比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 // 2026年6月時点。各社公式買取ページおよび買取価格比較サイトの集計値（完品前提・店舗/状態/在庫により変動）
 const priceData = [
   { title: 'ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', price: '2,500〜3,800円', trend: 'やや下降', note: '発売時の高値からは下落。通常版は3,000円前後が中心' },
-  { title: 'ティアーズ オブ ザ キングダム', platform: 'Switch2 Edition', price: '3,700〜4,900円', trend: '高値', note: 'Switch2 Editionは通常版より明確に高い' },
+  { title: 'ティアーズ オブ ザ キングダム', platform: 'Switch 2 Edition', price: '3,700〜4,900円', trend: '高値', note: 'Switch 2 Editionは通常版より明確に高い傾向' },
   { title: 'ティアーズ オブ ザ キングダム コレクターズエディション', platform: 'Switch', price: '2,200〜4,000円', trend: '変動', note: '付属品の有無で査定差が大きい' },
   { title: 'ブレス オブ ザ ワイルド（通常版）', platform: 'Switch', price: '1,000〜3,800円', trend: 'やや下降', note: '店舗差が非常に大きい。上位店で3,000円台' },
   { title: 'ブレス オブ ザ ワイルド + エキスパンション・パス', platform: 'Switch', price: '4,500〜6,800円', trend: '高値', note: 'パス付きは通常版より2,000〜3,800円高い' },
-  { title: 'ブレス オブ ザ ワイルド', platform: 'Switch2 Edition', price: '4,500〜5,800円', trend: '高値', note: 'Switch2版は最高値クラス' },
+  { title: 'ブレス オブ ザ ワイルド', platform: 'Switch 2 Edition', price: '4,500〜5,800円', trend: '高値', note: 'Switch 2版は最高値の水準' },
   { title: 'ゼルダの伝説 知恵のかりもの', platform: 'Switch', price: '900〜3,200円', trend: 'やや下降', note: '2024年発売。店舗差が大きい' },
   { title: 'スカイウォードソード HD', platform: 'Switch', price: '1,300〜3,000円', trend: '安定', note: 'リマスター。専門店ほど高め' },
   { title: '夢をみる島（Switchリメイク）', platform: 'Switch', price: '2,900円前後', trend: '安定', note: '相場は2,900円前後（各社現在値は要確認）' },
@@ -35,25 +35,25 @@ const priceData = [
 
 const shopComparison = [
   { shop: 'ゲーム買取ブラザーズ', totk: '4,800円', botw: '3,800円', wisdom: '3,200円', feature: '多くのタイトルで上位の高査定' },
-  { shop: '駿河屋', totk: '〜（要確認）', botw: 'パス付6,800円', wisdom: '2,300円', feature: 'パス付き・レトロの査定が強い' },
+  { shop: '駿河屋', totk: '〜（要確認）', botw: 'パス付6,800円', wisdom: '2,300円', feature: 'パス付き・レトロの査定に強み' },
   { shop: 'カイトリワールド', totk: '4,800円', botw: '3,400円', wisdom: '2,800円', feature: '宅配中心で安定した高め査定' },
   { shop: 'ゲオ（GEO）', totk: '4,500円', botw: '3,000円', wisdom: '2,000円', feature: '即日現金化。店頭持込も可' },
-  { shop: 'ブックオフ', totk: '（店頭価格）', botw: '2,500円', wisdom: '1,500円', feature: '店頭で手軽。価格はやや控えめ' },
+  { shop: 'ブックオフ', totk: '（店頭価格）', botw: '2,500円', wisdom: '1,500円', feature: '店頭で手軽に利用可能。価格はやや控えめ' },
 ];
 
 const tips = [
-  { title: 'Switch2 Editionは別物として高値', description: 'ブレワイ・ティアキンはSwitch2 Editionが通常版より明確に高く査定されます（通常版3,000円前後に対しSwitch2版は4,500〜5,800円）。パッケージの版を確認してから売りましょう。' },
-  { title: 'エキスパンション・パス付きは大幅プラス', description: 'ブレワイのエキスパンション・パス付きは通常版より2,000〜3,800円高い相場です。DLCコードが未使用かどうかが査定の分かれ目になります。' },
-  { title: '店舗差が大きいので必ず複数比較', description: '同じブレワイ通常版でも上位店3,800円・下位店1,000円台と2倍以上の差が出ます。一括査定や複数店の公式価格を見比べるのが必須です。' },
-  { title: 'レトロゼルダは完品で専門店へ', description: 'SFC「神々のトライフォース」やN64「時のオカリナ」などレトロ作品は、箱・説明書付き完品かどうかで価格が大きく変わります。レトロに強い専門店で査定を。' },
+  { title: 'Switch 2 Editionは通常版と区別され高値', description: 'ブレワイ・ティアキンはSwitch 2 Editionが通常版より明確に高く査定されます（通常版3,000円前後に対しSwitch 2版は4,500〜5,800円）。パッケージの版をご確認のうえ、売却することをおすすめします。' },
+  { title: 'エキスパンション・パス付きは大幅な上乗せが期待できる', description: 'ブレワイのエキスパンション・パス付きは通常版より2,000〜3,800円高い相場です。DLCコードが未使用かどうかが査定の分かれ目になります。' },
+  { title: '店舗差が大きいため複数店で比較する', description: '同じブレワイ通常版でも上位店3,800円・下位店1,000円台と2倍以上の差が出ます。一括査定や複数店の公式価格を見比べることをおすすめします。' },
+  { title: 'レトロゼルダは完品で専門店に売却する', description: 'SFC「神々のトライフォース」やN64「時のオカリナ」などレトロ作品は、箱・説明書付き完品かどうかで価格が大きく変わります。レトロゲームに強い専門店での査定をおすすめします。' },
 ];
 
 const faqs = [
-  { q: 'ゼルダで今いちばん高く売れるのはどれですか？', a: '2026年6月時点では、ブレス オブ ザ ワイルドのエキスパンション・パス付き（4,500〜6,800円）やSwitch2 Edition（4,500〜5,800円）、ティアキンのSwitch2 Edition（3,700〜4,900円）が高値です。通常版のティアキン・ブレワイは3,000円前後が中心です。価格は店舗・状態で変動するため、売る直前に各社の買取価格を確認してください。' },
-  { q: 'ブレワイの「通常版」と「Switch2 Edition」で査定はどのくらい違いますか？', a: '通常版は1,000〜3,800円（上位店で3,000円台）なのに対し、Switch2 Editionは4,500〜5,800円と1,500〜2,000円ほど高くなります。パッケージ表記でどちらの版か確認してから売却するのがおすすめです。' },
-  { q: 'ティアキンはこれから値下がりしますか？', a: '通常版は発売時の高値から下落基調が続いています。一方でSwitch2 Editionは高値を維持しています。通常版を持っている場合は、新たな値下げ前の早めの売却が無難です。中長期では緩やかな下落が見込まれます。' },
-  { q: 'エキスパンション・パス付きを高く売るコツは？', a: 'DLCのダウンロードコードが未使用であることが重要です。使用済みの場合は実質通常版扱いになり、パス付きの上乗せ（2,000〜3,800円）が期待できません。コード未使用なら駿河屋などパス付きを高く評価する店が有利です。' },
-  { q: 'レトロのゼルダ（SFC・N64）はどこで売るべきですか？', a: 'レトロゲームに強い専門店（駿河屋など）がおすすめです。レトロ作品は箱・説明書・付属品の有無で査定が大きく変わり、完品なら数千円になることもあります。一般店では「古いソフト」として安値になりがちなので、専門店で査定しましょう。' },
+  { q: 'ゼルダで現在最も高く売れるのはどれですか？', a: '2026年6月時点では、ブレス オブ ザ ワイルドのエキスパンション・パス付き（4,500〜6,800円）やSwitch 2 Edition（4,500〜5,800円）、ティアキンのSwitch 2 Edition（3,700〜4,900円）が高値です。通常版のティアキン・ブレワイは3,000円前後が中心です。価格は店舗・状態で変動するため、売る直前に各社の買取価格をご確認ください。' },
+  { q: 'ブレワイの「通常版」と「Switch 2 Edition」で査定はどのくらい違いますか？', a: '通常版は1,000〜3,800円（上位店で3,000円台）なのに対し、Switch 2 Editionは4,500〜5,800円と1,500〜2,000円ほど高くなります。パッケージ表記でどちらの版かをご確認のうえ、売却することをおすすめします。' },
+  { q: 'ティアキンはこれから値下がりしますか？', a: '通常版は発売時の高値から下落基調が続いています。一方でSwitch 2 Editionは高値を維持しています。通常版を持っている場合は、さらなる値下がりの前に、早めに売却することをおすすめします。中長期では緩やかな下落が見込まれます。' },
+  { q: 'エキスパンション・パス付きを高く売るコツはありますか？', a: 'DLCのダウンロードコードが未使用であることが重要です。使用済みの場合は実質通常版扱いになり、パス付きの上乗せ（2,000〜3,800円）が期待できません。コード未使用なら駿河屋などパス付きを高く評価する店が有利です。' },
+  { q: 'レトロのゼルダ（SFC・N64）はどこで売るべきですか？', a: 'レトロゲームに強い専門店（駿河屋など）での売却をおすすめします。レトロ作品は箱・説明書・付属品の有無で査定が大きく変わり、完品なら数千円になることもあります。一般店では「古いソフト」として安値になりやすいため、専門店での査定をおすすめします。' },
 ];
 
 const PAGE_TITLE = 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧';
@@ -61,7 +61,7 @@ const PAGE_TITLE = 'ゼルダの伝説の買取価格【2026年6月】ティア�
 export default function ZeldaPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ゼルダの伝説の買取価格' }]} />
 
       {/* Hero */}
@@ -70,7 +70,7 @@ export default function ZeldaPage() {
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゼルダの伝説の買取価格【2026年6月】</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ティアーズ オブ ザ キングダム、ブレス オブ ザ ワイルド（通常版／Switch2 Edition／パス付き）、知恵のかりものなど、ゼルダ主要タイトルの買取相場を2026年6月の調査データで一覧化しました。同じタイトルでも版と店舗で大きく差が出ます。
+            ティアーズ オブ ザ キングダム、ブレス オブ ザ ワイルド（通常版／Switch 2 Edition／パス付き）、知恵のかりものなど、ゼルダ主要タイトルの買取相場を2026年6月の調査データで一覧化しました。同じタイトルでも、版と店舗によって買取価格に大きな差が出ます。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>調査時点: 2026年6月（各社公式買取ページ・買取価格比較サイト集計）</p>
           <div className="flex flex-wrap gap-3 mt-4">
@@ -163,8 +163,8 @@ export default function ZeldaPage() {
 
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>ゼルダを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版（Switch2 Edition・パス付き）と店舗で査定は大きく変わります。売る前に複数の公式価格をチェックしましょう。</p>
+          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>ゼルダを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために</h2>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版（Switch 2 Edition・パス付き）と店舗で査定は大きく変わります。売却前に、複数店の公式買取価格をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>

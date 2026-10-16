@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】',
   description:
-    'PS4ソフトの買取相場と人気タイトルの価格目安を徹底解説。値崩れしにくいソフトの特徴、廉価版との違い、おすすめ買取サービス3社比較まで完全網羅。古いソフトでもまだ売れます。',
+    'PS4ソフトの買取相場と人気タイトルの価格目安を解説します。値崩れしにくいソフトの特徴、廉価版との違い、おすすめ買取サービス3社の比較を掲載しています。発売から年数が経ったソフトも売却できます。',
   keywords: ['PS4ソフト 買取', 'プレステ4 ソフト 売る', 'PS4 ソフト 買取相場'],
   openGraph: {
     images: ['/og.png'],
     title: 'PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】',
-    description: 'PS4ソフトの買取相場と値崩れしにくいソフトの特徴を徹底解説。',
+    description: 'PS4ソフトの買取相場と値崩れしにくいソフトの特徴を解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -34,35 +34,35 @@ const priceData = [
 const stableFeatures = [
   { title: '独占タイトル', description: 'PS4でしか遊べない独占タイトルは中古需要が安定しています。Ghost of TsushimaやペルソナなどのPS独占作品は値崩れしにくい傾向があります。' },
   { title: '高評価の名作', description: 'メタスコア90以上の名作は長期的に需要が安定します。SEKIROやThe Last of Usシリーズなどは発売から年数が経っても一定の買取価格を維持しています。' },
-  { title: 'シリーズの完結作品', description: 'シリーズの集大成となるタイトルはファン需要が根強く、値崩れしにくい傾向があります。ペルソナ5 ザ・ロイヤルなどが好例です。' },
+  { title: 'シリーズの完結作品', description: 'シリーズの集大成となるタイトルはファン需要が根強く、値崩れしにくい傾向があります。ペルソナ5 ザ・ロイヤルなどが代表例です。' },
   { title: 'オンライン非依存', description: 'オフラインで完結するシングルプレイゲームは、サーバー終了の影響を受けないため長期的に価値が安定します。' },
 ];
 
 const budgetDiff = [
-  { item: '通常版（初回版）', description: '初回版・通常版は買取価格が最も高い。特に初回特典付きは付加価値あり。' },
+  { item: '通常版（初回版）', description: '初回版・通常版は買取価格が最も高くなります。特に初回特典付きは付加価値があります。' },
   { item: 'Greatest Hits（廉価版）', description: '廉価版は通常版より30〜50%程度安い買取価格になります。パッケージが異なるため区別されます。' },
-  { item: 'PSVR対応版', description: 'PSVR対応タイトルはVR機器の需要に左右されます。VRユーザー向けの希少タイトルは高値がつくことも。' },
+  { item: 'PSVR対応版', description: 'PSVR対応タイトルはVR機器の需要に左右されます。VRユーザー向けの希少タイトルは高値がつくこともあります。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '古いPS4ソフトでも高値の業者を発見', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '古いPS4ソフトでも高値の業者を探しやすい', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: 'PS4本体とまとめて即日現金化', rank: 2 },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: '低価格ソフトもまとめて引取OK', rank: 3 },
+  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: '低価格ソフトもまとめて引取可', rank: 3 },
 ];
 
 const faqs = [
-  { q: 'PS4ソフトはまだ売れますか？', a: 'はい、PS4は現役ハードとしてまだ需要があり、人気タイトルであれば1,000〜2,500円程度で買取されます。PS5との互換性もあるため、PS4ソフトの需要は当分続く見込みです。' },
+  { q: 'PS4ソフトはまだ売れますか？', a: 'はい、売却できます。PS4は現役ハードとして需要があり、人気タイトルであれば1,000〜2,500円程度で買取されます。PS5との互換性もあるため、PS4ソフトの需要は当分続く見込みです。' },
   { q: '廉価版（Greatest Hits）は買取価格が安くなりますか？', a: 'はい、通常版と比較して30〜50%程度安くなります。廉価版はパッケージに「PlayStation Hits」等の表記があり、査定時に区別されます。' },
   { q: 'PS4ソフトの買取相場はどのくらいですか？', a: '人気タイトルで800〜2,500円程度が相場です。発売から年数が経っているため新品時ほどの価格にはなりませんが、名作・独占タイトルは比較的高値を維持しています。' },
   { q: 'ディスクに傷があっても売れますか？', a: '動作に支障のない軽微な傷であれば買取可能です。ただし読み取りエラーが起きるレベルの傷がある場合は買取不可または大幅減額になります。' },
-  { q: 'PS4ソフトをまとめて売るとお得ですか？', a: 'はい、まとめ売りボーナスがつくサービスがあります。特に1本あたりの買取価格が低いPS4ソフトは、まとめ売りで効率的に現金化するのがおすすめです。' },
+  { q: 'PS4ソフトをまとめて売ると有利ですか？', a: 'はい、まとめ売りボーナスがつくサービスがあります。特に1本あたりの買取価格が低いPS4ソフトは、まとめ売りで効率的に現金化することをおすすめします。' },
   { q: 'PS4とPS5のクロスジェネレーション版はどちらが高く売れますか？', a: '一般的にPS5版のほうが高値ですが、同梱のPS4版ディスクも需要があります。PS5を持っていないユーザー向けの需要があるため、PS4版も一定の価格で買取されます。' },
 ];
 
 export default function PS4SoftPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4ソフト買取おすすめ3選｜プレステ4ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'PS4ソフト' }]} />
 
       {/* Hero */}
@@ -73,7 +73,7 @@ export default function PS4SoftPage() {
             PS4ソフト 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            PS4ソフトの買取相場を人気タイトルで徹底調査。値崩れしにくいソフトの特徴、廉価版との買取価格の違い、おすすめ買取サービス3社比較まで、PS4ソフトを売る前に知っておきたい情報を完全網羅しています。
+            当サイトでは、PS4ソフトの買取相場を人気タイトルごとに調査しています。値崩れしにくいソフトの特徴、廉価版との買取価格の違い、おすすめ買取サービス3社の比較など、PS4ソフトの売却前に確認いただきたい情報をまとめました。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -208,10 +208,10 @@ export default function PS4SoftPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            PS4ソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            PS4ソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            古いソフトでもまだ売れます。複数社を比較して最高値を見つけましょう。
+            発売から年数が経ったソフトも売却できます。複数社を比較して最高値を確認することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">

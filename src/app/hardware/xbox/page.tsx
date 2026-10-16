@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
   description:
-    'Xbox Series X・Series S・Xbox Oneの買取相場とおすすめ買取サービス3社を比較。日本でのXbox需要の実態、Game Passの注意点、高く売るコツを徹底解説。',
+    'Xbox Series X・Series S・Xbox Oneの買取相場とおすすめ買取サービス3社を比較しています。日本でのXbox需要の実態、Game Passの注意点、高く売るコツについても解説します。',
   keywords: ['Xbox 買取', 'Xbox Series X 買取', 'Xbox Series S 買取', 'Xbox One 買取', 'Xbox 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
-    description: 'Xbox Series X/S・Xbox Oneの買取相場とXbox需要の実態を解説。',
+    description: 'Xbox Series X/S・Xbox Oneの買取相場とXbox需要の実態について解説しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -28,29 +28,29 @@ const priceData = [
 
 const demandInfo = [
   { title: '日本国内の需要は限定的', description: '日本ではPlayStationやSwitchが圧倒的なシェアを持つため、Xboxの中古需要は限られています。そのため買取価格もPS5と比べると低めの傾向があります。' },
-  { title: '海外輸出での需要あり', description: '一方、海外（特に北米・欧州）ではXboxの人気は高く、海外輸出を行う買取業者であれば相場より高めの買取価格を提示してくれることがあります。' },
-  { title: 'ヒカカク！で専門業者を探す', description: '一般的なリサイクルショップよりも、Xbox取扱いに慣れた専門業者の方が適正価格で買い取ってくれます。ヒカカク！なら専門業者を見つけやすいのでおすすめです。' },
+  { title: '海外輸出における需要', description: '一方、海外（特に北米・欧州）ではXboxの人気は高く、海外輸出を行う買取業者であれば相場より高めの買取価格を提示してくれることがあります。' },
+  { title: 'ヒカカク！で専門業者を探す', description: '一般的なリサイクルショップよりも、Xboxの取り扱いに慣れた専門業者のほうが、適正価格で買い取る傾向があります。ヒカカク！では専門業者を見つけやすいため、利用をおすすめします。' },
 ];
 
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'Xbox専門業者・海外輸出業者も参加', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: 'Xboxも出張買取対応で手間なし', rank: 2 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: 'Xboxも出張買取に対応し、手間を軽減', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム全般を幅広く取扱い', rank: 3 },
 ];
 
 const faqs = [
-  { q: 'Xboxは日本でも買い取ってもらえますか？', a: 'はい、買取可能です。日本国内での需要は限られますが、海外輸出を行う業者や専門業者であれば適正価格で買い取ってもらえます。ヒカカク！で複数社に査定依頼するのがおすすめです。' },
+  { q: 'Xboxは日本でも買い取ってもらえますか？', a: 'はい、買取可能です。日本国内での需要は限られますが、海外輸出を行う業者や専門業者であれば適正価格で買い取ってもらえます。ヒカカク！で複数社に査定を依頼することをおすすめします。' },
   { q: 'Xbox Series Xの買取相場はどのくらいですか？', a: '状態や付属品の有無によりますが、22,000〜40,000円が目安です。箱・付属品完備の美品であれば上限に近い金額が期待できます。' },
   { q: 'Game Passに加入したままでも売れますか？', a: '売ること自体は可能ですが、必ず売却前にGame Passのサブスクリプションを解除し、Microsoftアカウントからサインアウトしてください。アカウントに紐づいたゲームライセンスは譲渡できません。' },
   { q: 'Xbox Oneの初期化方法を教えてください', a: '「設定」→「システム」→「本体の情報」→「本体のリセット」→「すべてリセットして削除」を選択します。Microsoftアカウントのサインアウトも忘れずに行ってください。' },
-  { q: 'Xboxのコントローラーだけでも売れますか？', a: 'はい、Xboxワイヤレスコントローラー単品でも2,000〜4,000円程度で買取可能です。Eliteコントローラーは5,000〜10,000円と高額査定が期待できます。限定デザインモデルはさらに高値に。' },
+  { q: 'Xboxのコントローラーだけでも売れますか？', a: 'はい、Xboxワイヤレスコントローラー単品でも2,000〜4,000円程度で買取可能です。Eliteコントローラーは5,000〜10,000円と高額査定が期待できます。限定デザインモデルは、さらに高値がつく傾向があります。' },
   { q: 'Xboxのゲームソフトは買い取ってもらえますか？', a: 'はい、パッケージ版のXboxソフトは買取対象です。ただし日本語版の需要は低いため、買取価格は控えめな傾向があります。北米版などは海外需要がある場合もあります。' },
 ];
 
 export default function XboxPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Xbox' }]} />
 
       {/* Hero */}
@@ -61,7 +61,7 @@ export default function XboxPage() {
             Xbox 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            Xbox Series X・Series S・Xbox Oneの買取相場を徹底調査。日本でのXbox需要の実態、Game Passの注意点、おすすめ買取サービス3社の比較まで、Xboxを売る前に知っておきたい情報をまとめました。
+            Xbox Series X・Series S・Xbox Oneの買取相場を調査しました。日本でのXbox需要の実態、Game Passの注意点、おすすめ買取サービス3社の比較など、Xboxを売却する前にご確認いただきたい情報をまとめています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -121,9 +121,9 @@ export default function XboxPage() {
               Xbox Game Passに加入中の方は、売却前に以下の手順を必ず行ってください。アカウントに紐づいたゲームライセンスやサブスクリプションは本体を譲渡しても引き継がれません。
             </p>
             <ol className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>1. Game Passサブスクリプションの確認</strong> - 自動更新をオフにするか、サブスクリプションをキャンセル</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>1. Game Passサブスクリプションの確認</strong> - 自動更新をオフにするか、サブスクリプションを解約</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>2. Microsoftアカウントからサインアウト</strong> - 「設定」→「アカウント」→「サインアウト」</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>3. 「ホームXbox」の登録解除</strong> - 他のユーザーがあなたのゲームにアクセスできなくなるよう解除</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>3. 「ホームXbox」の登録解除</strong> - 他のユーザーがご自身のゲームにアクセスできないよう解除</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>4. 本体のリセット</strong> - 「設定」→「システム」→「本体の情報」→「本体のリセット」→「すべてリセットして削除」</li>
             </ol>
           </div>
@@ -188,7 +188,7 @@ export default function XboxPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            Xboxを<span style={{ color: 'var(--color-electric-green)' }}>高く売る</span>なら今すぐ査定
+            Xboxを<span style={{ color: 'var(--color-electric-green)' }}>高く売る</span>ための査定のご案内
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
             Xbox専門業者に査定してもらえば、一般的なリサイクルショップより高値がつく可能性があります。

@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】',
   description:
-    'FF7リバース・FF16・FFピクセルリマスター等の買取相場を一覧表で掲載。プラットフォーム別比較、限定版プレミア情報、値崩れしにくいタイトルの特徴まで徹底解説。',
+    'FF7リバース・FF16・FFピクセルリマスター等の買取相場を一覧表で掲載しています。プラットフォーム別の比較、限定版のプレミア情報、値崩れしにくいタイトルの特徴について解説します。',
   keywords: ['FF ファイナルファンタジー 買取', 'FF7リバース 買取', 'FF16 買取相場', 'FF 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】',
-    description: 'FFシリーズ全タイトルの買取相場をプラットフォーム別に徹底比較。',
+    description: 'FFシリーズ全タイトルの買取相場をプラットフォーム別に比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -26,7 +26,7 @@ const priceData = [
   { title: 'FINAL FANTASY ピクセルリマスター（1-6）', platform: 'PS4/Switch', price: '3,000〜4,500円', trend: '安定', note: 'コレクターズBOXは10,000円超も' },
   { title: 'FINAL FANTASY XIV（パッケージ版）', platform: 'PS5/PS4', price: '500〜1,500円', trend: '下降', note: 'オンライン専用のため需要限定的' },
   { title: 'FINAL FANTASY X/X-2 HD Remaster', platform: 'PS4/Switch', price: '1,000〜2,000円', trend: '安定', note: '名作リマスターとして安定した人気' },
-  { title: 'FINAL FANTASY XII THE ZODIAC AGE', platform: 'PS4/Switch', price: '800〜1,500円', trend: '安定', note: 'やり込み要素で根強いファンあり' },
+  { title: 'FINAL FANTASY XII THE ZODIAC AGE', platform: 'PS4/Switch', price: '800〜1,500円', trend: '安定', note: 'やり込み要素が評価され根強い人気' },
   { title: 'FINAL FANTASY（SFC/FC オリジナル）', platform: 'SFC/FC', price: '500〜5,000円', trend: '上昇', note: '状態とタイトルで大幅に変動' },
   { title: 'FINAL FANTASY VII（PS1 オリジナル）', platform: 'PS1', price: '300〜1,500円', trend: '安定', note: '流通量が多く安価。黒ラベルは高値' },
 ];
@@ -40,17 +40,17 @@ const platformComparison = [
 ];
 
 const premiumEditions = [
-  { edition: 'FF7 REBIRTH デラックスエディション', premium: '＋2,000〜4,000円', detail: 'SteelBook＋追加ミニゲーム。外箱完備なら大幅プレミア。' },
-  { edition: 'FF16 デラックスエディション', premium: '＋1,500〜3,000円', detail: 'SteelBook＋クライヴのピンバッジ等。限定特典の有無で差。' },
+  { edition: 'FF7 REBIRTH デラックスエディション', premium: '＋2,000〜4,000円', detail: 'SteelBook＋追加ミニゲーム。外箱完備品は大幅なプレミアが付く傾向。' },
+  { edition: 'FF16 デラックスエディション', premium: '＋1,500〜3,000円', detail: 'SteelBook＋クライヴのピンバッジ等。限定特典の有無で価格差あり。' },
   { edition: 'FFピクセルリマスター コレクターズエディション', premium: '＋5,000〜10,000円', detail: 'ビニールレコード＋アートブック付き。コレクター需要が非常に高い。' },
-  { edition: 'FF7 REMAKE 1st CLASS EDITION', premium: '＋8,000〜15,000円', detail: 'クラウドフィギュア付き。フィギュアの状態が価格を左右。' },
+  { edition: 'FF7 REMAKE 1st CLASS EDITION', premium: '＋8,000〜15,000円', detail: 'クラウドフィギュア付き。フィギュアの状態が価格を大きく左右します。' },
 ];
 
 const faqs = [
   { q: 'FFシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではFF7 REBIRTHが3,500〜5,000円で最も高値です。限定版ではFFピクセルリマスター コレクターズエディションが10,000円超のプレミアがつくこともあります。レトロ作品では状態の良いSFC版FFシリーズが高額になるケースがあります。' },
-  { q: 'FF7リバースはいつ売るのがベストですか？', a: 'FF7リメイクプロジェクト完結編の正式発表前が理想的です。完結編が発表されると「まず最新作を」という心理が働き、旧作の需要が一時的に下がる可能性があります。逆に完結編発売直前は予習需要で上がることもあるため、動向を注視しましょう。' },
+  { q: 'FF7リバースはいつ売るのが最適ですか？', a: 'FF7リメイクプロジェクト完結編の正式発表前が理想的です。完結編が発表されると「まず最新作を」という心理が働き、旧作の需要が一時的に下がる可能性があります。一方で、完結編の発売直前は予習需要で上がることもあるため、動向を注視することをおすすめします。' },
   { q: 'PS5版とSwitch版、どちらが高く売れますか？', a: 'マルチプラットフォームのFFタイトルは、Switch版の方がやや高く売れる傾向があります。Switch版は携帯モードで遊べる利便性が評価されるためです。特にCRISIS CORE REUNIONやFFピクセルリマスターはSwitch版の方が500〜1,000円ほど高値です。' },
-  { q: 'FFの限定版は通常版よりどれくらい高く売れますか？', a: '限定版の内容によりますが、一般的に1,500〜15,000円のプレミアがつきます。特にフィギュアやアートブック付きの大型限定版は高額になりやすいです。ただし外箱や特典が欠品していると通常版と変わらない価格になることもあるので、保管状態が重要です。' },
+  { q: 'FFの限定版は通常版よりどれくらい高く売れますか？', a: '限定版の内容によりますが、一般的に1,500〜15,000円のプレミアがつきます。特にフィギュアやアートブック付きの大型限定版は高額になりやすい傾向があります。ただし外箱や特典が欠品していると通常版と変わらない価格になることもあるため、保管状態が重要です。' },
   { q: 'FFのオンラインタイトル（FF14）のパッケージ版は売れますか？', a: 'パッケージ版の売却は可能ですが、オンラインゲームのためソフト単体の需要は低く、500〜1,500円程度です。利用権コードが未使用であれば価値がありますが、使用済みの場合はほぼ値がつかないこともあります。' },
   { q: 'レトロFF（SFC・PS1）の買取相場はどうですか？', a: 'SFC版FFシリーズは500〜5,000円と状態・タイトルで大きく変動します。特にFF6やFF5の箱・説明書付き完品は高額です。PS1版FF7は流通量が非常に多いため300〜1,500円と安価ですが、初期版の黒ラベル盤は希少価値があり高値がつきます。' },
 ];
@@ -58,7 +58,7 @@ const faqs = [
 export default function FFPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'FFシリーズ買取相場' }]} />
 
       {/* Hero */}
@@ -69,7 +69,7 @@ export default function FFPage() {
             ファイナルファンタジー(FF)シリーズの買取相場
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            FF7リバース・FF16・FFピクセルリマスターなど最新作から、SFC・PS1のレトロ作品まで、FFシリーズ全タイトルの買取相場を一覧表で掲載。プラットフォーム別の価格比較、限定版のプレミア情報、値崩れしにくいタイトルの特徴まで徹底解説します。
+            FF7リバース・FF16・FFピクセルリマスターなど最新作から、SFC・PS1のレトロ作品まで、FFシリーズ全タイトルの買取相場を一覧表で掲載しています。プラットフォーム別の価格比較、限定版のプレミア情報、値崩れしにくいタイトルの特徴について解説します。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -170,7 +170,7 @@ export default function FFPage() {
           <div className="glass-card p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしにくい</h3>
+                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしにくいタイトル</h3>
                 <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
                   <li>・シリーズ最新作（発売1年以内）</li>
                   <li>・リメイク作品（FF7R関連）</li>
@@ -179,7 +179,7 @@ export default function FFPage() {
                 </ul>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしやすい</h3>
+                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしやすいタイトル</h3>
                 <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
                   <li>・PS Plus/Game Passで配布されたタイトル</li>
                   <li>・オンライン専用タイトル（FF14等）</li>
@@ -221,10 +221,10 @@ export default function FFPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            FFソフトの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>を今すぐ確認
+            FFソフトの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>の確認方法
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            FFシリーズは限定版の有無で大きく価格が変わります。まずは一括査定で最高値をチェック。
+            FFシリーズは限定版の有無で大きく価格が変わります。まずは一括査定で各社の価格を比較し、最高値をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">

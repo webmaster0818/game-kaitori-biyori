@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド',
+  title: 'ゲーム買取前のデータ削除・初期化方法｜機種別ガイド',
   description:
-    'ゲーム買取前に必須のデータ削除・初期化方法をSwitch・PS5・PS4・Xbox・3DSの機種別にステップバイステップで解説。個人情報保護の重要性、セーブデータのバックアップ方法、削除しないリスクまで完全網羅。',
+    'ゲーム買取前に必要なデータ削除・初期化の方法を、Switch・PS5・PS4・Xbox・3DSの機種別に手順を追って解説します。個人情報保護の重要性、セーブデータのバックアップ方法、削除しない場合のリスクもまとめています。',
   keywords: ['ゲーム 買取前 データ削除', 'ゲーム 初期化', 'Switch 初期化 方法', 'PS5 データ消去', '買取前 やること'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド',
-    description: 'Switch・PS5・PS4・Xbox・3DSの初期化手順をステップバイステップで解説。',
+    title: 'ゲーム買取前のデータ削除・初期化方法｜機種別ガイド',
+    description: 'Switch・PS5・PS4・Xbox・3DSの初期化手順を、ステップごとに解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -22,15 +22,15 @@ const whyNeeded = [
   { title: '個人情報の流出防止', description: 'ゲーム機にはアカウント情報（メールアドレス、パスワード）、クレジットカード情報、購入履歴、フレンドリストなどの個人情報が保存されています。初期化しないと次のオーナーにこれらの情報が渡ってしまいます。' },
   { title: 'アカウントの不正利用防止', description: 'ログイン状態のままだと、次のオーナーがあなたのアカウントでゲームを購入したり、オンラインサービスを利用したりできてしまいます。課金被害に遭う可能性もあります。' },
   { title: '買取拒否の防止', description: '多くの買取業者は、アカウント連携が解除されていない本体の買取を拒否します。事前に初期化しておくことで、スムーズに買取が完了します。' },
-  { title: '査定額アップ', description: '初期化済みの本体は、買取業者側での手間が省けるため、査定がスムーズに進みます。動作確認もしやすくなるため、結果的に査定額がアップすることがあります。' },
+  { title: '査定額の向上', description: '初期化済みの本体は、買取業者側での手間が省けるため、査定がスムーズに進みます。動作確認もしやすくなるため、結果的に査定額が上がることがあります。' },
 ];
 
 const risks = [
-  { risk: 'クレジットカードの不正利用', level: '高', description: '保存されたカード情報で勝手にゲームを購入される可能性。被害額は数万円に及ぶことも。' },
-  { risk: 'アカウント乗っ取り', level: '高', description: 'ログイン状態からパスワードを変更され、アカウントごと奪われる可能性。' },
-  { risk: '個人情報の流出', level: '中', description: '名前・住所・メールアドレスなどが第三者に渡り、迷惑メールや詐欺に悪用される可能性。' },
-  { risk: '買取拒否・減額', level: '中', description: 'アカウント連携が残っていると買取を断られたり、減額されたりするケースが多い。' },
-  { risk: 'フレンドへの迷惑', level: '低', description: '次のオーナーがあなたのフレンドにメッセージを送信するなど、周囲に迷惑がかかる可能性。' },
+  { risk: 'クレジットカードの不正利用', level: '高', description: '保存されたカード情報で、無断でゲームを購入されるおそれがあります。被害額が数万円に及ぶこともあります。' },
+  { risk: 'アカウント乗っ取り', level: '高', description: 'ログイン状態のままパスワードを変更され、アカウントごと奪われるおそれがあります。' },
+  { risk: '個人情報の流出', level: '中', description: '名前・住所・メールアドレスなどが第三者に渡り、迷惑メールや詐欺に悪用されるおそれがあります。' },
+  { risk: '買取拒否・減額', level: '中', description: 'アカウント連携が残っていると、買取を断られたり減額されたりするケースが多くあります。' },
+  { risk: 'フレンドへの迷惑', level: '低', description: '次のオーナーがあなたのフレンドにメッセージを送信するなど、周囲に迷惑がかかるおそれがあります。' },
 ];
 
 const resetSteps = [
@@ -80,7 +80,7 @@ const resetSteps = [
   {
     console: 'Xbox Series X / Xbox Series S',
     backup: [
-      'Xbox Live Goldまたは Game Pass加入者：セーブデータは自動でクラウドに保存される',
+      'Xbox Live Goldまたは Game Pass加入者：セーブデータは自動でクラウドに保存されます',
       '未加入の場合：外付けUSBストレージにゲームデータをコピー',
     ],
     steps: [
@@ -93,7 +93,7 @@ const resetSteps = [
   {
     console: 'Nintendo 3DS / 3DS LL / New 3DS',
     backup: [
-      'セーブデータはカートリッジ内に保存されるため、カートリッジを取り出せばOK',
+      'セーブデータはカートリッジ内に保存されるため、カートリッジを取り出せば問題ありません',
       'ダウンロード版のセーブデータはSDカードに保存（SDカードを取り外して保管）',
     ],
     steps: [
@@ -101,7 +101,7 @@ const resetSteps = [
       '「初期化」→「本体の初期化」を選択',
       'ニンテンドーネットワークIDの解除（ニンテンドーのWebサイトから）',
       'SDカード / microSDカードを取り外す',
-      '初期化完了後、言語選択画面が表示されればOK',
+      '初期化完了後、言語選択画面が表示されれば完了です',
     ],
   },
 ];
@@ -117,18 +117,18 @@ const checklist = [
 ];
 
 const faqs = [
-  { q: '初期化するとダウンロード購入したゲームはどうなりますか？', a: '本体からは削除されますが、購入履歴はアカウントに紐づいています。新しい本体で同じアカウントにログインすれば再ダウンロード可能です。初期化前にアカウントの連携解除を行いましょう。' },
-  { q: '初期化に失敗した場合はどうすればいいですか？', a: 'まず本体を再起動してもう一度試してください。それでも失敗する場合は、各メーカーの公式サポートに連絡しましょう。Nintendo（0570-021-010）、PlayStation（0570-000-638）で電話サポートを受けられます。' },
-  { q: 'クイック初期化とフル初期化、どちらを選ぶべき？', a: '買取前にはフル初期化を強くおすすめします。クイック初期化はデータのインデックスのみ削除するため、復元ソフトでデータを取り出せる可能性があります。フル初期化はストレージを完全に上書きするため、データ復元がほぼ不可能です。' },
+  { q: '初期化するとダウンロード購入したゲームはどうなりますか？', a: '本体からは削除されますが、購入履歴はアカウントに紐づいています。新しい本体で同じアカウントにログインすれば再ダウンロード可能です。初期化前に、アカウントの連携解除を行ってください。' },
+  { q: '初期化に失敗した場合はどうすればよいですか？', a: 'まず本体を再起動してもう一度試してください。それでも失敗する場合は、各メーカーの公式サポートにお問い合わせください。Nintendo（0570-021-010）、PlayStation（0570-000-638）で電話サポートを受けられます。' },
+  { q: 'クイック初期化とフル初期化は、どちらを選ぶべきですか？', a: '買取前にはフル初期化を強くおすすめします。クイック初期化はデータのインデックスのみ削除するため、復元ソフトでデータを取り出せる可能性があります。フル初期化はストレージを完全に上書きするため、データ復元がほぼ不可能です。' },
   { q: 'SwitchのセーブデータはSDカードに保存されていますか？', a: 'いいえ、Switchのセーブデータは本体メモリに保存されます。SDカードにはダウンロードしたゲームソフトのデータやスクリーンショットが保存されます。本体を初期化すればセーブデータは削除されますが、SDカードのデータは別途フォーマットが必要です。' },
   { q: '買取業者側で初期化してくれますか？', a: '多くの買取業者は受け取った本体を初期化しますが、発送から初期化までの間に個人情報が閲覧されるリスクがあります。自分で初期化してから送ることを強くおすすめします。ウリエルの出張買取なら、その場で初期化のサポートを受けられます。' },
-  { q: 'ゲームソフト（ディスク・カートリッジ）のセーブデータも消す必要がありますか？', a: 'PS4/PS5のディスク版はセーブデータが本体に保存されるため、本体を初期化すれば消去されます。3DSのカートリッジはセーブデータがカートリッジ内に保存されるため、売却する場合はゲーム内の設定からセーブデータを削除しましょう。' },
+  { q: 'ゲームソフト（ディスク・カートリッジ）のセーブデータも消す必要がありますか？', a: 'PS4/PS5のディスク版はセーブデータが本体に保存されるため、本体を初期化すれば消去されます。3DSのカートリッジはセーブデータがカートリッジ内に保存されるため、売却する場合はゲーム内の設定からセーブデータを削除してください。' },
 ];
 
 export default function DataDeletePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取前のデータ削除・初期化方法｜機種別完全ガイド", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取前のデータ削除・初期化方法｜機種別ガイド", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'データ削除・初期化' }]} />
 
       {/* Hero */}
@@ -139,7 +139,7 @@ export default function DataDeletePage() {
             ゲーム買取前のデータ削除・初期化ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            Switch・PS5・PS4・Xbox・3DSの初期化手順をステップバイステップで解説。個人情報の流出を防ぎ、スムーズな買取を実現するための完全マニュアルです。
+            Switch・PS5・PS4・Xbox・3DSの初期化手順を、ステップごとに解説します。個人情報の流出を防ぎ、買取を円滑に進めるための手順をまとめています。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年5月</p>
         </div>
@@ -148,7 +148,7 @@ export default function DataDeletePage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Why Needed */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />なぜデータ削除が必要なのか</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />データ削除が必要な理由</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {whyNeeded.map((item) => (
               <div key={item.title} className="glass-card p-5">
@@ -161,7 +161,7 @@ export default function DataDeletePage() {
 
         {/* Risks */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />削除しないとどうなる？リスク一覧</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />データを削除しない場合のリスク一覧</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -259,10 +259,10 @@ export default function DataDeletePage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            初期化が完了したら<span style={{ color: 'var(--color-electric-green)' }}>一括査定</span>してみましょう
+            初期化が完了しましたら<span style={{ color: 'var(--color-electric-green)' }}>一括査定</span>のご利用をおすすめします
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            データ削除・初期化が完了したら、最大20社に一括査定して最高値を見つけましょう。
+            データ削除・初期化が完了しましたら、最大20社に一括で査定を依頼し、査定額を比較することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -277,7 +277,7 @@ export default function DataDeletePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/knowledge/preparation/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>売る前の準備ガイド</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>10項目の完全チェックリスト</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>10項目のチェックリスト</p>
             </Link>
             <Link href="/knowledge/shipping/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>送料・梱包ガイド</p>

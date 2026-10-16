@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: ['/og.png'],
     title: 'プライバシーポリシー | ゲーム買取びより',
-    description: 'ゲーム買取びよりの個人情報保護方針・Cookie利用についてのご案内。',
+    description: 'ゲーム買取びよりの個人情報保護方針・Cookieの利用についてご案内しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',

@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
   description:
-    'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を徹底比較。スイッチ本体を高く売るコツ5つ、Joy-ConやProコントローラーの買取情報、初期化手順まで完全解説。',
+    'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を比較しています。スイッチ本体を高く売る5つのコツ、Joy-ConやProコントローラーの買取情報、初期化手順についても解説します。',
   keywords: ['Switch 買取', 'ニンテンドースイッチ 売る', 'Switch 買取相場', 'Switch Lite 買取', 'Switch OLED 買取'],
   openGraph: {
     images: ['/og.png'],
     title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
-    description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツを徹底解説。',
+    description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツについて解説しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -25,32 +25,32 @@ const priceData = [
 ];
 
 const tips = [
-  { title: '箱・外装を保管しておく', description: '購入時の箱があるだけで買取価格が1,000〜3,000円アップすることも。箱なしと箱ありでは査定額が大きく変わります。' },
-  { title: '付属品を揃える', description: 'Joy-Con、ドック、ACアダプター、HDMIケーブルなどの純正付属品が揃っているほど高額査定に。欠品があると減額対象です。' },
-  { title: '本体の状態を良く保つ', description: '画面の傷やJoy-Conのスティックドリフトは減額要因。保護フィルムやケースで普段から保護し、売る前に清掃しましょう。' },
-  { title: '売却タイミングを見極める', description: '新モデル発表前が売り時。後継機の発売が近づくと旧モデルの価格は下がります。年末商戦前は需要が高まるため高値がつきやすい傾向があります。' },
-  { title: '複数社で査定を比較する', description: '1社だけで決めるのはもったいない。ヒカカク！なら最大20社に一括査定できるため、最高値を簡単に見つけられます。' },
+  { title: '箱・外装を保管しておく', description: '購入時の箱があるだけで、買取価格が1,000〜3,000円上がる場合があります。箱の有無により査定額は大きく変わります。' },
+  { title: '付属品を揃える', description: 'Joy-Con、ドック、ACアダプター、HDMIケーブルなどの純正付属品がそろっているほど高額査定につながります。欠品がある場合は減額の対象となります。' },
+  { title: '本体の状態を良く保つ', description: '画面の傷やJoy-Conのスティックドリフトは減額の要因となります。保護フィルムやケースで日頃から保護し、売却前に清掃することをおすすめします。' },
+  { title: '売却タイミングを見極める', description: '新モデルの発表前が売り時です。後継機の発売が近づくと旧モデルの価格は下がります。年末商戦前は需要が高まるため高値がつきやすい傾向があります。' },
+  { title: '複数社で査定を比較する', description: '1社のみで決めず、複数社の査定額を比較することをおすすめします。ヒカカク！では最大20社に一括で査定を申し込めるため、最高値を効率よく確認できます。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', switchPoint: '複数業者の競争で最高値を狙える', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', switchPoint: '自宅まで来てくれてその場で現金化', rank: 2 },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', switchPoint: 'ゲーム周辺機器もまとめて売れる', rank: 3 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', switchPoint: '複数業者の競争により最高値を狙える', rank: 1 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', switchPoint: '自宅で査定を受け、その場で現金化', rank: 2 },
+  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', switchPoint: 'ゲーム周辺機器もまとめて売却可能', rank: 3 },
 ];
 
 const faqs = [
   { q: 'Switchの買取相場はどのくらいですか？', a: '状態や付属品の有無によりますが、通常モデルで12,000〜22,000円、有機ELモデルで18,000〜32,000円が目安です。箱・付属品完備の美品であれば上限に近い金額が期待できます。' },
   { q: 'Joy-ConやProコントローラーだけでも売れますか？', a: 'はい、単品でも買取可能です。Joy-Conは1セット2,000〜4,000円、Proコントローラーは2,500〜5,000円程度が相場です。スティックドリフトがなく状態が良いものほど高値がつきます。' },
-  { q: 'Switch本体の初期化はどうやりますか？', a: '「設定」→「本体」→「初期化」→「本体の初期化」の順に進みます。ニンテンドーアカウントの連携解除も忘れずに。microSDカードのデータ消去も別途行ってください。' },
-  { q: '箱なしでも買い取ってもらえますか？', a: 'はい、箱なしでも買取可能です。ただし箱ありと比較して1,000〜3,000円ほど減額される場合があります。付属品はできるだけ揃えて査定に出しましょう。' },
+  { q: 'Switch本体の初期化はどうやりますか？', a: '「設定」→「本体」→「初期化」→「本体の初期化」の順に進みます。ニンテンドーアカウントの連携解除も忘れずに行ってください。microSDカードのデータ消去も別途行ってください。' },
+  { q: '箱なしでも買い取ってもらえますか？', a: 'はい、箱なしでも買取可能です。ただし箱ありと比較して1,000〜3,000円ほど減額される場合があります。付属品はできるだけそろえて査定に出すことをおすすめします。' },
   { q: '改造・CFW導入済みのSwitchは売れますか？', a: '改造品は多くの買取業者で買取不可となります。未改造の状態に戻せる場合でも減額されるケースが多いです。正規品として査定に出すことをおすすめします。' },
-  { q: 'いつ売るのが一番お得ですか？', a: '年末商戦前（10〜11月）や新学期前（2〜3月）は需要が高まるため高値がつきやすいです。逆に後継機の発表直後は価格が下がる傾向があるため、早めの売却がおすすめです。' },
+  { q: 'いつ売るのが最も有利ですか？', a: '年末商戦前（10〜11月）や新学期前（2〜3月）は需要が高まるため高値がつきやすい傾向があります。一方、後継機の発表直後は価格が下がる傾向があるため、早めの売却をおすすめします。' },
 ];
 
 export default function SwitchPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo Switch' }]} />
 
       {/* Hero */}
@@ -61,7 +61,7 @@ export default function SwitchPage() {
             Nintendo Switch 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            Switch・Switch Lite・Switch OLEDの買取相場を徹底調査。モデル別の買取価格、高く売るための5つのコツ、おすすめ買取サービス3社の比較まで、スイッチを売る前に知っておきたい情報を完全網羅しています。
+            Switch・Switch Lite・Switch OLEDの買取相場を調査しました。モデル別の買取価格、高く売るための5つのコツ、おすすめ買取サービス3社の比較など、スイッチを売却する前にご確認いただきたい情報をまとめています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -102,16 +102,16 @@ export default function SwitchPage() {
 
         {/* 値上げで相場上昇 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />今が売り時：値上げで旧型Switchの買取相場が上昇中</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />値上げによる旧型Switchの買取相場の上昇</h2>
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
-              2026年5月25日に任天堂が全Switchモデルを値上げ（Switch2は49,980円→59,980円、有機ELは37,980円→47,980円、通常モデルは32,978円→43,980円、Liteは21,978円→29,980円）。新品が高くなった影響で、<strong>遊ばなくなった旧型Switchの買取相場も上昇しています。</strong>
+              2026年5月25日に、任天堂は全Switchモデルを値上げしました（Switch 2は49,980円→59,980円、有機ELは37,980円→47,980円、通常モデルは32,978円→43,980円、Liteは21,978円→29,980円）。新品価格の上昇に伴い、<strong>遊ばなくなった旧型Switchの買取相場も上昇しています。</strong>
             </p>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
-              買取業者10社を調査した実例では、旧型Switch本体の買取相場は<strong>4月の約3,000〜12,000円から、5月には約5,000〜19,000円まで上昇</strong>したと報告されています。「新型が出たら旧型は下がる」という通説と逆の動きが起きており、遊んでいないSwitchがある方にとっては近年で有利な売り時です。
+              買取業者10社を調査した実例では、旧型Switch本体の買取相場は<strong>4月の約3,000〜12,000円から、5月には約5,000〜19,000円まで上昇</strong>したと報告されています。「新型が出たら旧型は下がる」という通説とは逆の動きとなっており、遊んでいないSwitchをお持ちの方にとっては、近年で有利な売り時といえます。
             </p>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ただしSwitch2の供給が安定すれば下落に転じる可能性が高いため、使っていないなら早めの売却が合理的です。ダウンロード版のソフトはアカウントに紐づくため、本体を売ってもSwitch2で引き継げます。
+              ただし、Switch 2の供給が安定すれば下落に転じる可能性が高いため、使用していない場合は早めの売却をおすすめします。ダウンロード版のソフトはアカウントに紐づくため、本体を売却してもSwitch 2で引き継げます。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂公式リリース（2026年5月8日）、出張買取のアシスト10社相場調査（2026年5月20日更新）。2026年6月14日確認。上の相場表は当サイト調べの目安で、実際の査定額は各社公式の最新価格をご確認ください。</p>
           </div>
@@ -200,10 +200,10 @@ export default function SwitchPage() {
 
         {/* Joy-Con / Pro Controller */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Joy-Con・Proコントローラーも売れる？</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Joy-Con・Proコントローラーの買取</h2>
           <div className="glass-card p-6">
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
-              Switch本体だけでなく、Joy-ConやProコントローラーなどの周辺機器も買取対象です。特に限定カラーや特別デザインのJoy-Conはプレミアがつくことがあります。
+              Switch本体だけでなく、Joy-ConやProコントローラーなどの周辺機器も買取対象です。特に限定カラーや特別デザインのJoy-Conはプレミア価格がつくことがあります。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
@@ -224,10 +224,10 @@ export default function SwitchPage() {
           <div className="glass-card p-6">
             <ol className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>1. セーブデータのバックアップ</strong> - Nintendo Switch Onlineのクラウドセーブ、またはローカルバックアップを実行</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>2. microSDカードの取り外し</strong> - 本体からmicroSDカードを抜き、必要ならフォーマット</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>2. microSDカードの取り外し</strong> - 本体からmicroSDカードを抜き、必要に応じてフォーマット</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>3. ニンテンドーアカウントの連携解除</strong> - 「設定」→「ユーザー」→「ニンテンドーアカウント」→「連携解除」</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>4. 本体の初期化</strong> - 「設定」→「本体」→「初期化」→「本体の初期化」を選択</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>5. 初期化完了の確認</strong> - 再起動後、初期設定画面が表示されればOK</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>5. 初期化完了の確認</strong> - 再起動後、初期設定画面が表示されれば完了</li>
             </ol>
           </div>
         </section>
@@ -262,10 +262,10 @@ export default function SwitchPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            Switchを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            Switchを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売却するために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            複数社の買取価格を比較して、あなたのSwitchを一番高く買い取ってくれるサービスを見つけましょう。
+            複数社の買取価格を比較し、お手持ちのSwitchを最も高く買い取るサービスを選ぶことをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -284,7 +284,7 @@ export default function SwitchPage() {
             </Link>
             <Link href="/hardware/ps4/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PlayStation 4</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS4の買取相場・古くても売れる理由</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS4の買取相場・古くても売却できる理由</p>
             </Link>
             <Link href="/hardware/retro/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>レトロゲーム</p>

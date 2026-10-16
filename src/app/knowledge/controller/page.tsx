@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】',
   description:
-    'PS5/Switch/Xbox用コントローラーの買取相場をプラットフォーム別に一覧表で掲載。限定カラープレミア、箱なしの影響、クリーニング方法、おすすめ買取店まで徹底解説。',
+    'PS5/Switch/Xbox用コントローラーの買取相場を、プラットフォーム別の一覧表で掲載しています。限定カラーのプレミア価格、箱なしの影響、クリーニング方法、おすすめの買取店についても解説します。',
   keywords: ['コントローラー 買取', 'Joy-Con 買取', 'DualSense 買取', 'Xbox コントローラー 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】',
-    description: 'ゲームコントローラーのプラットフォーム別買取相場を徹底比較。',
+    description: 'ゲームコントローラーの買取相場をプラットフォーム別に比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 };
 
 const ps5Controllers = [
-  { model: 'DualSense ワイヤレスコントローラー（白）', good: '3,500〜4,500円', fair: '2,500〜3,400円', poor: '1,000〜2,400円', note: '標準カラー。最も流通量が多い' },
-  { model: 'DualSense ワイヤレスコントローラー（黒/赤/青等）', good: '4,000〜5,000円', fair: '3,000〜3,900円', poor: '1,500〜2,900円', note: 'カラバリはやや高値' },
-  { model: 'DualSense Edge', good: '12,000〜16,000円', fair: '8,000〜11,000円', poor: '4,000〜7,000円', note: 'プロコン。背面ボタン付き' },
+  { model: 'DualSense ワイヤレスコントローラー（白）', good: '3,500〜4,500円', fair: '2,500〜3,400円', poor: '1,000〜2,400円', note: '標準カラー。最も流通量が多いモデル' },
+  { model: 'DualSense ワイヤレスコントローラー（黒/赤/青等）', good: '4,000〜5,000円', fair: '3,000〜3,900円', poor: '1,500〜2,900円', note: 'カラーバリエーションはやや高値' },
+  { model: 'DualSense Edge', good: '12,000〜16,000円', fair: '8,000〜11,000円', poor: '4,000〜7,000円', note: '上位モデル。背面ボタン付き' },
   { model: 'DualSense（限定モデル）', good: '5,000〜10,000円', fair: '3,500〜4,900円', poor: '2,000〜3,400円', note: 'ゲームコラボ等の限定カラー' },
 ];
 
 const switchControllers = [
   { model: 'Joy-Con（L/R）セット（ネオンブルー/レッド）', good: '4,000〜5,500円', fair: '2,500〜3,900円', poor: '1,000〜2,400円', note: '標準カラー。ドリフト問題に注意' },
   { model: 'Joy-Con（限定カラー）', good: '5,000〜8,000円', fair: '3,500〜4,900円', poor: '1,500〜3,400円', note: 'ゼルダ/スプラ等のコラボカラー' },
-  { model: 'Nintendo Switch Proコントローラー', good: '4,000〜5,500円', fair: '2,500〜3,900円', poor: '1,000〜2,400円', note: '人気高い。ゲームコラボ版は高値' },
+  { model: 'Nintendo Switch Proコントローラー', good: '4,000〜5,500円', fair: '2,500〜3,900円', poor: '1,000〜2,400円', note: '人気モデル。ゲームコラボ版は高値' },
   { model: 'Proコントローラー（限定モデル）', good: '5,500〜9,000円', fair: '3,500〜5,400円', poor: '2,000〜3,400円', note: 'ゼルダ/モンハン等のコラボ' },
 ];
 
@@ -42,7 +42,7 @@ const xboxControllers = [
 const limitedColorPremium = [
   { controller: 'DualSense GOD OF WAR モデル', premium: '＋2,000〜5,000円', rarity: '高' },
   { controller: 'Joy-Con ゼルダの伝説 特別デザイン', premium: '＋1,500〜3,000円', rarity: '高' },
-  { controller: 'Proコン モンスターハンターライズ', premium: '＋1,500〜4,000円', rarity: '中' },
+  { controller: 'Proコントローラー モンスターハンターライズ', premium: '＋1,500〜4,000円', rarity: '中' },
   { controller: 'DualSense スパイダーマン2 モデル', premium: '＋1,500〜3,000円', rarity: '中' },
   { controller: 'Xbox Elite Series 2 Halo モデル', premium: '＋3,000〜6,000円', rarity: '高' },
   { controller: 'Joy-Con ポケモン Let\'s Go カラー', premium: '＋2,000〜4,000円', rarity: '高' },
@@ -57,25 +57,25 @@ const boxImpact = [
 ];
 
 const cleaningTips = [
-  { part: 'ボタン周り', method: '綿棒にイソプロピルアルコールを含ませ、ボタンの隙間を優しく拭き取ります。爪楊枝でゴミを取り除くのも効果的ですが、キズをつけないよう注意。', effect: '見た目の印象が大幅改善。査定額+500〜1,000円の効果。' },
-  { part: 'アナログスティック', method: 'スティックの根元に溜まった汚れを綿棒で除去。スティックのゴム部分は消毒用ウェットティッシュで拭き上げます。', effect: 'ドリフトと汚れの区別がつくため、不要な減額を防げる。' },
-  { part: '本体表面', method: 'マイクロファイバークロスで乾拭き。頑固な汚れには中性洗剤を薄めた液で拭いた後、乾拭き。', effect: '第一印象を決める最も重要なポイント。' },
-  { part: '充電端子', method: 'エアダスターでホコリを吹き飛ばし、綿棒で端子部分を清掃。接触不良の原因になるため重要。', effect: '動作確認時のトラブルを未然に防止。' },
+  { part: 'ボタン周り', method: '綿棒にイソプロピルアルコールを含ませ、ボタンの隙間を優しく拭き取ります。爪楊枝でゴミを取り除く方法も有効ですが、傷をつけないようご注意ください。', effect: '見た目の印象が大きく改善し、査定額が500〜1,000円上がる効果が見込めます。' },
+  { part: 'アナログスティック', method: 'スティックの根元に溜まった汚れを綿棒で取り除きます。スティックのゴム部分は消毒用ウェットティッシュで拭き上げます。', effect: 'ドリフトと汚れの区別がつくため、不要な減額を防げます。' },
+  { part: '本体表面', method: 'マイクロファイバークロスで乾拭きします。頑固な汚れは、薄めた中性洗剤で拭いた後に乾拭きします。', effect: '第一印象を左右する最も重要なポイントです。' },
+  { part: '充電端子', method: 'エアダスターでホコリを吹き飛ばし、綿棒で端子部分を清掃します。汚れは接触不良の原因になるため、重要な工程です。', effect: '動作確認時のトラブルを未然に防げます。' },
 ];
 
 const faqs = [
   { q: 'ゲームコントローラーだけでも買取してもらえますか？', a: 'はい、コントローラー単体での買取に対応している店が多いです。ヒカカク！、ゲオ、ブックオフ、駿河屋などの主要買取店はコントローラーのみの査定に対応しています。ただし、一部のオンライン買取では最低買取金額（500〜1,000円）を設けている場合があるので事前確認をおすすめします。' },
-  { q: 'Joy-Conのスティックドリフトがある場合、買取してもらえますか？', a: 'はい、ドリフトがあっても買取可能ですが、大幅な減額（良品の40〜60%程度）になります。任天堂の無償修理対象であれば修理してから売った方がお得です。ドリフトの修理費用は有償でも2,000〜3,000円程度のため、修理後の買取価格との差額を計算して判断しましょう。' },
+  { q: 'Joy-Conのスティックドリフトがある場合、買取してもらえますか？', a: 'はい、ドリフトがあっても買取可能ですが、大幅な減額（良品の40〜60%程度）になります。任天堂の無償修理の対象であれば、修理してから売るほうが有利です。ドリフトの修理費用は有償でも2,000〜3,000円程度のため、修理後の買取価格との差額を計算したうえで判断することをおすすめします。' },
   { q: '限定カラーのコントローラーはどれくらいプレミアがつきますか？', a: 'ゲームコラボの限定カラーは標準モデルの1.5〜2倍の買取価格になることがあります。例えばGOD OF WAR限定DualSenseは＋2,000〜5,000円、ゼルダ限定Joy-Conは＋1,500〜3,000円のプレミアです。箱付き完品であることがプレミア価格の条件になるケースが多いです。' },
   { q: '箱なしのコントローラーはどれくらい減額されますか？', a: '標準モデルで約1,000〜1,500円、高額モデル（DualSense Edge、Xbox Elite等）で約3,000〜4,000円の減額です。限定モデルの場合はさらに差が大きくなります。コントローラーの箱は比較的コンパクトなので、購入時から保管しておくことを強くおすすめします。' },
   { q: 'DualSense Edgeの買取相場はいくらですか？', a: '良品で12,000〜16,000円、並品で8,000〜11,000円が目安です。付属の背面ボタンパーツ、スティックキャップ、USB-Cケーブルが揃っているかが重要なポイントです。定価が約30,000円と高額なため、買取でも他のコントローラーより高値がつきます。' },
-  { q: 'コントローラーを高く売るコツは何ですか？', a: '最も効果的なのは「クリーニング」と「付属品の完備」です。ボタン周り・スティック・表面を丁寧に清掃するだけで500〜2,000円の査定額アップが期待できます。また、箱・説明書・ケーブルを揃えることで1,000〜4,000円のプラスになります。複数のコントローラーがあればまとめ売りボーナスも活用しましょう。' },
+  { q: 'コントローラーを高く売るコツは何ですか？', a: '最も効果的なのは「クリーニング」と「付属品の完備」です。ボタン周り・スティック・表面を丁寧に清掃するだけで査定額が500〜2,000円上がることが期待できます。また、箱・説明書・ケーブルを揃えることで1,000〜4,000円のプラスになります。複数のコントローラーがある場合は、まとめ売りボーナスの活用もおすすめします。' },
 ];
 
 export default function ControllerPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'コントローラー買取相場' }]} />
 
       {/* Hero */}
@@ -86,7 +86,7 @@ export default function ControllerPage() {
             ゲームコントローラーの買取相場
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            Joy-Con・DualSense・DualSense Edge・Xbox Elite、主要ゲームコントローラーの買取相場をプラットフォーム別に一覧表で紹介。限定カラーのプレミア価格、箱なし時の減額幅、売る前のクリーニング方法、おすすめ買取店まで完全網羅しました。
+            Joy-Con・DualSense・DualSense Edge・Xbox Eliteなど、主要なゲームコントローラーの買取相場をプラットフォーム別の一覧表でご紹介します。限定カラーのプレミア価格、箱なしの場合の減額幅、売る前のクリーニング方法、おすすめの買取店もあわせて解説します。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -291,10 +291,10 @@ export default function ControllerPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            コントローラーの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>を今すぐ確認
+            コントローラーの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>の確認
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            限定モデルは思わぬ高値がつくことも。まずは無料で一括査定してみましょう。
+            限定モデルには想定以上の高値がつくこともあります。まずは無料の一括査定のご利用をおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -317,7 +317,7 @@ export default function ControllerPage() {
             </Link>
             <Link href="/knowledge/boxless/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>箱なし買取ガイド</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも高く売るコツ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも高く売るためのポイント</p>
             </Link>
           </div>
         </section>

@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ゲームの下取りと買取の違い｜どっちがお得？【2026年版】',
   description:
-    '下取り（店舗クレジット）と買取（現金化）の違いを徹底比較。ゲオ・ブックオフ等の下取りプログラム紹介、シーン別おすすめ、メリット・デメリット比較表付き。',
+    '下取り（店舗クレジット）と買取（現金化）の違いを比較しています。ゲオ・ブックオフ等の下取りプログラム、シーン別のおすすめ、メリット・デメリットの比較表もご紹介します。',
   keywords: ['ゲーム 下取り 買取 違い', '下取り 買取 どっち', 'ゲーム 下取り お得'],
   openGraph: {
     images: ['/og.png'],
     title: 'ゲームの下取りと買取の違い｜どっちがお得？【2026年版】',
-    description: '下取り（店舗クレジット）と買取（現金化）の違いを徹底比較。',
+    description: '下取り（店舗クレジット）と買取（現金化）の違いを比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,43 +19,43 @@ export const metadata: Metadata = {
 };
 
 const comparisonTable = [
-  { item: '受取形式', tradeIn: '店舗ポイント・クレジット', buyout: '現金（振込 or 手渡し）' },
+  { item: '受取形式', tradeIn: '店舗ポイント・クレジット', buyout: '現金（振込または手渡し）' },
   { item: '金額の目安', tradeIn: '買取より10〜20%高いことが多い', buyout: '市場相場に準拠' },
-  { item: '使い道の自由度', tradeIn: '同一店舗でのみ利用可', buyout: '自由に使える' },
+  { item: '使い道の自由度', tradeIn: '同一店舗でのみ利用可', buyout: '用途の制限なし' },
   { item: '手続きの手軽さ', tradeIn: '店頭で即完了', buyout: '宅配の場合は2〜5日' },
-  { item: '向いている人', tradeIn: '次のゲームを同じ店で買う人', buyout: '現金が欲しい・他店で買う人' },
+  { item: '向いている人', tradeIn: '次のゲームを同じ店で買う人', buyout: '現金で受け取りたい人・他店で購入する人' },
   { item: '代表的なサービス', tradeIn: 'ゲオ・TSUTAYA・Amazonトレードイン', buyout: 'ヒカカク！・ウリエル・ブックオフ' },
 ];
 
 const tradeInPrograms = [
-  { shop: 'ゲオ（GEO）', detail: '下取り価格が通常買取より約15%上乗せ。Pontaポイント付与で実質さらにお得。店頭のみ対応。', bonus: '＋15%上乗せ' },
-  { shop: 'TSUTAYA', detail: 'Tポイント還元で下取り対応。新作購入時に旧作を持ち込むと追加ボーナスあり。', bonus: '＋10%上乗せ' },
-  { shop: 'Amazonトレードイン', detail: 'Amazonギフトカードとして下取り額を受取。対象商品は限定的だがオンライン完結。', bonus: '＋10〜25%上乗せ' },
-  { shop: 'ブックオフ', detail: '店頭買取が基本だが、アプリ査定で事前に価格確認可能。買い替え時に下取り扱い可能な場合も。', bonus: '＋5〜10%上乗せ' },
-  { shop: 'ソフマップ（ビックカメラ系）', detail: 'ビックポイントで還元。PCゲーム周辺機器の下取りにも対応しており、PC買い替え時にも活用可。', bonus: '＋10〜15%上乗せ' },
+  { shop: 'ゲオ（GEO）', detail: '下取り価格は通常買取より約15%上乗せされます。Pontaポイントも付与されます。店頭のみの対応です。', bonus: '＋15%上乗せ' },
+  { shop: 'TSUTAYA', detail: 'Tポイント還元で下取りに対応しています。新作購入時に旧作を持ち込むと、追加ボーナスがあります。', bonus: '＋10%上乗せ' },
+  { shop: 'Amazonトレードイン', detail: '下取り額をAmazonギフトカードとして受け取ります。対象商品は限定的ですが、手続きはオンラインで完結します。', bonus: '＋10〜25%上乗せ' },
+  { shop: 'ブックオフ', detail: '店頭買取が基本ですが、アプリ査定で事前に価格を確認できます。買い替え時に下取りとして扱える場合もあります。', bonus: '＋5〜10%上乗せ' },
+  { shop: 'ソフマップ（ビックカメラ系）', detail: 'ビックポイントで還元されます。PCゲーム周辺機器の下取りにも対応しており、PCの買い替え時にも活用できます。', bonus: '＋10〜15%上乗せ' },
 ];
 
 const scenarioRecommendations = [
-  { scenario: '新作ゲームをすぐ買い替えたい', recommended: '下取り', reason: '同じ店舗で即座に新作購入に充てられるため、手間とスピードで有利。' },
-  { scenario: 'しばらくゲームを買う予定がない', recommended: '買取（現金化）', reason: 'ポイントの有効期限を気にする必要がなく、現金として自由に使える。' },
-  { scenario: '複数タイトルをまとめて処分したい', recommended: '買取（宅配）', reason: '宅配買取ならまとめ売りボーナスがつくサービスが多く、合計額で有利。' },
-  { scenario: '限定版・プレミアソフトを売りたい', recommended: '買取（専門店）', reason: '下取りではプレミア価格が反映されにくい。専門店なら適正価格で査定。' },
-  { scenario: 'Amazon で次のゲームを買う予定', recommended: 'Amazonトレードイン', reason: 'ギフトカード還元率が高く、Amazon購入予定ならば最もお得な選択肢。' },
+  { scenario: '新作ゲームをすぐ買い替えたい', recommended: '下取り', reason: '同じ店舗ですぐに新作の購入に充てられるため、手間と速さの面で有利です。' },
+  { scenario: 'しばらくゲームを買う予定がない', recommended: '買取（現金化）', reason: 'ポイントの有効期限を気にする必要がなく、現金として自由に使えるためです。' },
+  { scenario: '複数タイトルをまとめて処分したい', recommended: '買取（宅配）', reason: '宅配買取にはまとめ売りボーナスがつくサービスが多く、合計額で有利なためです。' },
+  { scenario: '限定版・プレミアソフトを売りたい', recommended: '買取（専門店）', reason: '下取りではプレミア価格が反映されにくいためです。専門店では適正な価格で査定されます。' },
+  { scenario: 'Amazonで次のゲームを買う予定', recommended: 'Amazonトレードイン', reason: 'ギフトカードの還元率が高く、Amazonで購入する予定がある場合に最も有利な選択肢です。' },
 ];
 
 const faqs = [
-  { q: '下取りと買取の一番大きな違いは何ですか？', a: '最大の違いは受取形式です。下取りは店舗ポイントやクレジットで受け取るため同一店舗でしか使えませんが、買取は現金で受け取れるため使い道が自由です。下取りの方が金額が10〜20%高くなるケースが多いですが、ポイントの有効期限や利用条件に注意が必要です。' },
-  { q: '金額だけで比較するとどちらがお得ですか？', a: '金額だけなら下取りの方が高くなることが多いです。店舗側は再販を前提としているため、ポイント還元として上乗せできるからです。ただし「実質的な価値」で考えると、現金の方が使い道が広いため、次の購入予定がない場合は買取の方がお得です。' },
+  { q: '下取りと買取の最も大きな違いは何ですか？', a: '最大の違いは受取形式です。下取りは店舗ポイントやクレジットで受け取るため同一店舗でしか使えませんが、買取は現金で受け取れるため使い道が自由です。下取りの方が金額が10〜20%高くなるケースが多いですが、ポイントの有効期限や利用条件に注意が必要です。' },
+  { q: '金額だけで比較するとどちらがお得ですか？', a: '金額だけなら下取りの方が高くなることが多いです。店舗側は再販を前提としているため、ポイント還元として上乗せできるためです。ただし「実質的な価値」で考えると、現金の方が使い道が広いため、次の購入予定がない場合は買取のほうが有利です。' },
   { q: 'ゲオの下取りプログラムはどう利用しますか？', a: 'ゲオ店頭に売りたいゲームと購入したいゲームを持ち込むだけです。下取り対象商品であれば通常の買取価格より約15%上乗せした金額が新作購入代金から差し引かれます。Pontaカードがあればさらにポイントが貯まります。' },
-  { q: 'Amazonトレードインの対象商品は多いですか？', a: '対象商品はゲームソフト・ゲーム機・タブレット・スマートフォンなどですが、全商品が対象ではありません。Amazon公式サイトのトレードインページで事前に対象確認と見積もり金額を確認できます。還元率はギフトカードで10〜25%上乗せされます。' },
-  { q: '下取りのデメリットは何ですか？', a: '主なデメリットは3つです。1つ目はポイントの有効期限があること、2つ目は同一店舗でしか使えないこと、3つ目はプレミアソフトの価値が反映されにくいことです。次の購入予定が明確でない場合は、現金化できる買取の方が安全です。' },
-  { q: '下取りと買取を組み合わせることはできますか？', a: 'はい、賢い方法です。次に買いたいゲームが決まっているソフトは下取りに出し、特に目的がないソフトは買取で現金化するという使い分けがおすすめです。また、プレミア価値のあるソフトは専門買取店、それ以外は下取りに出すという組み合わせも効果的です。' },
+  { q: 'Amazonトレードインの対象商品は多いですか？', a: '対象商品はゲームソフト・ゲーム機・タブレット・スマートフォンなどですが、全商品が対象ではありません。Amazon公式サイトのトレードインページで、対象商品と見積もり金額を事前に確認できます。還元率はギフトカードで10〜25%上乗せされます。' },
+  { q: '下取りのデメリットは何ですか？', a: '主なデメリットは3つです。1つ目はポイントの有効期限があること、2つ目は同一店舗でしか使えないこと、3つ目はプレミアソフトの価値が反映されにくいことです。次の購入予定が明確でない場合は、現金化できる買取のほうが安全です。' },
+  { q: '下取りと買取を組み合わせることはできますか？', a: 'はい、可能であり、有効な方法です。次に買いたいゲームが決まっているソフトは下取りに出し、特に目的がないソフトは買取で現金化するという使い分けがおすすめです。また、プレミア価値のあるソフトは専門買取店、それ以外は下取りに出すという組み合わせも効果的です。' },
 ];
 
 export default function TradeInPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの下取りと買取の違い｜どっちがお得？【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの下取りと買取の違い｜どっちがお得？【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '下取りと買取の違い' }]} />
 
       {/* Hero */}
@@ -66,7 +66,7 @@ export default function TradeInPage() {
             ゲームの下取りと買取の違い｜どっちがお得？
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲームを手放す方法は「下取り（店舗クレジット）」と「買取（現金化）」の2つ。それぞれの仕組み・メリットデメリット・おすすめシーンを比較表つきで徹底解説します。ゲオ・ブックオフ・Amazonトレードインなど主要サービスの下取りプログラムも紹介。あなたに最適な売却方法が見つかります。
+            ゲームを手放す方法には「下取り（店舗クレジット）」と「買取（現金化）」の2つがあります。それぞれの仕組み・メリットとデメリット・おすすめのシーンを、比較表を用いて解説します。ゲオ・ブックオフ・Amazonトレードインなど主要サービスの下取りプログラムもご紹介し、目的に合った売却方法を選べるようにしています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -154,11 +154,11 @@ export default function TradeInPage() {
 
         {/* 判断フローチャート */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />かんたん判断ガイド</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />選び方の判断ガイド</h2>
           <div className="glass-card p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>下取りを選ぶべき人</h3>
+                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>下取りが適している方</h3>
                 <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
                   <li>・次に買いたいゲームが同じ店舗にある</li>
                   <li>・すぐに買い替えたい（即日完了が理想）</li>
@@ -167,7 +167,7 @@ export default function TradeInPage() {
                 </ul>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取を選ぶべき人</h3>
+                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取が適している方</h3>
                 <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
                   <li>・現金として自由に使いたい</li>
                   <li>・次の購入予定が決まっていない</li>
@@ -209,10 +209,10 @@ export default function TradeInPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            まずは<span style={{ color: 'var(--color-electric-green)' }}>無料査定</span>で現金買取額をチェック
+            <span style={{ color: 'var(--color-electric-green)' }}>無料査定</span>による現金での買取金額の確認
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            下取りと買取、どちらがお得か迷ったらまず現金の買取額を確認しましょう。一括査定なら最高値がすぐにわかります。
+            下取りと買取のどちらが有利か判断に迷う場合は、まず現金での買取金額をご確認ください。一括査定では、各社の査定額をまとめて比較できます。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">

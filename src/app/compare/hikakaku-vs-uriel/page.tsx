@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ヒカカク vs ウリエル徹底比較｜ゲーム買取どっちがおすすめ？【2026年】',
+  title: 'ヒカカク vs ウリエル比較｜ゲーム買取どっちがおすすめ？【2026年】',
   description:
-    'ヒカカク！と買取ウリエルを10項目で徹底比較。査定方法・対応エリア・査定スピード・買取方法・ゲーム専門度・手数料・口コミ・使いやすさの違いを解説。一括比較ならヒカカク、出張買取ならウリエルの使い分けガイド付き。',
+    'ヒカカク！と買取ウリエルを10項目で比較しています。査定方法・対応エリア・査定スピード・買取方法・ゲーム専門度・手数料・口コミ・使いやすさの違いを解説し、一括比較ならヒカカク、出張買取ならウリエルという使い分けの目安もご紹介します。',
   keywords: ['ヒカカク ウリエル 比較', 'ヒカカク 評判', 'ウリエル 買取 口コミ', 'ゲーム買取 おすすめ', 'ヒカカク ウリエル どっち'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ヒカカク vs ウリエル徹底比較｜ゲーム買取どっちがおすすめ？【2026年】',
-    description: 'ヒカカク！と買取ウリエルを10項目で比較。使い分けガイド付き。',
+    title: 'ヒカカク vs ウリエル比較｜ゲーム買取どっちがおすすめ？【2026年】',
+    description: 'ヒカカク！と買取ウリエルを10項目で比較しています。使い分けの目安もご紹介します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -24,11 +24,11 @@ const comparisonItems = [
   { item: '査定スピード', hikakaku: '業者による（1〜5営業日）', uriel: '出張: 即日 / 宅配: 1〜3営業日', point: '即日査定ならウリエルの出張買取' },
   { item: '買取方法', hikakaku: '宅配買取がメイン（業者により異なる）', uriel: '出張買取・宅配買取・店舗買取', point: 'ウリエルは3つの方法から選べる' },
   { item: 'ゲーム専門度', hikakaku: 'ゲーム専門業者も含む20社以上', uriel: '総合買取（ゲーム以外も幅広く対応）', point: 'ゲーム専門業者を探すならヒカカク' },
-  { item: '手数料', hikakaku: '利用無料（業者への仲介手数料なし）', uriel: '査定無料・出張無料・送料無料', point: 'どちらもユーザー負担ゼロ' },
-  { item: '口コミ・評判', hikakaku: '業者ごとの口コミ・評価が見れる', uriel: '対面接客の丁寧さに高評価', point: '情報量はヒカカク、接客はウリエル' },
-  { item: '使いやすさ', hikakaku: 'Web上で簡単一括査定、操作シンプル', uriel: '電話・Web・LINEから申し込み可', point: '申し込み方法の選択肢はウリエル' },
+  { item: '手数料', hikakaku: '利用無料（業者への仲介手数料なし）', uriel: '査定無料・出張無料・送料無料', point: 'どちらも利用者の負担なし' },
+  { item: '口コミ・評判', hikakaku: '業者ごとの口コミ・評価を確認できる', uriel: '対面接客の丁寧さに高評価', point: '情報量はヒカカク、接客はウリエル' },
+  { item: '使いやすさ', hikakaku: 'Web上で一括査定を申し込める（操作が簡単）', uriel: '電話・Web・LINEから申し込み可', point: '申し込み方法の選択肢はウリエル' },
   { item: 'まとめ売り', hikakaku: '業者によりボーナスあり', uriel: 'ゲーム以外もまとめて売れる', point: '不用品まとめ処分ならウリエル' },
-  { item: '価格交渉', hikakaku: '複数社の競争で自然と高値に', uriel: '出張買取時にその場で交渉可能', point: 'アプローチが異なる' },
+  { item: '価格交渉', hikakaku: '複数社の競争により高値がつきやすい', uriel: '出張買取時にその場で交渉可能', point: 'アプローチが異なる' },
 ];
 
 const hikakakuFor = [
@@ -48,17 +48,17 @@ const urielFor = [
 ];
 
 const faqs = [
-  { q: 'ヒカカク！とウリエル、結局どっちがおすすめ？', a: '「最高値で売りたい」ならヒカカク！（最大20社の一括査定で競争させられる）、「手間なく出張で売りたい」なら買取ウリエル（自宅まで来てくれて即日現金化）がおすすめです。両方無料なので、まずヒカカク！で相場を知り、ウリエルの出張買取と比較するのも賢い方法です。' },
-  { q: 'ヒカカク！は本当に無料で使えますか？', a: 'はい、完全無料です。ヒカカク！はユーザーから一切手数料を取りません。買取業者側がヒカカク！に手数料を支払う仕組みのため、ユーザーは無料で最大20社の一括査定を利用できます。' },
-  { q: 'ウリエルの出張買取はどのエリアに対応していますか？', a: '関東・関西を中心に出張買取に対応しています。対応エリアは拡大中のため、お住まいの地域が対象かどうかは公式サイトまたは電話で確認してください。宅配買取は全国対応です。' },
-  { q: '両方を併用することはできますか？', a: 'はい、併用がおすすめです。まずヒカカク！で一括査定して相場を把握し、その金額をもとにウリエルの出張買取で交渉するという使い方が最もお得です。' },
-  { q: 'ゲーム以外も売りたい場合はどちらが良いですか？', a: 'ゲーム以外（家電・ブランド品・貴金属など）もまとめて売りたい場合は買取ウリエルが便利です。出張買取で全ジャンルを一度に査定してもらえるため、不用品の一括処分に向いています。' },
+  { q: 'ヒカカク！とウリエルは、どちらがおすすめですか？', a: '最高値で売りたい場合はヒカカク！（最大20社の一括査定で業者間の競争が生まれます）、手間なく出張で売りたい場合は買取ウリエル（自宅で査定を受け、即日現金化できます）をおすすめします。どちらも無料のため、まずヒカカク！で相場を把握し、ウリエルの出張買取と比較する方法も有効です。' },
+  { q: 'ヒカカク！は本当に無料で使えますか？', a: 'はい、無料で利用できます。ヒカカク！は利用者から手数料を受け取っていません。買取業者側がヒカカク！に手数料を支払う仕組みのため、利用者は無料で最大20社の一括査定を利用できます。' },
+  { q: 'ウリエルの出張買取はどのエリアに対応していますか？', a: '関東・関西を中心に出張買取に対応しています。対応エリアは拡大中のため、お住まいの地域が対象かどうかは公式サイトまたは電話にてご確認ください。宅配買取は全国対応です。' },
+  { q: '両方を併用することはできますか？', a: 'はい、併用をおすすめします。まずヒカカク！で一括査定を行って相場を把握し、その金額をもとにウリエルの出張買取で交渉する方法が最も有利です。' },
+  { q: 'ゲーム以外も売りたい場合はどちらが良いですか？', a: 'ゲーム以外（家電・ブランド品・貴金属など）もまとめて売りたい場合は、買取ウリエルが適しています。出張買取で全ジャンルを一度に査定してもらえるため、不用品の一括処分に向いています。' },
 ];
 
 export default function HikakakuVsUrielPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク vs ウリエル徹底比較｜ゲーム買取どっちがおすすめ？【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク vs ウリエル比較｜ゲーム買取どっちがおすすめ？【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'ヒカカク vs ウリエル' }]} />
 
       {/* Hero */}
@@ -66,10 +66,10 @@ export default function HikakakuVsUrielPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(96,165,250,0.2)', color: '#60A5FA' }}>比較ガイド</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ヒカカク！ vs 買取ウリエル 徹底比較
+            ヒカカク！ vs 買取ウリエル 比較
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            一括査定のヒカカク！と出張買取のウリエル。ゲームを売るならどちらが最適か、10項目で徹底比較します。使い分けガイドであなたにぴったりのサービスが見つかります。
+            一括査定のヒカカク！と出張買取の買取ウリエルについて、ゲームを売る際にどちらが適しているかを10項目で比較します。目的に応じた使い分けの目安もあわせてご紹介します。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -113,7 +113,7 @@ export default function HikakakuVsUrielPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card p-6">
               <h3 className="font-bold mb-4" style={{ color: 'var(--color-electric-green)' }}>ヒカカク！がおすすめな人</h3>
-              <p className="text-xs mb-3" style={{ color: 'var(--color-text-light)' }}>一括比較で最高値を狙いたいなら</p>
+              <p className="text-xs mb-3" style={{ color: 'var(--color-text-light)' }}>一括比較で最高値を狙いたい方向け</p>
               <ul className="space-y-2">
                 {hikakakuFor.map((item) => (
                   <li key={item} className="text-sm flex items-start gap-2" style={{ color: 'var(--color-text-light)' }}>
@@ -125,7 +125,7 @@ export default function HikakakuVsUrielPage() {
             </div>
             <div className="glass-card p-6">
               <h3 className="font-bold mb-4" style={{ color: '#F59E0B' }}>買取ウリエルがおすすめな人</h3>
-              <p className="text-xs mb-3" style={{ color: 'var(--color-text-light)' }}>出張買取で手間なく売りたいなら</p>
+              <p className="text-xs mb-3" style={{ color: 'var(--color-text-light)' }}>出張買取で手間なく売りたい方向け</p>
               <ul className="space-y-2">
                 {urielFor.map((item) => (
                   <li key={item} className="text-sm flex items-start gap-2" style={{ color: 'var(--color-text-light)' }}>
@@ -168,10 +168,10 @@ export default function HikakakuVsUrielPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            まずは<span style={{ color: 'var(--color-electric-green)' }}>無料査定</span>で比較してみよう
+            まずは<span style={{ color: 'var(--color-electric-green)' }}>無料査定</span>で比較
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            どちらのサービスも完全無料。まずはヒカカク！で相場を確認し、ウリエルの出張買取と比べるのがおすすめです。
+            どちらのサービスも無料で利用できます。まずはヒカカク！で相場を確認し、ウリエルの出張買取と比較することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -186,7 +186,7 @@ export default function HikakakuVsUrielPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/compare/shop-vs-online/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>店舗 vs 宅配</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>あなたに合った売り方はどっち？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>目的に合った売り方を比較</p>
             </Link>
             <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>メルカリ vs 買取業者</p>

@@ -15,7 +15,7 @@ export default function KaitoriWorldCta({ compact = false }: { compact?: boolean
       </div>
       {!compact && (
         <p className="kw-cta-copy">
-          ゲーム・フィギュアの宅配買取。<strong>ダンボール最大10箱まで無料</strong>・査定3,000円以上で送料無料・査定連絡は最短到着日（当サイト公式確認値）。
+          ゲーム・フィギュアの宅配買取サービスです。<strong>段ボール最大10箱まで無料</strong>、査定額3,000円以上で送料無料、査定連絡は最短で商品到着日です（当サイト公式確認値）。
         </p>
       )}
       <div className="kw-cta-main" dangerouslySetInnerHTML={{ __html: AFF_TEXT_HTML }} />

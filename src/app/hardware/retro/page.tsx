@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】',
   description:
-    'ファミコン・スーファミ・メガドライブ・PCエンジン・ネオジオなどレトロゲームの買取相場とおすすめ買取サービス3社を比較。プレミアがつく条件5つ、高く売るコツ、注意点を徹底解説。',
+    'ファミコン・スーファミ・メガドライブ・PCエンジン・ネオジオなどレトロゲームの買取相場とおすすめ買取サービス3社を比較しています。プレミアがつく5つの条件、高く売るコツ、注意点についても解説します。',
   keywords: ['レトロゲーム 買取', 'ファミコン 売る', 'スーファミ 買取', 'レトロゲーム 買取相場', 'ネオジオ 買取'],
   openGraph: {
     images: ['/og.png'],
     title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】',
-    description: 'レトロゲーム機の買取相場とプレミアがつく条件を徹底解説。',
+    description: 'レトロゲーム機の買取相場とプレミアがつく条件について解説しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -38,32 +38,32 @@ const popularReasons = [
 ];
 
 const premiumConditions = [
-  { title: '箱・説明書付きの完品', description: '箱なし（裸）と完品では買取価格が2〜10倍以上変わることも。特にファミコン・スーファミの完品は非常に高値です。' },
-  { title: '希少タイトル・限定版', description: '生産数が少ないタイトルや限定版はプレミア価格に。ネオジオのソフトは特に高額で、100万円を超えるタイトルも存在します。' },
-  { title: '未開封品', description: 'シュリンク（ビニール包装）付きの未開封品は、中古品の何倍もの価格がつきます。状態を維持している方は開封せずに査定に出しましょう。' },
-  { title: '動作品であること', description: '正常に動作することが大前提。ジャンク品は買取価格が大幅に下がります。売る前に動作確認を行いましょう。' },
+  { title: '箱・説明書付きの完品', description: '箱なし（裸）と完品では買取価格が2〜10倍以上変わる場合があります。特にファミコン・スーファミの完品は非常に高値がつきます。' },
+  { title: '希少タイトル・限定版', description: '生産数が少ないタイトルや限定版にはプレミア価格がつきます。ネオジオのソフトは特に高額で、100万円を超えるタイトルも存在します。' },
+  { title: '未開封品', description: 'シュリンク（ビニール包装）付きの未開封品は、中古品の何倍もの価格がつきます。未開封の状態を維持している場合は、開封せずに査定に出すことをおすすめします。' },
+  { title: '動作品であること', description: '正常に動作することが大前提です。ジャンク品は買取価格が大幅に下がるため、売却前に動作確認を行うことをおすすめします。' },
   { title: '状態の良さ（黄ばみなし）', description: 'スーパーファミコンなどは経年による黄ばみが発生しやすく、黄ばみの少ない本体は高値がつきます。保管環境が重要です。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'レトロゲーム専門業者が多数参加、最高値を見つけやすい', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'レトロゲーム専門業者が多数参加し、最高値を比較しやすい', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '大量のレトロゲームを一度に出張買取', rank: 2 },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム・トレカ・フィギュアと一緒に売れる', rank: 3 },
+  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム・トレカ・フィギュアとまとめて売却可能', rank: 3 },
 ];
 
 const faqs = [
   { q: 'レトロゲームの買取相場はどのくらいですか？', a: '機種や状態により大きく異なります。ファミコン本体で1,500〜8,000円、ネオジオ（AES）は15,000〜80,000円と幅広いです。ソフト単体でも希少タイトルは数万円〜数十万円の価値がつくことがあります。' },
-  { q: '動かないレトロゲーム機でも売れますか？', a: 'ジャンク品でも買取可能な業者があります。パーツ取り需要やコレクター向けの外装需要があるため、壊れていても諦めずに査定に出してみてください。ただし買取価格は動作品と比べて大幅に下がります。' },
-  { q: 'ソフトだけでも買い取ってもらえますか？', a: 'はい、ソフト単体でも買取可能です。特にレトロゲームのソフトは本体以上に高額になることも多いです。希少タイトルは裸（カートリッジのみ）でも数千円〜数万円の値段がつきます。' },
-  { q: 'レトロゲームを売る前にやるべきことは？', a: '動作確認、端子部分の清掃（接点復活剤の使用）、外装の拭き掃除が基本です。箱や説明書がある場合は必ず一緒に査定に出してください。付属品の有無で価格が大きく変わります。' },
-  { q: 'どのサービスがレトロゲームの買取に一番おすすめですか？', a: 'ヒカカク！がおすすめです。レトロゲーム専門の買取業者が多数参加しており、一括査定で最高値を見つけやすいのが最大の強みです。専門知識のある業者による適正査定が期待できます。' },
-  { q: 'レトロゲームの相場は今後どうなりますか？', a: '全体的に上昇傾向が続いています。コレクター人口の増加と供給量の減少により、特に希少タイトルや状態の良い完品は今後も値上がりが予想されます。売り時を逃さないことが重要です。' },
+  { q: '動かないレトロゲーム機でも売れますか？', a: 'ジャンク品でも買取可能な業者があります。パーツ取り需要やコレクター向けの外装需要があるため、故障している場合も、まずは査定に出すことをおすすめします。ただし買取価格は動作品と比べて大幅に下がります。' },
+  { q: 'ソフトだけでも買い取ってもらえますか？', a: 'はい、ソフト単体でも買取可能です。特にレトロゲームのソフトは本体以上に高額になることが多くあります。希少タイトルは裸（カートリッジのみ）でも数千円〜数万円の値段がつきます。' },
+  { q: 'レトロゲームを売る前に行うべきことは何ですか？', a: '動作確認、端子部分の清掃（接点復活剤の使用）、外装の拭き掃除が基本です。箱や説明書がある場合は必ず一緒に査定に出してください。付属品の有無で価格が大きく変わります。' },
+  { q: 'レトロゲームの買取に最も適したサービスはどこですか？', a: 'ヒカカク！をおすすめします。レトロゲーム専門の買取業者が多数参加しており、一括査定で最高値を比較しやすい点が最大の強みです。専門知識のある業者による適正査定が期待できます。' },
+  { q: 'レトロゲームの相場は今後どうなりますか？', a: '全体的に上昇傾向が続いています。コレクター人口の増加と供給量の減少により、特に希少タイトルや状態の良い完品は今後も値上がりが予想されます。相場の動向を確認し、売り時を見極めることが重要です。' },
 ];
 
 export default function RetroPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'レトロゲーム' }]} />
 
       {/* Hero */}
@@ -74,7 +74,7 @@ export default function RetroPage() {
             レトロゲーム 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ファミコン・スーファミ・メガドライブ・PCエンジン・ネオジオなど、レトロゲーム機の買取相場を機種別に徹底調査。プレミアがつく条件5つ、注意点、おすすめ買取サービス3社の比較まで完全網羅。お宝が眠っているかもしれません。
+            ファミコン・スーファミ・メガドライブ・PCエンジン・ネオジオなど、レトロゲーム機の買取相場を機種別に調査しました。プレミアがつく5つの条件、注意点、おすすめ買取サービス3社の比較について解説します。お手持ちのゲーム機に高い価値がつく可能性もあります。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -87,7 +87,7 @@ export default function RetroPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* What is Retro */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />レトロゲームとは？人気の理由</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />レトロゲームの定義と人気の理由</h2>
           <div className="glass-card p-6 mb-6">
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               一般的に「レトロゲーム」とは、1980年代〜2000年代前半に発売されたゲーム機・ソフトを指します。ファミコン、スーパーファミコン、メガドライブ、PCエンジン、ネオジオ、セガサターン、NINTENDO 64、ドリームキャスト、ゲームキューブなどが代表的です。近年はコレクター需要の高まりにより買取相場が上昇傾向にあります。
@@ -156,13 +156,13 @@ export default function RetroPage() {
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>動作確認を行う</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-                電源が入るか、映像が出力されるか、コントローラーが反応するかを事前に確認しましょう。動作品とジャンク品では買取価格が大きく異なります。
+                電源が入るか、映像が出力されるか、コントローラーが反応するかを事前にご確認ください。動作品とジャンク品では買取価格が大きく異なります。
               </p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>端子・外装の清掃</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-                カートリッジの端子は接点復活剤で清掃、本体は乾いた柔らかい布で拭き上げましょう。黄ばみは漂白せず、そのままの状態で査定に出すのが無難です。
+                カートリッジの端子は接点復活剤で清掃し、本体は乾いた柔らかい布で拭き上げることをおすすめします。黄ばみは漂白せず、そのままの状態で査定に出すことをおすすめします。
               </p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function RetroPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />おすすめ買取サービス3社比較</h2>
           <div className="glass-card p-4 mb-4" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>
-              レトロゲームの買取には特にヒカカク！がおすすめです。レトロゲーム専門の買取業者が多数参加しており、一般のリサイクルショップでは見逃される価値を正しく評価してくれます。
+              レトロゲームの買取には、特にヒカカク！をおすすめします。レトロゲーム専門の買取業者が多数参加しており、一般のリサイクルショップでは見落とされやすい価値を適正に評価する業者を探せます。
             </p>
           </div>
           <div className="overflow-x-auto">
@@ -232,10 +232,10 @@ export default function RetroPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            レトロゲームを<span style={{ color: 'var(--color-accent-orange)' }}>お宝価格</span>で売りませんか？
+            レトロゲームを<span style={{ color: 'var(--color-accent-orange)' }}>適正価格</span>で売却するために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            押し入れに眠っているレトロゲーム、思わぬ高額査定がつくかもしれません。まずは無料査定でチェック。
+            長く保管しているレトロゲームにも、高額査定がつく可能性があります。まずは無料査定で買取価格をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">

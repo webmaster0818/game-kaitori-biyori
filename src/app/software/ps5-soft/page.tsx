@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】',
   description:
-    'PS5ソフトの買取相場と人気タイトル10本の価格目安を徹底解説。FF・バイオハザード・エルデンリングなど高額買取タイトル、限定版の価値、DL版は売れない注意点、おすすめ買取サービス3社比較まで完全網羅。',
+    'PS5ソフトの買取相場と人気タイトル10本の価格目安を解説します。FF・バイオハザード・エルデンリングなどの高額買取タイトル、限定版の価値、ダウンロード版は売却できない点、おすすめ買取サービス3社の比較を掲載しています。',
   keywords: ['PS5ソフト 買取', 'プレステ5 ソフト 売る', 'PS5 ソフト 買取相場'],
   openGraph: {
     images: ['/og.png'],
     title: 'PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】',
-    description: 'PS5ソフトの買取相場と人気タイトル10本の価格目安を徹底解説。',
+    description: 'PS5ソフトの買取相場と人気タイトル10本の価格目安を解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -33,12 +33,12 @@ const priceData = [
 
 const limitedInfo = [
   { title: 'コレクターズエディション', description: 'フィギュアやアートブック付きの限定版は通常版の2〜5倍の買取価格がつくことがあります。特に初回生産分は希少性が高く、未開封品はさらにプレミアがつきます。' },
-  { title: 'スチールブックケース', description: 'スチールブック仕様の限定パッケージは、ゲームをプレイ済みでもケース自体にコレクター需要があります。通常版より1,000〜3,000円程度高値がつく傾向です。' },
-  { title: '初回特典・予約特典', description: 'DLCコードは使用済みでも、物理特典（アートカード、ステッカー等）が揃っていれば査定額アップの対象になります。' },
+  { title: 'スチールブックケース', description: 'スチールブック仕様の限定パッケージは、ゲームをプレイ済みでもケース自体にコレクター需要があります。通常版より1,000〜3,000円程度高値がつく傾向があります。' },
+  { title: '初回特典・予約特典', description: 'DLCコードは使用済みでも、物理特典（アートカード、ステッカー等）が揃っていれば、査定額が上がる対象になります。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '複数社の競争で最高値を狙える', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '複数社の比較で最高値を確認可能', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '大量のソフトを自宅で即日現金化', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'PS5本体とソフトをまとめて売れる', rank: 3 },
 ];
@@ -49,13 +49,13 @@ const faqs = [
   { q: '限定版やコレクターズエディションは高く売れますか？', a: 'はい、通常版の2〜5倍の買取価格がつくこともあります。特にフィギュアやアートブック付きの限定版は、未開封品であればさらにプレミアがつきます。' },
   { q: 'PS5ソフトとPS4ソフトの買取価格は違いますか？', a: 'はい、一般的にPS5版のほうが高値で買取されます。ただし一部のクロスジェネレーションタイトルではPS4版も需要があり、価格差が小さいこともあります。' },
   { q: 'ソフトのケースや説明書がなくても売れますか？', a: 'ソフト単体でも買取可能ですが、ケースなしだと500〜1,500円程度の減額になります。ディスクに傷がないことが最低条件です。' },
-  { q: '海外版のPS5ソフトは売れますか？', a: '海外版も買取可能な業者はありますが、日本語版と比較して大幅に安くなるケースがほとんどです。ヒカカク！で海外版の取扱がある業者を検索するのがおすすめです。' },
+  { q: '海外版のPS5ソフトは売れますか？', a: '海外版も買取可能な業者はありますが、日本語版と比較して大幅に安くなるケースがほとんどです。ヒカカク！で海外版の取扱がある業者を検索することをおすすめします。' },
 ];
 
 export default function PS5SoftPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5ソフト買取おすすめ3選｜プレステ5ソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'PS5ソフト' }]} />
 
       {/* Hero */}
@@ -66,7 +66,7 @@ export default function PS5SoftPage() {
             PS5ソフト 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            PlayStation 5ソフトの買取相場を人気タイトル10本で徹底調査。限定版の価値、ダウンロード版の注意点、おすすめ買取サービス3社の比較まで、PS5ソフトを売る前に知っておきたい情報を完全網羅しています。
+            当サイトでは、PlayStation 5ソフトの買取相場を人気タイトル10本で調査しています。限定版の価値、ダウンロード版の注意点、おすすめ買取サービス3社の比較など、PS5ソフトの売却前に確認いただきたい情報をまとめました。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -121,14 +121,14 @@ export default function PS5SoftPage() {
 
         {/* DL Warning */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ダウンロード版は売れない - 注意点</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ダウンロード版の売却に関する注意点</h2>
           <div className="glass-card p-6" style={{ borderLeft: '4px solid #EF4444' }}>
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
               PS5のダウンロード版ソフトはPSNアカウントに紐づいているため、第三者への譲渡・買取ができません。以下の点にご注意ください。
             </p>
             <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>売却予定がある場合：</strong>必ずパッケージ版を購入しましょう。</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>PS5デジタル・エディション：</strong>ディスクドライブがないため、全てDL版になります。将来の売却を考慮するなら通常版（ディスクドライブ付き）がおすすめです。</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>売却予定がある場合：</strong>パッケージ版の購入をおすすめします。</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>PS5デジタル・エディション：</strong>ディスクドライブがないため、すべてダウンロード版になります。将来の売却を考慮するなら通常版（ディスクドライブ付き）がおすすめです。</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>DLCコード：</strong>ソフトに付属するDLCコードは使用済みでも買取価格に大きく影響しませんが、未使用なら若干のプラス査定になります。</li>
             </ul>
           </div>
@@ -193,10 +193,10 @@ export default function PS5SoftPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            PS5ソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            PS5ソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            複数社の買取価格を比較して、あなたのソフトを一番高く買い取ってくれるサービスを見つけましょう。
+            複数社の買取価格を比較し、お手持ちのソフトを最も高く買い取るサービスを選ぶことをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">

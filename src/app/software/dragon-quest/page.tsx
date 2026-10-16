@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
   description:
-    'ドラクエ3リメイク・DQ11等の全タイトル買取相場を一覧表で掲載。店舗別比較、レトロドラクエの価値、価格推移まで徹底解説。',
+    'ドラクエ3リメイク・DQ11等の全タイトルの買取相場を一覧表で掲載しています。店舗別の比較、レトロドラクエの価値、価格推移について解説します。',
   keywords: ['ドラクエ 買取 相場', 'ドラゴンクエスト 買取', 'DQ3 リメイク 買取', 'ドラクエ 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
-    description: 'ドラクエシリーズ全タイトルの買取相場を店舗別に徹底比較。',
+    description: 'ドラクエシリーズ全タイトルの買取相場を店舗別に比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -23,43 +23,43 @@ const priceData = [
   { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて S', platform: 'Switch', price: '2,000〜3,200円', trend: '安定', note: 'Switch版は追加要素ありで人気' },
   { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて', platform: 'PS4', price: '800〜1,500円', trend: 'やや下降', note: 'S版に需要が移行' },
   { title: 'ドラゴンクエストX オフライン', platform: 'Switch/PS5', price: '1,500〜2,500円', trend: '安定', note: 'オフラインで遊べるDQ10' },
-  { title: 'ドラゴンクエストビルダーズ2', platform: 'Switch/PS4', price: '1,500〜2,500円', trend: '安定', note: 'マインクラフト系で幅広い人気' },
+  { title: 'ドラゴンクエストビルダーズ2', platform: 'Switch/PS4', price: '1,500〜2,500円', trend: '安定', note: 'マインクラフト系の作品として幅広い人気' },
   { title: 'ドラゴンクエストヒーローズ I・II', platform: 'Switch', price: '1,000〜2,000円', trend: '安定', note: 'アクションRPGとして一定の需要' },
   { title: 'ドラゴンクエストトレジャーズ', platform: 'Switch', price: '800〜1,500円', trend: 'やや下降', note: 'スピンオフ作品' },
   { title: 'ドラゴンクエストモンスターズ3', platform: 'Switch', price: '2,500〜3,800円', trend: '安定', note: 'モンスター育成の人気シリーズ' },
-  { title: 'ドラゴンクエストV（SFC）', platform: 'SFC', price: '1,000〜3,000円', trend: '上昇', note: '箱・説明書完備は高額。名作の誉れ高い' },
-  { title: 'ドラゴンクエストIII（FC）', platform: 'FC', price: '500〜2,000円', trend: '安定', note: '流通量多。箱付き美品は高値' },
+  { title: 'ドラゴンクエストV（SFC）', platform: 'SFC', price: '1,000〜3,000円', trend: '上昇', note: '箱・説明書完備品は高額。名作として評価が高い' },
+  { title: 'ドラゴンクエストIII（FC）', platform: 'FC', price: '500〜2,000円', trend: '安定', note: '流通量が多い。箱付き美品は高値' },
 ];
 
 const shopComparison = [
   { shop: 'ヒカカク！', dq3Remake: '4,200〜5,000円', dq11S: '2,500〜3,200円', dqMonsters3: '3,000〜3,800円', feature: '一括査定で最高値を比較可能' },
   { shop: 'ゲオ（GEO）', dq3Remake: '3,500〜4,500円', dq11S: '2,000〜2,800円', dqMonsters3: '2,500〜3,200円', feature: '即日現金化。Pontaポイント付き' },
   { shop: 'ブックオフ', dq3Remake: '3,000〜4,000円', dq11S: '1,800〜2,500円', dqMonsters3: '2,000〜3,000円', feature: '店頭持込で即査定' },
-  { shop: '駿河屋', dq3Remake: '3,800〜4,800円', dq11S: '2,200〜3,000円', dqMonsters3: '2,800〜3,500円', feature: 'レトロDQの査定が強い' },
+  { shop: '駿河屋', dq3Remake: '3,800〜4,800円', dq11S: '2,200〜3,000円', dqMonsters3: '2,800〜3,500円', feature: 'レトロDQの査定に強み' },
 ];
 
 const retroDQValues = [
   { title: 'ドラクエI（FC）箱付き完品', value: '3,000〜8,000円', detail: '初版とリピート版で価格差あり。ゴールドカートリッジは特にプレミア。' },
-  { title: 'ドラクエII（FC）箱付き完品', value: '2,000〜5,000円', detail: '初版の方が価値が高い。マップ付きだとさらにプラス。' },
-  { title: 'ドラクエIII（FC）箱付き完品', value: '2,000〜6,000円', detail: '社会現象を起こした伝説のタイトル。状態良好品は高額。' },
+  { title: 'ドラクエII（FC）箱付き完品', value: '2,000〜5,000円', detail: '初版の方が価値が高い。マップ付きは査定額が上がる傾向があります。' },
+  { title: 'ドラクエIII（FC）箱付き完品', value: '2,000〜6,000円', detail: '発売当時に社会現象となったタイトル。状態良好品は高額。' },
   { title: 'ドラクエIV（FC）箱付き完品', value: '1,500〜4,000円', detail: 'FC最後のDQ。AIパーティシステムが特徴。' },
-  { title: 'ドラクエV（SFC）箱付き完品', value: '3,000〜8,000円', detail: 'シリーズ最高傑作との呼び声。コレクター需要が非常に高い。' },
-  { title: 'ドラクエVI（SFC）箱付き完品', value: '2,000〜5,000円', detail: 'SFC最後のDQ。ムドー戦は語り草。' },
+  { title: 'ドラクエV（SFC）箱付き完品', value: '3,000〜8,000円', detail: 'シリーズ屈指の名作と評される作品。コレクター需要が非常に高い。' },
+  { title: 'ドラクエVI（SFC）箱付き完品', value: '2,000〜5,000円', detail: 'SFC最後のDQ。ムドー戦などで知られる人気作。' },
 ];
 
 const faqs = [
   { q: 'ドラクエシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではDQ3 HD-2Dリメイクが3,500〜5,000円で最も高値です。レトロ作品ではSFC版ドラクエVの箱付き完品が3,000〜8,000円で取引されています。ドラクエは国民的RPGのため中古市場での需要が安定しており、他のシリーズと比べて値崩れしにくいのが特徴です。' },
-  { q: 'ドラクエ3 HD-2Dリメイクはいつ売るべきですか？', a: '今後DQ1・DQ2のHD-2Dリメイクが発表される可能性があるため、その発表前が理想的です。また、ドラクエ12の続報が出ると旧作の需要が一時的に変動する可能性もあります。現時点では価格が安定しているため、遊び終えたら早めに売却するのがおすすめです。' },
-  { q: 'レトロドラクエ（FC・SFC）はどこで売るのがお得ですか？', a: 'レトロゲーム専門の買取店がおすすめです。駿河屋やまんだらけ等はレトロゲームの査定に強く、箱・説明書・マップ等の付属品を正当に評価してくれます。一般的な買取店では「古いゲーム」として安値をつけられることがあるため、専門店を利用しましょう。' },
-  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: 'DQ3リメイクやDQ11Sなど、Switch版の方がPS版より500〜1,500円ほど高値がつく傾向があります。Switchの携帯モードで遊べる利便性と、Switch自体のユーザー数の多さが理由です。売却を考慮するなら、マルチプラットフォームのDQはSwitch版を購入するのがお得です。' },
-  { q: 'ドラクエのスピンオフ作品は売れますか？', a: 'はい、売れます。特にドラクエモンスターズ3は2,500〜3,800円と好相場です。ビルダーズ2も1,500〜2,500円で安定しています。ただしヒーローズやトレジャーズなど、評価が分かれた作品は1,000〜2,000円程度とやや低めです。本編と比べるとスピンオフは値下がりが早い傾向があります。' },
-  { q: 'ドラクエ12が発売されたら旧作の価格はどうなりますか？', a: 'ドラクエ12が発売されると、短期的にはシリーズ全体への注目が高まり、旧作の需要も上がる可能性があります。ただし中長期的には最新作に需要が集中するため、旧作は緩やかに下落する傾向です。DQ12の発売前にプレイ済みの旧作を売却するのが安全な判断と言えます。' },
+  { q: 'ドラクエ3 HD-2Dリメイクはいつ売るべきですか？', a: '今後DQ1・DQ2のHD-2Dリメイクが発表される可能性があるため、その発表前が理想的です。また、ドラクエ12の続報が出ると旧作の需要が一時的に変動する可能性もあります。現時点では価格が安定しているため、遊び終えた後は早めの売却をおすすめします。' },
+  { q: 'レトロドラクエ（FC・SFC）はどこで売るのが有利ですか？', a: 'レトロゲーム専門の買取店が適しています。駿河屋やまんだらけ等はレトロゲームの査定に強みがあり、箱・説明書・マップ等の付属品も適正に評価する傾向があります。一般的な買取店では「古いゲーム」として安値をつけられることがあるため、専門店の利用をおすすめします。' },
+  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: 'DQ3リメイクやDQ11Sなど、Switch版の方がPS版より500〜1,500円ほど高値がつく傾向があります。Switchの携帯モードで遊べる利便性と、Switch自体のユーザー数の多さが理由です。売却を前提とする場合は、マルチプラットフォームのDQはSwitch版の購入が有利です。' },
+  { q: 'ドラクエのスピンオフ作品は売れますか？', a: 'はい、売却できます。特にドラクエモンスターズ3は2,500〜3,800円と相場が堅調です。ビルダーズ2も1,500〜2,500円で安定しています。ただしヒーローズやトレジャーズなど、評価が分かれた作品は1,000〜2,000円程度とやや低めです。本編と比べるとスピンオフは値下がりが早い傾向があります。' },
+  { q: 'ドラクエ12が発売されたら旧作の価格はどうなりますか？', a: 'ドラクエ12が発売されると、短期的にはシリーズ全体への注目が高まり、旧作の需要も上がる可能性があります。ただし中長期的には最新作に需要が集中するため、旧作は緩やかに下落する傾向です。DQ12の発売前に、プレイ済みの旧作を売却しておくことをおすすめします。' },
 ];
 
 export default function DragonQuestPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ドラクエ買取相場' }]} />
 
       {/* Hero */}
@@ -70,7 +70,7 @@ export default function DragonQuestPage() {
             ドラクエシリーズの買取相場
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            国民的RPG「ドラゴンクエスト」シリーズの全タイトル買取相場を一覧表で紹介。DQ3 HD-2Dリメイクからファミコン初代まで、店舗別の価格比較、レトロドラクエのプレミア価値、価格推移の傾向を徹底解説します。ドラクエソフトを最高値で売却するためのガイドです。
+            国民的RPG「ドラゴンクエスト」シリーズの全タイトルの買取相場を一覧表で紹介しています。DQ3 HD-2Dリメイクからファミコン初代まで、店舗別の価格比較、レトロドラクエのプレミア価値、価格推移の傾向について解説します。ドラクエソフトをより高く売却するためのガイドです。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -114,7 +114,7 @@ export default function DragonQuestPage() {
         {/* 公式買取価格（実値） */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />各社公式の実買取価格【2026年6月14日調査】</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>各社の公式買取ページで実際に確認できた価格です（完品・状態良好が前提。状態により変動）。上の相場一覧と違い、これは「いま公式に出ている実額」です。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>各社の公式買取ページで実際に確認できた価格です（完品・状態良好が前提。状態により変動）。上の相場一覧とは異なり、各社が公式に掲載している実際の買取価格です。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -130,7 +130,7 @@ export default function DragonQuestPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ルデヤ公式・ゲオ公式高価買取品一覧・ブックオフ公式「ゲームの高価買取情報」（2026年6月11〜14日確認）。同じVIIでもゲオ(Switch版3,000円)とブックオフ(Switch2版2,500円)で差があり、複数社の確認がおすすめです。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ルデヤ公式・ゲオ公式高価買取品一覧・ブックオフ公式「ゲームの高価買取情報」（2026年6月11〜14日確認）。同じVIIでもゲオ(Switch版3,000円)とブックオフ(Switch 2版2,500円)で差があるため、複数社の価格をご確認いただくことをおすすめします。</p>
         </section>
 
         {/* 店舗別比較 */}
@@ -244,10 +244,10 @@ export default function DragonQuestPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            ドラクエソフトの<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>を今すぐチェック
+            ドラクエソフトの<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>の確認方法
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            店舗によって買取価格が大きく異なります。一括査定で最高値を見つけましょう。
+            店舗によって買取価格が大きく異なります。一括査定で各社の価格を比較し、最高値を確認することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -274,7 +274,7 @@ export default function DragonQuestPage() {
             </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが一番高い？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データにもとづく店舗別の最高値</p>
             </Link>
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>

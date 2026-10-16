@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】',
   description:
-    '壊れたゲーム機やジャンク品でも買取できる理由と、買取可能な故障の種類を徹底解説。3社のジャンク対応比較、査定額の目安（正常品の何%か）まで完全網羅。諦める前に確認を。',
+    '壊れたゲーム機やジャンク品でも買取できる理由と、買取可能な故障の種類について解説します。3社のジャンク対応比較、査定額の目安（正常品の何%か）もまとめています。処分を決める前にご確認ください。',
   keywords: ['壊れたゲーム機 買取', 'ジャンク 売れる', 'ゲーム機 故障 買取', 'Switch 壊れた 売る'],
   openGraph: {
     images: ['/og.png'],
     title: '壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】',
-    description: '壊れたゲーム機やジャンク品でも買取できる理由と対応業者を徹底解説。',
+    description: '壊れたゲーム機やジャンク品でも買取できる理由と、対応業者について解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -22,7 +22,7 @@ const reasons = [
   { title: '部品取り需要', description: '壊れた本体でも、液晶画面、基板、コントローラー、外装パーツなどは修理用の部品として需要があります。特に廃番モデルの部品は希少価値が高いです。' },
   { title: '修理再販', description: '故障箇所を修理して中古品として再販するビジネスモデルがあります。軽度の故障であれば、安く仕入れて修理し利益を出せるため、買取業者にとっても価値があります。' },
   { title: 'レアモデルの外装需要', description: '限定カラーや特別デザインのモデルは、外装だけでも需要があります。本体が動かなくても外装の状態が良ければ買取可能なケースがあります。' },
-  { title: '基板の貴金属回収', description: '完全に壊れた本体でも、基板に含まれる金やレアメタルの回収目的で買取されるケースがあります（ただし買取額は非常に低い）。' },
+  { title: '基板の貴金属回収', description: '完全に壊れた本体でも、基板に含まれる金やレアメタルの回収目的で買取されるケースがあります（ただし、買取金額は非常に低くなります）。' },
 ];
 
 const faultTypes = [
@@ -39,24 +39,24 @@ const faultTypes = [
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', junk: 'ジャンク対応業者も含めて一括査定可能', point: 'ジャンク専門業者を含む最大20社で最高値を発見' },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', junk: 'ジャンク品の出張査定対応', point: '壊れたゲーム機を自宅で査定・即日現金化' },
-  { name: 'ティファナ', feature: '店舗+宅配買取', junk: '店頭でジャンク品の即時査定', point: '動作確認不要で持ち込みOK' },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', junk: 'ジャンク対応業者も含めて一括査定可能', point: 'ジャンク専門業者を含む最大20社の査定額を比較可能' },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', junk: 'ジャンク品の出張査定対応', point: '壊れたゲーム機を自宅で査定し、即日現金化' },
+  { name: 'ティファナ', feature: '店舗+宅配買取', junk: '店頭でジャンク品の即時査定', point: '動作確認なしで持ち込み可能' },
 ];
 
 const estimateGuide = [
-  { condition: 'Joy-Conドリフトのみ（Switch）', percentage: '60〜80%', note: '修理が簡単なため減額幅が小さい' },
-  { condition: '画面の傷・軽度の表示不良', percentage: '40〜60%', note: '画面交換で対応可能' },
-  { condition: 'ディスクドライブ故障', percentage: '20〜40%', note: '部品交換が必要だが需要あり' },
-  { condition: '電源不良', percentage: '10〜30%', note: '原因の特定が難しいため低め' },
-  { condition: '水没・重度の破損', percentage: '5〜15%', note: '部品取りとしての価値のみ' },
+  { condition: 'Joy-Conドリフトのみ（Switch）', percentage: '60〜80%', note: '修理が比較的容易なため、減額幅は小さめです' },
+  { condition: '画面の傷・軽度の表示不良', percentage: '40〜60%', note: '画面交換で対応できます' },
+  { condition: 'ディスクドライブ故障', percentage: '20〜40%', note: '部品交換が必要ですが、需要があります' },
+  { condition: '電源不良', percentage: '10〜30%', note: '原因の特定が難しいため、低めになります' },
+  { condition: '水没・重度の破損', percentage: '5〜15%', note: '部品取りとしての価値のみとなります' },
 ];
 
 const faqs = [
   { q: '壊れたゲーム機でも本当に売れますか？', a: 'はい、多くの買取業者でジャンク品の買取に対応しています。部品取りや修理再販の需要があるため、完全に壊れていても値段がつくケースがほとんどです。ただし買取価格は正常品より大幅に下がります。' },
   { q: 'ジャンク品の買取価格はどのくらいですか？', a: '故障の程度により異なりますが、正常品の5〜80%程度が目安です。Joy-Conドリフト程度の軽度な不具合なら正常品の60〜80%、電源不良や水没は10〜20%程度になります。' },
-  { q: '故障の内容を正直に伝えるべきですか？', a: 'はい、必ず正直に伝えてください。故障を隠して売ると、後から返品や減額を求められることがあります。正直に申告したほうが信頼されて適正な査定を受けられます。' },
-  { q: '修理してから売ったほうが高く売れますか？', a: '一概には言えません。修理費用が買取価格の上昇分を上回るケースもあります。まずはジャンク品として査定してもらい、修理費用と比較してから判断するのがおすすめです。' },
+  { q: '故障の内容は申告すべきですか？', a: 'はい、必ずありのままお伝えください。故障を伏せて売却すると、後から返品や減額を求められることがあります。正確に申告することで、適正な査定を受けやすくなります。' },
+  { q: '修理してから売ったほうが高く売れますか？', a: '一概には言えません。修理費用が買取価格の上昇分を上回るケースもあります。まずはジャンク品として査定してもらい、修理費用と比較してから判断することをおすすめします。' },
   { q: '改造・CFW導入したゲーム機は売れますか？', a: '多くの買取業者では改造品の買取を断っています。未改造の状態に戻しても痕跡が残ることがあり、買取価格は大幅に下がるか買取拒否になるケースが多いです。' },
   { q: 'バッテリーが膨張しているゲーム機は売れますか？', a: '対応業者は限られますが、買取可能なケースはあります。バッテリー膨張は安全上のリスクがあるため、梱包時は衝撃を与えないよう注意し、事前に買取業者に相談してください。' },
 ];
@@ -64,7 +64,7 @@ const faqs = [
 export default function BrokenPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "壊れたゲーム機でも売れる？ジャンク品買取ガイド【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'ジャンク品買取' }]} />
 
       {/* Hero */}
@@ -75,7 +75,7 @@ export default function BrokenPage() {
             壊れたゲーム機でも売れる？ジャンク品買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            壊れたゲーム機やジャンク品でも買取してもらえる理由、買取可能な故障の種類、3社のジャンク対応比較、査定額の目安まで徹底解説。捨てる前にぜひ確認してください。
+            壊れたゲーム機やジャンク品でも買取の対象となる理由、買取可能な故障の種類、3社のジャンク対応比較、査定額の目安について解説します。処分する前にご確認ください。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -211,10 +211,10 @@ export default function BrokenPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            壊れたゲーム機も<span style={{ color: 'var(--color-electric-green)' }}>お金に変わる</span>かもしれません
+            壊れたゲーム機にも<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>がつく場合があります
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            捨てる前にまず査定を。ジャンク品でも値段がつくケースがほとんどです。
+            処分する前に、まず査定を受けることをおすすめします。ジャンク品でも値段がつくケースがほとんどです。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -229,7 +229,7 @@ export default function BrokenPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/knowledge/boxless/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>箱なし・付属品なし</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも売れるか詳しく解説</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なしでも売れるかを解説</p>
             </Link>
             <Link href="/knowledge/price-guide/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取相場ガイド</p>

@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証',
+  title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
   description:
-    'ティファナのゲーム買取を徹底レビュー。ゲーム・トレカ・フィギュア・レトロ玩具など幅広いホビー系アイテムの買取に対応するリサイクルショップ。店舗買取・宅配買取の特徴・メリット・利用手順を詳しく解説。',
+    'ティファナのゲーム買取をレビューしています。ティファナは、ゲーム・トレカ・フィギュア・レトロ玩具など幅広いホビー系アイテムの買取に対応するリサイクルショップです。店舗買取・宅配買取の特徴、メリット、利用手順について詳しく解説します。',
   keywords: ['ティファナ', 'ティファナ 口コミ', 'ティファナ ゲーム買取', 'トレカ 買取', 'フィギュア 買取', 'ホビー 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証',
-    description: 'ティファナのゲーム買取を徹底レビュー。ホビー系買取の特徴と使い方を解説。',
+    title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
+    description: 'ティファナのゲーム買取をレビューしています。ホビー系アイテムの買取の特徴と利用方法について解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,17 +19,17 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: 'ゲーム・トレカ・フィギュア幅広い', description: 'ゲームソフト・ゲーム機だけでなく、トレーディングカード・フィギュア・プラモデル・レトロ玩具など、ホビー系アイテムを幅広く取り扱っています。コレクション整理にぴったりのサービスです。' },
-  { title: '店舗買取+宅配買取', description: '東京近郊の店舗への持ち込み買取と、全国対応の宅配買取の2つの方法から選べます。店舗ならその場で査定・現金化、宅配なら自宅から手軽に送れます。' },
-  { title: 'ホビー専門査定士', description: 'ゲーム・ホビーに精通した専門の査定士が在籍。市場相場を熟知しているため、レアアイテムの価値を見逃しません。トレカの高額カードやプレミアフィギュアも適正価格で査定。' },
-  { title: '東京近郊に店舗展開', description: '東京都内を中心に複数の店舗を展開。直接持ち込んでその場で査定・即現金化が可能です。スタッフとの対面査定で安心感があります。遠方の方は宅配買取をご利用ください。' },
+  { title: 'ゲーム・トレカ・フィギュアを幅広く取り扱い', description: 'ゲームソフト・ゲーム機だけでなく、トレーディングカード・フィギュア・プラモデル・レトロ玩具など、ホビー系アイテムを幅広く取り扱っています。コレクションの整理に適したサービスです。' },
+  { title: '店舗買取+宅配買取', description: '東京近郊の店舗への持ち込み買取と、全国対応の宅配買取の2つの方法から選べます。店舗ではその場で査定・現金化ができ、宅配では自宅から手軽に送ることができます。' },
+  { title: 'ホビー専門査定士', description: 'ゲーム・ホビーに精通した専門の査定士が在籍しています。市場相場を把握した査定士が、レアアイテムの価値も踏まえて査定します。トレカの高額カードやプレミアフィギュアも適正価格で査定されます。' },
+  { title: '東京近郊に店舗展開', description: '東京都内を中心に複数の店舗を展開しています。直接持ち込んでその場で査定・即現金化が可能です。スタッフとの対面査定で安心感があります。遠方の方は宅配買取をご利用ください。' },
 ];
 
 const steps = [
-  { step: 1, title: '買取方法を選ぶ', description: '店舗買取か宅配買取を選びます。店舗買取なら最寄りの店舗へ直接お持ちください。宅配買取は公式サイトから申込みフォームに入力します。' },
-  { step: 2, title: '商品を準備・持込み/発送', description: '売りたいアイテムをまとめて準備。店舗買取なら営業時間内に持ち込み、宅配買取なら梱包して発送します。付属品や箱があれば一緒に入れましょう。' },
-  { step: 3, title: '専門査定士が査定', description: 'ホビー専門の査定士が一点一点丁寧に査定。ゲームの状態・希少性・市場相場を踏まえた適正価格を算出します。トレカやフィギュアも同時に査定可能です。' },
-  { step: 4, title: '現金受取り・完了', description: '店舗買取ならその場で現金を受け取り。宅配買取の場合は査定結果に同意後、指定口座へ振込みされます。キャンセルの場合は返送対応します。' },
+  { step: 1, title: '買取方法を選ぶ', description: '店舗買取か宅配買取を選びます。店舗買取なら最寄りの店舗へ直接お持ちください。宅配買取は公式サイトの申し込みフォームに入力します。' },
+  { step: 2, title: '商品を準備・持込み/発送', description: '売りたいアイテムをまとめて準備します。店舗買取なら営業時間内に持ち込み、宅配買取なら梱包して発送します。付属品や箱がある場合は、一緒に入れることをおすすめします。' },
+  { step: 3, title: '専門査定士が査定', description: 'ホビー専門の査定士が一点一点丁寧に査定します。ゲームの状態・希少性・市場相場を踏まえた適正価格を算出します。トレカやフィギュアも同時に査定可能です。' },
+  { step: 4, title: '現金受取り・完了', description: '店舗買取の場合は、その場で現金を受け取ります。宅配買取の場合は、査定結果に同意した後に指定口座へ振込されます。キャンセルの場合は商品が返送されます。' },
 ];
 
 const targets = [
@@ -39,18 +39,18 @@ const targets = [
 ];
 
 const faqs = [
-  { q: 'ティファナの店舗はどこにありますか？', a: '東京都内を中心に複数の店舗を展開しています。最新の店舗情報・営業時間は公式サイトでご確認ください。駅から近い立地の店舗が多く、アクセスしやすいのが特徴です。' },
-  { q: 'トレカとゲームを一緒に売ることはできますか？', a: 'はい、もちろん可能です。ティファナではゲーム・トレカ・フィギュアなどホビー系アイテムをまとめて査定できます。ジャンルの異なるアイテムを一度に売れるのが大きなメリットです。' },
-  { q: '宅配買取の送料はかかりますか？', a: '買取成立の場合、送料は無料です。キャンセル時の返送料については公式サイトでご確認ください。大量に送る場合はまとめて梱包すると効率的です。' },
+  { q: 'ティファナの店舗はどこにありますか？', a: '東京都内を中心に複数の店舗を展開しています。最新の店舗情報・営業時間は公式サイトでご確認ください。駅から近い立地の店舗が多く、アクセスしやすい点が特徴です。' },
+  { q: 'トレカとゲームを一緒に売ることはできますか？', a: 'はい、可能です。ティファナではゲーム・トレカ・フィギュアなどホビー系アイテムをまとめて査定できます。ジャンルの異なるアイテムを一度に売れる点が大きなメリットです。' },
+  { q: '宅配買取の送料はかかりますか？', a: '買取成立の場合、送料は無料です。キャンセル時の返送料については公式サイトでご確認ください。大量に送る場合は、まとめて梱包すると効率的です。' },
   { q: 'フィギュアの箱がなくても買取してもらえますか？', a: 'はい、箱なしでも買取可能です。ただし、フィギュアは箱ありの方が大幅に査定額が上がります。特にプライズフィギュアは箱の有無で数百円〜数千円の差が出ることがあります。' },
-  { q: 'レトロゲームやレトロ玩具の買取にも対応していますか？', a: 'はい、ティファナはレトロゲーム・レトロ玩具の買取にも力を入れています。ファミコンソフトやスーファミソフト、昭和のブリキ玩具やソフビ人形なども査定対象です。希少品は特に高額査定の可能性があります。' },
-  { q: '出張買取はやっていますか？', a: '現在、ティファナでは出張買取サービスは行っていません。店舗への持ち込みまたは宅配買取でのご利用となります。大量のアイテムがある場合は宅配買取がおすすめです。' },
+  { q: 'レトロゲームやレトロ玩具の買取にも対応していますか？', a: 'はい、ティファナはレトロゲーム・レトロ玩具の買取にも力を入れています。ファミコンソフトやスーパーファミコンソフト、昭和のブリキ玩具やソフビ人形なども査定対象です。希少品は特に高額査定の可能性があります。' },
+  { q: '出張買取は行っていますか？', a: '現在、ティファナでは出張買取サービスは行っていません。店舗への持ち込みまたは宅配買取でのご利用となります。大量のアイテムがある場合は、宅配買取をおすすめします。' },
 ];
 
 export default function TifanaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ティファナ' }]} />
 
       {/* Hero */}
@@ -61,10 +61,10 @@ export default function TifanaReviewPage() {
             <span className="tag-pill text-xs" style={{ background: 'rgba(148,163,184,0.2)', color: '#CBD5E1' }}>おすすめ3位</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ティファナ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>徹底レビュー</span>
+            ティファナ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミのレビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲーム・トレーディングカード・フィギュア・レトロ玩具など、幅広いホビー系アイテムの買取に対応するリサイクルショップ。ホビー専門の査定士が在籍し、コレクションの価値を見逃しません。ゲームと一緒にホビーグッズもまとめて売りたい方に最適なサービスです。
+            ティファナは、ゲーム・トレーディングカード・フィギュア・レトロ玩具など、幅広いホビー系アイテムの買取に対応するリサイクルショップです。ホビー専門の査定士が在籍し、コレクションの価値を踏まえて査定します。ゲームと一緒にホビーグッズもまとめて売りたい方に適したサービスです。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -103,7 +103,7 @@ export default function TifanaReviewPage() {
                 <li>+ 店舗持ち込みで即現金化</li>
                 <li>+ レトロゲーム・レトロ玩具にも対応</li>
                 <li>+ 宅配買取で全国対応</li>
-                <li>+ コレクション整理に最適</li>
+                <li>+ コレクションの整理に適している</li>
               </ul>
             </div>
             <div className="glass-card p-6">
@@ -111,7 +111,7 @@ export default function TifanaReviewPage() {
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>- 出張買取に非対応</li>
                 <li>- 店舗は東京近郊がメイン</li>
-                <li>- 一括査定機能はない</li>
+                <li>- 一括査定機能なし</li>
                 <li>- ゲーム単品の査定額は大手に劣る場合も</li>
               </ul>
             </div>
@@ -175,7 +175,7 @@ export default function TifanaReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ティファナ公式（tifana.net・会社概要・FAQ・本人確認案内）、ヒカカク!（2026年6月18日閲覧）。返送料・キャンセル費用が無料な点が特徴です。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ティファナ公式（tifana.net・会社概要・FAQ・本人確認案内）、ヒカカク!（2026年6月18日閲覧）。返送料・キャンセル費用が無料である点が特徴です。</p>
         </section>
 
         {/* 口コミ傾向（出典付き） */}
@@ -183,7 +183,7 @@ export default function TifanaReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
           <div className="glass-card p-6">
             <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
-              買取比較サイトでの評価は分かれます。「ヒカカク!」は<strong>総合4.03点・501件（否定的17%）</strong>、一方「みん評」は2.68点・57件（2026年6月18日閲覧）。ゲーム・トレカ・フィギュアを<strong>まとめて一箇所で売りたい層</strong>に向くサービスです。
+              買取比較サイトでの評価は分かれます。「ヒカカク!」は<strong>総合4.03点・501件（否定的17%）</strong>、一方「みん評」では2.68点・57件です（2026年6月18日閲覧）。ゲーム・トレカ・フィギュアを<strong>まとめて一箇所で売りたい方</strong>に適したサービスです。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
@@ -199,7 +199,7 @@ export default function TifanaReviewPage() {
                 <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
                   <li>・買取価格が低いという声もある（評価が二分）</li>
                   <li>・箱なしフィギュア等は安くなりやすい</li>
-                  <li>・レトロゲーム単体は専門店が高い場合も</li>
+                  <li>・レトロゲーム単体は専門店のほうが高い場合もある</li>
                 </ul>
               </div>
             </div>
@@ -240,7 +240,7 @@ export default function TifanaReviewPage() {
             ゲーム・ホビーの<span style={{ color: 'var(--color-electric-green)' }}>コレクション整理</span>はティファナで
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            ゲーム・トレカ・フィギュア、まとめて売って一気にスッキリ。ホビー専門の査定士がしっかり査定します。
+            ゲーム・トレカ・フィギュアをまとめて売却できます。ホビー専門の査定士が査定を行います。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://tifana.net" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
@@ -254,7 +254,7 @@ export default function TifanaReviewPage() {
 
         {/* Internal Links */}
         <section className="mt-12">
-          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスもチェック</h3>
+          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスとの比較</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/review/hikakaku/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-green text-xs mb-2 inline-block">1位</span>

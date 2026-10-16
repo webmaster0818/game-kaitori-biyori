@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '駿河屋の買取の評判・口コミは？【2026年9月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証',
+  title: '駿河屋の買取の評判・口コミは？【2026年9月】レトロ・限定版の実力と入金の遅い噂・デメリットを検証',
   description:
-    'レトロゲームを売るなら駿河屋は有力候補です——買取価格を事前公開する数少ない老舗で、レトロ・限定版・コレクターアイテムの査定に強み。一方で「入金が遅い」という評判の実態、あんしん買取と かんたん買取の違い、デメリットまで公式情報で徹底検証します。',
+    'レトロゲームの売却先として、駿河屋は有力な候補です。買取価格を事前に公開している数少ない老舗で、レトロ・限定版・コレクターアイテムの査定に強みがあります。一方で「入金が遅い」という評判の実態、あんしん買取とかんたん買取の違い、デメリットについても公式情報をもとに検証します。',
   keywords: ['駿河屋 買取', '駿河屋 口コミ', '駿河屋 ゲーム買取', 'レトロゲーム 買取', '駿河屋 査定'],
   openGraph: {
     images: ['/og.png'],
-    title: '駿河屋の買取の評判・口コミは？【2026年9月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証',
-    description: '駿河屋のゲーム買取を徹底レビュー。レトロゲーム高額査定の老舗サービスを解説。',
+    title: '駿河屋の買取の評判・口コミは？【2026年9月】レトロ・限定版の実力と入金の遅い噂・デメリットを検証',
+    description: '駿河屋のゲーム買取をレビューしています。レトロゲームの高額査定に強みを持つ老舗サービスについて解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,24 +19,24 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: 'レトロゲーム高額査定', description: 'ファミコン・スーパーファミコン・セガサターン・PCエンジンなど、レトロゲームの査定力は業界トップクラス。一般のリサイクルショップでは値段がつかないタイトルにも、コレクター市場を熟知した適正価格を提示してくれます。' },
-  { title: 'コレクターアイテム専門知識', description: '限定版、初回特典付き、未開封品、希少品など、コレクター価値のあるアイテムの査定に精通。箱・説明書の状態まで細かく評価してくれるため、保管状態の良いアイテムほど高値がつきます。' },
-  { title: '買取価格がサイトで公開', description: '駿河屋の公式サイトでは多くの商品の買取価格が事前に公開されています。送る前におおよその金額がわかるため、他社との比較や売り時の判断がしやすい透明性の高いサービスです。' },
+  { title: 'レトロゲーム高額査定', description: 'ファミコン・スーパーファミコン・セガサターン・PCエンジンなど、レトロゲームの査定力は業界トップクラスです。一般のリサイクルショップでは値段がつかないタイトルにも、コレクター市場の相場を踏まえた適正価格が提示されます。' },
+  { title: 'コレクターアイテム専門知識', description: '限定版、初回特典付き、未開封品、希少品など、コレクター価値のあるアイテムの査定に精通しています。箱・説明書の状態まで細かく評価されるため、保管状態の良いアイテムほど高値がつきます。' },
+  { title: '買取価格がサイトで公開', description: '駿河屋の公式サイトでは多くの商品の買取価格が事前に公開されています。送る前におおよその金額が分かるため、他社との比較や売り時の判断がしやすい透明性の高いサービスです。' },
   { title: '通販サイト併設で相場に精通', description: '駿河屋は中古ゲームの通販サイトも運営しており、リアルタイムの市場相場を把握しています。販売価格に基づいた買取価格設定のため、相場に見合った適正な査定が期待できます。' },
 ];
 
 const steps = [
-  { step: 1, title: '買取申込み', description: '駿河屋公式サイトの「かんたん買取」から申込み。売りたい商品のジャンルや点数を入力します。事前に買取価格を検索して確認することもできます。' },
-  { step: 2, title: '梱包・発送', description: '商品を丁寧に梱包して発送します。送料は買取点数や金額の条件を満たせば無料。レトロゲームは特に緩衝材でしっかり保護して送りましょう。' },
-  { step: 3, title: '査定', description: '到着後、専門スタッフが1点ずつ丁寧に査定。公式の査定目安は到着後4〜14日程度ですが、点数が多い場合や繁忙期はさらにかかることがあります。' },
-  { step: 4, title: '入金', description: '査定結果に同意したら、銀行口座への振込で入金。査定結果はマイページで商品ごとの内訳を確認できます。' },
+  { step: 1, title: '買取申込み', description: '駿河屋公式サイトの「かんたん買取」から申し込みます。売りたい商品のジャンルや点数を入力します。事前に買取価格を検索して確認することもできます。' },
+  { step: 2, title: '梱包・発送', description: '商品を丁寧に梱包して発送します。送料は買取点数や金額の条件を満たせば無料です。レトロゲームは特に、緩衝材でしっかり保護して送ることをおすすめします。' },
+  { step: 3, title: '査定', description: '到着後、専門スタッフが1点ずつ丁寧に査定します。公式の査定目安は到着後4〜14日程度ですが、点数が多い場合や繁忙期はさらにかかることがあります。' },
+  { step: 4, title: '入金', description: '査定結果に同意したら、銀行口座へ振込で入金されます。査定結果はマイページで商品ごとの内訳を確認できます。' },
 ];
 
 const faqs = [
-  { q: '駿河屋の査定にはどのくらい時間がかかりますか？', a: '公式の査定目安は商品到着後4〜14日程度、査定承諾後の入金は3営業日以内です。ただし繁忙期（年末年始・大型連休前後）はさらに時間がかかったという口コミもあります。急ぎの方は注意が必要です。' },
+  { q: '駿河屋の査定にはどのくらい時間がかかりますか？', a: '公式の査定目安は商品到着後4〜14日程度、査定承諾後の入金は3営業日以内です。ただし繁忙期（年末年始・大型連休前後）はさらに時間がかかったという口コミもあります。お急ぎの場合はご注意ください。' },
   { q: 'レトロゲームの箱なし・説明書なしでも買取できますか？', a: 'はい、ソフト単体でも買取可能です。ただし、箱・説明書付きの完品と比べると査定額は大幅に下がります。特にレトロゲームは完品かどうかで10倍以上の差がつくこともあります。' },
   { q: '買取価格の事前確認はどこでできますか？', a: '駿河屋公式サイトの「買取検索」から商品名やJANコードで検索できます。ただし表示価格は「完品・美品」の場合の上限価格であり、実際の査定では状態に応じて変動します。' },
-  { q: '送料は無料ですか？', a: '買取点数30点以上または見積もり金額3,000円以上の場合、送料無料となります。条件を満たさない場合は送料がお客様負担となりますのでご注意ください。' },
+  { q: '送料は無料ですか？', a: '買取点数30点以上または見積もり金額3,000円以上の場合、送料無料となります。条件を満たさない場合は、送料がお客様のご負担となりますのでご注意ください。' },
   { q: '店舗での買取はできますか？', a: 'はい、静岡市内に複数の店舗があり、店頭買取にも対応しています。ただし全国展開はしていないため、ほとんどの方は宅配買取の利用となります。' },
   { q: '現行のSwitchやPS5のソフトも高く売れますか？', a: '現行タイトルも買取対象ですが、駿河屋の強みはレトロゲームや希少品の査定です。現行タイトルの買取価格は他の大手サービスと同等程度か、やや控えめなことが多いです。' },
 ];
@@ -44,7 +44,7 @@ const faqs = [
 export default function SurugayaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の買取の評判・口コミは？【2026年7月】レトロ・限定版の実力と入金の遅い噂・デメリットを徹底検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の買取の評判・口コミは？【2026年7月】レトロ・限定版の実力と入金の遅い噂・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '駿河屋' }]} />
 
       {/* Hero */}
@@ -54,10 +54,10 @@ export default function SurugayaReviewPage() {
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>レトロゲーム専門</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            駿河屋<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>徹底レビュー</span>
+            駿河屋<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミのレビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            レトロゲーム・限定版・コレクターアイテムの買取に強い老舗サービス。ファミコンからセガサターンまで、一般的なリサイクルショップでは評価されにくい希少タイトルを適正価格で査定してくれます。買取価格が公開されている透明性も魅力です。
+            駿河屋は、レトロゲーム・限定版・コレクターアイテムの買取に強みを持つ老舗サービスです。ファミコンからセガサターンまで、一般的なリサイクルショップでは評価されにくい希少タイトルも適正価格で査定されます。買取価格が公開されている透明性も特長です。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.suruga-ya.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -92,7 +92,7 @@ export default function SurugayaReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>+ レトロゲームの査定力が業界トップクラス</li>
-                <li>+ 限定版・希少品・コレクターアイテムに強い</li>
+                <li>+ 限定版・希少品・コレクターアイテムの査定に強み</li>
                 <li>+ 買取価格がサイトで事前に確認できる</li>
                 <li>+ 通販併設で相場に精通した適正査定</li>
                 <li>+ 商品ごとの査定内訳が確認可能</li>
@@ -133,7 +133,7 @@ export default function SurugayaReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />こんな方におすすめ</h2>
           <div className="glass-card p-6">
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li>・レトロゲーム（ファミコン・スーファミ・セガサターン等）を売りたい方</li>
+              <li>・レトロゲーム（ファミコン・スーパーファミコン・セガサターン等）を売りたい方</li>
               <li>・限定版や初回特典付きのゲームを持っている方</li>
               <li>・コレクションを手放すことを検討しているコレクターの方</li>
               <li>・事前に買取価格を確認してから売りたい方</li>
@@ -151,11 +151,11 @@ export default function SurugayaReviewPage() {
                 <tr><th>運営会社</th><td className="text-sm">株式会社駿河屋（旧・株式会社エーツー、2025年5月1日社名変更）</td></tr>
                 <tr><th>古物商許可</th><td className="text-sm">静岡県公安委員会 第491140002748号</td></tr>
                 <tr><th>所在地</th><td className="text-sm">静岡県静岡市葵区伝馬町5-4</td></tr>
-                <tr><th>送料無料の条件</th><td className="text-sm">「あんしん買取」＝見積金額3,000円以上で無料（着払い）／「かんたん買取」＝買取点数30点以上で無料（ゆうパック着払い）。1箱あたり買取額1,500円未満は別途送料の場合あり</td></tr>
+                <tr><th>送料無料の条件</th><td className="text-sm">「あんしん買取」＝見積金額3,000円以上で無料（着払い）／「かんたん買取」＝買取点数30点以上で無料（ゆうパック着払い）。1箱あたり買取金額1,500円未満は別途送料の場合あり</td></tr>
                 <tr><th>査定日数</th><td className="text-sm">商品到着後 通常4〜14日程度（繁忙期はさらに遅延の口コミあり）</td></tr>
                 <tr><th>入金</th><td className="text-sm">査定承諾後、3営業日以内に振込</td></tr>
                 <tr><th>キャンセル返送料</th><td className="text-sm">あんしん・かんたんとも自己負担。「自動承諾」を選ぶとキャンセル・返送不可</td></tr>
-                <tr><th>本人確認</th><td className="text-sm">身分証画像のアップロード（2025年12月2日以降、健康保険証は不可・資格確認書は可）</td></tr>
+                <tr><th>本人確認</th><td className="text-sm">本人確認書類の画像アップロード（2025年12月2日以降、健康保険証は不可・資格確認書は可）</td></tr>
                 <tr><th>事前価格確認</th><td className="text-sm">「あんしん買取」は事前見積もり可／「かんたん買取」は合計のみで個別価格は不可。商品ページに買取価格表示あり</td></tr>
               </tbody>
             </table>
@@ -168,7 +168,7 @@ export default function SurugayaReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
           <div className="glass-card p-6">
             <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
-              買取比較サイト「ヒカカク!」での駿河屋の総合評価は<strong>2.57点（5点満点）・口コミ493件</strong>（2026年6月18日閲覧）。星5が95件に対し星1が213件と<strong>評価が二極化</strong>しているのが特徴です。
+              買取比較サイト「ヒカカク!」での駿河屋の総合評価は<strong>2.57点（5点満点）・口コミ493件</strong>（2026年6月18日閲覧）です。星5が95件に対し星1が213件と<strong>評価が二極化</strong>している点が特徴です。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
@@ -222,10 +222,10 @@ export default function SurugayaReviewPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            駿河屋で<span style={{ color: 'var(--color-electric-green)' }}>レトロゲームを高額査定</span>しませんか？
+            駿河屋で<span style={{ color: 'var(--color-electric-green)' }}>レトロゲームの査定</span>を依頼する
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            一般のリサイクルショップでは評価されない希少タイトルも、駿河屋なら適正価格で買取。まずは買取価格をチェック。
+            一般のリサイクルショップでは評価されにくい希少タイトルも、駿河屋では適正価格で買い取っています。まずは公式サイトにて買取価格をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://www.suruga-ya.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
@@ -239,17 +239,17 @@ export default function SurugayaReviewPage() {
 
         {/* Internal Links */}
         <section className="mt-12">
-          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスもチェック</h3>
+          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスとの比較</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/review/hikakaku/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-orange text-xs mb-2 inline-block">一括査定</span>
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ヒカカク！</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最大20社一括査定で最高値を比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最大20社の一括査定で最高値を比較</p>
             </Link>
             <Link href="/review/game-oukoku/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-blue text-xs mb-2 inline-block">ゲーム専門</span>
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ゲーム専門の正確な査定</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ゲーム専門スタッフによる査定</p>
             </Link>
           </div>
         </section>

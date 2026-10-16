@@ -8,12 +8,12 @@ import { crossStorePrices, analyzeTitle, STORE_LABELS, PRICE_SURVEY_DATE } from 
 export const metadata: Metadata = {
   title: '高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
   description:
-    '2026年10月15日に実測した公式買取価格にもとづく、高く売れるゲームソフトランキング。ブックオフ・ゲオ・駿河屋・レトログの買取価格を横断比較。同じソフトでも店によって1,000円前後の差が出る実例も掲載。',
+    '2026年10月15日に実測した公式買取価格にもとづく、高く売れるゲームソフトランキングです。ブックオフ・ゲオ・駿河屋・レトログの買取価格を横断比較しています。同じソフトでも店によって1,000円前後の差が出る実例も掲載しています。',
   keywords: ['ゲームソフト 高く売れる', '高価買取 ゲーム ランキング', 'ゲーム 買取 高額', 'プレミアソフト 買取', 'ゲームソフト 買取相場'],
   openGraph: {
     images: ['/og.png'],
     title: '高く売れるゲームソフトランキング【2026年10月】公式買取価格で比較',
-    description: 'ブックオフ・ゲオ・駿河屋・レトログの公式買取価格を2026年10月15日に実測し横断比較。高く売れるソフトをデータで紹介。',
+    description: 'ブックオフ・ゲオ・駿河屋・レトログの公式買取価格を2026年10月15日に実測し、横断比較しています。高く売れるソフトを実測データにもとづいて紹介します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -89,24 +89,24 @@ const geoRanking = [
 
 const tips = [
   { title: '箱・説明書を揃えて売る', description: '掲載されている買取価格はどの店も「完品」（箱・説明書・付属品あり）が前提です。レトロゲームは完品かどうかで買取価格が2〜10倍変わることがあり、限定版は特典欠品が大幅減額の要因になります。' },
-  { title: '複数の店の公式買取価格を見比べる', description: '上の比較表のとおり、同じソフトでも店によって500〜1,000円以上の差がつきます。ブックオフ・ゲオ・駿河屋などは公式サイトで買取価格を公開しているので、売る前に必ず見比べましょう。' },
+  { title: '複数の店の公式買取価格を見比べる', description: '上の比較表のとおり、同じソフトでも店によって500〜1,000円以上の差がつきます。ブックオフ・ゲオ・駿河屋などは公式サイトで買取価格を公開しているため、売却前に見比べることをおすすめします。' },
   { title: '限定版・コレクターズエディションは専門店へ', description: '駿河屋の高価買取リストは限定版・特装版が数万円クラスで並びます。限定版は一般チェーンの店頭より、限定版の販路を持つ専門店の方が高くなりやすい傾向があります。' },
-  { title: '新作・話題作は早めに売る', description: '新作ソフトは発売直後〜数ヶ月が最も高値で、その後は下落していくのが基本です。Switch2タイトルのように品薄・話題性のあるソフトは特に早売りが有利です。' },
-  { title: '状態を丁寧に保つ', description: 'ケースの日焼け・ディスクの傷・カセット端子の汚れは減額対象です。直射日光を避け、乾燥した場所で保管しましょう。発送前にケースを軽く清掃するだけでも印象が変わります。' },
+  { title: '新作・話題作は早めに売る', description: '新作ソフトは発売直後〜数ヶ月が最も高値で、その後は下落していくのが基本です。Switch 2タイトルのように品薄・話題性のあるソフトは、特に早めの売却が有利です。' },
+  { title: '状態を丁寧に保つ', description: 'ケースの日焼け・ディスクの傷・カセット端子の汚れは減額対象です。直射日光を避け、乾燥した場所で保管することをおすすめします。発送前にケースを軽く清掃するだけでも、査定時の印象が変わります。' },
 ];
 
 const faqs = [
-  { q: '今いちばん高く売れるゲームソフトは何ですか？', a: '2026年10月15日に実測した公式買取価格では、通常流通のソフトならSwitch2の「KINGDOM HEARTS Collection ［I～III］」（ブックオフ・ゲオとも7,000円）、DSの「ポケットモンスター ハートゴールド」（ブックオフで8,400円）、「ファイナルファンタジータクティクス イヴァリース クロニクルズ」（ゲオで6,500円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」48,000円など、数万円クラスのものもあります。価格は日々変動するため、売る直前に各社の公式買取ページで確認してください。' },
-  { q: 'どの店に売るのが一番高いですか？', a: 'ソフトによって異なります。2026年10月15日の実測では、同じ「大乱闘スマッシュブラザーズ SPECIAL」でもブックオフ3,200円・ゲオ3,800円・駿河屋2,700円と最大1,100円の差がありました。前回実測（9月16日）ではブックオフ3,500円・ゲオ4,000円・駿河屋2,400円で、各社の価格はその間にも上下しています。同じソフトでも店によって数百〜千円以上の差がつくため、売る前に複数店の公式価格を見比べるのが確実です。' },
+  { q: '現在最も高く売れるゲームソフトは何ですか？', a: '2026年10月15日に実測した公式買取価格では、通常流通のソフトではSwitch 2の「KINGDOM HEARTS Collection ［I～III］」（ブックオフ・ゲオとも7,000円）、DSの「ポケットモンスター ハートゴールド」（ブックオフで8,400円）、「ファイナルファンタジータクティクス イヴァリース クロニクルズ」（ゲオで6,500円）が高値です。限定版では駿河屋の「ロックマン&ロックマンX 5in1 スペシャルBOX」48,000円など、数万円クラスのものもあります。価格は日々変動するため、売却の直前に各社の公式買取ページにてご確認ください。' },
+  { q: 'どの店に売るのが最も高いですか？', a: 'ソフトによって異なります。2026年10月15日の実測では、同じ「大乱闘スマッシュブラザーズ SPECIAL」でもブックオフ3,200円・ゲオ3,800円・駿河屋2,700円と最大1,100円の差がありました。前回実測（9月16日）ではブックオフ3,500円・ゲオ4,000円・駿河屋2,400円で、各社の価格はその間にも上下しています。同じソフトでも店によって数百〜千円以上の差がつくため、売却前に複数店の公式買取価格を見比べることをおすすめします。' },
   { q: '箱なしのレトロゲームでも高く売れますか？', a: '箱なし（裸カセット）でも人気タイトルなら値段がつきますが、箱・説明書付きの完品と比べると買取価格は大幅に下がります。完品なら2〜10倍の差がつくことも珍しくありません。' },
-  { q: 'ゲームの買取価格は今後上がりますか？', a: 'レトロゲームや限定版は流通量が減るため、人気タイトルは長期的に上昇する傾向があります。一方、最新タイトルは時間の経過とともに下がるのが基本なので、遊び終わったら早めの売却がおすすめです。' },
-  { q: '大量のゲームをまとめて売りたい場合はどうすればいいですか？', a: '宅配買取が便利です。駿河屋のあんしん買取は見積金額3,000円以上で送料無料（着払い）になります。カイトリワールドも査定3,000円以上で送料無料・梱包ダンボール最大10箱無料です。各社の送料条件を確認してまとめて送りましょう。' },
+  { q: 'ゲームの買取価格は今後上がりますか？', a: 'レトロゲームや限定版は流通量が減るため、人気タイトルは長期的に上昇する傾向があります。一方、最新タイトルは時間の経過とともに下がるのが基本のため、遊び終えた後は早めの売却をおすすめします。' },
+  { q: '大量のゲームをまとめて売りたい場合はどうすればいいですか？', a: '宅配買取のご利用をおすすめします。駿河屋のあんしん買取は見積金額3,000円以上で送料無料（着払い）になります。カイトリワールドも査定3,000円以上で送料無料、梱包用段ボールは最大10箱まで無料です。各社の送料条件をご確認のうえ、まとめて送ることをおすすめします。' },
 ];
 
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
@@ -134,7 +134,7 @@ export default function HighValueSoftwarePage() {
         {/* 高額買取TOPランキング(DB連動・実測ごとに更新) */}
         <section className="mb-12">
           <h2 className="section-heading mb-2"><span className="section-heading-bar" />最新の高額買取ランキングTOP10（4社横断・{PRICE_SURVEY_DATE}実測）</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>ブックオフ・ゲオ・駿河屋・レトログの公式買取価格を定期的に実測し、<strong>4社の中で最も高い価格</strong>の順に並べたランキングです。どの店に売れば一番高いかまで一目でわかります。</p>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>ブックオフ・ゲオ・駿河屋・レトログの公式買取価格を定期的に実測し、<strong>4社の中で最も高い価格</strong>の順に並べたランキングです。どの店で最も高く売れるかも一目で分かります。</p>
           {(() => {
             const ranked = crossStorePrices
               .map((tp) => analyzeTitle(tp))
@@ -169,13 +169,13 @@ export default function HighValueSoftwarePage() {
                     </tbody>
                   </table>
                 </div>
-                <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※各社公式買取ページの掲載価格({PRICE_SURVEY_DATE}実測・完品前提)。「店舗間の差」は同一ソフトの最高値と最安値の差=見比べるだけで得する金額です。掲載のない店は比較対象外。</p>
+                <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※各社公式買取ページの掲載価格({PRICE_SURVEY_DATE}実測・完品前提)。「店舗間の差」は同一ソフトの最高値と最安値の差で、複数店を比較することで得られる差額の目安です。掲載のない店は比較対象外としています。</p>
               </>
             );
           })()}
         </section>
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />同じソフトでも店で差がつく：ブックオフ vs ゲオ 横断比較</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />同一ソフトの買取価格差：ブックオフとゲオの横断比較</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>2026年10月15日に両社の公式買取価格ページで確認した、同一タイトルの買取価格比較です。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
@@ -201,7 +201,7 @@ export default function HighValueSoftwarePage() {
           </div>
 
       <h2 id="geo-ranking" className="section-heading mb-6 mt-12"><span className="section-heading-bar" />ゲオで高く売れるSwitchソフトランキング【2026年10月15日実測】</h2>
-      <p className="text-sm mb-4" style={{ color: 'var(--color-navy)', opacity: 0.75 }}>ゲオの「高価買取品」リスト(公式)のうち、Switchソフトで3,500円以上の掲載分です（Switch2ソフトは下の表）。ゲオは店頭参考価格のため、店舗・状態により変動します。</p>
+      <p className="text-sm mb-4" style={{ color: 'var(--color-navy)', opacity: 0.75 }}>ゲオの「高価買取品」リスト(公式)のうち、Switchソフトで3,500円以上の掲載分です（Switch 2ソフトは下の表に掲載しています）。ゲオは店頭参考価格のため、店舗・状態により変動します。</p>
       <div className="glass-card p-5 mb-4 overflow-x-auto">
         <table className="w-full text-sm min-w-[420px]">
           <thead><tr className="text-left border-b" style={{ borderColor: 'rgba(0,0,0,0.08)' }}><th className="py-2 pr-3">順位</th><th className="py-2 pr-3">ソフト</th><th className="py-2">ゲオ参考買取価格</th></tr></thead>
@@ -216,7 +216,7 @@ export default function HighValueSoftwarePage() {
           </tbody>
         </table>
       </div>
-      <p className="text-xs mb-8" style={{ color: 'var(--color-navy)', opacity: 0.55 }}>出典: ゲオ公式「Switchの高価買取品」リスト(2026年10月15日確認・掲載分のみ)。カイトリワールドの評判が気になる方は<a href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-electric-green)' }}>「カイトリワールドは怪しい？」の検証記事</a>もどうぞ。</p>
+      <p className="text-xs mb-8" style={{ color: 'var(--color-navy)', opacity: 0.55 }}>出典: ゲオ公式「Switchの高価買取品」リスト(2026年10月15日確認・掲載分のみ)。カイトリワールドの評判が気になる方は<a href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-electric-green)' }}>「カイトリワールドは怪しい？」の検証記事</a>もあわせてご覧ください。</p>
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ「ゲームの高価買取情報」（2026年10月15日閲覧・10/15最終更新表記・店舗買取価格）、ゲオ店舗情報サイト「Switch」「Switch2」の高価買取品（2026年10月15日閲覧・店頭参考買取価格）。店舗・状態により変動します。</p>
         </section>
 
@@ -239,12 +239,12 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ公式「ゲームの高価買取情報」（2026年10月15日閲覧・10月15日最終更新表記・店舗買取価格・全111件から4,800円以上を抜粋）。DSの「ポケットモンスター ハートゴールド」8,400円が最高値で、Switch2の「KINGDOM HEARTS Collection」とDS「ソウルシルバー」が各7,000円で続きます。店舗により異なり、予告なく変更されます。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ公式「ゲームの高価買取情報」（2026年10月15日閲覧・10月15日最終更新表記・店舗買取価格・全111件から4,800円以上を抜粋）。DSの「ポケットモンスター ハートゴールド」8,400円が最高値で、Switch 2の「KINGDOM HEARTS Collection」とDS「ソウルシルバー」が各7,000円で続きます。店舗により異なり、予告なく変更されます。</p>
         </section>
 
         {/* GEO */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲオの高価買取ソフト上位（Switch/Switch2・4,500円以上・2026年10月15日閲覧）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲオの高価買取ソフト上位（Switch/Switch 2・4,500円以上・2026年10月15日閲覧）</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
@@ -261,7 +261,7 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲオ店舗情報サイト「Switchの高価買取品」「Switch2の高価買取品」（2026年10月15日閲覧・店頭参考買取価格）。Switch2の「キングダム ハーツ コレクション 1～3」7,000円がトップで、Switchの「FFタクティクス イヴァリース クロニクルズ」6,500円が続きます。店舗・状態により変動します。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲオ店舗情報サイト「Switchの高価買取品」「Switch2の高価買取品」（2026年10月15日閲覧・店頭参考買取価格）。Switch 2の「キングダム ハーツ コレクション 1～3」7,000円が最高値で、Switchの「FFタクティクス イヴァリース クロニクルズ」6,500円が続きます。店舗・状態により変動します。</p>
         </section>
 
         {/* Surugaya */}
@@ -283,7 +283,7 @@ export default function HighValueSoftwarePage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式 高価買取リスト（Switchソフト・買取価格順、2026年10月15日閲覧・海外版を除く国内版のみ抜粋）。上位は限定版・特装版がほぼ独占（最高はロックマン&ロックマンX 5in1 スペシャルBOX 48,000円）。「押し入れの限定版」が数万円になる可能性があるのはこのゾーンです。在庫状況により変動します。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式 高価買取リスト（Switchソフト・買取価格順、2026年10月15日閲覧・海外版を除く国内版のみ抜粋）。上位は限定版・特装版がほぼ占めています（最高値はロックマン&ロックマンX 5in1 スペシャルBOXの48,000円）。ご自宅に保管している限定版が数万円で売れる可能性があるのは、この価格帯です。在庫状況により変動します。</p>
         </section>
 
         {/* Category Breakdown */}
@@ -293,19 +293,19 @@ export default function HighValueSoftwarePage() {
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>新作・品薄タイトル</h3>
               <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-                Switch2「ほの暮しの庭」5,500円（ブックオフ・ゲオ）のように、発売から日が浅く需要が供給を上回っているタイトルは高値がつきます。発売直後〜数ヶ月が売りどきです。
+                Switch 2「ほの暮しの庭」5,500円（ブックオフ・ゲオ）のように、発売から日が浅く需要が供給を上回っているタイトルは高値がつきます。発売直後から数ヶ月が売却に適した時期です。
               </p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしない定番タイトル</h3>
               <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-                スマブラSP・ファイアーエムブレムなどの定番は発売から数年経っても3,000〜4,500円クラスを維持。ゲオで「ファイアーエムブレム 風花雪月」4,500円・「スマブラSP」3,800円（2026年10月15日実測）が象徴例です。
+                スマブラSP・ファイアーエムブレムなどの定番は発売から数年経っても3,000〜4,500円クラスを維持しています。ゲオでの「ファイアーエムブレム 風花雪月」4,500円・「スマブラSP」3,800円（2026年10月15日実測）が代表例です。
               </p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>限定版・特装版</h3>
               <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-                駿河屋の上位は26,000〜48,000円の限定版が独占（2026年10月15日実測）。特典が全て揃った完品であることが条件で、欠品があると大幅減額になります。
+                駿河屋の上位は26,000〜48,000円の限定版が占めています（2026年10月15日実測）。特典がすべて揃った完品であることが条件で、欠品があると大幅減額になります。
               </p>
             </div>
           </div>
@@ -359,10 +359,10 @@ export default function HighValueSoftwarePage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            お宝ソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            お手持ちのソフトを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            同じソフトでも店によって買取価格は大きく違います。売る前に複数の公式価格をチェックしましょう。
+            同じソフトでも店によって買取価格は大きく違います。売却前に、複数店の公式買取価格をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -391,22 +391,22 @@ export default function HighValueSoftwarePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
             <Link href="/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取おすすめ比較</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>迷ったらこの3択・最新の最高値つき</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>主要3社の比較と最新の最高値</p>
             </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゲーム買取価格インデックス</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが一番高い？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データにもとづく店舗別の最高値</p>
             </Link>
             <Link href="/compare/kaitori-ranking/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取おすすめランキング15選</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>15社を徹底比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>15社を比較</p>
             </Link>
             <Link href="/method/high-price/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売るコツ</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>買取価格を最大化するテクニック</p>
             </Link>
             <Link href="/hardware/switch2/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Switch2本体の買取相場</p>
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Switch 2本体の買取相場</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>値上げ後の最新相場を解説</p>
             </Link>
             <Link href="/hardware/steam-deck/" className="glass-card p-4 card-hover block">
@@ -415,11 +415,11 @@ export default function HighValueSoftwarePage() {
             </Link>
             <Link href="/hardware/ranking/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>本体の買取価格ランキング</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switch2・PS5の最高値を4社比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switch 2・PS5の最高値を4社で比較</p>
             </Link>
             <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありでいくら下がる？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありの場合の減額の目安</p>
             </Link>
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>

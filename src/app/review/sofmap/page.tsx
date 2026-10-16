@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ソフマップ買取（ラクウル）の評判・口コミ【2026年8月】送料・返送料無料の実態と注意点',
   description:
-    'ソフマップの宅配買取「ラクウル」を徹底検証。集荷送料・査定料・キャンセル返送料すべて無料、Switch 2本体40,000円等の実測掲載例（2026年7月7日確認）、銀行振込手数料250円の注意点、初回+500円・誕生月5%のキャンペーンまで公式情報で解説します。',
+    'ソフマップの宅配買取「ラクウル」を検証しています。集荷送料・査定料・キャンセル返送料がすべて無料である点、Switch 2本体40,000円等の実測掲載例（2026年7月7日確認）、銀行振込手数料250円の注意点、初回+500円・誕生月5%のキャンペーンについて、公式情報をもとに解説します。',
   keywords: ['ソフマップ 買取 評判', 'ラクウル 評判', 'ソフマップ ゲーム買取', 'ラクウル 送料', 'ソフマップ 宅配買取'],
   openGraph: {
     images: ['/og.png'],
     title: 'ソフマップ買取（ラクウル）の評判・口コミ【2026年8月】検証',
-    description: '送料・返送料無料のラクウルを公式情報と実測掲載例で徹底検証。',
+    description: '送料・返送料が無料のラクウルについて、公式情報と実測掲載例をもとに検証しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,31 +19,31 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: 'ビックカメラグループの安心感', description: '運営の株式会社ソフマップは2010年からビックカメラの完全子会社（資本金1億円・店舗22）。1982年創業の老舗PC・ゲーム販売店で、2018年に買取アプリ「ラクウル」をリリースしました。大手家電グループ傘下という信頼性が最大の下支えです。' },
-  { title: '送料・査定料・キャンセル返送料がすべて無料', description: '宅配買取は集荷送料・査定料に加えて、キャンセル時の返送料まで無料と公式FAQに明記されています。返送料が着払い（利用者負担）の業者も多い中、「査定額に納得できなければタダで戻せる」のは比較検討派に大きなメリットです。' },
+  { title: 'ビックカメラグループの安心感', description: '運営の株式会社ソフマップは2010年からビックカメラの完全子会社です（資本金1億円・店舗22）。1982年創業の老舗PC・ゲーム販売店で、2018年に買取アプリ「ラクウル」をリリースしました。大手家電グループの傘下であることが、信頼性の大きな裏付けとなっています。' },
+  { title: '送料・査定料・キャンセル返送料がすべて無料', description: '宅配買取は集荷送料・査定料に加えて、キャンセル時の返送料まで無料と公式FAQに明記されています。返送料が着払い（利用者負担）の業者も多い中、査定額に納得できない場合に無料で返送してもらえる点は、複数社を比較して売却先を決めたい方にとって大きなメリットです。' },
   { title: '買取価格の事前公開（ゲーム約2.9万件掲載)', description: '公式の買取価格検索でゲームカテゴリ28,822件の上限価格が公開されています（2026年7月7日確認）。当サイト実測ではNintendo Switch 2本体 上限40,000円・PS5 Pro 83,000円・マリオカート ワールド5,700円等が掲載されており、送る前に金額の目安を確認できます。' },
-  { title: '3つの集荷スタイルとeKYC完結', description: '「箱なし集荷（梱包箱を持ってきてもらう）」「箱あり集荷」「自分で発送」の3方式で、梱包箱は無料。本人確認はマイナンバーカード読取か自撮りのeKYCでオンライン完結します（18歳以上・国内居住者）。' },
+  { title: '3つの集荷スタイルとeKYC完結', description: '「箱なし集荷（梱包箱を持ってきてもらう）」「箱あり集荷」「自分で発送」の3方式があり、梱包箱は無料です。本人確認はマイナンバーカード読取か自撮りのeKYCでオンライン完結します（18歳以上・国内居住者）。' },
 ];
 
 const dislikeReasons = [
-  { reason: '銀行振込に手数料250円/回がかかる', fact: '買取代金はいったん「ウォレット」に入り、銀行口座への引き出しには手数料250円/回がかかります（残高250円以下は引出不可）。ビック買取マネーや店舗での現金受取なら手数料無料なので、ビックカメラ・ソフマップで買い物する方はポイント系での受取が実質お得です。' },
-  { reason: '振込までの日数に公式の保証がない', fact: '引き出しの所要日数は「通常約2日程度・休日を挟むと4〜5日」という案内ベースで、確定的な保証記載はありません。急ぎで現金が必要な方は店頭買取（22店舗）の利用が確実です。' },
-  { reason: '減額率の数値は非公開', fact: '箱・説明書・ケーブル欠品で減額、コントローラー欠品等で大幅減額と公式に明記されていますが、具体的な減額率は非公開です。欠品がある場合は上限価格から下がる前提で見積もりましょう。' },
+  { reason: '銀行振込に手数料250円/回がかかる', fact: '買取代金はいったん「ウォレット」に入り、銀行口座への引き出しには手数料250円/回がかかります（残高250円以下は引出不可）。ビック買取マネーや店舗での現金受取なら手数料無料なので、ビックカメラ・ソフマップで買い物する方はポイントでの受取を選ぶと手数料がかかりません。' },
+  { reason: '振込までの日数に公式の保証がない', fact: '引き出しの所要日数は「通常約2日程度・休日を挟むと4〜5日」という案内にとどまり、確定的な保証の記載はありません。急ぎで現金が必要な場合は、店頭買取（22店舗）の利用をおすすめします。' },
+  { reason: '減額率の数値は非公開', fact: '箱・説明書・ケーブル欠品で減額、コントローラー欠品等で大幅減額と公式に明記されていますが、具体的な減額率は非公開です。欠品がある場合は、上限価格から下がることを前提に見積もることをおすすめします。' },
 ];
 
 const faqs = [
   { q: 'ラクウルの宅配買取は本当に無料ですか？', a: 'はい。集荷送料・査定料・キャンセル時の返送料まですべて無料と公式FAQに明記されています（2026年7月7日確認）。梱包箱の送付も無料です。ただし買取代金を銀行振込で受け取る場合のみ手数料250円/回がかかります。' },
   { q: '買取価格は事前に分かりますか？', a: '公式サイトの買取価格検索（raku-uru.sofmap.com）でゲーム約2.9万件の上限価格が公開されています。当サイト確認時点（2026年7月7日）ではSwitch 2本体 上限40,000円・PS5（ディスク搭載）52,000円等が掲載されていました。上限価格は完品・良品前提で変動するため、参考値としてご覧ください。' },
-  { q: '本人確認はどうやりますか？', a: 'オンラインのeKYC（マイナンバーカードのIC読取、または書類+自撮り撮影）で完結します。対応書類はマイナンバーカード・運転免許証・運転経歴証明書・在留カード・パスポートです。' },
-  { q: 'キャンペーンはありますか？', a: '初回の宅配買取で+500円（店頭・出張は対象外）、誕生月は宅配買取が5%増額（月内何度でも）が公式に案内されています。また2026年8月7日の確認では、ゲーム機本体・ゲームソフトの高額買取キャンペーンページも公式に掲載されています。対象・条件は時期で変わるため公式キャンペーンページでご確認ください。' },
+  { q: '本人確認はどのように行いますか？', a: 'オンラインのeKYC（マイナンバーカードのIC読取、または書類+自撮り撮影）で完結します。対応書類はマイナンバーカード・運転免許証・運転経歴証明書・在留カード・パスポートです。' },
+  { q: 'キャンペーンはありますか？', a: '初回の宅配買取で+500円（店頭・出張は対象外）、誕生月は宅配買取が5%増額（月内何度でも）が公式に案内されています。また2026年8月7日の確認では、ゲーム機本体・ゲームソフトの高額買取キャンペーンページも公式に掲載されています。対象・条件は時期によって変わるため、ご利用前に公式キャンペーンページにて最新情報をご確認ください。' },
   { q: '振込までどのくらいかかりますか？', a: '査定承認後、ウォレットから銀行口座への引き出しは通常約2日程度（休日を挟むと4〜5日）が目安とされていますが、公式に日数の保証はありません。お急ぎの場合は全国22店舗での店頭買取なら即日現金化できます。' },
-  { q: 'ソフマップとじゃんぱらの関係は？', a: '実は同一グループです。じゃんぱらは2021年12月にソフマップが全株式を取得した完全子会社で、どちらもビックカメラグループに属します。ゲーム機本体の売却先として比較する際は、この資本関係も知っておくと良いでしょう。' },
+  { q: 'ソフマップとじゃんぱらの関係は？', a: '同一グループです。じゃんぱらは2021年12月にソフマップが全株式を取得した完全子会社で、どちらもビックカメラグループに属します。ゲーム機本体の売却先として比較する際は、この資本関係も参考になります。' },
 ];
 
 export default function SofmapReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ソフマップ買取（ラクウル）の評判・口コミと送料無料の実態を徹底検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ソフマップ買取（ラクウル）の評判・口コミと送料無料の実態を検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ソフマップ（ラクウル）' }]} />
 
       {/* Hero */}
@@ -57,7 +57,7 @@ export default function SofmapReviewPage() {
             ソフマップ買取（ラクウル）の評判<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>送料・返送料無料の実態を検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ビックカメラ傘下の老舗ソフマップが運営する宅配買取「ラクウル」。集荷送料・査定料・キャンセル返送料まで無料で、ゲーム約2.9万件の買取上限価格を事前公開しています。一方で銀行振込には手数料250円がかかるなど、知っておくべき注意点も。公式情報（2026年7月7日確認）で実態を整理しました。
+            「ラクウル」は、ビックカメラ傘下の老舗ソフマップが運営する宅配買取です。集荷送料・査定料・キャンセル返送料まで無料で、ゲーム約2.9万件の買取上限価格を事前に公開しています。一方で、銀行振込には手数料250円がかかるなどの注意点もあります。当サイトでは、公式情報（2026年7月7日確認）をもとに実態を整理しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://raku-uru.sofmap.com/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -74,9 +74,9 @@ export default function SofmapReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：「比較しながら売りたい人」に優しい設計、受取方法だけ要注意</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：比較しながら売却先を決めたい方に適した設計。受取方法には注意が必要</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ラクウルは<strong>キャンセル時の返送料まで無料</strong>なので、「査定額を見てから決めたい」比較検討派が使いやすい宅配買取です。買取上限価格も事前公開されており、当サイト実測ではSwitch 2本体 上限40,000円等を確認しました（2026年7月7日）。注意点は受取方法で、<strong>銀行振込は手数料250円/回</strong>。ビック買取マネー・店頭受取なら無料です。ソフト中心なら公表価格の高い店と、本体なら同グループの<Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱら</Link>とも比べて、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場確認してから送るのが確実です。
+              ラクウルは<strong>キャンセル時の返送料まで無料</strong>なので、査定額を見てから売却を決めたい方に適した宅配買取です。買取上限価格も事前公開されており、当サイト実測ではSwitch 2本体 上限40,000円等を確認しました（2026年7月7日）。注意点は受取方法で、<strong>銀行振込は手数料250円/回</strong>がかかります。ビック買取マネー・店頭受取であれば無料です。ソフト中心なら公表価格の高い店と、本体なら同グループの<Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱら</Link>とも比べて、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場を確認してから送ることをおすすめします。
             </p>
           </div>
         </section>
@@ -113,7 +113,7 @@ export default function SofmapReviewPage() {
 
         {/* 注意点 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用前に知っておきたい注意点と対策</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ご利用前の注意点と対策</h2>
           <div className="space-y-4">
             {dislikeReasons.map((r, i) => (
               <div key={i} className="glass-card p-5">
@@ -140,8 +140,8 @@ export default function SofmapReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・繁忙期に宅配査定が1週間以上かかった</li>
-                <li>・店頭買取の待ち時間が長い</li>
-                <li>・減額の理由が分かりにくい</li>
+                <li>・店頭買取の待ち時間が長かった</li>
+                <li>・減額の理由が分かりにくかった</li>
               </ul>
             </div>
           </div>
@@ -155,11 +155,11 @@ export default function SofmapReviewPage() {
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li>・査定額を見てから売るか決めたい方（キャンセル返送無料）</li>
               <li>・大手グループの宅配買取に安心して送りたい方</li>
-              <li>・ビックカメラ/ソフマップで買い物する方（買取マネー受取なら手数料ゼロ＋初回+500円）</li>
-              <li>・誕生月が近い方（宅配5%増額を月内何度でも使える）</li>
+              <li>・ビックカメラ/ソフマップで買い物する方（買取マネー受取なら手数料無料＋初回+500円）</li>
+              <li>・誕生月が近い方（宅配5%増額を月内に何度でも利用可）</li>
             </ul>
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
-              人気ソフトを1本ずつ高く売りたい方は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>買取価格インデックス</Link>で公表価格を比較してから売り先を選ぶのがおすすめです。
+              人気ソフトを1本ずつ高く売りたい方は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>買取価格インデックス</Link>で公表価格を比較してから売却先を選ぶことをおすすめします。
             </p>
           </div>
         </section>
@@ -194,10 +194,10 @@ export default function SofmapReviewPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            返送料まで<span style={{ color: 'var(--color-electric-green)' }}>無料</span>だから、まず査定だけでも
+            返送料まで<span style={{ color: 'var(--color-electric-green)' }}>無料</span>のため、査定のみの利用も可能です
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            ゲーム約2.9万件の買取上限価格を事前公開。初回宅配は+500円、誕生月は5%増額です。
+            ゲーム約2.9万件の買取上限価格を事前に公開しています。初回の宅配買取は+500円、誕生月は5%増額です。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://raku-uru.sofmap.com/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
@@ -214,7 +214,7 @@ export default function SofmapReviewPage() {
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱらの評判・口コミ（同グループ・本体特化）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（今どこが一番高い？）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（現在最も高い業者の確認）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch 2を売るならいつ・どこ？</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取はどこがいい？用途別おすすめ比較</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/review/geo/" style={{ color: 'var(--color-electric-green)' }}>ゲオのゲーム買取の評判を検証</Link></li>

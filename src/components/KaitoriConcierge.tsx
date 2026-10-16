@@ -19,19 +19,19 @@ const ITEMS: { id: Item; label: string }[] = [
   { id: "console", label: "🕹️ ゲーム機本体" },
   { id: "hobby", label: "🧸 フィギュア・ホビー・おもちゃ" },
   { id: "retro", label: "👾 レトロゲーム" },
-  { id: "mixed", label: "📦 いろいろまとめて" },
+  { id: "mixed", label: "📦 複数ジャンルをまとめて" },
 ];
 
 const METHODS: { id: Method; label: string }[] = [
   { id: "takuhai", label: "📮 宅配で送って売りたい" },
   { id: "tento", label: "🏪 店頭ですぐ現金化したい" },
-  { id: "either", label: "🤷 どちらでもOK" },
+  { id: "either", label: "🤷 どちらでも可" },
 ];
 
 const PRIORITIES: { id: Priority; label: string }[] = [
-  { id: "price", label: "💰 とにかく高く売りたい" },
-  { id: "easy", label: "⚡ 手間なくサクッと売りたい" },
-  { id: "trust", label: "🛡️ 安心できる大手がいい" },
+  { id: "price", label: "💰 できるだけ高く売りたい" },
+  { id: "easy", label: "⚡ 手間をかけずに売りたい" },
+  { id: "trust", label: "🛡️ 大手のサービスを利用したい" },
 ];
 
 function TypingText({ text }: { text: string }) {
@@ -50,9 +50,9 @@ function TypingText({ text }: { text: string }) {
 }
 
 const IDLE_MESSAGES = [
-  "今いちばん高く売れるソフト、知ってますか？🎮",
-  "3つの質問でピッタリの買取先を診断します！",
-  "フィギュアもゲームも、まとめ売りもOK📦",
+  "ゲームの買取先選びをお手伝いします🎮",
+  "3つの質問で、ご希望に合った買取先をご案内します",
+  "フィギュア・ゲームのまとめ売りにも対応しています📦",
 ];
 
 function TypingLoop() {
@@ -79,7 +79,7 @@ export default function KaitoriConcierge() {
   const [item, setItem] = useState<Item | null>(null);
   const [method, setMethod] = useState<Method | null>(null);
   const [msgs, setMsgs] = useState<Msg[]>([
-    { role: "bot", text: "こんにちは！買取AI診断のカイちゃんです🎮 3つの質問で、あなたにピッタリの買取サービスをご案内します。まず、何を売りたいですか？" },
+    { role: "bot", text: "こんにちは。買取AI診断のカイちゃんです🎮 3つの質問で、ご希望に合った買取サービスをご案内します。まず、売却したい品目をお選びください。" },
   ]);
 
   const say = (userText: string, botText: string) =>
@@ -88,25 +88,25 @@ export default function KaitoriConcierge() {
   const pickItem = (it: Item, label: string) => {
     setItem(it);
     setStep("method");
-    say(label, "了解です！どの方法で売りたいですか？");
+    say(label, "承知しました。ご希望の売却方法をお選びください。");
   };
 
   const pickMethod = (me: Method, label: string) => {
     setMethod(me);
     setStep("priority");
-    say(label, "あと1問！いちばん重視するのは？");
+    say(label, "最後の質問です。最も重視する点をお選びください。");
   };
 
   const pickPriority = (label: string) => {
     setStep("result");
-    say(label, "ありがとうございます！診断結果はこちらです👇");
+    say(label, "ありがとうございます。診断結果は次のとおりです👇");
   };
 
   const restart = () => {
     setStep("item");
     setItem(null);
     setMethod(null);
-    setMsgs([{ role: "bot", text: "もう一度診断しますね！何を売りたいですか？" }]);
+    setMsgs([{ role: "bot", text: "もう一度診断します。売却したい品目をお選びください。" }]);
   };
 
   // 事実ベースの振り分け: ホビー系=カイトリワールド(宅配専門・フィギュア/景品/おもちゃ対象・箱10個まで無料)
@@ -117,12 +117,12 @@ export default function KaitoriConcierge() {
 
   const resultLead = (() => {
     if (item === "hobby" && method === "tento")
-      return "フィギュア・ホビーを店頭で売れる提携先は現在ありませんが、カイトリワールドの宅配買取なら段ボール最大10箱まで無料・査定額3,000円以上で送料無料です(公式確認値)。";
+      return "フィギュア・ホビーを店頭で売却できる提携先は現在ありません。カイトリワールドの宅配買取であれば、段ボール最大10箱まで無料、査定額3,000円以上で送料無料です(公式確認値)。";
     if (primaryKw)
-      return "フィギュア・ホビー・おもちゃ系なら、宅配買取専門のカイトリワールドがおすすめです。段ボール最大10箱まで無料なので、まとめ売りにも向いています(公式確認値)。";
+      return "フィギュア・ホビー・おもちゃ類の売却には、宅配買取専門のカイトリワールドがおすすめです。段ボール最大10箱まで無料のため、まとめ売りにも適しています(公式確認値)。";
     if (method === "tento")
-      return "店頭ですぐ現金化なら、東証スタンダード上場テイツー運営の古本市場(ふるいち)がおすすめです。全国の店舗でその場で現金化でき、レトロゲームまで買取価格表を公開しています(公式確認値)。";
-    return "ゲームソフト・ゲーム機なら、東証スタンダード上場テイツー運営の古本市場(ふるいち)がおすすめです。店頭・宅配の両対応で、査定額3,000円以上なら宅配の送料無料・査定了承後3営業日以内振込です(公式確認値)。";
+      return "店頭ですぐに現金化したい場合は、東証スタンダード上場のテイツーが運営する古本市場(ふるいち)がおすすめです。全国の店舗でその場で現金化でき、レトロゲームまで買取価格表を公開しています(公式確認値)。";
+    return "ゲームソフト・ゲーム機の売却には、東証スタンダード上場のテイツーが運営する古本市場(ふるいち)がおすすめです。店頭・宅配の両方に対応しており、査定額3,000円以上で宅配の送料が無料、査定了承後3営業日以内に振込されます(公式確認値)。";
   })();
 
   return (
@@ -203,7 +203,7 @@ export default function KaitoriConcierge() {
               <p style={{ fontSize: 13, lineHeight: 1.8, color: "#111827" }}>{resultLead}</p>
               {tentoNote && item === "mixed" && (
                 <p style={{ fontSize: 12, lineHeight: 1.7, color: "#6b7280" }}>
-                  ※ゲームソフト・ゲーム機ぶんは、店頭対応のふるいちで現金化するのがスムーズです。
+                  ※ゲームソフト・ゲーム機は、店頭買取に対応しているふるいちで現金化する方法もあります。
                 </p>
               )}
               <div style={{ marginTop: 8 }}>

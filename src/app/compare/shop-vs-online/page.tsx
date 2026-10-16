@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】',
   description:
-    'ゲームの店舗買取と宅配買取を8項目で徹底比較。手軽さ・即金性・買取額・交渉・まとめ売り・プライバシー・対応エリア・時間の違いを解説。出張買取という第3の選択肢も紹介。あなたに最適な売り方がわかります。',
+    'ゲームの店舗買取と宅配買取を8項目で比較しています。手軽さ・即金性・買取金額・交渉・まとめ売り・プライバシー・対応エリア・所要時間の違いを解説し、出張買取という第3の選択肢もご紹介します。目的に合った売り方を選ぶ際の参考にしてください。',
   keywords: ['ゲーム 店舗買取 宅配買取 どっち', 'ゲーム 持ち込み 宅配 比較', 'ゲーム買取 店頭 ネット', 'ゲーム 売り方 比較'],
   openGraph: {
     images: ['/og.png'],
     title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】',
-    description: 'ゲームの店舗買取と宅配買取を8項目で比較。第3の選択肢「出張買取」も紹介。',
+    description: 'ゲームの店舗買取と宅配買取を8項目で比較しています。第3の選択肢である出張買取もご紹介します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
 const comparisonItems = [
   { item: '手軽さ', shop: '店舗まで持ち運ぶ必要あり', online: '自宅で梱包・集荷依頼のみ', winner: '宅配買取' },
   { item: '即金性', shop: 'その場で現金受け取り', online: '入金まで2〜7日', winner: '店舗買取' },
-  { item: '買取額', shop: '店舗運営コスト分やや低め', online: 'コスト低い分やや高め', winner: '宅配買取' },
+  { item: '買取金額', shop: '店舗運営コストの分やや低め', online: 'コストが低い分やや高め', winner: '宅配買取' },
   { item: '交渉', shop: '対面で直接交渉可能', online: '基本的に交渉不可', winner: '店舗買取' },
-  { item: 'まとめ売り', shop: '大量の場合、持ち運びが大変', online: 'ダンボールに詰めて送るだけ', winner: '宅配買取' },
+  { item: 'まとめ売り', shop: '大量の場合は持ち運びの負担が大きい', online: '段ボールに詰めて送るだけ', winner: '宅配買取' },
   { item: 'プライバシー', shop: '店舗で対面のため周囲の目あり', online: '自宅で完結、他人に知られない', winner: '宅配買取' },
   { item: '対応エリア', shop: '店舗がある地域のみ', online: '全国どこでも対応', winner: '宅配買取' },
   { item: '所要時間', shop: '移動+査定で1〜2時間', online: '梱包10分+集荷待ちのみ', winner: '状況による' },
@@ -46,18 +46,18 @@ const onlineFor = [
 ];
 
 const faqs = [
-  { q: '店舗買取と宅配買取、買取額はどちらが高い？', a: '一般的に宅配買取のほうがやや高い傾向です。宅配買取は店舗の賃料・人件費がかからない分、買取額に還元されやすいためです。ただし店舗買取では対面交渉で増額できる場合もあるため、一概には言えません。' },
-  { q: '出張買取はどんなサービスですか？', a: '買取業者のスタッフが自宅まで来て、その場で査定・現金化してくれるサービスです。買取ウリエルが出張買取に対応しており、関東・関西エリアで利用できます。店舗買取の即金性と宅配買取の手軽さを兼ね備えた第3の選択肢です。' },
-  { q: '宅配買取で送料はかかりますか？', a: 'ヒカカク！経由の多くの業者、ウリエル、ティファナでは送料無料で利用できます。査定キャンセル時の返送料はサービスによって異なるため事前に確認しましょう。' },
-  { q: '店舗買取で身分証明書は必要ですか？', a: 'はい、古物営業法により買取時の本人確認が義務づけられています。運転免許証、マイナンバーカード、パスポートなどの顔写真付き身分証明書を持参してください。' },
-  { q: '大量のゲーム（50本以上）を売る場合はどちらがおすすめ？', a: '宅配買取がおすすめです。ダンボールに詰めて送るだけなので、50本以上でも楽に対応できます。まとめ売りボーナスがある業者も多いです。店舗まで大量のゲームを運ぶのは現実的に大変です。' },
-  { q: '店舗買取と宅配買取を組み合わせて使えますか？', a: 'はい、賢い方法です。まずヒカカク！の宅配買取で相場を把握し、高額商品だけ店舗で対面交渉、残りは宅配で一括売却という使い分けがおすすめです。' },
+  { q: '店舗買取と宅配買取では、買取金額はどちらが高いですか？', a: '一般的に、宅配買取のほうがやや高い傾向があります。宅配買取は店舗の賃料・人件費がかからない分、買取金額に還元されやすいためです。ただし店舗買取では対面交渉で増額できる場合もあるため、一概には言えません。' },
+  { q: '出張買取はどんなサービスですか？', a: '買取業者のスタッフが自宅を訪問し、その場で査定・現金化を行うサービスです。買取ウリエルが出張買取に対応しており、関東・関西エリアで利用できます。店舗買取の即金性と宅配買取の手軽さを兼ね備えた第3の選択肢です。' },
+  { q: '宅配買取で送料はかかりますか？', a: 'ヒカカク！経由の多くの業者、ウリエル、ティファナでは送料無料で利用できます。査定キャンセル時の返送料はサービスによって異なるため、事前にご確認ください。' },
+  { q: '店舗買取で本人確認書類は必要ですか？', a: 'はい、古物営業法により買取時の本人確認が義務づけられています。運転免許証、マイナンバーカード、パスポートなどの顔写真付き本人確認書類をお持ちください。' },
+  { q: '大量のゲーム（50本以上）を売る場合は、どちらがおすすめですか？', a: '宅配買取をおすすめします。段ボールに詰めて送るだけのため、50本以上でも負担なく対応できます。まとめ売りボーナスを設けている業者も多くあります。店舗まで大量のゲームを運ぶのは負担が大きいためです。' },
+  { q: '店舗買取と宅配買取を組み合わせて使えますか？', a: 'はい、組み合わせて利用できます。まずヒカカク！の宅配買取で相場を把握し、高額商品のみ店舗で対面交渉を行い、残りは宅配で一括売却する使い分けをおすすめします。' },
 ];
 
 export default function ShopVsOnlinePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: '店舗 vs 宅配' }]} />
 
       {/* Hero */}
@@ -68,7 +68,7 @@ export default function ShopVsOnlinePage() {
             店舗買取 vs 宅配買取 どっちがお得？
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲームを売るなら店舗に持ち込む？それともネットで宅配買取？手軽さ・即金性・買取額など8項目で徹底比較。出張買取という第3の選択肢もあわせて解説します。
+            ゲームを売る際に、店舗へ持ち込むか、ネットで宅配買取を利用するかについて、手軽さ・即金性・買取金額など8項目で比較しています。出張買取という第3の選択肢もあわせて解説します。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -140,47 +140,47 @@ export default function ShopVsOnlinePage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />第3の選択肢: 出張買取</h2>
           <div className="glass-card p-6">
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
-              店舗買取の即金性と宅配買取の手軽さを兼ね備えた「出張買取」という選択肢もあります。買取業者が自宅まで来てくれるため、重いゲーム機を運ぶ必要がなく、その場で査定・現金化が可能です。
+              店舗買取の即金性と宅配買取の手軽さを兼ね備えた「出張買取」という選択肢もあります。買取業者が自宅を訪問するため、重いゲーム機を運ぶ必要がなく、その場で査定・現金化が可能です。
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
                 <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>自宅で完結</h3>
-                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>外出不要、梱包不要。査定員が全て対応。</p>
+                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>外出・梱包は不要で、査定員がすべて対応します。</p>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
                 <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>即日現金化</h3>
-                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>その場で査定、同意すれば即日現金受け取り。</p>
+                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>その場で査定を行い、同意すれば即日現金を受け取れます。</p>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>対面交渉OK</h3>
-                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>査定額に納得できなければ交渉も可能。</p>
+                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>対面交渉が可能</h3>
+                <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>査定額に納得できない場合は交渉も可能です。</p>
               </div>
             </div>
             <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
-              <strong style={{ color: 'var(--color-deep-blue)' }}>買取ウリエル</strong>が出張買取に対応しています。関東・関西エリアで出張費無料、査定だけでもOKです。
+              <strong style={{ color: 'var(--color-deep-blue)' }}>買取ウリエル</strong>が出張買取に対応しています。関東・関西エリアで出張費は無料で、査定のみの利用も可能です。
             </p>
           </div>
         </section>
 
         {/* 見落としがちな違い */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />比較記事が見落としがちな4つの実務的な違い</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />見落としやすい4つの実務上の違い</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>① 本人確認の手続き</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>古物営業法により店頭・宅配とも本人確認が必須です。店頭は身分証の提示、宅配は申込時に身分証画像のアップロードや同梱が必要。いずれも18歳未満は売却不可が一般的です。宅配は書類不備だと査定が止まるため、事前準備が重要です。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>古物営業法により、店頭・宅配ともに本人確認が必須です。店頭では本人確認書類の提示、宅配では申込時に本人確認書類の画像のアップロードや同梱が必要です。いずれも18歳未満は売却できないのが一般的です。宅配では書類に不備があると査定が止まるため、事前の準備が重要です。</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>② キャンセル時の返送料</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は断ってそのまま持ち帰れますが、宅配は査定額に納得できない場合の返送料や返送条件が業者で異なります（ゲオは査定後キャンセルの返送料が無料、一部業者は自己負担）。「7日以内に返事がないと自動承認」などの期限がある業者もあるため、申込前に必ず確認しましょう。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は断ってそのまま持ち帰れますが、宅配は査定額に納得できない場合の返送料や返送条件が業者で異なります（ゲオは査定後キャンセルの返送料が無料、一部業者は自己負担）。「7日以内に返事がないと自動承認」などの期限を設けている業者もあるため、申込前に必ずご確認ください。</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>③ ゲーム機本体のデータ初期化</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>本体を売る前にはアカウント連携の解除と初期化（データ消去）が必須です。店頭ならスタッフに確認しながら作業できますが、宅配は発送前に自分で済ませる必要があります。Switchは「いつも遊ぶ本体」の解除、PS5はアカウントのサインアウトを忘れずに。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>本体を売る前には、アカウント連携の解除と初期化（データ消去）が必須です。店頭であればスタッフに確認しながら作業できますが、宅配では発送前にご自身で済ませる必要があります。Switchは「いつも遊ぶ本体」の解除、PS5はアカウントのサインアウトを忘れずに行ってください。</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>④ 同じソフトでも査定額に差</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は店舗ごとの在庫状況、宅配は全国相場とキャンペーンが反映されます。当サイトの調査でも、同じソフトがチェーン間で1,000円以上違う例がありました。即金性を取るなら店頭、最高値を狙うなら宅配で複数社を比較、が基本です。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店頭は店舗ごとの在庫状況、宅配は全国相場とキャンペーンが反映されます。当サイトの調査でも、同じソフトの価格がチェーン間で1,000円以上異なる例がありました。即金性を重視する場合は店頭、最高値を狙う場合は宅配で複数社を比較する方法が基本です。</p>
             </div>
           </div>
         </section>
@@ -215,10 +215,10 @@ export default function ShopVsOnlinePage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            あなたに合った<span style={{ color: 'var(--color-electric-green)' }}>売り方</span>を見つけよう
+            目的に合った<span style={{ color: 'var(--color-electric-green)' }}>売り方</span>の選び方
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            店舗・宅配・出張、どの方法でもまずは無料査定から。おすすめサービスをチェックしましょう。
+            店舗・宅配・出張のいずれの方法でも、まずは無料査定から始めることをおすすめします。おすすめのサービスをご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -249,7 +249,7 @@ export default function ShopVsOnlinePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Link href="/compare/hikakaku-vs-uriel/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ヒカカク vs ウリエル</p>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>2大サービスの違いを徹底比較</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>2大サービスの違いを比較</p>
               </Link>
               <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>メルカリ vs 買取業者</p>

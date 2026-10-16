@@ -20,12 +20,12 @@ export function generateMetadata(): Metadata {
   const best = a ? `${a.best.price.toLocaleString()}円(${STORE_LABELS[a.best.store]})` : '';
   return {
     title: `スマブラSPの買取価格はいくら？【${MONTH}】ブックオフ・ゲオ・駿河屋を実測比較`,
-    description: `大乱闘スマッシュブラザーズ SPECIALの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}店舗間の価格差と高く売るコツも、実測データだけで解説します。`,
+    description: `大乱闘スマッシュブラザーズ SPECIALの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較しています。${best ? `${SURVEY}実測の最高値は${best}です。` : ''}店舗間の価格差と高く売るコツについても、実測データにもとづいて解説します。`,
     keywords: ['スマブラSP 買取', 'スマブラ 買取価格', '大乱闘スマッシュブラザーズ SPECIAL 買取', 'スマブラ 売る'],
     openGraph: {
     images: ['/og.png'],
       title: `スマブラSPの買取価格はいくら？【${MONTH}】`,
-      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測して比較。',
+      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測して比較しています。',
       type: 'article',
       locale: 'ja_JP',
       siteName: 'ゲーム買取びより',
@@ -40,20 +40,20 @@ export default function SmashBrosPage() {
 
   const faqs = [
     {
-      q: 'スマブラSPの買取価格は今いくらですか？',
+      q: 'スマブラSPの買取価格は現在いくらですか？',
       a: a
         ? `${SURVEY}の実測では、公表買取価格の最高値は${bestTxt}です(完品基準)。3社とも公表リストに掲載がある定番タイトルで、当ページの表は定期的な実測で更新しています（最終実測日は表に記載）。`
-        : '当ページの表(公式価格の実測値・最終実測日つき)をご覧ください。',
+        : '当ページの表(公式価格の実測値・最終実測日を記載)をご覧ください。',
     },
     {
-      q: 'どの店に売るのが一番高いですか？',
+      q: 'どの店に売るのが最も高いですか？',
       a: a
-        ? `${SURVEY}の実測では${STORE_LABELS[a.best.store]}が${a.best.price.toLocaleString()}円で最高値でした${gapTxt ? `(最安の公表価格との差は${gapTxt})` : ''}。ただし公表価格は毎週動くため、売る直前に当ページの実測表で最新の最高値を確認してください。`
-        : '当ページの実測表で最新の最高値を確認してください。',
+        ? `${SURVEY}の実測では${STORE_LABELS[a.best.store]}が${a.best.price.toLocaleString()}円で最高値でした${gapTxt ? `(最安の公表価格との差は${gapTxt})` : ''}。ただし公表価格は毎週動くため、売る直前に当ページの実測表で最新の最高値をご確認ください。`
+        : '当ページの実測表で最新の最高値をご確認ください。',
     },
     {
       q: '発売から時間が経ったスマブラSPでも高く売れますか？',
-      a: '売れます。2018年発売ながら対戦人気が続く定番タイトルで、Switchソフトの中でも公表買取価格が高い部類を維持しています(実測表参照)。ただしSwitch 2世代への移行が進むと下落リスクがあるため、遊び終えているなら早めの判断が無難です。',
+      a: 'はい、売却できます。2018年発売ながら対戦人気が続く定番タイトルで、Switchソフトの中でも公表買取価格が高い部類を維持しています(実測表参照)。ただしSwitch 2世代への移行が進むと下落リスクがあるため、遊び終えている場合は早めにご判断いただくことをおすすめします。',
     },
     {
       q: 'スマブラSPを高く売るコツはありますか？',
@@ -63,7 +63,7 @@ export default function SmashBrosPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `スマブラSPの買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-14', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `スマブラSPの買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-14', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'スマブラSPの買取価格' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -72,7 +72,7 @@ export default function SmashBrosPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">スマブラSPの買取価格【{MONTH}】</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             大乱闘スマッシュブラザーズ SPECIALの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較しています。
-            {bestTxt && <>今回の実測({SURVEY})の公表最高値は<strong className="text-white">{bestTxt}</strong>。</>}
+            {bestTxt && <>今回の実測({SURVEY})の公表最高値は<strong className="text-white">{bestTxt}</strong>です。</>}
             店舗間の価格差も実測値で確認できます。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>調査時点: {SURVEY}(各社公式買取ページの公表値・完品基準)</p>
@@ -91,7 +91,7 @@ export default function SmashBrosPage() {
             {[
               { title: '3社の公表価格を見比べてから売る', description: 'スマブラSPは3社とも公表リストに載る定番タイトルで、店舗間で公表価格に差があります(実測表参照)。最高値の店を選ぶだけで手取りが変わります。' },
               { title: '完品状態で売る', description: '各社の公表価格はパッケージ・説明書ありの完品基準です。ケース割れや欠品は減額対象になります。' },
-              { title: '対戦人気があるうちに売る', description: '発売から年数が経っても公表価格が高い部類を維持していますが、Switch 2世代への移行が進むと下落リスクがあります。最新の実測表で動きを確認しましょう。' },
+              { title: '対戦人気があるうちに売る', description: '発売から年数が経っても公表価格が高い部類を維持していますが、Switch 2世代への移行が進むと下落リスクがあります。最新の実測表で価格の動きをご確認ください。' },
             ].map((tip, i) => (
               <div key={tip.title} className="glass-card p-5 flex items-start gap-4">
                 <div className="text-2xl font-black shrink-0" style={{ color: 'var(--color-electric-green)', opacity: 0.3 }}>{String(i + 1).padStart(2, '0')}</div>
@@ -118,8 +118,8 @@ export default function SmashBrosPage() {
         </section>
 
         <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>スマブラSPを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>店舗間の価格差で手取りが変わります。売る前に最新の実測価格をチェックしましょう。</p>
+          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>スマブラSPを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために</h2>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>店舗間の価格差で手取りが変わります。売却前に、最新の実測価格をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>

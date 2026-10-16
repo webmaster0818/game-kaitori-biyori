@@ -19,7 +19,7 @@ export default function FuruichiCta({ variant = "full" }: { variant?: "full" | "
       </div>
       {variant === "full" && (
         <p className="kw-cta-copy">
-          東証スタンダード上場テイツー運営。<strong>査定額3,000円以上で送料無料</strong>・査定了承後3営業日以内振込（当サイト公式確認値・2026年8月4日）。
+          東証スタンダード上場のテイツーが運営する買取サービスです。<strong>査定額3,000円以上で送料無料</strong>、査定了承後3営業日以内に振込されます（当サイト公式確認値・2026年8月4日）。
         </p>
       )}
       <div className="kw-cta-main" dangerouslySetInnerHTML={{ __html: AFF_TEXT_HTML }} />

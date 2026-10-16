@@ -20,12 +20,12 @@ export function generateMetadata(): Metadata {
   const best = a ? `${a.best.price.toLocaleString()}円(${STORE_LABELS[a.best.store]})` : '';
   return {
     title: `マリオカート ワールドの買取価格はいくら？【${MONTH}】公式買取価格を実測比較`,
-    description: `マリオカート ワールドの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較。${best ? `${SURVEY}実測の最高値は${best}。` : ''}Switch2本体セットとの査定の違いや高く売るコツも、実測データだけで解説します。`,
+    description: `マリオカート ワールドの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較しています。${best ? `${SURVEY}実測の最高値は${best}です。` : ''}Switch 2本体セットとの査定の違いや高く売るコツについても、実測データにもとづいて解説します。`,
     keywords: ['マリオカート ワールド 買取', 'マリカ8 買取価格', 'マリオカート 売る', 'マリオカート8 買取相場'],
     openGraph: {
     images: ['/og.png'],
       title: `マリオカート ワールドの買取価格はいくら？【${MONTH}】`,
-      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測して比較。',
+      description: 'ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測して比較しています。',
       type: 'article',
       locale: 'ja_JP',
       siteName: 'ゲーム買取びより',
@@ -39,28 +39,28 @@ export default function MarioKartWorldPage() {
 
   const faqs = [
     {
-      q: 'マリオカート ワールドの買取価格は今いくらですか？',
+      q: 'マリオカート ワールドの買取価格は現在いくらですか？',
       a: a
         ? `${SURVEY}の実測では、公表買取価格の最高値は${bestTxt}です(完品・通常版基準)。ゲオは同日の高価買取リストに掲載がありませんでした(買取不可の意味ではなく、リスト外は店頭査定になります)。当ページの表は定期的な実測で更新しています（最終実測日は表に記載）。`
-        : '当ページの表(公式価格の実測値・最終実測日つき)をご覧ください。',
+        : '当ページの表(公式価格の実測値・最終実測日を記載)をご覧ください。',
     },
     {
-      q: 'どの店に売るのが一番高いですか？',
-      a: `${SURVEY}の実測では駿河屋5,300円が最高値で、ブックオフ・ゲオは4,500円で並んでいました(差は800円)。差が小さいときは送料・持ち込みやすさ・即現金化(店頭)など価格以外の条件で選ぶのも合理的です。公表価格は毎週動くため、売る直前に当ページの実測表で最新の差を確認してください。`,
+      q: 'どの店に売るのが最も高いですか？',
+      a: `${SURVEY}の実測では駿河屋5,300円が最高値で、ブックオフ・ゲオは4,500円で並んでいました(差は800円)。差が小さい場合は、送料・持ち込みやすさ・即日の現金化(店頭)など、価格以外の条件で選ぶ方法もあります。公表価格は毎週動くため、売る直前に当ページの実測表で最新の差をご確認ください。`,
     },
     {
       q: 'マリオカート ワールドは発売から年数が経っていますが、まだ売れますか？',
-      a: '売れます。Switch2のローンチ級人気タイトルで、3社すべての公表買取リストに掲載されています。ただし新作は供給が安定すると段階的に下がるのが通例のため、遊び終えているなら早めの売却が有利です。ダウンロード版は売却できない点に注意してください。',
+      a: 'はい、売却できます。Switch 2の発売初期を代表する人気タイトルで、3社すべての公表買取リストに掲載されています。ただし新作は供給が安定すると段階的に下がるのが通例のため、遊び終えている場合は早めの売却が有利です。ダウンロード版は売却できない点にご注意ください。',
     },
     {
       q: '高く売るコツはありますか？',
-      a: '①パッケージなどを揃えた完品にする ②本体セット品はソフト単品と査定が別なので混同しない ③売る直前に当サイトの実測表で最新価格を確認する——の3点です。新作は価格の動きが速いため、実測表のこまめなチェックが特に効きます。',
+      a: '①パッケージなどを揃えた完品にする ②本体セット品はソフト単品と査定が別なので混同しない ③売る直前に当サイトの実測表で最新価格を確認する——の3点です。新作は価格の動きが速いため、実測表をこまめにご確認いただくことが特に有効です。',
     },
   ];
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `マリオカート ワールドの買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-16', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: `マリオカート ワールドの買取価格はいくら？【${MONTH}】`, datePublished: '2026-08-16', dateModified: PRICE_SURVEY_DATE, author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'マリオカート ワールドの買取価格' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
@@ -69,8 +69,8 @@ export default function MarioKartWorldPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">マリオカート ワールドの買取価格【{MONTH}】</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             マリオカート ワールドの買取価格を、ブックオフ・ゲオ・駿河屋の公式買取ページで定期的に実測して比較しています。
-            {bestTxt && <>今回の実測({SURVEY})の公表最高値は<strong className="text-white">{bestTxt}</strong>。</>}
-            Switch2で売却を考えている方向けに、価格の動きを確認できます。
+            {bestTxt && <>今回の実測({SURVEY})の公表最高値は<strong className="text-white">{bestTxt}</strong>です。</>}
+            Switch 2ソフトの売却を検討している方に向けて、価格の動きを掲載しています。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>調査時点: {SURVEY}(各社公式買取ページの公表値・完品基準)</p>
           <div className="flex flex-wrap gap-3 mt-4">
@@ -83,11 +83,11 @@ export default function MarioKartWorldPage() {
         <SeriesPriceTable keyword={KEYWORD} heading="マリオカート ワールドの店舗別 買取価格【公式価格の実測データ】" />
 
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch2最人気ソフトの売りどき</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch 2の代表的な人気ソフトの売却時期</h2>
           <div className="glass-card p-5">
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              マリオカート ワールドはSwitch2のローンチ級人気タイトルで、2026年10月15日の実測では<strong style={{ color: 'var(--color-deep-blue)' }}>駿河屋5,300円・ブックオフ4,500円・ゲオ4,500円</strong>でした(前回9月16日はブックオフ・ゲオとも5,000円で、両社はやや軟化)。
-              新作は発売直後〜数ヶ月が最も高く、供給が安定すると段階的に下がるのが通例です。遊び終えているなら、最新の実測表で下げ止まりを待たずに早めに動くのが有利です。
+              マリオカート ワールドはSwitch 2の発売初期を代表する人気タイトルで、2026年10月15日の実測では<strong style={{ color: 'var(--color-deep-blue)' }}>駿河屋5,300円・ブックオフ4,500円・ゲオ4,500円</strong>でした(前回9月16日はブックオフ・ゲオとも5,000円で、両社はやや下落しています)。
+              新作は発売直後〜数ヶ月が最も高く、供給が安定すると段階的に下がるのが通例です。遊び終えている場合は、最新の実測表を確認しながら、下げ止まりを待たずに早めに売却することをおすすめします。
             </p>
           </div>
         </section>
@@ -96,10 +96,10 @@ export default function MarioKartWorldPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />マリオカートを高く売るコツ</h2>
           <div className="space-y-4">
             {[
-              { title: 'ダウンロード版でないか確認する', description: '売却できるのはパッケージ版のみです。Switch2本体との同梱セットは本体側の査定(駿河屋のマリオカート ワールド セット38,000円等・2026年10月15日実測)になり、ソフト単品とは別物です。' },
-              { title: '掲載リストの有無で店を選ぶ', description: 'ゲオは高価買取リストに掲載がない週があり、その場合は店頭査定になります。公表価格を出している店(実測表参照)に持ち込む方が価格が読めます。' },
+              { title: 'ダウンロード版でないか確認する', description: '売却できるのはパッケージ版のみです。Switch 2本体との同梱セットは本体側の査定(駿河屋のマリオカート ワールド セット38,000円等・2026年10月15日実測)になり、ソフト単品とは別の扱いです。' },
+              { title: '掲載リストの有無で店を選ぶ', description: 'ゲオは高価買取リストに掲載がない週があり、その場合は店頭査定になります。公表価格を出している店(実測表参照)に持ち込む方が、価格の見通しを立てやすくなります。' },
               { title: '完品状態で売る', description: '各社の公表価格はパッケージ・説明書ありの完品基準です。ケース割れや欠品は減額対象になります。' },
-              { title: '新作マリオカートの普及前に判断する', description: 'Switch 2世代の新作の普及が進むと旧作は下落しやすくなります。遊び終えているなら、最新の実測表で価格を見ながら早めに動くのが無難です。' },
+              { title: '新作マリオカートの普及前に判断する', description: 'Switch 2世代の新作の普及が進むと旧作は下落しやすくなります。遊び終えている場合は、最新の実測表で価格を確認しながら早めに売却することをおすすめします。' },
             ].map((tip, i) => (
               <div key={tip.title} className="glass-card p-5 flex items-start gap-4">
                 <div className="text-2xl font-black shrink-0" style={{ color: 'var(--color-electric-green)', opacity: 0.3 }}>{String(i + 1).padStart(2, '0')}</div>
@@ -126,8 +126,8 @@ export default function MarioKartWorldPage() {
         </section>
 
         <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>マリオカートを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版の違いと店舗差で手取りが変わります。売る前に最新の実測価格をチェックしましょう。</p>
+          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>マリオカートを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売るために</h2>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>版の違いと店舗差で手取りが変わります。売却前に、最新の実測価格をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>

@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】',
   description:
-    'ゲーム機・ソフトの買取相場をハード別・ソフト別に一覧表で徹底解説。Switch・PS5・PS4・3DS・レトロゲームの買取価格目安、相場が変動する5つの要因、相場の調べ方まで完全網羅。',
+    'ゲーム機・ソフトの買取相場を、ハード別・ソフト別の一覧表で解説します。Switch・PS5・PS4・3DS・レトロゲームの買取価格の目安、相場が変動する5つの要因、相場の調べ方もまとめています。',
   keywords: ['ゲーム買取 相場', 'ゲーム いくらで売れる', 'ゲーム機 買取価格', 'Switch 買取相場'],
   openGraph: {
     images: ['/og.png'],
     title: 'ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】',
-    description: 'ゲーム機・ソフトの買取相場をハード別・ソフト別に一覧表で徹底解説。',
+    description: 'ゲーム機・ソフトの買取相場を、ハード別・ソフト別の一覧表で解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -40,38 +40,38 @@ const softwarePrices = [
 ];
 
 const fluctuationFactors = [
-  { title: '新型ハードの発表・発売', description: '後継機の発表直後に旧モデルの買取価格が10〜30%下落するのが一般的です。新型の噂が出始めたら早めに売却を検討しましょう。' },
+  { title: '新型ハードの発表・発売', description: '後継機の発表直後に旧モデルの買取価格が10〜30%下落するのが一般的です。新型の情報が出始めた段階で、早めに売却を検討することをおすすめします。' },
   { title: '季節需要（年末商戦・夏休み等）', description: '年末年始や夏休みはゲームの需要が高まるため、その直前（10〜11月、6〜7月）に買取価格が上がる傾向があります。' },
-  { title: 'ソフトの新作発売', description: '人気シリーズの新作が発売されると、対応ハードの需要が高まり買取価格が上昇します。逆に旧作ソフトは下落する傾向です。' },
-  { title: '市場の在庫状況', description: '中古市場に在庫が余っているとき は買取価格が下がります。逆に品薄状態では買取価格が上昇します。' },
-  { title: 'メディア露出・SNSバズ', description: 'テレビ番組やSNSでゲームが話題になると一時的に需要が高まり、買取価格が上昇することがあります。' },
+  { title: 'ソフトの新作発売', description: '人気シリーズの新作が発売されると、対応ハードの需要が高まり買取価格が上昇します。一方、旧作ソフトは下落する傾向があります。' },
+  { title: '市場の在庫状況', description: '中古市場で在庫が余っているときは買取価格が下がり、品薄の状態では買取価格が上昇します。' },
+  { title: 'メディア露出・SNSでの話題化', description: 'テレビ番組やSNSでゲームが話題になると一時的に需要が高まり、買取価格が上昇することがあります。' },
 ];
 
 const howToCheck = [
-  { title: 'ヒカカク！で一括査定', description: '最大20社に一括査定できるヒカカク！なら、現在の最高買取価格がすぐに分かります。無料で利用できるため、まず相場を確認するのにおすすめです。' },
-  { title: 'フリマアプリの相場を確認', description: 'メルカリやラクマで同じ商品の売買履歴を確認すれば、個人間取引の相場が分かります。ただし買取業者の価格とは異なるため参考程度に。' },
+  { title: 'ヒカカク！での一括査定', description: '最大20社に一括で査定を依頼できるヒカカク！では、現在の各社の買取価格をまとめて確認できます。無料で利用できるため、まず相場を確認する方法としておすすめです。' },
+  { title: 'フリマアプリでの相場確認', description: 'メルカリやラクマで同じ商品の売買履歴を確認すると、個人間取引の相場が分かります。ただし、買取業者の価格とは異なるため、参考程度にご覧ください。' },
   { title: '買取業者のWebサイト', description: '各買取業者のWebサイトで公開されている買取価格表を確認する方法もあります。ただし表示価格は最高値のため、実際の査定額は状態により下がることがあります。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '相場把握に最適・最高値を自動で発見', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '相場を確認後すぐに出張買取で現金化', rank: 2 },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: '店頭で即座に相場確認・その場で買取', rank: 3 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '相場の把握に適しており、各社の査定額を比較可能', rank: 1 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '相場の確認後、出張買取ですぐに現金化', rank: 2 },
+  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: '店頭で相場を確認し、その場で買取', rank: 3 },
 ];
 
 const faqs = [
-  { q: 'ゲームの買取相場はどうやって調べればいいですか？', a: 'ヒカカク！で一括査定するのが最も簡単で正確です。最大20社の買取価格を無料で比較でき、現在の最高値がすぐに分かります。メルカリの売買履歴も参考になりますが、個人売買と業者買取では価格が異なります。' },
+  { q: 'ゲームの買取相場はどうやって調べればよいですか？', a: 'ヒカカク！の一括査定が簡便な方法です。最大20社の買取価格を無料で比較でき、現在の最高値を確認できます。メルカリの売買履歴も参考になりますが、個人売買と業者買取では価格が異なります。' },
   { q: '買取相場より安い金額を提示されました。なぜですか？', a: '買取相場はあくまで「美品・付属品完備」の場合の目安です。傷・汚れ・付属品欠品があると減額されます。また、業者により査定基準が異なるため、複数社で見積もりを取ることをおすすめします。' },
   { q: 'ゲームの買取価格が高い時期はいつですか？', a: '年末商戦前（10〜11月）と新学期前（2〜3月）が最も高値がつきやすい時期です。逆に新型ハード発売直後は旧モデルの価格が下がります。' },
   { q: '古いゲーム機でも買取相場はありますか？', a: 'はい、レトロゲーム機にも買取相場があります。ファミコンで3,000〜15,000円、スーパーファミコンで3,000〜10,000円程度が目安です。特に箱付き美品はプレミア価格がつくことがあります。' },
-  { q: '買取相場は毎日変わりますか？', a: '日単位で大きく変動することは稀ですが、週〜月単位では変動します。特に新型ハードの発表、人気タイトルの発売、年末商戦などのイベント前後は変動が大きくなります。' },
+  { q: '買取相場は毎日変わりますか？', a: '日単位で大きく変動することはまれですが、週〜月単位では変動します。特に新型ハードの発表、人気タイトルの発売、年末商戦などのイベント前後は変動が大きくなります。' },
   { q: '買取価格と販売価格の差はどのくらいですか？', a: '一般的に買取価格は中古販売価格の50〜70%程度です。業者の利益や検品・クリーニングコストがこの差になります。ヒカカク！で複数社に査定を依頼すれば、この差を最小限に抑えられます。' },
 ];
 
 export default function PriceGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '買取相場ガイド' }]} />
 
       {/* Hero */}
@@ -82,7 +82,7 @@ export default function PriceGuidePage() {
             ゲーム買取相場ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲーム機・ソフトの買取相場をハード別・ソフト別に一覧表で徹底解説。相場が変動する5つの要因、相場の調べ方まで、ゲームを売る前に知っておきたい価格情報を完全網羅しています。
+            ゲーム機・ソフトの買取相場を、ハード別・ソフト別の一覧表で解説します。相場が変動する5つの要因や相場の調べ方など、ゲームを売る前に確認しておくべき価格情報をまとめています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -239,10 +239,10 @@ export default function PriceGuidePage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            あなたのゲームの<span style={{ color: 'var(--color-electric-green)' }}>正確な相場</span>を知りませんか？
+            お手持ちのゲームの<span style={{ color: 'var(--color-electric-green)' }}>正確な相場</span>の確認
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            最大20社に一括査定して、あなたのゲームの最高買取価格を確認しましょう。
+            最大20社に一括で査定を依頼し、お手持ちのゲームの買取価格を比較することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -257,11 +257,11 @@ export default function PriceGuidePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/hardware/switch/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Nintendo Switch</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switchの買取相場・高く売るコツ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switchの買取相場と高く売るためのポイント</p>
             </Link>
             <Link href="/hardware/ps5/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PlayStation 5</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS5の買取相場・高く売るコツ</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS5の買取相場と高く売るためのポイント</p>
             </Link>
             <Link href="/hardware/retro/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>レトロゲーム</p>
@@ -273,7 +273,7 @@ export default function PriceGuidePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <Link href="/knowledge/timing/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>売り時ガイド</p>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>いつ売るのがベストか</p>
+                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>売却に適した時期</p>
               </Link>
               <Link href="/knowledge/preparation/" className="glass-card p-4 card-hover block">
                 <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>売る前の準備</p>

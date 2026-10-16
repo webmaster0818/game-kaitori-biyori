@@ -15,9 +15,9 @@ const services = [
     buyMethods: ['宅配買取', '店舗買取', '出張買取'],
     target: 'ゲーム機・レトロゲーム・ゲームソフト対応',
     recommend: '複数社を比較して最高値で売りたい方',
-    pros: ['一括査定で最高値が見つかる', '対応業者数が圧倒的', '利用無料'],
+    pros: ['一括査定で最高値を見つけやすい', '対応業者数が多い', '利用無料'],
     cons: ['業者から連絡が来る', '地域により対応業者に差あり'],
-    charaComment: 'ユウト：「一括査定は鉄板。まず最初に試してほしいサービスだよ！」',
+    charaComment: 'ユウト：「複数社の査定額を一度に比較できるため、最初に利用をおすすめするサービスです。」',
   },
   {
     rank: 2,
@@ -29,9 +29,9 @@ const services = [
     buyMethods: ['出張買取', '宅配買取', '店舗買取'],
     target: '20種類以上の品目にゲーム含む',
     recommend: '自宅にいながらまとめて売りたい方',
-    pros: ['出張買取で手間いらず', 'その場で現金化', 'ゲーム以外もまとめて売れる'],
+    pros: ['出張買取のため持ち込み不要', 'その場で現金化', 'ゲーム以外もまとめて売れる'],
     cons: ['対応エリアが関東・関西中心', 'ゲーム専門ではない'],
-    charaComment: 'ユウト：「家から出なくていいのは最高。ゲーム以外もまとめて売れるのが強い！」',
+    charaComment: 'ユウト：「自宅にいながら売却でき、ゲーム以外の品目もまとめて査定に出せる点が強みです。」',
   },
   {
     rank: 3,
@@ -45,7 +45,7 @@ const services = [
     recommend: 'ゲームと一緒にホビーグッズも売りたい方',
     pros: ['ホビー系の査定に強い', 'トレカやフィギュアもまとめて売れる', '店舗持ち込みで即現金化'],
     cons: ['出張買取非対応', '東京近郊がメイン'],
-    charaComment: 'ユウト：「フィギュアやトレカも一緒に売れるのがうれしい。ホビー好きにはここ！」',
+    charaComment: 'ユウト：「フィギュアやトレカもまとめて売却できるため、ホビー全般をお持ちの方に適しています。」',
   },
   {
     rank: 4,
@@ -57,9 +57,9 @@ const services = [
     buyMethods: ['宅配買取'],
     target: 'ゲームソフト・ゲーム機・DVD・Blu-ray',
     recommend: 'まとめて大量に売りたい方・大手の安心感を重視する方',
-    pros: ['まとめ売りボーナスが大きい', '大手チェーンで信頼性が高い', '送料無料・ダンボール無料'],
+    pros: ['まとめ売りボーナスが大きい', '大手チェーンで信頼性が高い', '送料無料・段ボール無料'],
     cons: ['店頭買取は別サービス', '査定に数日かかる場合あり'],
-    charaComment: 'ミク：「大手の安心感ならゲオ！まとめ売りボーナスがお得だよ～」',
+    charaComment: 'ミク：「大手チェーンとしての安心感があり、まとめ売りボーナスも利用できます。」',
   },
   {
     rank: 5,
@@ -72,8 +72,8 @@ const services = [
     target: 'ゲームソフト・本・DVD・CD・トレカなど幅広いジャンル',
     recommend: '店舗に持ち込んですぐ現金化したい方',
     pros: ['全国どこでも店舗がある', 'その場で現金が受け取れる', 'ゲーム以外もまとめて売れる'],
-    cons: ['専門店より買取額が低い傾向', '人気商品以外は査定が安め'],
-    charaComment: 'ミク：「近所にあるから気軽に持ち込めるのがいいよね！即現金化もうれしい」',
+    cons: ['専門店より買取金額が低い傾向', '人気商品以外は査定額が低めの傾向'],
+    charaComment: 'ミク：「店舗数が多く気軽に持ち込めるうえ、その場で現金を受け取れる点が利点です。」',
   },
   {
     rank: 6,
@@ -87,7 +87,7 @@ const services = [
     recommend: 'レトロゲームや希少品を適正価格で売りたい方',
     pros: ['レトロゲームの査定に定評あり', '希少品に高値がつきやすい', 'コレクター市場に精通'],
     cons: ['一般的なゲームは平均的な価格', '査定に時間がかかることがある'],
-    charaComment: 'ミク：「レトロゲーム好きの私としては、駿河屋の目利きは信頼できる！」',
+    charaComment: 'ミク：「レトロゲームや希少品の査定に定評があるため、コレクターズアイテムの売却に適しています。」',
   },
   {
     rank: 7,
@@ -99,27 +99,27 @@ const services = [
     buyMethods: ['宅配買取'],
     target: 'ゲームソフト・ゲーム機・周辺機器',
     recommend: '初めてゲーム買取を利用する方・ゲーム専門店に任せたい方',
-    pros: ['ゲーム専門で査定が的確', '初回ボーナスがお得', '送料無料で手軽'],
+    pros: ['ゲーム専門で査定が的確', '初回ボーナスあり', '送料無料で手軽'],
     cons: ['店舗持ち込み非対応', '知名度が大手より低い'],
   },
   {
     rank: 8,
     name: 'ホビーコレクト',
     url: 'https://hobby-collect.jp/',
-    tagline: '箱なし・ジャンクOK、宅配買取専門',
+    tagline: '箱なし・ジャンク品可、宅配買取専門',
     reviewPath: '/review/hobby-collect/',
-    features: ['箱なし・ジャンクOK', '宅配買取専門', '幅広いジャンル対応', '送料無料'],
+    features: ['箱なし・ジャンク品可', '宅配買取専門', '幅広いジャンル対応', '送料無料'],
     buyMethods: ['宅配買取'],
     target: 'ゲーム・フィギュア・トレカ・ホビー全般',
     recommend: '箱や説明書がなくても売りたい方・状態が悪いゲームを処分したい方',
-    pros: ['箱なし・ジャンクでも買取OK', '幅広いホビーに対応', '梱包キット無料'],
+    pros: ['箱なし・ジャンク品でも買取可', '幅広いホビーに対応', '梱包キット無料'],
     cons: ['店舗買取非対応', '高額査定は期待しにくい'],
   },
   {
     rank: 9,
     name: 'カイトリワールド',
     url: 'https://kaitori-world.jp/',
-    tagline: 'フィギュア・ホビー強い、宅配専門、最短即日入金',
+    tagline: 'フィギュア・ホビーに強み、宅配専門、最短即日入金',
     reviewPath: '/review/kaitori-world/',
     features: ['フィギュア・ホビーに強い', '最短即日入金', '宅配買取専門', '送料無料'],
     buyMethods: ['宅配買取'],
@@ -138,7 +138,7 @@ const services = [
     buyMethods: ['宅配買取'],
     target: 'ゲーム・本・CD・DVD・ブルーレイなど',
     recommend: '引っ越しや断捨離でゲーム・本・DVDをまとめて売りたい方',
-    pros: ['ジャンルをまたいでまとめ売りできる', 'まとめ売りボーナスがお得', '自宅集荷で手間いらず'],
+    pros: ['ジャンルをまたいでまとめ売りできる', 'まとめ売りボーナスあり', '自宅集荷に対応'],
     cons: ['専門店より単品の査定額は低い', '買取不可品は処分費用がかかる場合あり'],
   },
 ];
@@ -158,30 +158,30 @@ const consoles = [
 ];
 
 const steps = [
-  { step: 1, title: '売りたいゲームを確認', description: '手持ちのゲームソフト・ゲーム機をリストアップ。付属品・箱の有無も確認しましょう。状態が良いほど高額査定が期待できます。' },
-  { step: 2, title: '買取サービスを比較', description: '当サイトのランキングを参考に、自分に合ったサービスを選びましょう。一括査定なら複数社の見積もりを一度に取得できます。' },
-  { step: 3, title: '査定を申し込む', description: '各サービスのWebサイトから無料査定を申し込みます。必要情報を入力するだけで、最短当日に査定結果が届きます。' },
-  { step: 4, title: '買取方法を選ぶ', description: '宅配買取・出張買取・店舗買取から便利な方法を選択。宅配なら送料無料のサービスが多く、段ボールも無料で手配してくれます。' },
-  { step: 5, title: '現金を受け取る', description: '査定額に納得したら、そのまま買取成立。宅配なら振込、出張・店舗ならその場で現金を受け取れます。キャンセルも無料です。' },
+  { step: 1, title: '売りたいゲームを確認', description: '手持ちのゲームソフト・ゲーム機を書き出し、付属品・箱の有無も確認します。状態が良いほど、高い査定額が期待できます。' },
+  { step: 2, title: '買取サービスを比較', description: '当サイトのランキングを参考に、ご自身に合ったサービスをお選びください。一括査定を利用すると、複数社の見積もりを一度に取得できます。' },
+  { step: 3, title: '査定を申し込む', description: '各サービスのWebサイトから無料査定を申し込みます。必要事項を入力すると、最短で当日中に査定結果が届きます。' },
+  { step: 4, title: '買取方法を選ぶ', description: '宅配買取・出張買取・店舗買取から、ご都合に合う方法を選びます。宅配買取は送料無料のサービスが多く、段ボールを無料で手配するサービスもあります。' },
+  { step: 5, title: '現金を受け取る', description: '査定額に納得できれば買取成立です。宅配買取は振込、出張買取・店舗買取はその場で現金を受け取れます。キャンセルも無料です。' },
 ];
 
 const faqs = [
-  { q: 'ゲーム買取で最も高く売れるサービスはどこですか？', a: '一概には言えませんが、ヒカカク！の一括査定を使えば最大20社の見積もりを比較でき、最高値のサービスが見つかりやすいです。ゲームの種類や状態によって最適なサービスは異なります。' },
-  { q: 'ゲームソフトの買取相場はどのくらいですか？', a: '人気タイトルのSwitch用ソフトで500円〜3,000円程度、限定版や希少ソフトはそれ以上の価格がつくこともあります。新品未開封品は特に高額査定が期待できます。' },
-  { q: '壊れたゲーム機も買取してもらえますか？', a: 'サービスによります。ヒカカク！経由の一部業者やティファナでは、ジャンク品の買取に対応している場合があります。事前に確認することをおすすめします。' },
-  { q: '宅配買取の送料はかかりますか？', a: 'ほとんどのサービスで送料は無料です。ヒカカク！経由の業者や買取ウリエルでは、専用の宅配キット（段ボール・緩衝材）を無料で送ってくれます。' },
-  { q: '買取にかかる時間はどのくらいですか？', a: '店舗買取・出張買取なら即日、宅配買取の場合は商品到着から1〜3営業日で査定結果が届きます。買取ウリエルの出張買取なら最短即日で現金化できます。' },
-  { q: 'レトロゲームの買取に強いサービスはどこですか？', a: 'ヒカカク！ではレトロゲーム専門の買取業者が多数参加しており、ファミコンやスーパーファミコンなどのレトロゲームに高い査定がつきやすいです。ティファナもレトロ玩具に強みがあります。' },
-  { q: '出張買取はどのエリアで利用できますか？', a: '買取ウリエルは関東・関西エリアで出張買取に対応しています。ヒカカク！経由の業者は全国対応のところもあります。事前にエリア確認を行ってください。' },
-  { q: 'ゲーム以外のものも一緒に売れますか？', a: 'はい。買取ウリエルは20種類以上の品目に対応、ティファナはトレカ・フィギュア・レトロ玩具などホビー系全般を取り扱っています。まとめ売りで買取額アップの場合もあります。' },
-  { q: '買取をキャンセルできますか？', a: 'ほとんどのサービスでキャンセル無料です。査定結果に納得できなければ、返送料もサービス負担で返却してもらえるケースが多いです。各サービスの規約をご確認ください。' },
+  { q: 'ゲーム買取で最も高く売れるサービスはどこですか？', a: 'ゲームの種類や状態によって最適なサービスは異なるため、一概には申し上げられません。ヒカカク！の一括査定を利用すると最大20社の見積もりを比較できるため、最高値のサービスを見つけやすくなります。' },
+  { q: 'ゲームソフトの買取相場はどのくらいですか？', a: '人気タイトルのSwitch用ソフトで500円〜3,000円程度が目安です。限定版や希少ソフトは、それ以上の価格になることもあります。新品未開封品は特に高い査定額が期待できます。' },
+  { q: '壊れたゲーム機も買取してもらえますか？', a: 'サービスによります。ヒカカク！経由の一部業者やティファナでは、ジャンク品の買取に対応している場合があります。ご利用前に各サービスへご確認ください。' },
+  { q: '宅配買取の送料はかかりますか？', a: 'ほとんどのサービスで送料は無料です。ヒカカク！経由の業者や買取ウリエルでは、専用の宅配キット（段ボール・緩衝材）を無料で提供しています。' },
+  { q: '買取にかかる時間はどのくらいですか？', a: '店舗買取・出張買取は即日、宅配買取は商品到着から1〜3営業日で査定結果が届きます。買取ウリエルの出張買取では、最短即日で現金化できます。' },
+  { q: 'レトロゲームの買取に強いサービスはどこですか？', a: 'ヒカカク！ではレトロゲーム専門の買取業者が多数参加しており、ファミコンやスーパーファミコンなどのレトロゲームに高い査定額が出やすい傾向があります。ティファナもレトロ玩具に強みがあります。' },
+  { q: '出張買取はどのエリアで利用できますか？', a: '買取ウリエルは関東・関西エリアで出張買取に対応しています。ヒカカク！経由の業者は全国対応のところもあります。事前に対応エリアをご確認ください。' },
+  { q: 'ゲーム以外のものも一緒に売れますか？', a: 'はい、可能です。買取ウリエルは20種類以上の品目に対応しており、ティファナはトレカ・フィギュア・レトロ玩具などホビー系全般を取り扱っています。まとめ売りにより買取金額が上がる場合もあります。' },
+  { q: '買取をキャンセルできますか？', a: 'ほとんどのサービスでキャンセル無料です。査定結果に納得できなければ、返送料をサービス側の負担として返却するケースが多く見られます。各サービスの規約をご確認ください。' },
   { q: '未成年でも買取サービスを利用できますか？', a: '多くの買取サービスでは、18歳未満の方は保護者の同意が必要です。サービスによっては保護者同伴での利用が求められる場合もあります。事前にご確認ください。' },
 ];
 
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
           背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
@@ -192,11 +192,11 @@ export default function HomePage() {
               2026年最新版
             </p>
             <h1 className="text-3xl md:text-5xl font-normal leading-tight mb-5" style={{ letterSpacing: '-1.2px' }}>
-              ゲーム買取のおすすめは<span style={{ fontWeight: 500 }}>ここ！</span>
+              ゲーム買取のおすすめ<span style={{ fontWeight: 500 }}>サービス比較</span>
             </h1>
             <p className="text-sm md:text-base mb-7" style={{ color: 'rgba(255,255,255,0.76)', lineHeight: '25px' }}>
-              ゲーム買取サービスを徹底比較。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
-              あなたのゲームを最も高く売れるサービスが見つかります。
+              当サイトでは、主要なゲーム買取サービスを共通の項目で比較しています。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
+              お手持ちのゲームを最も高く売却できるサービスをお探しいただけます。
             </p>
             <div className="flex flex-wrap items-center gap-2 mb-8">
               <span className="tag-pill text-xs">Switch 買取</span>
@@ -218,19 +218,19 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="text-lg md:text-xl font-extrabold mb-3" style={{ color: 'var(--color-deep-blue)' }}>
-              結論：ゲーム買取のおすすめは「何を・どう売るか」で変わります
+              ゲーム買取のおすすめは「何を・どう売るか」で変わります
             </h2>
-            <p className="text-sm font-bold mt-3 mb-2" style={{ color: 'var(--color-deep-blue)' }}>先に結論：迷ったらこの3択（各社公式の確認日つき条件で選定）</p>
+            <p className="text-sm font-bold mt-3 mb-2" style={{ color: 'var(--color-deep-blue)' }}>目的別のおすすめ（各社公式サイトで確認日を記録した条件にもとづき選定）</p>
             <ul className="text-sm space-y-1.5 mb-4" style={{ color: 'var(--color-text-light)' }}>
-              <li>①<span className="font-bold">宅配でまとめて手軽に</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
-              <li>②<span className="font-bold">今日中に現金化</span> → 全国900店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
-              <li>③<span className="font-bold">1円でも高く</span> → 店ごとに価格が毎週動くため、下の<span className="font-bold">最新の実測・最高値の店</span>で「今どこが高いか」を見てから売るのが最短です</li>
+              <li>①<span className="font-bold">宅配でまとめて売りたい場合</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
+              <li>②<span className="font-bold">当日中に現金化したい場合</span> → 全国900店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
+              <li>③<span className="font-bold">少しでも高く売りたい場合</span> → 店舗ごとの価格は毎週変動するため、下の<span className="font-bold">最新の実測・最高値の店</span>で現時点の最高値の店舗をご確認のうえ、売却することをおすすめします</li>
             </ul>
             <ul className="text-sm space-y-2 mb-5" style={{ color: 'var(--color-text-light)' }}>
-              <li>・<span className="font-bold">1円でも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>最新の実測買取価格</Link>で最高値の店を確認（下表）。複数社比較なら一括査定（ヒカカク！）</li>
-              <li>・<span className="font-bold">箱なし・傷あり・ジャンク</span> → 減額に寛容な店が有利。<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>状態別の許容度マップ</Link>で確認</li>
-              <li>・<span className="font-bold">メルカリと迷っている</span> → 手数料・送料を引いた<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>実質手取りシミュレーター</Link>で比較</li>
-              <li>・<span className="font-bold">用途別の詳しい使い分け</span>（早く売る・まとめ売り・レトロ等） → <Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>どこがいい？用途別比較</Link></li>
+              <li>・<span className="font-bold">少しでも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>最新の実測買取価格</Link>で最高値の店舗をご確認ください（下表）。複数社を比較する場合は、一括査定（ヒカカク！）が適しています</li>
+              <li>・<span className="font-bold">箱なし・傷あり・ジャンク</span> → 減額の少ない店舗が有利です。<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>状態別の許容度マップ</Link>でご確認ください</li>
+              <li>・<span className="font-bold">メルカリと比較したい</span> → 手数料・送料を差し引いた<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>実質手取りシミュレーター</Link>で比較できます</li>
+              <li>・<span className="font-bold">用途別の詳しい使い分け</span>（早く売る・まとめ売り・レトロ等） → <Link href="/compare/which-is-best/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>用途別おすすめ比較</Link>をご覧ください</li>
             </ul>
             <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>
               最新の実測・最高値の店（最終実測日: {PRICE_SURVEY_DATE.replace(/-/g, '/')}・完品前提の参考価格）
@@ -257,8 +257,8 @@ export default function HomePage() {
               </table>
             </div>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              ※当サイトが各社公式買取ページで定期的に実測している参考価格です（店舗・在庫・状態で変動）。全タイトル・全店舗の比較と前回比の値動きは
-              <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>へ。
+              ※当サイトが各社公式買取ページで定期的に実測している参考価格です（店舗・在庫・状態により変動します）。全タイトル・全店舗の比較と前回比の値動きは
+              <Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>でご確認いただけます。
             </p>
 
             <h3 className="font-bold text-sm mt-6 mb-2" style={{ color: 'var(--color-deep-blue)' }}>
@@ -286,7 +286,7 @@ export default function HomePage() {
               </table>
             </div>
             <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>
-              ※本体は付属品の欠品・状態による減額幅が大きいため、実際の査定額は変動します。モデル別の詳細は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch2買取ガイド</Link>と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>へ。
+              ※本体は付属品の欠品・状態による減額幅が大きいため、実際の査定額は変動します。モデル別の詳細は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch 2買取ガイド</Link>と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>をご覧ください。
             </p>
           </div>
         </div>
@@ -316,7 +316,7 @@ export default function HomePage() {
             <h2 className="section-heading">
               <span className="section-heading-bar" />ゲーム買取おすすめ比較ランキング
             </h2>
-            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>10社を厳選して徹底比較しました</p>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>当サイトで選定した10社を比較しています</p>
             <div className="mt-5">
               <Link href="/compare/which-is-best/" className="btn-primary py-2.5 px-6 inline-block">
                 ゲーム買取はどこがいい？用途別おすすめ比較を見る
@@ -397,7 +397,7 @@ export default function HomePage() {
                 </div>
 
                 <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
-                  <span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>こんな方におすすめ：</span>{s.recommend}
+                  <span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>このような方におすすめです：</span>{s.recommend}
                 </p>
 
                 {/* Character comment speech bubble */}
@@ -439,7 +439,7 @@ export default function HomePage() {
               <span className="section-heading-bar" />ゲーム機本体の買取相場（2026年4月時点の参考）
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              主要ゲーム機の最新買取相場をまとめました。実際の買取額はサービスや状態により異なります。
+              主要ゲーム機の買取相場をまとめています。実際の買取金額は、サービスや状態により異なります。
             </p>
           </div>
 
@@ -476,13 +476,13 @@ export default function HomePage() {
           </div>
 
           <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
-            ※ 2026年4月時点の参考相場です。付属品の有無・本体の状態・市場動向により変動します。正確な買取額は各サービスの無料査定でご確認ください。
+            ※ 2026年4月時点の参考相場です。付属品の有無・本体の状態・市場動向により変動します。正確な買取金額は、各サービスの無料査定でご確認ください。
           </p>
 
           <div className="glass-card p-5 mt-6">
             <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-accent-orange)' }}>Switch 2発売による買取相場への影響</h3>
             <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-              2025年6月のSwitch 2発売以降、旧型Switchの買取相場は下落傾向にあります。Switch 2を含む本体の最新の実測価格は<Link href="/hardware/ranking/" className="underline">ゲーム機本体の買取価格ランキング</Link>で確認できます。売却を検討中の方は早めの査定をおすすめします。
+              2025年6月のSwitch 2発売以降、旧型Switchの買取相場は下落傾向にあります。Switch 2を含む本体の最新の実測価格は<Link href="/hardware/ranking/" className="underline">ゲーム機本体の買取価格ランキング</Link>でご確認いただけます。売却をご検討中の方には、早めの査定をおすすめします。
             </p>
           </div>
         </div>
@@ -498,7 +498,7 @@ export default function HomePage() {
               <span className="section-heading-bar" />ハード別ゲーム買取ガイド
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              お持ちのゲーム機に合わせて最適な買取サービスを探せます
+              お持ちのゲーム機に合わせて、適した買取サービスをお探しいただけます。
             </p>
           </div>
 
@@ -521,12 +521,12 @@ export default function HomePage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>ハード別の買取ポイント</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <div>
-                  <p className="mb-2"><strong>Nintendo Switch：</strong>有機ELモデルは特に高額査定。Joy-Con・ドック・箱ありで買取額アップ。限定カラーモデルはプレミア価格になることも。</p>
-                  <p><strong>PlayStation 5：</strong>需要が安定しており比較的高額。デジタルエディションよりディスクドライブ搭載モデルが高値傾向。コントローラー・ケーブル類の付属品も重要です。</p>
+                  <p className="mb-2"><strong>Nintendo Switch：</strong>有機ELモデルは特に高い査定額が期待できます。Joy-Con・ドック・箱がそろっていると買取金額が上がります。限定カラーモデルはプレミア価格になることもあります。</p>
+                  <p><strong>PlayStation 5：</strong>需要が安定しており、比較的高い査定額が期待できます。デジタルエディションよりも、ディスクドライブ搭載モデルが高値の傾向です。コントローラー・ケーブル類の付属品も査定に影響します。</p>
                 </div>
                 <div>
-                  <p className="mb-2"><strong>PlayStation 4：</strong>Proモデルは通常版より高値。SSD換装済みモデルは評価が分かれるため事前確認を。ソフトとセットでの買取がおすすめ。</p>
-                  <p><strong>レトロゲーム：</strong>ファミコン・スーファミ・ゲームボーイなど、箱・説明書ありは数倍の価格差に。希少タイトルはコレクター需要で高額査定の可能性あり。ヒカカク！がおすすめ。</p>
+                  <p className="mb-2"><strong>PlayStation 4：</strong>Proモデルは通常版より高値の傾向です。SSD換装済みモデルは業者によって評価が分かれるため、事前のご確認をおすすめします。ソフトとセットでの売却もおすすめです。</p>
+                  <p><strong>レトロゲーム：</strong>ファミコン・スーパーファミコン・ゲームボーイなどは、箱・説明書の有無で数倍の価格差が生じることがあります。希少タイトルは、コレクター需要により高い査定額が出る可能性があります。ヒカカク！の一括査定がおすすめです。</p>
                 </div>
               </div>
             </div>
@@ -542,7 +542,7 @@ export default function HomePage() {
               <span className="section-heading-bar" />ゲームを高く売る5つのステップ
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              初めてでも安心。簡単5ステップで高価買取を実現
+              初めての方でも、次の5つのステップで手続きを進められます。
             </p>
           </div>
 
@@ -573,7 +573,7 @@ export default function HomePage() {
           </div>
           <div className="flex items-center gap-3 mb-6 justify-center">
             <img src="/chara-sub.jpg" alt="ミク" className="chara-avatar" />
-            <p className="text-sm font-bold" style={{ color: 'var(--color-accent-orange)' }}>ミクがあなたにぴったりの売り方をナビします！</p>
+            <p className="text-sm font-bold" style={{ color: 'var(--color-accent-orange)' }}>ミクが目的に合った売り方をご案内します。</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/method/online/" className="glass-card p-6 text-center card-hover block">
@@ -581,7 +581,7 @@ export default function HomePage() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="6" width="22" height="14" rx="2"/><path d="M1 10h22"/><path d="M8 6V2h8v4"/></svg>
               </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>自宅から送りたい</h3>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>宅配買取がおすすめ。送料無料・ダンボール無料のサービスも。</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>宅配買取がおすすめです。送料無料・段ボール無料のサービスもあります。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">宅配買取ガイドへ</span>
             </Link>
             <Link href="/method/shop/" className="glass-card p-6 text-center card-hover block">
@@ -589,7 +589,7 @@ export default function HomePage() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
               </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>今すぐ現金化したい</h3>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>店舗買取なら即日現金化。ゲオやブックオフが便利。</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>店舗買取なら即日現金化できます。ゲオやブックオフは店舗数が多く、利用しやすいサービスです。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">店舗買取ガイドへ</span>
             </Link>
             <Link href="/compare/mercari-vs-kaitori/" className="glass-card p-6 text-center card-hover block">
@@ -597,7 +597,7 @@ export default function HomePage() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18.01"/></svg>
               </div>
               <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>手間をかけてでも高く売りたい</h3>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>フリマアプリなら自分で価格設定可能。手数料と手間を考慮して。</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>フリマアプリでは自分で価格を設定できます。手数料と手間を考慮したうえでご検討ください。</p>
               <span className="tag-pill tag-pill-green text-xs mt-3 inline-block">フリマvs業者比較へ</span>
             </Link>
           </div>
@@ -656,7 +656,7 @@ export default function HomePage() {
                 { label: '対応スピード', desc: '査定・入金までの速さ' },
                 { label: '口コミ評価', desc: 'ユーザーの満足度' },
                 { label: '取扱品目', desc: '対応ジャンルの広さ' },
-                { label: '利用しやすさ', desc: '申込み・梱包の手軽さ' },
+                { label: '利用しやすさ', desc: '申し込み・梱包の手軽さ' },
                 { label: '信頼性', desc: '実績・運営体制の安定性' },
               ].map((c) => (
                 <div key={c.label} className="text-center p-3 rounded-lg" style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border-light)' }}>
@@ -678,10 +678,10 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="flex-1 text-center md:text-left">
               <h2 className="text-2xl md:text-3xl font-extrabold mb-4">
-                あなたのゲーム、<span style={{ color: 'var(--color-electric-green)' }}>もっと高く</span>売れるかも
+                お手持ちのゲームを<span style={{ color: 'var(--color-electric-green)' }}>より高く</span>売るために
               </h2>
               <p className="text-sm md:text-base mb-8" style={{ color: '#CBD5E1' }}>
-                まずは無料査定で買取価格をチェック。複数サービスを比較して最高値を見つけましょう。
+                まずは無料査定で買取価格をご確認ください。複数のサービスを比較することで、最高値を見つけやすくなります。
               </p>
               <div className="flex flex-wrap justify-center md:justify-start gap-4">
                 <a href="https://hikakaku.com" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8 text-base">

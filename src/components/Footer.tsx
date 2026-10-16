@@ -45,7 +45,7 @@ export default function Footer() {
               <span className="text-sm font-bold ml-1" style={{ color: 'var(--color-accent-orange)' }}>買取びより</span>
             </p>
             <p className="text-xs leading-relaxed" style={{ color: '#94A3B8' }}>
-              ゲーム買取サービスを徹底比較。あなたのゲームを最も高く売れるサービスが見つかります。
+              当サイトでは、各社公式の買取価格を実測し、ゲーム買取サービスを比較しています。お手持ちのゲームを高く売却できるサービスをお探しいただけます。
             </p>
           </div>
 

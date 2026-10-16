@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
   description:
-    'PS5通常版・デジタルエディション・PS5 Proの買取相場とおすすめ買取サービス3社を比較。プレステ5を高く売るコツ、コントローラー・PS VR2の買取、初期化手順まで完全解説。',
+    'PS5通常版・デジタルエディション・PS5 Proの買取相場とおすすめ買取サービス3社を比較しています。PlayStation 5を高く売るコツ、コントローラー・PS VR2の買取、初期化手順についても解説します。',
   keywords: ['PS5 買取', 'プレステ5 売る', 'PS5 買取相場', 'PS5 デジタルエディション 買取', 'PS5 Pro 買取'],
   openGraph: {
     images: ['/og.png'],
     title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
-    description: 'PS5通常版・デジタルエディション・PS5 Proの買取相場と高く売るコツを解説。',
+    description: 'PS5通常版・デジタルエディション・PS5 Proの買取相場と高く売るコツについて解説しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -25,32 +25,32 @@ const priceData = [
 ];
 
 const tips = [
-  { title: '外箱・付属品を完備する', description: '箱、コントローラー、電源ケーブル、HDMIケーブル、USBケーブル、スタンドが揃っていると高額査定に。特に外箱の有無は3,000〜5,000円の差になることも。' },
-  { title: '本体・コントローラーを清掃する', description: '白い本体は汚れが目立ちやすいため、査定前に柔らかい布で拭き上げましょう。コントローラーのスティック周りの手垢も丁寧に清掃すると印象が良くなります。' },
-  { title: 'ファームウェアを最新にする', description: '最新のシステムソフトウェアにアップデートしておくと査定がスムーズに。買取業者側の動作確認が容易になり、減額リスクを下げられます。' },
-  { title: '需要が高い時期に売る', description: '大型タイトルの発売前後や年末商戦は本体の需要が高まるタイミング。逆にPS5の値下げや新モデル発表直後は中古相場が下がりやすいので注意。' },
-  { title: '複数社の査定を比較する', description: 'ヒカカク！で最大20社に一括査定して最高値を見つけましょう。業者によって5,000円以上の差が出ることも珍しくありません。' },
+  { title: '外箱・付属品を完備する', description: '箱、コントローラー、電源ケーブル、HDMIケーブル、USBケーブル、スタンドがそろっていると高額査定につながります。特に外箱の有無は、3,000〜5,000円の差になる場合があります。' },
+  { title: '本体・コントローラーを清掃する', description: '白い本体は汚れが目立ちやすいため、査定前に柔らかい布で拭き上げることをおすすめします。コントローラーのスティック周りの手垢も丁寧に清掃すると、外観の印象が良くなります。' },
+  { title: 'ファームウェアを最新にする', description: '最新のシステムソフトウェアにアップデートしておくと、査定が円滑に進みます。買取業者側の動作確認が容易になり、減額リスクを下げられます。' },
+  { title: '需要が高い時期に売る', description: '大型タイトルの発売前後や年末商戦は、本体の需要が高まる時期です。一方、PS5の値下げや新モデルの発表直後は中古相場が下がりやすいため、ご注意ください。' },
+  { title: '複数社の査定を比較する', description: 'ヒカカク！では最大20社に一括で査定を申し込み、最高値を確認できます。業者によって5,000円以上の差が出ることも珍しくありません。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'PS5は高額商品のため複数社比較が特に有効', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '重いPS5を梱包不要、その場で現金化', rank: 2 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'PS5は高額商品のため、複数社の比較が特に有効', rank: 1 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '重量のあるPS5も梱包不要で、その場で現金化', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'コントローラーやVRもまとめて買取可能', rank: 3 },
 ];
 
 const faqs = [
   { q: 'PS5の買取相場はどのくらいですか？', a: '通常版（ディスクドライブ搭載）で25,000〜45,000円、デジタル・エディションで20,000〜36,000円、PS5 Proで40,000〜70,000円が目安です。箱・付属品の有無と本体の状態で大きく変動します。' },
   { q: 'DualSenseコントローラーだけでも売れますか？', a: 'はい、DualSenseコントローラー単品でも3,000〜5,000円程度で買取可能です。限定カラーモデルはさらに高値がつくことがあります。DualSense Edgeは8,000〜12,000円程度です。' },
-  { q: 'PS VR2は買い取ってもらえますか？', a: 'はい、PS VR2も買取対象です。買取相場は30,000〜50,000円程度。付属品完備・美品であれば高額査定が期待できます。' },
-  { q: 'PS5の初期化方法を教えてください', a: '「設定」→「システム」→「システムソフトウェア」→「本体をリセット」→「リセット」の順に操作します。PSNアカウントのサインアウトとゲームのライセンス解除もお忘れなく。' },
-  { q: 'ディスク版とデジタル版、どちらが高く売れますか？', a: 'ディスクドライブ搭載の通常版の方が需要が高く、デジタル・エディションより5,000〜10,000円ほど高い買取価格になる傾向があります。' },
+  { q: 'PS VR2は買い取ってもらえますか？', a: 'はい、PS VR2も買取対象です。買取相場は30,000〜50,000円程度です。付属品完備・美品であれば高額査定が期待できます。' },
+  { q: 'PS5の初期化方法を教えてください', a: '「設定」→「システム」→「システムソフトウェア」→「本体をリセット」→「リセット」の順に操作します。PSNアカウントのサインアウトとゲームのライセンス解除も忘れずに行ってください。' },
+  { q: 'ディスク版とデジタル版、どちらが高く売れますか？', a: 'ディスクドライブ搭載の通常版のほうが需要が高く、デジタル・エディションより5,000〜10,000円ほど高い買取価格になる傾向があります。' },
   { q: 'PS5に拡張SSDを増設していますが査定に影響しますか？', a: '増設SSD自体は取り外して別売りすることをおすすめします。PS5本体の査定には基本的に影響しませんが、SSD付きでもプラス査定にならないケースが多いです。' },
 ];
 
 export default function PS5Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'PlayStation 5' }]} />
 
       {/* Hero */}
@@ -61,7 +61,7 @@ export default function PS5Page() {
             PlayStation 5 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            PS5通常版・デジタルエディション・PS5 Proの買取相場を徹底調査。高く売るためのコツ、DualSenseコントローラーやPS VR2の買取情報、初期化手順までPS5を売る前に必要な情報をすべてまとめました。
+            PS5通常版・デジタルエディション・PS5 Proの買取相場を調査しました。高く売るためのコツ、DualSenseコントローラーやPS VR2の買取情報、初期化手順など、PS5を売却する前に必要な情報をまとめています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -188,7 +188,7 @@ export default function PS5Page() {
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>DualSense</h3>
               <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取相場: 3,000〜5,000円</p>
-              <p className="text-xs mt-1" style={{ color: 'var(--color-text-lighter)' }}>限定カラーはさらに高値に</p>
+              <p className="text-xs mt-1" style={{ color: 'var(--color-text-lighter)' }}>限定カラーはさらに高値の傾向</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>DualSense Edge</h3>
@@ -247,10 +247,10 @@ export default function PS5Page() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            PS5を<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            PS5を<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売却するために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            複数社の買取価格を比較して、あなたのPS5を一番高く買い取ってくれるサービスを見つけましょう。
+            複数社の買取価格を比較し、お手持ちのPS5を最も高く買い取るサービスを選ぶことをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -269,7 +269,7 @@ export default function PS5Page() {
             </Link>
             <Link href="/hardware/ps4/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PlayStation 4</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS4の買取相場・古くても売れる理由</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS4の買取相場・古くても売却できる理由</p>
             </Link>
             <Link href="/hardware/xbox/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>Xbox</p>

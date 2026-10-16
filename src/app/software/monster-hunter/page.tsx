@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'モンハンの買取価格はいくら？【2026年7月】ワイルズ・ライズの相場を店舗横断で比較・売り時も解説',
   description:
-    'モンスターハンターシリーズの買取相場を2026年6月の調査データで一覧化。ワイルズ・ライズ・サンブレイク・ストーリーズ2・ワールド/アイスボーンを店舗横断で比較。新作の影響と高く売るコツも解説します。',
+    'モンスターハンターシリーズの買取相場を2026年6月の調査データで一覧化しています。ワイルズ・ライズ・サンブレイク・ストーリーズ2・ワールド/アイスボーンを店舗横断で比較し、新作の影響と高く売るコツについても解説します。',
   keywords: ['モンハン 買取', 'モンスターハンター 買取価格', 'モンハンワイルズ 買取', 'モンハンライズ 売る', 'モンハン 相場'],
   openGraph: {
     images: ['/og.png'],
     title: 'モンハンの買取価格はいくら？【2026年7月】店舗横断で相場比較',
-    description: 'モンハンシリーズの買取相場を店舗横断で比較。新作の影響も解説。',
+    description: 'モンハンシリーズの買取相場を店舗横断で比較しています。新作の影響についても解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -20,35 +20,35 @@ export const metadata: Metadata = {
 
 // 2026年6月時点。各社公式買取ページおよび買取価格比較サイトの集計値（完品前提・店舗/状態/在庫により変動）
 const priceData = [
-  { title: 'モンスターハンターワイルズ', platform: 'PS5', price: '800〜1,450円', trend: '下降', note: '定価9,900円だが供給過多で発売後に急落。店舗差大' },
-  { title: 'モンスターハンターワイルズ', platform: 'Switch2', price: '未発売（開発中）', trend: '—', note: '2026年6月に開発中が正式発表。発売時期未定' },
+  { title: 'モンスターハンターワイルズ', platform: 'PS5', price: '800〜1,450円', trend: '下降', note: '定価9,900円に対し、供給過多で発売後に急落。店舗差が大きい' },
+  { title: 'モンスターハンターワイルズ', platform: 'Switch2', price: '未発売（開発中）', trend: '—', note: '2026年6月に開発中であることが正式発表。発売時期未定' },
   { title: 'モンスターハンターライズ', platform: 'Switch', price: '300〜900円', trend: '低位安定', note: '廉価版登場で相場は低水準' },
   { title: 'モンスターハンターライズ + サンブレイク セット', platform: 'Switch', price: '500〜1,000円', trend: '低位安定', note: '拡張同梱でもセットは1,000円前後' },
-  { title: 'モンスターハンターストーリーズ2 〜破滅の翼〜', platform: 'Switch', price: '未開封2,000円前後 / 中古は低位', note: '未開封プレミアと中古で価格差が極端', trend: '二極化' },
+  { title: 'モンスターハンターストーリーズ2 〜破滅の翼〜', platform: 'Switch', price: '未開封2,000円前後 / 中古は低位', note: '未開封品と中古品で価格差が非常に大きい', trend: '二極化' },
   { title: 'モンスターハンターワールド：アイスボーン マスターエディション', platform: 'PS4', price: '500〜1,300円', trend: '安定', note: '通常版とBest Price版で査定差あり' },
 ];
 
 const shopComparison = [
   { shop: 'ゲーム買取ブラザーズ', wilds: '1,450円', rise: '900円', riseSet: '1,000円', feature: '多くのタイトルで上位の高査定' },
   { shop: 'ゲオ（GEO）', wilds: '800〜1,300円', rise: '500円', riseSet: '500円', feature: '即日現金化。店頭持込も可' },
-  { shop: 'ブックオフ', wilds: '300〜1,001円', rise: '500円', riseSet: '—', feature: '店頭で手軽。価格はやや控えめ' },
+  { shop: 'ブックオフ', wilds: '300〜1,001円', rise: '500円', riseSet: '—', feature: '店頭で手軽に利用可能。価格はやや控えめ' },
   { shop: '駿河屋', wilds: '（要確認）', rise: '300円', riseSet: '800円', feature: 'セット・限定版の評価が比較的高い' },
   { shop: 'ネットオフ', wilds: '（要確認）', rise: '195円', riseSet: '260円', feature: 'まとめ売り向き。単体は控えめ' },
 ];
 
 const tips = [
-  { title: '新作ワイルズは「早売り」が鉄則', description: 'モンハンワイルズは定価9,900円ながら、供給過多（カプコンが追加生産が想定以下と公表）で発売後に急落しています。新作・話題作は発売直後〜数ヶ月が最も高いため、遊び終えたら早めの売却が有利です。' },
-  { title: 'Switch2版ワイルズの発表に注意', description: '2026年6月にSwitch2版ワイルズの開発が正式発表されました。発売されるとPS5版の中古相場をさらに押し下げる可能性があります。PS5版を持っている場合は発売前の売却が無難です。' },
-  { title: 'ライズ系は低水準＝まとめ売りも検討', description: 'ライズ・サンブレイクセットは廉価版の登場で500〜1,000円台の低水準です。単体で高値は狙いにくいため、他のソフトとまとめて売り、送料・手数料を抑える方が手取りで有利なことがあります。' },
-  { title: 'ストーリーズ2は未開封かどうかが決定的', description: 'ストーリーズ2は未開封だと2,000円前後のプレミアがつく一方、開封済み中古はほぼ値がつかないこともあります。未開封品は専門店・フリマも含めて比較しましょう。' },
+  { title: '新作ワイルズは早めの売却が基本', description: 'モンハンワイルズは定価9,900円ながら、供給過多（カプコンが追加生産が想定以下と公表）で発売後に急落しています。新作・話題作は発売直後〜数ヶ月が最も高いため、遊び終えたら早めの売却が有利です。' },
+  { title: 'Switch 2版ワイルズの発表による影響', description: '2026年6月にSwitch 2版ワイルズの開発が正式発表されました。発売されるとPS5版の中古相場をさらに押し下げる可能性があります。PS5版をお持ちの場合は、発売前の売却をおすすめします。' },
+  { title: 'ライズ系は低水準のため、まとめ売りも検討', description: 'ライズ・サンブレイクセットは廉価版の登場で500〜1,000円台の低水準です。単体で高値は狙いにくいため、他のソフトとまとめて売り、送料・手数料を抑える方が手取りで有利なことがあります。' },
+  { title: 'ストーリーズ2は未開封かどうかで価格が大きく変わる', description: 'ストーリーズ2は未開封だと2,000円前後のプレミアがつく一方、開封済み中古はほぼ値がつかないこともあります。未開封品は専門店・フリマも含めて比較することをおすすめします。' },
 ];
 
 const faqs = [
-  { q: 'モンハンで今いちばん高く売れるのはどれですか？', a: '2026年6月時点では、最新作のモンスターハンターワイルズ（PS5）が800〜1,450円で相対的に高めですが、供給過多で発売後に急落しており、定価9,900円からは大きく下がっています。ストーリーズ2は未開封なら2,000円前後のプレミアがつきます。ライズ・サンブレイク系は500〜1,000円台の低水準です。' },
-  { q: 'モンハンワイルズはなぜ買取が安いのですか？', a: '人気作ですが出荷・流通量が多く、カプコンが追加生産（リピート）販売が想定を下回ったと公表するなど供給過多気味で、中古相場が弱含みです。定価9,900円に対し2026年6月には店舗により800円台まで下落しています。さらにSwitch2版の開発も発表されており、PS5版の下押し要因になっています。' },
-  { q: 'モンハンワイルズはいつ売るべきですか？', a: 'できるだけ早めがおすすめです。新作は発売直後が最も高く、時間とともに下落します。特にワイルズはSwitch2版の開発が発表済みで、発売されるとPS5版がさらに下がる可能性があります。遊び終えているなら早期売却が有利です。' },
-  { q: 'モンハンライズ・サンブレイクは高く売れますか？', a: '残念ながら低水準です。ライズ単体で300〜900円、ライズ＋サンブレイクのセットでも500〜1,000円程度です。廉価版（Best Price）が発売されたことも相場の下押し要因です。単体で高く売るのは難しいため、他のソフトとまとめて売り、送料無料条件を満たして手取りを上げるのが現実的です。' },
-  { q: 'モンハンストーリーズ2が「0円」と表示されることがあるのはなぜですか？', a: 'ストーリーズ2は中古の通常状態だと需要が弱く、店舗によっては買取0円表示になることがあります。一方で未開封品は2,000円前後のプレミアがつきます。状態（未開封か否か）で価格差が極端なシリーズなので、未開封なら必ず複数店で査定を比較してください。' },
+  { q: 'モンハンで現在最も高く売れるのはどれですか？', a: '2026年6月時点では、最新作のモンスターハンターワイルズ（PS5）が800〜1,450円で相対的に高めですが、供給過多で発売後に急落しており、定価9,900円からは大きく下がっています。ストーリーズ2は未開封なら2,000円前後のプレミアがつきます。ライズ・サンブレイク系は500〜1,000円台の低水準です。' },
+  { q: 'モンハンワイルズはなぜ買取が安いのですか？', a: '人気作ですが出荷・流通量が多く、カプコンが追加生産（リピート）販売が想定を下回ったと公表するなど供給過多気味で、中古相場が弱含みです。定価9,900円に対し2026年6月には店舗により800円台まで下落しています。さらにSwitch 2版の開発も発表されており、PS5版の下押し要因になっています。' },
+  { q: 'モンハンワイルズはいつ売るべきですか？', a: 'できるだけ早めの売却をおすすめします。新作は発売直後が最も高く、時間とともに下落します。特にワイルズはSwitch 2版の開発が発表済みで、発売されるとPS5版がさらに下がる可能性があります。遊び終えているなら早期売却が有利です。' },
+  { q: 'モンハンライズ・サンブレイクは高く売れますか？', a: '買取価格は低水準です。ライズ単体で300〜900円、ライズ＋サンブレイクのセットでも500〜1,000円程度です。廉価版（Best Price）が発売されたことも相場の下押し要因です。単体で高く売るのは難しいため、他のソフトとまとめて売り、送料無料条件を満たして手取りを上げる方法が現実的です。' },
+  { q: 'モンハンストーリーズ2が「0円」と表示されることがあるのはなぜですか？', a: 'ストーリーズ2は中古の通常状態だと需要が弱く、店舗によっては買取0円表示になることがあります。一方で未開封品は2,000円前後のプレミアがつきます。状態（未開封か否か）で価格差が極端なシリーズなので、未開封品は必ず複数店で査定を比較することをおすすめします。' },
 ];
 
 const PAGE_TITLE = 'モンハンの買取価格【2026年6月】ワイルズ・ライズ等の相場と売り時';
@@ -56,7 +56,7 @@ const PAGE_TITLE = 'モンハンの買取価格【2026年6月】ワイルズ・�
 export default function MonsterHunterPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'モンハンの買取価格' }]} />
 
       {/* Hero */}
@@ -65,7 +65,7 @@ export default function MonsterHunterPage() {
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">モンハンの買取価格【2026年6月】</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            モンスターハンターワイルズ（PS5）、ライズ／サンブレイク、ストーリーズ2、ワールド／アイスボーンなど主要タイトルの買取相場を2026年6月の調査データで一覧化しました。新作の供給過多やSwitch2版発表が相場に与える影響も解説します。
+            モンスターハンターワイルズ（PS5）、ライズ／サンブレイク、ストーリーズ2、ワールド／アイスボーンなど主要タイトルの買取相場を2026年6月の調査データで一覧化しました。新作の供給過多やSwitch 2版発表が相場に与える影響も解説します。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>調査時点: 2026年6月（各社公式買取ページ・買取価格比較サイト集計）</p>
           <div className="flex flex-wrap gap-3 mt-4">
@@ -154,8 +154,8 @@ export default function MonsterHunterPage() {
 
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>モンハンを<span style={{ color: 'var(--color-electric-green)' }}>高値のうちに</span>売りませんか？</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>新作ほど下落が早い分野です。Switch2版の発表もあり、PS5版は早めの比較・売却が有利。複数店をチェックしましょう。</p>
+          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>モンハンを<span style={{ color: 'var(--color-electric-green)' }}>高値のうちに</span>売却するために</h2>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>新作ほど下落が早い分野です。Switch 2版の発表もあり、PS5版は早めの比較・売却が有利です。複数店の価格をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>
@@ -179,7 +179,7 @@ export default function MonsterHunterPage() {
             </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データ・今どこが一番高い？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>実測データにもとづく店舗別の最高値</p>
             </Link>
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>

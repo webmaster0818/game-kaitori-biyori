@@ -9,12 +9,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場【2026年9月】',
   description:
-    'Nintendo Switch 2本体の買取価格相場を2026年6月に調査。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時判断まで徹底解説します。',
+    'Nintendo Switch 2本体の買取価格相場を2026年6月に調査しました。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時の判断について解説します。',
   keywords: ['Switch2 買取', 'スイッチ2 買取価格', 'Switch 2 買取相場', 'Switch2 マリオカートセット 買取', 'Switch 売り時'],
   openGraph: {
     images: ['/og.png'],
     title: 'Switch2の買取価格相場【2026年6月】値上げ後のモデル別相場と旧型の売り時',
-    description: 'Switch2本体のモデル別買取相場（2026年6月調査）と定価値上げの影響、旧型Switchの売り時を解説。',
+    description: 'Switch 2本体のモデル別買取相場（2026年6月調査）と定価値上げの影響、旧型Switchの売り時について解説しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -47,71 +47,71 @@ const priceForecasts = [
 
 const judgmentCriteria = [
   {
-    scenario: '今すぐ売るべき人',
+    scenario: '早めの売却をおすすめする方',
     conditions: [
       'Switch 2の購入を予定している',
       '旧型Switchを通常モデル・Liteで使用中',
       '手持ちのソフトの大半がダウンロード版',
       '少しでも高い買取価格を得たい',
     ],
-    reason: 'Switch 2の発売後は旧型の買取相場が確実に下がります。特に通常モデルとLiteは値下がりが大きいため、早めの売却がおすすめです。',
+    reason: 'Switch 2の発売後は旧型の買取相場が確実に下がります。特に通常モデルとLiteは値下がりが大きいため、早めの売却をおすすめします。',
   },
   {
-    scenario: 'もう少し待ってもよい人',
+    scenario: '売却を急がなくてもよい方',
     conditions: [
       '有機ELモデルを使用中で満足している',
       'Switch 2の初期ロットを避けたい',
       'まだ遊びたいSwitchのソフトがある',
       'Switch 2の対応ソフトが充実するまで待ちたい',
     ],
-    reason: '有機ELモデルは値崩れが比較的穏やかなため、数ヶ月の猶予はあります。ただし、遊び終わったら早めに売却するのが賢明です。',
+    reason: '有機ELモデルは値崩れが比較的穏やかなため、数か月程度の猶予があります。ただし、遊び終えた時点で早めに売却することをおすすめします。',
   },
   {
-    scenario: '売らないほうがよい人',
+    scenario: '保管をおすすめする方',
     conditions: [
       '限定版・特別デザインのSwitchを所有',
       'コレクションとして保管したい',
       '箱・付属品を完品で保管している限定モデル',
     ],
-    reason: '限定版のSwitchはコレクター需要があり、時間が経つほど価値が上がる可能性があります。完品であれば保管を検討しましょう。',
+    reason: '限定版のSwitchはコレクター需要があり、時間が経つほど価値が上がる可能性があります。完品であれば保管をご検討ください。',
   },
 ];
 
 const tips = [
   { title: '発売前のタイミングで売る', description: 'Switch 2の発売日が近づくほど旧型の買取価格は下がります。発売2〜3週間前までに売却するのが最も有利です。' },
   { title: '箱・付属品を完備して査定に出す', description: '箱・Joy-Con・ドック・ACアダプター・HDMIケーブルが揃っているだけで1,000〜5,000円の差がつきます。' },
-  { title: '本体を清掃・初期化してから売る', description: '画面の汚れやJoy-Conの汚れを拭き取り、本体を初期化してから査定に出しましょう。見た目の印象で査定額が変わります。' },
-  { title: '複数社で査定を比較する', description: '1社だけで決めるのはもったいない。ヒカカク！なら最大20社に一括査定できるため、最高値を簡単に見つけられます。' },
-  { title: 'ソフトやコントローラーもまとめて売る', description: 'Switch 2に後方互換があるとはいえ、ソフトもまとめて売ればボーナス査定がつく業者もあります。不要なソフトはセットで売りましょう。' },
+  { title: '本体を清掃・初期化してから売る', description: '画面の汚れやJoy-Conの汚れを拭き取り、本体を初期化してから査定に出すことをおすすめします。外観の印象により査定額が変わります。' },
+  { title: '複数社で査定を比較する', description: '1社のみで決めず、複数社の査定額を比較することをおすすめします。ヒカカク！では最大20社に一括で査定を申し込めるため、最高値を効率よく確認できます。' },
+  { title: 'ソフトやコントローラーもまとめて売る', description: 'Switch 2に後方互換があるとはいえ、ソフトもまとめて売ればボーナス査定がつく業者もあります。不要なソフトはまとめて売却することをおすすめします。' },
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '複数業者の競争で最高値を狙える。Switch売却時に特におすすめ。' },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・中部・近畿・岡山（ゲームは関東1都3県）', method: '出張買取', point: '自宅まで来てくれてその場で現金化。Switch 2購入資金にすぐ充てられる。' },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム周辺機器もまとめて売れる。Switch本体+ソフトのセット売りに便利。' },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '複数業者の競争により最高値を狙えます。Switchの売却に特に適しています。' },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・中部・近畿・岡山（ゲームは関東1都3県）', method: '出張買取', point: '自宅で査定を受け、その場で現金化できます。Switch 2の購入資金にすぐ充てられます。' },
+  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム周辺機器もまとめて売却できます。Switch本体とソフトのセット売却に適しています。' },
 ];
 
 const faqs = [
   { q: 'Switch 2が発売されたら旧型Switchの買取価格はどうなりますか？', a: '旧型Switchの買取価格は確実に下落します。過去の例では、3DS→Switch移行時に3DSの買取価格が30〜50%下落しました。特に通常モデルとLiteは影響が大きく、有機ELモデルは比較的緩やかな下落が予想されます。' },
-  { q: 'Switch 2に後方互換があるなら旧型を売っても大丈夫？', a: 'はい、Switch 2はNintendo Switchのソフト（物理・ダウンロード両方）に後方互換があるため、旧型を売ってもSwitch 2でこれまでのソフトを引き続きプレイできます。ダウンロード版はニンテンドーアカウントに紐づいているため、Switch 2で再ダウンロード可能です。' },
+  { q: 'Switch 2に後方互換があるなら旧型を売っても問題ありませんか？', a: 'はい、Switch 2はNintendo Switchのソフト（物理・ダウンロード両方）に後方互換があるため、旧型を売ってもSwitch 2でこれまでのソフトを引き続きプレイできます。ダウンロード版はニンテンドーアカウントに紐づいているため、Switch 2で再ダウンロード可能です。' },
   { q: '旧型Switchを売るベストなタイミングはいつですか？', a: 'Switch 2発売の2〜3週間前までが最も有利です。発売直後は中古市場に旧型が大量に流入するため、買取価格が急落します。早めの売却をおすすめします。' },
-  { q: '限定版のSwitchも値下がりしますか？', a: '限定版・特別デザインのSwitchはコレクター需要があるため、一般モデルほどの値下がりは見込まれません。むしろ生産終了後は希少性が高まり、価値が上がる可能性もあります。箱・付属品完品であれば保管も検討しましょう。' },
-  { q: 'Joy-Conだけ売ってSwitch 2用に買い替えるのはありですか？', a: 'Switch 2のJoy-Conはマグネット式に変更されているため、旧型Joy-Conはそのまま装着できません（別売りアタッチメントが必要）。旧型Joy-Conを使い続ける予定がなければ、本体と一緒に売却するのが査定額的にお得です。' },
+  { q: '限定版のSwitchも値下がりしますか？', a: '限定版・特別デザインのSwitchはコレクター需要があるため、一般モデルほどの値下がりは見込まれません。むしろ生産終了後は希少性が高まり、価値が上がる可能性もあります。箱・付属品がそろった完品であれば、保管もご検討ください。' },
+  { q: 'Joy-Conを売却してSwitch 2用に買い替えてもよいですか？', a: 'Switch 2のJoy-Conはマグネット式に変更されているため、旧型Joy-Conはそのまま装着できません（別売りアタッチメントが必要）。旧型Joy-Conを使い続ける予定がなければ、本体と一緒に売却するほうが査定額の面で有利です。' },
   { q: 'Switch 2はいつ発売ですか？定価はいくらですか？', a: 'Nintendo Switch 2は2025年6月5日に日本を含む全世界で同時発売されました。発売時の価格は国内専用版49,980円（税込）でしたが、2026年5月25日に59,980円へ値上げされています。多言語対応版は69,980円です。' },
-  { q: 'Switch 2本体は今いくらで買取してもらえますか？', a: '2026年6月12日時点の調査では、日本語・国内専用版が46,000〜47,000円前後、生産終了したマリオカート ワールドセットが最大57,300円、多言語対応版が77,300円（いずれも買取ルデヤ・ふるいち公式の掲載価格）です。新品・未開封または完品が前提で、価格は日々変動するため売る直前に各社の公式買取ページで確認してください。' },
-  { q: '定価の値上げでSwitch 2の買取価格は上がりますか？', a: '上昇圧力がかかっています。2026年5月25日に国内専用版の定価が49,980円から59,980円に1万円値上げされたため、値上げ前の価格で購入した本体は相対的に高く売れる状況です。生産終了した同梱版（マリオカート ワールドセット等）は希少性も加わり、通常版より高い買取価格が提示されています。' },
+  { q: 'Switch 2本体は今いくらで買取してもらえますか？', a: '2026年6月12日時点の調査では、日本語・国内専用版が46,000〜47,000円前後、生産終了したマリオカート ワールドセットが最大57,300円、多言語対応版が77,300円（いずれも買取ルデヤ・ふるいち公式の掲載価格）です。新品・未開封または完品が前提で、価格は日々変動するため、売却の直前に各社の公式買取ページにてご確認ください。' },
+  { q: '定価の値上げでSwitch 2の買取価格は上がりますか？', a: '上昇圧力がかかっています。2026年5月25日に国内専用版の定価が49,980円から59,980円に1万円値上げされたため、値上げ前の価格で購入した本体は相対的に高く売却できる状況です。生産終了した同梱版（マリオカート ワールドセット等）は希少性も加わり、通常版より高い買取価格が提示されています。' },
 ];
 
 export default function Switch2Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日つきで比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Switch 2 売り時ガイド' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(239,68,68,0.2)', color: '#F87171' }}>緊急特集</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(239,68,68,0.2)', color: '#F87171' }}>特集</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             Switch2の買取価格相場【2026年6月】
           </h1>
@@ -156,7 +156,7 @@ export default function Switch2Page() {
 
         {/* Switch 2 Buyback Prices (Information Gain) */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch2本体の買取価格相場【2026年6月12日調査】</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch 2本体の買取価格相場【2026年6月12日調査】</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
             Switch 2本体を売る場合の実勢価格です。2026年6月12日に買取業者の公式買取ページで確認した価格を掲載しています（新品・未開封または箱・付属品完備が前提。状態・在庫状況により日々変動します）。
           </p>
@@ -186,7 +186,7 @@ export default function Switch2Page() {
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li>
                 <span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>① 2026年5月25日の定価値上げ：</span>
-                任天堂は国内専用版の希望小売価格を49,980円から59,980円に改定しました（2026年5月8日発表）。新品の値段が1万円上がったことで中古・買取相場にも上昇圧力がかかっており、値上げ前に買った人にとっては売却の好機になっています。
+                任天堂は国内専用版の希望小売価格を49,980円から59,980円に改定しました（2026年5月8日発表）。新品の値段が1万円上がったことで中古・買取相場にも上昇圧力がかかっており、値上げ前に購入された方にとっては売却の好機といえます。
               </li>
               <li>
                 <span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② 同梱版の生産終了：</span>
@@ -229,7 +229,7 @@ export default function Switch2Page() {
 
         {/* Judgment Criteria */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />今売るべきか待つべきか？判断基準</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />売却時期の判断基準</h2>
           <div className="space-y-6">
             {judgmentCriteria.map((item) => (
               <div key={item.scenario} className="glass-card p-6">
@@ -325,10 +325,10 @@ export default function Switch2Page() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            旧型Switchを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売りませんか？
+            旧型Switchを<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>で売却するために
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            Switch 2への乗り換えなら、旧型を少しでも高く売ってSwitch 2の購入資金に充てましょう。
+            Switch 2へ乗り換える場合は、旧型を少しでも高く売却し、Switch 2の購入資金に充てることをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -351,14 +351,14 @@ export default function Switch2Page() {
             </Link>
             <Link href="/compare/shop-vs-online/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>店舗 vs 宅配買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>どっちがお得か徹底比較</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>どちらが有利かを比較</p>
             </Link>
           </div>
           <h3 className="font-bold mb-4 mt-8" style={{ color: 'var(--color-deep-blue)' }}>Switch 2を高く売る業者・状態別の査定</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取ワールドの評判</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switch2本体に強い宅配買取の実態</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>Switch 2本体に強みのある宅配買取の実態</p>
             </Link>
             <Link href="/review/uriel/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ウリエルの評判</p>
@@ -366,14 +366,14 @@ export default function Switch2Page() {
             </Link>
             <Link href="/condition-guide/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>状態別 買取許容度マップ</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありでいくら下がる？</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>箱なし・傷ありの場合の減額目安</p>
             </Link>
           </div>
         </section>
               {/* 本体実測価格（定期実測・2026-07-04開始） */}
       <section className="mb-12">
-        <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch2本体の店舗別 買取価格【定期実測】</h2>
-        <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>当サイトが各社公式買取ページで実測した本体の参考買取価格です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提）。最新の全機種比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>へ。</p>
+        <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch 2本体の店舗別 買取価格【定期実測】</h2>
+        <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>当サイトが各社公式買取ページで実測した本体の参考買取価格です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}調査・完品前提）。最新の全機種比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>価格インデックス</Link>をご覧ください。</p>
         <PriceMatrix list={hardwarePrices.filter((h) => h.title.includes('Switch'))} />
       </section>
 

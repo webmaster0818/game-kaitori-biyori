@@ -5,12 +5,12 @@ import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: '掲載・提携のお問い合わせ | ゲーム買取びより',
   description:
-    'ゲーム買取びよりへの掲載をご希望の買取サービス事業者さま向けのお問い合わせ窓口です。掲載のご相談、掲載内容の修正、取材・提携のご相談を承っています。',
+    'ゲーム買取びよりへの掲載をご希望の買取サービス事業者様向けのお問い合わせ窓口です。掲載のご相談、掲載内容の修正、取材・提携のご相談を承っています。',
   alternates: { canonical: 'https://gamekaitori-biyori.com/contact/' },
   openGraph: {
     images: ['/og.png'],
     title: '掲載・提携のお問い合わせ | ゲーム買取びより',
-    description: '掲載をご希望の買取サービス事業者さま向けのお問い合わせ窓口です。',
+    description: '掲載をご希望の買取サービス事業者様向けのお問い合わせ窓口です。',
     type: 'website',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -28,7 +28,7 @@ export default function ContactPage() {
 
       <div className="rounded-xl p-5 mb-8" style={{ background: 'var(--color-bg-alt, #F1F5F9)' }}>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-          「ゲーム買取びより」への<strong>掲載をご希望の買取サービス事業者さま</strong>からのお問い合わせを承っています。
+          「ゲーム買取びより」への<strong>掲載をご希望の買取サービス事業者様</strong>からのお問い合わせを承っています。
           掲載のご相談・掲載内容の修正・取材や提携のご相談など、下記フォームよりお気軽にお問い合わせください。
           内容を確認のうえ、担当者よりご連絡いたします。
         </p>
