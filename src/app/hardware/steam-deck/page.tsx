@@ -139,9 +139,9 @@ export default function SteamDeckPage() {
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>① 6月1日に定価が大幅値上げ：</span>国内販売元KOMODOが2026年6月1日に価格改定し、OLED 512GBは137,980円（旧99,800円）、1TBは167,980円（旧114,800円）となりました。2026年3月に続き3か月で2回目の値上げで、理由はメモリ・ストレージのコスト上昇とされています。新品が高くなった分、中古・買取相場には上昇圧力がかかっています。</li>
               <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>② LCDモデルの生産終了：</span>最後まで残っていたLCD 256GBも2026年2月頃に在庫切れ・生産終了が報じられ、現行ラインナップはOLED 512GB/1TBの2モデルのみとなっています。LCDは新品が手に入らないため、状態の良い中古の価値が見直されています。</li>
-              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ 国内は品薄が継続：</span>公式ストアでは売り切れと再入荷が繰り返されており、すぐ入手したい層が中古市場に流れています。なおValveの新型（Steam Machine・Steam Frame）は2026年夏出荷予定ですが、Steam Deck後継機の公式発表はありません（2026年6月12日時点）。</li>
+              <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>③ 国内は品薄が継続：</span>公式ストアでは売り切れと再入荷が繰り返されており、すぐ入手したい層が中古市場に流れています。なおValveの新型（Steam Machine・Steam Frame）は、Steam公式ストアで日本ではKOMODO経由（komodostation.com）で購入できると案内されています（2026年10月17日確認）。Steam Deck後継機の公式発表は、2026年6月12日時点ではありませんでした。</li>
             </ul>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ファミ通（2026年6月価格改定報道）、TechPowerUp（LCD生産終了）、テクノエッジ（再入荷）、VGC（Valve新型2026年夏出荷）。2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ファミ通（2026年6月価格改定報道）、TechPowerUp（LCD生産終了）、テクノエッジ（再入荷）、Steam公式ストア（Steam Machine・Steam Frameの販売案内、2026年10月17日確認）。そのほかは2026年6月12日確認</p>
           </div>
         </section>
 
