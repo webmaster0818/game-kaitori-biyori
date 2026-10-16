@@ -84,7 +84,7 @@ export default function UrielReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：1都3県で出張買取・即日現金化を希望する方に適した、古物商許可を持つ正規事業者</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>1都3県で出張買取・即日現金化を希望する方に適した、古物商許可を持つ正規事業者</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               買取ウリエルは株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）が運営する正規の買取事業者です。出張費・査定料・キャンセル料はすべて無料で、買取成立後8日以内のクーリングオフにも対応しているため、「やばい・怪しい」という検索が出るほどの根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。ゲーム買取の対象エリアが<strong>東京・神奈川・千葉・埼玉</strong>に限定されている点と、宅配・店頭は2026年6月時点で案内を終了している点は、事前にご確認ください。重い荷物を運ばずにその場で現金化したい1都3県の方に適しています。
             </p>
@@ -314,7 +314,7 @@ export default function UrielReviewPage() {
         <section style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--color-accent-soft-weak)', borderRadius: '12px', borderLeft: '3px solid var(--color-electric-green)' }}>
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめ比較（迷ったらこの3択・最新の最高値）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめ比較（目的別の3つの選択肢・最新の最高値）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（現在最も高い業者の確認）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
             <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリ vs 買取 手取り額シミュレーション</Link></li>

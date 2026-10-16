@@ -74,7 +74,7 @@ export default function HardoffReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：ジャンク品・まとめ処分に強みがあり、人気作は事前の相場確認が必要</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>ジャンク品・まとめ処分に強みがあり、人気作は事前の相場確認が必要な買取店</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               ハードオフは、壊れたゲーム機や古い周辺機器まで「ジャンク」として買い取る公式方針を持つ、全国1,000店超の最大手です。近所の店で即日現金化でき、他店で断られる品の受け皿になります。一方で買取価格表は非公開で、査定はデータベース＋店舗の地域性で変動するため、<strong>人気タイトルは専門店やゲオ・ブックオフの公表価格より安くなることがあります</strong>。「動くか分からない品・大量処分」はハードオフ、「人気作・プレミア品」は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場を確認してから売却先を選ぶ使い分けをおすすめします。
             </p>

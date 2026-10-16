@@ -75,9 +75,9 @@ export default function FuruichiReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：上場企業が運営し、店頭での即日現金化と「ふるいち宅配買取」に対応。レトロから最新ゲームまでの売却に適したサービス</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>上場企業が運営し、店頭での即日現金化と「ふるいち宅配買取」に対応する、レトロから最新ゲームまでの売却に適したサービス</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              古本市場（ふるいち）は東証スタンダード上場の株式会社テイツー（埼玉県公安委員会 古物商許可 第431100002846号）が運営する買取チェーンです。上場企業ならではの信頼性と、<strong>店頭でその場で査定・現金化できる</strong>手軽さ、レトロゲームへの強さが魅力です。旧宅配「ふるいちオンライン」は2026年6月30日で終了しましたが、現在は<strong>「ふるいち宅配買取」が稼働しており、査定額3,000円以上で送料無料</strong>で自宅から売れます（2026年8月4日確認）。ただし宅配は<strong>3,000円未満だと査定額から1,000円差引・キャンセル時の返送料は自己負担</strong>のため、低額品は店頭買取が適しています。近くに店舗がありすぐに現金化したい方も、店舗が遠く宅配でまとめて売りたい方も利用できます。
+              古本市場（ふるいち）は東証スタンダード上場の株式会社テイツー（埼玉県公安委員会 古物商許可 第431100002846号）が運営する買取チェーンです。上場企業ならではの信頼性と、<strong>店頭でその場で査定・現金化できる</strong>手軽さ、レトロゲームへの対応が特長です。旧宅配「ふるいちオンライン」は2026年6月30日で終了しましたが、現在は<strong>「ふるいち宅配買取」が稼働しており、査定額3,000円以上で送料無料</strong>で自宅から売れます（2026年8月4日確認）。ただし宅配は<strong>3,000円未満だと査定額から1,000円差引・キャンセル時の返送料は自己負担</strong>のため、低額品は店頭買取が適しています。近くに店舗がありすぐに現金化したい方も、店舗が遠く宅配でまとめて売りたい方も利用できます。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるソフトを実測データで確認する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>宅配専門の買取王子と比較する</Link>

@@ -166,7 +166,7 @@ export default function NewVsUsedPage() {
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
                 <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>付属品をそろえる</h3>
                 <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>
-                  外箱、説明書、ケーブル類、コントローラーなどをすべてそろえることをおすすめします。特に外箱の有無で2,000〜5,000円の差がつくことがあります。購入時から保管しておくことが望ましいです。
+                  外箱、説明書、ケーブル類、コントローラーなどをすべてそろえることをおすすめします。特に外箱の有無で2,000〜5,000円の差がつくことがあります。購入時から保管しておくことをおすすめします。
                 </p>
               </div>
               <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>

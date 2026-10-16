@@ -74,7 +74,7 @@ export default function TraderReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：秋葉原の店舗を利用できる方、5点以上をまとめて送る方に適した買取店</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>秋葉原の店舗を利用できる方、5点以上をまとめて送る方に適した買取店</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               トレーダーは、秋葉原の店頭に持ち込める場合、レトロ・海外ゲームを含めて幅広く相談できる老舗です。宅配は<strong>5点以上で送料無料・査定3日以内・振込2〜3日</strong>と日数が明確な一方、<strong>キャンセル時の返送が着払い（利用者負担）</strong>のため、送る前に公式の参考価格で金額の目安をご確認ください。少量のみの売却や、査定額を見てから決めたい場合は返送無料の<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>、人気作の相場比較は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>をご利用ください。
             </p>

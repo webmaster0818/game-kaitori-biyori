@@ -76,7 +76,7 @@ export default function HobbyCollectReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>評価の要点：正規の業者であり、箱なし・ジャンク品の売却先として利用できます</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>箱なし・ジャンク品の売却先として利用できる正規の業者</h2>
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
               ホビーコレクトは、石川県金沢市の株式会社JUSTYが運営する正規の宅配買取サービスです（古物商許可：石川県公安委員会 第511010011942号）。箱なし・説明書なし・故障したジャンク品も買取対象となる点が最大の強みであり、他社で買取を断られた商品の売却先として利用できます。買取比較サイト「ヒカカク！」での総合評価は<strong>4.13点（口コミ1,825件）</strong>と、比較的高い評価です（2026年6月18日閲覧）。一方で、キャンセル時の返送料が自己負担になる点と、箱なし・開封済みの商品は査定額が下がりやすい点にご注意ください。
             </p>

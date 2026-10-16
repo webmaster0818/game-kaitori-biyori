@@ -74,7 +74,7 @@ export default function JanparaReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>評価の要点：状態の良いゲーム機本体の売却に適した店舗です</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>状態の良いゲーム機本体の売却に適した店舗</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               じゃんぱらは<strong>ゲーム機本体の売却に適した店舗</strong>です。当サイトの実測ではSwitch 2未使用 上限47,000円・PS5未使用46,000円等が公開されており（2026年7月7日）、店頭では平均60分で現金化でき、<strong>毎週火曜日は中古品の査定額が5%アップ（店頭限定）</strong>します。一方、査定は「完品・無傷」を基準とした細かいもので、外箱・保証書の欠品も減額の対象です。ソフトの価格掲載は確認できないため、ソフトはゲオ・ブックオフ等の公表価格と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で比較し、本体はじゃんぱらと同グループの<Link href="/review/sofmap/" style={{ color: 'var(--color-electric-green)' }}>ソフマップ（ラクウル）</Link>の価格と比較することをおすすめします。
             </p>

@@ -321,7 +321,7 @@ export default function OnlinePage() {
 
         {/* Cancel/Return注意 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />キャンセル・返送で損しないための注意点</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />キャンセル・返送時の費用に関する注意点</h2>
           <div className="glass-card p-6">
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li><span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>「自動承認/自動承諾」は返送不可になりやすい：</span>多くのサービスにある自動承認の仕組みは、一定日数の未回答や選択でキャンセル・返送ができなくなります（カイトリワールドは7日未回答で承認、ゲオは14日未回答で返品など条件が異なります）。査定結果は早めにご確認ください。</li>

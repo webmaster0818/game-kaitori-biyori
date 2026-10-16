@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const features = [
   { title: '全国900店舗超の店舗網', description: '日本全国に900店舗以上を展開しています。お住まいの近くに店舗がある可能性が高く、思い立ったときにすぐ持ち込み買取を利用できます。駅前や商業施設内にも多く出店しています。' },
   { title: '店頭で即日現金化', description: '店舗に持ち込めばその場で査定、その日のうちに現金を受け取れます。お急ぎで現金が必要な方にとって、最も大きな利点です。混雑時でも通常30分〜1時間程度で査定が完了します。' },
-  { title: '本・CD・DVDも同時買取', description: 'ゲーム以外にも本・CD・DVD・ブルーレイなどをまとめて売ることができます。部屋の整理や引っ越しの際にワンストップで不用品を処分できる便利さが魅力です。' },
+  { title: '本・CD・DVDも同時買取', description: 'ゲーム以外にも本・CD・DVD・ブルーレイなどをまとめて売ることができます。部屋の整理や引っ越しの際に不用品を一度にまとめて処分できます。' },
   { title: 'アプリ会員特典', description: 'ブックオフ公式アプリの会員になると、買取価格UPクーポンや限定キャンペーンの情報が届きます。会員ランクに応じたボーナスもあり、リピーターほどお得になります。' },
 ];
 
@@ -74,7 +74,7 @@ export default function BookoffReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：近隣店舗での即日売却・まとめ売りに強みがある最大手（査定額は相場により変動）</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>近隣店舗での即日売却・まとめ売りに強みがある最大手（査定額は相場により変動）</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               ブックオフは全国900店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります。査定額が気になる方は、売却前に当サイトが<strong>定期的に実測している買取価格DB</strong>で現在の相場と他店の価格を確認してから判断することをおすすめします。
             </p>

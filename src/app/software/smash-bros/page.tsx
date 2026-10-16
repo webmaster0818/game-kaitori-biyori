@@ -46,7 +46,7 @@ export default function SmashBrosPage() {
         : '当ページの表(公式価格の実測値・最終実測日を記載)をご覧ください。',
     },
     {
-      q: 'どの店に売るのが最も高いですか？',
+      q: '最も高く売れる店はどこですか？',
       a: a
         ? `${SURVEY}の実測では${STORE_LABELS[a.best.store]}が${a.best.price.toLocaleString()}円で最高値でした${gapTxt ? `(最安の公表価格との差は${gapTxt})` : ''}。ただし公表価格は毎週動くため、売る直前に当ページの実測表で最新の最高値をご確認ください。`
         : '当ページの実測表で最新の最高値をご確認ください。',

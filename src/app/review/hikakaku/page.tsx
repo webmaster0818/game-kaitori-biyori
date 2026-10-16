@@ -175,7 +175,7 @@ export default function HikakakuReviewPage() {
                 <tr><th>サービス形態</th><td className="text-sm">買取価格の比較・最大20社への一括査定を仲介するプラットフォーム（<strong>ヒカカク!自身は買い取らず</strong>、複数の買取業者を仲介）</td></tr>
                 <tr><th>利用料金</th><td className="text-sm">無料</td></tr>
                 <tr><th>申込フロー</th><td className="text-sm">商品情報を入力→最短1日で各社からメール→価格を比較→業者を選んで宅配・出張・店頭で買取（電話番号の入力が必須）</td></tr>
-                <tr><th>注意点</th><td className="text-sm">表示価格・査定額は参考値であり、保証されない（仮査定と本査定に差が出ることがある）</td></tr>
+                <tr><th>注意点</th><td className="text-sm">表示価格・査定額は参考値で保証はなし（仮査定と本査定に差が出る場合あり）</td></tr>
               </tbody>
             </table>
           </div>

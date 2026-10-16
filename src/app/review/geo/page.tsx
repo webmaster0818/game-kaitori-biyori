@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const features = [
   { title: 'Switch 2・PS5本体の買取強化中（キャンペーンは端境期）', description: 'スマホ・ゲーム機本体等が対象だった「買取アップキャンペーン」（2点10%UP・3点以上15%UP）は2026年7月18日で終了し、7月28日確認時点で新しい%UPキャンペーンの告知はありません。常設の訴求として「Nintendo Switch 2本体 買取強化中」「PS5本体 買取強化中」「WEB限定・動かないゲーム機本体買取」を掲載中です。キャンペーンは申込時点で対象判定されます。' },
-  { title: '全国900店舗グループの安心感', description: '全国に約900店舗を展開するゲオグループが運営しています。大手ならではの安定した査定基準と、万が一のトラブル時も安心のサポート体制が整っています。' },
+  { title: '全国900店舗を展開するグループの運営', description: '全国に約900店舗を展開するゲオグループが運営しています。大手ならではの安定した査定基準と、万が一のトラブル時も安心のサポート体制が整っています。' },
   { title: '送料・査定料・振込手数料が無料（1点からOK）', description: '送料・査定料・振込手数料はすべて無料で、点数条件もなく1点から申し込めます。集荷は佐川急便が送り状を持って自宅に来てくれるため伝票記入も不要です。ただし段ボールは自分で用意する必要があります（無料の梱包キットはありません）。' },
   { title: '申込時点の買取価格を保証', description: 'Web申込が完了した時点の買取価格が保証されます（商品状態による減額はあり）。申込はWebから24時間365日可能で、申込から査定・入金まで自宅で完結します。なお買取代金の受け取りは銀行振込のみで、Pontaポイントでの受け取りやポイント付与の案内は公式にはありません（2026年6月12日時点）。' },
 ];
@@ -58,7 +58,7 @@ export default function GeoReviewPage() {
             ゲオ宅配買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            全国約900店舗を展開するゲオグループの宅配買取サービスです。送料・査定料・振込手数料が無料で1点から申し込める手軽さが魅力です。一方で「段ボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年7月28日確認）で正確に解説します。梱包・段ボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。具体的な手順は<Link href="/guide/geo-takuhai/" style={{ color: '#34D399' }}>やり方ガイド</Link>をご覧ください。
+            全国約900店舗を展開するゲオグループの宅配買取サービスです。送料・査定料・振込手数料が無料で1点から申し込めます。一方で「段ボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年7月28日確認）で正確に解説します。梱包・段ボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。具体的な手順は<Link href="/guide/geo-takuhai/" style={{ color: '#34D399' }}>やり方ガイド</Link>をご覧ください。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://geo-online.co.jp/kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -106,7 +106,7 @@ export default function GeoReviewPage() {
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>+ 大手チェーンの安心感・信頼性</li>
+                <li>+ 大手チェーンが運営</li>
                 <li>+ 送料・査定料・振込手数料が無料（1点からOK）</li>
                 <li>+ まとめて買取キャンペーンで最大+6,500円（時期による）</li>
                 <li>+ 申込時点の買取価格が保証される</li>
@@ -151,7 +151,7 @@ export default function GeoReviewPage() {
           <div className="glass-card p-6">
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li>・ゲームソフトをまとめて売りたい方（キャンペーン時はまとめ売りボーナスあり）</li>
-              <li>・大手の安心感を重視する方</li>
+              <li>・大手チェーンでの売却を希望する方</li>
               <li>・送料・査定料・振込手数料の無料を重視する方（受け取りは銀行振込のみ）</li>
               <li>・自宅から手軽に宅配買取を利用したい方（段ボールは自分で用意）</li>
               <li>・近くにゲオ店舗があり、店舗持ち込みも検討している方</li>
@@ -171,7 +171,7 @@ export default function GeoReviewPage() {
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・送料・査定料・振込手数料が無料で1点から出せる手軽さ</li>
                 <li>・佐川急便が送り状を持参するので伝票記入が不要</li>
-                <li>・全国約900店舗の大手グループという安心感</li>
+                <li>・全国約900店舗を展開する大手グループが運営</li>
                 <li>・開催時の買取アップキャンペーン（2026年7月28日時点は端境期）</li>
                 <li>・申込時点の買取価格が保証される（状態による減額はあり）</li>
               </ul>

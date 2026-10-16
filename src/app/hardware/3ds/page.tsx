@@ -149,11 +149,11 @@ export default function ThreeDSPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />SDカードのデータ消去手順</h2>
           <div className="glass-card p-6">
             <ol className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>1. ニンテンドーネットワークIDの確認</strong> - 「設定」→「ニンテンドーネットワークID設定」でIDを確認し、控えておく</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>1. ニンテンドーネットワークIDの確認</strong> - 「設定」→「ニンテンドーネットワークID設定」でIDを確認し、控えを保管</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>2. ソフトデータの削除</strong> - 「設定」→「データ管理」→「Nintendo 3DSデータ管理」からダウンロードソフトのデータを削除</li>
               <li><strong style={{ color: 'var(--color-deep-blue)' }}>3. 本体の初期化</strong> - 「設定」→「その他の設定」→「初期化」→「本体の初期化」を実行</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>4. SDカードのフォーマット</strong> - SDカードをPCに接続してフォーマットする、または本体に挿入したまま初期化する</li>
-              <li><strong style={{ color: 'var(--color-deep-blue)' }}>5. SDカードの取り外し</strong> - 個人データが残らないよう、SDカードを抜いてから査定に出すことをおすすめします</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>4. SDカードのフォーマット</strong> - SDカードをPCに接続してフォーマット、または本体に挿入したまま初期化</li>
+              <li><strong style={{ color: 'var(--color-deep-blue)' }}>5. SDカードの取り外し</strong> - 個人データが残らないよう、SDカードを抜いた状態で査定に提出</li>
             </ol>
           </div>
         </section>

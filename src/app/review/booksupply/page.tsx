@@ -78,7 +78,7 @@ export default function BooksupplyReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：本とゲームをまとめて宅配で売却したい方に適した、古物商許可を持つ老舗事業者</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>本とゲームをまとめて宅配で売却したい方に適した、古物商許可を持つ老舗事業者</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               ブックサプライは株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号・2000年設立）が運営する宅配買取サービスです。査定料・振込手数料・段ボールが無料で、Switch・PS5などのゲーム機・ソフトも本やCD・DVDとまとめて売れます。「悪い・怪しい」と検索されるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ただし<strong>送料無料は査定合計2,000円以上が条件</strong>で、少量だと1箱500円が差し引かれる点、<strong>値段が付かない品の返送には送料負担が生じる場合がある</strong>点は事前にご確認ください。ゲーム単体を1点でも高く売りたい用途よりも、まとめて処分する用途に適したサービスです。
             </p>

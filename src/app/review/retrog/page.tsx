@@ -75,7 +75,7 @@ export default function RetrogReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>総評：状態が悪い品やまとめ売りに適したレトロゲーム専門買取</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>状態が悪い品やまとめ売りに適したレトロゲーム専門買取</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               レトログは、古物商許可を持つ株式会社山徳（1990年設立）が運営するレトロゲーム専門の宅配買取で、<strong>約40機種の買取価格表を公式公開</strong>し、<strong>箱なし・説明書なし・電源が入らない品も買取可と明記</strong>している点が強みです。送料・宅配キット無料、査定1〜3営業日・入金2営業日以内と所要日数も明記されています。一方、<strong>キャンセルは全点返送のみ・返送料自己負担</strong>のため、手放すか迷うレア品は最初から送らず、<Link href="/review/surugaya/" style={{ color: 'var(--color-electric-green)' }}>駿河屋</Link>など単品査定の専門店と比較することをおすすめします。
             </p>
