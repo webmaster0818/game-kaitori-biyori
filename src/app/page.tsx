@@ -436,10 +436,10 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
             <h2 className="section-heading">
-              <span className="section-heading-bar" />ゲーム機本体の買取相場（2026年4月時点の参考）
+              <span className="section-heading-bar" />ゲーム機本体の買取相場（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}実測）
             </h2>
             <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-              主要ゲーム機の買取相場をまとめています。実際の買取金額は、サービスや状態により異なります。
+              当サイトが各社の公式買取ページで実測した、主要ゲーム機の買取価格の範囲です。実際の買取金額は、サービスや状態により異なります。
             </p>
           </div>
 
@@ -448,35 +448,34 @@ export default function HomePage() {
               <thead>
                 <tr>
                   <th>ゲーム機</th>
-                  <th>買取相場</th>
+                  <th>買取価格（実測の最安〜最高）</th>
+                  <th>実測した店舗数</th>
                 </tr>
               </thead>
               <tbody>
-                {[
-                  { name: 'Switch（通常モデル）', price: '15,000〜22,000円' },
-                  { name: 'Switch 有機EL', price: '20,000〜28,000円' },
-                  { name: 'Switch Lite', price: '10,000〜15,000円' },
-                  { name: 'PS5（通常版）', price: '35,000〜45,000円' },
-                  { name: 'PS5（デジタルエディション）', price: '28,000〜38,000円' },
-                  { name: 'PS4 Pro', price: '12,000〜18,000円' },
-                  { name: 'PS4（通常版）', price: '8,000〜13,000円' },
-                  { name: 'Xbox Series X', price: '25,000〜35,000円' },
-                  { name: '3DS LL', price: '5,000〜10,000円' },
-                  { name: 'ゲームボーイアドバンスSP', price: '5,000〜15,000円' },
-                ].map((item) => (
-                  <tr key={item.name}>
-                    <td className="font-bold">{item.name}</td>
-                    <td>
-                      <span className="tag-pill tag-pill-green text-xs">{item.price}</span>
-                    </td>
-                  </tr>
-                ))}
+                {hardwarePrices
+                  .map(analyzeTitle)
+                  .filter((x): x is PriceAnalysis => x !== null)
+                  .map((a) => {
+                    const storeCount = Object.keys(a.prices).length;
+                    return (
+                      <tr key={a.title}>
+                        <td className="font-bold">{a.title}</td>
+                        <td>
+                          <span className="tag-pill tag-pill-green text-xs">
+                            {a.low === a.best.price ? `${a.best.price.toLocaleString()}円` : `${a.low.toLocaleString()}〜${a.best.price.toLocaleString()}円`}
+                          </span>
+                        </td>
+                        <td className="text-sm">{storeCount}社</td>
+                      </tr>
+                    );
+                  })}
               </tbody>
             </table>
           </div>
 
           <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
-            ※ 2026年4月時点の参考相場です。付属品の有無・本体の状態・市場動向により変動します。正確な買取金額は、各サービスの無料査定でご確認ください。
+            ※ {HARDWARE_SURVEY_DATE.replace(/-/g, '/')}に、ブックオフ・ゲオ・駿河屋・レトログの公式買取ページで実測した完品前提の参考価格です（実測できたモデルのみ掲載しています）。付属品の有無・本体の状態・市場動向により変動します。正確な買取金額は、各サービスの無料査定でご確認ください。
           </p>
 
           <div className="glass-card p-5 mt-6">
