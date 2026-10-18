@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム王国の買取の口コミ・評判は？【2026年7月】送料条件・入金日数・故障品買取まで解説',
+  title: 'ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証【2026年10月】',
   description:
-    'ゲーム王国の口コミ・評判を調査しています。ヒカカク総合4.64点の評価、故障品・箱なしOKの買取範囲、送料無料の条件（佐川急便集荷限定）、最短当日入金、査定後キャンセルの返送無料について、公式情報（2026年6月12日確認）をもとに解説します。',
+    'ゲーム王国の評判・口コミを、ヒカカクの口コミ2,485件の星分布（★4以上94.8%・★1〜2は27件）と公式FAQ・利用規約（2026年10月18日確認）で検証しています。送料無料は佐川急便の集荷限定、査定後キャンセルは返送料無料で一部返送も可能です。',
   keywords: ['ゲーム王国 買取', 'ゲーム王国 口コミ', 'ゲーム王国 査定', 'ゲーム買取 専門', 'ゲーム王国 評判'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム王国の買取の口コミ・評判は？【2026年7月】解説',
-    description: 'ゲーム王国の口コミ評判と買取条件を公式情報で検証しています。故障品・箱なしにも対応し、最短当日に入金されます。',
+    title: 'ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布で検証【2026年10月】',
+    description: 'ゲーム王国の評判・口コミを、ヒカカク2,485件の星分布と公式FAQ・利用規約で検証しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,34 +19,34 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: 'ゲーム専門の査定力', description: 'ゲームに特化した買取サービスのため、タイトルごとの市場価値を正確に把握しています。大手リサイクルショップのような一律査定ではなく、ゲーム市場のリアルタイム相場に基づいた適正査定が受けられます。' },
-  { title: '初回査定額10%UP', description: '初めてゲーム王国を利用する方は、買取査定額が10%UPになる初回特典があります。他社で査定を受けた後の乗り換えにも適しています。初回ボーナスを活用してお得に売却できます。' },
+  { title: 'ゲーム専門の宅配買取', description: 'ゲーム機本体・ソフト・周辺機器に絞った宅配買取サービスです。事前にLINE仮査定（無料）で価格の目安を確認できますが、公式FAQでは「仮査定は価格保証ではない」と明記されています。' },
+  { title: '初回の合計買取価格10%アップ', description: '初めて宅配買取を利用する方は、合計買取価格が10%アップします（申込みで自動適用・買取価格が1円以上つく商品すべてが対象）。同業他社からの申込み、大破品、発送後にキャンセルして返送した場合は対象外です（公式サービス案内 2026年10月1日更新）。' },
   { title: '送料・査定料・振込手数料が無料', description: '送料・査定料・振込手数料はすべてゲーム王国の負担です。ただし送料無料は佐川急便の集荷限定で、他の運送業者や元払い発送は対象外です（公式FAQ明記）。無料の梱包キットは1申込につき2箱まで届けてもらえます。' },
-  { title: '故障品・箱なし・レトロもOK', description: '起動しない本体や箱・付属品のないソフト、ファミコン・ゲームボーイなどのレトロゲームまで幅広く買取に対応していると公式に明記されています。他店で断られたゲームの受け皿になります。入金は振込情報の確認後、最短当日〜翌営業日です。' },
+  { title: '故障品・箱なし・レトロもOK', description: '起動しない本体や箱・付属品のないソフト、PS2・ファミコン・ゲームボーイなどのレトロゲーム、黄ばみのある本体まで買取対象と公式FAQに明記されています。海賊版・改造品・大破品は対象外です。入金は振込情報の確認後、最短当日〜翌営業日です。' },
 ];
 
 const steps = [
   { step: 1, title: '買取申込み', description: 'ゲーム王国の公式サイトから買取申込みフォームに入力します。売りたいゲームの情報や希望の連絡方法を選択します。' },
-  { step: 2, title: '梱包・発送', description: '売りたいゲームを梱包して発送します。着払い伝票で送れるので送料はかかりません。段ボールが必要な場合は無料で届けてもらえます。' },
+  { step: 2, title: '梱包・発送', description: '売りたいゲームを梱包し、ゲーム王国が手配する佐川急便の集荷で発送します。送り状は集荷時にドライバーから受け取ります。営業所への持ち込みや他社便は送料無料の対象外です。段ボールが必要な場合は無料の宅配買取キット（1人2箱まで）を届けてもらえます。' },
   { step: 3, title: '査定・結果通知', description: '商品到着後、ゲーム専門スタッフが査定します。結果はメールで通知されます。通常1〜3営業日で査定が完了します。' },
-  { step: 4, title: '入金', description: '査定額に承諾し振込情報を提出すると、内容確認後に最短当日〜翌営業日（土日除く）で入金されます。査定後のキャンセルも返送料無料（ゲーム王国負担）です。' },
+  { step: 4, title: '入金', description: '査定額に承諾し振込情報を提出すると、内容確認後に最短当日〜翌営業日（土日除く）に振込手続きが行われます（利用規約では原則3営業日以内）。査定後のキャンセルも返送料無料（ゲーム王国負担）です。' },
 ];
 
 const faqs = [
-  { q: 'ゲーム王国はどんなゲームが買取対象ですか？', a: 'Switch 2・Switch・PS5〜PS3などの現行機に加え、ファミコン・ゲームボーイなどのレトロゲームまで全世代のゲーム機本体・ソフト・周辺機器が対象です。公式サイトに記載のないゲームもLINEで相談できます。' },
-  { q: '初回10%UPは何回利用できますか？', a: '初回特典は1人1回限りです。初めてゲーム王国を利用する方が対象となります。2回目以降も定期的にキャンペーンが実施されることがありますので、公式サイトをご確認ください。' },
-  { q: '査定にどのくらい時間がかかりますか？', a: '通常1〜3営業日で査定が完了します。点数が多い場合はもう少しかかることがありますが、大手サービスと比べると査定スピードは早めです。' },
-  { q: '査定額に納得できない場合は？', a: '査定後のキャンセルは可能で、返送料はゲーム王国負担（無料）と公式FAQに明記されています。ただし口コミでは部分キャンセル（一部だけ返送）に対応していないという指摘があるため、売るか迷う商品は分けて申し込むことをおすすめします。' },
+  { q: 'ゲーム王国はどんなゲームが買取対象ですか？', a: 'Switch 2・Switch・PS5〜PS2などに加え、ファミコン・ゲームボーイなどのレトロゲームまで全世代のゲーム機本体・ソフト・周辺機器が対象です。公式サイトに記載のないゲームもLINEで相談できます。' },
+  { q: '初回10%UPは何回利用できますか？', a: '初めてゲーム王国の宅配買取を利用する方が対象のため、利用できるのは初回のみです。申込みで自動適用され、別途の手続きは不要です。商品発送後にキャンセルして返送した場合は対象外になります（公式サービス案内 2026年10月1日更新）。' },
+  { q: '査定にどのくらい時間がかかりますか？', a: '公式の案内では、商品到着から約1〜3営業日で査定結果が連絡されます。点数が多い場合は日数が延びる場合があります。' },
+  { q: '査定額に納得できない場合は？', a: '査定後のキャンセルは可能で、返送料はゲーム王国負担（無料）と公式FAQに明記されています。公式FAQでは「一部商品のみの返送も承っております」とされており、一部だけ売って残りを返送してもらうことも可能です。返送には3営業日ほどかかり、買取成立後のキャンセルはできません。' },
   { q: 'ゲーム機本体も買取対象ですか？', a: 'はい、ゲーム機本体も買取対象です。付属品（コントローラー、ケーブル、箱など）が揃っているほど査定額がアップします。動作確認済みの商品であれば高額査定が期待できます。' },
-  { q: '壊れたゲーム機や箱なしソフトは買取できますか？', a: 'はい、故障品・箱なし・付属品欠品でも買取対応と公式に明記されています。口コミでも「起動しないPS3に値段がついた」等の報告が多く、これがゲーム王国の大きな強みです。ただし参考買取価格は完品基準のため、状態に応じた減額はあります。' },
-  { q: '送料は本当に無料ですか？', a: '送料・査定料・振込手数料は無料ですが、送料無料は佐川急便の集荷を利用した場合に限られます。他の運送業者や元払いで送った場合の送料は負担されないため、必ず集荷依頼をご利用ください。梱包キットは1申込につき2箱まで無料です。' },
-  { q: 'ゲーム王国の運営会社はどこですか？', a: '大阪市東成区の株式会社Ultimate Life（2013年10月設立、大阪府公安委員会 古物商許可 第621180142468号）が運営しています。実在の事業者による正規の買取サービスです。' },
+  { q: '壊れたゲーム機や箱なしソフトは買取できますか？', a: 'はい、故障品・箱なし・付属品欠品でも買取対応と公式に明記されています。ただし参考買取価格は完品基準のため、状態に応じた減額があります。' },
+  { q: '送料は本当に無料ですか？', a: '送料・査定料・振込手数料は無料ですが、送料無料は佐川急便の集荷を利用した場合に限られます。佐川急便の元払いや他社便で送った場合は自己負担、他社の着払いは送料が買取金額から差し引かれます（公式「買取の流れ」）。梱包キットは1申込につき2箱まで無料です。' },
+  { q: 'ゲーム王国の運営会社はどこですか？', a: '大阪市東成区の株式会社Ultimate Life（2013年10月設立、大阪府公安委員会 古物商許可 第621180142468号）が運営しています。' },
 ];
 
 export default function GameOukokuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の買取の口コミ・評判は？送料条件・入金日数・故障品買取まで解説", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲーム王国' }]} />
 
       {/* Hero */}
@@ -59,10 +59,10 @@ export default function GameOukokuReviewPage() {
             ゲーム王国<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲーム王国はゲームに特化した専門買取サービスです。ゲーム市場の相場を熟知した専門スタッフによる正確な査定が強みです。初回利用で査定額10%UP、送料無料、最短翌日入金と、対応の速さにも強みがあります。現行ゲームを専門店価格で売りたい方におすすめです。
+            ゲーム王国は株式会社Ultimate Lifeが運営するゲーム専門の宅配買取サービスです。初回の合計買取価格10%アップ、佐川急便の集荷での送料無料、最短当日〜翌営業日の振込手続きが公式に案内されています。ヒカカクの口コミは2,485件で総合4.64（2026年10月18日確認）です。
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="https://game-oukoku.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
+            <a href="https://gameoukoku.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
               公式サイトで買取申込み
             </a>
             <Link href="/" className="btn-outline py-2.5 px-6" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}>
@@ -78,7 +78,7 @@ export default function GameOukokuReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>手数料無料で全国から利用できる、古物商許可を持つ宅配専業の買取サービス</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ゲーム王国は株式会社Ultimate Life（大阪府公安委員会 古物商許可 第621180142468号・2013年設立）が運営する正規の宅配買取事業者です。査定料・キャンセル料・返送料・振込手数料はすべて無料で、査定額に納得できなければ無料で返送してもらえるため、「怪しい・詐欺」とされるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。送料無料が<strong>佐川急便の集荷を利用した場合に限る</strong>点と、キャンセル時の返送は<strong>全商品一括返却（一部だけ返してもらうことは不可）</strong>である点は事前にご確認ください。宅配専業のため、全国どこからでもまとめて送って売りたい方に適しています。
+              ゲーム王国は株式会社Ultimate Life（大阪府公安委員会 古物商許可 第621180142468号・2013年設立）が運営する正規の宅配買取事業者です。査定料・キャンセル料・返送料・振込手数料はすべて無料で、査定額に納得できなければ無料で返送してもらえるため、「怪しい・詐欺」とされるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。送料無料が<strong>佐川急便の集荷を利用した場合に限る</strong>点と、佐川急便の営業所への持ち込みはできない点を事前にご確認ください。査定後のキャンセルは返送料無料で、一部の商品だけ返送してもらうことも可能です（公式FAQ）。宅配専業のため、全国どこからでもまとめて送って売りたい方に適しています。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるソフトを実測データで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を比較する</Link>
@@ -110,10 +110,10 @@ export default function GameOukokuReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">大阪府公安委員会許可 第621180142468号</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>送料・手数料</th><td className="py-2">送料・査定料・振込手数料無料（送料無料は佐川急便の集荷限定）。梱包キットは1申込2箱まで無料</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定・入金</th><td className="py-2">到着後1〜3営業日で査定連絡。振込情報の確認後、最短当日〜翌営業日に入金（土日除く）</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル</th><td className="py-2">査定後キャンセルの返送料はゲーム王国負担（無料）</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル</th><td className="py-2">査定後キャンセルの返送料はゲーム王国負担（無料）。一部商品のみの返送も可能。返送は約3営業日。買取成立後のキャンセルは不可</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ）2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・買取の流れ）2026年10月18日確認</p>
           </div>
         </section>
 
@@ -126,28 +126,28 @@ export default function GameOukokuReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">－（宅配買取専業のため出張買取なし）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料（当社負担）。ただし佐川急便の集荷利用が条件で、返送は<strong>全商品一括返却（一部返却不可）</strong></td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料（ゲーム王国負担）。一部商品のみの返送も可能</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・利用規約）2026年7月9日確認。査定額に納得できなければ費用負担なしで返送してもらえます。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・利用規約 第12条）2026年10月18日確認。査定額に納得できなければ費用負担なしで返送してもらえます。</p>
           </div>
         </section>
 
         {/* Price Examples */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />公式の参考買取価格の例（2026年6月12日時点）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />公式の参考買取価格の例（2026年10月18日確認）</h2>
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <thead>
                 <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}><th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>商品</th><th className="text-left py-2" style={{ color: 'var(--color-deep-blue)' }}>参考買取価格</th></tr>
               </thead>
               <tbody>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">PlayStation 5 Pro（CFI-7000B01）</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>70,000円</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">PlayStation 5（CFI-2000）</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>40,000円</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">PlayStation 5 Pro（CFI-7000B01）</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>75,000円</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">PlayStation 5（CFI-2000）</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>45,000円</td></tr>
                 <tr><td className="py-2 pr-4">Nintendo Switch 有機ELモデル</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>18,000円</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式 機種別買取価格表（2026年6月12日閲覧）。参考価格は付属品完備・動作良好が前提で、欠品・状態により減額されます。価格は日々変動します。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式 機種別買取価格ページ（PS5・Switch、2026年10月18日閲覧）。2026年6月12日時点はPS5 Pro 70,000円・PS5 40,000円でした。参考価格は付属品完備・動作良好が前提で、欠品・状態により減額されます。価格は日々変動します。</p>
           </div>
         </section>
 
@@ -161,14 +161,13 @@ export default function GameOukokuReviewPage() {
                 <li>・故障品・箱なし・付属品欠品でも値段がついた</li>
                 <li>・LINE仮査定の返信が速く、本査定との差が小さかった</li>
                 <li>・1点ごとの査定明細が出るので納得感がある</li>
-                <li>・大手口コミサイトで総合4.6点台と高評価（星4以上が約95%）</li>
-              </ul>
+                              </ul>
             </div>
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・状態による減額で期待より低い査定になった</li>
-                <li>・部分キャンセル（一部だけ返送）ができない</li>
+                <li>・LINE仮査定の目安より本査定が低くなった（公式FAQでも仮査定は価格保証ではないと明記）</li>
                 <li>・承諾から入金まで数営業日かかったケースがある</li>
               </ul>
             </div>
@@ -183,18 +182,18 @@ export default function GameOukokuReviewPage() {
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>+ ゲーム専門で査定が正確</li>
-                <li>+ 初回利用で査定額10%UP</li>
-                <li>+ 送料無料</li>
-                <li>+ 最短翌日入金の迅速な対応</li>
-                <li>+ キャンセル時の返送料も無料</li>
+                <li>+ ゲーム専門の宅配買取で、故障品・箱なし・レトロゲームも対象</li>
+                <li>+ 初回の合計買取価格10%アップ（自動適用）</li>
+                <li>+ 送料無料（佐川急便の集荷利用時）</li>
+                <li>+ 最短当日〜翌営業日に振込手続き</li>
+                <li>+ キャンセル時の返送料も無料・一部返送も可能</li>
               </ul>
             </div>
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>デメリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>- 知名度が大手と比べると低い</li>
-                <li>- レトロゲームは対象外の場合あり</li>
+                <li>- 送料無料は佐川急便の集荷のみ（営業所持ち込み・他社便は対象外）</li>
+                <li>- LINE仮査定は価格保証ではない</li>
                 <li>- 店舗持ち込みには非対応</li>
                 <li>- ゲーム以外の商品は買取不可</li>
               </ul>
@@ -225,42 +224,37 @@ export default function GameOukokuReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲーム王国の利用が適している方</h2>
           <div className="glass-card p-6">
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li>・現行ゲーム（Switch・PS5・PS4）を専門店で売りたい方</li>
-              <li>・初めて利用するサービスで10%UPボーナスを活用したい方</li>
+              <li>・故障品・箱なし・レトロゲームを含めてまとめて売りたい方</li>
+              <li>・初めて利用して初回10%アップを適用したい方</li>
               <li>・できるだけ早く入金してほしい方</li>
-              <li>・ゲーム専門スタッフに正確に査定してほしい方</li>
-              <li>・リサイクルショップの査定額に不満がある方</li>
+                            <li>・リサイクルショップの査定額に不満がある方</li>
             </ul>
           </div>
         </section>
 
-        {/* User Reviews */}
+        {/* Third-party ratings */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用者の口コミ</h2>
-          <div className="space-y-4">
-            {[
-              { initial: 'D.K', age: '20代男性', rating: 5, text: '初回10%UPキャンペーンを利用してSwitchソフト8本を売りました。ゲーム専門だけあって、タイトルごとにしっかりした値段がつきました。ブックオフで見積もった時より合計で3,000円以上高かったです。入金も翌日で驚きました。' },
-              { initial: 'M.T', age: '30代女性', rating: 4, text: 'PS4本体とソフト5本を宅配買取で。査定結果が2日で届き、入金も早くて満足です。ただ、知名度が低いのでちょっと不安でしたが、対応は丁寧で問題なし。もっと知られてもいいサービスだと思います。' },
-              { initial: 'R.S', age: '20代男性', rating: 4, text: 'ゲーム専門ということで期待して利用。確かに一般的なリサイクルショップより高い査定でした。ただ、PS2のソフトは「対象外」と返されたので、レトロゲームは別のところに出す必要がありました。現行機なら間違いなくおすすめ。' },
-              { initial: 'E.N', age: '30代男性', rating: 5, text: 'Switch本体（有機ELモデル）を買取に出しました。箱・付属品完備で25,000円の査定。他社では22,000円だったので、初回ボーナスもあって大満足です。梱包キットも無料で届くし、返送料無料なのでリスクゼロで査定を試せます。' },
-            ].map((review, i) => (
-              <div key={i} className="glass-card p-5">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style={{ background: 'rgba(16,185,129,0.12)', color: '#059669' }}>
-                    {review.initial}
-                  </div>
-                  <div>
-                    <p className="text-sm font-bold" style={{ color: 'var(--color-deep-blue)' }}>{review.initial}さん<span className="font-normal text-xs ml-2" style={{ color: 'var(--color-text-light)' }}>{review.age}</span></p>
-                    <div className="flex gap-0.5">
-                      {Array.from({ length: 5 }).map((_, s) => (
-                        <span key={s} className="text-sm" style={{ color: s < review.rating ? '#F59E0B' : '#E2E8F0' }}>&#9733;</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{review.text}</p>
-              </div>
-            ))}
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />第三者サイトの口コミ評価（件数つき）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}><th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>掲載先</th><th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>評価・件数</th><th className="text-left py-2" style={{ color: 'var(--color-deep-blue)' }}>星別の件数</th></tr>
+              </thead>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ヒカカク！</td><td className="py-2 pr-4 font-bold">4.64（2,485件）</td><td className="py-2">★5 1,762件／★4 595件／★3 101件／★2 15件／★1 12件</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ウリドキ</td><td className="py-2 pr-4 font-bold">4.5（300件以上）</td><td className="py-2">星別の内訳は非公開</td></tr>
+                <tr><td className="py-2 pr-4">ゲーム王国公式サイト</td><td className="py-2 pr-4 font-bold">高評価率 約98%</td><td className="py-2">3〜5点を高評価として集計（2026年1月時点・ヒカカクと自社に寄せられた声の合計）</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ヒカカク！ゲーム王国の口コミページ、ウリドキ ゲーム王国の口コミページ、ゲーム王国公式トップ（いずれも2026年10月18日確認）。</p>
+          </div>
+          <div className="glass-card p-6 mt-4">
+            <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>星分布から読み取れること</h3>
+            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <li>・ヒカカクの2,485件のうち★4以上は2,357件（94.8%）、★1〜2は27件（1.1%）です。</li>
+              <li>・公式の「約98%」は★3を高評価に含めた数字のため、★4以上で数えた94.8%とは基準が異なります。</li>
+              <li>・ヒカカク・ウリドキは利用者の投稿型の口コミサイトです。利用後に投稿する方の声に偏る可能性があるため、評価は目安としてご覧ください。</li>
+            </ul>
           </div>
         </section>
 
@@ -294,13 +288,13 @@ export default function GameOukokuReviewPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            ゲーム王国の<span style={{ color: 'var(--color-electric-green)' }}>初回10%UP</span>査定を利用する
+            ゲーム王国の<span style={{ color: 'var(--color-electric-green)' }}>初回10%アップ</span>査定を利用する
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            ゲーム専門スタッフが査定し、最短翌日に入金されます。送料・返送料が無料のため、費用負担なく査定を依頼できます。
+            佐川急便の集荷を利用すれば送料・返送料は無料のため、費用負担なく査定を依頼できます。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://game-oukoku.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
+            <a href="https://gameoukoku.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
               無料で買取申込みする
             </a>
             <Link href="/" className="btn-outline py-3 px-8" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#CBD5E1' }}>

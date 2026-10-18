@@ -92,7 +92,7 @@ const services = [
   {
     rank: 7,
     name: 'ゲーム王国',
-    url: 'https://www.game-oukoku.jp/',
+    url: 'https://gameoukoku.jp/',
     tagline: 'ゲーム専門、初回査定額10%UP、宅配買取',
     reviewPath: '/review/game-oukoku/',
     features: ['ゲーム専門買取', '初回査定額10%UP', '宅配買取対応', 'ゲーム機・ソフト幅広い'],
