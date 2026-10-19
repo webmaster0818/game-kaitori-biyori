@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Steam Deckの買取相場【2026年6月】値上げ・LCD生産終了で高騰中｜モデル別価格と売り方',
+  title: 'Steam Deckの買取相場【2026年10月】OLED新品は定価の97〜98%｜Steam Frameの買取価格とモデル別相場',
   description:
-    'Steam Deckの買取相場を2026年6月12日に調査しました。6月1日の定価値上げ（OLED 512GB 137,980円）とLCDモデルの生産終了により、買取価格は上昇局面にあります。新品ではOLED 512GBで11万円を超える実例もあります。モデル別の価格、初期化手順、売り方について解説します。',
+    'Steam Deckの買取相場を2026年10月19日に再調査しました。新品未開封のOLED 512GBは135,300円（定価の98.1%）、1TBは163,300円です。9月発売のSteam Frameの買取価格（256GB 185,000円）、中古の相場、売り方も解説します。',
   keywords: ['Steam Deck 買取 相場', 'Steam Deck 売る', 'スチームデック 買取', 'Steam Deck 買取価格'],
   openGraph: {
     images: ['/og.png'],
-    title: 'Steam Deckの買取相場【2026年6月】値上げ・LCD生産終了で高騰中｜モデル別価格と売り方',
+    title: 'Steam Deckの買取相場【2026年10月】OLED新品は定価の97〜98%｜Steam Frameの買取価格とモデル別相場',
     description: 'Steam Deck LCD/OLEDモデル別の買取相場を比較しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
   },
 };
 
-// 2026年6月12日調査。新品=買取ルデヤ公式(6/12 21時時点表記)、中古=家電高く売れるドットコム公式の状態別レンジ
+// 新品OLED=買取ルデヤ公式(2026/10/19 12:06時点表記)、新品LCD=同(6/12 21時時点)、中古=家電高く売れるドットコム公式の状態別レンジ(6/12)
 const priceData = [
   { model: 'Steam Deck LCD 64GB', new: '—', used: '10,000〜35,000円', note: 'eMMC。LCDは生産終了済みで流通量が減少' },
-  { model: 'Steam Deck LCD 256GB', new: '50,200円', used: '20,000〜50,000円', note: '生産終了。新品在庫は希少' },
-  { model: 'Steam Deck OLED 512GB', new: '118,400円', used: '40,000〜86,000円', note: '現行モデル。定価137,980円（6/1値上げ後）' },
-  { model: 'Steam Deck OLED 1TB', new: '131,400円', used: '55,000〜105,000円', note: '現行最上位。定価167,980円（6/1値上げ後）' },
-  { model: 'Steam Deck OLED 1TB（白・限定）', new: '131,400円', used: '70,000〜119,000円', note: '限定カラーは中古でも最高値帯' },
+  { model: 'Steam Deck LCD 256GB', new: '50,200円（6/12）', used: '20,000〜50,000円', note: '生産終了。新品在庫は希少' },
+  { model: 'Steam Deck OLED 512GB', new: '135,300円', used: '40,000〜86,000円', note: '現行モデル。定価137,980円（6/1値上げ後）の98.1%。6/12の118,400円から16,900円上昇' },
+  { model: 'Steam Deck OLED 1TB', new: '163,300円', used: '55,000〜105,000円', note: '現行最上位。定価167,980円（6/1値上げ後）の97.2%。6/12の131,400円から31,900円上昇' },
+  { model: 'Steam Deck OLED 1TB（白・限定）', new: '162,600円', used: '70,000〜119,000円', note: '限定カラーは中古でも最高値帯' },
 ];
 
 const preparationSteps = [
@@ -46,7 +46,8 @@ const mercariVsBuyback = [
 ];
 
 const faqs = [
-  { q: 'Steam Deckの買取相場はいくらですか？', a: '2026年6月12日の調査では、新品・未開封ならOLED 512GBで118,400円、OLED 1TBで131,400円の実例があります（買取ルデヤ公式掲載価格）。中古は状態によりOLED 512GBで40,000〜86,000円、OLED 1TBで55,000〜105,000円のレンジです（家電高く売れるドットコム公式）。2026年6月1日の定価値上げ後は買取相場も上昇局面にあるため、売却前に複数社の最新価格をご確認ください。' },
+  { q: 'Steam Deckの買取相場はいくらですか？', a: '2026年10月19日の調査では、新品・未開封ならOLED 512GBで135,300円、OLED 1TBで163,300円の実例があります（買取ルデヤ公式掲載価格。定価比で97〜98%）。6月12日の調査（512GB 118,400円）から上昇しています。中古は状態によりOLED 512GBで40,000〜86,000円、OLED 1TBで55,000〜105,000円のレンジです（家電高く売れるドットコム公式）。2026年6月1日の定価値上げ後は買取相場も上昇局面にあるため、売却前に複数社の最新価格をご確認ください。' },
+  { q: 'Steam Frameは買取してもらえますか？いくらですか？', a: '2026年10月19日時点で、買取ルデヤ公式がSteam Frameの買取価格を掲載しています。256GBは185,000円（定価199,980円の92.5%）、1TBは235,000円（定価244,980円の95.9%）で、いずれも新品未開封品のみが対象です。Steam Frameは2026年9月15日にKOMODO STATIONで国内発売されたばかりで、開封済み・中古の買取価格を公開している買取店は、当編集部の調査では見つかりませんでした。' },
   { q: '定価の値上げで買取価格は上がりますか？', a: '上昇圧力がかかっています。2026年6月1日にOLED 512GBの定価が99,800円から137,980円へ約4割値上げされ（3月に続き2回目）、新品の入手コストが大幅に上がったため、値上げ前に購入した本体は相対的に高く売却できる状況です。品薄も続いており、売り時として有利な状況といえます。' },
   { q: 'LCDモデルは生産終了しましたが、まだ売れますか？', a: 'はい、売却できます。LCDモデルは2026年2月頃に生産終了と報じられ、新品の入手ができなくなったため、状態の良い中古はむしろ価値が見直されています。LCD 256GBは新品未開封なら50,200円、中古でも状態次第で20,000〜50,000円のレンジです（2026年6月12日調査）。' },
   { q: 'Steam Deckを売る前に行うべきことは何ですか？', a: '必ず行うべきことは3つです。1つ目はSteamアカウントからのログアウト、2つ目はSteamOS初期化（ファクトリーリセット）、3つ目はmicroSDカードの取り出しです。個人情報の保護と円滑な査定のため、これらは必須です。加えて外観クリーニングと付属品の確認もおすすめします。' },
@@ -59,7 +60,7 @@ const faqs = [
 export default function SteamDeckPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Steam Deckの買取相場｜モデル別価格とお得な売り方【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Steam Deckの買取相場｜モデル別価格とお得な売り方【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-10-19", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Steam Deck' }]} />
 
       {/* Hero */}
@@ -106,7 +107,40 @@ export default function SteamDeckPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>※ 2026年5月時点の参考価格。外箱・付属品完備の場合。</p>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>※ OLEDの新品買取は2026年10月19日、LCDの新品買取と中古レンジは2026年6月12日に確認した参考価格です。外箱・付属品完備の場合。買取ルデヤはSteam Deckの中古品・免税品を買い取っておらず、箱を開封しただけの完品は3,000円減額です。</p>
+        </section>
+
+        {/* Steam Frame */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Steam Frameの買取価格（2026年10月）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>Valveのワイヤレス型VRヘッドセット「Steam Frame」は、2026年9月15日に日本・台湾・香港のKOMODO STATIONで発売されました。国内で買取価格を公開している買取店は、当編集部が2026年10月19日に調べた範囲では買取ルデヤのみで、対象は新品未開封品に限られます。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr>
+                  <th>モデル</th>
+                  <th>国内定価（税込）</th>
+                  <th>新品未開封の買取価格</th>
+                  <th>定価に対する割合</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td className="font-bold text-sm">Steam Frame 256GB</td>
+                  <td className="text-sm">199,980円</td>
+                  <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>185,000円</td>
+                  <td className="text-sm">92.5%</td>
+                </tr>
+                <tr>
+                  <td className="font-bold text-sm">Steam Frame 1TB</td>
+                  <td className="text-sm">244,980円</td>
+                  <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>235,000円</td>
+                  <td className="text-sm">95.9%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：定価はGameBusiness.jp（2026年9月15日の発売報道）、買取価格は買取ルデヤ公式（2026年10月19日12時06分時点の掲載価格）。定価に対する割合は当編集部が算出しました。開封済み・中古品の買取価格は、上記の調査時点では公開されている例が見つかっていません。買取価格は日々変動するため、売却前に最新の掲載価格をご確認ください。</p>
         </section>
 
         {/* 売却前の準備 */}
@@ -132,7 +166,7 @@ export default function SteamDeckPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：新品実例は買取ルデヤ公式（2026年6月12日21時時点の掲載価格・未開封完品）、中古レンジは家電高く売れるドットコム公式の状態別買取価格（2026年6月12日閲覧）。状態・在庫により変動します。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：新品実例は買取ルデヤ公式（OLEDは2026年10月19日12時06分時点、LCDは2026年6月12日21時時点の掲載価格・未開封完品）、中古レンジは家電高く売れるドットコム公式の状態別買取価格（2026年6月12日閲覧）。状態・在庫により変動します。</p>
 
           <div className="glass-card p-6 mt-6">
             <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>相場が変動している3つの理由（2026年6月）</h3>

@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
+  title: 'ドラクエの買取価格【2026年10月】ドラクエ3は新品3,500円・中古1,600円｜全タイトル相場',
   description:
-    'ドラクエ3リメイク・DQ11等の全タイトルの買取相場を一覧表で掲載しています。店舗別の比較、レトロドラクエの価値、価格推移について解説します。',
+    'ドラクエ3 HD-2Dの買取価格を2026年10月19日に各社公式で再調査しました（買取ルデヤ 新品3,500円、駿河屋 Switch版1,600円・PS5版1,000円）。DQ11等の全タイトルの買取相場、店舗別の比較、レトロドラクエの価値も解説します。',
   keywords: ['ドラクエ 買取 相場', 'ドラゴンクエスト 買取', 'DQ3 リメイク 買取', 'ドラクエ 売る'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ドラクエの買取価格【2026年6月】公式買取価格を調査｜全タイトル相場一覧',
+    title: 'ドラクエの買取価格【2026年10月】ドラクエ3は新品3,500円・中古1,600円｜全タイトル相場',
     description: 'ドラクエシリーズ全タイトルの買取相場を店舗別に比較しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const priceData = [
-  { title: 'ドラゴンクエストIII そして伝説へ… HD-2D版', platform: 'Switch/PS5', price: '3,500〜5,000円', trend: '安定', note: '2024年発売のHD-2Dリメイク。高い人気を維持' },
+  { title: 'ドラゴンクエストIII そして伝説へ… HD-2D版', platform: 'Switch/PS5', price: '1,000〜3,500円', trend: 'やや下降', note: '2024年発売のHD-2Dリメイク。10/19時点で新品未開封3,500円（ルデヤ）、中古はSwitch 1,600円・PS5 1,000円（駿河屋）' },
   { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて S', platform: 'Switch', price: '2,000〜3,200円', trend: '安定', note: 'Switch版は追加要素ありで人気' },
   { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて', platform: 'PS4', price: '800〜1,500円', trend: 'やや下降', note: 'S版に需要が移行' },
   { title: 'ドラゴンクエストX オフライン', platform: 'Switch/PS5', price: '1,500〜2,500円', trend: '安定', note: 'オフラインで遊べるDQ10' },
@@ -48,10 +48,10 @@ const retroDQValues = [
 ];
 
 const faqs = [
-  { q: 'ドラクエシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではDQ3 HD-2Dリメイクが3,500〜5,000円で最も高値です。レトロ作品ではSFC版ドラクエVの箱付き完品が3,000〜8,000円で取引されています。ドラクエは国民的RPGのため中古市場での需要が安定しており、他のシリーズと比べて値崩れしにくいのが特徴です。' },
-  { q: 'ドラクエ3 HD-2Dリメイクはいつ売るべきですか？', a: '今後DQ1・DQ2のHD-2Dリメイクが発表される可能性があるため、その発表前が理想的です。また、ドラクエ12の続報が出ると旧作の需要が一時的に変動する可能性もあります。現時点では価格が安定しているため、遊び終えた後は早めの売却をおすすめします。' },
+  { q: 'ドラクエシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではDQ3 HD-2Dリメイクが高値の部類で、2026年10月19日時点で買取ルデヤの新品未開封が3,500円、駿河屋のSwitch版が1,600円です。レトロ作品ではSFC版ドラクエVの箱付き完品が3,000〜8,000円で取引されています。ドラクエは国民的RPGのため中古市場での需要が安定しており、他のシリーズと比べて値崩れしにくいのが特徴です。' },
+  { q: 'ドラクエ3 HD-2Dリメイクはいつ売るべきですか？', a: '買取ルデヤの新品未開封の買取価格は、2026年6月14日の4,500円から10月19日には3,500円へと約22%下がっています（当編集部の定点確認）。続編にあたるHD-2D版『ドラゴンクエストI＆II』もすでに発売されており、DQ3の価格が今後上がる材料は見当たりません。遊び終えた場合は、早めの売却をおすすめします。' },
   { q: 'レトロドラクエ（FC・SFC）はどこで売るのが有利ですか？', a: 'レトロゲーム専門の買取店が適しています。駿河屋やまんだらけ等はレトロゲームの査定に強みがあり、箱・説明書・マップ等の付属品も適正に評価する傾向があります。一般的な買取店では「古いゲーム」として安値をつけられることがあるため、専門店の利用をおすすめします。' },
-  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: 'DQ3リメイクやDQ11Sなど、Switch版の方がPS版より500〜1,500円ほど高値がつく傾向があります。Switchの携帯モードで遊べる利便性と、Switch自体のユーザー数の多さが理由です。売却を前提とする場合は、マルチプラットフォームのDQはSwitch版の購入が有利です。' },
+  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: 'Switch版の方が高い傾向があります。2026年10月19日の駿河屋公式では、DQ3 HD-2DのSwitch版が1,600円、PS5版が1,000円で、600円の差がありました。Switchの携帯モードで遊べる利便性と、Switch自体のユーザー数の多さが理由です。売却を前提とする場合は、マルチプラットフォームのDQはSwitch版の購入が有利です。' },
   { q: 'ドラクエのスピンオフ作品は売れますか？', a: 'はい、売却できます。特にドラクエモンスターズ3は2,500〜3,800円と相場が堅調です。ビルダーズ2も1,500〜2,500円で安定しています。ただしヒーローズやトレジャーズなど、評価が分かれた作品は1,000〜2,000円程度とやや低めです。本編と比べるとスピンオフは値下がりが早い傾向があります。' },
   { q: 'ドラクエ12が発売されたら旧作の価格はどうなりますか？', a: 'ドラクエ12が発売されると、短期的にはシリーズ全体への注目が高まり、旧作の需要も上がる可能性があります。ただし中長期的には最新作に需要が集中するため、旧作は緩やかに下落する傾向です。DQ12の発売前に、プレイ済みの旧作を売却しておくことをおすすめします。' },
 ];
@@ -59,7 +59,7 @@ const faqs = [
 export default function DragonQuestPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ドラクエシリーズの買取相場｜全タイトル価格一覧【2026年6月版】", "datePublished": "2026-03-15", "dateModified": "2026-10-19", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'ドラクエ買取相場' }]} />
 
       {/* Hero */}
@@ -113,7 +113,7 @@ export default function DragonQuestPage() {
 
         {/* 公式買取価格（実値） */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />各社公式の実買取価格【2026年6月14日調査】</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />各社公式の実買取価格【ドラクエ3は2026年10月19日、ほかは6月14日調査】</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>各社の公式買取ページで実際に確認できた価格です（完品・状態良好が前提。状態により変動）。上の相場一覧とは異なり、各社が公式に掲載している実際の買取価格です。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
@@ -121,7 +121,9 @@ export default function DragonQuestPage() {
                 <tr><th>タイトル</th><th>ハード</th><th>買取価格</th><th>店舗</th></tr>
               </thead>
               <tbody>
-                <tr><td className="font-bold text-sm">ドラゴンクエストIII そして伝説へ… HD-2D版</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>4,500円</td><td className="text-sm">買取ルデヤ（未開封）</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストIII そして伝説へ… HD-2D版</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,500円</td><td className="text-sm">買取ルデヤ（新品・ビニール未開封のみ／10月19日。6月14日は4,500円）</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストIII そして伝説へ… HD-2D版</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>1,600円</td><td className="text-sm">駿河屋（10月19日）</td></tr>
+                <tr><td className="font-bold text-sm">ドラゴンクエストIII そして伝説へ… HD-2D版</td><td className="text-sm">PS5</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>1,000円</td><td className="text-sm">駿河屋（10月19日）</td></tr>
                 <tr><td className="font-bold text-sm">ドラゴンクエストVII リイマジンド</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,000円</td><td className="text-sm">ゲオ</td></tr>
                 <tr><td className="font-bold text-sm">ドラゴンクエストVII Reimagined</td><td className="text-sm">Switch2</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>2,500円</td><td className="text-sm">ブックオフ</td></tr>
                 <tr><td className="font-bold text-sm">ドラゴンクエストXI 過ぎ去りし時を求めて S</td><td className="text-sm">Switch</td><td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>3,000円</td><td className="text-sm">ゲオ</td></tr>
@@ -130,7 +132,7 @@ export default function DragonQuestPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ルデヤ公式・ゲオ公式高価買取品一覧・ブックオフ公式「ゲームの高価買取情報」（2026年6月11〜14日確認）。同じVIIでもゲオ(Switch版3,000円)とブックオフ(Switch 2版2,500円)で差があるため、複数社の価格をご確認いただくことをおすすめします。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ドラクエ3は買取ルデヤ公式の商品ページ（2026年10月19日現在の表記）と駿河屋公式の買取検索（2026年10月19日閲覧）。そのほかは買取ルデヤ公式・ゲオ公式高価買取品一覧・ブックオフ公式「ゲームの高価買取情報」（2026年6月11〜14日確認）。ドラクエ3は同じSwitch版でも、新品未開封の買取（3,500円）と駿河屋の買取価格（1,600円）で約2.2倍の差があります。同じVIIでもゲオ(Switch版3,000円)とブックオフ(Switch 2版2,500円)で差があるため、複数社の価格をご確認いただくことをおすすめします。</p>
         </section>
 
         {/* 店舗別比較 */}
