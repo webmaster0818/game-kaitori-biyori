@@ -2,11 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import { hardwarePrices, analyzeTitle, HARDWARE_SURVEY_DATE, type PriceAnalysis } from '@/data/prices';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】',
   description:
-    'ゲーム機・ソフトの買取相場を、ハード別・ソフト別の一覧表で解説します。Switch・PS5・PS4・3DS・レトロゲームの買取価格の目安、相場が変動する5つの要因、相場の調べ方もまとめています。',
+    'ゲーム機・ソフトの買取相場を一覧表で解説します。Switch・PS5本体は各社の公式買取ページで実測した価格（2026年10月15日）を掲載し、ソフト別の目安、相場が変動する5つの要因、相場の調べ方もまとめています。',
   keywords: ['ゲーム買取 相場', 'ゲーム いくらで売れる', 'ゲーム機 買取価格', 'Switch 買取相場'],
   openGraph: {
     images: ['/og.png'],
@@ -18,18 +19,11 @@ export const metadata: Metadata = {
   },
 };
 
-const hardwarePrices = [
-  { hardware: 'Nintendo Switch（通常モデル）', good: '18,000〜22,000円', fair: '12,000〜17,000円' },
-  { hardware: 'Nintendo Switch（有機ELモデル）', good: '25,000〜32,000円', fair: '18,000〜24,000円' },
-  { hardware: 'Nintendo Switch Lite', good: '10,000〜14,000円', fair: '7,000〜9,000円' },
-  { hardware: 'PlayStation 5（通常版）', good: '35,000〜45,000円', fair: '25,000〜34,000円' },
-  { hardware: 'PlayStation 5（デジタル版）', good: '25,000〜35,000円', fair: '18,000〜24,000円' },
-  { hardware: 'PlayStation 4 Pro', good: '15,000〜22,000円', fair: '10,000〜14,000円' },
-  { hardware: 'PlayStation 4（通常版）', good: '10,000〜15,000円', fair: '5,000〜9,000円' },
-  { hardware: 'Nintendo 3DS LL', good: '5,000〜8,000円', fair: '2,000〜4,000円' },
-  { hardware: 'New Nintendo 3DS LL', good: '8,000〜12,000円', fair: '4,000〜7,000円' },
-  { hardware: 'レトロハード（ファミコン等）', good: '3,000〜15,000円', fair: '1,000〜5,000円' },
-];
+// 2026-10-19: 2026年の参考相場（出典なし）を 10/15 実測（hardwarePrices）に置き換え。実測の無い機種の行は外す
+const surveyDate = HARDWARE_SURVEY_DATE.replace(/-/g, '/');
+const hardwareRows = hardwarePrices
+  .map(analyzeTitle)
+  .filter((x): x is PriceAnalysis => x !== null);
 
 const softwarePrices = [
   { category: 'Switch人気タイトル', range: '3,000〜5,500円', example: 'ゼルダ・マリオ・ポケモン等' },
@@ -63,7 +57,7 @@ const faqs = [
   { q: 'ゲームの買取相場はどうやって調べればよいですか？', a: 'ヒカカク！の一括査定が簡便な方法です。最大20社の買取価格を無料で比較でき、現在の最高値を確認できます。メルカリの売買履歴も参考になりますが、個人売買と業者買取では価格が異なります。' },
   { q: '買取相場より安い金額を提示されました。なぜですか？', a: '買取相場はあくまで「美品・付属品完備」の場合の目安です。傷・汚れ・付属品欠品があると減額されます。また、業者により査定基準が異なるため、複数社で見積もりを取ることをおすすめします。' },
   { q: 'ゲームの買取価格が高い時期はいつですか？', a: '年末商戦前（10〜11月）と新学期前（2〜3月）が最も高値がつきやすい時期です。逆に新型ハード発売直後は旧モデルの価格が下がります。' },
-  { q: '古いゲーム機でも買取相場はありますか？', a: 'はい、レトロゲーム機にも買取相場があります。ファミコンで3,000〜15,000円、スーパーファミコンで3,000〜10,000円程度が目安です。特に箱付き美品はプレミア価格がつくことがあります。' },
+  { q: '古いゲーム機でも買い取ってもらえますか？', a: 'はい、ファミコンやスーパーファミコンなどのレトロゲーム機も買取の対象です。当サイトではレトロゲーム機本体の買取価格を実測していないため、金額は各社の買取価格表でご確認ください。箱や説明書がそろっていると査定に有利です。' },
   { q: '買取相場は毎日変わりますか？', a: '日単位で大きく変動することはまれですが、週〜月単位では変動します。特に新型ハードの発表、人気タイトルの発売、年末商戦などのイベント前後は変動が大きくなります。' },
   { q: '買取価格と販売価格の差はどのくらいですか？', a: '一般的に買取価格は中古販売価格の50〜70%程度です。業者の利益や検品・クリーニングコストがこの差になります。ヒカカク！で複数社に査定を依頼すれば、この差を最小限に抑えられます。' },
 ];
@@ -71,7 +65,7 @@ const faqs = [
 export default function PriceGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】", "datePublished": "2026-03-15", "dateModified": "2026-10-19", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '買取相場ガイド' }]} />
 
       {/* Hero */}
@@ -95,23 +89,25 @@ export default function PriceGuidePage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Hardware Price Table */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハード別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハード別 買取価格一覧（{surveyDate}実測）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ {surveyDate}に、ブックオフ・ゲオ・駿河屋・レトログの公式買取ページで実測した完品前提の価格です（実測できたモデルのみ掲載しています）。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
                 <tr>
                   <th>ハード</th>
-                  <th>美品（箱あり）</th>
-                  <th>良品（箱なし）</th>
+                  <th>買取価格（実測の最安〜最高）</th>
+                  <th>実測した店舗数</th>
                 </tr>
               </thead>
               <tbody>
-                {hardwarePrices.map((row) => (
-                  <tr key={row.hardware}>
-                    <td className="font-bold">{row.hardware}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
+                {hardwareRows.map((row) => (
+                  <tr key={row.title}>
+                    <td className="font-bold">{row.title}</td>
+                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">
+                      {row.low === row.best.price ? `${row.best.price.toLocaleString()}円` : `${row.low.toLocaleString()}〜${row.best.price.toLocaleString()}円`}
+                    </td>
+                    <td className="text-sm">{Object.keys(row.prices).length}社</td>
                   </tr>
                 ))}
               </tbody>

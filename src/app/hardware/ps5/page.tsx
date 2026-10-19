@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import { hardwarePrices, analyzeTitle, HARDWARE_SURVEY_DATE, STORE_LABELS, type PriceAnalysis } from '@/data/prices';
 
 export const metadata: Metadata = {
   title: 'PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】',
@@ -18,11 +19,12 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'PS5（通常版・ディスクドライブ搭載）', good: '35,000〜45,000円', fair: '25,000〜34,000円', poor: '15,000〜24,000円' },
-  { model: 'PS5 デジタル・エディション', good: '28,000〜36,000円', fair: '20,000〜27,000円', poor: '12,000〜19,000円' },
-  { model: 'PS5 Pro', good: '55,000〜70,000円', fair: '40,000〜54,000円', poor: '25,000〜39,000円' },
-];
+// 2026-10-19: 2026年4月時点の参考値を、10/15 実測（hardwarePrices）に置き換え。実測の無い PS5 Pro の相場行は外す
+const surveyDate = HARDWARE_SURVEY_DATE.replace(/-/g, '/');
+const priceData = hardwarePrices
+  .filter((h) => h.title.startsWith('PS5'))
+  .map(analyzeTitle)
+  .filter((x): x is PriceAnalysis => x !== null);
 
 const tips = [
   { title: '外箱・付属品を完備する', description: '箱、コントローラー、電源ケーブル、HDMIケーブル、USBケーブル、スタンドがそろっていると高額査定につながります。特に外箱の有無は、3,000〜5,000円の差になる場合があります。' },
@@ -39,18 +41,18 @@ const services = [
 ];
 
 const faqs = [
-  { q: 'PS5の買取相場はどのくらいですか？', a: '通常版（ディスクドライブ搭載）で25,000〜45,000円、デジタル・エディションで20,000〜36,000円、PS5 Proで40,000〜70,000円が目安です。箱・付属品の有無と本体の状態で大きく変動します。' },
-  { q: 'DualSenseコントローラーだけでも売れますか？', a: 'はい、DualSenseコントローラー単品でも3,000〜5,000円程度で買取可能です。限定カラーモデルはさらに高値がつくことがあります。DualSense Edgeは8,000〜12,000円程度です。' },
-  { q: 'PS VR2は買い取ってもらえますか？', a: 'はい、PS VR2も買取対象です。買取相場は30,000〜50,000円程度です。付属品完備・美品であれば高額査定が期待できます。' },
+  { q: 'PS5の買取価格はどのくらいですか？', a: `当サイトが${surveyDate}に各社の公式買取ページで実測した価格（完品前提）は、PS5 Slim 通常版（CFI-2000）がゲオ・駿河屋とも60,000円、デジタル・エディション（CFI-2000B）が両社とも53,000円、旧型の通常版（CFI-1000〜1200）が38,400〜48,000円でした。PS5 Pro はゲオが115,000円を掲載していましたが、1社のみのため相場としては掲載していません。箱・付属品の有無と本体の状態で変動します。` },
+  { q: 'DualSenseコントローラーだけでも売れますか？', a: 'はい、DualSenseコントローラーは単品でも買取の対象です。当サイトではコントローラーの買取価格を実測していないため、金額は各社の買取価格表でご確認ください。' },
+  { q: 'PS VR2は買い取ってもらえますか？', a: 'はい、PS VR2も買取の対象です。当サイトではPS VR2の買取価格を実測していないため、金額は各社の買取価格表でご確認ください。付属品がそろっているほど査定に有利です。' },
   { q: 'PS5の初期化方法を教えてください', a: '「設定」→「システム」→「システムソフトウェア」→「本体をリセット」→「リセット」の順に操作します。PSNアカウントのサインアウトとゲームのライセンス解除も忘れずに行ってください。' },
-  { q: 'ディスク版とデジタル版、どちらが高く売れますか？', a: 'ディスクドライブ搭載の通常版のほうが需要が高く、デジタル・エディションより5,000〜10,000円ほど高い買取価格になる傾向があります。' },
+  { q: 'ディスク版とデジタル版、どちらが高く売れますか？', a: `ディスクドライブ搭載の通常版のほうが高く売れます。${surveyDate}の実測では、PS5 Slim の通常版が60,000円、デジタル・エディションが53,000円で、ゲオ・駿河屋とも7,000円の差でした。` },
   { q: 'PS5に拡張SSDを増設していますが査定に影響しますか？', a: '増設SSD自体は取り外して別売りすることをおすすめします。PS5本体の査定には基本的に影響しませんが、SSD付きでも、プラス査定にはならない傾向があります。' },
 ];
 
 export default function PS5Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS5買取おすすめ3選｜プレステ5を高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-19", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'PlayStation 5' }]} />
 
       {/* Hero */}
@@ -74,30 +76,33 @@ export default function PS5Page() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Price Table */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取価格一覧（{surveyDate}実測）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ {surveyDate}に、各社の公式買取ページで実測した完品前提の価格です（実測できたモデル・店舗のみ掲載しています）。実際の買取価格は状態・付属品・時期により変動します。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
                 <tr>
                   <th>モデル</th>
-                  <th>美品（箱あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
+                  <th>買取価格（実測の最安〜最高）</th>
+                  <th>実測した店舗と価格</th>
                 </tr>
               </thead>
               <tbody>
                 {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
+                  <tr key={row.title}>
+                    <td className="font-bold">{row.title}</td>
+                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">
+                      {row.low === row.best.price ? `${row.best.price.toLocaleString()}円` : `${row.low.toLocaleString()}〜${row.best.price.toLocaleString()}円`}
+                    </td>
+                    <td className="text-sm">
+                      {Object.entries(row.prices).map(([store, price]) => `${STORE_LABELS[store as keyof typeof STORE_LABELS]} ${price!.toLocaleString()}円`).join('／')}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-lighter)' }}>※ PS5 Pro（CFI-7100B01）は、{surveyDate}時点でゲオが115,000円を掲載していました。実測できたのが1社のみのため、表には含めていません。</p>
         </section>
 
         {/* Tips */}
@@ -147,58 +152,22 @@ export default function PS5Page() {
           </div>
         </section>
 
-        {/* Price Comparison by Service */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />業者別買取価格比較</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ PS5（通常版・ディスクドライブ搭載）の参考買取価格です。時期・在庫状況により変動します。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>業者名</th>
-                  <th>美品</th>
-                  <th>良品</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { name: 'ヒカカク！', good: '最大45,000円', fair: '最大38,000円', note: '一括査定で最高値を比較' },
-                  { name: 'ゲオ', good: '~38,000円', fair: '~30,000円', note: 'まとめ売りでUP' },
-                  { name: 'ブックオフ', good: '~35,000円', fair: '~28,000円', note: '店舗により変動' },
-                  { name: '駿河屋', good: '~36,000円', fair: '~29,000円', note: '宅配買取対応' },
-                  { name: '買取ウリエル', good: '~40,000円', fair: '~33,000円', note: '出張対応・梱包不要' },
-                ].map((row) => (
-                  <tr key={row.name}>
-                    <td className="font-bold">{row.name}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
         {/* Controller & VR */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />コントローラー・PS VR2の買取</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 当サイトでは周辺機器の買取価格を実測していません。金額は各社の買取価格表でご確認ください。</p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>DualSense</h3>
-              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取相場: 3,000〜5,000円</p>
-              <p className="text-xs mt-1" style={{ color: 'var(--color-text-lighter)' }}>限定カラーはさらに高値の傾向</p>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>単品でも買取の対象です</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>DualSense Edge</h3>
-              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取相場: 8,000〜12,000円</p>
-              <p className="text-xs mt-1" style={{ color: 'var(--color-text-lighter)' }}>プロ仕様コントローラー</p>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>単品でも買取の対象です</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>PS VR2</h3>
-              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取相場: 30,000〜50,000円</p>
-              <p className="text-xs mt-1" style={{ color: 'var(--color-text-lighter)' }}>付属品完備で高額査定</p>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>付属品がそろっているほど査定に有利です</p>
             </div>
           </div>
         </section>
