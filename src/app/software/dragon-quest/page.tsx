@@ -51,20 +51,23 @@ const shopComparison = [
   { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて S', platform: 'Switch 2', other: 'ブックオフ 2,500円（高価買取情報・10月15日更新）', suruga: 2800 },
 ];
 
+// 2026-10-20 駿河屋公式の買取検索で確認したFC・SFCの国内版ソフトの買取価格
 const retroDQValues = [
-  { title: 'ドラクエI（FC）箱付き完品', value: '3,000〜8,000円', detail: '初版とリピート版で価格差あり。ゴールドカートリッジは特にプレミア。' },
-  { title: 'ドラクエII（FC）箱付き完品', value: '2,000〜5,000円', detail: '初版の方が価値が高い。マップ付きは査定額が上がる傾向があります。' },
-  { title: 'ドラクエIII（FC）箱付き完品', value: '2,000〜6,000円', detail: '発売当時に社会現象となったタイトル。状態良好品は高額。' },
-  { title: 'ドラクエIV（FC）箱付き完品', value: '1,500〜4,000円', detail: 'FC最後のDQ。AIパーティシステムが特徴。' },
-  { title: 'ドラクエV（SFC）箱付き完品', value: '3,000〜8,000円', detail: 'シリーズ屈指の名作と評される作品。コレクター需要が非常に高い。' },
-  { title: 'ドラクエVI（SFC）箱付き完品', value: '2,000〜5,000円', detail: 'SFC最後のDQ。ムドー戦などで知られる人気作。' },
+  { title: 'ドラゴンクエスト', platform: 'FC', value: '7,500円', detail: '美品は18,000円' },
+  { title: 'ドラゴンクエストII', platform: 'FC', value: '2,200円', detail: '' },
+  { title: 'ドラゴンクエストIII', platform: 'FC', value: '価格の掲載なし', detail: 'メールでの見積もり対象' },
+  { title: 'ドラゴンクエストIV', platform: 'FC', value: '1,500円', detail: '『導きの書』とのセット商品は14,000円' },
+  { title: 'ドラゴンクエストI・II', platform: 'SFC', value: '1,200円', detail: '外箱のみは300円' },
+  { title: 'ドラゴンクエストIII そして伝説へ…', platform: 'SFC', value: '価格の掲載なし', detail: 'メールでの見積もり対象' },
+  { title: 'ドラゴンクエストV 天空の花嫁', platform: 'SFC', value: '価格の掲載なし', detail: 'メールでの見積もり対象' },
+  { title: 'ドラゴンクエストVI 幻の大地', platform: 'SFC', value: '価格の掲載なし', detail: 'メールでの見積もり対象' },
 ];
 
 const faqs = [
-  { q: 'ドラクエシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではDQ3 HD-2Dリメイクが高値の部類で、2026年10月19日時点で買取ルデヤの新品未開封が3,500円、駿河屋のSwitch版が1,600円です。レトロ作品ではSFC版ドラクエVの箱付き完品が3,000〜8,000円で取引されています。ドラクエは国民的RPGのため中古市場での需要が安定しており、他のシリーズと比べて値崩れしにくいのが特徴です。' },
+  { q: 'ドラクエシリーズで最も高く売れるタイトルは何ですか？', a: '2026年10月20日の駿河屋公式では、現行機種のソフトではヒーローズI・II（Switch）の3,000円が最も高く、DQ3 HD-2DはSwitch版1,600円でした。レトロ作品ではFC版『ドラゴンクエスト』が7,500円（美品は18,000円）、FC版ドラゴンクエストIVと『導きの書』のセット商品が14,000円で、現行機種のソフトより高い買取価格の作品もあります。新品未開封の場合は、買取ルデヤでDQ3 HD-2D（Switch版）が3,500円でした。' },
   { q: 'ドラクエ3 HD-2Dリメイクはいつ売るべきですか？', a: '買取ルデヤの新品未開封の買取価格は、2026年6月14日の4,500円から10月19日には3,500円へと約22%下がっています（当編集部の定点確認）。続編にあたるHD-2D版『ドラゴンクエストI＆II』もすでに発売されており、DQ3の価格が今後上がる材料は見当たりません。遊び終えた場合は、早めの売却をおすすめします。' },
   { q: 'レトロドラクエ（FC・SFC）はどこで売るのが有利ですか？', a: 'レトロ作品は、買取店や作品によって買取価格の掲載状況が異なります。2026年10月20日の駿河屋公式の買取検索では、SFC版『ドラゴンクエストI・II』に1,200円（外箱のみは300円）の買取価格が掲載されていた一方、SFC版ドラゴンクエストVとFC版ドラゴンクエストIIIは価格の掲載がなく、メールでの見積もり対象でした。GB版ドラゴンクエストIIIは外箱のみ（700円）・説明書のみ（400円）にも個別の買取価格が付いており、付属品にも価値があります。価格が掲載されていない作品は、複数の店舗で見積もりを取って比較することをおすすめします。' },
-  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: 'Switch版の方が高い傾向があります。2026年10月19日の駿河屋公式では、DQ3 HD-2DのSwitch版が1,600円、PS5版が1,000円で、600円の差がありました。Switchの携帯モードで遊べる利便性と、Switch自体のユーザー数の多さが理由です。売却を前提とする場合は、マルチプラットフォームのDQはSwitch版の購入が有利です。' },
+  { q: 'ドラクエのSwitch版とPS版、どちらが高く売れますか？', a: '2026年10月20日の駿河屋公式で、同じタイトルのSwitch版とPS版の買取価格を比べた6組（DQ3 HD-2D、I＆II、VII Reimagined、Xオフライン、XI S、ビルダーズ2新価格版）では、すべてSwitch版が400〜800円高い結果でした。一方、Switch版とSwitch 2版の比較では、I＆IIとVII ReimaginedはSwitch 2版が200円安く、XI SはSwitch 2版が800円高い価格で、タイトルによって異なります。価格差の理由は買取店から公表されていないため、売却前に機種ごとの買取価格をご確認ください。' },
   { q: 'ドラクエのスピンオフ作品は売れますか？', a: 'はい、売却できます。2026年10月20日の駿河屋公式では、ヒーローズI・II（Switch）が3,000円で、当編集部が調べたドラクエ19件の中で最も高い買取価格でした。一方、モンスターズ3は1,300円（マスターズ版は1,100円）、ビルダーズ2の新価格版はSwitch版1,600円・PS4版800円、トレジャーズは500円で、同じスピンオフでも作品によって最大6倍の差があります。' },
   { q: 'ドラクエ12が発売されたら旧作の価格はどうなりますか？', a: '新作の発売で旧作の買取価格がどう動くかは、現時点で根拠をもって予測することはできません。参考として、2026年10月20日の駿河屋公式では、2025年10月発売の『ドラゴンクエストI＆II』（Switch版2,400円）が、2024年11月発売のDQ3 HD-2D（Switch版1,600円）や2026年2月発売の『ドラゴンクエストVII Reimagined』（Switch版2,100円）より高い買取価格でした。発売時期の新しさと買取価格は必ずしも一致しないため、売却を検討する際は、その時点の各社の買取価格をご確認ください。' },
 ];
@@ -149,55 +152,45 @@ export default function DragonQuestPage() {
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の買取検索、買取ルデヤ公式の買取検索、ブックオフ公式「ゲームの高価買取情報」（いずれも2026年10月20日閲覧。ブックオフの掲載は同年10月15日更新分）。新品未開封の買取ルデヤは、駿河屋の約1.3〜2.4倍でした（VII ReimaginedのSwitch 2版が2.4倍）。DQ11 SのSwitch 2版は駿河屋（2,800円）がブックオフ（2,500円）より300円高い価格でした。ゲオ公式の買取価格ページは同日に当編集部の環境から閲覧できなかったため、掲載していません。</p>
         </section>
 
-        {/* レトロドラクエの価値 */}
+        {/* レトロドラクエの買取価格 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />レトロドラクエのプレミア価値</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />レトロドラクエの買取価格【2026年10月20日・駿河屋公式】</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
                 <tr>
                   <th>タイトル</th>
-                  <th>買取相場</th>
-                  <th>詳細</th>
+                  <th>機種</th>
+                  <th>駿河屋の買取価格</th>
+                  <th>備考</th>
                 </tr>
               </thead>
               <tbody>
                 {retroDQValues.map((row) => (
-                  <tr key={row.title}>
+                  <tr key={row.title + row.platform}>
                     <td className="font-bold text-sm">{row.title}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.value}</td>
+                    <td className="text-sm">{row.platform}</td>
+                    <td className="font-bold whitespace-nowrap" style={{ color: 'var(--color-electric-green)' }}>{row.value}</td>
                     <td className="text-sm">{row.detail}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の買取検索（2026年10月20日閲覧）。「価格の掲載なし」の作品は、同日時点で買取価格が表示されず「メールにてお見積」の扱いでした。箱・説明書の有無など買取の条件は、駿河屋公式の案内をご確認ください。</p>
         </section>
 
-        {/* 価格推移の傾向 */}
+        {/* 実測データから分かること */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ドラクエの価格推移傾向</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />実測データから分かること【2026年10月20日】</h2>
           <div className="glass-card p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしにくいタイトル</h3>
-                <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・ナンバリング本編（特にDQ3、DQ5、DQ11）</li>
-                  <li>・HD-2Dリメイク版</li>
-                  <li>・モンスターズシリーズ</li>
-                  <li>・レトロ完品（箱・説明書・マップ付き）</li>
-                </ul>
-              </div>
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしやすいタイトル</h3>
-                <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・スピンオフ作品（ヒーローズ、トレジャーズ）</li>
-                  <li>・上位版が出た旧バージョン（DQ11無印）</li>
-                  <li>・オンライン専用タイトル</li>
-                  <li>・セール対象になった作品</li>
-                </ul>
-              </div>
-            </div>
+            <ul className="text-sm space-y-2" style={{ color: 'var(--color-text-light)' }}>
+              <li>・発売が新しい作品ほど高いとは限りません。駿河屋のSwitch版では、2025年10月発売のI＆II（2,400円）が、2026年2月発売のVII Reimagined（2,100円）や2024年11月発売のDQ3 HD-2D（1,600円）より高い価格でした。</li>
+              <li>・スピンオフ作品でも価格の差が大きく、ヒーローズI・II（3,000円）とトレジャーズ（500円）では6倍の差があります。</li>
+              <li>・限定版・セット商品は通常版より高い価格でした（Xオフライン超デラックス版5,500円／通常版2,300円、XI S 夢のゴージャス版5,300円／通常版2,000円、FC版IV＋『導きの書』セット14,000円／単品1,500円）。</li>
+              <li>・新品未開封の場合、買取ルデヤの買取価格は駿河屋の約1.3〜2.4倍でした。また、当編集部の定点確認では、買取ルデヤのDQ3 HD-2D（新品未開封）は2026年6月14日の4,500円から10月19日には3,500円に下がっています。</li>
+            </ul>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>いずれも特定の日の公開価格にもとづく比較で、今後の価格の動きを示すものではありません。</p>
           </div>
         </section>
 
