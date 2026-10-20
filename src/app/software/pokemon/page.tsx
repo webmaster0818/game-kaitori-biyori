@@ -195,7 +195,7 @@ export default function PokemonPage() {
             ポケモンソフトの<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>の確認方法
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            ポケモンは業者間の価格差が大きいシリーズです。一括査定で各社の価格を比較することをおすすめします。
+            買取価格は店舗ごとに異なるため、売却前に複数社の価格を比較することをおすすめします。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
