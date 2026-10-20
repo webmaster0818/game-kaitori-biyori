@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】',
+  title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時',
   description:
     'ゲーム買取の売り時を月別のカレンダーで解説します。ジャンル別（スポーツ/RPG等）の価格変動パターン、新作発売後の「2週間ルール」、年末年始・GW・夏休みのピーク時期についてもまとめています。',
   keywords: ['ゲーム買取 時期 いつがいい', 'ゲーム 売り時 カレンダー', 'ゲーム 買取 月別', 'ゲーム 売る時期'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】',
+    title: 'ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時',
     description: 'ゲーム買取の月別の売り時カレンダーで、売却に適したタイミングを解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -63,7 +63,7 @@ const faqs = [
 export default function SeasonalPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時【2026年7月版】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取の最適な時期カレンダー｜月別おすすめ売り時", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '買取時期カレンダー' }]} />
 
       {/* Hero */}

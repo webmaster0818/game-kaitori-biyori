@@ -6,7 +6,7 @@ import TakehomeSimulator from '@/components/TakehomeSimulator'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'ゲームはメルカリと買取どっちが得？【手取り計算機付き】手数料を引いた実質手取りで比較【2026年7月】',
+  title: 'ゲームはメルカリと買取どっちが得？【手取り計算機付き】手数料を引いた実質手取りで比較',
   description:
     'メルカリと買取業者を12項目で比較しています。2026年現在の手数料（販売手数料10%・振込手数料200円・ネコポス210円）をもとに手取り額をシミュレーションし、未開封品の扱いや入金スピードの違いなど、見落としやすい差についても公式情報をもとに解説します。',
   keywords: ['メルカリ vs 買取業者 どっちが得', 'メルカリ ゲーム 手数料', 'メルカリ 買取 比較', 'ゲーム メルカリ 買取業者', 'ゲーム 売る どっち'],

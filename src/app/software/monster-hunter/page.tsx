@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'モンハンの買取価格はいくら？【2026年7月】ワイルズ・ライズの相場を店舗横断で比較・売り時も解説',
+  title: 'モンハンの買取価格はいくら？ワイルズ・ライズの相場を店舗横断で比較・売り時も解説',
   description:
     'モンスターハンターシリーズの買取相場を2026年6月の調査データで一覧化しています。ワイルズ・ライズ・サンブレイク・ストーリーズ2・ワールド/アイスボーンを店舗横断で比較し、新作の影響と高く売るコツについても解説します。',
   keywords: ['モンハン 買取', 'モンスターハンター 買取価格', 'モンハンワイルズ 買取', 'モンハンライズ 売る', 'モンハン 相場'],
   openGraph: {
     images: ['/og.png'],
-    title: 'モンハンの買取価格はいくら？【2026年7月】店舗横断で相場比較',
+    title: 'モンハンの買取価格はいくら？店舗横断で相場比較',
     description: 'モンハンシリーズの買取相場を店舗横断で比較しています。新作の影響についても解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -51,7 +51,7 @@ const faqs = [
   { q: 'モンハンストーリーズ2が「0円」と表示されることがあるのはなぜですか？', a: 'ストーリーズ2は中古の通常状態だと需要が弱く、店舗によっては買取0円表示になることがあります。一方で未開封品は2,000円前後のプレミアがつきます。状態（未開封か否か）で価格差が極端なシリーズなので、未開封品は必ず複数店で査定を比較することをおすすめします。' },
 ];
 
-const PAGE_TITLE = 'モンハンの買取価格【2026年6月】ワイルズ・ライズ等の相場と売り時';
+const PAGE_TITLE = 'モンハンの買取価格｜ワイルズ・ライズ等の相場と売り時';
 
 export default function MonsterHunterPage() {
   return (
@@ -63,7 +63,7 @@ export default function MonsterHunterPage() {
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">モンハンの買取価格【2026年6月】</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">モンハンの買取価格</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             モンスターハンターワイルズ（PS5）、ライズ／サンブレイク、ストーリーズ2、ワールド／アイスボーンなど主要タイトルの買取相場を2026年6月の調査データで一覧化しました。新作の供給過多やSwitch 2版発表が相場に与える影響も解説します。
           </p>

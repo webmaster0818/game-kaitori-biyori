@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '広島のゲーム買取おすすめ店舗｜紙屋町・広島駅・西区エリア別ガイド【2026年6月】',
+  title: '広島のゲーム買取おすすめ店舗｜紙屋町・広島駅・西区エリア別ガイド',
   description:
     '広島でゲームを高く売れる買取店を、エリア別に紹介しています。大手町・紙屋町の都心部、駿河屋アルパーク北棟店・MEGA中筋店、地場専門店レプトンなどの実店舗を比較し、宅配買取の利用についても解説します。',
   keywords: ['広島 ゲーム買取', '広島 ゲーム 売る', '広島 ゲーム 高価買取', '駿河屋 広島', 'レプトン 広島'],
   openGraph: {
     images: ['/og.png'],
-    title: '広島のゲーム買取おすすめ店舗｜紙屋町・広島駅・西区エリア別ガイド【2026年6月】',
+    title: '広島のゲーム買取おすすめ店舗｜紙屋町・広島駅・西区エリア別ガイド',
     description: '広島のゲーム買取店をエリア別に紹介し、都心部・西区・安佐南区の実店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
+  title: 'Switch本体の買取価格｜値上げで旧型相場が上昇中・今が売り時',
   description:
     'Nintendo Switch・Switch Lite・Switch OLEDの買取相場とおすすめ買取サービス3社を比較しています。スイッチ本体を高く売る5つのコツ、Joy-ConやProコントローラーの買取情報、初期化手順についても解説します。',
   keywords: ['Switch 買取', 'ニンテンドースイッチ 売る', 'Switch 買取相場', 'Switch Lite 買取', 'Switch OLED 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'Switch本体の買取価格【2026年6月】値上げで旧型相場が上昇中・今が売り時',
+    title: 'Switch本体の買取価格｜値上げで旧型相場が上昇中・今が売り時',
     description: 'Switch・Switch Lite・Switch OLEDの買取相場と高く売るコツについて解説しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -50,7 +50,7 @@ const faqs = [
 export default function SwitchPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Nintendo Switch買取おすすめ3選｜スイッチを高く売るコツ", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo Switch' }]} />
 
       {/* Hero */}

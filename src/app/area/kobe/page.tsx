@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '神戸のゲーム買取おすすめ店舗｜三宮・元町・ハーバーランドエリア別ガイド【2026年6月】',
+  title: '神戸のゲーム買取おすすめ店舗｜三宮・元町・ハーバーランドエリア別ガイド',
   description:
     '神戸でゲームを高く売れる買取店を、エリア別に紹介しています。三宮（駿河屋・ゲームショップBARON・ゲオ・じゃんぱら）、神戸駅ハーバーランド（ソフマップ）の実店舗を比較し、宅配買取の利用についても解説します。',
   keywords: ['神戸 ゲーム買取', '三宮 ゲーム 売る', '神戸 ゲーム 高価買取', '駿河屋 三宮', 'ゲームショップ BARON'],
   openGraph: {
     images: ['/og.png'],
-    title: '神戸のゲーム買取おすすめ店舗｜三宮・元町・ハーバーランドエリア別ガイド【2026年6月】',
+    title: '神戸のゲーム買取おすすめ店舗｜三宮・元町・ハーバーランドエリア別ガイド',
     description: '神戸のゲーム買取店をエリア別に紹介し、三宮・元町・ハーバーランドの実店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

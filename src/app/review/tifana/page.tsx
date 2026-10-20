@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
+  title: 'ティファナ買取の評判・口コミは？ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
   description:
     'ティファナのゲーム買取をレビューしています。ティファナは、ゲーム・トレカ・フィギュア・レトロ玩具など幅広いホビー系アイテムの買取に対応するリサイクルショップです。店舗買取・宅配買取の特徴、メリット、利用手順について詳しく解説します。',
   keywords: ['ティファナ', 'ティファナ 口コミ', 'ティファナ ゲーム買取', 'トレカ 買取', 'フィギュア 買取', 'ホビー 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
+    title: 'ティファナ買取の評判・口コミは？ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証',
     description: 'ティファナのゲーム買取をレビューしています。ホビー系アイテムの買取の特徴と利用方法について解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -50,7 +50,7 @@ const faqs = [
 export default function TifanaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナ買取の評判・口コミは？【2026年7月】ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ティファナ買取の評判・口コミは？ゲーム・トレカ・フィギュアの査定・入金・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ティファナ' }]} />
 
       {/* Hero */}

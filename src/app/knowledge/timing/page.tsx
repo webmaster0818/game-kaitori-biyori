@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年7月】データで見る最適タイミング',
+  title: 'ゲームの売り時はいつ？Switchはいま売るべき？データで見る最適タイミング',
   description:
     'ゲーム機・ソフトの売り時を月別カレンダーで解説します。新型発表前後の価格変動、新作ソフトの価格下落の推移、年末年始・夏休みの需要上昇など、売却に適したタイミングをまとめています。',
   keywords: ['ゲーム 売り時', 'いつ売るのがベスト', 'ゲーム 売るタイミング', 'ゲーム機 売り時'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲームの売り時はいつ？Switchはいま売るべき？【2026年7月】データで見る最適タイミング',
+    title: 'ゲームの売り時はいつ？Switchはいま売るべき？データで見る最適タイミング',
     description: 'ゲーム機・ソフトの売り時を月別カレンダーで解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -60,7 +60,7 @@ const faqs = [
 export default function TimingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームの売り時ガイド｜いつ売るのがベスト？年間カレンダー", "datePublished": "2026-03-15", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: '売り時ガイド' }]} />
 
       {/* Hero */}

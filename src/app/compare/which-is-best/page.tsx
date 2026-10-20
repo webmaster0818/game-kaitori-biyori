@@ -5,13 +5,13 @@ import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】公式価格の実測で比較',
+  title: 'ゲーム買取はどこがいい？結論と用途別おすすめ｜公式価格の実測で比較',
   description:
     'ゲーム買取はどこがいい？という疑問に対し、高く売りたい・早く売りたい・レトロ・箱なしジャンク・まとめ売り・宅配・店舗で即現金化・フリマとの比較の用途別に、適した売り先を紹介しています。送料・返送料・キャンセル・査定期間・古物商番号を主要サービスで横断比較しています（各社公式の情報・確認日を記載）。',
   keywords: ['ゲーム買取 どこがいい', 'ゲーム買取 おすすめ', 'ゲームを売るならどこがいい', 'ゲーム買取 どこで売る', 'ゲーム買取 比較', 'ゲーム買取 用途別'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】公式価格の実測で比較',
+    title: 'ゲーム買取はどこがいい？結論と用途別おすすめ｜公式価格の実測で比較',
     description: '高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマとの比較など、用途別に適した売り先をご紹介します。送料・返送料・キャンセル・査定期間・古物商番号も横断比較しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -253,7 +253,7 @@ export default function WhichIsBestPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(96,165,250,0.2)', color: '#60A5FA' }}>用途別比較ハブ</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ゲーム買取はどこがいい？結論と用途別おすすめ【2026年7月】
+            ゲーム買取はどこがいい？結論と用途別おすすめ
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「ゲーム買取はどこがいいのか」「どこで売るのがよいのか」は、<strong>売りたい物と優先したいこと</strong>によって変わります。当ページではランキング形式ではなく、<strong>高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較</strong>の用途別に、適した売り先を紹介しています。送料・返送料・キャンセル・査定期間・古物商番号は、各社公式の情報を確認日とともに横断比較しています。

@@ -6,13 +6,13 @@ import { SeriesPriceTable, TodayBestBanner } from '@/components/PriceIndex'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'スプラトゥーンの買取価格【2026年6月】スプラ3・2の相場と売り時',
+  title: 'スプラトゥーンの買取価格｜スプラ3・2の相場と売り時',
   description:
     'スプラトゥーン3・2の買取相場を2026年6月の調査データで一覧化しています。通常版・エキスパンション・パス付き・オクト同梱版を店舗横断で比較し、世代交代による価格差や高く売るコツについても解説します。',
   keywords: ['スプラトゥーン 買取', 'スプラ3 買取価格', 'スプラトゥーン3 売る', 'スプラ2 買取', 'スプラトゥーン 相場'],
   openGraph: {
     images: ['/og.png'],
-    title: 'スプラトゥーンの買取価格【2026年6月】スプラ3・2の相場',
+    title: 'スプラトゥーンの買取価格｜スプラ3・2の相場',
     description: 'スプラトゥーン3・2の買取相場を店舗横断で比較しています。売り時についても解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -51,7 +51,7 @@ const faqs = [
   { q: 'スプラトゥーンはいつ売るのが最適ですか？', a: 'スプラ3は値崩れが緩やかなため、遊び終えたタイミングでの売却で問題ありませんが、新作「スプラトゥーン レイダース」が2026年7月23日に発売されたことで、シリーズの注目度が上がり需要が下支えされやすい状況です。一方で、追加コンテンツの終了や次世代機への移行が進むと下落しやすいため、長期保有は避けることをおすすめします。' },
 ];
 
-const PAGE_TITLE = 'スプラトゥーンの買取価格【2026年6月】スプラ3・2の相場と売り時';
+const PAGE_TITLE = 'スプラトゥーンの買取価格｜スプラ3・2の相場と売り時';
 
 export default function SplatoonPage() {
   return (
@@ -63,7 +63,7 @@ export default function SplatoonPage() {
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">スプラトゥーンの買取価格【2026年6月】</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">スプラトゥーンの買取価格</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             スプラトゥーン3（通常版／エキスパンション・パス付き）とスプラトゥーン2（通常版／オクト同梱版）の買取相場を2026年6月の調査データで一覧化しました。ロングセラーのスプラ3と、世代交代で下落したスプラ2の違いも解説します。
           </p>

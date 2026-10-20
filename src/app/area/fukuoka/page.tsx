@@ -5,13 +5,13 @@ import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド【2026年6月】',
+  title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド',
   description:
     '福岡でゲームを高く売れる買取店舗を、エリア別に紹介しています。天神（ブックオフ・ゲオ・駿河屋）、博多、小倉の人気店舗と特徴を比較し、宅配・出張買取サービスもあわせて紹介します。',
   keywords: ['ゲーム買取 福岡', 'ゲーム買取 福岡 おすすめ', 'ゲーム買取 天神', 'ゲーム買取 博多', 'ゲーム買取 北九州'],
   openGraph: {
     images: ['/og.png'],
-    title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド【2026年6月】',
+    title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド',
     description: '福岡のゲーム買取店をエリア別に紹介し、天神・博多・小倉の人気店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

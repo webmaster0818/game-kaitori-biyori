@@ -6,13 +6,13 @@ import { SeriesPriceTable, TodayBestBanner } from '@/components/PriceIndex'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧',
+  title: 'ゼルダの伝説の買取価格｜ティアキン・ブレワイ等の相場一覧',
   description:
     'ゼルダの伝説シリーズの買取相場を2026年6月の調査データで一覧化しています。ティアーズ オブ ザ キングダム・ブレス オブ ザ ワイルド(通常版/Switch 2 Edition/パス付き)・知恵のかりもの等を店舗横断で比較し、高く売るコツについても解説します。',
   keywords: ['ゼルダ 買取', 'ゼルダの伝説 買取価格', 'ティアキン 買取', 'ブレワイ 買取', 'ゼルダ 売る'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ゼルダの伝説の買取価格【2026年6月】シリーズ相場一覧',
+    title: 'ゼルダの伝説の買取価格｜シリーズ相場一覧',
     description: 'ティアキン・ブレワイ等ゼルダシリーズの買取相場を店舗横断で比較しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -56,7 +56,7 @@ const faqs = [
   { q: 'レトロのゼルダ（SFC・N64）はどこで売るべきですか？', a: 'レトロゲームに強い専門店（駿河屋など）での売却をおすすめします。レトロ作品は箱・説明書・付属品の有無で査定が大きく変わり、完品なら数千円になることもあります。一般店では「古いソフト」として安値になりやすいため、専門店での査定をおすすめします。' },
 ];
 
-const PAGE_TITLE = 'ゼルダの伝説の買取価格【2026年6月】ティアキン・ブレワイ等の相場一覧';
+const PAGE_TITLE = 'ゼルダの伝説の買取価格｜ティアキン・ブレワイ等の相場一覧';
 
 export default function ZeldaPage() {
   return (
@@ -68,7 +68,7 @@ export default function ZeldaPage() {
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゼルダの伝説の買取価格【2026年6月】</h1>
+          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">ゼルダの伝説の買取価格</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ティアーズ オブ ザ キングダム、ブレス オブ ザ ワイルド（通常版／Switch 2 Edition／パス付き）、知恵のかりものなど、ゼルダ主要タイトルの買取相場を2026年6月の調査データで一覧化しました。同じタイトルでも、版と店舗によって買取価格に大きな差が出ます。
           </p>

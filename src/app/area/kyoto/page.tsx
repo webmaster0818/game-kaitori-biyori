@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '京都のゲーム買取おすすめ店舗｜河原町・寺町・京都駅エリア別ガイド【2026年6月】',
+  title: '京都のゲーム買取おすすめ店舗｜河原町・寺町・京都駅エリア別ガイド',
   description:
     '京都でゲームを高く売れる買取店を、エリア別に紹介しています。寺町（駿河屋京都寺町店）、河原町（まんだらけ京都店・じゃんぱら）、京都駅周辺の実店舗を比較し、宅配買取の利用についても解説します。',
   keywords: ['京都 ゲーム買取', '京都 ゲーム 売る', '京都 ゲーム 高価買取', '駿河屋 京都', 'まんだらけ 京都'],
   openGraph: {
     images: ['/og.png'],
-    title: '京都のゲーム買取おすすめ店舗｜河原町・寺町・京都駅エリア別ガイド【2026年6月】',
+    title: '京都のゲーム買取おすすめ店舗｜河原町・寺町・京都駅エリア別ガイド',
     description: '京都のゲーム買取店をエリア別に紹介し、寺町・河原町・京都駅周辺の実店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

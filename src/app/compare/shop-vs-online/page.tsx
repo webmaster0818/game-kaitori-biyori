@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】',
+  title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？',
   description:
     'ゲームの店舗買取と宅配買取を8項目で比較しています。手軽さ・即金性・買取金額・交渉・まとめ売り・プライバシー・対応エリア・所要時間の違いを解説し、出張買取という第3の選択肢もご紹介します。目的に合った売り方を選ぶ際の参考にしてください。',
   keywords: ['ゲーム 店舗買取 宅配買取 どっち', 'ゲーム 持ち込み 宅配 比較', 'ゲーム買取 店頭 ネット', 'ゲーム 売り方 比較'],
   openGraph: {
     images: ['/og.png'],
-    title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】',
+    title: '店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？',
     description: 'ゲームの店舗買取と宅配買取を8項目で比較しています。第3の選択肢である出張買取もご紹介します。',
     type: 'article',
     locale: 'ja_JP',
@@ -57,7 +57,7 @@ const faqs = [
 export default function ShopVsOnlinePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？【2026年6月】", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "店舗買取 vs 宅配買取｜ゲームを売るならどっちがお得？", "datePublished": "2026-03-15", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: '店舗 vs 宅配' }]} />
 
       {/* Hero */}

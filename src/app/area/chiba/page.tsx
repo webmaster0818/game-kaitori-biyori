@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '千葉のゲーム買取おすすめ店舗｜千葉駅・船橋・柏エリア別ガイド【2026年6月】',
+  title: '千葉のゲーム買取おすすめ店舗｜千葉駅・船橋・柏エリア別ガイド',
   description:
     '千葉でゲームを高く売れる買取店舗を、エリア別に紹介しています。千葉駅周辺（ブックオフ・ゲオ）、船橋、柏の人気店舗と特徴を比較し、宅配・出張買取サービスもあわせて紹介します。',
   keywords: ['ゲーム買取 千葉', 'ゲーム買取 千葉 おすすめ', 'ゲーム買取 船橋', 'ゲーム買取 柏', 'ゲーム買取 千葉駅'],
   openGraph: {
     images: ['/og.png'],
-    title: '千葉のゲーム買取おすすめ店舗｜千葉駅・船橋・柏エリア別ガイド【2026年6月】',
+    title: '千葉のゲーム買取おすすめ店舗｜千葉駅・船橋・柏エリア別ガイド',
     description: '千葉のゲーム買取店をエリア別に紹介し、千葉駅・船橋・柏の人気店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

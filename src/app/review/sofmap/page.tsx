@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ソフマップ買取（ラクウル）の評判・口コミ【2026年8月】送料・返送料無料の実態と注意点',
+  title: 'ソフマップ買取（ラクウル）の評判・口コミ｜送料・返送料無料の実態と注意点',
   description:
     'ソフマップの宅配買取「ラクウル」を検証しています。集荷送料・査定料・キャンセル返送料がすべて無料である点、Switch 2本体40,000円等の実測掲載例（2026年7月7日確認）、銀行振込手数料250円の注意点、初回+500円・誕生月5%のキャンペーンについて、公式情報をもとに解説します。',
   keywords: ['ソフマップ 買取 評判', 'ラクウル 評判', 'ソフマップ ゲーム買取', 'ラクウル 送料', 'ソフマップ 宅配買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ソフマップ買取（ラクウル）の評判・口コミ【2026年8月】検証',
+    title: 'ソフマップ買取（ラクウル）の評判・口コミ｜検証',
     description: '送料・返送料が無料のラクウルについて、公式情報と実測掲載例をもとに検証しています。',
     type: 'article',
     locale: 'ja_JP',

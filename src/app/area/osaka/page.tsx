@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド【2026年6月】',
+  title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド',
   description:
     '大阪でゲームを高く売れる買取店舗を、エリア別に紹介しています。日本橋でんでんタウン、梅田、難波の人気店舗と特徴を比較し、大阪のローカルチェーンやオンラインで利用できる買取サービスもあわせて紹介します。',
   keywords: ['ゲーム買取 大阪', 'ゲーム買取 おすすめ 大阪', 'ゲーム買取 日本橋', 'ゲーム買取 梅田', 'ゲーム買取 難波'],
   openGraph: {
     images: ['/og.png'],
-    title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド【2026年6月】',
+    title: '大阪のゲーム買取おすすめ店舗｜日本橋・梅田・難波エリア別ガイド',
     description: '大阪のゲーム買取店をエリア別に紹介し、日本橋・梅田・難波の人気店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

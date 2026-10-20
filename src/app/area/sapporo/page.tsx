@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '札幌のゲーム買取おすすめ店舗｜すすきの・大通・札幌駅エリア別ガイド【2026年6月】',
+  title: '札幌のゲーム買取おすすめ店舗｜すすきの・大通・札幌駅エリア別ガイド',
   description:
     '札幌でゲームを高く売れる買取店を、エリア別に紹介しています。すすきの・狸小路（駿河屋ノルベサ店・まんだらけ札幌店）、大通、札幌駅周辺の実店舗を比較し、宅配買取の利用についても解説します。',
   keywords: ['札幌 ゲーム買取', 'すすきの ゲーム 売る', '札幌 ゲーム 高価買取', 'まんだらけ 札幌', '駿河屋 札幌'],
   openGraph: {
     images: ['/og.png'],
-    title: '札幌のゲーム買取おすすめ店舗｜すすきの・大通・札幌駅エリア別ガイド【2026年6月】',
+    title: '札幌のゲーム買取おすすめ店舗｜すすきの・大通・札幌駅エリア別ガイド',
     description: '札幌のゲーム買取店をエリア別に紹介し、すすきの・狸小路・大通の実店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

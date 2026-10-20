@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ワンダーレックスの評判・口コミはひどい？【2026年7月】ゲーム買取の実態・手数料を検証',
+  title: 'ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証',
   description:
     'ワンダーレックス（WonderREX）の評判・口コミについて、「ひどい」「怪しい」と言われる理由を検証しています。運営はREXT株式会社（RIZAPグループ／東京都公安委員会 古物商許可 第307732117178号）で、店頭・宅配・出張の3方式でゲーム・レトロゲームに対応する正規の買取事業者です。',
   keywords: ['ワンダーレックス', 'ワンダーレックス 評判', 'ワンダーレックス 口コミ', 'ワンダーレックス 怪しい', 'ワンダーレックス ゲーム', 'WonderREX 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ワンダーレックスの評判・口コミはひどい？【2026年7月】ゲーム買取の実態を検証',
+    title: 'ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態を検証',
     description: 'ワンダーレックスの評判と「ひどい・怪しい」と言われる理由を、公式情報をもとに検証しています。RIZAPグループで古物商許可を持つ正規事業者です。ゲーム買取の手数料・実態について解説します。',
     type: 'article',
     locale: 'ja_JP',

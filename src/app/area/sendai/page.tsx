@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '仙台のゲーム買取おすすめ店舗｜仙台駅・一番町・泉エリア別ガイド【2026年6月】',
+  title: '仙台のゲーム買取おすすめ店舗｜仙台駅・一番町・泉エリア別ガイド',
   description:
     '仙台でゲームを高く売れる買取店を、エリア別に紹介しています。仙台駅前（ソフマップ・らしんばん）、一番町・クリスロード、泉中央（ゲーム堂・駿河屋）の実店舗を比較し、宅配買取の利用についても解説します。',
   keywords: ['仙台 ゲーム買取', '仙台 ゲーム 売る', '仙台 ゲーム 高価買取', 'ゲーム堂 仙台', '駿河屋 仙台'],
   openGraph: {
     images: ['/og.png'],
-    title: '仙台のゲーム買取おすすめ店舗｜仙台駅・一番町・泉エリア別ガイド【2026年6月】',
+    title: '仙台のゲーム買取おすすめ店舗｜仙台駅・一番町・泉エリア別ガイド',
     description: '仙台のゲーム買取店をエリア別に紹介し、仙台駅前・一番町・泉中央の実店舗を比較しています。',
     type: 'article',
     locale: 'ja_JP',

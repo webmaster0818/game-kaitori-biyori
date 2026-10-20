@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'じゃんぱらのゲーム機買取の評判・口コミ【2026年7月】本体特化の実力と火曜5%アップを検証',
+  title: 'じゃんぱらのゲーム機買取の評判・口コミ｜本体特化の実力と火曜5%アップを検証',
   description:
     'じゃんぱらのゲーム機本体買取を検証しています。Switch 2未使用47,000円・PS5 46,000円等の公開上限価格（2026年7月7日確認）、毎週火曜の中古5%アップ（店頭限定）、ソフマップ完全子会社＝ビックカメラグループという資本関係まで公式情報で解説します。',
   keywords: ['じゃんぱら 買取 評判', 'じゃんぱら ゲーム機 買取', 'じゃんぱら Switch 買取', 'じゃんぱら 宅配買取', 'じゃんじゃん火曜日'],
   openGraph: {
     images: ['/og.png'],
-    title: 'じゃんぱらのゲーム機買取の評判・口コミ【2026年7月】検証',
+    title: 'じゃんぱらのゲーム機買取の評判・口コミ｜検証',
     description: 'ゲーム機本体の買取に特化したじゃんぱらを、公開上限価格と公式情報にもとづいて検証しています。',
     type: 'article',
     locale: 'ja_JP',

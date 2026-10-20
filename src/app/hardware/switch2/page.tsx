@@ -7,13 +7,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場【2026年9月】',
+  title: 'Switch2の買取価格はいくら？今どこが高い・モデル別相場',
   description:
     'Nintendo Switch 2本体の買取価格相場を2026年6月に調査しました。マリオカート ワールドセット・多言語版などモデル別の実勢買取価格、2026年5月25日の定価値上げ（49,980円→59,980円）が相場に与える影響、旧型Switchの売り時の判断について解説します。',
   keywords: ['Switch2 買取', 'スイッチ2 買取価格', 'Switch 2 買取相場', 'Switch2 マリオカートセット 買取', 'Switch 売り時'],
   openGraph: {
     images: ['/og.png'],
-    title: 'Switch2の買取価格相場【2026年6月】値上げ後のモデル別相場と旧型の売り時',
+    title: 'Switch2の買取価格相場｜値上げ後のモデル別相場と旧型の売り時',
     description: 'Switch 2本体のモデル別買取相場（2026年6月調査）と定価値上げの影響、旧型Switchの売り時について解説しています。',
     type: 'article',
     locale: 'ja_JP',
@@ -105,7 +105,7 @@ const faqs = [
 export default function Switch2Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場【2026年6月】定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2の買取価格相場｜定価値上げ後のモデル別相場と旧型Switchの売り時", "datePublished": "2026-05-19", "dateModified": "2026-06-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Switch 2 売り時ガイド' }]} />
 
       {/* Hero */}
@@ -113,7 +113,7 @@ export default function Switch2Page() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(239,68,68,0.2)', color: '#F87171' }}>特集</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            Switch2の買取価格相場【2026年6月】
+            Switch2の買取価格相場
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             2026年5月25日の定価値上げ（49,980円→59,980円）と同梱版の生産終了で、Switch 2の買取相場が動いています。モデル別の実勢買取価格（2026年6月12日調査）と、旧型Switchの売り時判断をまとめました。

@@ -5,13 +5,13 @@ import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: '買取ウリエルの評判・口コミはやばい？【2026年6月】出張買取の実態・対応エリア・費用を検証',
+  title: '買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリア・費用を検証',
   description:
     '買取ウリエルの評判・口コミを調査しています。「やばい」と言われる理由の実態、出張買取の対応エリア（関東・中部・近畿・岡山）、ゲーム買取は関東限定である点、出張費・査定料・キャンセル料が無料である点、クーリングオフへの対応について、公式情報（2026年6月12日確認）をもとに検証します。',
   keywords: ['買取ウリエル', 'ウリエル 口コミ', 'ウリエル ゲーム買取', '出張買取 ゲーム', 'ゲーム 即日現金化'],
   openGraph: {
     images: ['/og.png'],
-    title: '買取ウリエルの評判・口コミはやばい？【2026年6月】検証',
+    title: '買取ウリエルの評判・口コミはやばい？検証',
     description: '買取ウリエルの評判と「やばい」と言われる理由の実態を、公式情報をもとに検証しています。出張買取・即日現金化の条件について解説します。',
     type: 'article',
     locale: 'ja_JP',
