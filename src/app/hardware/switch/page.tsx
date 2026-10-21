@@ -34,7 +34,7 @@ const tips = [
 
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', switchPoint: '複数業者の競争により最高値を狙える', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', switchPoint: '自宅で査定を受け、その場で現金化', rank: 2 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', switchPoint: '自宅で査定を受け、その場で現金化', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', switchPoint: 'ゲーム周辺機器もまとめて売却可能', rank: 3 },
 ];
 
@@ -184,7 +184,7 @@ export default function SwitchPage() {
                   { name: 'ゲオ', good: '~18,000円', fair: '~14,000円', note: 'まとめ売りでUP' },
                   { name: 'ブックオフ', good: '~16,000円', fair: '~12,000円', note: '店舗により変動' },
                   { name: '駿河屋', good: '~17,000円', fair: '~13,000円', note: 'レトロに強い' },
-                  { name: '買取ウリエル', good: '~19,000円', fair: '~15,000円', note: '出張対応' },
+                  { name: '買取ウリエル', good: '価格表非公開', fair: '価格表非公開', note: '出張査定で提示（ゲームは1都3県のみ）' },
                 ].map((row) => (
                   <tr key={row.name}>
                     <td className="font-bold">{row.name}</td>

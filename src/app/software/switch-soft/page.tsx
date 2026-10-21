@@ -41,7 +41,7 @@ const features = [
 
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'ソフト1本から複数社を比較して最高値を確認可能', rank: 1 },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '関東・関西', method: '出張買取', point: '大量のソフトをまとめて即日現金化', rank: 2 },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', point: '大量のソフトをまとめて即日現金化', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム・トレカ・フィギュアもまとめて売却可能', rank: 3 },
 ];
 
