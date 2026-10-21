@@ -38,13 +38,13 @@ const targets = [
   { category: '周辺機器', items: ['コントローラー', 'ヘッドセット', 'アーケードスティック', 'メモリーカード', 'ケーブル・充電器'] },
 ];
 
-const faqs = [
+const faqs: { q: string; a: string; url?: string }[] = [
   { q: 'ヒカカク！の利用に料金はかかりますか？', a: 'いいえ、無料です。査定の申込みから結果の受取りまで、利用料・手数料はかかりません。何度利用しても無料です。' },
   { q: '査定結果はどのくらいで届きますか？', a: '早い業者では当日中に査定結果が届きます。通常は1〜3営業日程度です。依頼する業者数が多いほど、すべての結果が揃うまでに時間がかかる場合があります。' },
   { q: '査定後にキャンセルできますか？', a: 'はい、査定結果に納得できない場合はキャンセルできます。査定は見積もりであり、買取を強制されることはありません。' },
   { q: 'レトロゲームでも高値がつきますか？', a: 'はい、ヒカカク！にはレトロゲーム専門の買取業者が多数参加しています。特に箱・説明書付きの完品や希少タイトルは、一般的なリサイクルショップより大幅に高い査定がつくことがあります。' },
   { q: '壊れたゲーム機も査定してもらえますか？', a: 'ジャンク品の買取に対応している業者も参加しています。故障の程度によって異なりますが、まずは査定を申し込むことをおすすめします。部品取りを目的とした買取が行われる場合もあります。' },
-  { q: '個人情報は安全ですか？', a: 'ヒカカク！はプライバシーポリシーに基づき個人情報を適切に管理しています。査定情報は参加業者にのみ共有され、第三者への提供はありません。SSLによる暗号化通信にも対応しています。' },
+  { q: '個人情報は安全ですか？', a: 'ヒカカク！のプライバシーポリシーをご確認ください。', url: 'https://hikakaku.com/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/' },
 ];
 
 export default function HikakakuReviewPage() {
@@ -234,7 +234,7 @@ export default function HikakakuReviewPage() {
             {faqs.map((faq, i) => (
               <details key={i} className="faq-item">
                 <summary>{faq.q}</summary>
-                <div className="faq-answer">{faq.a}</div>
+                <div className="faq-answer">{faq.a}{faq.url && (<><br /><a href={faq.url} target="_blank" rel="noopener noreferrer" className="underline break-all">{decodeURI(faq.url)}</a></>)}</div>
               </details>
             ))}
           </div>
@@ -247,7 +247,7 @@ export default function HikakakuReviewPage() {
                 mainEntity: faqs.map((faq) => ({
                   '@type': 'Question',
                   name: faq.q,
-                  acceptedAnswer: { '@type': 'Answer', text: faq.a },
+                  acceptedAnswer: { '@type': 'Answer', text: faq.url ? `${faq.a}${decodeURI(faq.url)}` : faq.a },
                 })),
               }),
             }}
