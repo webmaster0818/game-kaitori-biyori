@@ -4,56 +4,93 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
+// 公式サイト・第三者サイト・駿河屋の確認日（このページの数値はすべてこの日に確認）
+const CHECKED = '2026年10月21日';
+
 export const metadata: Metadata = {
-  title: '買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリア・費用を検証',
+  title: 'ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を公式と10/21実測で検証',
   description:
-    '買取ウリエルの評判・口コミを調査しています。「やばい」と言われる理由の実態、出張買取の対応エリア（関東・中部・近畿・岡山）、ゲーム買取は関東限定である点、出張費・査定料・キャンセル料が無料である点、クーリングオフへの対応について、公式情報（2026年6月12日確認）をもとに検証します。',
-  keywords: ['買取ウリエル', 'ウリエル 口コミ', 'ウリエル ゲーム買取', '出張買取 ゲーム', 'ゲーム 即日現金化'],
+    '買取専門店ウリエルのゲーム買取を公式サイトと口コミ件数で検証しています（2026年10月21日確認）。ゲームの対象は1都3県、買取方法は出張・催事・店舗（川崎）で宅配はありません。ヒカカクの口コミは3件・2.67点、ゲームソフトはクーリングオフ対象外です。',
+  keywords: ['ウリエル 買取', '買取ウリエル', 'ウリエル 評判', 'ウリエル 口コミ', 'ウリエル ゲーム買取', 'ウリエル 店舗'],
   openGraph: {
     images: ['/og.png'],
-    title: '買取ウリエルの評判・口コミはやばい？検証',
-    description: '買取ウリエルの評判と「やばい」と言われる理由の実態を、公式情報をもとに検証しています。出張買取・即日現金化の条件について解説します。',
+    title: 'ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を検証',
+    description: '買取専門店ウリエルのゲーム買取の条件・口コミ件数・価格例を、公式サイトと駿河屋の実測（2026年10月21日）で検証しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
+const cellTh = 'text-left py-2 pr-4 whitespace-nowrap align-top';
+const rowBorder = { borderColor: 'rgba(0,0,0,0.06)' };
+const thColor = { color: 'var(--color-deep-blue)' };
+const linkColor = { color: 'var(--color-electric-green)' };
+
+// ゲーム買取の条件（公式サイト 2026-10-21 確認）
+const summary: { label: string; value: string }[] = [
+  { label: 'ゲームの対象地域', value: '東京都・神奈川県・千葉県・埼玉県（ゲーム買取ページのFAQに明記）' },
+  { label: '買取方法', value: '出張買取・催事買取・店舗買取の3種類。宅配買取は買取方法の一覧に掲載されていません' },
+  { label: '費用', value: '出張料・査定料・買取手数料・キャンセル料は無料' },
+  { label: '支払い', value: '買取成立後、その場で現金払い（振込の案内はありません）' },
+  { label: '出張の日時', value: '最短で翌日以降。訪問時間は原則10:00〜17:00（時間外は要相談）' },
+  { label: '店舗', value: 'ウリエル川崎 ラ チッタデッラ店（11:00〜21:00・最終受付20:00・要予約）。川崎店以外は準備中' },
+  { label: 'クーリングオフ', value: '出張買取のみ対象（店舗買取は対象外）。ゲームソフトは法令上の対象外の物品です（下記で説明）' },
+  { label: '利用条件', value: '本人確認書類が必要。18歳未満は利用不可、18・19歳は同意書または委任状が必要' },
+  { label: 'ゲーム機の注意点', value: 'データを初期化していないゲーム機・ソフトは買取を断ると公式に明記' },
+  { label: '価格表', value: 'ゲームの買取価格表は公開されていません（公式の買取事例は2022〜2023年の3件のみ）' },
+];
+
+// ウリエル公式の買取事例（ゲーム買取ページ掲載）と、駿河屋の買取検索に表示された価格（2026-10-21）
+const hardwareExamples = [
+  { uriel: '初代PlayStation 機器 数点：3,000円（2022年4月4日・東京都港区）', ref: 'プレイステーション本体 SCPH-7000：5,100円／SCPH-9000：6,500円（いずれも本体1台）' },
+  { uriel: 'PlayStation 4 機器 数点：10,500円（2023年6月1日・千葉県千葉市）', ref: 'PS4本体 ジェットブラック 500GB（CUH-2200AB01）：14,000円' },
+  { uriel: 'Nintendo Switch本体と周辺機器 数点：19,000円（2022年2月17日・横浜市）', ref: 'Switch本体 ネオン 2019年8月モデル（HAD-S-KABAH）：12,000円／有機ELモデル ホワイト（HEG-S-KAAAA）：14,000円' },
+];
+
+// ウリエル公式が「高値が付きやすい」と挙げるシリーズの代表作（駿河屋 2026-10-21）
+const softExamples = [
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム［通常版］', hw: 'Switch', price: '2,500円' },
+  { title: 'ポケットモンスター スカーレット', hw: 'Switch', price: '2,000円' },
+  { title: 'ドラゴンクエストXI 過ぎ去りし時を求めて S 新価格版', hw: 'Switch', price: '2,200円' },
+  { title: 'ファイナルファンタジーVII リバース［新価格版］', hw: 'PS5', price: '1,800円' },
+];
+
 const features = [
-  { title: '出張買取対応', description: '自宅にいながらプロの査定士が訪問して査定・買取を行います。重いゲーム機や大量のソフトを運ぶ手間がなく、忙しい方や荷物が多い方に適しています。予約はWebから行えます。' },
-  { title: '経験豊富な査定士', description: '買取業界で経験を積んだプロの査定士が担当します。ゲームだけでなく幅広いジャンルの知識を持つ査定士が、付加価値も踏まえて適正な価格で査定します。' },
-  { title: '即日現金化', description: '出張買取なら査定後その場で現金を受け取れます。急な出費や引っ越し前の処分など、すぐに現金が必要な場面に適しています。査定額を聞いてから断ってもキャンセル料はかかりません。' },
-  { title: '買取方法は出張・催事の2種類', description: '現在の買取方法は出張買取と催事買取の2種類です（公式サイトの宅配・店頭買取ページは2026年6月時点で案内終了）。出張は関東・中部・近畿・岡山に対応していますが、ゲーム買取の対象エリアは東京・神奈川・千葉・埼玉と公式に記載されています。' },
+  { title: '出張買取が中心', description: '査定士が自宅を訪問し、その場で査定・現金払いを行います。訪問当日に査定する品物を追加することもできます。玄関先での査定や女性スタッフの希望も、事前に伝えることができると公式に案内されています。' },
+  { title: 'ゲーム以外とまとめて売れる', description: '公式の買取品目一覧には、着物・切手・古銭・ブランド品・貴金属・お酒・時計・オーディオ・楽器・カメラ・ホビーなど20項目（ゲーム・遺品整理を含む）が掲載されています。公式FAQでは、ゲームとまとめて売ることで高値が付く場合があると説明しています。' },
+  { title: '費用は無料・その場で現金', description: '出張料・査定料・買取手数料・キャンセル料は無料です。査定額を聞いてから断ることもできます。店舗買取でも、買取が成立した場合はその場で現金を受け取れます。' },
+  { title: 'ゲームの対象は1都3県', description: '出張買取の対応エリアは関東・中部・近畿・中国・四国・九州（沖縄県を除く）に広がっていますが、ゲームの買取は東京・神奈川・千葉・埼玉に限られています。1都3県以外の方は、宅配買取に対応したゲーム専門店をご検討ください。' },
 ];
 
 const steps = [
-  { step: 1, title: 'Web・電話で申込み', description: '公式サイトのフォームまたは電話で出張買取を申し込みます。希望日時や売りたい品目をお伝えください。最短で翌日以降の訪問に対応しており、相談のみの利用も可能です。' },
-  { step: 2, title: '査定士が訪問', description: '指定日時に査定士が自宅を訪問します。玄関先での査定や女性スタッフの指名も可能と公式に明記されています。' },
-  { step: 3, title: 'その場で査定・価格提示', description: '一点一点丁寧に査定し、その場で買取価格を提示します。不明点があれば質問できます。まとめ売りでの上乗せ交渉も可能です。' },
-  { step: 4, title: '現金受取り・完了', description: '査定額に納得した場合は、その場で現金を受け取ります。キャンセルは無料で、買取成立後も8日以内ならクーリングオフ制度の対象です。' },
+  { step: 1, title: '電話・メール・LINEで申込み', description: '公式サイトのフリーダイヤル（24時間受付・年末年始を除く）、メールフォーム、LINEから申し込みます。希望日時と売りたい品物を伝えます。査定のみの依頼もできます。電話だけでの査定は受け付けていません。' },
+  { step: 2, title: '査定士が訪問', description: '最短で翌日以降、原則10:00〜17:00の間に訪問します。予約状況や訪問先によっては希望日に対応できない場合があります。' },
+  { step: 3, title: 'その場で査定・価格提示', description: '査定士が品物を確認し、その場で買取価格を提示します。査定額の根拠を説明する方針が公式に示されています。納得できない場合は断ることができ、費用はかかりません。' },
+  { step: 4, title: '本人確認・現金受取り', description: '本人確認書類を提示し（コピーを取られます）、その場で現金を受け取ります。出張買取は契約書面を受け取った日から8日以内のクーリングオフが可能ですが、ゲームソフトは対象外の物品です。' },
 ];
 
 const targets = [
-  { category: 'ゲーム関連', items: ['ゲーム機本体（Switch・PS5・PS4等）', 'ゲームソフト各種', 'コントローラー・周辺機器', 'ゲーミングデバイス'] },
-  { category: 'ホビー・趣味', items: ['フィギュア', 'プラモデル', 'トレーディングカード', 'DVD・Blu-ray'] },
-  { category: 'その他対応品目', items: ['ブランド品', '貴金属・ジュエリー', '家電製品', '楽器', '骨董品・美術品'] },
+  { category: 'ゲーム（公式に記載のあるもの）', items: ['ゲーム機本体（新作・中古・レトロ）', 'ゲームソフト・大量のゲームカセット', 'コントローラーのみ・コード類', '壊れたゲーム機（状態により査定）'] },
+  { category: 'ホビー・趣味', items: ['ホビー・フィギュア', 'カメラ', 'オーディオ・レコード', '楽器', 'ゴルフ用品'] },
+  { category: 'その他の主な品目', items: ['着物・毛皮', '切手・古銭', 'ブランド品・ブランド食器', '金・貴金属・宝石・時計', 'お酒・香水・骨董品'] },
 ];
 
 const faqs = [
-  { q: '出張買取は本当に無料ですか？', a: 'はい、出張費・査定料・キャンセル料すべて無料です。査定結果に納得できなければ、その場でお断りいただいて構いません。費用は一切発生しません。' },
-  { q: '出張買取の対応エリアはどこですか？', a: '公式サイトでは関東（茨城・栃木・埼玉・千葉・東京・神奈川）、中部（岐阜・静岡・愛知）、近畿（三重・滋賀・京都・大阪・兵庫・奈良・和歌山）、中国（岡山）が出張対応エリアとされています。ただしゲーム買取ページの対象エリアは東京・神奈川・千葉・埼玉の1都3県に限定されているため、ゲーム目的の方は事前確認をおすすめします。' },
-  { q: '宅配買取や店頭買取はできますか？', a: '2026年6月時点で、公式サイトの宅配買取・店頭買取の案内ページは閉鎖されており、現在の買取方法は出張買取と催事買取の2種類です。宅配で売りたい場合は宅配に対応した他社（カイトリワールド・ゲーム王国等）の利用をご検討ください。' },
-  { q: 'ウリエルは「やばい」「怪しい」という評判は本当ですか？', a: '運営元は株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）で、正規の買取事業者です。「やばい」と言われる背景には、出張買取業界全体への警戒感、フリマ相場と買取査定額の差、対面交渉で断りにくいと感じる人がいることが挙げられます。出張費・査定料・キャンセル料は無料で、クーリングオフにも対応しているため、査定額に納得できなければその場で断れば費用は発生しません。' },
-  { q: 'ゲーム以外のものも一緒に売れますか？', a: 'はい、買取ウリエルは20種類以上の品目に対応しています。ブランド品・貴金属・家電・楽器など、ゲームと一緒にまとめて売ることで査定額がアップする場合もあります。' },
-  { q: '査定にはどのくらいの時間がかかりますか？', a: '出張買取の場合、品数にもよりますが通常30分〜1時間程度です。ゲームソフトが大量にある場合はもう少し時間がかかることがあります。事前に品数をお伝えいただけるとスムーズです。' },
-  { q: '箱や付属品がなくても買取してもらえますか？', a: 'はい、箱・説明書・付属品がなくても買取可能です。ただし、付属品が揃っている方が査定額は高くなります。特にゲーム機本体は付属品の有無が査定額に大きく影響します。' },
-  { q: '楽器も買い取ってもらえますか？', a: 'はい、ギター・ベース・バイオリンなどの弦楽器、サックス・フルートなどの管楽器、三味線・琴などの和楽器、電子楽器が買取対象です。ただし楽器買取の対応エリアは公式ページで関東（東京・埼玉・千葉・神奈川）限定とされています。ゲームと楽器をまとめて売れる点はウリエルの特徴です。' },
+  { q: 'ウリエルでゲームを売ると、どのくらいの金額になりますか？', a: 'ウリエルはゲームの買取価格表を公開していないため、事前に金額を確認する方法は出張査定のみです。公式サイトの買取事例は、初代PlayStation機器数点3,000円（2022年）、PS4機器数点10,500円（2023年）、Switch本体と周辺機器数点19,000円（2022年）の3件です。売る前に、駿河屋などゲーム専門店の公開価格を調べておくと、提示額と比べて判断しやすくなります（当サイトが2026年10月21日に確認した価格は本文の表をご覧ください）。' },
+  { q: 'ゲームの出張買取はどの地域で利用できますか？', a: 'ゲームの買取は東京都・神奈川県・千葉県・埼玉県が対象です（公式ゲーム買取ページのFAQ・2026年10月21日確認）。出張買取全体の対応エリアは関東・中部・近畿・中国・四国・九州（沖縄県を除く）ですが、ゲームは1都3県に限られます。' },
+  { q: 'ウリエルに店舗はありますか？', a: '店舗買取は「ウリエル川崎 ラ チッタデッラ店」（神奈川県川崎市川崎区小川町4-1 ラ チッタデッラ内 マッジョーレ2階・11:00〜21:00・最終受付20:00）で行っています。事前の電話予約が必要で、川崎店以外の店舗は準備中と案内されています。店舗の買取品目一覧にゲームの個別表記はないため、ゲームを持ち込む場合は予約時にご確認ください。' },
+  { q: '宅配買取はできますか？送料や振込はどうなりますか？', a: '2026年10月21日時点で、公式サイトの買取方法の一覧は出張・催事・店舗の3種類で、宅配買取は掲載されていません。そのため送料・振込のタイミングに関する案内もなく、支払いはその場での現金払いです。宅配で売りたい場合は、宅配買取に対応したゲーム専門店をご検討ください。' },
+  { q: '売った後にクーリングオフはできますか？', a: 'ウリエルの公式ページでは、クーリングオフは出張買取のみ適用（店舗買取は対象外）と案内しています。また、特定商取引法施行令第34条で定める物品の具体例（消費者庁）には「家庭用コンピュータゲームに用いられるプログラムを記録した物」が含まれており、ゲームソフトは訪問購入のクーリングオフの対象外です。ゲーム機本体はこの具体例に記載がありませんが、契約前に書面と査定士の説明で扱いをご確認ください。' },
+  { q: 'ウリエルは「やばい」「怪しい」のでしょうか？', a: '運営元の株式会社クオーレは、愛知県公安委員会の古物商許可（第542791100800号）を取得し、2011年3月に設立された会社です。出張料・査定料・キャンセル料は無料で、査定額を聞いてから断ることができます。一方、ヒカカクの口コミは3件・総合2.67点と件数が少なく、ゲームに関する投稿はありません。評判を判断する材料が少ないため、提示額は他社の公開価格と比べてから決めることをおすすめします。' },
+  { q: 'キャンペーンは実施されていますか？', a: '2026年10月は、広告やWebサイトを見て出張買取を申し込み、1回の成約金額が5,000円以上の方から抽選で2名に買取金額を含めて7倍の金額を還元するキャンペーンが案内されています（対象期間 2026年10月1日〜31日）。抽選のため、全員の買取額が上がるものではありません。ゲーム買取ページには「出張買取限定で買取価格20%UP」「30%UP」の記載もありますが、条件や期間の記載がないため、申込み時にご確認ください。' },
+  { q: '売る前に準備しておくことはありますか？', a: 'ゲーム機・ソフトのデータ初期化が必要です。公式サイトでは、初期化されていないゲーム機・ソフトは個人情報保護の観点から買取を断ると明記しています。あわせて運転免許証・マイナンバーカードなどの本人確認書類をご用意ください。付属品がなくても買取は可能ですが、揃っている方が高価買取につながりやすいと案内されています。' },
 ];
 
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミはやばい？出張買取の実態・対応エリアを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-02", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を公式と実測で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
@@ -62,12 +99,13 @@ export default function UrielReviewPage() {
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="rank-badge rank-badge-2">2</span>
             <span className="tag-pill text-xs" style={{ background: 'rgba(245,158,11,0.2)', color: '#FBBF24' }}>おすすめ2位</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(255,255,255,0.12)', color: '#E2E8F0' }}>公式・口コミ確認日 {CHECKED}</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            買取ウリエル<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミのレビュー</span>
+            買取ウリエル<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミとゲーム買取の条件</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            買取ウリエルは、出張買取に強みを持つ総合買取サービスです。経験豊富な査定士が自宅まで訪問し、ゲームを含む20種類以上の品目をその場で査定・即日現金化します。関東・関西エリアで利用でき、まとめて売りたい方に特におすすめのサービスです。
+            買取専門店ウリエルは、株式会社クオーレが運営する出張買取中心の総合買取サービスです。ゲームの買取は東京・神奈川・千葉・埼玉が対象で、査定士が自宅を訪問し、その場で現金を支払います。当サイトでは、公式サイトの条件・口コミの件数・専門店の公開価格を{CHECKED}に確認し、このページに掲載しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-2.5 px-6">
@@ -84,12 +122,181 @@ export default function UrielReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>1都3県で出張買取・即日現金化を希望する方に適した、古物商許可を持つ正規事業者</h2>
-            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              買取ウリエルは株式会社クオーレ（愛知県公安委員会 古物商許可 第542791100800号・2011年設立）が運営する正規の買取事業者です。出張費・査定料・キャンセル料はすべて無料で、買取成立後8日以内のクーリングオフにも対応しているため、「やばい・怪しい」という検索が出るほどの根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。ゲーム買取の対象エリアが<strong>東京・神奈川・千葉・埼玉</strong>に限定されている点と、宅配・店頭は2026年6月時点で案内を終了している点は、事前にご確認ください。重い荷物を運ばずにその場で現金化したい1都3県の方に適しています。
+            <h2 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>1都3県で、ゲームとほかの品物を自宅でまとめて売りたい方に向いたサービスです</h2>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
+              出張料・査定料・キャンセル料は無料で、査定額を聞いてから断ることができます。一方で、ゲームの買取価格表は公開されておらず、第三者サイトの口コミも少ないため、金額を事前に比べにくい点にご注意ください。根拠は以下のとおりです。
             </p>
+            <ul className="text-sm leading-relaxed space-y-1.5" style={{ color: 'var(--color-text-light)' }}>
+              <li>・<strong>対象地域</strong>：ゲームの買取は東京・神奈川・千葉・埼玉のみです（出張買取全体は沖縄県を除く関東〜九州）。</li>
+              <li>・<strong>買取方法</strong>：出張・催事・店舗（川崎）の3種類です。宅配買取は掲載されていないため、送料や振込の案内はありません。</li>
+              <li>・<strong>口コミ</strong>：ヒカカクの口コミは3件・総合2.67点で、ゲームに関する投稿は0件です。公式サイトのお客様の声274件のうち、ゲームの声は3件です。</li>
+              <li>・<strong>クーリングオフ</strong>：出張買取のみ対象です。ゲームソフトは法令上、訪問購入のクーリングオフの対象外です。</li>
+              <li>・<strong>価格</strong>：公式の買取事例は2022〜2023年の3件のみです。専門店の公開価格（{CHECKED}実測）を本文に掲載しています。</li>
+            </ul>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>現在最も高い業者を価格で確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額をシミュレーションする</Link>
+              関連：<Link href="/price-index/" style={linkColor}>現在最も高い業者を価格で確認する</Link>／<Link href="/condition-guide/" style={linkColor}>箱なし・傷ありでも売れるか状態別マップで確認する</Link>／<Link href="/compare/hikakaku-vs-uriel/" style={linkColor}>ヒカカク！とウリエルを比較する</Link>
+            </p>
+          </div>
+        </section>
+
+        {/* Summary table */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ウリエルのゲーム買取の条件一覧（{CHECKED}確認）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                {summary.map((r, i) => (
+                  <tr key={r.label} className={i < summary.length - 1 ? 'border-b' : ''} style={rowBorder}>
+                    <th className={cellTh} style={thColor}>{r.label}</th>
+                    <td className="py-2">{r.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              出典：買取専門店ウリエル公式サイトの<a href="https://www.uriel-cuore.co.jp/hobby/game/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ゲーム買取</a>・<a href="https://www.uriel-cuore.co.jp/visit/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>出張買取</a>・<a href="https://www.uriel-cuore.co.jp/shop/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>店頭・持込買取</a>・<a href="https://www.uriel-cuore.co.jp/coolingoff/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>クーリングオフ</a>の各ページ（{CHECKED}確認）。条件は変更される場合があるため、ご利用前に公式サイトにて最新情報をご確認ください。
+            </p>
+          </div>
+        </section>
+
+        {/* Price examples */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />買取価格の例：ウリエルの公式事例と専門店の公開価格（{CHECKED}実測）</h2>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+            ウリエルはゲームの買取価格表を公開していません。そのため当サイトでは、公式サイトに掲載されている買取事例と、同じ種類のゲーム機について駿河屋の買取検索に表示された価格を並べて掲載しています。出張査定の提示額を判断する際の目安としてご利用ください。
+          </p>
+          <div className="glass-card p-6 overflow-x-auto mb-4">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                  <th className="text-left py-2 pr-4" style={thColor}>ウリエル公式の買取事例（買取日・地域）</th>
+                  <th className="text-left py-2" style={thColor}>駿河屋の買取価格（{CHECKED}）</th>
+                </tr>
+              </thead>
+              <tbody>
+                {hardwareExamples.map((r, i) => (
+                  <tr key={r.uriel} className={i < hardwareExamples.length - 1 ? 'border-b' : ''} style={rowBorder}>
+                    <td className="py-2 pr-4 align-top">{r.uriel}</td>
+                    <td className="py-2 align-top">{r.ref}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              ウリエルの事例は「機器 数点」「本体と周辺機器 数点」の合計額で、点数・型番・状態は公開されていません。買取日も2022〜2023年のため、駿河屋の現在価格とは条件が異なり、金額の高低を直接比べることはできません。駿河屋の価格は公式の買取検索に表示された金額で、付属品・状態の条件は駿河屋の規定によります。
+            </p>
+          </div>
+          <div className="glass-card p-6 overflow-x-auto">
+            <h3 className="font-bold mb-2" style={thColor}>ウリエルが「高値が付きやすい」と挙げるシリーズの代表作</h3>
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              ウリエルのゲーム買取ページでは、ドラゴンクエスト・ファイナルファンタジー・ポケットモンスター・ゼルダの伝説を高値が付きやすいタイトルとして挙げています。各シリーズの代表作について、駿河屋の買取価格を確認した結果は以下のとおりです。
+            </p>
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                  <th className="text-left py-2 pr-4" style={thColor}>タイトル</th>
+                  <th className="text-left py-2 pr-4" style={thColor}>機種</th>
+                  <th className="text-right py-2" style={thColor}>駿河屋の買取価格</th>
+                </tr>
+              </thead>
+              <tbody>
+                {softExamples.map((r, i) => (
+                  <tr key={r.title} className={i < softExamples.length - 1 ? 'border-b' : ''} style={rowBorder}>
+                    <td className="py-2 pr-4">{r.title}</td>
+                    <td className="py-2 pr-4 whitespace-nowrap">{r.hw}</td>
+                    <td className="py-2 text-right font-bold whitespace-nowrap">{r.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              出典：<a href="https://www.suruga-ya.jp/kaitori/kaitori.html" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>駿河屋公式の買取検索</a>（{CHECKED}閲覧）、<a href="https://www.uriel-cuore.co.jp/hobby/game/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ウリエル公式 ゲーム買取ページ</a>（同日確認）。ソフト1本あたりの価格は1,800〜2,500円で、点数が少ない場合は出張よりも宅配・店頭の専門店の方が金額を確認しやすい場合があります。価格は日々変動するため目安としてご覧ください。ほかの業者の価格は<Link href="/price-index/" style={linkColor}>買取価格インデックス</Link>に掲載しています。
+            </p>
+          </div>
+        </section>
+
+        {/* Reviews */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判：件数と評点（{CHECKED}確認）</h2>
+          <div className="glass-card p-6 overflow-x-auto mb-4">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                  <th className="text-left py-2 pr-4" style={thColor}>掲載先</th>
+                  <th className="text-left py-2 pr-4" style={thColor}>評価・件数</th>
+                  <th className="text-left py-2" style={thColor}>内訳</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b" style={rowBorder}>
+                  <td className="py-2 pr-4 align-top">ヒカカク！（投稿型の口コミサイト）</td>
+                  <td className="py-2 pr-4 align-top font-bold whitespace-nowrap">2.67（3件）</td>
+                  <td className="py-2 align-top">★5 1件／★4 0件／★3 0件／★2 1件／★1 1件。投稿日は2022年9月9日（オーディオ機器・★5）、2022年9月30日（★1）、2025年8月20日（時計・アクセサリー・バッグ・★2）で、ゲームの投稿はありません</td>
+                </tr>
+                <tr>
+                  <td className="py-2 pr-4 align-top">ウリエル公式「お客様の声」</td>
+                  <td className="py-2 pr-4 align-top font-bold whitespace-nowrap">274件（ゲーム3件）</td>
+                  <td className="py-2 align-top">全28ページを当サイトで集計。ゲームの声は埼玉県春日部市（30代男性）・横浜市（50代男性）・東京都大田区（60代男性）の3件で、いずれも出張買取です。運営会社が掲載している声である点にご留意ください</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              出典：<a href="https://hikakaku.com/company/23566/reviews/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ヒカカク！ウリエルのクチコミ一覧</a>、<a href="https://www.uriel-cuore.co.jp/voice/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ウリエル公式 お客様の声</a>（いずれも{CHECKED}確認）。件数・評点は確認日時点のものです。
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>公式のゲームの声に書かれている内容</h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・連絡した当日に返事があり、日程調整で待たされなかった（春日部市）</li>
+                <li>・初めての利用で、想像していた以上の金額だった（横浜市）</li>
+                <li>・壊れたソフトや古いソフトも買い取ってもらえた（大田区）</li>
+              </ul>
+            </div>
+            <div className="glass-card p-6">
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>ヒカカクの低評価2件に書かれている内容</h3>
+              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・時計は1本数千円、バッグは千円の査定で、素材が不明なアクセサリーは査定不可だった（★2・2025年）</li>
+                <li>・「非常に不満。口車に乗って売ってしまった。」（★1・2022年・本文はこの1文のみ）</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+            上記は各掲載先の投稿を当サイトで要約したものです。第三者サイトの件数が3件と少なく、ゲームの投稿もないため、評判だけでゲームの査定額の傾向を判断することはできません。
+          </p>
+        </section>
+
+        {/* Suspicious? */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />「やばい・怪しい」と検索される理由と確認できる事実</h2>
+          <div className="space-y-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={thColor}>理由1：出張買取そのものへの警戒感</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>過去に問題となった強引な訪問買取の印象から、出張買取を警戒する方は少なくありません。ウリエルを運営する株式会社クオーレは古物商許可（愛知県公安委員会 第542791100800号）を取得しています。出張買取は利用者からの申込みを受けて訪問する方式で、出張料・査定料・キャンセル料は無料です。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={thColor}>理由2：査定額を事前に確認できない</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>ゲームの買取価格表がなく、電話だけの査定も受け付けていないため、金額は訪問後に初めて分かります。ヒカカクの低評価2件も査定額や対応への不満でした。訪問前に専門店の公開価格を調べておくと、提示額が妥当かどうかを判断しやすくなります。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={thColor}>理由3：対面では断りにくいと感じる方がいる</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>査定額に納得できない場合は、その場で断ることができ、キャンセル料はかかりません。ただし、ゲームソフトはクーリングオフの対象外のため、売った後に取り消すことは前提にせず、その場で判断することが大切です。玄関先での査定や女性スタッフの希望も事前に伝えることができます。</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Cooling-off */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />クーリングオフの扱い：ゲームソフトは対象外です</h2>
+          <div className="glass-card p-6">
+            <ul className="text-sm leading-relaxed space-y-2" style={{ color: 'var(--color-text-light)' }}>
+              <li>・ウリエルの公式ページでは、クーリングオフは<strong>出張買取のみ</strong>適用で、店舗買取は対象外と案内しています。</li>
+              <li>・訪問購入（出張買取）のクーリングオフは、契約書面を受け取った日から8日以内に行うことができます。</li>
+              <li>・消費者庁が公開している「特定商取引に関する法律施行令第34条で規定する物品の具体例」には、CD・DVD・ブルーレイディスクとともに「コンピューター用ソフト（家庭用コンピュータゲームに用いられるプログラムを記録した物を含む。）」が記載されています。このため<strong>ゲームソフトは訪問購入の規制の対象外</strong>で、クーリングオフもできません。</li>
+              <li>・ゲーム機本体は同じ具体例の一覧に記載がありません。本体を含めて売る場合は、契約前に書面と査定士の説明でクーリングオフの扱いをご確認ください。</li>
+            </ul>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              出典：<a href="https://www.uriel-cuore.co.jp/coolingoff/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ウリエル公式 クーリングオフ</a>、<a href="https://www.no-trouble.caa.go.jp/what/doortodoorpurchases/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>消費者庁 特定商取引法ガイド「訪問購入」</a>および同ページ掲載の<a href="https://www.no-trouble.caa.go.jp/pdf/20230421la02_10.pdf" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>施行令第34条で規定する物品の具体例（PDF）</a>（いずれも{CHECKED}確認）。個別の取引への適用は、契約書面の記載や消費生活センターへの相談でご確認ください。
             </p>
           </div>
         </section>
@@ -100,7 +307,7 @@ export default function UrielReviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {features.map((f) => (
               <div key={f.title} className="glass-card p-5">
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>{f.title}</h3>
+                <h3 className="font-bold mb-2" style={thColor}>{f.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>{f.description}</p>
               </div>
             ))}
@@ -113,16 +320,15 @@ export default function UrielReviewPage() {
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <tbody>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社クオーレ（CUORE GROUP・2011年3月設立）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">愛知県大府市柊山町8-53-2</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">愛知県公安委員会 第542791100800号</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方法</th><td className="py-2">出張買取・催事買取（宅配・店頭の案内ページは2026年6月時点で終了）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張エリア</th><td className="py-2">関東（茨城・栃木・埼玉・千葉・東京・神奈川）/中部（岐阜・静岡・愛知）/近畿（三重・滋賀・京都・大阪・兵庫・奈良・和歌山）/岡山 ※ゲーム買取の対象エリアは東京・神奈川・千葉・埼玉</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">出張費・査定料・キャンセル料すべて無料。その場で現金払い</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>その他</th><td className="py-2">女性スタッフ指名・玄関先査定可。買取成立後8日以内はクーリングオフ対応</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>運営会社</th><td className="py-2">株式会社クオーレ（2011年3月設立・資本金5,000万円）</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>所在地</th><td className="py-2">愛知県大府市柊山町8-53-2（東京支社：東京都品川区東品川／東京営業所：品川区南大井／大阪営業所：大阪市天王寺区）</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>古物商許可</th><td className="py-2">愛知県公安委員会 第542791100800号</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>買取方法</th><td className="py-2">出張買取・催事買取（関東の商業施設・スーパー等で開催）・店舗買取（川崎 ラ チッタデッラ店）</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>出張エリア</th><td className="py-2">関東・中部・近畿・中国・四国・九州（沖縄県を除く）。ゲームの買取は東京・神奈川・千葉・埼玉</td></tr>
+                <tr><th className={cellTh} style={thColor}>受付</th><td className="py-2">フリーダイヤル 0120-242-556（24時間受付・年末年始を除く）・メール・LINE</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（会社概要・出張買取・ゲーム買取ページ）2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://www.uriel-cuore.co.jp/company/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>買取専門店ウリエル公式 会社概要</a>・出張買取・催事買取・店頭買取の各ページ（{CHECKED}確認）。</p>
           </div>
         </section>
 
@@ -132,32 +338,13 @@ export default function UrielReviewPage() {
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <tbody>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">無料</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料。査定額を聞いた後の辞退も可能で、買取成立後8日以内はクーリングオフに対応</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料</th><td className="py-2">－（出張買取のため該当なし。宅配・店頭は2026年6月時点で案内終了）</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>出張費</th><td className="py-2">無料</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>査定料</th><td className="py-2">無料（店舗買取・催事買取も無料）</td></tr>
+                <tr className="border-b" style={rowBorder}><th className={cellTh} style={thColor}>キャンセル料</th><td className="py-2">無料。査定額を聞いた後に断ることができます</td></tr>
+                <tr><th className={cellTh} style={thColor}>返送料</th><td className="py-2">該当なし（宅配買取の案内がないため）。店舗で値段が付かなかった品物は持ち帰りとなります</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取ウリエル公式サイト（出張費・査定料・キャンセル料すべて無料）2026年6月12日確認。ゲーム単体を高く売りたい場合は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>でゲーム専門店の価格と比較することをおすすめします。</p>
-          </div>
-        </section>
-
-        {/* Suspicious? */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />「やばい・怪しい」と言われる理由と実態</h2>
-          <div className="space-y-4">
-            <div className="glass-card p-5">
-              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由1：出張買取業界全体への警戒感</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>過去に業界で問題になった「押し買い」のイメージから、出張買取そのものを警戒する方が多いのが実情です。ウリエル自体は古物商許可を持つ正規事業者で、査定額を聞いてから断ってもキャンセル料はかからず、買取成立後8日以内のクーリングオフにも対応しています。</p>
-            </div>
-            <div className="glass-card p-5">
-              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由2：フリマ相場と査定額のギャップ</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>レビューサイトでは「思ったより査定が低かった」という声が一定数あります。買取店は在庫リスクや人件費を差し引いて査定するため、メルカリ等の販売相場より低くなるのは構造上避けられません。即日現金化できることや、出品・発送の手間がかからないことの対価と考えることをおすすめします。</p>
-            </div>
-            <div className="glass-card p-5">
-              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由3：対面では断りにくいと感じる方がいる</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>口コミには「その場の流れで売ってしまった」という声もあります。査定額に納得できない場合はその場で断ることができ、費用は一切かかりません。不安な場合は、玄関先査定や女性スタッフの指名の利用をおすすめします。</p>
-            </div>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取専門店ウリエル公式サイト（出張買取・店頭買取・ゲーム買取のFAQ、{CHECKED}確認）。</p>
           </div>
         </section>
 
@@ -168,21 +355,21 @@ export default function UrielReviewPage() {
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>+ 出張買取により自宅で売却が完結</li>
-                <li>+ その場で現金化できる</li>
-                <li>+ ゲーム以外も20種類以上まとめて売れる</li>
-                <li>+ 出張費・査定料・キャンセル料すべて無料</li>
-                <li>+ 経験豊富な査定士による丁寧な査定</li>
-                <li>+ まとめ売りで査定額アップの可能性</li>
+                <li>+ 梱包・発送をせずに自宅で売却が完結する</li>
+                <li>+ 買取成立後、その場で現金を受け取れる</li>
+                <li>+ ゲーム以外の品物（公式一覧で20項目）とまとめて査定を受けられる</li>
+                <li>+ 出張費・査定料・キャンセル料が無料</li>
+                <li>+ 玄関先での査定や女性スタッフを希望できる</li>
               </ul>
             </div>
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>デメリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>- 出張買取は関東・関西エリア限定</li>
-                <li>- ゲーム専門サービスではない</li>
-                <li>- レトロゲームの専門性はヒカカク！に劣る</li>
-                <li>- 出張訪問時に在宅が必要</li>
+                <li>- ゲームの買取は東京・神奈川・千葉・埼玉のみ</li>
+                <li>- ゲームの買取価格表がなく、金額は訪問後まで分からない</li>
+                <li>- 宅配買取の案内がなく、在宅での立ち会いが必要</li>
+                <li>- ゲームソフトはクーリングオフの対象外</li>
+                <li>- 第三者サイトの口コミが3件と少ない</li>
               </ul>
             </div>
           </div>
@@ -190,7 +377,7 @@ export default function UrielReviewPage() {
 
         {/* How to Use */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />利用手順（4ステップ）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />出張買取の利用手順（4ステップ）</h2>
           <div className="space-y-4">
             {steps.map((s) => (
               <div key={s.step} className="glass-card p-5 flex items-start gap-4">
@@ -198,7 +385,7 @@ export default function UrielReviewPage() {
                   {String(s.step).padStart(2, '0')}
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>{s.title}</h3>
+                  <h3 className="font-bold mb-1" style={thColor}>{s.title}</h3>
                   <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>{s.description}</p>
                 </div>
               </div>
@@ -212,7 +399,7 @@ export default function UrielReviewPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {targets.map((t) => (
               <div key={t.category} className="glass-card p-5">
-                <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>{t.category}</h3>
+                <h3 className="font-bold mb-3" style={thColor}>{t.category}</h3>
                 <ul className="space-y-1.5 text-sm" style={{ color: 'var(--color-text-light)' }}>
                   {t.items.map((item) => <li key={item}>・{item}</li>)}
                 </ul>
@@ -220,33 +407,8 @@ export default function UrielReviewPage() {
             ))}
           </div>
           <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
-            ※ 上記以外にも多数の品目に対応しています。詳しくは公式サイトをご確認ください。
+            ※ 品目ごとに対応地域が異なり、ゲームは東京・神奈川・千葉・埼玉が対象です。催事買取では自転車・医療器具・大型家具・家電、データを消去していない携帯電話は買取不可と案内されています。詳しくは公式サイトをご確認ください。
           </p>
-        </section>
-
-        {/* Review Tendency */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト・SNS調査）</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・出張買取で自宅まで来てもらえて手間が少なかった</li>
-                <li>・ゲームとブランド品・貴金属などをまとめて売れた</li>
-                <li>・その場で現金を受け取れるスピード感が良かった</li>
-                <li>・査定士の対応が丁寧だった</li>
-              </ul>
-            </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・ゲーム単体の査定額はゲーム専門店より安い場合がある</li>
-                <li>・レトロゲームの希少タイトルは専門店の方が高値がつきやすい</li>
-                <li>・対応エリアが関東・関西中心で利用できない地域がある</li>
-              </ul>
-            </div>
-          </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲーム単体を高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>でゲーム専門店の価格と比較してから判断することをおすすめします。</p>
         </section>
 
         {/* FAQ */}
@@ -282,7 +444,7 @@ export default function UrielReviewPage() {
             買取ウリエルの<span style={{ color: 'var(--color-accent-orange)' }}>出張買取</span>を利用する
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            プロの査定士が自宅でゲームを査定し、その場で現金化できます。出張費・査定料は無料です。
+            東京・神奈川・千葉・埼玉の方は、自宅でゲームの査定を受け、その場で現金化できます。出張費・査定料は無料です。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://uriel-cuore.co.jp" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-3 px-8">
@@ -296,16 +458,16 @@ export default function UrielReviewPage() {
 
         {/* Internal Links */}
         <section className="mt-12">
-          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のサービスとの比較</h3>
+          <h3 className="font-bold mb-4" style={thColor}>他のサービスとの比較</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Link href="/review/hikakaku/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-green text-xs mb-2 inline-block">1位</span>
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ヒカカク！</p>
+              <p className="font-bold text-sm" style={thColor}>ヒカカク！</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最大20社一括査定の買取比較サイト</p>
             </Link>
             <Link href="/review/tifana/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-blue text-xs mb-2 inline-block">3位</span>
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ティファナ</p>
+              <p className="font-bold text-sm" style={thColor}>ティファナ</p>
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ホビー系の買取に強みを持つリサイクルショップ</p>
             </Link>
           </div>
@@ -314,16 +476,16 @@ export default function UrielReviewPage() {
         <section style={{ marginTop: '2rem', padding: '1.5rem', background: 'var(--color-accent-soft-weak)', borderRadius: '12px', borderLeft: '3px solid var(--color-electric-green)' }}>
           <h3 style={{ marginBottom: '1rem', fontSize: '1.1rem' }}>関連記事</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめ比較（目的別の3つの選択肢・最新の最高値）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格インデックス（現在最も高い業者の確認）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリ vs 買取 手取り額シミュレーション</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/kaitori-ranking/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取おすすめランキング15選</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/ps5/" style={{ color: 'var(--color-electric-green)' }}>PS5買取おすすめ3選</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch/" style={{ color: 'var(--color-electric-green)' }}>Switch買取おすすめ3選</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/method/shop/" style={{ color: 'var(--color-electric-green)' }}>店舗持ち込み買取の流れとコツ</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/knowledge/preparation/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取前の準備ガイド</Link></li>
-            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/shop-vs-online/" style={{ color: 'var(--color-electric-green)' }}>店舗買取 vs 宅配買取の比較</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/" style={linkColor}>ゲーム買取おすすめ比較（目的別の3つの選択肢・最新の最高値）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/price-index/" style={linkColor}>ゲーム買取価格インデックス（現在最も高い業者の確認）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/hikakaku-vs-uriel/" style={linkColor}>ヒカカク！とウリエルの比較</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/condition-guide/" style={linkColor}>状態別ゲーム買取 許容度マップ（箱なし・傷・ジャンク）</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/mercari-vs-kaitori/" style={linkColor}>メルカリ vs 買取 手取り額シミュレーション</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/kaitori-ranking/" style={linkColor}>ゲーム買取おすすめランキング15選</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/ps5/" style={linkColor}>PS5買取おすすめ3選</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/hardware/switch/" style={linkColor}>Switch買取おすすめ3選</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/knowledge/data-delete/" style={linkColor}>ゲーム機のデータ初期化の方法</Link></li>
+            <li style={{ marginBottom: '0.5rem' }}><Link href="/compare/shop-vs-online/" style={linkColor}>店舗買取 vs 宅配買取の比較</Link></li>
           </ul>
         </section>
 
