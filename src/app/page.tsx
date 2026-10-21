@@ -105,7 +105,7 @@ const services = [
   {
     rank: 8,
     name: 'ホビーコレクト',
-    url: 'https://hobby-collect.jp/',
+    url: 'https://recycle-net.jp/figure/',
     tagline: '箱なし・ジャンク品可、宅配買取専門',
     reviewPath: '/review/hobby-collect/',
     features: ['箱なし・ジャンク品可', '宅配買取専門', '幅広いジャンル対応', '送料無料'],

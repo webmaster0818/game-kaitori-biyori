@@ -62,7 +62,7 @@ export default function HobbyCollectReviewPage() {
             「ホビーコレクト」は、箱なし・説明書なし・ジャンク品も買取対象とする宅配買取サービスです。検索すると「怪しい」という言葉も表示されるため、当サイトでは運営会社・古物商許可番号・口コミ傾向・箱なし/ジャンク品の査定額・送料/返送料の条件を、公式情報と比較サイトの一次情報にもとづいて整理しました。
           </p>
           <div className="flex flex-wrap gap-3">
-            <a href="https://hobby-collect.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
+            <a href="https://recycle-net.jp/figure/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
               公式サイトで事前査定
             </a>
             <Link href="/" className="btn-outline py-2.5 px-6" style={{ borderColor: 'rgba(255,255,255,0.3)', color: '#FFFFFF' }}>
@@ -282,7 +282,7 @@ export default function HobbyCollectReviewPage() {
             他社で買取を断られた商品も買取対象です。事前査定で金額を確認してから発送できます。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://hobby-collect.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
+            <a href="https://recycle-net.jp/figure/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
               無料で事前査定する
             </a>
             <Link href="/" className="btn-outline py-3 px-8" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#CBD5E1' }}>
