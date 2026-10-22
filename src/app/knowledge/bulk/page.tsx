@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const merits = [
-  { title: 'まとめ売りボーナスによる査定額の上乗せ', description: '多くの買取サービスでは、一定数以上をまとめて売るとボーナスがつきます。10本以上で10%、30本以上で20%のボーナスがつくケースもあり、1本ずつ売るよりも有利になります。' },
+  { title: 'まとめ売りボーナスによる査定額の上乗せ', description: '多くの買取サービスでは、点数に応じて買取金額を上乗せするキャンペーンを実施している場合があります。条件や上乗せ率は業者・時期ごとに異なるため、申込前に各社の公式キャンペーンページでご確認ください。' },
   { title: '送料無料の条件を満たしやすい', description: '宅配買取では一定数以上のまとめ売りで送料無料となるサービスが多くあります。1〜2本では送料負担が必要でも、まとめ売りなら無料になることがほとんどです。' },
   { title: '手間の大幅な削減', description: '1本ずつフリマアプリで出品するのに比べ、まとめ売りなら梱包・発送が1回で済みます。写真撮影、やりとり、梱包の手間を考えると、時間効率の面ではまとめ売りが優れています。' },
   { title: '値段がつかないソフトの引き取り', description: '単品では買取不可のソフトも、まとめ売りなら一緒に引き取ってもらえるケースがあります。処分に困っていたソフトもまとめて片付きます。' },
@@ -28,8 +28,8 @@ const merits = [
 
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', bonus: '業者により異なる（最大20社のボーナス条件を比較可能）', shipping: '業者による', point: '複数社のボーナス込み価格を比較可能' },
-  { name: '買取ウリエル', feature: '出張買取・即日現金化', bonus: '大量買取時に査定額上乗せ交渉可', shipping: '出張費無料', point: '大量のゲームを自宅で一括査定し、即日現金化' },
-  { name: 'ティファナ', feature: '店舗+宅配買取', bonus: '5点以上で送料無料・ボーナスあり', shipping: '5点以上で無料', point: 'ゲーム以外（トレカ・フィギュア）もまとめて売れる' },
+  { name: '買取ウリエル', feature: '出張買取・即日現金化', bonus: '公式FAQでは「まとめて売ると高値が付く場合がある」と説明（固定のボーナス条件の記載なし）', shipping: '出張費無料（ゲームの出張は東京・神奈川・千葉・埼玉）', point: '大量のゲームを自宅で一括査定し、即日現金化' },
+  { name: 'ティファナ', feature: '店舗+宅配買取', bonus: '—（条件は公式キャンペーンページで確認）', shipping: '宅配買取は送料・宅配キット無料（買取成立時）', point: 'ゲーム以外（トレカ・フィギュア）もまとめて売れる' },
 ];
 
 const packingTips = [
@@ -59,7 +59,7 @@ const faqs = [
 export default function BulkPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームまとめ売りガイド｜大量買取のメリットとコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームまとめ売りガイド｜大量買取のメリットとコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'まとめ売り' }]} />
 
       {/* Hero */}

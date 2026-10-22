@@ -4,9 +4,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ハードオフのゲーム買取価格表はある？評判・口コミと「安い」理由・ジャンク買取・4つの買取方式を検証',
+  title: 'ハードオフのゲーム買取価格表はある？評判・口コミ97件の集計と他店の公開価格（2026年10月）',
   description:
-    'ハードオフには公式のゲーム買取価格表がありません（査定制のため、店舗ごとに金額が変わります）。その理由と「売る前に値段が分かる」オファー買取の使い方、壊れたゲーム機も対象となる公式のジャンク買取、店頭・宅配・出張を含む4方式の使い分け、「安い」と言われる理由を公式情報（2026年8月確認）をもとに解説します。',
+    'ハードオフはゲームの買取価格表を公開していません。代わりに使えるオファー買取の評判（App Storeレビュー97件を集計）、ジャンク買取、4つの買取方式と、価格を公開している5店のSwitch 2実測価格（2026年10月20日）を掲載しています。',
   keywords: ['ハードオフ ゲーム買取', 'ハードオフ 買取 評判', 'ハードオフ ジャンク 買取', 'ハードオフ ゲーム 安い', 'ハードオフ 宅配買取'],
   openGraph: {
     images: ['/og.png'],
@@ -43,7 +43,7 @@ const faqs = [
 export default function HardoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-10-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ハードオフ' }]} />
 
       {/* Hero */}
@@ -51,7 +51,7 @@ export default function HardoffReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>店頭・ジャンクOK</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年7月3日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年10月22日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ハードオフのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「安い？」の実態とジャンク買取を検証</span>
@@ -78,6 +78,38 @@ export default function HardoffReviewPage() {
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               ハードオフは、壊れたゲーム機や古い周辺機器まで「ジャンク」として買い取る公式方針を持つ、全国1,000店超の最大手です。近所の店で即日現金化でき、他店で断られる品の受け皿になります。一方で買取価格表は非公開で、査定はデータベース＋店舗の地域性で変動するため、<strong>人気タイトルは専門店やゲオ・ブックオフの公表価格より安くなることがあります</strong>。「動くか分からない品・大量処分」はハードオフ、「人気作・プレミア品」は<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場を確認してから売却先を選ぶ使い分けをおすすめします。
             </p>
+          </div>
+        </section>
+
+        {/* 価格表の代わり（2026-10-22 追加） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハードオフのゲーム買取価格表はある？</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+              ハードオフは、ゲームの買取価格表を公式に公開していません（査定は店舗ごとに行われ、店舗の地域性も価格の変動要因になると公式FAQに記載されています）。売る前に金額を知る方法は、アプリの「オファー買取」で見積もりを受け取る方法です。比較の目安として、買取価格を公開している店舗の価格を当サイトで実測した結果を以下に掲載します。
+            </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <thead>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                    <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>Switch 2本体（日本語・国内専用）</th>
+                    <th className="text-right py-2" style={{ color: 'var(--color-deep-blue)' }}>公式掲載の買取価格</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ハードオフ</td><td className="py-2 text-right">価格表の公開なし（店頭査定・オファー買取）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">買取ルデヤ（新品・未開封のみ）</td><td className="py-2 text-right">49,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">駿河屋</td><td className="py-2 text-right">38,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ソフマップ（ラクウル）</td><td className="py-2 text-right">36,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ふるいち</td><td className="py-2 text-right">36,000円</td></tr>
+                  <tr><td className="py-2 pr-4">ブックオフ（店頭）</td><td className="py-2 text-right">35,000円</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm leading-relaxed mt-4" style={{ color: 'var(--color-text-light)' }}>
+              ハードオフで査定を受ける際は、上記のような公開価格を控えておくと、提示額が妥当かどうかを判断しやすくなります。他の機種・ソフトの実測価格は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch2 買取価格（5店比較）</Link>、<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるゲームソフト</Link>、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>価格インデックス</Link>に掲載しています。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各店の公式買取ページ（2026年10月20日 当サイト実測）。価格は日々変動するため、売却の直前に各社の公式ページでご確認ください。</p>
           </div>
         </section>
 
@@ -124,29 +156,50 @@ export default function HardoffReviewPage() {
           </div>
         </section>
 
-        {/* Review Tendency */}
+        {/* Review Tendency（2026-10-22 件数集計） */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト調査）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハードオフの評判・口コミ（件数を数えた結果）</h2>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+            当サイトでは、公開されている口コミを2026年10月22日に1件ずつ読み、内容別に件数を数えました。ゲームに関する口コミは少数のため、ゲーム以外の品目も含めた傾向としてご覧ください。
+          </p>
+          <div className="glass-card p-6 overflow-x-auto mb-4">
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                  <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>出典</th>
+                  <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>評価・件数</th>
+                  <th className="text-left py-2" style={{ color: 'var(--color-deep-blue)' }}>うちゲーム関連</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">App Store「ハードオフのオファー買取」</td><td className="py-2 pr-4">4.47（2,082件の評価）。最新のレビュー97件（2019年11月〜2026年10月）の内訳は★5 30件・★4 15件・★3 10件・★2 10件・★1 32件</td><td className="py-2">97件中2件</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">App Store「ハードオフ」公式アプリ</td><td className="py-2 pr-4">4.55（20,205件の評価）</td><td className="py-2">—（買取以外の機能を含むアプリの評価です）</td></tr>
+                <tr><td className="py-2 pr-4">ウリドキ（HARD-OFF）</td><td className="py-2 pr-4">2.4（口コミ11件・2017〜2023年）</td><td className="py-2">11件中1件（レトロゲーム機・評価1.7）</td></tr>
+              </tbody>
+            </table>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>オファー買取レビュー97件で多い不満</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・レトロゲームや古い機種にも値が付いた</li>
-                <li>・他店で買取を断られた品を引き取ってもらえた</li>
-                <li>・店頭ですぐ現金化できて手軽</li>
-                <li>・ジャンクまとめ売りで処分と換金が同時にできた</li>
+                <li>・オファーが来ない・ほとんど来ない：10件（うちフィギュア・ホビー・トレカの出品3件、レトロゲーム機1件）</li>
+                <li>・オファーが5件までしか届かない仕様への不満：3件（先に届いた低い金額で枠が埋まる、という指摘）</li>
+                <li>・相場より安い金額のオファーだった：2件</li>
               </ul>
             </div>
             <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
+              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>ゲームに関する投稿（全文の要旨）</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・人気タイトルの査定が専門店より安かった</li>
-                <li>・店舗や地域によって査定額に差があった</li>
-                <li>・事前に金額が分からないまま持ち込む必要がある</li>
+                <li>・PS4：出品後数時間で5件のオファーが届き、最高31,500円。近くの系列店のチラシでは33,000円だった（App Store・★3・2021年12月）</li>
+                <li>・レトロゲーム機本体4台：オファーがなかなか届かず、届いた金額は3,000円だった（App Store・★1・2024年5月）</li>
+                <li>・レトロゲーム機・ソフト：買取額が低く、約1週間後の店頭価格は大きく上回っていた（ウリドキ・評価1.7・2023年6月）</li>
               </ul>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※みん評（口コミ130件）等のレビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。</p>
+          <p className="text-sm leading-relaxed mt-4" style={{ color: 'var(--color-text-light)' }}>
+            件数から言えることは、「動作するゲーム機本体にはオファーが集まりやすい一方、レトロ品や需要の読みにくい品は金額がつきにくい場合がある」という点です。投稿数が少ないため、ゲームソフトの査定額の傾向までは判断できません。
+          </p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：App Store（日本）の評価・カスタマーレビュー、ウリドキ「HARD-OFF」口コミページ（いずれも2026年10月22日確認・当サイト集計）。1件の投稿が複数の項目に該当する場合は、それぞれに数えています。個別の体験を保証するものではありません。</p>
         </section>
 
         {/* Recommended */}
