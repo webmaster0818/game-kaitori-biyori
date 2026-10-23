@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: '全国1,000店超の実店舗網（東証プライム上場）', description: '運営の株式会社ハードオフコーポレーションは東証プライム上場（証券コード2674）。IR資料によればリユース店舗は2025年9月末時点で1,042店（直営462・FC580）と国内最大級で、「近所に店がある」アクセス性が最大の強みです。' },
+  { title: '全国1,000店超の実店舗網（東証プライム上場）', description: '運営の株式会社ハードオフコーポレーションは東証プライム上場（証券コード2674）。公式のIR情報によれば店舗数（直営・FC合計）は1,078店舗（2026年3月期）と国内最大級で、「近所に店がある」アクセス性が最大の強みです。' },
   { title: '壊れた品も対象の「ジャンク買取」', description: '公式FAQに「壊れていてもジャンク品として店頭にて販売しています。喜んで買取させていただきます」と明記されています。動作しないゲーム機・欠品ソフトなど、他店で断られる品にも値が付く可能性がある点がハードオフの特徴です（ジャンク買取は店頭が基本）。' },
   { title: '店頭・宅配・出張・オファーの4方式', description: '公式の買取方式は①店頭（即現金化）②宅配（送料・手数料無料、梱包資材あり）③出張④オファー買取の4つです。オファー買取はアプリ/Webに出品すると全国のハードオフグループ店舗から最大5件の買取オファーが届き、「売る前に値段が分かる」仕組みです。' },
   { title: '査定はデータベース＋店舗の地域性で変動', description: '公式FAQによれば、査定はグループ内の商品データベースを基準にスタッフが1点ずつ目視確認し、店舗の地域性（売れやすい・売れにくい）も価格の変動要因になります。そのため、同じ品でも店舗によって査定額が変わる場合があります。' },
@@ -43,7 +43,7 @@ const faqs = [
 export default function HardoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-10-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-10-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ハードオフ' }]} />
 
       {/* Hero */}
@@ -134,12 +134,12 @@ export default function HardoffReviewPage() {
               <tbody>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社ハードオフコーポレーション（東証プライム・証券コード2674）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>本社</th><td className="py-2">新潟県新発田市新栄町3丁目1番13号</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>店舗数</th><td className="py-2">リユース店舗1,042店（2025年9月末時点・直営462/FC580。IR中間決算資料より）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>店舗数</th><td className="py-2">1,078店舗（直営・FC合計、2026年3月期。公式IR「ひと目でわかるハードオフコーポレーション」より）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">新潟県公安委員会 許可番号461060001043</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">店頭買取／宅配買取／出張買取／オファー買取（アプリ・Web）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ハードオフ公式サイト（会社概要・売りたい・FAQ）、2026年3月期中間決算説明資料。2026年7月3日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ハードオフ公式サイト（会社概要・古物営業法に基づく表示・売りたい・よくあるご質問・IR情報）。2026年10月23日確認</p>
           </div>
         </section>
 
