@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取はどこがいい？結論と用途別おすすめ｜公式価格の実測で比較',
@@ -258,6 +259,7 @@ export default function WhichIsBestPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「ゲーム買取はどこがいいのか」「どこで売るのがよいのか」は、<strong>売りたい物と優先したいこと</strong>によって変わります。当ページではランキング形式ではなく、<strong>高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較</strong>の用途別に、適した売り先を紹介しています。送料・返送料・キャンセル・査定期間・古物商番号は、各社公式の情報を確認日とともに横断比較しています。
           </p>
+          <GeoSuspendedNotice />
           <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年7月19日</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/price-index/" className="btn-primary py-2.5 px-6">

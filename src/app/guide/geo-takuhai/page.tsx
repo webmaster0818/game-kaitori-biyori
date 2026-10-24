@@ -93,7 +93,7 @@ export default function GeoTakuhaiGuidePage() {
             段ボールの提供の有無、入金までの日数、キャンセル時の返送料など、ゲオ宅配買取で迷いやすいポイントを、公式サイト・サービスガイドライン・公式FAQ全100問の一次情報（<strong>2026年7月28日確認</strong>）にもとづいて解説します。評判・口コミは<Link href="/review/geo/" style={{ color: '#34D399' }}>ゲオ宅配買取の評判レビュー</Link>をご覧ください。
           </p>
           <div className="rounded-lg p-4 mb-6 text-sm leading-relaxed" style={{ background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.5)', color: '#FDE68A' }}>
-            <p className="font-bold mb-1">ゲオの買取は現在、新規の申込みを停止しています（2026年10月23日 公式確認）</p>
+            <p className="font-bold mb-1">ゲオの買取は現在、新規の申込みを停止しています（2026年10月24日 公式再確認）</p>
             <p>公式の告知によると、2026年10月15日に同社システムへの不正アクセスが確認されたため、10月17日21時からゲオの買取サービスを停止しています。終了時期は未定です。停止中は新規の買取申込みのほか、査定結果の確認・承認、買取代金の振込手続きも利用できません。すでに申し込んだ方の集荷は指定日時どおり行い、到着済みの荷物は順次査定するとしています。最新の状況は公式の告知をご確認ください。</p>
             <p className="text-xs mt-2">出典：<a href="https://buy.geo-online.co.jp/trade" target="_blank" rel="noopener noreferrer nofollow" className="underline">ゲオの買取「システムメンテナンスに伴うサービス ご提供停止のご案内」</a>（株式会社ゲオストア・2026年10月21日付）</p>
           </div>

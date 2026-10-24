@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 import { crossStorePrices, analyzeTitle, STORE_LABELS, PRICE_SURVEY_DATE } from '@/data/prices';
+import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: '高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較',
@@ -119,6 +120,7 @@ export default function HighValueSoftwarePage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋・レトログが公式サイトで公開している買取価格を2026年10月15日に実測し（各社公式の高価買取ページ・買取価格表で確認）、いま実際に高く売れるソフトをまとめました。同じソフトでも店によって差がつく実例も掲載しています。
           </p>
+          <GeoSuspendedNotice />
           <p className="text-xs" style={{ color: '#94A3B8' }}>各社公式の買取価格を定期的に実測（最終実測日: 2026年10月15日）</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/" className="btn-primary py-2.5 px-6">

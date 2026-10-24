@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: 'ゲームの下取りと買取の違い｜どっちがお得？【2026年版】',
@@ -68,6 +69,7 @@ export default function TradeInPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ゲームを手放す方法には「下取り（店舗クレジット）」と「買取（現金化）」の2つがあります。それぞれの仕組み・メリットとデメリット・おすすめのシーンを、比較表を用いて解説します。ゲオ・ブックオフ・Amazonトレードインなど主要サービスの下取りプログラムもご紹介し、目的に合った売却方法を選べるようにしています。
           </p>
+          <GeoSuspendedNotice />
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る

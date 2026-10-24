@@ -4,6 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import TakehomeSimulator from '@/components/TakehomeSimulator'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: 'ゲームはメルカリと買取どっちが得？【手取り計算機付き】手数料を引いた実質手取りで比較',
@@ -86,6 +87,7 @@ export default function MercariVsKaitoriPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             メルカリでゲームを売るか、買取業者に任せるか。手取り額・手数料・送料・手間・トラブルリスクなど12項目で比較しています。Switch売却時の手取りシミュレーションと、状況別のおすすめをまとめたマトリクスで、目的に合った売り方をご確認いただけます。
           </p>
+          <GeoSuspendedNotice />
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る
