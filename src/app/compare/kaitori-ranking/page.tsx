@@ -272,15 +272,6 @@ const userTypeRecommendations = [
   },
 ];
 
-const priceTestResults = [
-  { game: 'Nintendo Switch（有機ELモデル）本体', geo: '22,000円', bookoff: '20,000円', surugaya: '23,000円', hikakaku: '25,000円', uriel: '24,000円' },
-  { game: 'PS5 本体（ディスクドライブ搭載）', geo: '35,000円', bookoff: '33,000円', surugaya: '36,000円', hikakaku: '38,000円', uriel: '37,000円' },
-  { game: 'ゼルダの伝説 ティアーズ オブ ザ キングダム', geo: '3,500円', bookoff: '3,000円', surugaya: '3,800円', hikakaku: '4,200円', uriel: '3,500円' },
-  { game: 'ファイナルファンタジーVII リバース（PS5）', geo: '3,000円', bookoff: '2,500円', surugaya: '3,200円', hikakaku: '3,800円', uriel: '3,000円' },
-  { game: 'スーパーファミコン本体（箱付き）', geo: '500円', bookoff: '300円', surugaya: '4,000円', hikakaku: '3,500円', uriel: '1,500円' },
-  { game: 'ポケットモンスター 赤（初期版・箱・説明書付き）', geo: '100円', bookoff: '50円', surugaya: '8,000円', hikakaku: '7,000円', uriel: '2,000円' },
-];
-
 const faqs = [
   { q: '最もおすすめの買取サービスはどこですか？', a: '売りたいゲームの種類と優先事項によって異なります。とにかく最高額で売りたいならヒカカク！の一括査定、手軽さ重視ならゲオの店舗持ち込み、レトロゲームなら駿河屋、出張買取ならウリエル（ゲームは東京・神奈川・千葉・埼玉のみ）がそれぞれ適しています。迷った場合は、まずヒカカク！で相場をご確認ください。' },
   { q: 'ゲーム買取の相場はどのくらいですか？', a: '新作ゲームソフト（発売1〜2週間以内）で定価の40〜60%、発売3ヶ月以上経過したソフトで定価の10〜30%が目安です。ゲーム機本体は状態が良ければ定価の40〜60%程度です。レトロゲームは希少性によって大きく異なり、数百円から数万円まで幅があります。' },
@@ -293,7 +284,7 @@ const faqs = [
 export default function KaitoriRankingPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "【2026年最新】ゲーム買取おすすめランキング15選", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "【2026年最新】ゲーム買取おすすめランキング15選", "datePublished": "2026-03-15", "dateModified": "2026-10-25", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "ItemList", "name": "ゲーム買取おすすめランキング2026", "numberOfItems": 15, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "ヒカカク！", "url": "/review/hikakaku/"}, {"@type": "ListItem", "position": 2, "name": "ウリエル", "url": "/review/uriel/"}, {"@type": "ListItem", "position": 3, "name": "ゲオ", "url": "/review/geo/"}, {"@type": "ListItem", "position": 4, "name": "駿河屋", "url": "/review/surugaya/"}, {"@type": "ListItem", "position": 5, "name": "ブックオフ", "url": "/review/bookoff/"}, {"@type": "ListItem", "position": 6, "name": "ネットオフ", "url": "/review/netoff/"}, {"@type": "ListItem", "position": 7, "name": "ホビーコレクト", "url": "/review/hobby-collect/"}, {"@type": "ListItem", "position": 8, "name": "買取王子", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 9, "name": "ゲーム王国", "url": "/review/game-oukoku/"}, {"@type": "ListItem", "position": 10, "name": "買取ワールド", "url": "/review/kaitori-world/"}, {"@type": "ListItem", "position": 11, "name": "ハードオフ", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 12, "name": "トレジャーファクトリー", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 13, "name": "お宝創庫", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 14, "name": "まんだらけ", "url": "/compare/kaitori-ranking/"}, {"@type": "ListItem", "position": 15, "name": "ティファナ", "url": "/review/tifana/"}]}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: '買取おすすめランキング' }]} />
 
@@ -308,7 +299,7 @@ export default function KaitoriRankingPage() {
             ゲオ・ブックオフ・駿河屋・ネットオフ・ウリエル・ヒカカク！など主要15サービスを比較しています。送料・入金速度・対応ジャンル・口コミをもとに、目的に合った買取サービスを選べるよう整理しました。
           </p>
           <GeoSuspendedNotice />
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年5月</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年10月25日</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る
@@ -426,51 +417,6 @@ export default function KaitoriRankingPage() {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Price Test Results */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />買取価格比較テスト（2026年5月調査）</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
-            主要5社に同じゲーム・ゲーム機を査定依頼し、実際の買取価格を比較しました。状態はすべて「良好（箱・説明書あり）」で統一しています。
-          </p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>商品名</th>
-                  <th>ゲオ</th>
-                  <th>ブックオフ</th>
-                  <th>駿河屋</th>
-                  <th>ヒカカク！最高値</th>
-                  <th>ウリエル</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceTestResults.map((row) => {
-                  const prices = [
-                    parseInt(row.geo.replace(/[^0-9]/g, '')),
-                    parseInt(row.bookoff.replace(/[^0-9]/g, '')),
-                    parseInt(row.surugaya.replace(/[^0-9]/g, '')),
-                    parseInt(row.hikakaku.replace(/[^0-9]/g, '')),
-                    parseInt(row.uriel.replace(/[^0-9]/g, '')),
-                  ];
-                  const maxPrice = Math.max(...prices);
-                  return (
-                    <tr key={row.game}>
-                      <td className="font-bold text-sm">{row.game}</td>
-                      <td className="text-sm" style={{ color: parseInt(row.geo.replace(/[^0-9]/g, '')) === maxPrice ? 'var(--color-electric-green)' : 'var(--color-text-light)', fontWeight: parseInt(row.geo.replace(/[^0-9]/g, '')) === maxPrice ? 'bold' : 'normal' }}>{row.geo}</td>
-                      <td className="text-sm" style={{ color: parseInt(row.bookoff.replace(/[^0-9]/g, '')) === maxPrice ? 'var(--color-electric-green)' : 'var(--color-text-light)', fontWeight: parseInt(row.bookoff.replace(/[^0-9]/g, '')) === maxPrice ? 'bold' : 'normal' }}>{row.bookoff}</td>
-                      <td className="text-sm" style={{ color: parseInt(row.surugaya.replace(/[^0-9]/g, '')) === maxPrice ? 'var(--color-electric-green)' : 'var(--color-text-light)', fontWeight: parseInt(row.surugaya.replace(/[^0-9]/g, '')) === maxPrice ? 'bold' : 'normal' }}>{row.surugaya}</td>
-                      <td className="text-sm" style={{ color: parseInt(row.hikakaku.replace(/[^0-9]/g, '')) === maxPrice ? 'var(--color-electric-green)' : 'var(--color-text-light)', fontWeight: parseInt(row.hikakaku.replace(/[^0-9]/g, '')) === maxPrice ? 'bold' : 'normal' }}>{row.hikakaku}</td>
-                      <td className="text-sm" style={{ color: parseInt(row.uriel.replace(/[^0-9]/g, '')) === maxPrice ? 'var(--color-electric-green)' : 'var(--color-text-light)', fontWeight: parseInt(row.uriel.replace(/[^0-9]/g, '')) === maxPrice ? 'bold' : 'normal' }}>{row.uriel}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※ 価格は2026年5月時点の調査結果であり、時期や在庫状況によって変動します。「ヒカカク！最高値」は一括査定で最も高かった業者の価格です。</p>
         </section>
 
         {/* FAQ */}
