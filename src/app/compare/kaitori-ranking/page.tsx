@@ -233,7 +233,7 @@ const comparisonTable = [
   { name: 'ゲオ', shipping: '無料（1点〜）', speed: '即日〜5日', genre: '新作中心', method: '店舗/宅配', packingKit: 'なし（自分で用意）', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（2026年10月25日まで本体等1点から10%UP）' },
   { name: '駿河屋', shipping: '条件付き無料', speed: '5〜14日', genre: 'レトロ・レア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: '買取30%UPキャンペーン（不定期）' },
   { name: 'ブックオフ', shipping: '無料（10点〜）', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: 'なし（店舗持込）', returnFee: '無料（宅配）', dataWipe: '対応あり', campaign: '買取金額20%UPクーポン（不定期）' },
-  { name: 'ネットオフ', shipping: '無料（5点〜）', speed: '2〜5日', genre: '全般', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: 'まとめ売りボーナスUP' },
+  { name: 'ネットオフ', shipping: '無料（ソフト類3点〜・本のみ30点〜）', speed: '最短2日', genre: '全般', method: '宅配', packingKit: '無料', returnFee: '自己負担', dataWipe: '対応あり', campaign: '会員限定の買取UP（公式で要確認）' },
   { name: 'ホビーコレクト', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム・ホビー', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '非対応', campaign: '初回利用10%UP' },
   { name: '買取王子', shipping: '無料（1点〜）', speed: '3〜7日', genre: '60ジャンル+', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '非対応', campaign: 'まとめ売り最大6万円ボーナス' },
   { name: 'ゲーム王国', shipping: '無料（1点〜）', speed: '3〜5日', genre: 'ゲーム専門', method: '宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: 'ゲーム専門高額査定' },

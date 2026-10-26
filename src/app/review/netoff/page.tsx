@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証',
   description:
-    'ネットオフのゲーム買取をレビューしています。ゲーム・本・CD・DVDをまとめて売却できる宅配買取サービスの特徴・メリット・デメリット・利用手順について解説します。買取実績1億点超、まとめ売りボーナス、Tポイント連携が特徴です。',
+    'ネットオフのゲーム買取をレビューしています。ゲーム・本・CD・DVDをまとめて売却できる宅配買取サービスの特徴・メリット・デメリット・利用手順について解説します。集荷・送料・手数料が無料で、最短2日で入金される点が特徴です（2026年10月26日 公式確認）。',
   keywords: ['ネットオフ 買取', 'ネットオフ 口コミ', 'ネットオフ ゲーム買取', 'ゲーム 本 まとめ売り', 'ネットオフ 評判'],
   openGraph: {
     images: ['/og.png'],
     title: 'ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証',
-    description: 'ネットオフのゲーム買取をレビューしています。まとめ買取の特徴とTポイント連携について解説します。',
+    description: 'ネットオフのゲーム買取をレビューしています。まとめ買取の特徴と、送料・入金・申込条件を公式情報で解説します。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -20,31 +20,30 @@ export const metadata: Metadata = {
 
 const features = [
   { title: 'ゲーム・本・CD・DVDまとめ買取', description: 'ゲームソフト・ゲーム機だけでなく、本・CD・DVD・ブルーレイなど幅広いジャンルをまとめて買い取っています。引っ越しや大掃除で大量の不用品を処分したい方に適したサービスです。' },
-  { title: 'まとめ売りボーナス', description: '買取点数が多いほどボーナスが加算される「まとめ売り」キャンペーンを常時実施しています。特にゲームと本をまとめて売ると大きなボーナスが付くことがあり、合計の買取金額が上がります。' },
-  { title: '買取実績1億点超', description: '累計買取実績が1億点を超える、国内有数の宅配買取サービスです。豊富な実績にもとづく安定した査定基準が特徴です。' },
-  { title: 'Tポイント連携', description: '買取金額に応じてTポイントが貯まります。現金での受取りに加えて、Tポイントでの受取りも選択できます。全国のTポイント加盟店で利用できるため、日常の買い物に活用できます。' },
+  { title: '集荷・送料・手数料が無料', description: '本&ゲーム買取コースは、自宅集荷・コンビニ持込とも無料で、手数料もかかりません。買取用ダンボールは6箱まで無料で届けてもらえます（公式・2026年10月26日確認）。' },
+  { title: '最短2日で入金', description: '公式サイトでは、査定後最短2日での振込と案内されています。' },
+  { title: '申込時の価格保証', description: '本&ゲーム買取コースでは、申込時の買取価格を保証するサービスがあります。会員限定の買取価格アップキャンペーン（書籍35%・ゲームソフト30%・DVD20%）も告知されています（2026年8月18日付の公式のお知らせ）。実施状況は公式サイトでご確認ください。' },
 ];
 
 const steps = [
   { step: 1, title: '買取申込み', description: 'ネットオフ公式サイトから買取を申し込み、売りたい商品のジャンルや点数を入力します。初めての方は会員登録（無料）も同時に行えます。' },
   { step: 2, title: '梱包・集荷', description: '売りたい商品を段ボールに梱包します。集荷日を指定すると、自宅まで集荷に来ます。段ボールが必要な場合は、無料で送付を依頼できます。' },
-  { step: 3, title: '査定', description: '商品の到着後、スタッフが1点ずつ査定します。まとめ売りボーナスも自動で加算されます。査定結果はメールで通知されます。' },
-  { step: 4, title: '入金', description: '査定額に同意すると、銀行口座への振込またはTポイントの付与が行われます。通常3〜5営業日で入金されます。' },
+  { step: 3, title: '査定', description: '商品の到着後、スタッフが1点ずつ査定します。査定結果はメールで通知されます。' },
+  { step: 4, title: '入金', description: '査定額に同意すると、銀行口座へ振り込まれます。公式サイトでは最短2日での入金と案内されています。' },
 ];
 
 const faqs = [
-  { q: 'ネットオフの送料は無料ですか？', a: 'はい、買取点数が一定数以上（通常5点以上）であれば送料無料です。段ボールも無料で送付を依頼できます。少量の場合は送料がかかることがありますので、公式サイトで条件をご確認ください。' },
-  { q: 'まとめ売りボーナスの内容を教えてください。', a: 'キャンペーン内容は時期によって変動しますが、例えば「50点以上のまとめ売りで買取金額30%UP」「本とゲーム同時で20%UP」などのボーナスが付くことがあります。最新のキャンペーンは公式サイトでご確認ください。' },
+  { q: 'ネットオフの送料は無料ですか？', a: 'はい、本&ゲーム買取コースは送料・集荷・手数料とも無料です。ゲームソフトやDVD等のソフト類は3点以上、本のみの場合は30点以上でお送りください（公式・2026年10月26日確認）。段ボールも6箱まで無料で依頼できます。' },
+  { q: 'キャンペーンはありますか？', a: '2026年8月18日付の公式のお知らせで、本&ゲーム買取コースの会員限定キャンペーン（書籍35%UP・ゲームソフト30%UP・DVD20%UP）が告知されています。終了日はお知らせに記載がないため、申込み前に公式サイトでご確認ください（2026年10月26日確認）。' },
   { q: 'レトロゲームも買取対象ですか？', a: 'ネットオフではPS3・Wii世代以降のゲームが主な対象です。ファミコンやスーパーファミコンなどのレトロゲームは、対象外となる傾向があります。レトロゲームは、駿河屋などの専門店での売却をおすすめします。' },
   { q: '査定にどのくらいかかりますか？', a: '商品到着後、通常3〜7営業日で査定結果がメールで届きます。商品が大量の場合や繁忙期は、さらに時間がかかる場合があります。' },
-  { q: 'Tポイントで受け取る方法を教えてください。', a: '査定額承諾時にTポイントでの受取りを選択できます。Tカード番号を登録しておくと、査定完了後にポイントが付与されます。現金振込とTポイントの併用はできません。' },
   { q: '査定に納得できない場合はキャンセルできますか？', a: 'キャンセルは可能です。ただし、返送を希望する場合は返送料がお客様の負担となります。また、「値段がつかない商品はネットオフで無料引取り」を選択することも可能です。' },
 ];
 
 export default function NetoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-07-09", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ネットオフ' }]} />
 
       {/* Hero */}
@@ -57,7 +56,7 @@ export default function NetoffReviewPage() {
             ネットオフ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ネットオフは、ゲーム・本・CD・DVDなど幅広い品目をまとめて売却できる宅配買取サービスです。買取実績は累計1億点を超え、まとめ売りボーナスにより合計の買取金額が上がります。Tポイントとも連携しています。大量の不用品を一度に処分したい方に適しています。
+            ネットオフは、ゲーム・本・CD・DVDなど幅広い品目をまとめて売却できる宅配買取サービスです。集荷・送料・手数料が無料で、公式サイトでは最短2日での入金と案内されています（2026年10月26日確認）。大量の不用品を一度に処分したい方に適しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.netoff.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -92,9 +91,8 @@ export default function NetoffReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>+ ゲーム・本・CD・DVDなどをまとめ売り可能</li>
-                <li>+ まとめ売りボーナスが大きい</li>
-                <li>+ 累計1億点超の買取実績</li>
-                <li>+ Tポイントでの受取りに対応</li>
+                <li>+ 申込時の買取価格を保証</li>
+                <li>+ 最短2日で入金（公式の案内）</li>
                 <li>+ 段ボール無料・集荷対応</li>
               </ul>
             </div>
@@ -135,8 +133,7 @@ export default function NetoffReviewPage() {
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
               <li>・ゲーム以外にも本・CD・DVDを大量に処分したい方</li>
               <li>・引っ越しや大掃除でまとめて売りたい方</li>
-              <li>・Tポイントを貯めている・使いたい方</li>
-              <li>・まとめ売りボーナスを活用して売りたい方</li>
+              <li>・送料や手数料をかけずに宅配で売りたい方</li>
               <li>・実績のある大手のサービスを利用したい方</li>
             </ul>
           </div>
@@ -144,7 +141,7 @@ export default function NetoffReviewPage() {
 
         {/* 公式仕様・会社情報 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ネットオフ宅配買取の公式仕様・会社情報（2026年6月18日時点）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ネットオフ宅配買取の公式仕様・会社情報（2026年6月18日確認・10月26日再確認）</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <tbody>
@@ -223,10 +220,10 @@ export default function NetoffReviewPage() {
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
           <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            ネットオフの<span style={{ color: 'var(--color-electric-green)' }}>まとめ売りボーナス</span>
+            ネットオフで<span style={{ color: 'var(--color-electric-green)' }}>まとめて売る</span>
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            ゲーム・本・CD・DVDをまとめて売却できます。買取点数が多いほどボーナスが加算されるまとめ売りボーナスがあります。
+            ゲーム・本・CD・DVDをまとめて売却できます。集荷・送料・手数料は無料です（本&ゲーム買取コース）。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://www.netoff.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
