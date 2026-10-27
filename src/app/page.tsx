@@ -181,7 +181,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
           背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
@@ -218,8 +218,11 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto px-4">
           <div className="glass-card p-6 md:p-8" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="text-lg md:text-xl font-extrabold mb-3" style={{ color: 'var(--color-deep-blue)' }}>
-              ゲーム買取のおすすめは「何を・どう売るか」で変わります
+              ゲームソフトを売るならどこがいい？おすすめは「何を・どう売るか」で変わります
             </h2>
+            <p className="text-sm mb-2" style={{ color: 'var(--color-text-light)', lineHeight: '1.8' }}>
+              ゲームソフトの売り先は、大きく<span className="font-bold">宅配買取・店頭買取・フリマアプリ</span>の3つです。宅配買取は自宅から送るだけでまとめて売れますが、入金までに数日かかります。店頭買取はその場で現金化できますが、店舗ごとに価格差があります。フリマアプリは高値で売れる場合がある一方、メルカリでは販売手数料10%と振込手数料200円がかかり、出品・梱包・発送の手間も生じます（詳しくは<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>メルカリと買取の手取り比較</Link>）。同じソフトでも店舗によって買取価格が異なるため、当サイトでは各社公式の買取価格を定期的に実測し、下表で最高値の店舗を掲載しています。
+            </p>
             <p className="text-sm font-bold mt-3 mb-2" style={{ color: 'var(--color-deep-blue)' }}>目的別のおすすめ（各社公式サイトで確認日を記録した条件にもとづき選定）</p>
             <ul className="text-sm space-y-1.5 mb-4" style={{ color: 'var(--color-text-light)' }}>
               <li>①<span className="font-bold">宅配でまとめて売りたい場合</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
