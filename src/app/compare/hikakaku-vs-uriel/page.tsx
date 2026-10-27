@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const comparisonItems = [
   { item: '査定方法', hikakaku: '最大20社に一括査定依頼', uriel: '自社の専門査定士が1社で査定', point: 'ヒカカクは複数社比較、ウリエルは丁寧な単独査定' },
-  { item: '対応エリア', hikakaku: '全国対応（宅配買取メイン）', uriel: 'ゲームは東京・神奈川・千葉・埼玉（出張買取）。宅配買取の案内なし', point: 'ウリエルのゲーム買取は1都3県限定' },
+  { item: '対応エリア', hikakaku: '全国対応', uriel: 'ゲームは東京・神奈川・千葉・埼玉（出張買取）。宅配買取の案内なし', point: 'ウリエルのゲーム買取は1都3県限定' },
   { item: '査定スピード', hikakaku: '業者による（1〜5営業日）', uriel: '出張: 最短翌日以降の訪問、その場で査定・現金払い', point: '対面でその場で現金化するならウリエル' },
   { item: '買取方法', hikakaku: '出張買取・宅配買取・店舗買取', uriel: '出張買取・催事買取・店舗買取（川崎 ラ チッタデッラ店）', point: 'ウリエルは宅配買取の案内なし' },
   { item: 'ゲーム専門度', hikakaku: 'ゲーム専門業者も含む20社以上', uriel: '総合買取（ゲーム以外も幅広く対応）', point: 'ゲーム専門業者を探すならヒカカク' },
@@ -36,7 +36,7 @@ const hikakakuFor = [
   'ゲーム専門の買取業者を見つけたい人',
   '自分のペースでじっくり比較検討したい人',
   '地方在住で近くに店舗がない人',
-  '宅配買取メインで手軽に売りたい人',
+  'ネットで手軽に売りたい人',
 ];
 
 const urielFor = [
@@ -58,7 +58,7 @@ const faqs = [
 export default function HikakakuVsUrielPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク vs ウリエル比較｜ゲーム買取どっちがおすすめ？【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク vs ウリエル比較｜ゲーム買取どっちがおすすめ？【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: '比較', href: '/' }, { name: 'ヒカカク vs ウリエル' }]} />
 
       {/* Hero */}
