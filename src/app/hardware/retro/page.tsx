@@ -46,7 +46,7 @@ const premiumConditions = [
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'レトロゲーム専門業者が多数参加し、最高値を比較しやすい', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '出張買取・宅配買取・店舗買取', point: 'レトロゲーム専門業者が多数参加し、最高値を比較しやすい', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', point: '大量のレトロゲームを一度に出張買取', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム・トレカ・フィギュアとまとめて売却可能', rank: 3 },
 ];

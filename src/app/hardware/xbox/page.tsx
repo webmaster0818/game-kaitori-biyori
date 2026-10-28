@@ -33,7 +33,7 @@ const demandInfo = [
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: 'Xbox専門業者・海外輸出業者も参加', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '出張買取・宅配買取・店舗買取', point: 'Xbox専門業者・海外輸出業者も参加', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', point: 'Xboxも出張買取に対応し、手間を軽減', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'ゲーム全般を幅広く取扱い', rank: 3 },
 ];

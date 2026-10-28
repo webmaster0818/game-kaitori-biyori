@@ -115,7 +115,7 @@ export default function HikakakuReviewPage() {
                 <li>+ 無料で利用できる</li>
                 <li>+ ゲーム専門の買取業者が多数参加</li>
                 <li>+ レトロゲームの査定に強みがある</li>
-                <li>+ 全国対応（宅配買取メイン）</li>
+                <li>+ 全国対応（出張買取・宅配買取・店舗買取）</li>
                 <li>+ 業者の口コミ・評判を参考にできる</li>
               </ul>
             </div>

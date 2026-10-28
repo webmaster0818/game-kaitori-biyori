@@ -40,7 +40,7 @@ const tips = [
 ];
 
 const services = [
-  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '宅配買取メイン', point: '業者間の価格差が大きいPS4は一括比較が有効', rank: 1 },
+  { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '出張買取・宅配買取・店舗買取', point: '業者間の価格差が大きいPS4は一括比較が有効', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', point: '古いPS4でも出張で手軽に現金化', rank: 2 },
   { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'PS4ソフトや周辺機器もまとめて売却可能', rank: 3 },
 ];
