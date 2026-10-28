@@ -6,12 +6,12 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】',
   description:
-    'レトロゲームソフトの買取相場とプレミアソフトTOP10を解説します。バトルガレッガ・レイディアントシルバーガンなどの高額買取タイトル、プレミアがつく理由、偽物の見分け方、保管方法、おすすめ買取サービス3社の比較を掲載しています。',
+    'レトロゲームソフト10本の買取価格を2026年10月28日に駿河屋公式で確認しました。最高はレンダリング・レンジャーR2の290,400円、クロノトリガーは2,200円です。プレミアがつく理由、偽物の見分け方、保管方法、買取サービス3社の比較も掲載しています。',
   keywords: ['レトロゲームソフト 買取', 'プレミアソフト', 'レトロゲーム 売る', 'ファミコン ソフト 買取'],
   openGraph: {
     images: ['/og.png'],
     title: 'レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】',
-    description: 'レトロゲームソフトの買取相場とプレミアソフトTOP10を解説します。',
+    description: 'レトロゲームソフト10本の買取価格を2026年10月28日に駿河屋公式で確認しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 };
 
 const premiumData = [
-  { title: 'バトルガレッガ（セガサターン）', price: '50,000〜80,000円' },
-  { title: 'レイディアントシルバーガン（セガサターン）', price: '40,000〜70,000円' },
-  { title: 'レンダリング・レンジャーR2（スーパーファミコン）', price: '100,000〜200,000円' },
-  { title: 'ゴールデンアイ 007（N64・未開封）', price: '30,000〜50,000円' },
-  { title: 'MOTHER（ファミコン・箱・説明書付き）', price: '15,000〜25,000円' },
-  { title: 'クロノ・トリガー（SFC・美品）', price: '5,000〜10,000円' },
-  { title: '魂斗羅 ザ・ハードコア（メガドライブ）', price: '20,000〜35,000円' },
-  { title: 'パンツァードラグーン サーガ（セガサターン）', price: '30,000〜50,000円' },
-  { title: 'ロックマン7 宿命の対決!（SFC）', price: '8,000〜15,000円' },
-  { title: 'スーパーマリオRPG（SFC・箱・説明書付き）', price: '5,000〜8,000円' },
+  { title: 'レンダリング・レンジャーR2（スーパーファミコン）', price: '290,400円', note: '美品 345,600円' },
+  { title: 'レイディアント シルバーガン（セガサターン）', price: '12,000円', note: '美品 14,200円' },
+  { title: 'MOTHER（ファミコン）', price: '11,000円', note: '美品 22,000円' },
+  { title: 'スーパーメトロイド（スーパーファミコン）', price: '8,100円', note: '' },
+  { title: 'ゴールデンアイ007（NINTENDO64）', price: '6,600円', note: '' },
+  { title: 'バトルガレッガ（セガサターン）', price: '6,100円', note: '美品 6,700円' },
+  { title: 'ロックマン7 宿命の対決（スーパーファミコン）', price: '6,000円', note: '美品 7,200円' },
+  { title: 'パンツァードラグーン I＆II（セガサターン）', price: '4,900円', note: '美品 5,400円・未開封 5,900円' },
+  { title: 'ゼルダの伝説 神々のトライフォース（スーパーファミコン）', price: '4,000円', note: '' },
+  { title: 'クロノトリガー（スーパーファミコン）', price: '2,200円', note: '外箱のみは600円' },
 ];
 
 const premiumReasons = [
@@ -69,7 +69,7 @@ const faqs = [
 export default function RetroSoftPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-28", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'レトロゲームソフト' }]} />
 
       {/* Hero */}
@@ -80,7 +80,7 @@ export default function RetroSoftPage() {
             レトロゲームソフト 買取ガイド
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            当サイトでは、レトロゲームソフトの買取相場をプレミアソフトTOP10で調査しています。プレミアがつく理由、偽物の見分け方、正しい保管方法、おすすめ買取サービス3社の比較など、レトロゲームの売却前に確認いただきたい情報をまとめました。
+            当サイトでは、レトロゲームソフト10本の買取価格を2026年10月28日に駿河屋公式の買取検索で確認しました。最も高いのはスーパーファミコンのレンダリング・レンジャーR2（290,400円）で、2位以下は12,000円以下です。クロノトリガーのように販売本数の多い名作は2,200円にとどまり、知名度と買取価格は一致しません。プレミアがつく理由、偽物の見分け方、正しい保管方法、おすすめ買取サービス3社の比較など、レトロゲームの売却前に確認いただきたい情報をまとめました。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -93,14 +93,15 @@ export default function RetroSoftPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Premium Table */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />プレミアソフトTOP10</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。状態・付属品により大きく変動します。完品（箱・説明書付き）の場合の目安です。</p>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />レトロゲームソフト10本の買取価格（駿河屋・2026年10月28日確認）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>駿河屋公式の買取検索に表示された通常の買取価格です（美品・未開封の価格が別に表示されている場合は備考に記載）。状態・付属品の有無や時期により変わるため、売却前に最新の価格をご確認ください。</p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
                 <tr>
                   <th>タイトル</th>
-                  <th>買取相場（完品）</th>
+                  <th>買取価格</th>
+                  <th>備考</th>
                 </tr>
               </thead>
               <tbody>
@@ -108,11 +109,13 @@ export default function RetroSoftPage() {
                   <tr key={row.title}>
                     <td className="font-bold">{row.title}</td>
                     <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.price}</td>
+                    <td className="text-sm">{row.note || '—'}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の買取検索（2026年10月28日閲覧）。以前の版で掲載していた出典の無い相場（例：バトルガレッガ 50,000〜80,000円）は実測値と大きく異なっていたため削除しました。魂斗羅 ザ・ハードコア・パンツァードラグーン サーガ・スーパーマリオRPGは、本日の検索でソフト本体の価格を確認できなかったため掲載していません。駿河屋での売り方・手数料は<Link href="/review/surugaya/" className="underline">駿河屋の買取の評判・口コミ</Link>で解説しています。</p>
         </section>
 
         {/* Premium Reasons */}

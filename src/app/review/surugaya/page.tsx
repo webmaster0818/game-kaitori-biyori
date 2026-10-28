@@ -38,14 +38,30 @@ const faqs = [
   { q: '買取価格の事前確認はどこでできますか？', a: '駿河屋公式サイトの「買取検索」から商品名やJANコードで検索できます。ただし表示価格は「完品・美品」の場合の上限価格であり、実際の査定では状態に応じて変動します。' },
   { q: '送料や手数料はかかりますか？', a: '送料は「あんしん買取」が見積金額3,000円以上、「かんたん買取」が30点以上で着払いにできます。1箱あたり1,500円未満の場合は送料を請求される場合があります。別途、通信買取手数料として「かんたん買取」は銀行振込660円・現金書留880円、「あんしん買取」は銀行振込880円・現金書留990円が買取合計額から差し引かれます（公式 買取Q&A）。' },
   { q: '査定額に納得できない場合はキャンセルできますか？', a: '商品発送後に査定額に納得できない場合は、全商品または一部商品を返却してもらえます。返送料は利用者負担です。承諾後のキャンセルはできず、「かんたん買取」で自動承諾を選んだ場合はキャンセル・返送ができません（公式 買取Q&A）。' },
+  { q: '駿河屋ではレトロゲームはいくらで売れますか？', a: '2026年10月28日の駿河屋公式の買取検索では、スーパーファミコンのクロノトリガーが2,200円、スーパーメトロイドが8,100円、ファミコンのMOTHERが11,000円（美品22,000円）、スーパーファミコンのレンダリング・レンジャーR2が290,400円でした。外箱のみ・説明書のみにも買取価格が付くタイトルがあります。価格は日々変わるため、売却前に商品ページでご確認ください。' },
   { q: '店舗での買取はできますか？', a: '公式の店舗一覧では、駿河屋リアルストア110店舗・フレンドリーショップ50店舗の計160店舗（2026年10月16日時点）が全国にあります。秋葉原・池袋・名古屋・大阪日本橋などには買取センターもあります。店頭買取の受付内容は店舗ごとに異なるため、来店前に各店舗のページでご確認ください。' },
   { q: '現行のSwitchやPS5のソフトも買取対象ですか？', a: '現行タイトルも買取対象で、商品ページで買取価格を事前に確認できます。宅配では通信買取手数料（660〜990円）が差し引かれるため、少数のソフトを売る場合は手数料を引いた手取りで他社と比較することをおすすめします。' },
+];
+
+const retroPrices = [
+  { title: 'レンダリング・レンジャーR2（SFC）', price: '290,400円', note: '美品 345,600円／外箱のみ 56,000円／説明書のみ 23,800円' },
+  { title: 'ポケットモンスター 青（GB・JANコード付き）', price: '14,000円', note: 'JANコード無し版は7,200円' },
+  { title: 'MOTHER（FC）', price: '11,000円', note: '美品 22,000円' },
+  { title: 'スーパーメトロイド（SFC）', price: '8,100円', note: '外箱のみ 1,500円' },
+  { title: 'ゴールデンアイ007（N64）', price: '6,600円', note: '外箱のみ 1,200円' },
+  { title: 'ロックマン7 宿命の対決（SFC）', price: '6,000円', note: '美品 7,200円／説明書のみ 700円' },
+  { title: 'ゼルダの伝説 神々のトライフォース（SFC）', price: '4,000円', note: '—' },
+  { title: 'ゼルダの伝説 時のオカリナ（N64）', price: '3,200円', note: '—' },
+  { title: '星のカービィ スーパーデラックス（SFC）', price: '2,700円', note: '—' },
+  { title: 'クロノトリガー（SFC）', price: '2,200円', note: '外箱のみ 600円' },
+  { title: 'スーパーマリオブラザーズ3（FC）', price: '2,200円', note: '—' },
+  { title: 'スーパーマリオカート（SFC）', price: '1,200円', note: '—' },
 ];
 
 export default function SurugayaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の買取の評判・口コミ｜ヒカカク493件の星分布と手数料・レトロゲームの減額基準を検証", "datePublished": "2026-03-15", "dateModified": "2026-10-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋の買取の評判・口コミ｜ヒカカク493件の星分布と手数料・レトロゲームの減額基準を検証", "datePublished": "2026-03-15", "dateModified": "2026-10-28", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '駿河屋' }]} />
 
       {/* Hero */}
@@ -55,10 +71,10 @@ export default function SurugayaReviewPage() {
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>レトロゲーム専門</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            駿河屋<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミのレビュー</span>
+            駿河屋<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミとレトロゲームの買取価格</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            駿河屋は、商品ごとの買取価格を公式サイトで公開している中古ホビー・ゲームの買取サービスです。ヒカカクの口コミは493件・総合2.57点で、★1が213件、★5が95件と評価が分かれています（2026年10月18日確認）。評価が分かれる主な理由は、宅配の通信買取手数料（660〜990円）、査定期間（到着後4〜14日）、箱・説明書の欠品による減額です。
+            駿河屋は、商品ごとの買取価格を公式サイトで公開している中古ホビー・ゲームの買取サービスです。ヒカカクの口コミは493件・総合2.57点で、★1が213件、★5が95件と評価が分かれています（2026年10月18日確認）。評価が分かれる主な理由は、宅配の通信買取手数料（660〜990円）、査定期間（到着後4〜14日）、箱・説明書の欠品による減額です。レトロゲームの買取価格は、2026年10月28日の公式買取検索でスーパーファミコンのクロノトリガーが2,200円、ファミコンのMOTHERが11,000円でした（下の表）。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.suruga-ya.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -72,6 +88,23 @@ export default function SurugayaReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* レトロゲーム買取価格の例 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />駿河屋のレトロゲーム買取価格（2026年10月28日確認）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>駿河屋公式の買取検索で、レトロゲームの定番ソフトの買取価格を確認しました。駿河屋はソフト本体に加えて、外箱のみ・説明書のみの付属品にも買取価格を表示しています。箱・説明書が手元に残っている場合は、本体と別に価格を確認できます。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead><tr><th>タイトル（機種）</th><th>本体の買取価格</th><th>付属品のみ・美品の価格</th></tr></thead>
+              <tbody>
+                {retroPrices.map((r) => (
+                  <tr key={r.title}><td className="font-bold">{r.title}</td><td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{r.price}</td><td className="text-sm">{r.note}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の買取検索（2026年10月28日閲覧）。表示は通常の買取価格で、実際の査定では状態・付属品により減額される場合があります。宅配で売る場合は通信買取手数料（660〜990円）が差し引かれます。ドラゴンクエストV 天空の花嫁（SFC）は「メールにてお見積」の表示で価格は出ていませんでした。ほかのタイトルは<Link href="/software/retro-soft/" className="underline">レトロゲームソフト10本の買取価格</Link>、ポケモンのカセットは<Link href="/software/pokemon/" className="underline">ポケモンソフトの買取価格ランキング</Link>をご覧ください。</p>
+        </section>
+
         {/* Features */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />駿河屋の4つの特徴</h2>
