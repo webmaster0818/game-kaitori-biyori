@@ -230,7 +230,7 @@ const rankings = [
 const comparisonTable = [
   { name: 'ヒカカク！', shipping: '業者による', speed: '2〜7日', genre: '全ジャンル', method: '出張/宅配/店舗（一括査定）', packingKit: '業者による', returnFee: '業者による', dataWipe: '業者による', campaign: '一括査定で最高値保証' },
   { name: 'ウリエル', shipping: '出張費無料', speed: 'その場で現金', genre: '全ジャンル', method: '出張/催事/店舗', packingKit: 'なし（出張）', returnFee: '-', dataWipe: '相談可', campaign: '出張買取強化中' },
-  { name: 'ゲオ', shipping: '無料（1点〜）', speed: '即日〜5日', genre: '新作中心', method: '店舗/宅配', packingKit: 'なし（自分で用意）', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（2026年10月25日まで本体等1点から10%UP）' },
+  { name: 'ゲオ', shipping: '無料（1点〜）', speed: '即日〜5日', genre: '新作中心', method: '店舗/宅配', packingKit: 'なし（自分で用意）', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（本体等1点から10%UPは2026年10月25日で期間終了）' },
   { name: '駿河屋', shipping: '条件付き無料', speed: '5〜14日', genre: 'レトロ・レア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: '買取30%UPキャンペーン（不定期）' },
   { name: 'ブックオフ', shipping: '無料（10点〜）', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: 'なし（店舗持込）', returnFee: '無料（宅配）', dataWipe: '対応あり', campaign: '買取金額20%UPクーポン（不定期）' },
   { name: 'ネットオフ', shipping: '無料（ソフト類3点〜・本のみ30点〜）', speed: '最短2日', genre: '全般', method: '宅配', packingKit: '無料', returnFee: '自己負担', dataWipe: '対応あり', campaign: '会員限定の買取UP（公式で要確認）' },
@@ -242,7 +242,7 @@ const comparisonTable = [
   { name: 'トレジャーファクトリー', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: '無料', returnFee: '有料', dataWipe: '非対応', campaign: '引っ越しシーズンUP' },
   { name: 'お宝創庫', shipping: '無料', speed: '即日〜5日', genre: 'ゲーム・ホビー', method: '店舗/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '東海・関西限定強化中' },
   { name: 'まんだらけ', shipping: '条件付き無料', speed: '即日〜14日', genre: 'レトロ・プレミア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: 'プレミア品特別査定' },
-  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（2026年10月25日まで店頭買取30%UP）' },
+  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（店頭買取30%UPは2026年10月25日で期間終了）' },
 ];
 
 const userTypeRecommendations = [
