@@ -8,14 +8,14 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 const CHECKED = '2026年10月21日';
 
 export const metadata: Metadata = {
-  title: 'ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を公式と10/21実測で検証',
+  title: '買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を公式で検証',
   description:
-    '買取専門店ウリエルのゲーム買取を公式サイトと口コミ件数で検証しています（2026年10月21日確認）。ゲームの対象は1都3県、買取方法は出張・催事・店舗（川崎）で宅配はありません。ヒカカクの口コミは3件・2.67点、ゲームソフトはクーリングオフ対象外です。',
+    '買取ウリエルの評判・口コミを、ヒカカクの口コミ件数（3件・2.67点）と公式サイトで検証しています（2026年10月21日確認）。出張料・査定料・キャンセル料は無料、買取方法は出張・催事・店舗（川崎）で宅配はありません。ゲームの買取は1都3県が対象です。',
   keywords: ['ウリエル 買取', '買取ウリエル', 'ウリエル 評判', 'ウリエル 口コミ', 'ウリエル ゲーム買取', 'ウリエル 店舗'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を検証',
-    description: '買取専門店ウリエルのゲーム買取の条件・口コミ件数・価格例を、公式サイトと駿河屋の実測（2026年10月21日）で検証しています。',
+    title: '買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を検証',
+    description: '買取ウリエルの口コミ件数・出張買取の対応エリアと費用・ゲーム買取の条件を、公式サイトと駿河屋の実測（2026年10月21日）で検証しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -90,7 +90,7 @@ const faqs = [
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ウリエル買取の評判・口コミ｜ゲームの対象地域・店舗・価格例を公式と実測で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-21", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を公式で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-29", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
