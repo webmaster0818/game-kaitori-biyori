@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
-import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: '【2026年最新】ゲーム買取おすすめランキング15選',
@@ -298,7 +297,6 @@ export default function KaitoriRankingPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ゲオ・ブックオフ・駿河屋・ネットオフ・ウリエル・ヒカカク！など主要15サービスを比較しています。送料・入金速度・対応ジャンル・口コミをもとに、目的に合った買取サービスを選べるよう整理しました。
           </p>
-          <GeoSuspendedNotice />
           <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年10月25日</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/" className="btn-primary py-2.5 px-6">

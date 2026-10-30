@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
-import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: '状態別 ゲーム買取 許容度マップ｜箱なし・傷・ジャンクはどこで売れる？',
@@ -60,7 +59,6 @@ export default function ConditionGuidePage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             箱なし・説明書なし・ディスク傷・付属品欠品・ジャンク（故障）・未初期化について、状態ごとにどの店舗で売却できるかを、各社公式情報にもとづいて一覧にしています。一般的な比較サイトでは扱いの少ない、状態別の買取条件をまとめました。
           </p>
-          <GeoSuspendedNotice />
           <p className="text-xs" style={{ color: '#94A3B8' }}>各社公式の買取ガイド/FAQ/買取条件を2026年6月21日に確認しています</p>
         </div>
       </section>

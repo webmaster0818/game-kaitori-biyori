@@ -6,7 +6,6 @@ import AuthorBox from '@/components/AuthorBox';
 import { PriceMatrix, PriceDiffRanking, PriceFreshnessNote } from '@/components/PriceIndex';
 import { PRICE_SURVEY_DATE, PRICE_PREV_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, crossStorePrices, hardwarePrices, priceDiffRanking, priceMoves } from '@/data/prices';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
-import GeoSuspendedNotice from '@/components/GeoSuspendedNotice';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取価格インデックス【公式価格を実測】今どこが一番高い？店舗横断の実測比較',
@@ -41,7 +40,6 @@ export default function PriceIndexPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋が公式に公開している買取価格を<strong>定期的に調査</strong>し、人気ソフトを店舗横断で比較しています。売却前に、現時点で最も高い店舗を一覧でご確認いただけます。同じソフトでも店舗によって買取価格に差があるのが、中古ゲーム買取の実態です。
           </p>
-          <GeoSuspendedNotice />
           <p className="text-xs" style={{ color: '#94A3B8' }}>各社公式の買取価格を定期的に実測しています（最終実測日: {PRICE_SURVEY_DATE}）</p>
         </div>
       </section>
