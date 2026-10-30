@@ -61,9 +61,9 @@ export default function GeoReviewPage() {
             全国約900店舗を展開するゲオグループの宅配買取サービスです。送料・査定料・振込手数料が無料で1点から申し込めます。一方で「段ボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年7月28日確認）で正確に解説します。梱包・段ボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。具体的な手順は<Link href="/guide/geo-takuhai/" style={{ color: '#34D399' }}>やり方ガイド</Link>をご覧ください。
           </p>
           <div className="rounded-lg p-4 mb-6 text-sm leading-relaxed" style={{ background: 'rgba(251,191,36,0.12)', border: '1px solid rgba(251,191,36,0.5)', color: '#FDE68A' }}>
-            <p className="font-bold mb-1">ゲオの買取は現在、新規の申込みを停止しています（2026年10月29日 公式再確認）</p>
-            <p>公式の告知によると、2026年10月15日に同社システムへの不正アクセスが確認されたため、10月17日21時からゲオの買取サービスを停止しています。終了時期は未定です。停止中は新規の買取申込みのほか、査定結果の確認・承認、買取代金の振込手続きも利用できません。すでに申し込んだ方の集荷は指定日時どおり行い、到着済みの荷物は順次査定するとしています。最新の状況は公式の告知をご確認ください。</p>
-            <p className="text-xs mt-2">出典：<a href="https://buy.geo-online.co.jp/trade" target="_blank" rel="noopener noreferrer nofollow" className="underline">ゲオの買取「システムメンテナンスに伴うサービス ご提供停止のご案内」</a>（株式会社ゲオストア・2026年10月21日付）</p>
+            <p className="font-bold mb-1">ゲオの買取は現在、新規の申込みを停止しています（2026年10月30日 確認）</p>
+            <p>公式の告知によると、2026年10月15日に同社システムへの不正アクセスが確認されたため、10月17日21時からゲオの買取サービスを停止しています。終了時期は未定です。停止中は新規の買取申込みのほか、査定結果の確認・承認、買取代金の振込手続きも利用できません。すでに申し込んだ方の集荷は指定日時どおり行い、到着済みの荷物は順次査定するとしています。なお、10月30日時点で公式の買取ページは表示されるようになりましたが、再開の告知は確認できていません。同日の報道でも、サービスの停止は継続中で再開時期は未定とされています。最新の状況は公式サイトでご確認ください。</p>
+            <p className="text-xs mt-2">出典：<a href="https://buy.geo-online.co.jp/trade" target="_blank" rel="noopener noreferrer nofollow" className="underline">ゲオの買取「システムメンテナンスに伴うサービス ご提供停止のご案内」</a>（株式会社ゲオストア・2026年10月21日付・現在は公式ページに掲載されていません）／<a href="https://scan.netsecurity.ne.jp/article/2026/10/30/56628.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">ScanNetSecurity「セカンドリテイリングに不正アクセス」</a>（2026年10月30日付）</p>
           </div>
           <div className="flex flex-wrap gap-3">
             <a href="https://geo-online.co.jp/kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
