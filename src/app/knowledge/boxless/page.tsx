@@ -38,7 +38,7 @@ const workarounds = [
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', boxless: '箱なし対応業者を含む一括査定', point: '箱なしでも高値を提示する業者を比較可能' },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', boxless: '箱なし・付属品なしでも出張査定に対応', point: '付属品の状態を現物で確認したうえで査定' },
-  { name: 'ティファナ', feature: '店舗+宅配買取', boxless: '箱なしでも店頭持ち込みに対応', point: '付属品なしでもまとめて引き取りに対応' },
+  { name: 'ティファナ', feature: '店舗買取（宅配は一時停止中）', boxless: '箱なしでも店頭持ち込みに対応', point: '付属品なしでもまとめて引き取りに対応' },
 ];
 
 const faqs = [

@@ -215,11 +215,11 @@ const rankings = [
     name: 'ティファナ',
     score: '3.6',
     type: '総合買取サービス',
-    description: '総合リサイクルサービスで、ゲーム・家電・ブランド品・楽器・カメラなど幅広いジャンルに対応しています。宅配買取は送料無料で全国対応です。出張買取にも対応しており、大量売りにも適しています。',
-    pros: ['幅広いジャンルに対応', '宅配買取は送料無料', '出張買取にも対応', '大量売りに対応'],
-    cons: ['ゲーム専門ではないため査定は平均的', 'レトロゲームには弱い'],
-    shipping: '無料（宅配・出張とも）',
-    speed: '出張: 即日 / 宅配: 3〜7日',
+    description: '総合リサイクルサービスで、ゲーム・家電・ブランド品・楽器・カメラなど幅広いジャンルに対応しています。宅配買取は、2026年10月31日時点でシステムリニューアルのため一時停止中です（公式の宅配買取ページで確認）。出張買取にも対応しており、大量売りにも適しています。',
+    pros: ['幅広いジャンルに対応', '出張買取にも対応', '大量売りに対応'],
+    cons: ['ゲーム専門ではないため査定は平均的', 'レトロゲームには弱い', '宅配買取は一時停止中（2026年10月31日確認）'],
+    shipping: '出張は無料（宅配は一時停止中）',
+    speed: '出張: 即日',
     genre: '全般',
     bestFor: '幅広いジャンルをまとめて売りたい人',
     reviewPath: '/review/tifana/',
@@ -241,7 +241,7 @@ const comparisonTable = [
   { name: 'トレジャーファクトリー', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '店舗/宅配', packingKit: '無料', returnFee: '有料', dataWipe: '非対応', campaign: '引っ越しシーズンUP' },
   { name: 'お宝創庫', shipping: '無料', speed: '即日〜5日', genre: 'ゲーム・ホビー', method: '店舗/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '東海・関西限定強化中' },
   { name: 'まんだらけ', shipping: '条件付き無料', speed: '即日〜14日', genre: 'レトロ・プレミア', method: '店舗/宅配', packingKit: 'なし', returnFee: '有料', dataWipe: '非対応', campaign: 'プレミア品特別査定' },
-  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/宅配', packingKit: '無料', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（店頭買取30%UPは2026年10月25日で期間終了）' },
+  { name: 'ティファナ', shipping: '無料', speed: '即日〜7日', genre: '全般', method: '出張/店頭（宅配は一時停止中）', packingKit: '—', returnFee: '無料', dataWipe: '対応あり', campaign: '不定期（店頭買取30%UPは2026年10月25日で期間終了）' },
 ];
 
 const userTypeRecommendations = [

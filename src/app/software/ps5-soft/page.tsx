@@ -40,7 +40,7 @@ const limitedInfo = [
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', area: '全国対応', method: '出張買取・宅配買取・店舗買取', point: '複数社の比較で最高値を確認可能', rank: 1 },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', area: '東京・神奈川・千葉・埼玉（ゲーム）', method: '出張買取', point: '大量のソフトを自宅で即日現金化', rank: 2 },
-  { name: 'ティファナ', feature: '店舗+宅配買取', area: '東京近郊', method: '店舗・宅配', point: 'PS5本体とソフトをまとめて売れる', rank: 3 },
+  { name: 'ティファナ', feature: '店舗買取（宅配は一時停止中）', area: '東京近郊', method: '店舗（宅配は一時停止中）', point: 'PS5本体とソフトをまとめて売れる', rank: 3 },
 ];
 
 const faqs = [

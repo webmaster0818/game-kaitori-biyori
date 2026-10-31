@@ -41,7 +41,7 @@ const faultTypes = [
 const services = [
   { name: 'ヒカカク！', feature: '最大20社一括査定', junk: 'ジャンク対応業者も含めて一括査定可能', point: 'ジャンク専門業者を含む最大20社の査定額を比較可能' },
   { name: '買取ウリエル', feature: '出張買取・即日現金化', junk: 'ジャンク品の出張査定対応', point: '壊れたゲーム機を自宅で査定し、即日現金化' },
-  { name: 'ティファナ', feature: '店舗+宅配買取', junk: '店頭でジャンク品の即時査定', point: '動作確認なしで持ち込み可能' },
+  { name: 'ティファナ', feature: '店舗買取（宅配は一時停止中）', junk: '店頭でジャンク品の即時査定', point: '動作確認なしで持ち込み可能' },
 ];
 
 const estimateGuide = [
