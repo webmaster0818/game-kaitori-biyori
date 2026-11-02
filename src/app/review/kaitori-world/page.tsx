@@ -5,13 +5,13 @@ import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
-  title: 'カイトリワールド（買取ワールド）の評判・口コミは怪しい？uridoki3.9（168件）の傾向と運営会社・減額を検証【2026年10月】',
+  title: 'カイトリワールド（買取ワールド）の評判・口コミは怪しい？ウリドキ3.9（168件）・11月キャンペーン・減額を検証【2026年11月】',
   description:
     'カイトリワールドが怪しいと言われる理由を検証します。運営はゲーム専門店を22年間営むメディアワールド株式会社（古物商許可 第306701605637号）です。減額の基準、入金日数、送料無料の条件（査定3,000円以上）、7日間の自動承認、5日間の「価格保証買取」を、公式情報（2026年9月確認）をもとに解説します。',
   keywords: ['カイトリワールド 評判', 'カイトリワールド 口コミ', 'カイトリワールド 怪しい', 'メディアワールド 怪しい', '買取ワールド 評判', 'カイトリワールド 入金'],
   openGraph: {
     images: ['/og.png'],
-    title: 'カイトリワールド（買取ワールド）の評判・口コミは怪しい？uridoki3.9（168件）の傾向と運営会社・減額を検証【2026年10月】',
+    title: 'カイトリワールド（買取ワールド）の評判・口コミは怪しい？ウリドキ3.9（168件）・11月キャンペーン・減額を検証【2026年11月】',
     description: 'カイトリワールドの評判と「怪しい」と言われる理由、運営会社メディアワールドの実態を公式情報にもとづいて調査しています。送料条件・入金日数・減額基準について解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -55,7 +55,7 @@ const faqs = [
 export default function KaitoriWorldReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？運営会社メディアワールドの実態・送料・入金日数・減額条件を解説", "datePublished": "2026-03-15", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？運営会社メディアワールドの実態・送料・入金日数・減額条件を解説", "datePublished": "2026-03-15", "dateModified": "2026-11-02", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'カイトリワールド' }]} />
 
       {/* Hero */}
@@ -259,11 +259,11 @@ export default function KaitoriWorldReviewPage() {
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ウリドキ「カイトリワールドの口コミ・評判」、ヒカカク！「カイトリワールド」店舗ページ（いずれも2026年10月26日確認）。評点・件数は各サイトの集計で、投稿により変動します。ヒカカク！は件数が少ないため、傾向の判断にはウリドキの件数を参考にしています。</p>
           </div>
           <div className="glass-card p-6 mb-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>2026年10月のキャンペーン（公式サイト掲載）</h3>
+            <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>2026年11月のキャンペーン（公式サイト掲載）</h3>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              公式サイトでは、2026年10月1日〜10月31日の期間で「ホビー還元祭」（ホビー対象・査定合計3,000円以上で買取最大30%アップ）、「ゲーム買取祭り」（ゲーム限定で買取最大20%アップ）、人気本体の買取アップ額を2倍にする「倍々ゲーム祭り」が掲載されています。初めて利用する方向けの買取金額アップ（最大1,000円）は随時開催と記載されています。10月15日付で期間延長のお知らせも掲載されているため、最新の対象期間は申込前に公式サイトでご確認ください。
+              公式サイトでは、2026年11月1日0:00〜11月30日23:59の期間で「まとめ売り強化月間・ホビー還元祭」（ホビー対象・査定合計3,000円以上で買取最大30%アップ）、「ゲーム買取祭り」（ゲーム限定で買取最大20%アップ）、人気本体の買取アップ額を2倍にする「倍々ゲーム祭り」が掲載されています。初めて利用する方向けの買取金額アップ（最大1,000円）は随時開催、メディアワールド通販で購入すると買取額3%アップのクーポンが付く「買って売ってキャンペーン」は終了日未定と記載されています。10月はキャンペーン期間が延長されたことがあるため、対象期間と条件は申込前に公式サイトでご確認ください。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト トップページ（2026年10月26日確認）</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト トップページ（2026年11月2日確認）</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="glass-card p-6">
