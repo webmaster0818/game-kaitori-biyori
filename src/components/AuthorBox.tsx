@@ -5,7 +5,7 @@ export default function AuthorBox() {
         className="text-xs font-extrabold tracking-wider mb-4"
         style={{ color: 'var(--color-electric-green)' }}
       >
-        この記事の監修者
+        この記事の作成・データ確認
       </p>
       <div className="flex flex-col sm:flex-row gap-4">
         <div

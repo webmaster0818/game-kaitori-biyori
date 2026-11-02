@@ -38,7 +38,7 @@ const dataPolicy = [
 const flow = [
   { step: 1, title: '対策キーワードの検索意図を分析', desc: '読者がそのキーワードで何を知りたいかを整理し、上位サイトの構成を調査して不足している情報を洗い出します。' },
   { step: 2, title: '公式一次情報を調査', desc: '買取各社・メーカー公式・公的機関の情報を確認し、価格・仕様・事実を出典付きで収集します。' },
-  { step: 3, title: '記事化・監修', desc: '収集した事実をもとに、ゲーム買取に精通した監修者の視点で読者が判断しやすい形に編集します。' },
+  { step: 3, title: '記事化・確認', desc: '収集した事実に出典と確認日を付け、読者が比較しやすい形に整理します。掲載する数値は、公開前に出典の公式ページと照合します。' },
   { step: 4, title: '公開後の定期的な見直し', desc: '公開後も、相場やサービス内容の変化に応じて、調査日とともに内容を更新します。' },
 ];
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* 監修者 */}
+        {/* 運営体制 */}
         <section className="mb-12">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />運営体制</h2>
           <div className="glass-card p-6">
