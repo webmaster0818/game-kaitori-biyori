@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布で検証【2026年10月】しつこい連絡・デメリット',
+  title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布と利用規約で検証【2026年11月】しつこい連絡・減額・デメリット',
   description:
-    'ヒカカク！の評判・口コミを公式クチコミ1,083件の星分布で検証しています。電話番号は必須でSMS認証があり、申込後のメールは配信停止できない点など、「電話がかかってくる」「メールが多い」と言われる理由を公式FAQ・査定フォーム（10月31日確認）で整理しました。',
+    'ヒカカク！の評判・口コミを公式クチコミ1,083件の星分布で検証しています。電話番号は必須でSMS認証があり、申込後のメールは配信停止できない点など、「電話がかかってくる」「メールが多い」と言われる理由を公式FAQ・査定フォーム（10月31日確認）と利用規約（11月11日確認）で整理しました。',
   keywords: ['ヒカカク 評判', 'ヒカカク 口コミ', 'ヒカカク 怪しい', 'ヒカカク ゲーム買取', 'ゲーム 一括査定', 'ゲーム買取 比較'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布で検証【2026年10月】',
+    title: 'ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布と利用規約で検証【2026年11月】',
     description: 'ヒカカク！の評判・口コミと「怪しい・連絡がしつこい」と言われる理由の実態を検証しています。最大20社一括査定の仕組みとデメリットについて解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -46,13 +46,14 @@ const faqs: { q: string; a: string; url?: string }[] = [
   { q: '申込後のメールを止めることはできますか？', a: 'ヒカカク！公式のよくあるご質問では、査定申込完了後のメールには配信停止の手続きが無いと案内されています。会員登録の有無にかかわらず、申込に関する一連のメールが送られます。会員の退会手続きは公式サイトから行えますが、送信済みの個人情報は削除できないとされています（2026年10月31日公式確認）。メールが届かない場合は @hikakaku.com の受信設定と迷惑メールフォルダの確認が案内されています。' },
   { q: 'レトロゲームでも査定してもらえますか？', a: '査定フォームの商品カテゴリには「古本・CD・DVD・ゲーム」があり、レトロゲームも申し込めます。参加業者の数や査定額は商品や地域によって異なり、公式でも値段が付かない場合があると案内されています。箱・説明書の有無で査定が変わりやすいため、付属品の状態も入力することをおすすめします。' },
   { q: '壊れたゲーム機も査定してもらえますか？', a: 'ジャンク品の買取に対応している業者も参加しています。故障の程度によって異なりますが、まずは査定を申し込むことをおすすめします。部品取りを目的とした買取が行われる場合もあります。' },
+  { q: '本査定で金額が下がった場合はどうなりますか？', a: 'ヒカカク！の利用規約（第6条1項）では、取引価格や梱包・郵送費用の負担、入金方法などの取引条件はユーザーと買取業者の間で決めるとされています。また、業者との取引で生じたトラブルにヒカカク！は関与しないと定められています（第5条4項）。本査定で減額された場合に買取をやめられるか、返送料をどちらが負担するかは、依頼する業者の買取条件で確認してください（2026年11月11日公式確認・利用規約の最終改定日 2024年10月1日）。', url: 'https://hikakaku.com/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84/' },
   { q: '個人情報は安全ですか？', a: 'ヒカカク！のプライバシーポリシーをご確認ください。', url: 'https://hikakaku.com/%E3%83%97%E3%83%A9%E3%82%A4%E3%83%90%E3%82%B7%E3%83%BC%E3%83%9D%E3%83%AA%E3%82%B7%E3%83%BC/' },
 ];
 
 export default function HikakakuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布で検証【2026年10月】しつこい連絡・デメリット", "datePublished": "2026-03-15", "dateModified": "2026-10-31", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ヒカカク！の評判・口コミは怪しい？口コミ1,083件の星分布と利用規約で検証【2026年11月】しつこい連絡・減額・デメリット", "datePublished": "2026-03-15", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ヒカカク！' }]} />
 
       {/* Hero */}
@@ -189,7 +190,7 @@ export default function HikakakuReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向と営業電話の実態</h2>
           <div className="glass-card p-6">
             <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
-              ヒカカク!公式のクチコミページでは、総合評価<strong>3.4点（5点満点）・1,083件</strong>、「悪い・ひどい・買取が安い」というクチコミが<strong>32.5%</strong>です（2026年10月15日閲覧）。評価が星5と星1に分かれる<strong>二極化</strong>が特徴です。また「最大20社に一括で依頼する」仕組みのため、<strong>複数業者からの営業電話が集中しやすい</strong>点に最も注意が必要です。
+              ヒカカク!公式のクチコミページでは、総合評価<strong>3.4点（5点満点）・1,083件</strong>、「悪い・ひどい・買取が安い」というクチコミが<strong>32.5%</strong>です（2026年10月15日閲覧・11月11日に件数が変わっていないことを確認）。評価が星5と星1に分かれる<strong>二極化</strong>が特徴です。また「最大20社に一括で依頼する」仕組みのため、<strong>複数業者からの営業電話が集中しやすい</strong>点に最も注意が必要です。
             </p>
             <div className="overflow-x-auto mb-4">
               <table className="comparison-table text-sm">
@@ -203,7 +204,7 @@ export default function HikakakuReviewPage() {
                 </tbody>
               </table>
             </div>
-            <p className="text-xs mb-4" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/hikakaku_reviews/" target="_blank" rel="nofollow noopener" className="underline">ヒカカク!公式 クチコミページ</a>の星別件数（2026年10月15日閲覧・割合は当サイトが件数から計算）。最新の投稿は2026年3月19日です。第三者の口コミサイト「みん評」では平均2.73（7件・カテゴリ平均と同じ）と表示されています（検索結果の表示で確認。ページ本体は当サイトの環境から閲覧できませんでした）。</p>
+            <p className="text-xs mb-4" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/hikakaku_reviews/" target="_blank" rel="nofollow noopener" className="underline">ヒカカク!公式 クチコミページ</a>の星別件数（2026年10月15日閲覧・11月11日再確認で同じ件数・割合は当サイトが件数から計算）。最新の投稿は2026年3月19日です。第三者の口コミサイト「みん評」では平均2.73（7件・カテゴリ平均と同じ）と表示されています（検索結果の表示で確認。ページ本体は当サイトの環境から閲覧できませんでした）。</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
                 <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
@@ -250,6 +251,26 @@ export default function HikakakuReviewPage() {
             </table>
           </div>
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/%E3%82%88%E3%81%8F%E3%81%82%E3%82%8B%E3%81%94%E8%B3%AA%E5%95%8F/" target="_blank" rel="nofollow noopener" className="underline">ヒカカク！公式 よくあるご質問</a>、ヒカカク！公式 査定フォーム（いずれも2026年10月31日閲覧）。業者ごとの連絡手段（メール・電話の別）は公式に示されていないため、当サイトでは断定していません。</p>
+        </section>
+
+        {/* 本査定で減額・トラブル時の責任（利用規約） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />本査定で金額が下がった・トラブルになったとき：利用規約の定め</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            公式クチコミの低評価には「チャットの提示額と本査定が違いすぎる」という声があります。ヒカカク！の利用規約では、<strong>買取価格や送料などの取引条件はユーザーと買取業者の間で決める</strong>ものとされ、<strong>業者との取引で生じたトラブルにヒカカク！は関与しない</strong>と定められています。減額や送料の負担については、ヒカカク！ではなく、買取を依頼する業者の条件で確認する必要があります。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table text-sm">
+              <thead><tr><th>条文</th><th>利用規約の定め（要旨）</th><th>申込前に確認したいこと</th></tr></thead>
+              <tbody>
+                <tr><th>第5条4項</th><td>ユーザーと買取業者の取引・契約でトラブルや紛争が生じた場合、当社は一切関与しない</td><td>トラブル時の連絡先は買取業者になります。業者の会社名・古物商許可番号を控えておくと安心です</td></tr>
+                <tr><th>第6条1項</th><td>取引価格、梱包費用・郵送費用などの費用負担、入金方法・時期、買取形式は、ユーザーと買取業者の間で決定する</td><td>本査定で減額された場合の返送料、振込手数料の負担を、業者の買取条件で確認します</td></tr>
+                <tr><th>第6条2項</th><td>本サイトの利用でユーザーに請求する費用は原則無料</td><td>ヒカカク！の利用自体に料金はかかりません</td></tr>
+                <tr><th>第7条1項・2項</th><td>掲載情報の正確性・速報性・完全性は保証せず、掲載情報によって生じた損害について責任を負わない</td><td>サイト上の買取相場や仮の見積額は目安として扱い、最終的な金額は本査定で確認します</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/%E5%88%A9%E7%94%A8%E8%A6%8F%E7%B4%84/" target="_blank" rel="nofollow noopener" className="underline">ヒカカク！公式 利用規約</a>（最終改定日 2024年10月1日・2026年11月11日閲覧。要旨は当サイトがまとめたもので、正確な文言は規約本文をご確認ください）。よくあるご質問には、見積額と本査定の差についての記載はありません（2026年11月11日確認）。</p>
         </section>
 
         {/* FAQ */}
