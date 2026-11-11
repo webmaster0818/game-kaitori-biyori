@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'レトログの評判・口コミは怪しい？レトロゲーム専門買取の実態・公開価格表を検証',
   description:
-    'レトログ（RETROG・株式会社山徳）の評判・口コミを検証しています。約40機種の買取価格表の公開、箱なし・電源が入らないジャンク品の買取可否、送料無料・宅配キット最大10箱・査定1〜3営業日といった条件、キャンセル時の注意点（全点返送・返送料自己負担）について、公式情報（2026年7月確認）をもとに解説します。',
+    'レトログ（RETROG・株式会社山徳）を検証しています。約40機種の買取価格表、箱なし・ジャンク品の買取可否、送料無料・宅配キット最大10箱・査定1〜3営業日、キャンセル時の返却（全点のみ・送料は2026年11月から当社負担）を、公式情報（2026年11月11日確認）をもとに解説します。',
   keywords: ['レトログ 評判', 'レトログ 口コミ', 'レトログ 買取', 'レトロゲーム 買取 宅配', 'レトログ 怪しい'],
   openGraph: {
     images: ['/og.png'],
@@ -27,24 +27,24 @@ const features = [
 
 const dislikeReasons = [
   { reason: '「査定が安かった」という声', fact: 'まとめ売りした際の総額が期待より低かったという口コミがレビューサイトに見られます（レア品を含む大量売却で他社査定の方が高かったという報告例も）。機種別価格表に載る人気品は相場が明確ですが、リストにない品は評価が分かれやすいため、プレミア品は単品査定の専門店（駿河屋等）と比較することをおすすめします。' },
-  { reason: 'キャンセル時は全点返送・返送料が自己負担', fact: '公式の取引条件で、査定に納得できない場合のキャンセルは「すべての品物の返送」のみ（一部だけ返してもらうことは不可）で、返送料は自己負担です。大量に送ってからキャンセルすると返送費がかさむため、売却を迷っている品やレア品は、最初から分けておくことをおすすめします。' },
+  { reason: 'キャンセル時は全点返送のみ（一部返却は不可）', fact: '公式の利用規約（第14条）で、査定に納得できない場合の返却は「すべての品物」のみで、一部だけ返してもらうことはできません。返却の送料は2026年11月1日から当社（レトログ）負担になりました（公式FAQ・利用規約、2026年11月11日確認）。ただし、査定結果の通知前に返却を希望した場合や、送った品物がすべて買取対象外だった場合などは、送料がお客様負担（代引き）になります。また、買取に合意した後は振込前でも返却できません。売却を迷っている品やレア品は、最初から分けておくことをおすすめします。' },
   { reason: '「怪しい」と検索されることがある', fact: '運営の株式会社山徳は1990年設立・石川県野々市市の実在企業で、古物商許可（石川県公安委員会 第511010007835号）を取得しています。着物買取「着物10」など複数のリユースサービスを運営する会社で、いわゆる実態不明の業者ではありません。「怪しい」という検索は宅配買取そのものへの警戒感が主因とみられます。' },
 ];
 
 const faqs = [
   { q: 'レトログは怪しい業者ですか？', a: '運営元は株式会社山徳（石川県野々市市・1990年設立）で、石川県公安委員会の古物商許可（第511010007835号）を取得した正規のリユース事業者です。会社は「着物10」「トレトク」など複数の宅配買取サービスを運営しています。買取価格表を公式公開している点も透明性の面で評価できる点です。' },
   { q: '箱なし・説明書なしのレトロゲームでも売れますか？', a: 'はい。公式サイトに、箱・説明書がない品、汚れや傷が多い品、電源が入らない・映像が映らない・音が出ないといった動作不良品でも買取可能と明記されています。他店で買取を断られた品の売却先として利用できます。' },
-  { q: '送料や段ボール代はかかりますか？', a: '買取成立時の送料は無料で、無料の宅配キット（小・大2サイズ）を最大10箱まで送ってもらえます。お手持ちの箱で送ることも可能です。なお査定に納得できずキャンセルする場合の返送料は自己負担になります。' },
+  { q: '送料や段ボール代はかかりますか？', a: '買取成立時の送料は無料で、無料の宅配キット（小・大2サイズ）を最大10箱まで送ってもらえます。お手持ちの箱で送ることも可能です。査定に納得できず返却を希望する場合の送料も、2026年11月1日から当社負担です（査定結果の通知前の返却希望など、一部の例外はお客様負担）。' },
   { q: '査定や入金はどのくらいのスピードですか？', a: '公式の取引の流れによれば、査定は品物到着から通常1〜3営業日、買取金額の了承と本人確認の完了後、2営業日以内に振込されます。' },
   { q: '買取価格は事前に分かりますか？', a: '公式サイトの買取価格リストで、ファミコン等約40機種の本体・ソフト・周辺機器の高額買取価格が公開されています。リスト掲載品は事前に金額の目安が分かります（リスト外の品は査定次第です）。' },
-  { q: 'キャンセルはできますか？', a: 'できますが、条件に注意が必要です。査定額に納得できない場合は「すべての品物」の返送のみ可能（一部返送は不可）で、返送料は自己負担です。手放すか迷っている品やレア品は、最初から送らずに単品査定の業者と比較することをおすすめします。' },
+  { q: 'キャンセルはできますか？', a: 'できますが、条件に注意が必要です。査定額に納得できない場合は「すべての品物」の返却のみ可能（一部返却は不可）です。返却の送料は2026年11月1日から当社負担になりました（査定結果の通知前に返却を希望した場合などは、お客様負担）。手放すか迷っている品やレア品は、最初から送らずに単品査定の業者と比較することをおすすめします。' },
   { q: 'まとめ売りの特典はありますか？', a: '公式キャンペーンとして「初回利用かつ自分の箱で10点以上送ると買取金額500円アップ（仕分け不要）」が確認できます（2026年7月時点）。キャンペーンは変更される場合があるため、最新の内容は公式サイトでご確認ください。' },
 ];
 
 export default function RetrogReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトログの評判・口コミは怪しい？レトロゲーム専門宅配買取の実態・公開価格表を検証", "datePublished": "2026-07-03", "dateModified": "2026-07-03", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトログの評判・口コミは怪しい？レトロゲーム専門宅配買取の実態・公開価格表を検証", "datePublished": "2026-07-03", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'レトログ' }]} />
 
       {/* Hero */}
@@ -52,7 +52,7 @@ export default function RetrogReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>レトロ専門・宅配</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年7月3日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月11日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             レトログの評判・口コミ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「怪しい」という評判を検証</span>
@@ -77,7 +77,7 @@ export default function RetrogReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>状態が悪い品やまとめ売りに適したレトロゲーム専門買取</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              レトログは、古物商許可を持つ株式会社山徳（1990年設立）が運営するレトロゲーム専門の宅配買取で、<strong>約40機種の買取価格表を公式公開</strong>し、<strong>箱なし・説明書なし・電源が入らない品も買取可と明記</strong>している点が強みです。送料・宅配キット無料、査定1〜3営業日・入金2営業日以内と所要日数も明記されています。一方、<strong>キャンセルは全点返送のみ・返送料自己負担</strong>のため、手放すか迷うレア品は最初から送らず、<Link href="/review/surugaya/" style={{ color: 'var(--color-electric-green)' }}>駿河屋</Link>など単品査定の専門店と比較することをおすすめします。
+              レトログは、古物商許可を持つ株式会社山徳（1990年設立）が運営するレトロゲーム専門の宅配買取で、<strong>約40機種の買取価格表を公式公開</strong>し、<strong>箱なし・説明書なし・電源が入らない品も買取可と明記</strong>している点が強みです。送料・宅配キット無料、査定1〜3営業日・入金2営業日以内と所要日数も明記されています。一方、<strong>キャンセル時の返却は全点のみ（返却の送料は2026年11月から当社負担）</strong>のため、手放すか迷うレア品は最初から送らず、<Link href="/review/surugaya/" style={{ color: 'var(--color-electric-green)' }}>駿河屋</Link>など単品査定の専門店と比較することをおすすめします。
             </p>
           </div>
         </section>
@@ -105,10 +105,10 @@ export default function RetrogReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">石川県野々市市上林4丁目477番</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">石川県公安委員会 第511010007835号</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>グループサービス</th><td className="py-2">着物10（着物買取）／推しトク／トレトク／ビーレコード など</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">宅配買取専門（無料宅配キット最大10箱・送料無料※キャンセル返送は自己負担）</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">宅配買取専門（無料宅配キット最大10箱・送料無料・キャンセル時の返却送料も当社負担〔2026年11月〜〕）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：レトログ公式サイト・株式会社山徳 会社概要。2026年7月3日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：レトログ公式サイト・株式会社山徳 会社概要（2026年7月3日確認）。返却送料は公式FAQ「返却を希望した場合、料金はいくらかかりますか？」（kaitori-retrog.jp/faq/return/p31.html）・利用規約 第14条（yamatoku-corporate.jp/terms/）で2026年11月11日確認</p>
           </div>
         </section>
 
@@ -142,7 +142,7 @@ export default function RetrogReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・大量に送った割に総額が期待より低かった</li>
-                <li>・キャンセル時の返送料の負担が大きかった</li>
+                <li>・キャンセル時の返送料の負担が大きかった（※2026年11月1日から返却送料は当社負担に変更）</li>
                 <li>・レア品の評価が専門の単品査定より低いと感じた</li>
               </ul>
             </div>
