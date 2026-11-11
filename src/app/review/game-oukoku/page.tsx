@@ -4,7 +4,7 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証【2026年10月】',
+  title: 'ゲーム王国の買取の評判・口コミ｜ヒカカク2,485件の星分布・年間成立約7千件と公式条件で検証【2026年11月】',
   description:
     'ゲーム王国の評判・口コミを、ヒカカクの口コミ2,485件の星分布（★4以上94.8%・★1〜2は27件）と公式FAQ・利用規約（2026年10月18日確認）で検証しています。送料無料は佐川急便の集荷限定、査定後キャンセルは返送料無料で一部返送も可能です。',
   keywords: ['ゲーム王国 買取', 'ゲーム王国 口コミ', 'ゲーム王国 査定', 'ゲーム買取 専門', 'ゲーム王国 評判'],
@@ -46,7 +46,7 @@ const faqs = [
 export default function GameOukokuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲーム王国' }]} />
 
       {/* Hero */}
@@ -59,7 +59,7 @@ export default function GameOukokuReviewPage() {
             ゲーム王国<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ゲーム王国は株式会社Ultimate Lifeが運営するゲーム専門の宅配買取サービスです。初回の合計買取価格10%アップ、佐川急便の集荷での送料無料、最短当日〜翌営業日の振込手続きが公式に案内されています。ヒカカクの口コミは2,485件で総合4.64（2026年10月18日確認）です。
+            ゲーム王国は株式会社Ultimate Lifeが運営するゲーム専門の宅配買取サービスです。初回の合計買取価格10%アップ、佐川急便の集荷での送料無料、最短当日〜翌営業日の振込手続きが公式に案内されています。ヒカカクの口コミは2,485件で総合4.64です（2026年10月18日確認・11月11日に再確認し件数・内訳とも変化なし）。公式トップでは、宅配買取の年間成立件数を約7千件（2025年1月〜12月の実績）、運営実績を10年以上（2016年5月17日オープン）、商品到着から入金までを平均3営業日以内と案内しています（2026年11月11日確認）。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://gameoukoku.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">

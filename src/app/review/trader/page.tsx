@@ -4,9 +4,9 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'トレーダー買取の評判と買取価格の調べ方｜秋葉原本店・2号店の店頭と宅配の手数料・送料条件【2026年10月】',
+  title: 'トレーダー買取の買取価格検索の使い方・受付時間と評判｜秋葉原本店B1F・2号店3F、通信買取の手数料・送料【2026年11月】',
   description:
-    'トレーダー（秋葉原）の買取価格は公式e-trader.jpの買取検索で確認できます。店頭（本店B1F・2号店3F、11〜20時）と宅配（対象5本以上で送料無料・手数料500〜800円・返送は着払い）の条件、査定3日以内・振込2〜3日の流れ、口コミの傾向を公式情報（10月25日確認）で解説します。',
+    'トレーダー（秋葉原）の買取価格は公式e-trader.jpの「TVゲーム価格検索」で調べられます。店頭買取は本店B1F・2号店3F（11〜20時）、通信買取は5本以上で送料無料・手数料500〜800円です。11月の買取アップ（店頭11/11〜29・通信11/4〜20）も公式（11月11日確認）で解説します。',
   keywords: ['トレーダー 買取', 'トレーダー 買取 評判', 'トレーダー ゲーム買取', 'トレーダー 買取価格', 'トレーダー 秋葉原 買取', 'e-trader 買取', 'トレーダー 宅配買取'],
   openGraph: {
     images: ['/og.png'],
@@ -39,14 +39,14 @@ const faqs = [
   { q: '買取価格は事前に分かりますか？', a: '公式の買取検索（e-trader.jp）でTVゲームの参考買取価格が公開されています。「数日前の参考価格・1日1回程度更新・買取保証なし」と公式に注記されているため、あくまで目安です。当サイト確認時点（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機ELネオン26,000円等でした。' },
   { q: '査定や振込までどのくらいかかりますか？', a: '商品到着日を含め3日以内に査定結果の案内、承諾後2〜3日で振込と公式に明記されています（初回は本人確認書類の確認後）。日数が公式に示されている点は安心材料です。' },
   { q: '本人確認はどのように行いますか？', a: '初回は、本人確認書類（運転免許証・マイナンバーカード表面・健康保険資格確認書・日本国発行のパスポート等）のコピー、または住民票の写しの原本を、申込用紙・商品と一緒に箱に同梱します。住民票原本以外の場合は、書類記載の住所宛てに転送不可の簡易書留が送られて本人確認が行われます。2回目以降は、初回に発行された通信買取IDとパスワードを申込用紙に記入すれば書類の同封は不要です。振込先は本人名義の口座に限られます（2026年10月25日公式確認）。' },
-  { q: 'キャンペーンはありますか？', a: '常設キャンペーンの記載はなく、期間限定型です。2026年11月1日の公式確認では、店頭買取限定の「買取アップキャンペーン」（10月8日〜11月1日・宅配は対象外）が掲載されており、11月2日以降の回はまだ掲載されていませんでした。10月17日の確認時には、通信買取限定の回（10月7日〜10月23日到着分。対象はブルーレイ・DVDやガンプラで、ゲームソフトは対象外）が開催されていました。7月（7/8〜7/23到着分）には、PS5・Switch・Switch 2ソフト等を対象とした回もありました。対象は回ごとに変わるため、ご利用前に公式サイトにて最新情報をご確認ください。' },
+  { q: 'キャンペーンはありますか？', a: '常設キャンペーンの記載はなく、期間限定型です。2026年11月11日の公式確認では、店頭買取限定の「買取アップキャンペーン」（11月11日〜11月29日・本店B1F/2号店3Fの買取フロア。対象はPCゲームソフト・同人ソフト・ガンプラ〔未作成品〕・一般向けBlu-ray/DVDで、CD・アニメ書籍・アダルト作品と通信買取は対象外）と、通信買取限定の「買取UPキャンペーン」（11月4日〜11月20日の到着分。対象商品は公式ページの画像で案内）が掲載されていました。どちらも他の買取アップとの重複はなく、予告なく変更・終了する場合があると公式に記載されています。10月には店頭限定の回（10月8日〜11月1日）と通信限定の回（10月7日〜10月23日到着分）がありました。対象は回ごとに変わるため、ご利用前に公式サイトにて最新情報をご確認ください。' },
   { q: '同じソフトを複数本売れますか？', a: '規約上、同一タイトルを複数売る場合は減額の対象になることがあります。またオンライン専用・オンライン認証必須のソフトも減額対象です（未開封は除く）。まとめ売り前に規約の確認をおすすめします。' },
 ];
 
 export default function TraderReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "トレーダーのゲーム買取の評判・口コミと送料条件を検証", "datePublished": "2026-07-07", "dateModified": "2026-11-01", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "トレーダーのゲーム買取の評判・口コミと送料条件を検証", "datePublished": "2026-07-07", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'トレーダー' }]} />
 
       {/* Hero */}
@@ -54,13 +54,22 @@ export default function TraderReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>秋葉原・レトロ対応</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年10月25日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月11日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            トレーダーのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>秋葉原の老舗の実力と送料条件を検証</span>
+            トレーダー買取の買取価格検索・受付時間<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>秋葉原の店頭買取と通信買取の条件を検証</span>
           </h1>
+          <div className="rounded-lg p-4 mb-4 text-sm leading-relaxed" style={{ background: 'rgba(255,255,255,0.08)', color: '#E2E8F0' }}>
+            <p className="font-bold mb-2" style={{ color: '#FFFFFF' }}>要点（2026年11月11日 公式確認）</p>
+            <ul className="space-y-1">
+              <li>・<strong>買取価格の調べ方</strong>：買取サイト e-trader.jp の「TVゲーム買取」→「TVゲーム価格検索」で、機種・タイトルから検索できます。表示価格は付属品がすべてそろった状態の上限価格で、最新の価格ではないと公式に注記されています。</li>
+              <li>・<strong>店頭買取の受付</strong>：本店（外神田4-2-1）B1F・2号店（外神田1-4-9）3Fの買取フロア。11:00〜20:00・年中無休。1点から手数料無料で、承諾後その場で支払い。</li>
+              <li>・<strong>通信（宅配）買取</strong>：対象商品5本以上で送料無料、振込時に通信買取手数料500円（160サイズまで）・800円（その他）を差し引き、キャンセル時の返送は着払い。</li>
+              <li>・<strong>11月のキャンペーン</strong>：店頭限定の買取アップ（11/11〜11/29。対象はPCゲームソフト・同人ソフト・ガンプラ・一般向けBlu-ray/DVD）と、通信買取限定の買取UP（11/4〜11/20到着分）を開催中です。</li>
+            </ul>
+          </div>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            トレーダーは、1999年に設立され、秋葉原に実店舗を構える老舗です。レトロから海外ゲームまで対象とする品揃えと、毎日更新される参考価格の公開が強みですが、宅配買取には「対象5本以上で送料無料」「振込時に通信買取手数料500円〜800円」「キャンセル返送は着払い」という他社と異なる条件があります。当サイトでは、公式情報（2026年10月25日確認）をもとに適した利用場面を整理しています。
+            トレーダーは、1999年に設立され、秋葉原に実店舗を構える老舗です。レトロから海外ゲームまで対象とする品揃えと、毎日更新される参考価格の公開が強みですが、宅配買取には「対象5本以上で送料無料」「振込時に通信買取手数料500円〜800円」「キャンセル返送は着払い」という他社と異なる条件があります。当サイトでは、公式情報（2026年10月25日・11月11日確認）をもとに適した利用場面を整理しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.e-trader.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -103,7 +112,7 @@ export default function TraderReviewPage() {
           <div className="glass-card p-6 mb-4">
             <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取価格を調べる：公式の買取価格検索（e-trader.jp）</h3>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              トレーダーの買取価格は、買取サイト<strong>e-trader.jp</strong>の買取価格検索で公開されています。公式に「数日前の参考買取価格・1日1回程度更新」と注記されているとおり、目安としてご利用ください（実際の査定額は商品の状態によって変わります）。当サイト実測（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機EL 26,000円等が掲載されていました（価格・注記は7月7日時点の記録です）。他社と比べたい場合は、当サイトの<a href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>最新の実測価格比較</a>とあわせてご確認いただくと、現在どの業者の価格が高いかまで分かります。
+              トレーダーの買取価格は、買取サイト<strong>e-trader.jp</strong>の買取価格検索で公開されています。公式に「数日前の参考買取価格・1日1回程度更新」と注記されているとおり、目安としてご利用ください（実際の査定額は商品の状態によって変わります）。検索ページへは e-trader.jp のメニュー「買取」→「TVゲーム買取 TOP」→「TVゲーム価格検索」の順に進みます。同ページには、表示価格は付属品がすべてそろった状態での上限価格であること、最新の価格ではないこと、ネット認証のあるゲームは未開封品のみ買取ること、本体は査定時に初期化することが記載されています（2026年11月11日確認）。当サイト実測（2026年7月7日）ではマリオカート8 デラックス3,800円・Switch有機EL 26,000円等が掲載されていました（価格・注記は7月7日時点の記録です）。他社と比べたい場合は、当サイトの<a href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>最新の実測価格比較</a>とあわせてご確認いただくと、現在どの業者の価格が高いかまで分かります。
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
@@ -124,7 +133,7 @@ export default function TraderReviewPage() {
               </ol>
             </div>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：トレーダー公式（e-trader.jp トップ・店舗案内・通信買取ガイド）2026年10月25日確認、買取規約は2026年7月7日確認。手順・条件は変更される場合があります。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：トレーダー公式（e-trader.jp トップ・店舗案内・通信買取ガイド）2026年10月25日確認、トップ・店舗案内・TVゲーム買取・キャンペーン告知は2026年11月11日確認、買取規約は2026年7月7日確認。手順・条件は変更される場合があります。</p>
         </section>
 
         {/* Company Info */}

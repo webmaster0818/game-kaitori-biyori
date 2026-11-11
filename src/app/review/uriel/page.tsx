@@ -8,9 +8,9 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 const CHECKED = '2026年10月21日';
 
 export const metadata: Metadata = {
-  title: '買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を公式で検証',
+  title: '買取ウリエルの評判・口コミはやばい？公式の声274件とヒカカク3件の内容・出張買取の費用とエリア【2026年11月】',
   description:
-    '買取ウリエルの評判・口コミを、ヒカカクの口コミ件数（3件・2.67点）と公式サイトで検証しています（2026年10月21日確認）。出張料・査定料・キャンセル料は無料、買取方法は出張・催事・店舗（川崎）で宅配はありません。ゲームの買取は1都3県が対象です。',
+    '買取ウリエルの口コミを、公式「お客様の声」274件（ゲーム3件）とヒカカク3件の内容で確認しています（2026年11月11日再確認）。出張料・査定料・キャンセル料は無料、ゲームの買取は1都3県が対象で、宅配買取はありません。「やばい・怪しい」と検索される理由も事実で整理しています。',
   keywords: ['ウリエル 買取', '買取ウリエル', 'ウリエル 評判', 'ウリエル 口コミ', 'ウリエル ゲーム買取', 'ウリエル 店舗'],
   openGraph: {
     images: ['/og.png'],
@@ -90,7 +90,7 @@ const faqs = [
 export default function UrielReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を公式で検証", "datePublished": "2026-03-15", "dateModified": "2026-10-29", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取ウリエルの評判・口コミ｜出張買取の対応エリア・費用・ゲーム買取の条件を公式で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取ウリエル' }]} />
 
       {/* Hero */}
@@ -241,7 +241,7 @@ export default function UrielReviewPage() {
               </tbody>
             </table>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              出典：<a href="https://hikakaku.com/company/23566/reviews/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ヒカカク！ウリエルのクチコミ一覧</a>、<a href="https://www.uriel-cuore.co.jp/voice/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ウリエル公式 お客様の声</a>（いずれも{CHECKED}確認）。件数・評点は確認日時点のものです。
+              出典：<a href="https://hikakaku.com/company/23566/reviews/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ヒカカク！ウリエルのクチコミ一覧</a>、<a href="https://www.uriel-cuore.co.jp/voice/" target="_blank" rel="noopener noreferrer nofollow" style={linkColor}>ウリエル公式 お客様の声</a>（いずれも{CHECKED}確認。2026年11月11日に再確認し、ヒカカクは3件・2.67点、公式の声は全28ページのまま変化はありませんでした）。件数・評点は確認日時点のものです。
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
