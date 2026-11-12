@@ -106,7 +106,7 @@ const faqs = [
 export default function HighValueSoftwarePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-10-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "高く売れるゲームソフトランキング【2026年10月】ブックオフ・ゲオ・駿河屋の公式買取価格で比較", "datePublished": "2026-05-19", "dateModified": "2026-11-12", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '高く売れるゲームソフトランキング' }]} />
 
       {/* Hero */}
@@ -121,6 +121,9 @@ export default function HighValueSoftwarePage() {
           </p>
           <p className="text-sm leading-relaxed mb-4" style={{ color: '#E2E8F0' }}>
             このページは「どのソフトが高く売れるか」をタイトル単位で扱っています。どの買取店を選べばよいか（送料・振込日数・口コミを含めたおすすめの買取店の比較）は、<Link href="/" className="underline font-bold" style={{ color: '#FFFFFF' }}>ゲーム買取おすすめランキング（トップページ）</Link>でご確認ください。
+          </p>
+          <p className="text-sm leading-relaxed mb-4" style={{ color: '#E2E8F0' }}>
+            ジョーシンの買取価格一覧をお探しの方へ：ジョーシンのWeb買取「買取のジョー」は2026年11月12日時点で一時停止中（復旧日は未定）のため、このページには掲載していません。店頭買取の状況と口コミ評価は<Link href="/review/joshin/" className="underline font-bold" style={{ color: '#FFFFFF' }}>ジョーシンのゲーム買取の現状</Link>にまとめています。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>各社公式の買取価格を定期的に実測（最終実測日: 2026年10月15日）</p>
           <div className="flex flex-wrap gap-3 mt-4">
