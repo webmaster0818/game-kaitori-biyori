@@ -35,20 +35,6 @@ const services = [
   },
   {
     rank: 3,
-    name: 'ティファナ',
-    url: 'https://tifana.net',
-    tagline: 'ホビー系買取に強いリサイクルショップ',
-    reviewPath: '/review/tifana/',
-    features: ['ゲーム・トレカ・フィギュア幅広い', '店舗買取（宅配は一時停止中）', 'ホビー専門査定士', '東京近郊対応'],
-    buyMethods: ['店舗買取'],
-    target: 'ゲーム・トレカ・フィギュア・レトロ玩具など',
-    recommend: 'ゲームと一緒にホビーグッズも売りたい方',
-    pros: ['ホビー系の査定に強い', 'トレカやフィギュアもまとめて売れる', '店舗持ち込みで即現金化'],
-    cons: ['宅配買取は一時停止中（2026年11月3日確認）', '東京近郊がメイン'],
-    charaComment: 'ユウト：「フィギュアやトレカもまとめて売却できるため、ホビー全般をお持ちの方に適しています。」',
-  },
-  {
-    rank: 4,
     name: 'ゲオ宅配買取',
     url: 'https://geo-online.co.jp/kaitori/',
     tagline: '大手チェーン、まとめ売りで最大35%UP、宅配買取、全国対応',
@@ -62,7 +48,7 @@ const services = [
     charaComment: 'ミク：「大手チェーンが運営しており、まとめ売りボーナスも利用できます。」',
   },
   {
-    rank: 5,
+    rank: 4,
     name: 'ブックオフ',
     url: 'https://www.bookoff.co.jp/',
     tagline: '全国900店舗、店頭即現金化、宅配買取も対応',
@@ -76,7 +62,7 @@ const services = [
     charaComment: 'ミク：「店舗数が多く気軽に持ち込めるうえ、その場で現金を受け取れる点が利点です。」',
   },
   {
-    rank: 6,
+    rank: 5,
     name: '駿河屋',
     url: 'https://www.suruga-ya.jp/',
     tagline: 'レトロゲーム・限定版に強い、コレクター向け、宅配/店舗',
@@ -90,7 +76,7 @@ const services = [
     charaComment: 'ミク：「レトロゲームや希少品の査定に定評があるため、コレクターズアイテムの売却に適しています。」',
   },
   {
-    rank: 7,
+    rank: 6,
     name: 'ゲーム王国',
     url: 'https://gameoukoku.jp/',
     tagline: 'ゲーム専門、初回査定額10%UP、宅配買取',
@@ -103,7 +89,7 @@ const services = [
     cons: ['店舗持ち込み非対応', '知名度が大手より低い'],
   },
   {
-    rank: 8,
+    rank: 7,
     name: 'ホビーコレクト',
     url: 'https://recycle-net.jp/figure/',
     tagline: '箱なし・ジャンク品可、宅配買取専門',
@@ -116,7 +102,7 @@ const services = [
     cons: ['店舗買取非対応', '高額査定は期待しにくい'],
   },
   {
-    rank: 9,
+    rank: 8,
     name: 'カイトリワールド',
     url: 'https://kaitori-world.jp/',
     tagline: 'フィギュア・ホビーに強み、宅配専門、最短即日入金',
@@ -129,7 +115,7 @@ const services = [
     cons: ['店舗買取非対応', 'ゲーム単体だと他社の方が高い場合あり'],
   },
   {
-    rank: 10,
+    rank: 9,
     name: 'ネットオフ',
     url: 'https://www.netoff.co.jp/',
     tagline: 'ゲーム・本・DVD一括、まとめ売りボーナス',
@@ -140,6 +126,20 @@ const services = [
     recommend: '引っ越しや断捨離でゲーム・本・DVDをまとめて売りたい方',
     pros: ['ジャンルをまたいでまとめ売りできる', 'まとめ売りボーナスあり', '自宅集荷に対応'],
     cons: ['専門店より単品の査定額は低い', '買取不可品は処分費用がかかる場合あり'],
+  },
+  {
+    rank: 10,
+    name: 'ティファナ',
+    url: 'https://tifana.net',
+    tagline: 'ホビー系買取に強いリサイクルショップ',
+    reviewPath: '/review/tifana/',
+    features: ['ゲーム・トレカ・フィギュア幅広い', '店舗買取（宅配は一時停止中）', 'ホビー専門査定士', '東京近郊対応'],
+    buyMethods: ['店舗買取'],
+    target: 'ゲーム・トレカ・フィギュア・レトロ玩具など',
+    recommend: 'ゲームと一緒にホビーグッズも売りたい方',
+    pros: ['ホビー系の査定に強い', 'トレカやフィギュアもまとめて売れる', '店舗持ち込みで即現金化'],
+    cons: ['宅配買取は一時停止中（2026年11月12日確認）', '東京近郊がメイン'],
+    charaComment: 'ユウト：「フィギュアやトレカもまとめて売却できるため、ホビー全般をお持ちの方に適しています。」',
   },
 ];
 
