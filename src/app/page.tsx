@@ -181,7 +181,7 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-10-27", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-11-13", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
           背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
