@@ -51,9 +51,9 @@ const services = [
     rank: 4,
     name: 'ブックオフ',
     url: 'https://www.bookoff.co.jp/',
-    tagline: '全国900店舗、店頭即現金化、宅配買取も対応',
+    tagline: '全国700店舗超、店頭即現金化、宅配買取も対応',
     reviewPath: '/review/bookoff/',
-    features: ['全国900店舗以上', '店頭持ち込みで即現金化', '宅配買取対応', '本・DVD・ゲーム幅広い'],
+    features: ['全国700店舗超（2026年10月末721店）', '店頭持ち込みで即現金化', '宅配買取対応', '本・DVD・ゲーム幅広い'],
     buyMethods: ['店舗買取', '宅配買取'],
     target: 'ゲームソフト・本・DVD・CD・トレカなど幅広いジャンル',
     recommend: '店舗に持ち込んですぐ現金化したい方',
@@ -226,7 +226,7 @@ export default function HomePage() {
             <p className="text-sm font-bold mt-3 mb-2" style={{ color: 'var(--color-deep-blue)' }}>目的別のおすすめ（各社公式サイトで確認日を記録した条件にもとづき選定）</p>
             <ul className="text-sm space-y-1.5 mb-4" style={{ color: 'var(--color-text-light)' }}>
               <li>①<span className="font-bold">宅配でまとめて売りたい場合</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
-              <li>②<span className="font-bold">当日中に現金化したい場合</span> → 全国900店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
+              <li>②<span className="font-bold">当日中に現金化したい場合</span> → 全国700店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
               <li>③<span className="font-bold">少しでも高く売りたい場合</span> → 店舗ごとの価格は毎週変動するため、下の<span className="font-bold">最新の実測・最高値の店</span>で現時点の最高値の店舗をご確認のうえ、売却することをおすすめします</li>
             </ul>
             <ul className="text-sm space-y-2 mb-5" style={{ color: 'var(--color-text-light)' }}>

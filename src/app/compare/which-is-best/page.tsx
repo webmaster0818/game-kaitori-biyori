@@ -103,7 +103,7 @@ const useCases: UseCase[] = [
     color: '#F97316',
     lead: 'その日のうちに現金が必要な場合は、店頭持ち込みか出張買取が選択肢となります。いずれも即日査定・即日支払いに対応しています。',
     picks: [
-      { name: 'ブックオフ', reviewPath: '/review/bookoff/', why: '全国900店舗超を展開しており、店頭持ち込みなら即日現金化できます。店頭査定は通常30分〜1時間程度（最短30分）です。ゲーム以外もまとめて持ち込めます（2026年6月18日時点）。' },
+      { name: 'ブックオフ', reviewPath: '/review/bookoff/', why: '国内721店舗（2026年10月末）を展開しており、店頭持ち込みなら即日現金化できます。ゲーム以外もまとめて持ち込めます（2026年11月13日確認）。' },
       { name: 'ウリエル', reviewPath: '/review/uriel/', why: '出張買取で、査定後その場で現金を受け取れます（出張費・査定料・キャンセル料はすべて無料）。ゲーム買取の対象は東京・神奈川・千葉・埼玉の1都3県に限定されています（2026年10月21日確認）。' },
     ],
     toolLink: { href: '/method/shop/', label: '店舗買取ガイドを見る' },
@@ -275,7 +275,7 @@ export default function WhichIsBestPage() {
             <ul className="text-sm leading-relaxed space-y-2" style={{ color: 'var(--color-text-light)' }}>
               <li>・<strong>1円でも高く売りたい</strong> → 店舗ごとの価格は毎週変動します。<Link href="/price-index/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>最新の実測価格比較</Link>で現在どこが高いかを確認してから売却することをおすすめします</li>
               <li>・<strong>宅配でまとめて手軽に</strong> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>カイトリワールド</Link>（いずれも公式で確認済みの条件）</li>
-              <li>・<strong>今日中に現金化したい</strong> → 全国900店舗超の<Link href="/review/bookoff/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
+              <li>・<strong>今日中に現金化したい</strong> → 全国700店舗超の<Link href="/review/bookoff/" className="underline font-bold" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
             </ul>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※各社の条件は、公式情報の確認日とともに下の比較表に整理しています。レトロ・箱なし・フリマとの比較など、状況別の売り先は次の8パターンをご覧ください。</p>
           </div>
