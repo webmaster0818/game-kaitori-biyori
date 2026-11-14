@@ -247,7 +247,7 @@ export default function NetoffReviewPage() {
             <Link href="/review/bookoff/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-blue text-xs mb-2 inline-block">全国最大手</span>
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>全国900店舗超・店頭即現金化</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>国内721店（2026年10月末）・店頭即現金化</p>
             </Link>
           </div>
         </section>

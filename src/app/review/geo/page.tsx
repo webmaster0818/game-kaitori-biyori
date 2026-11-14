@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 const features = [
   { title: '買取金額UPキャンペーンを不定期に開催', description: 'ゲオの宅配買取では、買取金額UPキャンペーンが不定期に開催されています。キャンペーンの有無・内容はゲオ公式でご確認ください。' },
-  { title: '全国900店舗を展開するグループの運営', description: '全国に約900店舗を展開するゲオグループが運営しています。大手ならではの安定した査定基準と、万が一のトラブル時も安心のサポート体制が整っています。' },
+  { title: '全国に約900店舗のゲオが運営', description: 'ゲオは全国に約900店舗を展開しています（ゲオホールディングスの2026年9月25日のプレスリリースによる）。大手ならではの安定した査定基準と、万が一のトラブル時も安心のサポート体制が整っています。' },
   { title: '送料・査定料・振込手数料が無料（1点からOK）', description: '送料・査定料・振込手数料はすべて無料で、点数条件もなく1点から申し込めます。集荷は佐川急便が送り状を持って自宅に来てくれるため伝票記入も不要です。ただし段ボールは自分で用意する必要があります（無料の梱包キットはありません）。' },
   { title: '申込時点の買取価格を保証', description: 'Web申込が完了した時点の買取価格が保証されます（商品状態による減額はあり）。申込はWebから24時間365日可能で、申込から査定・入金まで自宅で完結します。なお買取代金の受け取りは銀行振込のみで、Pontaポイントでの受け取りやポイント付与の案内は公式にはありません（2026年6月12日時点）。' },
 ];
@@ -58,7 +58,7 @@ export default function GeoReviewPage() {
             ゲオ宅配買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            全国約900店舗を展開するゲオグループの宅配買取サービスです。送料・査定料・振込手数料が無料で1点から申し込めます。一方で「段ボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年7月28日確認）で正確に解説します。梱包・段ボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。具体的な手順は<Link href="/guide/geo-takuhai/" style={{ color: '#34D399' }}>やり方ガイド</Link>をご覧ください。
+            全国に約900店舗を展開するゲオ（2026年9月25日のゲオホールディングスの発表による）の宅配買取サービスです。送料・査定料・振込手数料が無料で1点から申し込めます。一方で「段ボールは自分で用意」「集荷は佐川急便・伝票記入不要」「受け取りは銀行振込のみ」など、誤解されやすい仕様を公式情報（2026年7月28日確認）で正確に解説します。梱包・段ボールの入手方法、申込みの流れ、評判の傾向まで実務目線でまとめました。具体的な手順は<Link href="/guide/geo-takuhai/" style={{ color: '#34D399' }}>やり方ガイド</Link>をご覧ください。
           </p>
           <div className="rounded-lg p-4 mb-6 text-sm leading-relaxed" style={{ background: 'rgba(52,211,153,0.10)', border: '1px solid rgba(52,211,153,0.45)', color: '#D1FAE5' }}>
             <p>ゲオの宅配買取は、不正アクセスへの対応により2026年10月17日21時から停止していましたが、10月29日に再開しています（2026年10月30日確認）。</p>
@@ -175,7 +175,7 @@ export default function GeoReviewPage() {
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・送料・査定料・振込手数料が無料で1点から出せる手軽さ</li>
                 <li>・佐川急便が送り状を持参するので伝票記入が不要</li>
-                <li>・全国約900店舗を展開する大手グループが運営</li>
+                <li>・全国に約900店舗を展開するゲオが運営（2026年9月25日の同社発表）</li>
                 <li>・開催時の買取金額UPキャンペーン（キャンペーンの有無・内容はゲオ公式でご確認ください）</li>
                 <li>・申込時点の買取価格が保証される（状態による減額はあり）</li>
               </ul>
@@ -251,7 +251,7 @@ export default function GeoReviewPage() {
             <Link href="/review/bookoff/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-orange text-xs mb-2 inline-block">大手</span>
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ブックオフ</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>全国900店舗超・店頭即現金化</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>国内721店（2026年10月末）・店頭即現金化</p>
             </Link>
             <Link href="/review/netoff/" className="glass-card p-4 card-hover block">
               <span className="tag-pill tag-pill-blue text-xs mb-2 inline-block">まとめ売り</span>
