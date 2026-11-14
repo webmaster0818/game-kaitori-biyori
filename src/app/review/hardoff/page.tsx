@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 const features = [
   { title: '全国1,000店超の実店舗網（東証プライム上場）', description: '運営の株式会社ハードオフコーポレーションは東証プライム上場（証券コード2674）。公式のIR情報によれば店舗数（直営・FC合計）は1,078店舗（2026年3月期）と国内最大級で、「近所に店がある」アクセス性が最大の強みです。' },
   { title: '壊れた品も対象の「ジャンク買取」', description: '公式FAQに「壊れていてもジャンク品として店頭にて販売しています。喜んで買取させていただきます」と明記されています。動作しないゲーム機・欠品ソフトなど、他店で断られる品にも値が付く可能性がある点がハードオフの特徴です（ジャンク買取は店頭が基本）。' },
-  { title: '店頭・宅配・出張・オファーの4方式', description: '公式の買取方式は①店頭（即現金化）②宅配（送料・手数料無料、梱包資材あり）③出張④オファー買取の4つです。オファー買取はアプリ/Webに出品すると全国のハードオフグループ店舗から最大5件の買取オファーが届き、「売る前に値段が分かる」仕組みです。' },
+  { title: '店頭・宅配・出張・オファーの4方式', description: '公式の買取方式は①店頭（即現金化）②宅配（送料・手数料0円、段ボールは利用者が用意）③出張④オファー買取の4つです。オファー買取はアプリ/Webに出品すると全国のハードオフグループ店舗から最大5件の買取オファーが届き、「売る前に値段が分かる」仕組みです。' },
   { title: '査定はデータベース＋店舗の地域性で変動', description: '公式FAQによれば、査定はグループ内の商品データベースを基準にスタッフが1点ずつ目視確認し、店舗の地域性（売れやすい・売れにくい）も価格の変動要因になります。そのため、同じ品でも店舗によって査定額が変わる場合があります。' },
 ];
 
@@ -34,7 +34,7 @@ const dislikeReasons = [
 const faqs = [
   { q: 'ハードオフのゲーム買取は安いですか？', a: '品物によって異なります。ハードオフは買取価格表を公開しておらず、グループのデータベースと店舗の地域性で査定額が決まる仕組みのため、人気タイトルはゲーム専門店やゲオ・ブックオフの公表価格より安くなる場合があります。一方、他店で断られるジャンク品・古い機種に値が付くのは強みです。人気作は当サイトの価格インデックスで相場を確認してから売却先を選ぶことをおすすめします。' },
   { q: '壊れたゲーム機でも本当に買い取ってもらえますか？', a: '公式FAQに「壊れていてもジャンク品として店頭にて販売しています。喜んで買取させていただきます」と明記されています。ジャンク品の買取・販売はハードオフの代表的な取り組みです（ジャンクは店頭買取が基本で、販売時の保証対象外という扱い）。' },
-  { q: 'ハードオフに宅配買取はありますか？', a: 'あります。公式の宅配買取は送料・手数料が会社負担で、梱包資材の発送サービスもあります。ゲームは買取強化カテゴリに含まれています。査定日数やキャンセル時の返送条件は公式ページに明記がないため、申込前に確認することをおすすめします。' },
+  { q: 'ハードオフに宅配買取はありますか？', a: 'あります。公式の宅配買取（takuhai-kaitori.hardoff.co.jp）は送料・手数料が0円で、ゲームは買取強化カテゴリーに含まれています。段ボールは利用者が用意します（梱包資材の事前送付はギター本体とカメラのみが対象です）。集荷は佐川急便が自宅に伺う方式で、入金は売買契約の成立後2〜4営業日です。18歳未満は利用できません。買取できない品物を送った場合や、期日までに返答がなかった場合の返却送料は利用者の負担になることがあります（公式「ご利用ガイド」2026年11月14日確認）。' },
   { q: 'オファー買取とは何ですか？', a: '公式アプリ/Webに売りたい品を出品すると、全国のハードオフグループ店舗が査定して最大5件の買取オファー（見積もり）が届く仕組みです。金額を承認すると自宅集荷され、最終査定の確定後2〜4営業日で入金されます。送料は無料です（取扱対象外品などは着払いで返却）。「売る前に値段が分かる」点で、価格表非公開という弱点を補えます。' },
   { q: '古物商許可は取得していますか？', a: '株式会社ハードオフコーポレーションは新潟県公安委員会の古物商許可（許可番号461060001043）を取得している正規のリユース事業者です。東証プライム上場企業（証券コード2674）でもあります。' },
   { q: 'レトロゲームを売るならハードオフとレトログのどちらが適していますか？', a: '「近所の店で今日現金化したい・ジャンクも一緒に処分したい」場合はハードオフ、「レア品を含むレトロゲームの相場を事前に確認して宅配で送りたい」場合は機種別の買取価格表を公開しているレトログが適しています。プレミア品は複数社で比較することをおすすめします。' },
@@ -43,7 +43,7 @@ const faqs = [
 export default function HardoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-10-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-11-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ハードオフ' }]} />
 
       {/* Hero */}
@@ -51,7 +51,7 @@ export default function HardoffReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>店頭・ジャンクOK</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年10月22日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月14日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ハードオフのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「安い？」の実態とジャンク買取を検証</span>
@@ -86,7 +86,7 @@ export default function HardoffReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハードオフのゲーム買取価格表はある？</h2>
           <div className="glass-card p-6">
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
-              ハードオフは、ゲームの買取価格表を公式に公開していません（査定は店舗ごとに行われ、店舗の地域性も価格の変動要因になると公式FAQに記載されています）。売る前に金額を知る方法は、アプリの「オファー買取」で見積もりを受け取る方法です。比較の目安として、買取価格を公開している店舗の価格を当サイトで実測した結果を以下に掲載します。
+              ハードオフは、ゲームの買取価格表を公式に公開していません（査定は店舗ごとに行われ、店舗の地域性も価格の変動要因になると公式FAQに記載されています）。売る前に金額を知る方法は、アプリの「オファー買取」で見積もりを受け取る方法です。公式の宅配買取サイトのゲームカテゴリーにも商品ごとの買取価格の一覧はなく、掲載されている「参考価格」はまとめ売りの例2件（15,000円・5,000円）のみです（2026年11月14日 当サイト確認）。比較の目安として、買取価格を公開している店舗の価格を当サイトで実測した結果を以下に掲載します。
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
@@ -110,6 +110,27 @@ export default function HardoffReviewPage() {
               ハードオフで査定を受ける際は、上記のような公開価格を控えておくと、提示額が妥当かどうかを判断しやすくなります。他の機種・ソフトの実測価格は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch2 買取価格（5店比較）</Link>、<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるゲームソフト</Link>、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>価格インデックス</Link>に掲載しています。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各店の公式買取ページ（2026年10月20日 当サイト実測）。価格は日々変動するため、売却の直前に各社の公式ページでご確認ください。</p>
+          </div>
+        </section>
+
+        {/* 宅配買取の条件（2026-11-14 追加） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハードオフの宅配買取でゲームを売る条件</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>店舗に行かずにゲームを売る場合は、公式の宅配買取を利用できます。主な条件は次のとおりです。最低点数・最低金額の記載は、ご利用ガイドにはありません。</p>
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>申込</th><td className="py-2">Webの申し込みフォーム（本人確認書類が必要。申込者・集荷先・本人確認書類の住所が一致していること）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>送料・手数料</th><td className="py-2">0円（買取できない品物の返却、期日までに返答がない場合の返却は送料が利用者負担になることがあります）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>段ボール</th><td className="py-2">利用者が用意します（梱包資材の事前送付はギター本体・カメラのみ）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>集荷</th><td className="py-2">指定日時に自宅で集荷（原則 佐川急便）。営業所・コンビニへの持ち込みは不可</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>査定</th><td className="py-2">数日かかる場合があります。結果はメールまたはマイページで確認</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>承諾の方法</th><td className="py-2">「自動で承諾（スピーディ入金）」は査定完了で成立し返却不可／「確認後に承諾（通常入金）」は売却か返却を選択（金額交渉は不可）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>入金</th><td className="py-2">本人名義の口座へ銀行振込。売買契約の成立後2〜4営業日</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>年齢</th><td className="py-2">18歳未満は利用不可</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://takuhai-kaitori.hardoff.co.jp/guide" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ハードオフ宅配買取「ご利用ガイド」</a>（2026年11月14日 当サイト確認）。条件は変更されることがあるため、申込前に公式ページでご確認ください。</p>
           </div>
         </section>
 
