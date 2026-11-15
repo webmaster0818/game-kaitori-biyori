@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: 'ゲーム機「本体」に強い買取専門店', description: 'PC・スマホ・デジタル機器の買取販売店を61店舗展開する専門店で、ゲーム関連ではSwitch 2・PS5等の本体買取が主力です。当サイトの実測（2026年7月7日）では、Switch 2未使用 上限47,000円・PS5（CFI-1000A01）未使用46,000円等が公開されていました。ソフトの価格掲載例は確認できなかったため、実質的には本体の売却先といえます。' },
-  { title: 'ソフマップの完全子会社（ビックカメラグループ）', description: '2021年12月にソフマップが全株式を取得し、完全子会社となりました。ドスパラ系と紹介している古い記事もありますが、現在は該当しません（前身は旧サードウェーブエクスチェンジ）。売上高198億円（2025年8月期）・全国61店舗の規模を持つ、大手グループの企業です。' },
+  { title: 'ゲーム機「本体」に強い買取専門店', description: 'PC・スマホ・デジタル機器の買取販売店を63店舗展開する専門店（公式の会社概要・2026年11月15日確認）で、ゲーム関連ではSwitch 2・PS5等の本体買取が主力です。当サイトの実測（2026年7月7日）では、Switch 2未使用 上限47,000円・PS5（CFI-1000A01）未使用46,000円等が公開されていました。ソフトの価格掲載例は確認できなかったため、実質的には本体の売却先といえます。' },
+  { title: 'ソフマップの完全子会社（ビックカメラグループ）', description: '2021年12月にソフマップが全株式を取得し、完全子会社となりました。ドスパラ系と紹介している古い記事もありますが、現在は該当しません（前身は旧サードウェーブエクスチェンジ）。売上高198億円（2025年8月期）・全国63店舗の規模を持つ、大手グループの企業です。' },
   { title: '未使用/中古別の上限価格を事前公開', description: '公式の買取検索で未使用・中古それぞれの上限価格が公開されており、セルフ見積→買取申請という流れのため、発送前に金額の目安を把握できます。店頭では平均60分で査定が完了し、その場で現金で支払われます。' },
   { title: '毎週火曜は中古の最終査定額5%アップ（常設）', description: '「じゃんじゃん火曜日」として毎週火曜に中古品の最終査定額が5%アップする常設キャンペーンがあります。ただし、店頭限定（宅配は対象外）・会員限定・新品は対象外のため、店舗に来店できる方向けの特典です。' },
 ];
@@ -34,30 +34,30 @@ const dislikeReasons = [
 const faqs = [
   { q: 'じゃんぱらはゲームソフトも買い取ってくれますか？', a: '公式FAQの対象カテゴリにゲーム関連の記載はありますが、買取価格検索でソフトの掲載例は確認できませんでした（2026年7月7日時点）。価格が公開されているのはSwitch 2・PS5等の本体類です。ソフトは公表価格のあるゲオ・ブックオフ・駿河屋等との比較をおすすめします。' },
   { q: '買取価格はどこで確認できますか？', a: '公式の買取検索（buy.janpara.co.jp）で未使用・中古別の上限価格が公開されています。当サイト確認時点（2026年7月7日）ではSwitch 2（BEE-S-KB6CA）未使用47,000円・PS5（CFI-1000A01）未使用46,000円・Switch有機EL ホワイト未使用36,000円等でした。上限は完品・無傷前提の価格です。' },
-  { q: '「じゃんじゃん火曜日」とは何ですか？', a: '毎週火曜日に中古品の最終査定額が5%アップする常設キャンペーンです。ただし店頭限定（宅配買取は対象外）・会員限定・新品（未使用品）は対象外・他キャンペーンと併用不可という条件があります（2026年7月7日公式確認、10月21日に公式の「じゃんじゃん火曜日」ページで再確認）。店舗に持ち込める方は、火曜日の利用をおすすめします。' },
+  { q: '「じゃんじゃん火曜日」とは何ですか？', a: '毎週火曜日に中古品の最終査定額が5%アップする常設キャンペーンです。ただし店頭限定（宅配買取は対象外）・会員限定・新品（未使用品）は対象外・他キャンペーンと併用不可という条件があります。対象は最終査定額100円以上で正常に動作する中古品で、火曜日当日中に受付したお品物に限られます（2026年7月7日公式確認、11月15日に公式の「じゃんじゃん火曜日」ページで再確認）。店舗に持ち込める方は、火曜日の利用をおすすめします。' },
   { q: '宅配買取の送料・返送料はかかりますか？', a: '発送はコンビニ/PUDOからのQR発送または自宅回収で、送料の顧客負担はありません。査定不成立時の返送も会社負担です。ただし買取対象外品（規定外の品）の返送のみ着払い＝顧客負担になります。梱包は3箱まで、1箱あたり200cm以内/30kg以下です。' },
   { q: '本人確認はどうやりますか？', a: '宅配では、会員登録と事前のオンラインeKYC（書類と顔の撮影、またはマイナンバーカードのIC読取）が必須です。店頭では、運転免許証等の本人確認書類の原本1点（コピー不可）が必要です。18歳未満の方は、保護者の同意書と電話確認が必要です。' },
-  { q: 'じゃんぱらとソフマップはどう違いますか？', a: 'じゃんぱらは2021年12月からソフマップの完全子会社で、同じビックカメラグループです。じゃんぱらは本体・デジタル機器に特化し、店頭61店舗と火曜日の5%アップに強みがあります。ソフマップ（ラクウル）は、ゲーム約2.9万件の価格公開とキャンセル時の返送無料に強みがあります。本体を売却する際は、両社の公開価格を比較することをおすすめします。' },
+  { q: 'じゃんぱらとソフマップはどう違いますか？', a: 'じゃんぱらは2021年12月からソフマップの完全子会社で、同じビックカメラグループです。じゃんぱらは本体・デジタル機器に特化し、店頭63店舗と火曜日の5%アップに強みがあります。ソフマップ（ラクウル）は、ゲーム約2.9万件の価格公開とキャンセル時の返送無料に強みがあります。本体を売却する際は、両社の公開価格を比較することをおすすめします。' },
 ];
 
 export default function JanparaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを検証", "datePublished": "2026-07-07", "dateModified": "2026-07-07", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを検証", "datePublished": "2026-07-07", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'じゃんぱら' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
-            <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>本体特化・61店舗</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年7月7日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>本体特化・63店舗</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月15日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             じゃんぱらのゲーム機買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>本体特化の実力と火曜5%を検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            じゃんぱらは、PC・スマホ・デジタル機器の買取専門店です（全国61店舗・ソフマップの完全子会社）。Switch 2やPS5などゲーム機本体の上限価格を未使用/中古別に公開しており、毎週火曜日は店頭での中古品の査定額が5%アップします。当サイトでは、査定基準の厳しさなどの注意点も含め、公式情報（2026年7月7日確認）にもとづいて整理しました。
+            じゃんぱらは、PC・スマホ・デジタル機器の買取専門店です（全国63店舗・ソフマップの完全子会社）。Switch 2やPS5などゲーム機本体の上限価格を未使用/中古別に公開しており、毎週火曜日は店頭での中古品の査定額が5%アップします。当サイトでは、査定基準の厳しさなどの注意点も含め、公式情報（2026年7月7日確認）にもとづいて整理しました。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://buy.janpara.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -102,12 +102,12 @@ export default function JanparaReviewPage() {
               <tbody>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社じゃんぱら（創立1997年・ソフマップ完全子会社＝ビックカメラグループ）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>本社</th><td className="py-2">東京都千代田区神田須田町2-2-3</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>規模</th><td className="py-2">店舗61・売上高198億円（2025年8月期）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>規模</th><td className="py-2">店舗63・売上高198億円（2025年8月期）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">店頭（平均60分・現金）／おまかせ宅配／法人買取（個人向け出張なし）</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">宅配送料 顧客負担なし／査定不成立時の返送 会社負担（買取対象外品のみ着払い）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：じゃんぱら公式サイト（会社概要・沿革・おまかせ宅配・買取FAQ・eKYCガイド）。2026年7月7日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：じゃんぱら公式サイト（会社概要・沿革・おまかせ宅配・買取FAQ・eKYCガイド）。2026年7月7日確認。店舗数・売上高・沿革・店頭の査定時間・じゃんじゃん火曜日の条件は2026年11月15日に再確認</p>
           </div>
         </section>
 
@@ -133,7 +133,7 @@ export default function JanparaReviewPage() {
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>・査定から支払いまでが早い（店頭はその場で現金払い）</li>
                 <li>・人気機種は想定より高い査定額が付いた</li>
-                <li>・全国61店舗で持ち込みやすい</li>
+                <li>・全国63店舗で持ち込みやすい</li>
               </ul>
             </div>
             <div className="glass-card p-6">
