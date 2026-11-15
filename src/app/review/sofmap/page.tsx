@@ -4,22 +4,30 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ラクウル（ソフマップ宅配買取）の評判・口コミ｜返却送料・振込はいつ・誕生月5%【2026年10月】',
+  title: 'ラクウルの評判｜返却送料は無料？誕生月5%増額・振込はいつ【2026年11月】ソフマップ宅配買取',
   description:
-    'ソフマップの宅配買取「ラクウル」の評判を、みん評192件の評点を集計して整理しています。査定額に不満で返却する場合の送料（原則無料と例外）、銀行振込のタイミングと手数料250円、ウォレットの180日期限、誕生月5%増額の条件を公式規約で確認しました（2026年10月20日）。',
+    'ソフマップの宅配買取「ラクウル」の評判、返却の送料（原則無料と例外）、誕生月5%増額の条件、銀行振込のタイミングと手数料250円を、公式規約・FAQで確認して整理しています。アプリ評価（App Store 4.3・Google Play 4.1）は2026年11月15日確認。',
   keywords: ['ラクウル 評判', 'ラクウル 口コミ', 'ラクウル 返却 送料', 'ラクウル 銀行振込 いつ', 'ラクウル 誕生月', 'ソフマップ 買取 評判'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ラクウル（ソフマップ宅配買取）の評判・口コミ｜返却送料・振込・誕生月【2026年10月】',
-    description: 'ラクウルの返却送料・振込のタイミング・誕生月キャンペーンを公式規約で確認し、口コミ192件の評点を集計しています。',
+    title: 'ラクウルの評判｜返却送料は無料？誕生月5%増額・振込はいつ【2026年11月】ソフマップ宅配買取',
+    description: 'ラクウルの返却送料・誕生月5%増額の条件・振込のタイミングを公式規約・FAQで確認し、アプリ評価と口コミの傾向を整理しています（2026年11月15日更新）。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
+// 冒頭の短い答え（ラクウル公式は2026年10月20日確認、ソフマップ公式の買取案内・アプリストアは2026年11月15日確認）
+const quickAnswers = [
+  { q: '誕生月特典の条件は？', a: '誕生月に宅配買取を申し込んで売ると、買取金額が5%増額されます。対象月内なら何度でも利用でき、出張買取は対象外です。他のキャンペーンとは併用できませんが、初回利用の+500円とは併用できます（ラクウル公式キャンペーンページ、2026年10月20日確認）。' },
+  { q: '返却の送料と条件は？', a: '査定額に納得できずキャンセルする場合の返送料はソフマップ負担で、原則無料です（2026年11月15日にソフマップ公式の買取案内で再確認）。例外として、買取対象外と明示された物品を送った場合やいたずらと判断された場合は、送料実費と手間賃を着払いで請求される場合があります。返却品は取引完了から3〜4日後に発送されます。' },
+  { q: '入金のタイミングは？', a: '買取代金はまず「ウォレット」に入り、自動では振り込まれません。「銀行振込」を操作すると金融機関窓口の営業時間帯に振り込まれ、営業時間外の依頼は翌営業日の取扱いです。着金までの日数は明示されていません。銀行振込の手数料は1回250円で、ビック買取マネー・店頭での現金受取は無料です。' },
+  { q: '評判の結論は？', a: 'アプリの評価はApp Store 4.3（2,414件）、Google Play 4.1（482件のレビュー）です（2026年11月15日確認）。アプリストアの評価はアプリの使いやすさを含むもので、口コミサイトでは査定額・減額への不満が中心です（当サイトの2026年10月20日の集計）。参考価格は上限の目安と考え、返送料が無料である点を活かして査定額を見てから売るか決める使い方が適しています。' },
+];
+
 const features = [
-  { title: 'ビックカメラグループによる運営', description: '運営の株式会社ソフマップは2010年からビックカメラの完全子会社です（資本金1億円・店舗22）。1982年創業の老舗PC・ゲーム販売店で、2018年に買取アプリ「ラクウル」をリリースしました。大手家電グループの傘下であることが、信頼性の大きな裏付けとなっています。' },
+  { title: 'ビックカメラグループによる運営', description: '運営の株式会社ソフマップは2010年からビックカメラの完全子会社です（資本金1億円・販売店舗22。2026年4月1日現在の会社概要）。1982年創業の老舗PC・ゲーム販売店で、2018年に買取アプリ「ラクウル」をリリースしました。大手家電グループの傘下であることが、信頼性の大きな裏付けとなっています。' },
   { title: '送料・査定料・キャンセル返送料がすべて無料', description: '宅配買取は集荷送料・査定料に加えて、キャンセル時の返送料まで無料と公式FAQに明記されています。返送料が着払い（利用者負担）の業者も多い中、査定額に納得できない場合に無料で返送してもらえる点は、複数社を比較して売却先を決めたい方に適しています。' },
   { title: '買取価格の事前公開（ゲーム約2.9万件掲載)', description: '公式の買取アイテム検索でゲームカテゴリ29,174件の参考価格が公開されています（2026年10月20日確認）。同日の確認では、Nintendo Switch 2本体（日本語・国内専用）と同梱セット3種がいずれも36,000円で掲載されており、送る前に金額の目安を確認できます。' },
   { title: '3つの集荷スタイルとeKYC完結', description: '「箱なし集荷（梱包箱を持ってきてもらう）」「箱あり集荷」「自分で発送」の3方式があり、梱包箱は無料です。本人確認はマイナンバーカード読取か自撮りのeKYCでオンライン完結します（18歳以上・国内居住者）。' },
@@ -27,7 +35,7 @@ const features = [
 
 const dislikeReasons = [
   { reason: '銀行振込に手数料250円/回がかかる', fact: '買取代金はいったん「ウォレット」に入り、銀行口座への引き出しには手数料250円/回がかかります（残高250円以下は引出不可）。ビック買取マネーや店舗での現金受取なら手数料無料なので、ビックカメラ・ソフマップで買い物する方はビック買取マネーでの受取を選ぶと手数料がかかりません。' },
-  { reason: '振込までの日数は公式に明示されていない', fact: '公式の案内は「振込は金融機関窓口の営業時間帯に行われる」「営業時間外のご依頼は各金融機関の翌営業日のお取り扱い」という内容で、何日で着金するかの日数は示されていません。また、引き出し操作をしない限り振込は行われません。急ぎで現金が必要な場合は、店頭買取（22店舗）の利用をご検討ください。' },
+  { reason: '振込までの日数は公式に明示されていない', fact: '公式の案内は「振込は金融機関窓口の営業時間帯に行われる」「営業時間外のご依頼は各金融機関の翌営業日のお取り扱い」という内容で、何日で着金するかの日数は示されていません。また、引き出し操作をしない限り振込は行われません。急ぎで現金が必要な場合は、店頭買取の利用をご検討ください（ソフマップの店舗一覧には、一部店舗では買取を行っていない場合があると記載されています）。' },
   { reason: '減額率の数値は非公開', fact: '公式の「買取に出す前に」では、起動に必要なオプションが同梱されていないと査定金額が大きく下がると案内されていますが、具体的な減額率は公開されていません（2026年10月20日確認）。欠品がある場合は、参考価格から下がることを前提に見積もることをおすすめします。' },
 ];
 
@@ -67,6 +75,7 @@ const reviewThemes = [
 ];
 
 const faqs = [
+  { q: 'ラクウルの評判はどうですか？', a: 'アプリの評価はApp Store 4.3（2,414件の評価）、Google Play 4.1（482件のレビュー）です（2026年11月15日確認）。これらはアプリの使いやすさを含む評価です。口コミサイトの投稿は査定額・減額への不満が中心で、当サイトが2026年10月20日に集計した192件のうち105件が査定額や減額に触れていました。返送料が原則無料のため、査定額を確認してから売るか決める使い方をおすすめします。' },
   { q: 'ラクウルで査定額に納得できず返却する場合、送料はかかりますか？', a: '原則としてかかりません。ラクウル利用規約 第17条に「買取りのキャンセルに伴う物品の返送費用は、甲（ソフマップ）が負担する」と定められています（2026年10月20日確認）。ただし、規約違反があった場合、買取対象外と明示されている物品を送った場合、いたずらと判断された場合などは、送料実費と手間賃を着払いで請求される場合があります。返却品は取引完了から3〜4日後に発送されます。' },
   { q: 'ラクウルの銀行振込はいつ入金されますか？', a: '買取が確定すると代金はまず「ウォレット」に入り、利用者が「銀行振込」を操作してはじめて振込手続きが行われます。公式の案内では、振込は金融機関窓口の営業時間帯に行われ、営業時間外の依頼は各金融機関の翌営業日の取扱いとなります。着金までの日数は明示されていないため、長期休業前は余裕をもって操作することをおすすめします。振込手数料は1回250円です。' },
   { q: 'ラクウルの誕生月キャンペーンの条件は？', a: '誕生月に宅配買取を申し込んで売ると、買取金額が5%増額されます。対象月内であれば何度でも利用できます。宅配買取限定で出張買取は対象外、他のキャンペーンとの併用はできません（初回+500円とは併用可と初回キャンペーン側に記載があります）。条件は予告なく変更される場合があるため、ご利用前に公式キャンペーンページをご確認ください。' },
@@ -74,6 +83,7 @@ const faqs = [
   { q: 'ラクウルの宅配買取は本当に無料ですか？', a: '集荷送料・査定料・キャンセル時の返送料は無料と公式FAQに記載されています（2026年10月20日確認）。梱包箱の送付も無料です。費用がかかるのは、買取代金を銀行振込で受け取る場合の手数料250円/回と、上記の例外にあたる場合の返送費用です。' },
   { q: '買取価格は事前に分かりますか？', a: '公式サイトの買取アイテム検索（raku-uru.sofmap.com）でゲームカテゴリ29,174件の参考価格が公開されています（2026年10月20日確認）。同日の確認では、Nintendo Switch 2本体（日本語・国内専用）と同梱セット3種がいずれも36,000円で掲載されていました。商品の状態や付属品の有無により買取金額は変動するため、参考値としてご覧ください。' },
   { q: '本人確認はどのように行いますか？', a: 'オンラインのeKYC（マイナンバーカード読み取り方式、または自撮り方式）で完結します。対応書類はマイナンバーカード・運転免許証・運転経歴証明書・在留カード・パスポートです。' },
+  { q: '18歳未満でもラクウルを利用できますか？', a: '利用できません。ソフマップ公式のよくあるご質問に、18歳未満（高校生を含む）の方は利用できないと記載されています。酒類の買取は20歳未満の方の申込を受け付けていません（2026年11月15日確認）。' },
   { q: 'キャンペーンはありますか？', a: '初回の宅配買取で+500円、誕生月は宅配買取が5%増額、年間5枚まで使える買取金額増額チケットが公式に案内されています。2026年10月20日の確認では、「秋の買い替え応援 買取祭！」としてPS5ソフト・Nintendo Switch 2ソフトなどを対象にしたキャンペーンページと、ゲーム機本体・ゲームソフトの高額買取ページも掲載されていました。対象・条件は時期によって変わるため、ご利用前に公式キャンペーンページにて最新情報をご確認ください。' },
   { q: 'ソフマップとじゃんぱらの関係は？', a: '同一グループです。じゃんぱらは2021年12月にソフマップが全株式を取得した完全子会社で、どちらもビックカメラグループに属します。ゲーム機本体の売却先として比較する際は、この資本関係も参考になります。' },
 ];
@@ -81,7 +91,7 @@ const faqs = [
 export default function SofmapReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ラクウル（ソフマップ宅配買取）の評判・口コミ｜返却送料・振込のタイミング・誕生月キャンペーン", "datePublished": "2026-07-07", "dateModified": "2026-10-20", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ラクウルの評判｜返却送料は無料？誕生月5%増額・振込はいつ（ソフマップ宅配買取）", "datePublished": "2026-07-07", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ソフマップ（ラクウル）' }]} />
 
       {/* Hero */}
@@ -89,7 +99,7 @@ export default function SofmapReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>宅配・返送料無料</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年10月20日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月15日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ラクウル（ソフマップの宅配買取）の評判・口コミ<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>返却送料・振込のタイミング・誕生月キャンペーンを公式規約で確認</span>
@@ -109,9 +119,25 @@ export default function SofmapReviewPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* 短い答え */}
+        <section className="mb-12" id="quick-answer">
+          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+            <h2 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>結論：ラクウルの誕生月特典・返却送料・入金・評判</h2>
+            <dl className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
+              {quickAnswers.map((qa) => (
+                <div key={qa.q}>
+                  <dt className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>{qa.q}</dt>
+                  <dd className="leading-relaxed mt-1">{qa.a}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="text-xs mt-4" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://www.sofmap.com/contents/?id=rakuuru_property" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ソフマップ公式「ラクウル」買取案内・よくあるご質問</a>（2026年11月15日確認）、ラクウル公式 <a href="https://raku-uru.sofmap.com/contents/index.aspx?cid=w_happy_birthday" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>お誕生月お祝い！買取5%増額キャンペーン</a>・<a href="https://raku-uru.sofmap.com/contents/?cid=W_TERMS" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>利用規約</a>（2026年10月20日確認）、<a href="https://apps.apple.com/jp/app/id1410308806" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>App Store</a>・<a href="https://play.google.com/store/apps/details?id=com.sofmap.rakuuru" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>Google Play</a>（2026年11月15日確認）。ラクウル公式サイト（raku-uru.sofmap.com）は2026年11月15日にシステムメンテナンス中（終了予定 同日23:59）で閲覧できなかったため、規約・キャンペーンの記載は10月20日の確認内容です。</p>
+          </div>
+        </section>
+
         {/* Conclusion */}
         <section className="mb-12">
-          <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
+          <div className="glass-card p-6">
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>比較しながら売却先を決めたい方に適した仕組み（受取方法には注意が必要）</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               ラクウルは<strong>キャンセル時の返送料が原則無料</strong>なので、査定額を見てから売却を決めたい方に適した宅配買取です。買取の参考価格も事前公開されており、2026年10月20日の確認ではSwitch 2本体（日本語・国内専用）が36,000円でした。注意点は受取方法で、<strong>銀行振込は手数料250円/回</strong>がかかり、ウォレットの代金には180日の期限があります。ビック買取マネー・店頭受取であれば手数料は無料です。ソフト中心なら公表価格の高い店と、本体なら同グループの<Link href="/review/janpara/" style={{ color: 'var(--color-electric-green)' }}>じゃんぱら</Link>とも比べて、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した価格インデックス</Link>で相場を確認してから送ることをおすすめします。
@@ -154,6 +180,22 @@ export default function SofmapReviewPage() {
           </div>
         </section>
 
+        {/* 利用条件（ソフマップ公式で2026年11月15日確認） */}
+        <section className="mb-12" id="conditions">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />申し込む前に確認したい利用条件</h2>
+          <div className="glass-card p-6">
+            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <li>・<strong>年齢</strong>：18歳未満（高校生を含む）は利用できません。酒類の買取は20歳未満の方の申込を受け付けていません。</li>
+              <li>・<strong>申込方法</strong>：申込はウェブサイトかアプリからのみです。それ以外の方法で届いた荷物は着払いで返送されます。</li>
+              <li>・<strong>サイズ・重量</strong>：梱包した状態で3辺合計160cm以内・25kg以下のアイテムのみ取り扱います。</li>
+              <li>・<strong>返送時の梱包</strong>：返送時はソフマップ側で梱包をやり直したり、荷物を最小数にまとめたりする場合があり、その場合は利用者が使った梱包材は返却されません。</li>
+              <li>・<strong>受取拒否</strong>：返送されたアイテムの受取りを拒否した場合、悪質ないたずらなど買取以外の目的とみなし、法的措置を取ると明記されています。</li>
+              <li>・<strong>データ消去</strong>：買い取ったアイテムはソフマップの商品化センターに集められ、専用の機器・ソフトウェアでデータ消去を行うと案内されています。</li>
+            </ul>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://www.sofmap.com/contents/?id=rakuuru_property" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ソフマップ公式「ラクウル」買取案内・よくあるご質問</a>。2026年11月15日確認。</p>
+          </div>
+        </section>
+
         {/* キャンペーン */}
         <section className="mb-12" id="campaign">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ラクウルの誕生月キャンペーン・初回特典・増額チケット</h2>
@@ -183,7 +225,7 @@ export default function SofmapReviewPage() {
           <p className="text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
             誕生月5%増額は他のキャンペーンと併用できませんが、初回+500円のページには「お誕生月お祝い！買取5%増額キャンペーン」を除くと記載されており、初回利用が誕生月に重なる場合は両方の対象となります。このほか2026年10月20日の確認では、「秋の買い替え応援 買取祭！」としてPS5ソフト・Nintendo Switch 2ソフトなどを対象にしたキャンペーンページが掲載されていました。
           </p>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ラクウル公式 <a href="https://raku-uru.sofmap.com/campaign.aspx" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>キャンペーン情報</a>（お誕生月お祝い！買取5%増額キャンペーン、初回ご利用キャンペーン、買取金額増額チケット ご利用案内）。2026年10月20日確認。キャンペーンは予告なく変更・終了する場合があります。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ラクウル公式 <a href="https://raku-uru.sofmap.com/campaign.aspx" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>キャンペーン情報</a>（<a href="https://raku-uru.sofmap.com/contents/index.aspx?cid=w_happy_birthday" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>お誕生月お祝い！買取5%増額キャンペーン</a>、初回ご利用キャンペーン、買取金額増額チケット ご利用案内）。2026年10月20日確認。2026年11月15日はラクウル公式サイトがメンテナンス中で再確認できませんでした。キャンペーンは予告なく変更・終了する場合があります。</p>
         </section>
 
         {/* Features */}
@@ -207,12 +249,12 @@ export default function SofmapReviewPage() {
               <tbody>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社ソフマップ（ビックカメラ完全子会社・資本金1億円）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>本社</th><td className="py-2">東京都千代田区外神田1-16-9</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>店舗数</th><td className="py-2">22店舗（店頭買取対応）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>店舗数</th><td className="py-2">販売店舗22店舗（一部店舗では買取を行っていない場合があります）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">宅配（ラクウル）／店頭／出張（家電・家具、エリア限定）</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">集荷送料・査定料 無料／キャンセル返送料 原則無料／銀行振込手数料250円/回（ビック買取マネー・店頭受取は無料）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ソフマップ公式サイト（会社概要・沿革）、ラクウル公式（ご利用ガイド・FAQ・利用規約）。資本金・本社所在地・販売店舗数（関東13・東北1・関西4・東海1・中国四国九州3の計22店舗）・費用は2026年10月20日に再確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ソフマップ公式サイト（会社概要・沿革）、ラクウル公式（ご利用ガイド・FAQ・利用規約）。資本金・本社所在地・販売店舗数（関東13・東北1・関西4・東海1・中国四国九州3の計22店舗）は<a href="https://www.sofmap.co.jp/about/overview" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ソフマップ会社概要</a>（2026年4月1日現在の記載）で2026年11月15日に再確認。買取を行わない店舗がある旨は<a href="https://www.sofmap.com/tenpo/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>店舗情報</a>の記載です</p>
           </div>
         </section>
 
@@ -246,13 +288,13 @@ export default function SofmapReviewPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr><td className="font-bold text-sm">App Store（ラクウル アプリ）</td><td className="text-sm">4.3 / 5</td><td className="text-sm">2,383件の評価</td><td className="text-sm">アプリ（申込・本人確認・ウォレット操作など）</td></tr>
-                <tr><td className="font-bold text-sm">Google Play（ラクウル アプリ）</td><td className="text-sm">4.0 / 5</td><td className="text-sm">480件のレビュー</td><td className="text-sm">アプリ</td></tr>
+                <tr><td className="font-bold text-sm">App Store（ラクウル アプリ）</td><td className="text-sm">4.3 / 5</td><td className="text-sm">2,414件の評価</td><td className="text-sm">アプリ（申込・本人確認・ウォレット操作など）</td></tr>
+                <tr><td className="font-bold text-sm">Google Play（ラクウル アプリ）</td><td className="text-sm">4.1 / 5</td><td className="text-sm">482件のレビュー</td><td className="text-sm">アプリ</td></tr>
                 <tr><td className="font-bold text-sm">みん評（ラクウルの口コミ・評判）</td><td className="text-sm">2.72 / 5（同サイト表示値）</td><td className="text-sm">192件</td><td className="text-sm">買取サービス全体（宅配・店頭を含む）</td></tr>
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://apps.apple.com/jp/app/id1410308806" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>App Store</a>、<a href="https://play.google.com/store/apps/details?id=com.sofmap.rakuuru" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>Google Play</a>、<a href="https://minhyo.jp/raku-uru" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>みん評</a>。いずれも2026年10月20日確認。みん評は「サイトの性質上、厳しい声は多くなります」と自ら注記しています。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://apps.apple.com/jp/app/id1410308806" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>App Store</a>、<a href="https://play.google.com/store/apps/details?id=com.sofmap.rakuuru" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>Google Play</a>、<a href="https://minhyo.jp/raku-uru" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>みん評</a>。App Store・Google Playは2026年11月15日確認、みん評は2026年10月20日確認（11月15日は再確認できていません）。みん評は「サイトの性質上、厳しい声は多くなります」と自ら注記しています。</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             <div className="glass-card p-6">
