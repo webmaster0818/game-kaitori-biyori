@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ブックサプライの評判・口コミは悪い？ゲーム宅配買取の手数料・実態を検証',
   description:
-    'ブックサプライの評判・口コミが「悪い」「怪しい」と言われる理由を検証しています。運営は株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号）です。査定料・振込手数料・段ボールが無料の宅配買取で、Switch・PS5などのゲーム機・ソフトも買取対象です。',
+    'ブックサプライの評判・口コミが「悪い」「怪しい」と言われる理由を検証しています。運営は株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号）です。査定料・振込手数料・段ボール（初回）が無料の宅配買取で、Switch・PS5などのゲーム機・ソフトも買取対象です。',
   keywords: ['ブックサプライ', 'ブックサプライ 評判', 'ブックサプライ 口コミ', 'ブックサプライ 怪しい', 'ブックサプライ ゲーム'],
   openGraph: {
     images: ['/og.png'],
@@ -20,16 +20,16 @@ export const metadata: Metadata = {
 
 const features = [
   { title: '本・CD・DVDに加えゲームも対象', description: 'Nintendo Switch・PS5・PS4・Xboxなどのゲーム機本体、バーコードのあるゲームソフトが買取対象です。本・漫画・CD・DVDとまとめて1回の宅配で売れるため、断捨離・引っ越しでまとめて処分したい方に適しています。' },
-  { title: '査定料・振込手数料・段ボールが無料', description: '査定手数料と振込手数料は無料で、梱包用の段ボールも無料で送付してもらえます（公式トップに明記）。宅配買取で気になる細かな手数料が少なく、始めやすいのが特徴です。' },
+  { title: '査定料・振込手数料・段ボール（初回）が無料', description: '査定手数料と振込手数料は無料で、初回申込の方には梱包用の段ボールが無料で届きます（公式FAQ。1回の申込は10箱まで）。宅配買取で気になる細かな手数料が少なく、始めやすいのが特徴です。' },
   { title: 'リアルタイムお試し査定', description: '送る前にバーコードや商品名を入力すると、その時点の目安査定額を確認できる「お試し査定」機能があります。梱包前におおよその金額感をつかめるため、送るかどうかの判断に使えます。' },
   { title: '2000年創業の老舗宅配買取', description: '運営は株式会社ブックサプライ（2000年設立・大阪府吹田市）。古物商許可を持つ正規の買取事業者で、宅配買取を長く手がけている点は安心材料の一つです。' },
 ];
 
 const steps = [
-  { step: 1, title: 'Webで申込み・段ボール受取', description: '公式サイトから宅配買取を申し込みます。手持ちの箱を使うことも、無料の段ボールを取り寄せることもできます。' },
+  { step: 1, title: 'Webで申込み・段ボール受取', description: '公式サイトから宅配買取を申し込みます。初回申込の方は無料の段ボールを取り寄せられます。発送はブックサプライが手配する佐川急便の集荷のみで、コンビニからの発送はできません。沖縄・その他の離島は利用できません。' },
   { step: 2, title: '商品を詰めて集荷・発送', description: 'ゲーム機・ソフトや本などを箱に詰めて発送します。本人確認書類の提出も忘れずに行ってください。集荷にも対応しています。' },
-  { step: 3, title: '査定・結果通知', description: '商品到着後に査定が行われ、結果が通知されます。承認前であればキャンセルも可能です。' },
-  { step: 4, title: '承諾で入金', description: '査定額に納得した場合は、承諾すると入金手続きに進みます。振込手数料は無料です。納得できない場合はキャンセルできます（少額品の返送は送料負担が生じる場合があります）。' },
+  { step: 3, title: '査定・結果通知', description: '商品到着後、通常約5営業日以内に査定結果が通知されます。申込時に「自動承認不可」を選んだ場合は、通知から4日以内に承認・非承認を回答します（4日を過ぎると承認扱い）。' },
+  { step: 4, title: '承諾で入金', description: '査定額に納得した場合は、承諾すると入金手続きに進みます。振込手数料は無料です。「自動承認不可」を選んでいれば、非承認にして全品を返送してもらえます（佐川急便の着払い・送料はお客様負担）。「スピード振込コース（自動承認）」を選んだ場合は返却できません。' },
 ];
 
 const targets = [
@@ -40,9 +40,9 @@ const targets = [
 
 const faqs = [
   { q: 'ブックサプライは「悪い」「怪しい」という評判は本当ですか？', a: '運営元は株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号・2000年設立）で、公式サイトに会社概要・利用ガイドラインを掲載した正規の宅配買取事業者です。「悪い・怪しい」と言われる背景には、宅配買取全般で起こりやすい「事前のお試し査定より最終査定額が低く感じる」「本の査定額が想定より安い」といった不満が挙げられます（断定ではなく確認項目ベースの評価）。ゲーム機・DVDなどは相対的に評価が良いという声が多く、査定料・振込手数料は無料のため、承認前であれば費用なくキャンセルして判断できます。' },
-  { q: '送料は無料ですか？条件はありますか？', a: '公式のガイドラインでは、査定合計金額が2,000円以上の場合は送料無料です。2,000円未満の場合は1箱につき500円が査定額から差し引かれる扱いとなっているため、少量だけ送ると実質的な負担が生じることがあります。まとめて送るほど条件を満たしやすくなります（2026年7月時点の公式記載）。' },
-  { q: '査定に納得できなかったら返してもらえますか？費用はかかりますか？', a: '承認前であればキャンセルが可能です。ただし、値段が付かない品や少額品を返送する場合は返送の送料負担が生じるケースがあり、また受取拒否・長期保管切れの場合はキャンセル料が発生すると公式に記載されています。金銭リスクを避けたい場合は、返送料まで無料の他社（買取王子など）と比較検討するのも一つの方法です。' },
-  { q: '振込手数料はかかりますか？', a: '現在の公式トップページでは「振込＆査定手数料も無料」と明記されています。過去の一部情報では振込手数料が有料と紹介されていたケースもありますが、2026年7月時点の公式表記は無料です。料金は改定される場合があるため、申込前に公式サイトで最新の条件をご確認ください。' },
+  { q: '送料は無料ですか？条件はありますか？', a: '公式のガイドラインでは、査定合計金額が2,000円以上の場合は送料無料です。2,000円未満の場合は1箱につき500円が査定額から差し引かれる扱いとなっているため、少量だけ送ると実質的な負担が生じることがあります。500円を差し引いて不足する分は、ブックサプライへ振り込む必要があります。まとめて送るほど条件を満たしやすくなります（2026年11月16日時点の公式FAQ）。' },
+  { q: '査定に納得できなかったら返してもらえますか？費用はかかりますか？', a: '申込時に「自動承認不可」を選んだ場合に限り、査定結果に納得できなければ返送してもらえます。返送は佐川急便の着払いで、送料はお客様負担です。一部の商品だけを選んで返すことはできず、全品を売るか全品を返すかの選択になります。値段が付かなかった商品は返送されず廃棄となります（買取対象外の品が多数を占める場合は着払いで返送されることがあります）。「スピード振込コース（自動承認）」で申し込んだ場合は返却できません。受取拒否・長期保管切れの場合はキャンセル料が発生します（公式FAQ・2026年11月16日確認）。金銭リスクを避けたい場合は、返送料まで無料の他社（買取王子など）と比較検討するのも一つの方法です。' },
+  { q: '振込手数料はかかりますか？', a: '現在の公式トップページでは「振込＆査定手数料も無料」と明記されています。過去の一部情報では振込手数料が有料と紹介されていたケースもありますが、2026年11月16日時点の公式表記も無料です（振込先の入力誤りによる再振込の場合のみ400円）。料金は改定される場合があるため、申込前に公式サイトで最新の条件をご確認ください。' },
   { q: 'ゲームソフトやゲーム機はどのくらいの値段が付きますか？', a: '個別タイトルの固定価格表は公開されておらず、送る前の「お試し査定」で目安額を確認する形です。買取価格は時期や在庫状況で変動します。ゲームを少しでも高く売りたい場合は、当サイトの公式価格を実測した買取価格インデックスで専門店の価格と比べてから判断することをおすすめします。' },
   { q: '箱や付属品がなくても買取してもらえますか？', a: '一般に宅配買取では、箱・説明書・付属品がなくても買取対象になりますが、揃っている方が査定額は高くなります。特にゲーム機本体は付属品の有無が査定額に影響しやすいため、可能な範囲で揃えて送ることをおすすめします。詳細な可否は公式のガイドラインをご確認ください。' },
 ];
@@ -61,7 +61,7 @@ export default function BooksupplyReviewPage() {
             ブックサプライの評判・口コミは悪い？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>ゲーム宅配買取の実態を検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            本・CD・DVDに加え、Switch・PS5などゲーム機・ソフトもまとめて売れる老舗の宅配買取サービスです。査定料・振込手数料・段ボールが無料で始めやすい一方、送料無料には条件があります。「悪い・怪しい」と言われる理由の実態と、向いている方・注意点を公式情報で整理しました。
+            本・CD・DVDに加え、Switch・PS5などゲーム機・ソフトもまとめて売れる老舗の宅配買取サービスです。査定料・振込手数料・段ボール（初回）が無料で始めやすい一方、送料無料には条件があります。「悪い・怪しい」と言われる理由の実態と、向いている方・注意点を公式情報で整理しました。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.booksupply.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-2.5 px-6">
@@ -80,7 +80,7 @@ export default function BooksupplyReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>本とゲームをまとめて宅配で売却したい方に適した、古物商許可を持つ老舗事業者</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ブックサプライは株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号・2000年設立）が運営する宅配買取サービスです。査定料・振込手数料・段ボールが無料で、Switch・PS5などのゲーム機・ソフトも本やCD・DVDとまとめて売れます。「悪い・怪しい」と検索されるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ただし<strong>送料無料は査定合計2,000円以上が条件</strong>で、少量だと1箱500円が差し引かれる点、<strong>値段が付かない品の返送には送料負担が生じる場合がある</strong>点は事前にご確認ください。ゲーム単体を1点でも高く売りたい用途よりも、まとめて処分する用途に適したサービスです。
+              ブックサプライは株式会社ブックサプライ（大阪府公安委員会 古物商許可 第622271206036号・2000年設立）が運営する宅配買取サービスです。査定料・振込手数料・段ボール（初回）が無料で、Switch・PS5などのゲーム機・ソフトも本やCD・DVDとまとめて売れます。「悪い・怪しい」と検索されるほどの根拠は確認できません（断定ではなく確認項目ベースの評価）。ただし<strong>送料無料は査定合計2,000円以上が条件</strong>で、少量だと1箱500円が差し引かれる点、<strong>値段が付かない品の返送には送料負担が生じる場合がある</strong>点は事前にご確認ください。ゲーム単体を1点でも高く売りたい用途よりも、まとめて処分する用途に適したサービスです。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>最も高い買取店を価格で確認する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで無料の宅配買取（買取王子）と比較する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取どちらが得か手取り額を試算する</Link>
@@ -112,10 +112,10 @@ export default function BooksupplyReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">大阪府公安委員会 第622271206036号</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方法</th><td className="py-2">宅配買取（提携書店での店頭買取もあり）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>主な取扱品目</th><td className="py-2">ゲーム機・ゲームソフト／本・漫画・CD・DVD／携帯端末／金券・貴金属 など</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">査定料・振込手数料・段ボール無料。送料は査定合計2,000円以上で無料（未満は1箱500円差引）</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">査定料・振込手数料・段ボール（初回）無料。送料は査定合計2,000円以上で無料（未満は1箱500円差引）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックサプライ公式サイト（トップ・買取ガイドライン・会社概要）2026年7月10日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックサプライ公式サイト（トップ・買取ガイドライン・よくあるご質問）・運営会社サイトの会社概要（booksupply.co.jp）2026年11月16日確認</p>
           </div>
         </section>
 
@@ -127,11 +127,11 @@ export default function BooksupplyReviewPage() {
               <tbody>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>送料</th><td className="py-2">査定合計2,000円以上で無料。2,000円未満は1箱につき500円を査定額から差引（段ボールは無料）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料（公式トップに明記）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: '#B45309' }}>キャンセル・返送料</th><td className="py-2">承認前ならキャンセル可。ただし<strong style={{ color: '#B45309' }}>値段が付かない品・少額品の返送には送料負担が生じる場合あり</strong>。受取拒否・長期保管切れはキャンセル料が発生</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: '#B45309' }}>キャンセル・返送料</th><td className="py-2">「自動承認不可」を選んだ場合のみ返送可。<strong style={{ color: '#B45309' }}>返送は佐川急便の着払い（お客様負担）・全品返送のみ（一部返送不可）</strong>。値段が付かない品は返送されず廃棄。自動承認を選ぶと返却不可。受取拒否・長期保管切れはキャンセル料が発生</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>振込手数料</th><td className="py-2">無料（現行公式表記。旧情報で有料の記載があるため申込前に要確認）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックサプライ公式サイト（トップ・買取ガイドライン）2026年7月10日確認。返送料まで無料を求める場合は、返送料無料を明記する他社と比較することをおすすめします。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックサプライ公式サイト（トップ・買取ガイドライン・よくあるご質問）2026年11月16日確認。振込先の入力誤りで再振込となる場合は振込手数料400円がかかります。返送料まで無料を求める場合は、返送料無料を明記する他社と比較することをおすすめします。</p>
           </div>
         </section>
 
@@ -149,7 +149,7 @@ export default function BooksupplyReviewPage() {
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由3：少額だと送料・返送料の負担が出る</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>送料無料は査定合計2,000円以上が条件で、少量だと1箱500円が差し引かれます。また値段が付かない品の返送には送料負担が生じる場合があります。金銭リスクをゼロにしたい場合は、まとめて送って条件を満たすか、返送料まで無料の他社を選ぶことをおすすめします。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>送料無料は査定合計2,000円以上が条件で、少量だと1箱500円が差し引かれます。また査定に納得できず返送してもらう場合は、着払いの送料がかかります（自動承認不可を選んだ場合のみ・全品返送）。金銭リスクをゼロにしたい場合は、まとめて送って条件を満たすか、返送料まで無料の他社を選ぶことをおすすめします。</p>
             </div>
           </div>
         </section>
@@ -162,7 +162,7 @@ export default function BooksupplyReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>メリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>+ 本・CD・DVD・ゲームをまとめて1回で売れる</li>
-                <li>+ 査定料・振込手数料・段ボールが無料</li>
+                <li>+ 査定料・振込手数料・段ボール（初回）が無料</li>
                 <li>+ 送る前に「お試し査定」で目安額を確認できる</li>
                 <li>+ 2000年創業・古物商許可を持つ老舗</li>
                 <li>+ ゲーム機・DVDは相対的に評価が高いという声がある</li>
@@ -172,7 +172,7 @@ export default function BooksupplyReviewPage() {
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>デメリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <li>- 送料無料に「査定合計2,000円以上」の条件がある</li>
-                <li>- 値段が付かない品の返送に送料負担が出る場合がある</li>
+                <li>- 返送は着払い（お客様負担）で全品のみ。自動承認を選ぶと返却できない</li>
                 <li>- 本・古い商品の査定額は低くなりやすい</li>
                 <li>- 宅配専門でその場での現金化はできない</li>
                 <li>- 個別タイトルの固定価格表は非公開</li>
