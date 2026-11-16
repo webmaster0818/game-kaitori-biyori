@@ -32,9 +32,10 @@ const switch2Overview = [
 
 // 2026年11月15日に各社公式買取ページで再取得した Switch 2 本体の買取価格（null=掲載なし／'unchecked'=前回調査時に未確認）
 // ルデヤ=カテゴリ「Nintendo Switch 2」の新品価格(16:03時点表示) / 駿河屋=公式買取検索の掲載価格 / ふるいち=Switch2高価買取情報の買取上限金額 / ブックオフ=高価買取リスト(店舗価格・11/12更新表記)
-// ラクウル=11/15はシステムメンテナンス中で確認できず、2026年10月20日の値を据え置き
+// ラクウル=11/15はシステムメンテナンス中で確認できず、2026年11月16日に買取アイテム検索（スイッチ2 本体・税込の参考価格）で再取得
 const SWITCH2_SURVEY_DATE = '2026年11月15日';
-const RAKUURU_LAST_DATE = '2026年10月20日';
+const RAKUURU_DATE = '2026年11月16日';
+const PREV_SURVEY_DATE = '2026年10月20日';
 type Cell = number | null | 'unchecked';
 const switch2BuybackPrices: { model: string; code: string; rudeya: Cell; surugaya: Cell; rakuuru: Cell; furuichi: Cell; bookoff: Cell }[] = [
   { model: '日本語・国内専用', code: 'BEE-S-KB6CA', rudeya: 51500, surugaya: 37000, rakuuru: 36000, furuichi: 36000, bookoff: 35000 },
@@ -42,14 +43,14 @@ const switch2BuybackPrices: { model: string; code: string; rudeya: Cell; surugay
   { model: 'マリオカート ワールド セット', code: 'BEE-S-KB6PA', rudeya: 58500, surugaya: 38000, rakuuru: 36000, furuichi: 36000, bookoff: null },
   { model: 'Pokémon LEGENDS Z-A セット', code: 'BEE-S-KB6PC', rudeya: 56200, surugaya: 39000, rakuuru: 36000, furuichi: null, bookoff: null },
   { model: 'スプラトゥーン レイダース セット', code: 'BEE-S-KB6PE', rudeya: 51000, surugaya: 37000, rakuuru: 36000, furuichi: null, bookoff: null },
-  { model: 'ゼルダの伝説 40周年 アニバーサリーエディション', code: 'BEE-S-KL6CC', rudeya: 55000, surugaya: 53000, rakuuru: 'unchecked', furuichi: null, bookoff: null },
-  { model: '選べるソフトセット', code: 'BEE-S-KB6MA', rudeya: 58000, surugaya: 37000, rakuuru: 'unchecked', furuichi: null, bookoff: null },
+  { model: 'ゼルダの伝説 40周年 アニバーサリーエディション', code: 'BEE-S-KL6CC', rudeya: 55000, surugaya: 53000, rakuuru: 45000, furuichi: null, bookoff: null },
+  { model: '選べるソフトセット', code: 'BEE-S-KB6MA', rudeya: 58000, surugaya: 37000, rakuuru: null, furuichi: null, bookoff: null },
 ];
 const yen = (v: Cell) => (v === 'unchecked' ? '未確認' : v == null ? '—' : `${v.toLocaleString('ja-JP')}円`);
 const switch2Stores = [
   { name: '買取ルデヤ', cond: 'Switch 2カテゴリの掲載はすべて「新品」の価格。本体は「印有減額無し」の表記', date: '2026年11月15日 16時03分の表示', url: 'https://kaitori-rudeya.com/category/detail/214' },
   { name: '駿河屋', cond: '公式買取検索の掲載価格。状態による価格区分の表示なし（付属品欠品・傷み等は減額基準リストに従い減額）', date: '2026年11月15日', url: 'https://www.suruga-ya.jp/kaitori/search_buy?search_word=BEE-S-KB6CA' },
-  { name: 'ソフマップ（ラクウル）', cond: '買取アイテム検索の参考価格。状態・付属品により変動', date: `${RAKUURU_LAST_DATE}の値（11月15日はシステムメンテナンス中で確認できず）`, url: 'https://raku-uru.sofmap.com/search/product_list.aspx?gid=009240110010' },
+  { name: 'ソフマップ（ラクウル）', cond: '買取アイテム検索の参考価格（税込）。状態区分の表示なし。表示金額は目安で、商品状態・付属品の有無など査定の結果で決定', date: `${RAKUURU_DATE}（11月15日はシステムメンテナンス中で確認できず、翌日に再取得）`, url: 'https://raku-uru.sofmap.com/search/product_list.aspx?gid=009240110010' },
   { name: '古本市場（ふるいち）', cond: '高価買取情報の買取上限金額。査定結果で決定', date: '2026年11月15日', url: 'https://www.furu1.net/kaitori/sell_game/switch2' },
   { name: 'ブックオフ', cond: '高価買取リストの店舗買取価格。店舗により異なる', date: '2026年11月15日確認（ページの最終更新日 2026年11月12日）', url: 'https://www.bookoff.co.jp/selllist/game/index.html' },
 ];
@@ -72,6 +73,7 @@ const unopenedConditions = [
   { store: '買取ルデヤ', price: '新品の価格のみ掲載', cond: '本体は「印有減額無し」。シュリンク（外装フィルム）の有無についての記載は確認できませんでした。外箱の傷・凹みは写真で減額の目安を案内。', url: 'https://kaitori-rudeya.com/faq' },
   { store: '駿河屋', price: '状態区分なし（1価格）', cond: '必須付属品・同梱特典の欠品、本体・付属品・パッケージの傷み・汚れ・日焼けは減額対象。ゲーム機本体は内蔵電池切れも減額対象。', url: 'https://www.suruga-ya.jp/man/hyou/kaitorihin.html' },
   { store: '古本市場（ふるいち）', price: '買取上限金額を掲載', cond: '上限金額は常に変動し、発売時期やバージョンにより同一商品でも上限金額が適用されない場合があると記載。未開封に関する条件の記載は確認できませんでした。', url: 'https://www.furu1.net/kaitori/sell_game/switch2' },
+  { store: 'ソフマップ（ラクウル）', price: '参考価格を掲載（状態区分なし）', cond: '商品ページに「表示金額は目安であり、買取代金を保証するものではありません。買取代金は商品状態、付属品の有無など査定の結果で決定されます」と記載。未開封に関する条件の記載は確認できませんでした（2026年11月16日確認）。', url: 'https://raku-uru.sofmap.com/search/product_detail.aspx?rsku=101545304&jan=4902370553024' },
   { store: 'ブックオフ', price: '店舗の買取価格を掲載', cond: '店舗により買取価格が異なり、予告なく変更する場合があると記載。未開封に関する条件の記載は確認できませんでした。', url: 'https://www.bookoff.co.jp/selllist/game/index.html' },
 ];
 
@@ -125,8 +127,8 @@ const faqs = [
   { q: '限定版のSwitchも値下がりしますか？', a: '限定版・特別デザインのSwitchは、モデルによって買取価格の動きが異なります。生産終了後に通常版より高い価格が提示される例もありますが、将来の価格を確実に予測することはできません。売却を検討する場合は、売却直前に各社の公式買取ページで価格をご確認ください。' },
   { q: 'Joy-Conを売却してSwitch 2用に買い替えてもよいですか？', a: 'Switch 2のJoy-Conはマグネット式に変更されているため、旧型Joy-Conはそのまま装着できません（別売りアタッチメントが必要）。旧型Joy-Conを使い続ける予定がなければ、本体と一緒に売却するほうが査定額の面で有利です。' },
   { q: 'Switch 2はいつ発売ですか？定価はいくらですか？', a: 'Nintendo Switch 2は2025年6月5日に日本を含む全世界で同時発売されました。発売時の価格は国内専用版49,980円（税込）でしたが、2026年5月25日に59,980円へ値上げされています。多言語対応版は69,980円です。' },
-  { q: 'Switch 2本体の買取価格は今いくらですか？', a: '2026年11月15日に各社公式ページで確認した日本語・国内専用版の買取価格は、買取ルデヤ51,500円（新品）、駿河屋37,000円、ふるいち36,000円（買取上限金額）、ブックオフ35,000円（店舗価格）でした。ソフマップ（ラクウル）は同日システムメンテナンス中で確認できず、2026年10月20日の値は36,000円です。多言語対応版はルデヤ83,200円（新品）、駿河屋60,000円です。店ごとに対象の状態が異なり、価格は日々変動するため、売却の直前に各社の公式買取ページにてご確認ください。' },
-  { q: 'Switch 2の多言語版の買取価格はいくらですか？', a: '2026年11月15日の確認では、多言語対応版（BEE-S-KB6AA）は買取ルデヤが83,200円（新品）、駿河屋が60,000円でした。ふるいち・ブックオフでは同日の公開リストに多言語版の掲載はありませんでした（ソフマップ（ラクウル）は10月20日の時点で掲載なし）。多言語対応版は任天堂のNintendo Storeのみで販売されており（希望小売価格69,980円）、ルデヤの新品価格は希望小売価格を上回っています。' },
+  { q: 'Switch 2本体の買取価格は今いくらですか？', a: '2026年11月15日に各社公式ページで確認した日本語・国内専用版の買取価格は、買取ルデヤ51,500円（新品）、駿河屋37,000円、ふるいち36,000円（買取上限金額）、ブックオフ35,000円（店舗価格）でした。ソフマップ（ラクウル）は同日システムメンテナンス中だったため11月16日に確認し、36,000円（参考価格）でした。多言語対応版はルデヤ83,200円（新品）、駿河屋60,000円です。店ごとに対象の状態が異なり、価格は日々変動するため、売却の直前に各社の公式買取ページにてご確認ください。' },
+  { q: 'Switch 2の多言語版の買取価格はいくらですか？', a: '2026年11月15日の確認では、多言語対応版（BEE-S-KB6AA）は買取ルデヤが83,200円（新品）、駿河屋が60,000円でした。ふるいち・ブックオフでは同日の公開リストに多言語版の掲載はありませんでした（ソフマップ（ラクウル）も11月16日の買取アイテム検索で多言語版の掲載なし）。多言語対応版は任天堂のNintendo Storeのみで販売されており（希望小売価格69,980円）、ルデヤの新品価格は希望小売価格を上回っています。' },
   { q: '定価の値上げでSwitch 2の買取価格は上がりましたか？', a: '店舗によって動きが異なります。当サイトの実測では、日本語・国内専用版の買取ルデヤ（新品）は2026年6月12日の47,000円から10月20日に49,000円、11月15日に51,500円へ上がった一方、ふるいちの掲載価格は6月12日の46,000円から11月15日には36,000円に下がっています。値上げ（2026年5月25日、49,980円→59,980円）だけで買取価格が決まるわけではないため、売却時点の価格をご確認ください。' },
   { q: '買取ルデヤのSwitch 2の買取価格はいくらですか？', a: '2026年11月15日16時03分時点の買取ルデヤ公式ページでは、新品の日本語・国内専用版が51,500円、多言語版が83,200円、マリオカート ワールド セットが58,500円、選べるソフトセットが58,000円、Pokémon LEGENDS Z-A セットが56,200円、ゼルダの伝説 40周年 アニバーサリーエディションが55,000円、スプラトゥーン レイダース セットが51,000円でした。いずれも「印有減額無し」の表記です。利用には会員登録と買取リクエストが必要で、価格は承認連絡の時点のものが適用されます。' },
   { q: 'Switch 2は未開封と開封済みで買取価格がどのくらい違いますか？', a: '同じ店舗で未開封と開封済みの価格を両方公開している店は、当サイトが確認した5店にはありませんでした。2026年11月15日の日本語・国内専用版では、新品の価格のみを掲載する買取ルデヤが51,500円、新品未開封に限定する記載のない駿河屋・ふるいち・ブックオフが35,000〜37,000円で、差は14,500〜16,500円です。開封済みの品は店舗の査定で状態・付属品により価格が決まるため、この差は目安としてご覧ください。' },
@@ -137,7 +139,7 @@ const faqs = [
 export default function Switch2Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2 買取価格｜未開封はルデヤ51,500円、5店の公式価格をモデル別に比較", "datePublished": "2026-05-19", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Switch2 買取価格｜未開封はルデヤ51,500円、5店の公式価格をモデル別に比較", "datePublished": "2026-05-19", "dateModified": "2026-11-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Switch 2 買取価格' }]} />
 
       {/* Hero */}
@@ -150,7 +152,7 @@ export default function Switch2Page() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             Switch 2本体（日本語・国内専用）の買取価格は、2026年11月15日の確認で新品51,500円（買取ルデヤ・印有減額無し）、新品未開封に限定する記載のない店舗の公開価格で35,000〜37,000円でした。多言語版は83,200円（ルデヤ新品）／60,000円（駿河屋）です。5店の公式掲載価格、未開封の条件、買取ルデヤの利用条件をまとめています。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新日：2026年11月15日（価格は同日に各店の公式ページで確認）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新日：2026年11月16日（価格は2026年11月15日に各店の公式ページで確認。ソフマップ（ラクウル）のみ11月16日）</p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
               おすすめ買取サービスを見る
@@ -175,7 +177,7 @@ export default function Switch2Page() {
         <section className="mb-12" id="price">
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch2の買取価格（5店の公式掲載価格・{SWITCH2_SURVEY_DATE}実測）</h2>
           <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
-            {SWITCH2_SURVEY_DATE}に、各店の公式買取ページに掲載されているSwitch 2本体の買取価格を確認しました。新品の価格のみを掲載する買取ルデヤが最も高く、日本語・国内専用版は51,500円（希望小売価格59,980円の85.9%）でした。新品未開封に限定する記載のない店舗の公開価格は35,000〜37,000円で、最も高いのは駿河屋の37,000円です。店ごとに対象となる状態が異なるため、同じ条件の価格同士でご比較ください。ソフマップ（ラクウル）は同日システムメンテナンス中で確認できなかったため、{RAKUURU_LAST_DATE}の値を掲載しています。
+            {SWITCH2_SURVEY_DATE}に、各店の公式買取ページに掲載されているSwitch 2本体の買取価格を確認しました。新品の価格のみを掲載する買取ルデヤが最も高く、日本語・国内専用版は51,500円（希望小売価格59,980円の85.9%）でした。新品未開封に限定する記載のない店舗の公開価格は35,000〜37,000円で、最も高いのは駿河屋の37,000円です。店ごとに対象となる状態が異なるため、同じ条件の価格同士でご比較ください。ソフマップ（ラクウル）は同日システムメンテナンス中で確認できなかったため、{RAKUURU_DATE}に再取得した値を掲載しています（日本語・国内専用版と同梱セット3種は10月20日と同じ36,000円）。
           </p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
@@ -184,7 +186,7 @@ export default function Switch2Page() {
                   <th>モデル（型番）</th>
                   <th>買取ルデヤ<br /><span className="text-xs font-normal">新品</span></th>
                   <th>駿河屋</th>
-                  <th>ソフマップ<br /><span className="text-xs font-normal">ラクウル・{RAKUURU_LAST_DATE}の値</span></th>
+                  <th>ソフマップ<br /><span className="text-xs font-normal">ラクウル・{RAKUURU_DATE}</span></th>
                   <th>ふるいち</th>
                   <th>ブックオフ<br /><span className="text-xs font-normal">店頭</span></th>
                 </tr>
@@ -203,7 +205,7 @@ export default function Switch2Page() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>「—」は確認日の公開ページに価格の掲載がないことを示します（ソフマップ（ラクウル）列は{RAKUURU_LAST_DATE}時点）。「未確認」は、{RAKUURU_LAST_DATE}の調査対象に含めていなかったモデルです。ゼルダの伝説 40周年 アニバーサリーエディションは、前回（{RAKUURU_LAST_DATE}）はルデヤ60,000円（申込一時停止中）、駿河屋「メールにてお見積」の表示でした。選べるソフトセットは駿河屋の掲載上の発売日が2026年11月12日で、ルデヤは「引換券無し、引換券削り済み買取不可」の条件付きです。モンスターハンターワイルズ セット（BEE-S-KB6PF）は、ルデヤが「価格未掲載」、駿河屋が「メールにてお見積」の表示でした。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>「—」は確認日の公開ページに価格の掲載がないことを示します（ソフマップ（ラクウル）列は{RAKUURU_DATE}時点。ラクウルの「スイッチ2 本体」カテゴリの掲載は5モデルで、多言語版・選べるソフトセットは掲載がありませんでした）。ラクウルのゼルダの伝説 40周年 アニバーサリーエディション（45,000円）は、前回は調査対象に含めておらず、今回初めて掲載しました。ラクウルの期間限定キャンペーン「冬に備えよう！買取祭！」のPS4ソフトのページには、Switch 2本体3モデルを例に「査定金額より1,000円増額」とする表示がありますが、本体についての対象条件・期間の説明が見当たらないため、表の価格には含めていません。ゼルダの伝説 40周年 アニバーサリーエディションは、前回（{PREV_SURVEY_DATE}）はルデヤ60,000円（申込一時停止中）、駿河屋「メールにてお見積」の表示でした。選べるソフトセットは駿河屋の掲載上の発売日が2026年11月12日で、ルデヤは「引換券無し、引換券削り済み買取不可」の条件付きです。モンスターハンターワイルズ セット（BEE-S-KB6PF）は、ルデヤが「価格未掲載」、駿河屋が「メールにてお見積」の表示でした。</p>
           <div className="overflow-x-auto mt-6">
             <table className="comparison-table">
               <thead>
@@ -229,7 +231,7 @@ export default function Switch2Page() {
           <div className="glass-card p-6 mt-6">
             <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>実測から分かること</h3>
             <ul className="space-y-3 text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>新品のみの価格と状態区分のない価格で1.45万円以上の差：</span>日本語・国内専用版は、ルデヤの新品51,500円に対し、新品未開封に限定する記載のない店舗の最高値は駿河屋の37,000円でした。前回（{RAKUURU_LAST_DATE}）の差は1.1万円（49,000円と38,000円）で、26日間で差が広がっています。</li>
+              <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>新品のみの価格と状態区分のない価格で1.45万円以上の差：</span>日本語・国内専用版は、ルデヤの新品51,500円に対し、新品未開封に限定する記載のない店舗の最高値は駿河屋の37,000円でした。前回（{PREV_SURVEY_DATE}）の差は1.1万円（49,000円と38,000円）で、26日間で差が広がっています。</li>
               <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>多言語版は国内版より高値：</span>多言語対応版はルデヤ83,200円（希望小売価格69,980円の118.9%）、駿河屋60,000円で、いずれも国内版を2万円以上上回りました。多言語対応版はNintendo Storeのみの販売です。</li>
               <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>セットの上乗せは新品で大きい：</span>ルデヤではマリオカート ワールド セットが58,500円と本体単体より7,000円高い一方、駿河屋・ふるいちでは本体単体とセットの差が0〜2,000円でした。</li>
               <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>前回からの変化（ルデヤ）：</span>日本語・国内専用版49,000円→51,500円、多言語版82,600円→83,200円、Z-A セット56,000円→56,200円に上がり、マリオカート ワールド セット（58,500円）とスプラトゥーン レイダース セット（51,000円）は据え置きでした。駿河屋は日本語・国内専用版が38,000円→37,000円に下がっています。</li>
@@ -247,7 +249,7 @@ export default function Switch2Page() {
                 マリオカート ワールドセットとPokémon LEGENDS Z-A Editionは生産終了しています。新品未開封の買取では、ルデヤがマリオカート ワールド セット58,500円・Z-A セット56,200円と、本体単体（51,500円）より高い価格を提示しています。
               </li>
             </ul>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂 価格改定リリース（2026年5月8日）、<a href="https://www.nintendo.com/jp/hardware/switch2/lineup/index.html" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>任天堂公式 商品ラインナップ</a>（2026年10月20日確認）、各店の公式買取ページ（{SWITCH2_SURVEY_DATE}実測。ソフマップ（ラクウル）のみ{RAKUURU_LAST_DATE}）</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：任天堂 価格改定リリース（2026年5月8日）、<a href="https://www.nintendo.com/jp/hardware/switch2/lineup/index.html" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>任天堂公式 商品ラインナップ</a>（2026年10月20日確認）、各店の公式買取ページ（{SWITCH2_SURVEY_DATE}実測。ソフマップ（ラクウル）のみ{RAKUURU_DATE}）</p>
           </div>
         </section>
 
@@ -309,7 +311,7 @@ export default function Switch2Page() {
             </table>
           </div>
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-            確認日：{SWITCH2_SURVEY_DATE}。ソフマップ（ラクウル）は同日システムメンテナンス中のため条件を確認できませんでした。シュリンク（外装フィルム）や保証書の有無を価格の条件とする記載は、5店の公開ページでは確認できませんでした。売却前に各店へお問い合わせいただくことをおすすめします。
+            確認日：{SWITCH2_SURVEY_DATE}（ソフマップ（ラクウル）は同日システムメンテナンス中だったため{RAKUURU_DATE}）。シュリンク（外装フィルム）や保証書の有無を価格の条件とする記載は、5店の公開ページでは確認できませんでした。売却前に各店へお問い合わせいただくことをおすすめします。
           </p>
         </section>
 

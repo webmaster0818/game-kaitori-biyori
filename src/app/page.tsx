@@ -178,10 +178,31 @@ const faqs = [
   { q: '未成年でも買取サービスを利用できますか？', a: '多くの買取サービスでは、18歳未満の方は保護者の同意が必要です。サービスによっては保護者同伴での利用が求められる場合もあります。事前にご確認ください。' },
 ];
 
+// 選び方の基準「キャンセル時の返送料」（各社の詳細レビューで公式サイトを確認した内容。確認日は各行に記載）
+const returnFeeRows = [
+  { name: 'ゲーム王国', fee: '無料（ゲーム王国負担）', cond: '一部の商品だけ返送してもらうことも可能。送料無料は佐川急便の集荷に限る', date: '2026年10月18日', path: '/review/game-oukoku/' },
+  { name: '買取王子', fee: '無料（買取王子負担）', cond: '返却は送った商品すべてが対象（一部返却は不可）。自動承認を選ぶと返却不可', date: '2026年11月15日', path: '/review/kaitori-ouji/' },
+  { name: 'ソフマップ（ラクウル）', fee: '原則無料（ソフマップ負担）', cond: 'まとめて査定された物品は全品返送。買取対象外品を送った場合などは送料実費・手間賃を着払いで請求される場合あり', date: '2026年11月16日', path: '/review/sofmap/' },
+  { name: 'ゲオ宅配買取', fee: '無料（ゲオ負担）', cond: '商品ごとに承認・返品を選択可能。買取対象外品の返送などは利用者負担', date: '2026年7月28日', path: '/review/geo/' },
+  { name: 'カイトリワールド', fee: '条件付きで無料（1点から）', cond: '全品返送や、返送する品以外の買取金額が5,000円未満の場合などは着払い。自動承認を選ぶと返送不可', date: '2026年6月12日', path: '/review/kaitori-world/' },
+  { name: '駿河屋', fee: '利用者負担', cond: '一部の商品だけのキャンセルは、あんしん買取で見積もりを受けた商品を自動承諾なしで申し込んだ場合に限る', date: '2026年11月15日', path: '/review/surugaya/' },
+  { name: 'ブックオフ（宅配）', fee: '利用者負担', cond: '「かんたん承認」コースは返却不可。返送を希望する場合は「あんしん返送コース」を選択', date: '2026年6月18日', path: '/review/bookoff/' },
+  { name: 'ネットオフ', fee: '利用者負担（関東800円〜北海道1,200円・沖縄2,400円）', cond: '「自動承認」を選ぶと返送不可', date: '2026年6月18日', path: '/review/netoff/' },
+  { name: 'ホビーコレクト', fee: '利用者負担（着払い）', cond: '買取不可品も送料利用者負担で返送', date: '2026年11月15日', path: '/review/hobby-collect/' },
+  { name: 'ブックサプライ', fee: '利用者負担（佐川急便の着払い）', cond: '申込時に「自動承認不可」を選んだ場合のみ返送可能で、全品返送のみ。値段が付かない品は返送されず廃棄', date: '2026年11月16日', path: '/review/booksupply/' },
+];
+
+const chooseCriteria = [
+  { label: '1. 売る物に合った買取方法か', body: '当日中に現金が必要なら店頭買取、量が多い・近くに店舗がない場合は宅配買取、大型品や大量のまとめ売りは出張買取が向いています。出張買取は対応エリアが限られます（例：買取ウリエルのゲームの出張買取は東京・神奈川・千葉・埼玉、2026年10月21日公式確認）。' },
+  { label: '2. 買取価格を事前に公開しているか', body: '買取価格表を公開している店舗は、送る前に金額の目安を比較できます。当サイトでは各社公式の買取価格を定期的に実測し、店舗ごとの価格差を買取価格インデックスに掲載しています。同じタイトルでも店舗により価格が異なるため、最高値の店舗を確認してから申し込むことをおすすめします。' },
+  { label: '3. 査定額に納得できないときの返送料', body: '宅配買取では、キャンセル時の返送料を店舗が負担するか、利用者の負担になるかが店舗ごとに異なります。少額品や査定額の見通しが立たない品は、返送料が無料の店舗を選ぶと費用の負担を避けられます（下表）。自動承認（査定後すぐに買取成立）を選ぶと返却できない店舗が多い点にもご注意ください。' },
+  { label: '4. 状態（箱なし・傷・ジャンク）への対応', body: '箱・説明書の欠品や動作不良の扱いは店舗ごとに異なります。減額の基準を公開している店舗と、箱なし・ジャンク品の買取を案内している店舗は、状態別の許容度マップで比較できます。' },
+];
+
 export default function HomePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-11-13", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム買取おすすめはどこ？比較ランキング【2026年】公式買取価格の実測で解説", "datePublished": "2026-03-15", "dateModified": "2026-11-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       {/* Hero Section */}
       {/* 2026-10-07 デザイン改修: 文言・リンクは一字も変えず、見せ方だけ差し替えている。
           背景はゲーム機の写真を暗く敷き、左から黒のグラデーションを重ねて文字側の可読性を確保する。 */}
@@ -292,6 +313,50 @@ export default function HomePage() {
               ※本体は付属品の欠品・状態による減額幅が大きいため、実際の査定額は変動します。モデル別の詳細は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch 2買取ガイド</Link>と<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス</Link>をご覧ください。
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* 選び方（2026-11-16 追加：競合の比較記事で一般的な「選び方」を、確認日つきの公式情報で示す） */}
+      <section className="py-12 bg-white border-b border-[var(--color-border)]" id="how-to-choose">
+        <div className="max-w-5xl mx-auto px-4">
+          <h2 className="section-heading mb-4">
+            <span className="section-heading-bar" />ゲーム買取おすすめ業者の選び方：比較する4つの基準
+          </h2>
+          <p className="text-sm mb-5" style={{ color: 'var(--color-text-light)', lineHeight: '1.8' }}>
+            ゲーム買取のおすすめは、売る物・急ぎ度・量によって変わります。当サイトでは、次の4つの基準で買取サービスを比較することをおすすめしています。いずれも各社の公式サイトで確認できる項目で、確認日を記載しています。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            {chooseCriteria.map((c) => (
+              <div key={c.label} className="glass-card p-5">
+                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>{c.label}</h3>
+                <p className="text-sm" style={{ color: 'var(--color-text-light)', lineHeight: '1.8' }}>{c.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm mb-5" style={{ color: 'var(--color-text-light)' }}>
+            関連ページ：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>買取価格インデックス（公式価格の実測）</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>状態別の許容度マップ</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>メルカリと買取の手取り比較</Link>
+          </p>
+          <h3 className="font-bold text-base mb-3" style={{ color: 'var(--color-deep-blue)' }}>宅配買取10社のキャンセル時の返送料（各社公式サイトで確認）</h3>
+          <div className="overflow-x-auto">
+            <table className="comparison-table text-sm">
+              <thead>
+                <tr><th>サービス</th><th>キャンセル時の返送料</th><th>主な条件</th><th>確認日</th></tr>
+              </thead>
+              <tbody>
+                {returnFeeRows.map((r) => (
+                  <tr key={r.name}>
+                    <td className="font-bold text-sm"><Link href={r.path} style={{ color: 'var(--color-electric-green)' }}>{r.name}</Link></td>
+                    <td className="text-sm">{r.fee}</td>
+                    <td className="text-sm">{r.cond}</td>
+                    <td className="text-sm">{r.date}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+            ※各サービスの詳細レビューで、公式サイト（FAQ・利用規約・買取案内）を確認した内容です。確認日が古い行は、その後に条件が変更されている可能性があります。ご利用前に、公式サイトにて最新の条件をご確認ください。返送料が無料の店舗でも、買取対象外の品を送った場合などは利用者の負担となる場合があります。
+          </p>
         </div>
       </section>
 
@@ -656,9 +721,9 @@ export default function HomePage() {
               {[
                 { label: '買取価格', desc: '実際の査定額の高さ' },
                 { label: '対応スピード', desc: '査定・入金までの速さ' },
-                { label: '口コミ評価', desc: 'ユーザーの満足度' },
+                { label: '口コミ評価', desc: '出典と確認日のある評価のみ参照' },
                 { label: '取扱品目', desc: '対応ジャンルの広さ' },
-                { label: '利用しやすさ', desc: '申し込み・梱包の手軽さ' },
+                { label: '利用しやすさ', desc: '申し込み・梱包の手軽さ、返送料' },
                 { label: '信頼性', desc: '実績・運営体制の安定性' },
               ].map((c) => (
                 <div key={c.label} className="text-center p-3 rounded-lg" style={{ background: 'var(--color-bg-alt)', border: '1px solid var(--color-border-light)' }}>
@@ -668,7 +733,7 @@ export default function HomePage() {
               ))}
             </div>
             <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
-              最終更新日: 2026年4月21日 ｜ 掲載情報は各サービスの公式サイトを参照しています。
+              最終更新日: 2026年11月16日 ｜ 掲載情報は各サービスの公式サイトを参照し、確認日を記載しています。口コミ・評価は、出典（サイト名）と確認日を明記できるものだけを各サービスの詳細レビューに掲載しています。
             </p>
           </div>
         </div>
