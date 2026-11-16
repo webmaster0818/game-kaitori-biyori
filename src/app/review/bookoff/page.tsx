@@ -4,13 +4,13 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ブックオフのゲーム買取は安い？評判・口コミ｜高価買取リストと減額の実態を検証',
+  title: 'ブックオフのゲーム買取はひどい・安い？評判・口コミ｜値段がつかない条件と減額の実態を検証',
   description:
-    'ブックオフのゲーム買取は安いのか、国内721店舗（2026年10月末）の大手を公式仕様と口コミで検証しています。店頭での即日現金化や本・DVDのまとめ売りに強みがある一方、人気作以外やレトロゲームは査定が伸びにくい傾向があります。宅配の送料・返送料・申込条件も掲載しています。',
+    'ブックオフのゲーム買取は安いのか、国内721店舗（2026年10月末）の大手を公式仕様と口コミで検証しています。宅配買取で値段がつかないゲーム、状態による減額、「かんたん承認」と「あんしん返送」の違い、送料・返送料を公式規約にもとづいてご説明します。',
   keywords: ['ブックオフ 買取', 'ブックオフ ゲーム買取 口コミ', 'ブックオフ 査定', 'ゲーム 店頭買取', 'ブックオフ 評判'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ブックオフのゲーム買取は安い？評判・口コミ｜減額の実態を検証',
+    title: 'ブックオフのゲーム買取はひどい・安い？評判・口コミ｜値段がつかない条件と減額の実態を検証',
     description: 'ブックオフのゲーム買取をレビューしています。国内721店舗（2026年10月末）の店頭買取と宅配買取について解説します。',
     type: 'article',
     locale: 'ja_JP',
@@ -36,7 +36,7 @@ const faqs = [
   { q: 'ブックオフの店頭買取に必要なものは？', a: '本人確認書類（運転免許証、健康保険証、パスポートなど）が必要です。18歳未満の方は保護者の同意書も必要となります。売りたい商品と一緒にお持ちください。' },
   { q: '宅配買取の送料はかかりますか？', a: '集荷の送料・振込手数料はすべて無料です。申込には「書籍・コミック10点以上」「ゲーム・DVD・CDのいずれか3点以上」「買取価格1,000円以上のソフト1点」のいずれかの条件があります（ブックオフ宅配買取公式・2026年11月13日確認）。' },
   { q: '査定額はどのくらいで出ますか？', a: '店頭買取の査定時間は、店舗や混雑状況によって異なります（公式に目安の記載はありません）。宅配買取は、お品物の到着から1週間で振込と公式に案内されています（2026年11月13日確認）。' },
-  { q: 'レトロゲームも買い取ってもらえますか？', a: '買取対象ではありますが、店舗スタッフのレトロゲームに関する知識にばらつきがあるため、希少価値のあるタイトルが適正に評価されないことがあります。レトロゲームは専門店の利用もご検討ください。' },
+  { q: 'レトロゲームも買い取ってもらえますか？', a: 'ブックオフ宅配買取では、ファミコン・スーパーファミコン・NINTENDO64のソフトも「お送りいただけるもの」に含まれています。ただし、ゲーム機本体は2001年以前に発売された機種が原則として対象外です（一部機種を除く。2026年11月16日確認）。希少タイトルの評価は買取店によって異なるため、レトロゲーム専門店の掲載価格とも比較することをおすすめします。' },
   { q: 'ゲーム以外のものも一緒に売れますか？', a: 'はい、本・CD・DVD・ブルーレイ・スマートフォン・タブレットなど幅広い商品を買い取っています。まとめて売ることで手間が省けます。' },
   { q: '買取価格を事前に調べることはできますか？', a: 'ブックオフ公式アプリやWebサイトで一部商品の買取参考価格を確認できます。ただし、実際の査定額は商品の状態によって変動しますのであくまで参考値としてお考えください。' },
 ];
@@ -44,7 +44,7 @@ const faqs = [
 export default function BookoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックオフの口コミ・評判｜全国最大手リサイクルショップのゲーム買取", "datePublished": "2026-03-15", "dateModified": "2026-11-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ブックオフ' }]} />
 
       {/* Hero */}
@@ -59,6 +59,7 @@ export default function BookoffReviewPage() {
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフは国内721店舗（2026年10月末）を展開する大手のリユースチェーンです。店頭に持ち込めばその日のうちに現金化でき、本やDVDと一緒にまとめ売りも可能です。宅配買取は送料・手数料が無料で、利便性の高さが強みのサービスです。
           </p>
+          <p className="text-xs mb-4" style={{ color: '#94A3B8' }}>更新日：2026年11月16日</p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.bookoff.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
               公式サイトを見る
@@ -76,12 +77,44 @@ export default function BookoffReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-electric-green)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>近隣店舗での即日売却・まとめ売りに強みがある最大手（査定額は相場により変動）</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ブックオフは全国700店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります。査定額が気になる方は、売却前に当サイトが<strong>定期的に実測している買取価格DB</strong>で現在の相場と他店の価格を確認してから判断することをおすすめします。
+              ブックオフは全国700店舗超で<strong>店頭に持ち込めば即日現金化</strong>でき、本・CD・DVDもまとめて売れる手軽さが最大の強みです（宅配は集荷・振込手数料とも無料）。一方、口コミでは「査定額の低さ」への不満が最多で、<strong>人気作以外・状態の悪い品・レトロや希少タイトルは値が伸びにくい</strong>傾向があります（ヒカカク!の口コミページ、2026年6月18日閲覧）。動作不良・バーコードなし・国内版以外のゲームは、宅配買取では公式基準により値段がつきません（下記参照）。査定額が気になる方は、売却前に当サイトが<strong>定期的に実測している買取価格DB</strong>で現在の相場と他店の価格を確認してから判断することをおすすめします。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>ゲーム買取価格DB（実測）で最も高い買取店を確認する</Link>／<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>最新の買取価格インデックスを見る</Link>
             </p>
           </div>
+        </section>
+
+        {/* 「ひどい」と感じる原因になりやすい公式条件 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ゲームに値段がつかない・減額される条件（ブックオフ宅配買取の公式基準）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            「思ったより安い」「値段がつかなかった」という結果の多くは、公式に定められた買取基準と承認コースの仕組みで説明できます。申込前に、以下の4点をご確認ください（ブックオフ宅配買取公式・宅配買取サービス買取規約、2026年11月16日確認）。
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>1. 値段がつかないゲーム</h3>
+              <ul className="space-y-1 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <li>・動作不良や中身が違うもの、非売品・レンタル落ち・コピー品</li>
+                <li>・ソフト：バーコードがないもの、PCゲームソフト、Wii Fit</li>
+                <li>・本体・周辺機器：電源が入らないもの、シリアルナンバーがないもの、2001年以前発売のゲーム機（一部機種を除く）、トルネ</li>
+                <li>・国内版でないもの</li>
+              </ul>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>2. 状態による減額</h3>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取規約第5条で「品物の状態により減額が発生する場合がございます」と定められています。金額の目安は、申込日に買取価格検索で表示された金額で確認するよう案内されています。申込前に検索画面の金額を控えておくと、査定結果と比べやすくなります。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>3. 店舗と宅配で価格が異なる</h3>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>買取価格検索に表示される価格は宅配買取の価格で、店舗での買取価格とは異なると明記されています。公式の「ゲーム高価買取情報」に載る価格は店舗での価格である旨も公式に記載されています（2026年6月18日確認）。どちらの価格を見ているかをご確認ください。</p>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>4. 承認コースで返却の可否が変わる</h3>
+              <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>「かんたん承認」は査定が終わった時点で売買が成立し、キャンセル・返却はできません。値段がつかなかった品物は資源リサイクルとして無料で引き取られます。「あんしん返送」は承認しなければ返却されますが、返却の送料はお客様負担です。また、査定終了のメールから3日以内に回答がない場合は承認したものとして扱われます（規約第6条・第9条）。</p>
+            </div>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ宅配買取「音楽・映像・ゲーム」の「お送りいただけないもの」「よくある質問」（sell.bookoff.co.jp/online/category/soft）、宅配買取サービス買取規約 第5条・第6条・第9条（sell.bookoff.co.jp/online/policies/terms）、買取価格検索の注記（sell.bookoff.co.jp/online/price/keyword）。いずれも2026年11月16日確認。査定額に納得できない可能性がある場合は、「あんしん返送」を選んで申し込むことをおすすめします。</p>
         </section>
 
         {/* Features */}
@@ -114,10 +147,10 @@ export default function BookoffReviewPage() {
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>デメリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>- 人気タイトル以外は査定額が低めになる傾向</li>
-                <li>- レトロゲームの知識・査定にスタッフ間でばらつき</li>
+                <li>- 動作不良・バーコードなし・国内版以外のゲームは宅配買取で値段がつかない（公式基準）</li>
+                <li>- 宅配買取では2001年以前発売のゲーム機本体は原則対象外（一部機種を除く）</li>
+                <li>- 「かんたん承認」を選ぶと査定後のキャンセル・返却ができない</li>
                 <li>- 混雑時は店頭査定に時間がかかる</li>
-                <li>- 希少品の価値が見落とされることがある</li>
               </ul>
             </div>
           </div>
@@ -173,7 +206,7 @@ export default function BookoffReviewPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ宅配買取公式（sell.bookoff.co.jp）・規制対応開示・サポートFAQ（2026年6月18日閲覧）。※公式の「ゲーム高価買取情報」に載る価格は<strong>店舗での買取価格</strong>で、宅配買取の価格とは異なる旨が公式に明記されています。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ブックオフ宅配買取公式（sell.bookoff.co.jp）・規制対応開示・サポートFAQ（2026年6月18日閲覧。送料・1申込19箱・申込点数の条件・入金時期・返送の条件・梱包資材・古物商許可番号は2026年11月16日に再確認）。※公式の「ゲーム高価買取情報」に載る価格は<strong>店舗での買取価格</strong>で、宅配買取の価格とは異なる旨が公式に明記されています。</p>
         </section>
 
         {/* 口コミ傾向（出典付き） */}
