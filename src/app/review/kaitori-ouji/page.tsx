@@ -3,48 +3,81 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
+const PAGE_TITLE = '買取王子はやばい？評判・口コミと運営会社・古物商許可を公式で確認【2026年11月】';
+
 export const metadata: Metadata = {
-  title: '買取王子の評判・口コミはひどい？手数料無料の実態・運営会社を検証',
+  title: PAGE_TITLE,
   description:
-    '買取王子の評判・口コミが「ひどい」と言われる理由を検証しています。運営は株式会社ティーバイティー（愛知県公安委員会 古物商許可 第542520A52400号）です。宅配買取中心で、査定料・キャンセル料・返送料は無料、送料も点数の条件なしで無料という手数料体系を公式情報（2026年11月15日一部再確認）で解説します。',
-  keywords: ['買取王子', '買取王子 評判', '買取王子 ひどい', '買取王子 口コミ', '買取王子 ゲーム'],
+    '買取王子はやばいのかを、運営会社（株式会社ティーバイティー・1989年創立）、古物商許可番号、送料・返送料・入金日数・18歳未満の扱いなど公式の条件（2026年11月17日確認）とヒカカク566件の星分布で確認しています。',
+  keywords: ['買取王子', '買取王子 やばい', '買取王子 評判', '買取王子 ひどい', '買取王子 口コミ', '買取王子 ゲーム'],
   openGraph: {
     images: ['/og.png'],
-    title: '買取王子の評判・口コミはひどい？手数料無料の実態を検証',
-    description: '買取王子の評判と「ひどい」と言われる理由を、公式情報にもとづいて検証しています。手数料無料の宅配買取の実態について解説します。',
+    title: PAGE_TITLE,
+    description: '買取王子の運営会社・古物商許可・ゲーム買取の条件を公式で確認し、ヒカカクの星分布とあわせて「やばい」と言われる理由を整理しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
+const CHECKED = '2026年11月17日';
+
+// 1画面目の結論ボックス（すべて公式で 2026-11-17 に確認）
+const facts: { label: string; value: string; src: string }[] = [
+  { label: '運営会社', value: '株式会社ティーバイティー（代表取締役社長 片桐 拓也）', src: '会社概要' },
+  { label: '所在地・創立', value: '愛知県豊明市間米町敷田1225-12／1989年11月創立', src: '会社概要' },
+  { label: '古物商許可', value: '愛知県公安委員会 第542520A52400号', src: '会社概要' },
+  { label: '送料', value: '無料（箱数・査定金額を問わず買取王子が負担）。買取箱も無料', src: 'トップ' },
+  { label: '最低点数', value: '制限なし（1点から申込可）', src: 'トップ' },
+  { label: '手数料', value: '査定料・振込手数料は無料。その他の手数料も「原則無料」', src: 'FAQ・特商法表記' },
+  { label: '返送料（売らない場合）', value: '無料。ただし返却は全品のみで、自動承認を選んだ場合は返却不可', src: 'FAQ・特商法表記' },
+  { label: '値段がつかなかった品', value: '買取王子が引き取り。その品だけの返送は不可', src: 'FAQ' },
+  { label: '査定・入金', value: '査定は到着日から最短当日〜4日ほど（お知らせ欄）。銀行振込は手続きの翌日〜2営業日程度、Amazonギフトカードは原則即時', src: 'お知らせ・FAQ' },
+  { label: '18歳未満', value: '利用不可', src: 'FAQ' },
+  { label: '同一タイトル', value: '個人からは同じタイトルの3点以上は買取不可', src: '特商法表記' },
+];
+
+const sources = [
+  { name: '会社概要', url: 'https://www.kaitoriouji.jp/company/' },
+  { name: 'トップ', url: 'https://www.kaitoriouji.jp/' },
+  { name: 'よくあるご質問（FAQ）', url: 'https://www.kaitoriouji.jp/faq/' },
+  { name: '特定商取引法に基づく表記', url: 'https://www.kaitoriouji.jp/tokusho/' },
+  { name: 'お知らせ・査定状況', url: 'https://www.kaitoriouji.jp/notice/' },
+  { name: 'プラスアップキャンペーン', url: 'https://www.kaitoriouji.jp/plusup/' },
+];
+
+// ヒカカク 買取王子ページ（2026-11-17 取得）
+const HIKAKAKU = { url: 'https://hikakaku.com/company/7/', score: '2.04', stars: [63, 77, 39, 26, 361] as const, latest: '2024年9月22日' };
+const hkTotal = HIKAKAKU.stars.reduce((a, b) => a + b, 0);
+const pct = (n: number) => `${((n / hkTotal) * 100).toFixed(1)}%`;
+
 const features = [
-  { title: '手数料無料', description: '査定料・キャンセル料・返送料は無料です。買取が不成立の場合も返送料は買取王子が負担するため、査定に出す時点で費用が発生することはありません。売却しなかった場合に送料を請求される心配がない点が特徴です。' },
-  { title: '送料は点数条件なしで全国無料', description: '多くの宅配買取が「◯点以上・◯円以上で送料無料」といった条件を設けている中、買取王子は点数・金額の条件なしで全国送料無料です。少量の品物でも送料をかけずに送れます（公式サービスページに明記）。' },
-  { title: '幅広いジャンルをまとめ売り', description: 'ゲーム機本体・ソフトに加え、本・DVD・家電・ブランド品など幅広い品目に対応しています。ジャンルを分けずに1回でまとめて送れるため、不用品の整理とあわせて利用しやすい点が特徴です。' },
-  { title: 'ゲームは宅配買取のみ（店頭なし）', description: 'ゲームの買取方式は宅配買取のみで、店頭持ち込みはありません。出張買取は2026年11月15日時点で公式の対象がピアノのみです（公式トップ「新しく出張買取を開始しました」）。自宅から発送するだけで手続きが完結する一方、その場で現金化したい場合は、出張買取に対応した他社（買取ウリエル等。ウリエルのゲーム買取は東京・神奈川・千葉・埼玉のみ）が適しています。' },
+  { title: '送料・査定料・返送料が無料', description: '送料は箱数や査定金額を問わず買取王子が負担し、買取箱も無料で届きます。査定額に納得できない場合の返送料も無料です。ただし返却は送った商品すべてが対象で、一部だけの返却はできません。' },
+  { title: '1点から申し込める', description: '申込点数の制限はなく、1点から利用できます。多くの宅配買取が設けている「◯点以上で送料無料」といった条件は、公式トップには記載されていません。' },
+  { title: 'ゲームと他ジャンルを同じ箱で送れる', description: 'ゲームのほか、本・DVD・家電・ブランド品など多くのジャンルに対応しています。古着は取扱いを終了しています（公式メニューに「※取扱い終了」と表示）。' },
+  { title: 'ゲームは宅配買取のみ', description: '店頭での買取窓口はなく、ゲームは宅配買取で受け付けています。公式トップに出張買取の案内がありますが、対象はピアノです。集荷は宅配業者が行い、スタッフがその場で査定する出張買取ではありません（公式FAQ）。' },
 ];
 
 const steps = [
-  { step: 1, title: 'Webで申込み・集荷依頼', description: '公式サイトから申し込み、宅配キット（段ボール）を無料で取り寄せるか、自分の箱で発送します。集荷依頼もWebで行えます。' },
-  { step: 2, title: '商品を詰めて発送', description: 'ゲームなど売りたい品を箱に詰めて発送します。送料は点数・金額の条件なしで全国無料です。本人確認書類の提出も忘れずに行ってください。' },
-  { step: 3, title: '査定・結果通知', description: '商品到着後に査定が行われ、結果が通知されます。査定料は無料です。' },
-  { step: 4, title: '承諾で入金／不成立でも無料返送', description: '査定額に納得した場合は入金に進みます。納得できない場合はキャンセルでき、返送料も買取王子の負担で無料です。ただし返却は送った商品すべてが対象で、一部だけの返却はできません。申込時に「査定後すぐにお支払い（自動承認）」を選んだ場合は返却できません（公式FAQ・2026年11月15日確認）。' },
+  { step: 1, title: 'Webで申込み・買取箱の依頼', description: '公式サイトから申し込みます。箱がない場合は、買取箱（段ボール）を無料で取り寄せられます。申込時に「査定結果を確認して承認」か「自動承認（すぐにお支払い）」を選びます。' },
+  { step: 2, title: '梱包して集荷を待つ', description: '佐川急便が自宅まで集荷に来ます（送り状の記入は不要）。最短で翌日午前中の集荷です。本人確認書類はマイページからのアップロードが推奨されており、コピーの同封も可能です。' },
+  { step: 3, title: '査定・結果の通知', description: '査定結果はメールで通知されます。2026年11月17日時点の公式お知らせ欄では、到着日から最短当日〜4日ほどで査定が完了していると案内されています。事前の見積もりは行っていません。' },
+  { step: 4, title: '承認で入金／キャンセルで返送', description: '承認すると入金に進みます。銀行振込は手続きの翌日〜2営業日程度、Amazonギフトカードは原則即時発行です。初回は本人確認のため銀行振込のみです。承認しない場合は全品が無料で返送されます。承認後のキャンセルはできません。' },
 ];
 
 const faqs = [
-  { q: '買取王子は「ひどい」「怪しい」という評判は本当ですか？', a: '運営元は株式会社ティーバイティー（愛知県公安委員会 古物商許可 第542520A52400号）で、公式サイトに会社概要・特定商取引法に基づく表記を掲載している正規の買取事業者です。「ひどい」と言われる背景には、宅配買取全般で生じやすい「フリマ相場より査定額が低い」「一括査定で個別金額が分かりにくい」といった不満があると考えられます。査定料・キャンセル料・返送料は無料のため、費用をかけずに査定額を確認したうえで判断できます。' },
-  { q: '査定に納得できなかったら費用はかかりますか？', a: 'かかりません。査定料・キャンセル料・返送料は無料で、買取が成立しなかった場合の返送料も買取王子が負担します。送料も点数・金額の条件なしで無料のため、査定に出す時点で費用は発生しません。' },
-  { q: '送料無料に条件はありますか？', a: '点数・金額の条件なしで全国送料無料です。「◯点以上」「◯円以上」といった条件を設ける宅配買取が多い中、買取王子は少量でも送料無料で送れる点に強みがあります（公式サービスページに記載）。' },
-  { q: 'ゲーム機やソフトも買い取ってもらえますか？', a: 'はい、ゲーム機本体・各種ソフトが買取対象です。本・DVD・家電・ブランド品などと一緒にまとめて送れるため、ゲーム以外の不用品もあわせて処分したい方に適しています。特定のタイトルをより高く売りたい場合は、当サイトが公式価格を実測している価格DBで各社を比較してから決めることをおすすめします。' },
-  { q: '店頭持ち込みや出張買取はできますか？', a: 'ゲームは宅配買取のみで、店頭持ち込みはありません。出張買取は2026年11月15日時点で公式の対象がピアノのみです。宅配業者が自宅へ集荷に来ますが、その場で査定する出張買取ではありません（公式FAQ）。その場で現金化したい場合は、出張買取に対応した他社をご検討ください。' },
-  { q: '入金はどのくらいで届きますか？', a: '査定金額の案内は商品到着から1週間程度で、銀行振込は手続きの翌日〜2営業日程度、Amazonギフトカードは原則即時発行です（公式トップ・FAQ、2026年11月15日確認）。振込手数料は無料です。' },
+  { q: '買取王子は「やばい」「怪しい」業者ですか？', a: '運営会社は1989年創立の株式会社ティーバイティー（愛知県豊明市）で、愛知県公安委員会の古物商許可（第542520A52400号）を公式の会社概要に掲載しています。送料・返送料・振込手数料は無料で、条件も公式FAQと特定商取引法に基づく表記に明記されています。一方、ヒカカクでは566件中★1が361件（63.8%）で、評価は低めです。当サイトでは、事業者としての実体は確認できる一方、査定額に不満を持つ利用者が多いサービスと判断しています。' },
+  { q: '査定に納得できなかったら費用はかかりますか？', a: 'かかりません。査定額に納得できない場合の返送料は無料です。ただし返却は送った商品すべてが対象で、一部だけの返却はできません。申込時に「自動承認（すぐにお支払い）」を選んだ場合は返却できません（公式FAQ・特定商取引法に基づく表記、2026年11月17日確認）。' },
+  { q: '送料無料に条件はありますか？', a: '公式トップでは、送料は箱数や査定金額を問わず買取王子が負担すると案内されています。申込点数の制限もなく、1点から利用できます（2026年11月17日確認）。' },
+  { q: '18歳未満でも利用できますか？', a: '利用できません。公式FAQに「18歳未満のお客様はご利用いただくことができません」と記載されています（2026年11月17日確認）。' },
+  { q: '同じゲームソフトを何本もまとめて売れますか？', a: '個人の場合、同じタイトルの3点以上は買取の対象外です。万引き品の売却を防ぐためと、特定商取引法に基づく表記に記載されています（2026年11月17日確認）。' },
+  { q: '入金はどのくらいで届きますか？', a: '銀行振込は手続きの翌日〜2営業日程度、Amazonギフトカードは原則即時発行です（公式FAQ）。初回は本人確認のため銀行振込のみです。査定は到着日から最短当日〜4日ほどで完了していると公式のお知らせ欄に掲載されています（2026年11月17日確認）。' },
 ];
 
 export default function KaitoriOujiReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "買取王子の評判・口コミはひどい？手数料無料の実態・運営会社を検証", "datePublished": "2026-07-09", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-07-09", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '買取王子' }]} />
 
@@ -52,10 +85,10 @@ export default function KaitoriOujiReviewPage() {
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            買取王子の評判・口コミはひどい？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>手数料無料の実態を検証</span>
+            買取王子はやばい？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>評判・口コミと運営会社・古物商許可を公式で確認</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            買取王子は、ゲーム機・ソフトから本・家電まで幅広い品目をまとめて売却できる宅配買取中心の買取サービスです。査定料・キャンセル料・返送料・送料がすべて無料で、費用をかけずに査定を受けられる点が最大の特徴です。当サイトでは、「ひどい」と言われる理由の実態と、適している方・注意点を公式情報にもとづいて整理しました。
+            買取王子は、愛知県の株式会社ティーバイティーが運営する宅配買取サービスです。当サイトでは、運営会社・古物商許可・ゲーム買取の条件を公式サイトで{CHECKED}に確認し、第三者サイト（ヒカカク）の評価とあわせて整理しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.kaitoriouji.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-2.5 px-6">
@@ -72,12 +105,79 @@ export default function KaitoriOujiReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>古物商許可を持つ正規事業者による、手数料無料の宅配買取サービス</h2>
-            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              買取王子は株式会社ティーバイティー（愛知県公安委員会 古物商許可 第542520A52400号）が運営する宅配買取中心の買取サービスです。査定料・キャンセル料・返送料がすべて無料で、送料も<strong>点数・金額の条件なしで全国無料</strong>です。買取不成立の場合も返送料は同社が負担するため、査定に出すことで費用が発生することはなく、「ひどい・怪しい」とされるほどの根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。一方で、<strong>宅配買取中心（店頭なし・出張買取はピアノのみ）</strong>のためその場で現金化できない点と、一括査定のため特定タイトルをより高く売りたい用途には適さない点にご注意ください。ゲーム・本・家電をまとめて処分したい方に適しています。
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>買取王子は古物商許可を持つ1989年創立の会社が運営しています。評価が低い理由は主に査定額です</h2>
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+              運営会社・所在地・古物商許可番号は公式の会社概要に掲載されており、送料・返送料・入金日数などの条件も公式FAQと特定商取引法に基づく表記に明記されています。当サイトでは、詐欺的な業者と判断する根拠は確認していません。一方で、第三者サイトのヒカカクでは{hkTotal}件中★1が{HIKAKAKU.stars[4]}件（{pct(HIKAKAKU.stars[4])}）を占め、総合評価は{HIKAKAKU.score}点です。事前の見積もりがなく、値段がつかなかった品は返送されないため、<strong>高く売りたいゲームは他社と比べてから送ること</strong>をおすすめします。
             </p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <tbody>
+                  {facts.map((f) => (
+                    <tr key={f.label} className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
+                      <th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>{f.label}</th>
+                      <td className="py-2">{f.value}<span className="text-xs ml-1">（公式{f.src}）</span></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              確認日：{CHECKED}。出典：{sources.map((s, i) => (
+                <span key={s.url}>{i > 0 && '／'}<a href={s.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>買取王子 {s.name}</a></span>
+              ))}
+            </p>
+            <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるソフトを実測データで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取の手取り額を比較する</Link>
+            </p>
+          </div>
+        </section>
+
+        {/* Third-party rating */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />第三者サイトの評価（ヒカカク）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
+              買取比較サイト「ヒカカク！」の買取王子のページに掲載されている星の件数を、当サイトで{CHECKED}に取得して集計しました。ゲーム以外（本・DVD・家電など）の利用者も含みます。
+            </p>
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <thead>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                  <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>評価</th>
+                  <th className="text-right py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>件数</th>
+                  <th className="text-right py-2" style={{ color: 'var(--color-deep-blue)' }}>割合</th>
+                </tr>
+              </thead>
+              <tbody>
+                {[5, 4, 3, 2, 1].map((s, i) => (
+                  <tr key={s} className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}>
+                    <td className="py-2 pr-4">★{s}</td>
+                    <td className="py-2 pr-4 text-right">{HIKAKAKU.stars[i]}件</td>
+                    <td className="py-2 text-right">{pct(HIKAKAKU.stars[i])}</td>
+                  </tr>
+                ))}
+                <tr><td className="py-2 pr-4 font-bold">合計</td><td className="py-2 pr-4 text-right font-bold">{hkTotal}件</td><td className="py-2 text-right">総合評価 {HIKAKAKU.score}点</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+              出典：<a href={HIKAKAKU.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ヒカカク！ 買取王子の買取情報・口コミ・評判</a>（{CHECKED}取得）。同ページの見出しは「2024年9月最新」で、最新の投稿日は{HIKAKAKU.latest}です。2024年10月以降の投稿は反映されていないため、現在の状況とは異なる可能性があります。みん評の買取王子のページは、当サイトの環境からは閲覧できなかったため掲載していません。
+            </p>
+          </div>
+        </section>
+
+        {/* Why "yabai" */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />「やばい」「ひどい」と言われる理由と公式の条件</h2>
+          <div className="glass-card p-6">
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
+              ヒカカク！の★1〜2は{HIKAKAKU.stars[3] + HIKAKAKU.stars[4]}件（{pct(HIKAKAKU.stars[3] + HIKAKAKU.stars[4])}）で、同ページの集計でも「悪い・ひどい・買取が安い」というクチコミの比率は68.4%と表示されています（{CHECKED}取得）。公式の条件のうち、査定額への不満につながりやすい点は次のとおりです。
+            </p>
+            <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1" style={{ color: 'var(--color-text-light)' }}>
+              <li>事前の見積もりは行っていません（公式FAQ「トラブル防止のため、事前のお見積り金額はご案内いたしておりません」）。</li>
+              <li>値段がつかなかった品は買取王子が引き取り、その品だけの返送は受け付けていません（公式FAQ）。</li>
+              <li>返却は全品のみで、一部だけ売って残りを返してもらうことはできません。自動承認を選んだ場合は返却自体ができません（公式FAQ・特定商取引法に基づく表記）。</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>
+              当サイトでは、買取王子は「送料をかけずに不要品をまとめて手放したい方」に向いており、「特定のゲームを1円でも高く売りたい方」には他社との比較が欠かせないと考えています。高く売りたいタイトルがある場合は、<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>当サイトが公式価格を実測しているページ</Link>で各社の買取価格を確認してから送ることをおすすめします。
             </p>
           </div>
         </section>
@@ -93,6 +193,9 @@ export default function KaitoriOujiReviewPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+            キャンペーン：{CHECKED}時点で、査定金額100円以上の商品の点数に応じて買取金額を上乗せする「プラスアップキャンペーン」（5〜9点で+500円〜200点以上で+60,000円）が公式サイトに掲載されています。終了日は掲載されていないため、申込前に<a href="https://www.kaitoriouji.jp/plusup/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>公式のキャンペーンページ</a>でご確認ください。
+          </p>
         </section>
 
         {/* Company Info */}
@@ -101,40 +204,16 @@ export default function KaitoriOujiReviewPage() {
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <tbody>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">株式会社ティーバイティー</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">愛知県公安委員会 第542520A52400号</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">宅配買取（ゲーム）。店頭なし。出張買取はピアノのみ（2026年11月15日確認）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>対応品目</th><td className="py-2">ゲーム機・ソフト、本、DVD、家電、ブランド品など幅広く対応</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>送料</th><td className="py-2">点数・金額の条件なしで全国無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>サービス提供者</th><td className="py-2">株式会社ティーバイティー</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>創立</th><td className="py-2">1989年11月</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>代表者</th><td className="py-2">代表取締役社長 片桐 拓也</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">〒470-1132 愛知県豊明市間米町敷田1225-12</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物許可証番号</th><td className="py-2">愛知県公安委員会 第542520A52400号</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>直営店</th><td className="py-2">東海地区で中古ゴルフクラブ10店舗・本DVD10店舗・中古ブランド2店舗の買取販売店を運営（特定商取引法に基づく表記）</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>支払方法</th><td className="py-2">買取王子ポイント・Amazonギフトカード・選べるe-GIFT・銀行振込（初回は銀行振込のみ）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取王子公式サイト（特定商取引法に基づく表記・サービス案内）2026年7月9日確認。買取方式・送料・返送・入金はトップとFAQで2026年11月15日に再確認</p>
-          </div>
-        </section>
-
-        {/* Fee 4-point */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />手数料の確認：出張費・査定料・キャンセル料・返送料の4項目</h2>
-          <div className="glass-card p-6 overflow-x-auto">
-            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
-              <tbody>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">－（ゲームは宅配買取のみ。出張買取はピアノのみ）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料（送料も点数・金額の条件なしで全国無料）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: '#047857' }}>返送料（売らない場合）</th><td className="py-2"><strong style={{ color: '#047857' }}>無料（買取不成立でも買取王子が負担）</strong>。査定に出す時点で費用が発生しない点が最大の強みです</td></tr>
-              </tbody>
-            </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取王子公式サイト（サービス案内・特定商取引法に基づく表記）2026年7月9日確認。返送料まで含めてすべて無料とする料金体系は、宅配買取の中でも多くありません。</p>
-          </div>
-        </section>
-
-        {/* Suspicious? */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />「ひどい・怪しい」と言われる理由の実態</h2>
-          <div className="glass-card p-6">
-            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              「買取王子 ひどい」と検索されるのは、宅配買取全般に共通する<strong>「フリマ相場より査定額が低く感じる」「一括査定でまとめて金額が出るため、1点ごとの評価が分かりにくい」</strong>といった不満が背景にあると考えられます（断定ではなく、確認項目にもとづく評価です）。買取王子自体は古物商許可を持つ正規事業者で、査定料・キャンセル料・返送料・送料がすべて無料のため、<strong>査定額に納得できない場合は、費用をかけずに返送を受けられます</strong>。高く売りたい特定のタイトルがある場合は、フリマアプリや専門店との比較、当サイトが定期的に実測している価格DBを併用することで、適した売却方法を選べます。
-            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://www.kaitoriouji.jp/company/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>買取王子 会社概要</a>・<a href="https://www.kaitoriouji.jp/tokusho/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>特定商取引法に基づく表記</a>・<a href="https://www.kaitoriouji.jp/faq/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>よくあるご質問</a>（{CHECKED}確認）</p>
           </div>
         </section>
 
@@ -152,6 +231,7 @@ export default function KaitoriOujiReviewPage() {
               </div>
             ))}
           </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：買取王子 公式トップ・よくあるご質問・お知らせ（{CHECKED}確認）</p>
         </section>
 
         {/* FAQ */}
@@ -172,7 +252,7 @@ export default function KaitoriOujiReviewPage() {
           <a href="https://www.kaitoriouji.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-3 px-8 inline-block">
             買取王子の公式サイトを見る
           </a>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※料金・条件は変更される場合があります。申込前に公式サイトで最新情報をご確認ください。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※料金・条件は変更される場合があります。ご利用前に、公式サイトにて最新情報をご確認ください。</p>
         </section>
 
         <AuthorBox />

@@ -1,193 +1,196 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
-import AuthorBox from '@/components/AuthorBox'
+import AuthorBox from '@/components/AuthorBox';
+
+const PAGE_TITLE = 'FF（ファイナルファンタジー）の買取価格【2026年11月】駿河屋・ゲオの実測比較｜シリーズ一覧';
+const CHECKED = '2026年11月17日';
 
 export const metadata: Metadata = {
-  title: 'ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】',
+  title: PAGE_TITLE,
   description:
-    'FF7リバース・FF16・FFピクセルリマスター等の買取相場を一覧表で掲載しています。プラットフォーム別の比較、限定版のプレミア情報、値崩れしにくいタイトルの特徴について解説します。',
-  keywords: ['FF ファイナルファンタジー 買取', 'FF7リバース 買取', 'FF16 買取相場', 'FF 売る'],
+    'FF7 リバース・FF16・FF7 リメイク インターグレード・FF10/10-2 HDなどFFシリーズの買取価格を、2026年11月17日に駿河屋とゲオ宅配買取の公式ページで確認して比較しました。比べられた15組のうち10組で駿河屋が高い結果です。',
+  keywords: ['ff 買取 価格', 'FF 買取', 'ファイナルファンタジー 買取', 'FF7リバース 買取', 'FF16 買取', 'FF7 リメイク 買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】',
-    description: 'FFシリーズ全タイトルの買取相場をプラットフォーム別に比較しています。',
+    title: PAGE_TITLE,
+    description: 'FFシリーズの買取価格を駿河屋とゲオ宅配買取の公式ページで2026年11月17日に確認し、タイトル・機種別に比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
-const priceData = [
-  { title: 'FINAL FANTASY VII REBIRTH', platform: 'PS5', price: '3,500〜5,000円', trend: '安定', note: '3部作の2作目。完結編発表前が売り時' },
-  { title: 'FINAL FANTASY XVI', platform: 'PS5', price: '2,000〜3,500円', trend: 'やや下降', note: 'PC版発売後にPS5版は若干下落' },
-  { title: 'FINAL FANTASY VII REMAKE INTERGRADE', platform: 'PS5', price: '1,500〜2,500円', trend: '安定', note: 'PS Plus配布の影響で下落後安定' },
-  { title: 'CRISIS CORE -FINAL FANTASY VII- REUNION', platform: 'PS5/Switch', price: '1,500〜2,800円', trend: '安定', note: 'Switch版はやや高値' },
-  { title: 'FINAL FANTASY ピクセルリマスター（1-6）', platform: 'PS4/Switch', price: '3,000〜4,500円', trend: '安定', note: 'コレクターズBOXは10,000円超も' },
-  { title: 'FINAL FANTASY XIV（パッケージ版）', platform: 'PS5/PS4', price: '500〜1,500円', trend: '下降', note: 'オンライン専用のため需要限定的' },
-  { title: 'FINAL FANTASY X/X-2 HD Remaster', platform: 'PS4/Switch', price: '1,000〜2,000円', trend: '安定', note: '名作リマスターとして安定した人気' },
-  { title: 'FINAL FANTASY XII THE ZODIAC AGE', platform: 'PS4/Switch', price: '800〜1,500円', trend: '安定', note: 'やり込み要素が評価され根強い人気' },
-  { title: 'FINAL FANTASY（SFC/FC オリジナル）', platform: 'SFC/FC', price: '500〜5,000円', trend: '上昇', note: '状態とタイトルで大幅に変動' },
-  { title: 'FINAL FANTASY VII（PS1 オリジナル）', platform: 'PS1', price: '300〜1,500円', trend: '安定', note: '流通量が多く安価。黒ラベルは高値' },
+// 2026-11-17 に各社公式の買取検索で当編集部が確認した値（国内版パッケージ）
+// 駿河屋: suruga-ya.jp/kaitori の検索結果に表示される買取価格（美品・未開封の上乗せ前）。'quote' は「メールにてお見積」表示
+// ゲオ: buy.geo-online.co.jp（ゲオの宅配買取）の検索結果に表示される「最高価格」。null は検索結果に表示なし
+type Price = number | 'quote' | null;
+type Row = { title: string; platform: string; surugaya: Price; geo: Price; note?: string };
+const compareRows: Row[] = [
+  { title: 'FF7 リバース', platform: 'PS5', surugaya: 1500, geo: 2000, note: 'ゲオは同名の商品が3件表示され、いずれも2,000円。駿河屋の新価格版は2,000円' },
+  { title: 'FF7 リバース', platform: 'Switch 2', surugaya: 3000, geo: 3500 },
+  { title: 'FF7 リバース デラックスエディション', platform: 'PS5', surugaya: 5100, geo: null },
+  { title: 'FF7 リバース コレクターズエディション', platform: 'PS5', surugaya: 16000, geo: null },
+  { title: 'FF16（FINAL FANTASY XVI）', platform: 'PS5', surugaya: 'quote', geo: 500 },
+  { title: 'FF16 DELUXE EDITION', platform: 'PS5', surugaya: 3100, geo: null },
+  { title: 'FF16 Collector’s Edition', platform: 'PS5', surugaya: 13000, geo: null },
+  { title: 'FF7 リメイク インターグレード', platform: 'PS5', surugaya: 2300, geo: 1300, note: '駿河屋の新価格版は「メールにてお見積」' },
+  { title: 'FF7 リメイク インターグレード', platform: 'Switch 2', surugaya: 2900, geo: 2000 },
+  { title: 'FF7 リメイク', platform: 'PS4', surugaya: 'quote', geo: 100 },
+  { title: 'クライシス コア -FF7- リユニオン', platform: 'Switch', surugaya: 2000, geo: 1000 },
+  { title: 'クライシス コア -FF7- リユニオン', platform: 'PS5', surugaya: 1300, geo: 500 },
+  { title: 'クライシス コア -FF7- リユニオン', platform: 'PS4', surugaya: 1100, geo: 100 },
+  { title: 'FF I-VI コレクション（2023年4月20日発売）', platform: 'Switch', surugaya: 11000, geo: null },
+  { title: 'FF I-VI コレクション メモリアルパッケージ', platform: 'Switch', surugaya: 5000, geo: 9500 },
+  { title: 'FF I-VI コレクション メモリアルパッケージ', platform: 'PS4', surugaya: 5000, geo: 5500 },
+  { title: 'FF I-VI ピクセルリマスター FF35周年限定特装版', platform: 'PS4', surugaya: 42000, geo: null },
+  { title: 'FF I-VI ピクセルリマスター FF35周年限定特装版', platform: 'Switch', surugaya: 27000, geo: null },
+  { title: 'FF10/10-2 HDリマスター', platform: 'Switch 2', surugaya: 4000, geo: 4000 },
+  { title: 'FF10/10-2 HDリマスター', platform: 'Switch', surugaya: 3500, geo: 3000 },
+  { title: 'FF10/10-2 HDリマスター', platform: 'PS4', surugaya: 2400, geo: 1500 },
+  { title: 'FF12 ザ ゾディアック エイジ', platform: 'Switch', surugaya: 2400, geo: 2000 },
+  { title: 'FF12 ザ ゾディアック エイジ', platform: 'PS4', surugaya: 1000, geo: 500 },
+  { title: 'FF12 ザ ゾディアック エイジ コレクターズエディション', platform: 'PS4', surugaya: 18000, geo: 4000 },
 ];
 
-const platformComparison = [
-  { title: 'FF7 REBIRTH', ps5: '3,500〜5,000円', ps4: '-', switch_: '-', note: 'PS5独占タイトル' },
-  { title: 'FF16', ps5: '2,000〜3,500円', ps4: '-', switch_: '-', note: 'PS5独占→PC版あり' },
-  { title: 'CRISIS CORE REUNION', ps5: '1,500〜2,500円', ps4: '1,200〜2,000円', switch_: '1,800〜2,800円', note: 'Switch版がやや高値' },
-  { title: 'FFピクセルリマスター', ps5: '-', ps4: '3,000〜4,000円', switch_: '3,500〜4,500円', note: 'Switch版が人気' },
-  { title: 'FF X/X-2 HD', ps5: '-', ps4: '1,000〜1,800円', switch_: '1,200〜2,000円', note: '携帯性でSwitch版優位' },
+// 旧作（駿河屋のみ。同日のゲオ宅配買取の検索結果には表示なし）
+const retroRows: Row[] = [
+  { title: 'FF7 インターナショナル', platform: 'PS', surugaya: 1000, geo: null },
+  { title: 'FF7 インターナショナル［PSone Books］', platform: 'PS', surugaya: 600, geo: null },
+  { title: 'FF7', platform: 'PS', surugaya: 'quote', geo: null },
+  { title: 'FF6', platform: 'SFC', surugaya: 'quote', geo: null },
 ];
 
-const premiumEditions = [
-  { edition: 'FF7 REBIRTH デラックスエディション', premium: '＋2,000〜4,000円', detail: 'SteelBook＋追加ミニゲーム。外箱完備品は大幅なプレミアが付く傾向。' },
-  { edition: 'FF16 デラックスエディション', premium: '＋1,500〜3,000円', detail: 'SteelBook＋クライヴのピンバッジ等。限定特典の有無で価格差あり。' },
-  { edition: 'FFピクセルリマスター コレクターズエディション', premium: '＋5,000〜10,000円', detail: 'ビニールレコード＋アートブック付き。コレクター需要が非常に高い。' },
-  { edition: 'FF7 REMAKE 1st CLASS EDITION', premium: '＋8,000〜15,000円', detail: 'クラウドフィギュア付き。フィギュアの状態が価格を大きく左右します。' },
-];
+function fmt(v: Price) {
+  if (v === 'quote') return '見積';
+  if (v === null) return '—';
+  return `${v.toLocaleString()}円`;
+}
+const pairs = compareRows.filter((r): r is Row & { surugaya: number; geo: number } => typeof r.surugaya === 'number' && typeof r.geo === 'number');
+const surugayaWins = pairs.filter((r) => r.surugaya > r.geo).length;
+const geoWins = pairs.filter((r) => r.geo > r.surugaya).length;
+const ties = pairs.filter((r) => r.geo === r.surugaya).length;
 
 const faqs = [
-  { q: 'FFシリーズで最も高く売れるタイトルは何ですか？', a: '現行タイトルではFF7 REBIRTHが3,500〜5,000円で最も高値です。限定版ではFFピクセルリマスター コレクターズエディションが10,000円超のプレミアがつくこともあります。レトロ作品では状態の良いSFC版FFシリーズが高額になるケースがあります。' },
-  { q: 'FF7リバースはいつ売るのが最適ですか？', a: 'FF7リメイクプロジェクト完結編の正式発表前が理想的です。完結編が発表されると「まず最新作を」という心理が働き、旧作の需要が一時的に下がる可能性があります。一方で、完結編の発売直前は予習需要で上がることもあるため、動向を注視することをおすすめします。' },
-  { q: 'PS5版とSwitch版、どちらが高く売れますか？', a: 'マルチプラットフォームのFFタイトルは、Switch版の方がやや高く売れる傾向があります。Switch版は携帯モードで遊べる利便性が評価されるためです。特にCRISIS CORE REUNIONやFFピクセルリマスターはSwitch版の方が500〜1,000円ほど高値です。' },
-  { q: 'FFの限定版は通常版よりどれくらい高く売れますか？', a: '限定版の内容によりますが、一般的に1,500〜15,000円のプレミアがつきます。特にフィギュアやアートブック付きの大型限定版は高額になりやすい傾向があります。ただし外箱や特典が欠品していると通常版と変わらない価格になることもあるため、保管状態が重要です。' },
-  { q: 'FFのオンラインタイトル（FF14）のパッケージ版は売れますか？', a: 'パッケージ版の売却は可能ですが、オンラインゲームのためソフト単体の需要は低く、500〜1,500円程度です。利用権コードが未使用であれば価値がありますが、使用済みの場合はほぼ値がつかないこともあります。' },
-  { q: 'レトロFF（SFC・PS1）の買取相場はどうですか？', a: 'SFC版FFシリーズは500〜5,000円と状態・タイトルで大きく変動します。特にFF6やFF5の箱・説明書付き完品は高額です。PS1版FF7は流通量が非常に多いため300〜1,500円と安価ですが、初期版の黒ラベル盤は希少価値があり高値がつきます。' },
+  { q: 'FFソフトの買取はどこが高いですか？', a: `${CHECKED}に駿河屋とゲオ宅配買取の公式ページで確認したところ、両社の価格を比べられた${pairs.length}組のうち、駿河屋が高いものが${surugayaWins}組、ゲオが高いものが${geoWins}組、同額が${ties}組でした。クライシス コア リユニオン、FF10/10-2 HD（Switch・PS4）、FF12 ザ ゾディアック エイジなどは駿河屋が高く、FF7 リバース（PS5・Switch 2）とFF I-VI コレクション メモリアルパッケージはゲオが高い結果です。駿河屋の宅配買取では通信買取手数料（660〜990円）が差し引かれるため、差が小さい場合は手取りでの比較をおすすめします。` },
+  { q: 'FF7 リバースの買取価格はいくらですか？', a: `${CHECKED}の確認では、PS5版は駿河屋1,500円（新価格版2,000円）、ゲオ宅配買取2,000円でした。Switch 2版は駿河屋3,000円、ゲオ宅配買取3,500円です。PS5のデラックスエディションは駿河屋で5,100円、コレクターズエディションは16,000円でした。` },
+  { q: 'FF16の買取価格はいくらですか？', a: `${CHECKED}の確認では、PS5の通常版は駿河屋が「メールにてお見積」で価格の表示がなく、ゲオ宅配買取は500円でした。駿河屋ではDELUXE EDITIONが3,100円、Collector’s Editionが13,000円です。` },
+  { q: '限定版は通常版よりどれくらい高く売れますか？', a: `${CHECKED}の駿河屋の価格では、FF7 リバースのコレクターズエディション（16,000円）は通常版（1,500円）の約10.7倍、FF12 ザ ゾディアック エイジのコレクターズエディション（18,000円）は通常版（1,000円）の18倍でした。FF I-VI ピクセルリマスター FF35周年限定特装版はPS4版42,000円、Switch版27,000円です。限定版の価格は特典がそろった状態が前提のため、付属品の有無をご確認ください。` },
+  { q: '同じタイトルでも機種によって価格は違いますか？', a: `違います。${CHECKED}の駿河屋の価格では、クライシス コア リユニオンはSwitch版2,000円・PS5版1,300円・PS4版1,100円、FF10/10-2 HDはSwitch 2版4,000円・Switch版3,500円・PS4版2,400円でした。今回確認したタイトルでは、Switch・Switch 2版がPS4・PS5版より高い傾向がありましたが、すべてのタイトルに当てはまるとは限りません。` },
+  { q: 'SFC・PS1の旧作FFは売れますか？', a: `${CHECKED}の駿河屋では、PSのFF7 インターナショナルが1,000円、PSone Books版が600円でした。PSのFF7とSFCのFF6は「メールにてお見積」で、価格の表示はありませんでした。同日のゲオ宅配買取の検索結果には、これらの旧作は表示されませんでした。` },
+];
+
+const sources = [
+  { label: '駿河屋公式の買取検索', url: 'https://www.suruga-ya.jp/kaitori/kaitori.html' },
+  { label: 'ゲオの買取（宅配買取）', url: 'https://buy.geo-online.co.jp/' },
 ];
 
 export default function FFPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ファイナルファンタジー(FF)シリーズの買取相場｜全タイトル一覧【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
-      <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'FFシリーズ買取相場' }]} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: PAGE_TITLE, datePublished: '2026-03-15', dateModified: '2026-11-17', author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'FFシリーズの買取価格' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>ソフト別買取ガイド</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            ファイナルファンタジー(FF)シリーズの買取相場
+            FF（ファイナルファンタジー）の買取価格【2026年11月】駿河屋・ゲオの実測比較
           </h1>
-          <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            FF7リバース・FF16・FFピクセルリマスターなど最新作から、SFC・PS1のレトロ作品まで、FFシリーズ全タイトルの買取相場を一覧表で掲載しています。プラットフォーム別の価格比較、限定版のプレミア情報、値崩れしにくいタイトルの特徴について解説します。
+          <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#CBD5E1' }}>
+            FFシリーズの主要タイトルについて、{CHECKED}に駿河屋とゲオ宅配買取の公式ページで買取価格を確認しました。両社の価格を比べられた{pairs.length}組のうち、<strong className="text-white">駿河屋が高いものが{surugayaWins}組、ゲオが高いものが{geoWins}組、同額が{ties}組</strong>です。FF7 リバースはゲオ、クライシス コア リユニオンやFF10/10-2 HDは駿河屋が高く、どちらが高いかはタイトルと機種によって異なります。
           </p>
-          <div className="flex flex-wrap gap-3">
-            <Link href="/" className="btn-primary py-2.5 px-6">
-              おすすめ買取サービスを見る
-            </Link>
-          </div>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新：2026年11月17日（価格の確認日：{CHECKED}）</p>
         </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* 買取相場表 */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />FFシリーズ買取相場一覧</h2>
+        {/* 比較表 */}
+        <section className="mb-12" id="compare">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />FFシリーズの買取価格 駿河屋・ゲオ比較【{CHECKED}・各社公式】</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
                 <tr>
                   <th>タイトル</th>
                   <th>機種</th>
-                  <th>買取相場</th>
-                  <th>傾向</th>
+                  <th>駿河屋</th>
+                  <th>ゲオ宅配買取</th>
                   <th>備考</th>
                 </tr>
               </thead>
               <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.title}>
+                {compareRows.map((row) => {
+                  const both = typeof row.surugaya === 'number' && typeof row.geo === 'number';
+                  const sTop = both && (row.surugaya as number) >= (row.geo as number);
+                  const gTop = both && (row.geo as number) >= (row.surugaya as number);
+                  return (
+                    <tr key={row.title + row.platform}>
+                      <td className="font-bold text-sm">{row.title}</td>
+                      <td className="text-sm whitespace-nowrap">{row.platform}</td>
+                      <td className="text-sm whitespace-nowrap" style={sTop ? { color: 'var(--color-electric-green)', fontWeight: 700 } : undefined}>{fmt(row.surugaya)}</td>
+                      <td className="text-sm whitespace-nowrap" style={gTop ? { color: 'var(--color-electric-green)', fontWeight: 700 } : undefined}>{fmt(row.geo)}</td>
+                      <td className="text-xs">{row.note ?? ''}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-3 leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+            出典：<a href={sources[0].url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{sources[0].label}</a>、<a href={sources[1].url} target="_blank" rel="noopener noreferrer nofollow" className="underline">{sources[1].label}</a>の検索結果（いずれも{CHECKED}閲覧、タイトル名で検索）。駿河屋は国内版の通常の買取価格（美品・未開封の上乗せ前）、「見積」は「メールにてお見積」の表示で価格の掲載がないものです。ゲオは宅配買取の検索結果に表示される「最高価格」で、「—」は検索結果に表示がなかったものです。ゲオの宅配買取の価格は店頭買取の価格とは同一ではないと定められています。緑字は両社を比べて高い方（同額は両方）を示します。
+          </p>
+        </section>
+
+        {/* 結果の読み取り */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />比較の結果について</h2>
+          <div className="glass-card p-5 space-y-3">
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              ゲオが高かったのは、FF7 リバース（PS5 2,000円・Switch 2 3,500円）とFF I-VI コレクション メモリアルパッケージ（Switch 9,500円・PS4 5,500円）の4組です。特にメモリアルパッケージのSwitch版は、ゲオ（9,500円）が駿河屋（5,000円）を4,500円上回りました。
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              駿河屋が高かったのは、FF7 リメイク インターグレード、クライシス コア リユニオン（3機種）、FF10/10-2 HD（Switch・PS4）、FF12 ザ ゾディアック エイジ（通常版2機種・コレクターズエディション）などです。FF12 ザ ゾディアック エイジ コレクターズエディション（PS4）は、駿河屋18,000円に対しゲオ4,000円でした。
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
+              FF16の通常版（PS5）とFF7 リメイク（PS4）は、駿河屋が「メールにてお見積」、ゲオがそれぞれ500円・100円でした。限定版の多くはゲオの検索結果に表示がなく、価格を確認できたのは駿河屋のみです。
+            </p>
+          </div>
+        </section>
+
+        {/* 旧作 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />PS・SFCの旧作FFの買取価格【{CHECKED}・駿河屋公式】</h2>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead>
+                <tr><th>タイトル</th><th>機種</th><th>駿河屋</th></tr>
+              </thead>
+              <tbody>
+                {retroRows.map((row) => (
+                  <tr key={row.title + row.platform}>
                     <td className="font-bold text-sm">{row.title}</td>
                     <td className="text-sm">{row.platform}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.price}</td>
-                    <td className="text-sm">{row.trend}</td>
-                    <td className="text-xs">{row.note}</td>
+                    <td className="text-sm whitespace-nowrap">{fmt(row.surugaya)}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>※ 2026年5月時点の参考価格。状態・付属品により変動します。</p>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の買取検索（{CHECKED}閲覧）。同日のゲオ宅配買取の検索結果には、これらの旧作は表示されませんでした。</p>
         </section>
 
-        {/* プラットフォーム別比較 */}
+        {/* 売る前の確認事項 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />プラットフォーム別 買取価格比較</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>タイトル</th>
-                  <th>PS5</th>
-                  <th>PS4</th>
-                  <th>Switch</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {platformComparison.map((row) => (
-                  <tr key={row.title}>
-                    <td className="font-bold text-sm">{row.title}</td>
-                    <td className="text-sm">{row.ps5}</td>
-                    <td className="text-sm">{row.ps4}</td>
-                    <td className="text-sm">{row.switch_}</td>
-                    <td className="text-xs">{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* 限定版プレミア */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />限定版・特別版のプレミア価格</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>エディション</th>
-                  <th>プレミア額</th>
-                  <th>詳細</th>
-                </tr>
-              </thead>
-              <tbody>
-                {premiumEditions.map((row) => (
-                  <tr key={row.edition}>
-                    <td className="font-bold text-sm">{row.edition}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.premium}</td>
-                    <td className="text-sm">{row.detail}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* 値崩れしにくいタイトル */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />値崩れしにくいFFタイトルの特徴</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />FFソフトを売る前の確認事項</h2>
           <div className="glass-card p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしにくいタイトル</h3>
-                <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・シリーズ最新作（発売1年以内）</li>
-                  <li>・リメイク作品（FF7R関連）</li>
-                  <li>・Switch独占 or Switch版マルチ</li>
-                  <li>・コレクターズエディション完品</li>
-                </ul>
-              </div>
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>値崩れしやすいタイトル</h3>
-                <ul className="text-sm space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・PS Plus/Game Passで配布されたタイトル</li>
-                  <li>・オンライン専用タイトル（FF14等）</li>
-                  <li>・PC版が後から発売されたタイトル</li>
-                  <li>・セール常連タイトル</li>
-                </ul>
-              </div>
-            </div>
+            <ul className="text-sm space-y-3" style={{ color: 'var(--color-text-light)' }}>
+              <li>・<strong>版を確認する</strong>：FF7 リバース（PS5）は駿河屋で通常版1,500円、新価格版2,000円、デラックスエディション5,100円、コレクターズエディション16,000円と、版によって価格が異なります（{CHECKED}確認）。</li>
+              <li>・<strong>機種を確認する</strong>：今回確認したタイトルでは、同じ作品でもSwitch・Switch 2版がPS4・PS5版より高い傾向がありました（例：クライシス コア リユニオンの駿河屋価格 Switch 2,000円／PS5 1,300円／PS4 1,100円）。</li>
+              <li>・<strong>限定版は特典をそろえる</strong>：限定版の価格は付属品がそろった状態が前提です。欠品があると減額の対象になります。</li>
+              <li>・<strong>手数料を含めて比べる</strong>：駿河屋の宅配買取では通信買取手数料（660〜990円）が差し引かれます。ゲオの宅配買取は送料以外の手数料はかからないと定めています。</li>
+            </ul>
           </div>
         </section>
 
@@ -224,7 +227,7 @@ export default function FFPage() {
             FFソフトの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>の確認方法
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            FFシリーズは限定版の有無で大きく価格が変わります。まずは一括査定で各社の価格を比較し、最高値をご確認ください。
+            FFシリーズは版と機種によって買取価格が異なります。売却前に、各社の最新の買取価格をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -237,32 +240,24 @@ export default function FFPage() {
         <section className="mt-12">
           <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>関連記事</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Link href="/software/dragon-quest/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ドラクエの買取価格</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>駿河屋・ゲオの実測比較</p>
+            </Link>
             <Link href="/software/ps5-soft/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PS5ソフト買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS5ソフトの相場一覧</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS5ソフトの買取価格</p>
             </Link>
-            <Link href="/software/ps4-soft/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PS4ソフト買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>PS4ソフトの相場一覧</p>
-            </Link>
-            <Link href="/knowledge/price-guide/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取相場ガイド</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ハード・ソフト別の相場一覧</p>
+            <Link href="/software/high-value/" className="glass-card p-4 card-hover block">
+              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>高く売れるソフトランキング</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>公式買取価格で横断比較</p>
             </Link>
           </div>
         </section>
 
-        <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年5月</p>
+        <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新：2026年11月17日</p>
         <AuthorBox />
       </div>
     </>
   );
-      <section className="py-8 px-4">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/software/high-value/" className="block bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-5 text-center shadow hover:opacity-95 transition">
-            <span className="font-bold text-lg">📈 最新の「高く売れるゲームソフト」ランキングを見る</span>
-            <span className="block text-sm opacity-90 mt-1">ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測更新中</span>
-          </Link>
-        </div>
-      </section>
 }
