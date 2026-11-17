@@ -34,12 +34,12 @@ const steps = [
 
 const targets = [
   { category: 'ゲーム', items: ['ゲームソフト・レトロゲーム', 'ゲーム機本体・レトロゲーム機本体', '周辺機器（品目により可否あり・要確認）'] },
-  { category: 'メディア・ホビー', items: ['CD・DVD・Blu-ray', 'トレカ（専門店推奨の声あり）', 'ホビー・フィギュア等（店舗による）'] },
+  { category: 'メディア・ホビー', items: ['CD・DVD・Blu-ray', 'トレカ', 'ホビー・フィギュア等（店舗による）'] },
   { category: 'その他対応品目', items: ['ブランド品・貴金属・時計', 'カメラ・家電', '衣類・雑貨 など幅広く'] },
 ];
 
 const faqs = [
-  { q: 'ワンダーレックスは「ひどい」「怪しい」という評判は本当ですか？', a: '運営元はREXT株式会社（RIZAPグループ企業）で、東京都公安委員会の古物商許可（第307732117178号・令和3年5月14日）を持つ正規のリユース事業者です。会社情報・許可番号が公開されており、「怪しい」といえる根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。「ひどい」と言われる背景には、ブランド・貴金属は専門査定である一方で衣類・雑貨は相場より安く感じるという声や、査定員の知識にばらつきがある、土日は査定待ちが長い、といった実店舗のリユース業態に共通しやすい不満が挙げられます。ゲームやトレカは専門店の方が高いこともあるため、当サイトの価格インデックスで比較してから判断することをおすすめします。' },
+  { q: 'ワンダーレックスは「ひどい」「怪しい」という評判は本当ですか？', a: '運営元はREXT株式会社（RIZAPグループ企業）で、東京都公安委員会の古物商許可（第307732117178号・令和3年5月14日）を持つ正規のリユース事業者です。会社情報・許可番号が公開されており、「怪しい」といえる根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。ヒカカク!の口コミ89件（2026年11月17日取得）は総合1.99点で、★1が58件と低い評価が多くなっています。ただし、ゲームの売却に触れた投稿は3件で、多くは衣類・ブランド品などの投稿です（最新の投稿は2024年4月）。ゲームやトレカは専門店の方が高いこともあるため、当サイトの価格インデックスで比較してから判断することをおすすめします。' },
   { q: '宅配買取でゲームは売れますか？', a: '公式の取扱品目にはゲーム／レトロゲーム、ゲーム機本体が明記されており、店頭ではゲームが買取対象です。ただし公式の宅配買取ページの訴求はブランド・貴金属・時計・カメラが中心で、宅配でのゲーム買取可否は公式に明記がありません（要確認）。ゲームは店頭導線が中心と考えられるため、宅配で送りたい場合は事前に公式へゲームの宅配買取が可能か問い合わせることをおすすめします。' },
   { q: '送料・返送料・査定料はかかりますか？', a: '査定料は店頭・宅配とも無料です。宅配買取の送料は無料、振込手数料も無料です。ただし宅配でキャンセル（成約しない）場合の返送料はお客様負担となります。店頭ではその場でのキャンセルも無料です。出張買取の出張費については公式に明記がないため、ご利用前に公式サイトにてご確認ください。' },
   { q: '自分で用意した段ボールで送ると得になりますか？', a: '公式では、自分で用意した段ボールを使って宅配買取に送ると成約額に+500円が加算される特典があります（成約額3,000円以上が対象）。まとめて送り、成約額が条件を満たす場合は買取金額が増えます。適用条件は変更される場合があるため、申込前に公式で最新の条件をご確認ください。' },
@@ -50,7 +50,7 @@ const faqs = [
 export default function WonderrexReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ワンダーレックス' }]} />
 
@@ -141,11 +141,11 @@ export default function WonderrexReviewPage() {
           <div className="space-y-4">
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由1：品目によって査定額の差が大きい</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>ブランド品・貴金属は専門査定で評価される一方、衣類・雑貨は相場より安く感じるという声が見られます。総合リユース業態では品目ごとに評価の得意・不得意が出やすく、「安い」と感じるかは何を売るかで変わります。ゲームやトレカは専門店の方が高くなることがあるため、当サイトの実測価格DBで相場を把握してから判断することをおすすめします（断定ではなく、確認項目にもとづく評価です）。</p>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>ヒカカク!の口コミ89件（2026年11月17日取得）では衣類・古着に触れた投稿が24件と多く、服や靴をまとめて持ち込んで合計が数百円以下だったという投稿が目立ちます。一方で、時計・ブランド品に触れた投稿も22件あり、評価は品目によって分かれています。総合リユース業態では品目ごとに査定の得意・不得意が出やすく、「安い」と感じるかは何を売るかで変わります。ゲームやトレカは専門店の方が高くなることがあるため、当サイトの実測価格DBで相場を把握してから判断することをおすすめします（断定ではなく、確認項目にもとづく評価です）。</p>
             </div>
             <div className="glass-card p-5">
-              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由2：査定員の知識にばらつき・土日は待ち時間が長い</h3>
-              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>店舗ごと・査定員ごとに専門知識に差があるという指摘や、土日は査定待ちが長くなるという声があります。レトロゲームやプレミアソフトなど専門性が高い品は、査定担当や店舗によって評価が分かれる可能性があります。急がない場合は平日の利用を、専門性が高い品は複数社での相見積もりをおすすめします（確認項目にもとづく一般論です）。</p>
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由2：査定の基準がわかりにくいという投稿がある</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>ヒカカク!には、何を基準に買取不可としたのか分からなかった、1時間以上待った末に基準を満たさないとして買取不可になった、という投稿があります（2026年11月17日取得・いずれも個人の体験）。レトロゲームやプレミアソフトなど専門性が高い品は、店舗によって評価が分かれる可能性があるため、複数社での相見積もりをおすすめします（確認項目にもとづく一般論です）。</p>
             </div>
             <div className="glass-card p-5">
               <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>理由3：宅配キャンセル時の返送料が自己負担</h3>
@@ -215,28 +215,20 @@ export default function WonderrexReviewPage() {
           </p>
         </section>
 
-        {/* Review Tendency */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト・比較メディア調査）</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・ブランド品・貴金属は専門的に査定してもらえた</li>
-                <li>・幅広い品をまとめて店頭で処分できた</li>
-                <li>・RIZAPグループの企業が運営している</li>
-              </ul>
+        {/* ヒカカク!の口コミ（出典つき・2026年11月17日取得） */}
+        <section className="mb-12" id="reviews">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ヒカカク!に掲載されているワンダーレックスの口コミ</h2>
+          <div className="glass-card p-6 text-sm" style={{ color: 'var(--color-text-light)' }}>
+            <p className="mb-3">買取比較サイト「ヒカカク!」の「ワンダーレックス」のページでは、<strong>総合評価1.99点（5点満点）・口コミ89件</strong>、最新の投稿日は2024年4月13日です（2026年11月17日取得）。</p>
+            <div className="overflow-x-auto mb-3">
+              <table className="w-full text-sm">
+                <thead><tr><th className="text-left p-2">★5</th><th className="text-left p-2">★4</th><th className="text-left p-2">★3</th><th className="text-left p-2">★2</th><th className="text-left p-2">★1</th><th className="text-left p-2">「悪い・ひどい・買取が安い」の比率（ヒカカク!表示）</th></tr></thead>
+                <tbody><tr><td className="p-2">10件</td><td className="p-2">11件</td><td className="p-2">5件</td><td className="p-2">5件</td><td className="p-2">58件</td><td className="p-2">70.8%</td></tr></tbody>
+              </table>
             </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・衣類・雑貨は相場より安く感じた</li>
-                <li>・査定員の知識にばらつきがある／土日は待ち時間が長い</li>
-                <li>・トレカ・レトロゲームは専門店の方が高いことがある</li>
-              </ul>
-            </div>
+            <p className="mb-3">89件のうち、ゲーム（ソフト・機器）の売却に触れた投稿は3件で、多くは衣類・ブランド品・アウトドア用品などの投稿です。そのため、この評価はゲーム買取だけの評価ではありません。最新の投稿も2024年4月で、現在の査定と異なる場合があります。ゲームの売却額は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店と比べてから判断することをおすすめします。</p>
+            <p className="text-xs">出典：<a href="https://hikakaku.com/company/309/reviews/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク!「ワンダーレックス 買取」のクチコミ一覧</a>（2026年11月17日取得）。件数・評価・比率はヒカカク!の表示で、ゲームに触れた投稿の件数は当サイトが一覧の本文から数えたものです。口コミは個人の体験で、投稿時点の内容です。当サイトでは出典と取得日を確認できない口コミは掲載しておりません。</p>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店の価格と比較してから判断することをおすすめします。</p>
         </section>
 
         {/* FAQ */}

@@ -26,7 +26,7 @@ const features = [
 ];
 
 const dislikeReasons = [
-  { reason: '査定が細かく厳しめという口コミ傾向', fact: '上限価格は「完品・無傷」が前提と公式に定義されており、微細な傷や付属品の欠品（外箱・保証書も付属品として扱われます）で減額されます。減額率は公開されていないため、箱なし・傷ありの場合は上限価格から大きく下がることを想定しておくことをおすすめします。状態の良い本体ほど、じゃんぱらでの売却に適しています。' },
+  { reason: '傷や付属品の欠品で減額されたという口コミ（ヒカカク!）', fact: '上限価格は「完品・無傷」が前提と公式に定義されており、微細な傷や付属品の欠品（外箱・保証書も付属品として扱われます）で減額されます。減額率は公開されていないため、箱なし・傷ありの場合は上限価格から大きく下がることを想定しておくことをおすすめします。状態の良い本体ほど、じゃんぱらでの売却に適しています。' },
   { reason: '宅配の振込日数が明記されていない', fact: '宅配では査定完了まで1週間前後かかる場合があり、査定確定後の振込までの具体的な日数は公式ページで確認できませんでした。お急ぎの場合は、店頭買取（平均60分・その場で現金払い）が確実です。受取方法は、銀行振込のほかセブン銀行ATMでの受取（10万円以下）も選べます。' },
   { reason: 'ゲームソフトの売却先には適さない', fact: '公式FAQの対象カテゴリにゲームソフトの記載はあるものの、買取検索では価格の掲載例を確認できませんでした。ソフトはゲオ・ブックオフ等の買取価格を公表している店舗で売却し、じゃんぱらは本体の売却に利用する使い分けをおすすめします。' },
 ];
@@ -43,7 +43,7 @@ const faqs = [
 export default function JanparaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを検証", "datePublished": "2026-07-07", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "じゃんぱらのゲーム機買取の評判・口コミと火曜5%アップを検証", "datePublished": "2026-07-07", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'じゃんぱら' }]} />
 
       {/* Hero */}
@@ -124,28 +124,20 @@ export default function JanparaReviewPage() {
           </div>
         </section>
 
-        {/* Review Tendency */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト調査）</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・査定から支払いまでが早い（店頭はその場で現金払い）</li>
-                <li>・人気機種は想定より高い査定額が付いた</li>
-                <li>・全国63店舗で持ち込みやすい</li>
-              </ul>
+        {/* ヒカカク!の口コミ（出典つき・2026年11月17日取得） */}
+        <section className="mb-12" id="reviews">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ヒカカク!に掲載されているじゃんぱらの口コミ</h2>
+          <div className="glass-card p-6 text-sm" style={{ color: 'var(--color-text-light)' }}>
+            <p className="mb-3">買取比較サイト「ヒカカク!」の「じゃんぱら」のページでは、<strong>総合評価3.28点（5点満点）・口コミ195件</strong>、最新の投稿日は2024年6月29日です（2026年11月17日取得）。</p>
+            <div className="overflow-x-auto mb-3">
+              <table className="w-full text-sm">
+                <thead><tr><th className="text-left p-2">★5</th><th className="text-left p-2">★4</th><th className="text-left p-2">★3</th><th className="text-left p-2">★2</th><th className="text-left p-2">★1</th><th className="text-left p-2">「悪い・ひどい・買取が安い」の比率（ヒカカク!表示）</th></tr></thead>
+                <tbody><tr><td className="p-2">70件</td><td className="p-2">32件</td><td className="p-2">30件</td><td className="p-2">9件</td><td className="p-2">54件</td><td className="p-2">32.3%</td></tr></tbody>
+              </table>
             </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・微細な傷でも減額され査定が厳しい</li>
-                <li>・減額の根拠説明が物足りない</li>
-                <li>・フリマアプリで売却した方が高かった</li>
-              </ul>
-            </div>
+            <p className="mb-3">195件の多くはスマートフォン・パソコンの売却で、ゲーム機・ソフトの売却に触れた投稿は2件です（3DSソフト・Wii本体）。ゲーム機の評価として読む場合は件数が少ない点にご注意ください。最新の投稿は2024年6月で、現在の査定と異なる場合があります。</p>
+            <p className="text-xs">出典：<a href="https://hikakaku.com/company/32/reviews/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク!「じゃんぱら 買取」のクチコミ一覧</a>（2026年11月17日取得）。件数・評価・比率はヒカカク!の表示で、ゲームに触れた投稿の件数は当サイトが一覧の本文から数えたものです。口コミは個人の体験で、投稿時点の内容です。当サイトでは出典と取得日を確認できない口コミは掲載しておりません。</p>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。</p>
         </section>
 
         {/* Recommended */}

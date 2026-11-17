@@ -43,7 +43,7 @@ const faqs = [
 export default function NetoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-10-26", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証", "datePublished": "2026-03-15", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ネットオフ' }]} />
 
       {/* Hero */}
@@ -161,32 +161,20 @@ export default function NetoffReviewPage() {
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ネットオフ公式（買取案内・「ダンボールプレゼント」・買取Q&A・本人確認案内、2026年6月18日閲覧）。本＆ゲーム買取コースの内容です。</p>
         </section>
 
-        {/* 口コミ傾向（出典付き） */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判の傾向</h2>
-          <div className="glass-card p-6">
-            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
-              ネットオフは、本・ゲーム・DVDをまとめて手軽に処分したい方に適したサービスです。送料・集荷・段ボールが無料である点が評価される一方、<strong>1点あたりの査定額はゲーム専門店より低く</strong>なりやすい傾向があります。
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-              <div>
-                <p className="font-bold mb-1" style={{ color: 'var(--color-electric-green)' }}>良い評価の傾向</p>
-                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・送料・集荷・段ボールが無料で利用しやすい</li>
-                  <li>・本・DVDと一緒にまとめて処分できる</li>
-                  <li>・自動承認を選ぶと最短2日で入金</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-bold mb-1" style={{ color: 'var(--color-accent-orange)' }}>気になる評価の傾向</p>
-                <ul className="space-y-1" style={{ color: 'var(--color-text-light)' }}>
-                  <li>・1点ごとの査定額は低いという声がある</li>
-                  <li>・人気タイトル以外は値がつきにくい</li>
-                  <li>・ゲームのみを高く売りたい場合は専門店が有利なことがある</li>
-                </ul>
-              </div>
+        {/* ヒカカク!の口コミ（出典つき・2026年11月17日取得） */}
+        <section className="mb-12" id="reviews">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ヒカカク!に掲載されているネットオフ（家電）の口コミ</h2>
+          <div className="glass-card p-6 text-sm" style={{ color: 'var(--color-text-light)' }}>
+            <p className="mb-3">買取比較サイト「ヒカカク!」の「ネットオフ（家電）」のページでは、<strong>総合評価2.53点（5点満点）・口コミ393件</strong>、最新の投稿日は2025年11月2日です（2026年11月17日取得）。</p>
+            <div className="overflow-x-auto mb-3">
+              <table className="w-full text-sm">
+                <thead><tr><th className="text-left p-2">★5</th><th className="text-left p-2">★4</th><th className="text-left p-2">★3</th><th className="text-left p-2">★2</th><th className="text-left p-2">★1</th><th className="text-left p-2">「悪い・ひどい・買取が安い」の比率（ヒカカク!表示）</th></tr></thead>
+                <tbody><tr><td className="p-2">69件</td><td className="p-2">72件</td><td className="p-2">44件</td><td className="p-2">22件</td><td className="p-2">186件</td><td className="p-2">52.9%</td></tr></tbody>
+              </table>
             </div>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>参考：ヒカカク!（ネットオフ・家電カテゴリ 総合2.53点/393件、2026年6月18日閲覧）。ゲーム買取コース単独の第三者評点は口コミ件数が少なく、上記は公式仕様と一般的な傾向にもとづいて整理したものです。当サイトでは体験談の創作は行っていません。</p>
+            <p className="mb-3">ヒカカク!上の掲載名は「ネットオフ（家電）」ですが、投稿の多くは本・CD・DVD・ゲームの宅配買取に関するものです。393件のうち、ゲームに触れた投稿は100件でした。本やCDと一緒にまとめて送った投稿が多く、ゲーム単独の評価ではありません。1点あたりの査定額が低かったという投稿が多い一方で、集荷・段ボールが無料で処分しやすいという投稿もあります。</p>
+            <p className="mb-3">ゲームだけを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>でゲーム専門店の価格と比べてから判断することをおすすめします。</p>
+            <p className="text-xs">出典：<a href="https://hikakaku.com/company/4/reviews/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク!「ネットオフ（家電） 買取」のクチコミ一覧</a>（2026年11月17日取得）。件数・評価・比率はヒカカク!の表示で、ゲームに触れた投稿の件数は当サイトが一覧の本文から数えたものです。口コミは個人の体験で、投稿時点の内容です。当サイトでは出典と取得日を確認できない口コミは掲載しておりません。</p>
           </div>
         </section>
 
