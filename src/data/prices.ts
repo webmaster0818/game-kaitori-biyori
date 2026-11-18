@@ -48,16 +48,20 @@ export const crossStorePrices: TitlePrice[] = [
 
 
 // ---- ゲーム機本体の実測（2026-07-04調査開始・v5 S1） ----
-// 2026-10-15実測: ブックオフ=高価買取リスト(10/15更新表記・Switch 2本体のみ掲載) / ゲオ=本体・周辺機器の高価買取品(通常価格枠のみ採用・ジャンク枠は不採用) / 駿河屋=公式買取検索(ブラウザUA付きcurl・型番照合) / レトログ=Switch・PS5価格表(2026/10/14更新表記)
-export const HARDWARE_SURVEY_DATE = '2026-10-15';
+// 2026-11-18実測（型番で照合・国内版のみ）:
+//   ブックオフ=宅配買取の買取価格検索(sell.bookoff.co.jp/online/search/keyword/<型番>)の「参考買取価格」（箱・説明書ありの行。【箱説なし】の行は不採用）。10/15までの店頭「高価買取リスト」から出典を変更
+//   ゲオ=宅配買取の買取価格検索(buy.geo-online.co.jp/search/result/?word=)の「最高価格」
+//   駿河屋=公式買取検索(suruga-ya.jp/kaitori/search_buy?search_word=<型番>)の掲載価格
+//   レトログ=買取価格表 Switch/PS5(kaitori-retrog.jp/buypricelist/…。ページの更新表記は2026/09/14)。掲載のない機種は省略
+export const HARDWARE_SURVEY_DATE = '2026-11-18';
 export const hardwarePrices: TitlePrice[] = [
-  { title: 'Nintendo Switch 2 本体', platform: '本体', prices: { bookoff: 35000, geo: 35000, surugaya: 38000 }, prevPrices: { bookoff: 34000, geo: 35000, surugaya: 35000 }, note: '駿河屋35,000→38,000円(+3,000円・「価格上昇中」表示)で最高値に。ブックオフ34,000→35,000円、ゲオ35,000円据置(日本語・国内専用)。駿河屋のマリオカート ワールド セットは38,000円、ゲオの多言語対応版は55,000円' },
-  { title: 'Switch 有機ELモデル（ホワイト/ネオン）', platform: '本体', prices: { geo: 25000, surugaya: 16000, retrog: 6900 }, prevPrices: { geo: 25000, surugaya: 18000, retrog: 6900 }, note: 'ゲオ25,000円(ホワイト・ネオンとも)据置。駿河屋ホワイト(HEG-S-KAAAA)は16,000円(前回18,000円)・ネオン(HEG-S-KABAA)は18,000円。レトログはホワイト6,900円・ネオン8,000円' },
-  { title: 'Nintendo Switch（旧型・ネオン 現行パッケージ）', platform: '本体', prices: { geo: 17000, surugaya: 12000, retrog: 5000 }, prevPrices: { geo: 17000, surugaya: 12000, retrog: 5000 }, note: 'ゲオ17,000円(KABAH)・駿河屋12,000円(2019年8月モデル)・レトログ5,000円(HAD-S-KABAH)で3社とも据置' },
-  { title: 'Nintendo Switch Lite', platform: '本体', prices: { geo: 15000, surugaya: 10000, retrog: 3200 }, prevPrices: { surugaya: 12000, retrog: 3200 }, note: 'ゲオが通常価格枠に再掲載(全5色15,000円)。駿河屋グレー(HDH-S-GAZAA)は12,000→10,000円に軟化。レトログはイエロー/ブルー3,200円・コーラル4,000円' },
-  { title: 'PS5 Slim 通常版（CFI-2000）', platform: '本体', prices: { geo: 60000, surugaya: 60000 }, prevPrices: { surugaya: 60000 }, note: 'ゲオが60,000円で再掲載(CFI-2000)。駿河屋60,000円据置(CFI-2000A01)。ゲオはPS5 Pro(CFI-7100B01)115,000円も掲載' },
-  { title: 'PS5 Slim デジタル・エディション（CFI-2000B）', platform: '本体', prices: { geo: 53000, surugaya: 53000 }, prevPrices: { surugaya: 52000 }, note: 'ゲオが53,000円で再掲載。駿河屋52,000→53,000円(CFI-2000B01・「価格上昇中」表示)' },
-  { title: 'PS5 旧型 通常版（CFI-1000〜1200）', platform: '本体', prices: { surugaya: 48000, retrog: 38400 }, prevPrices: { surugaya: 50000, retrog: 36000 }, note: '駿河屋CFI-1000A01は50,000→48,000円。レトログはCFI-1200A01が38,400円(前回36,000円)・CFI-1000A01/1100A01は34,400円' },
+  { title: 'Nintendo Switch 2 本体', platform: '本体', prices: { bookoff: 35000, geo: 35000, surugaya: 37000 }, prevPrices: { bookoff: 35000, geo: 35000, surugaya: 38000 }, note: '日本語・国内専用(BEE-S-KB6CA)。駿河屋38,000→37,000円(-1,000円)で最高値を維持。ブックオフ(宅配の参考買取価格)・ゲオとも35,000円。ゲオの多言語対応版は55,000円、ゼルダの伝説 40周年 アニバーサリーエディションは48,000円。レトログの価格表に掲載なし' },
+  { title: 'Switch 有機ELモデル（ホワイト/ネオン）', platform: '本体', prices: { bookoff: 12001, geo: 25000, surugaya: 13000, retrog: 6900 }, prevPrices: { geo: 25000, surugaya: 16000, retrog: 6900 }, note: 'ホワイト(HEG-S-KAAAA)の価格。ゲオ25,000円据置(ネオンも同額)。駿河屋ホワイトは16,000→13,000円(-3,000円)、ネオン(HEG-S-KABAA)は16,000円。ブックオフはホワイト・ネオンとも12,001円(宅配の参考買取価格・箱説なしは9,600円)。レトログはホワイト6,900円・ネオン8,000円' },
+  { title: 'Nintendo Switch（旧型・ネオン 現行パッケージ）', platform: '本体', prices: { bookoff: 5000, geo: 17000, surugaya: 12000, retrog: 5000 }, prevPrices: { geo: 17000, surugaya: 12000, retrog: 5000 }, note: 'バッテリー拡張モデル(HAD-S-KABAH)。ゲオ17,000円・駿河屋12,000円・レトログ5,000円で3社とも据置。ブックオフは5,000円(宅配の参考買取価格・箱説なしは3,751円)' },
+  { title: 'Nintendo Switch Lite', platform: '本体', prices: { bookoff: 5000, geo: 15000, surugaya: 10000, retrog: 3200 }, prevPrices: { geo: 15000, surugaya: 10000, retrog: 3200 }, note: 'ゲオは全10商品(グレー含む)15,000円で据置。駿河屋グレー(HDH-S-GAZAA)10,000円据置。ブックオフはグレー・イエローとも5,000円(宅配の参考買取価格・箱説なしは3,751円)。レトログはイエロー3,200円(グレーは価格表に掲載なし)' },
+  { title: 'PS5 Slim 通常版（CFI-2000）', platform: '本体', prices: { bookoff: 57000, geo: 60000, surugaya: 60000 }, prevPrices: { geo: 60000, surugaya: 60000 }, note: 'ゲオ(CFI-2000)・駿河屋(CFI-2000A01)とも60,000円で据置・同額で最高値。ブックオフは57,000円(宅配の参考買取価格・箱説なしは54,500円)。レトログの価格表に掲載なし' },
+  { title: 'PS5 Slim デジタル・エディション（CFI-2000B）', platform: '本体', prices: { bookoff: 25000, geo: 53000, surugaya: 56000 }, prevPrices: { geo: 53000, surugaya: 53000 }, note: '駿河屋(CFI-2000B01)は53,000→56,000円(+3,000円・「価格上昇中」表示)で最高値。ゲオ53,000円据置。ブックオフは25,000円(宅配の参考買取価格・箱説なしは22,500円)。レトログの価格表に掲載なし' },
+  { title: 'PS5 旧型 通常版（CFI-1200A01）', platform: '本体', prices: { bookoff: 39000, geo: 48000, surugaya: 50000, retrog: 36000 }, prevPrices: { retrog: 38400 }, note: '11/18から型番をCFI-1200A01にそろえて比較(10/15は駿河屋がCFI-1000A01・レトログがCFI-1200A01で型番が混在していたため、前回比はレトログのみ)。レトログ38,400→36,000円(-2,400円)。CFI-1000A01/1100A01は駿河屋50,000円・ゲオ43,000円・ブックオフ35,000円・レトログ32,000円' },
 ];
 
 // ---- 前回比（高騰/急落）ヘルパー ----

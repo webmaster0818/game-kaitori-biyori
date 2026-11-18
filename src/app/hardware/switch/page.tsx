@@ -291,6 +291,7 @@ export default function SwitchPage() {
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>ファミコン・スーファミの買取相場</p>
             </Link>
           </div>
+          <p className="text-sm mt-4"><Link href="/hardware/ranking/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム機本体の買取価格ランキング</Link></p>
           <div className="mt-4">
             <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>買取サービスの詳細レビュー</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

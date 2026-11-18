@@ -123,10 +123,10 @@ export default function PriceIndexPage() {
           </p>
           <PriceMatrix list={hardwarePrices} />
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-            ※ゲオは店頭参考買取価格です（傷・汚れが目立たず、付属品の欠品がない場合）。レトログはレトロゲームに特化しているため、現行機は他店より大幅に低い価格となっています。PS5旧型（CFI-1000〜1200）の通常品は、ゲオが価格を公表していません。状態・店舗・時期により変動するため、売却前に各社公式サイトにてご確認ください。
+            ※ゲオは宅配買取（buy.geo-online.co.jp）の最高買取価格、ブックオフは宅配買取の参考買取価格（箱・説明書あり）です。レトログはレトロゲームに特化しているため、現行機は他店より大幅に低い価格となっています。PS5旧型は型番 CFI-1200A01 で比較しています。状態・店舗・時期により変動するため、売却前に各社公式サイトにてご確認ください。
           </p>
           <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
-            Switch 2はブックオフ3.5万円・ゲオ3.5万円・駿河屋3.8万円です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}実測）。旧型Switch・有機ELモデルの売却をご検討中の方は、<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch 2時代の旧型の売り時解説</Link>もあわせてご覧ください。
+            Switch 2（国内専用）はブックオフ3.5万円・ゲオ3.5万円・駿河屋3.7万円です（{HARDWARE_SURVEY_DATE.replace(/-/g, '/')}実測）。旧型Switch・有機ELモデルの売却をご検討中の方は、<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>Switch 2時代の旧型の売り時解説</Link>もあわせてご覧ください。
           </p>
         </section>
 

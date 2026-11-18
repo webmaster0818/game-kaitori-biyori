@@ -482,6 +482,7 @@ export default function Switch2Page() {
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>どちらが有利かを比較</p>
             </Link>
           </div>
+          <p className="text-sm mt-4"><Link href="/hardware/ranking/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム機本体の買取価格ランキング</Link></p>
           <h3 className="font-bold mb-4 mt-8" style={{ color: 'var(--color-deep-blue)' }}>Switch 2を高く売る業者・状態別の査定</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link href="/review/kaitori-world/" className="glass-card p-4 card-hover block">

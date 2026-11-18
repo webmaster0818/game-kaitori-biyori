@@ -341,6 +341,7 @@ export default function SteamDeckPage() {
               <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>フリマと買取店の比較</p>
             </Link>
           </div>
+          <p className="text-sm mt-4"><Link href="/hardware/ranking/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム機本体の買取価格ランキング</Link></p>
         </section>
 
         <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年11月16日</p>
