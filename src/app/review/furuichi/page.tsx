@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 };
 
 const features = [
-  { title: '東証スタンダード上場企業が運営', description: '運営は株式会社テイツー（東証スタンダード上場・岡山市）。上場企業ならではの情報開示・コンプライアンス体制があり、「実態不明の業者では」という不安が少ないのが安心材料です。' },
-  { title: 'その場で査定・即日現金化（店頭）', description: '店頭買取のため、持ち込めばその場で査定・現金の受け取りが可能です。宅配のような発送・入金待ちの時間がなく、すぐに現金化したい方に適しています。' },
+  { title: '東証スタンダード上場企業が運営', description: '運営は株式会社テイツー（東証スタンダード上場・岡山市）。公式サイトでは「170店舗以上営業中」「ゲームの年間買取点数は189万点」と案内されています（2026年11月20日確認）。上場企業ならではの情報開示・コンプライアンス体制があり、「実態不明の業者では」という不安が少ないのが安心材料です。' },
+  { title: 'その場で査定・即日現金化（店頭）', description: '店頭買取は予約不要・査定無料で、持ち込めばその場で査定・現金の受け取りが可能です（公式「店頭買取 3つのメリット」2026年11月20日確認）。宅配のような発送・入金待ちの時間がなく、すぐに現金化したい方に適しています。' },
   { title: 'レトロゲーム・周辺機器に強み', description: 'ファミコン・スーファミ等のレトロゲームから最新機種まで幅広く買い取っています。ゲーム専門の買取実績が長く、周辺機器や本・トレカもまとめて持ち込めます。' },
   { title: '宅配買取「ふるいち宅配買取」も利用可能', description: '旧宅配「ふるいちオンライン」は2026年6月30日で終了しましたが、現在は公式サイト上の「ふるいち宅配買取」が稼働しています（2026年8月4日確認）。査定額3,000円以上で送料無料です。ただし3,000円未満は査定額から1,000円が差し引かれ、キャンセル時の返送料は自己負担のため、少量・低額品の宅配にはご注意ください。' },
 ];
@@ -41,13 +41,15 @@ const faqs = [
   { q: '査定料やキャンセル料はかかりますか？', a: '店頭買取は出張費なし・査定料無料で、査定額に納得できなければその場でキャンセルできます。宅配買取（ふるいち宅配買取）も査定は無料で集荷時点の費用はかかりませんが、キャンセル時の返送料は自己負担です。また査定額合計が3,000円未満の場合は査定額から1,000円が差し引かれて入金されるため、少量・低額品は店頭持ち込みが適しています。' },
   { q: '宅配買取の査定日数や入金までの流れは？', a: '査定日数の具体的な日数は公式に記載がありません（「到着次第査定」との案内のみ）。集荷はヤマト運輸で、申込当日は不可・申込日の翌々日以降で日程を選択します。査定額を了承すると3営業日以内に指定口座へ振込されます。本人確認は運転免許証・マイナンバーカードなど写真付き書類が必須で、保険証・学生証は利用できません。' },
   { q: '店頭買取と宅配買取はどちらが得ですか？', a: '店頭は「その場で現金化できる・送料や返送のやり取りが不要」、宅配は「自宅から送れて店舗に行く手間がない」という違いがあります。ふるいちは現在両方に対応しており、査定額3,000円以上なら宅配の送料は無料です。ただし宅配は3,000円未満だと1,000円差引・キャンセル時の返送料自己負担があるため、低額品の売却や近くに店舗がある方には店頭買取が適しています。高値での売却を目指す場合は、当サイトの公式価格を実測した価格DBで各社の買取価格を比較してから判断することをおすすめします。' },
-  { q: '売る前に買取価格を調べる方法はありますか？', a: 'ふるいち公式の買取価格ページで、Switch 2・PS5などの現行機からファミコン・スーパーファミコン等のレトロ機まで機種別に買取上限金額が公開されています（2026年8月1日時点の掲載を確認。価格は常に変動する可能性あり）。あわせて当サイトでは定期的に、ブックオフ・ゲオなど各社の実際の買取価格を調査して掲載しているため、最も高い買取店を比較してから売却先を選べます。' },
+  { q: '店頭買取に予約は必要ですか？', a: '不要です。公式サイトでは店頭買取のメリットとして「予約不要、査定無料」「大量お持ち込みもOK」と案内しています（2026年11月20日確認）。ただし店舗によって買取の取り扱い商品が異なるため、売りたい品が決まっている場合は事前に店舗へご確認いただくと確実です。' },
+  { q: '宅配買取の査定結果に返事をしないとどうなりますか？', a: '公式FAQでは、査定結果の通知後7日間以上、承諾または拒否の連絡がない場合は、提示した査定金額に承諾したものとみなして支払いの手続きに進むとされています（2026年11月20日確認）。キャンセルを希望する場合は、通知を受け取ってから7日以内に連絡してください。キャンセル時の返送料は自己負担です。' },
+  { q: '売る前に買取価格を調べる方法はありますか？', a: 'ふるいち公式の買取価格ページで、Switch 2・PS5などの現行機からファミコン・スーパーファミコン等のレトロ機まで機種別に買取上限金額が公開されています（2026年8月1日時点の掲載を確認。価格は常に変動する可能性あり）。2026年11月20日の確認では、公式の買取情報ページに「気になる買取価格を今すぐ検索！」という検索機能があり、ゲーム・古本・CD・DVD/ブルーレイ・トレカ・フィギュアの買取価格を調べられます。あわせて当サイトでは定期的に、ブックオフ・ゲオなど各社の実際の買取価格を調査して掲載しているため、最も高い買取店を比較してから売却先を選べます。' },
 ];
 
 export default function FuruichiReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "古本市場（ふるいち）のゲーム買取の評判・口コミは？店頭＋宅配買取の条件を検証", "datePublished": "2026-07-09", "dateModified": "2026-08-04", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "古本市場（ふるいち）のゲーム買取の評判・口コミは？店頭＋宅配買取の条件を検証", "datePublished": "2026-07-09", "dateModified": "2026-11-20", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '古本市場（ふるいち）' }]} />
 
@@ -120,13 +122,15 @@ export default function FuruichiReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定日数</th><td className="py-2">具体的な日数は公式に記載なし（「到着次第査定」との案内のみ）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>入金</th><td className="py-2">査定了承後、3営業日以内に指定口座へ振込</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>本人確認</th><td className="py-2">写真付き本人確認書類が必須（免許証・マイナンバーカード・パスポート等。<strong>保険証・学生証は不可</strong>）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返事をしない場合</th><td className="py-2">査定結果の通知後<strong>7日間以上</strong>承諾・拒否の連絡がないと、<strong>査定金額に承諾したものとみなされ</strong>支払い手続きに進む（2026年11月20日確認）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>ゲーム機の付属品</th><td className="py-2">ストラップ・カバーなどのアクセサリー類は引き取り不可。付いたまま送ると処分されるため、外してから発送（2026年11月20日確認）</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>申込点数</th><td className="py-2">1点から可</td></tr>
               </tbody>
             </table>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              補足：2026年8月1日〜8月31日の宅配買取申込を対象とした買取UPキャンペーンは終了しています。2026年10月17日の公式確認では、宅配買取向けのキャンペーンの掲載はなく、店頭でSwitch 2・Switch・PS5・PS4ソフトの「ゲームソフト・まとめ売りキャンペーン」が案内されています（ふるいち宅配買取は対象外）。また、買取価格表はSwitch 2・PS5などの現行機からファミコン・スーパーファミコン等のレトロ機まで機種別に公式サイトで公開されています（2026年8月1日時点の買取上限金額として掲載）。
+              補足：2026年8月1日〜8月31日の宅配買取申込を対象とした買取UPキャンペーンは終了しています。2026年11月20日の公式確認でも、宅配買取向けのキャンペーンの掲載はなく、店頭でSwitch 2・Switch・PS5・PS4ソフトの「ゲームソフト・まとめ売りキャンペーン」が案内されています（店頭査定金額51円以上の商品が対象・一部店舗は対象外・ふるいち宅配買取は対象外）。また、買取価格表はSwitch 2・PS5などの現行機からファミコン・スーパーファミコン等のレトロ機まで機種別に公式サイトで公開されています（2026年8月1日時点の買取上限金額として掲載）。
             </p>
-            <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：ふるいち公式「ふるいち宅配買取」案内ページ・ゲーム買取価格表ページ 2026年8月4日確認</p>
+            <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：ふるいち公式「ふるいち宅配買取」案内ページ・ゲーム買取価格表ページ 2026年8月4日確認。<a href="https://www.furu1.net/kaitori/post" target="_blank" rel="noopener noreferrer nofollow" className="underline">宅配買取のご案内</a>（送料・1,000円差引・返送料・本人確認書類・7日間のみなし承諾・付属品）と<a href="https://www.furu1.net/kaitori/sell_game/game-campaign" target="_blank" rel="noopener noreferrer nofollow" className="underline">ゲームソフト・まとめ売りキャンペーン</a>は2026年11月20日に再確認</p>
           </div>
         </section>
 
@@ -142,6 +146,7 @@ export default function FuruichiReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>本社</th><td className="py-2">岡山県岡山市南区豊浜町2-2</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">埼玉県公安委員会 第431100002846号</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方式</th><td className="py-2">店頭買取＋宅配買取（「ふるいち宅配買取」。旧「ふるいちオンライン」は2026年6月30日で終了）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>店舗数</th><td className="py-2">170店舗以上（公式の表記。2026年11月20日確認）</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>対応品目</th><td className="py-2">ゲーム機・ソフト（レトロ〜最新）、周辺機器、本、トレカなど</td></tr>
               </tbody>
             </table>
@@ -182,6 +187,33 @@ export default function FuruichiReviewPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* 良い点・注意点 */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />良い点・注意点（公式の条件から整理）</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>良い点</h3>
+              <ul className="text-sm leading-relaxed space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                <li>・店頭は予約不要・査定無料で、その場で現金化できる</li>
+                <li>・170店舗以上（公式表記）あり、持ち込み先を選びやすい</li>
+                <li>・宅配は査定額3,000円以上で送料無料、無料段ボールを集荷時に受け取れる</li>
+                <li>・公式サイトでゲームの買取価格を検索してから持ち込める</li>
+              </ul>
+            </div>
+            <div className="glass-card p-5">
+              <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>注意点</h3>
+              <ul className="text-sm leading-relaxed space-y-1" style={{ color: 'var(--color-text-light)' }}>
+                <li>・宅配は査定額3,000円未満だと1,000円が差し引かれる</li>
+                <li>・宅配のキャンセルは返送料が自己負担</li>
+                <li>・宅配の査定結果に7日間以上返事をしないと、承諾したものとみなされる</li>
+                <li>・ゲームソフトのまとめ売りキャンペーンは店頭のみ（宅配は対象外・一部店舗も対象外）</li>
+                <li>・買取の取り扱い商品は店舗によって異なる</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：古本市場公式 <a href="https://www.furu1.net/kaitori/" target="_blank" rel="noopener noreferrer nofollow" className="underline">売りたい・買取情報</a>・<a href="https://www.furu1.net/kaitori/post" target="_blank" rel="noopener noreferrer nofollow" className="underline">宅配買取のご案内</a>（2026年11月20日確認）。口コミではなく、公式に書かれている条件をもとに当サイトが整理したものです。</p>
         </section>
 
         {/* 第三者サイトの口コミ状況 */}
