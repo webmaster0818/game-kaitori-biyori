@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import { hardwarePrices, analyzeTitle, STORE_LABELS, HARDWARE_SURVEY_DATE, type StoreKey } from '@/data/prices';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 // 2026-11-18: 「ゲーム機 買取」「ゲーム機 買取 おすすめ」の受け皿として、結論ボックス・選び方・FAQを追加。価格は src/data/prices.ts の hardwarePrices（11/18 実測）
 const PAGE_TITLE = 'ゲーム機の買取はどこがいい？本体の買取価格ランキング｜Switch 2・PS5を4社の公式価格で比較【2026年11月】';
@@ -89,6 +90,7 @@ export default function HardwareRankingPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ゲーム機の買取はどこがいい？本体の買取価格ランキング
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフ・ゲオ・駿河屋・レトログが公式に公表しているゲーム機本体の買取価格を定期的に実測し、<strong>4社の中で最も高い価格</strong>の順に掲載したランキングです。同じ本体でも店によって2,000円から3万円以上の差があるため、売却先を一覧で比較いただけます。
           </p>

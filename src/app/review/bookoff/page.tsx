@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ブックオフのゲーム買取はひどい・安い？評判・口コミ｜値段がつかない条件と減額の実態を検証',
@@ -56,6 +57,7 @@ export default function BookoffReviewPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ブックオフ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ブックオフは国内721店舗（2026年10月末）を展開する大手のリユースチェーンです。店頭に持ち込めばその日のうちに現金化でき、本やDVDと一緒にまとめ売りも可能です。宅配買取は送料・手数料が無料で、利便性の高さが強みのサービスです。
           </p>

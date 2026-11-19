@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 const PAGE_TITLE = 'マリオカート8 デラックスの買取価格【2026年11月】駿河屋・ゲオ・ブックオフの実測比較';
 const CHECKED = '2026年11月17日';
@@ -90,6 +91,7 @@ export default function MarioKartPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>タイトル別買取価格</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">マリオカート8 デラックスの買取価格【2026年11月】駿河屋・ゲオ・ブックオフの実測比較</h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#CBD5E1' }}>
             {CHECKED}に駿河屋・ゲオ宅配買取・ブックオフの公式買取ページで確認したところ、通常版は<strong className="text-white">ゲオ宅配買取の2,000円</strong>、＋コース追加パス同梱版は<strong className="text-white">駿河屋とゲオ宅配買取の6,000円</strong>が最も高い価格でした。
           </p>

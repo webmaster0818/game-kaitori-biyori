@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'Steam Deckの買取相場【2026年11月】ゲオ・駿河屋・ブックオフの価格比較｜Steam Frameの買取価格とモデル別相場',
@@ -84,6 +85,7 @@ export default function SteamDeckPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             Steam Deckの買取相場
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ValveのポータブルPC「Steam Deck」の買取価格を、ゲオ宅配買取・駿河屋・ブックオフ宅配買取・買取ルデヤの公式ページで2026年11月16日に確認し、モデル別に比較しています。売却前の準備（SteamOS初期化・アカウント解除）、メルカリと買取店の比較もご説明します。
           </p>

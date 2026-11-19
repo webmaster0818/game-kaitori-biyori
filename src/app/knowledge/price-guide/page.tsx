@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
-import { hardwarePrices, analyzeTitle, HARDWARE_SURVEY_DATE, type PriceAnalysis } from '@/data/prices';
+import { hardwarePrices, crossStorePrices, analyzeTitle, HARDWARE_SURVEY_DATE, PRICE_SURVEY_DATE, type PriceAnalysis } from '@/data/prices';
 
 export const metadata: Metadata = {
   title: 'ゲーム買取相場ガイド｜ハード・ソフト別の価格目安【2026年最新】',
   description:
-    'ゲーム機・ソフトの買取相場を一覧表で解説します。Switch・PS5本体は各社の公式買取ページで実測した価格（2026年10月15日）を掲載し、ソフト別の目安、相場が変動する5つの要因、相場の調べ方もまとめています。',
+    'ゲーム機・ソフトの買取相場を一覧表で解説します。Switch・PS5本体は各社の公式買取ページで実測した価格（2026年11月18日）を掲載し、ソフト別の目安、相場が変動する5つの要因、相場の調べ方もまとめています。',
   keywords: ['ゲーム買取 相場', 'ゲーム いくらで売れる', 'ゲーム機 買取価格', 'Switch 買取相場'],
   openGraph: {
     images: ['/og.png'],
@@ -25,8 +25,15 @@ const hardwareRows = hardwarePrices
   .map(analyzeTitle)
   .filter((x): x is PriceAnalysis => x !== null);
 
+// Switch人気タイトルの行は crossStorePrices（Switch・通常版の実測）の最安〜最高から算出
+const switchSoftValues = crossStorePrices
+  .filter((t) => t.platform === 'Switch')
+  .flatMap((t) => Object.values(t.prices).filter((v): v is number => typeof v === 'number'));
+const switchSoftCount = crossStorePrices.filter((t) => t.platform === 'Switch').length;
+const softSurveyDate = PRICE_SURVEY_DATE.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, '$1年$2月$3日');
+
 const softwarePrices = [
-  { category: 'Switch人気タイトル', range: '3,000〜5,500円', example: 'ゼルダ・マリオ・ポケモン等' },
+  { category: 'Switch人気タイトル', range: `${Math.min(...switchSoftValues).toLocaleString()}〜${Math.max(...switchSoftValues).toLocaleString()}円`, example: `ゼルダ・マリオ・ポケモン等（当サイトが${softSurveyDate}にブックオフ・ゲオ・駿河屋の公式買取価格で実測した${switchSoftCount}タイトルの最安〜最高）` },
   { category: 'PS5人気タイトル', range: '2,500〜6,000円', example: 'FF・バイオ・エルデンリング等' },
   { category: 'PS4人気タイトル', range: '800〜2,500円', example: 'ペルソナ・ゴーストオブツシマ等' },
   { category: '3DSソフト', range: '500〜3,000円', example: 'ポケモン・モンハン・どうぶつの森等' },

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
-import { crossStorePrices, hardwarePrices, PRICE_SURVEY_DATE, STORE_LABELS, type StoreKey } from '@/data/prices';
+import { crossStorePrices, hardwarePrices, PRICE_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, type StoreKey } from '@/data/prices';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ゲオ宅配買取の評判・口コミ【2026年11月】ダンボールは自前？ポイントは付く？梱包・入金まで解説',
@@ -96,6 +97,7 @@ export default function GeoReviewPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ゲオ宅配買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#CBD5E1' }}>
             ゲオの宅配買取は、費用をかけずに1点から売れる点が利点です。一方で、段ボールは自分で用意し、発送は佐川急便の集荷のみ、受け取りは銀行振込のみという条件があります。主な条件は次のとおりです。
           </p>
@@ -116,7 +118,7 @@ export default function GeoReviewPage() {
               </table>
             </div>
             <p className="text-sm mt-3 leading-relaxed">
-              買取価格については、当サイトの{fmtDate(PRICE_SURVEY_DATE)}の実測で、ゲオの公式「高価買取品」リストに掲載されていた{geoRows.length}商品のうち{geoTopCount}商品で、ゲオの価格が比較した他社と同額以上でした（詳細は<a href="#price-check" className="underline">後述</a>）。ヒカカク!の「ゲオ宅配買取」の口コミは10件・総合3.7点です（2026年11月16日取得、<a href="#reviews" className="underline">内訳</a>）。
+              買取価格については、当サイトの実測（ソフト{fmtDate(PRICE_SURVEY_DATE)}・本体{fmtDate(HARDWARE_SURVEY_DATE)}）で、ゲオの公式ページに価格が掲載されていた{geoRows.length}商品のうち{geoTopCount}商品で、ゲオの価格が比較した他社と同額以上でした（詳細は<a href="#price-check" className="underline">後述</a>）。ヒカカク!の「ゲオ宅配買取」の口コミは10件・総合3.7点です（2026年11月16日取得、<a href="#reviews" className="underline">内訳</a>）。
             </p>
             <p className="text-xs mt-3 leading-relaxed" style={{ color: '#475569' }}>
               出典：ゲオの買取 公式（<a href={OFFICIAL.howto} target="_blank" rel="noopener noreferrer nofollow" className="underline">買取お申し込みの流れ</a>・<a href={OFFICIAL.faq} target="_blank" rel="noopener noreferrer nofollow" className="underline">よくある質問</a>・<a href={OFFICIAL.rules} target="_blank" rel="noopener noreferrer nofollow" className="underline">ゲオの買取 ガイドライン</a>第3条・第14条・第15条）、{CHECKED}確認。申込から入金までの手順と日数の内訳は<Link href="/guide/geo-takuhai/" className="underline">ゲオ宅配買取のやり方ガイド</Link>で解説しています。
@@ -208,7 +210,7 @@ export default function GeoReviewPage() {
         <section id="price-check" className="mb-12">
           <h2 className="section-heading mb-3"><span className="section-heading-bar" />当サイトの実測によるゲオの買取価格の位置</h2>
           <p className="text-sm mb-4 leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-            当サイトでは、ゲオ・ブックオフ・駿河屋・レトログの公式買取ページに掲載された価格を定期的に記録しています。{fmtDate(PRICE_SURVEY_DATE)}の調査で、ゲオの公式「高価買取品」リストに価格が掲載されていた商品について、他社の最高値と比べた結果は以下のとおりです。
+            当サイトでは、ゲオ・ブックオフ・駿河屋・レトログの公式買取ページに掲載された価格を定期的に記録しています。ソフトは{fmtDate(PRICE_SURVEY_DATE)}、本体は{fmtDate(HARDWARE_SURVEY_DATE)}の調査で、ゲオの公式ページに価格が掲載されていた商品について、他社の最高値と比べた結果は以下のとおりです。
           </p>
           <div className="overflow-x-auto">
             <table className="comparison-table">
@@ -231,8 +233,8 @@ export default function GeoReviewPage() {
             </table>
           </div>
           <ul className="text-xs mt-3 space-y-1" style={{ color: 'var(--color-text-light)' }}>
-            <li>※ゲオの価格は公式「高価買取品」リストに掲載された宅配買取の参考価格のみを採用しています。リストに掲載がない商品は比較に含めていないため、ゲオ全体の買取水準を示すものではありません。</li>
-            <li>※ブックオフは宅配買取の参考買取価格、駿河屋・レトログは公式買取検索・価格表の値です。いずれも完品・良好な状態を想定した参考価格で、実際の査定額は状態により変わります。</li>
+            <li>※ゲオの価格は、ソフトは公式「高価買取品」リスト（Switch・Switch2）に掲載された店頭参考買取価格、本体は公式の宅配買取 価格検索の最高価格を採用しています。ソフトはリストに掲載がない商品を比較に含めていないため、ゲオ全体の買取水準を示すものではありません。</li>
+            <li>※ブックオフはソフトが高価買取情報の店舗買取価格、本体が宅配買取の参考買取価格、駿河屋・レトログは公式買取検索・価格表の値です。いずれも完品・良好な状態を想定した参考価格で、実際の査定額は状態により変わります。</li>
             <li>※調査日以降に価格が変わっている可能性があります。最新の比較は<Link href="/price-index/" className="underline">買取価格DB</Link>をご覧ください。</li>
           </ul>
         </section>
@@ -261,7 +263,7 @@ export default function GeoReviewPage() {
                 <li>+ 送料・査定料・振込手数料が無料（1点から申込可）</li>
                 <li>+ 査定後に返品を選んだ場合の返送料はゲオ負担</li>
                 <li>+ 申込完了時点の買取価格が保証される（公式FAQ。状態による変動はあり）</li>
-                <li>+ 当サイトの{fmtDate(PRICE_SURVEY_DATE)}実測では、高価買取品リスト掲載{geoRows.length}商品中{geoTopCount}商品で他社と同額以上</li>
+                <li>+ 当サイトの実測（ソフト{fmtDate(PRICE_SURVEY_DATE)}・本体{fmtDate(HARDWARE_SURVEY_DATE)}）では、ゲオの掲載{geoRows.length}商品中{geoTopCount}商品で他社と同額以上</li>
                 <li>+ Nintendo Switch 2・PS5の本体とソフトを「買取強化中」と掲載（{CHECKED}確認）</li>
                 <li>+ 宅配のほか、ゲオ店舗での持ち込み買取（現金払い）も選べる</li>
               </ul>

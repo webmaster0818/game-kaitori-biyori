@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ゲオ宅配買取の日数は？査定は到着翌営業日から5営業日以内・入金・ダンボール・キャンセルを公式情報で解説',
@@ -95,6 +96,7 @@ export default function GeoTakuhaiGuidePage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ゲオ宅配買取は何日で入金？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>やり方・ダンボール・キャンセルまで</span>
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-5" style={{ color: '#CBD5E1' }}>
             ゲオ宅配買取の査定結果は、商品到着の翌営業日から5営業日以内にメールで届き、承認後すみやかに銀行口座へ振り込まれます。段ボールは利用者が用意し、査定後に返品を選んだ場合の返送料はゲオが負担します。主な条件は次のとおりです。
           </p>

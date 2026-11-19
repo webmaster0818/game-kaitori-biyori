@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 const PAGE_TITLE = 'FF（ファイナルファンタジー）の買取価格【2026年11月】駿河屋・ゲオの実測比較｜シリーズ一覧';
 const CHECKED = '2026年11月17日';
@@ -98,6 +99,7 @@ export default function FFPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             FF（ファイナルファンタジー）の買取価格【2026年11月】駿河屋・ゲオの実測比較
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-4" style={{ color: '#CBD5E1' }}>
             FFシリーズの主要タイトルについて、{CHECKED}に駿河屋とゲオ宅配買取の公式ページで買取価格を確認しました。両社の価格を比べられた{pairs.length}組のうち、<strong className="text-white">駿河屋が高いものが{surugayaWins}組、ゲオが高いものが{geoWins}組、同額が{ties}組</strong>です。FF7 リバースはゲオ、クライシス コア リユニオンやFF10/10-2 HDは駿河屋が高く、どちらが高いかはタイトルと機種によって異なります。
           </p>

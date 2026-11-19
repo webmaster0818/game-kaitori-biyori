@@ -48,7 +48,7 @@ export default function SmashBrosPage() {
     {
       q: '最も高く売れる店はどこですか？',
       a: a
-        ? `${SURVEY}の実測では${STORE_LABELS[a.best.store]}が${a.best.price.toLocaleString()}円で最高値でした${gapTxt ? `(最安の公表価格との差は${gapTxt})` : ''}。ただし公表価格は毎週動くため、売る直前に当ページの実測表で最新の最高値をご確認ください。`
+        ? `${SURVEY}の実測では${STORE_LABELS[a.best.store]}が${a.best.price.toLocaleString()}円で最高値でした${gapTxt ? `(最安の公表価格との差は${gapTxt})` : ''}。ただし公表価格は予告なく変わることがあり(2026年10月15日→11月19日はブックオフ3,200円→3,000円・ゲオ3,800円→3,500円・駿河屋2,700円→3,000円)、売る直前に当ページの実測表で最新の最高値をご確認ください。`
         : '当ページの実測表で最新の最高値をご確認ください。',
     },
     {

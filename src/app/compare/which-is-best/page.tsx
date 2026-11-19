@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ゲームを売るならどこがいい？用途別おすすめと7社の条件比較｜駿河屋・ゲオの実測価格【2026年11月】',
@@ -255,6 +256,7 @@ export default function WhichIsBestPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ゲーム買取はどこがいい？結論と用途別おすすめ
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「ゲーム買取はどこがいいのか」「どこで売るのがよいのか」は、<strong>売りたい物と優先したいこと</strong>によって変わります。当ページではランキング形式ではなく、<strong>高く・早く・レトロ・箱なし・まとめ売り・宅配・店舗・フリマ比較</strong>の用途別に、適した売り先を紹介しています。送料・返送料・キャンセル・査定期間・古物商番号は、各社公式の情報を確認日とともに横断比較しています。
           </p>

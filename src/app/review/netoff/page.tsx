@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ネットオフの買取の評判・口コミは？ゲーム・本の一括査定の入金日数・デメリットを検証',
@@ -55,6 +56,7 @@ export default function NetoffReviewPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ネットオフ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>レビュー</span>
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ネットオフは、ゲーム・本・CD・DVDなど幅広い品目をまとめて売却できる宅配買取サービスです。集荷・送料・手数料が無料で、公式サイトでは最短2日での入金と案内されています（2026年10月26日確認）。大量の不用品を一度に処分したい方に適しています。
           </p>

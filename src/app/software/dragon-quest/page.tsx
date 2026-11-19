@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ドラクエの買取価格【2026年11月】ドラクエ11 Sは2,400円・ドラクエ3は1,600円｜駿河屋とゲオの実測比較',
@@ -170,6 +171,7 @@ export default function DragonQuestPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ドラクエの買取価格・相場<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>ドラクエ11 S・ドラクエ3・シリーズ19件を駿河屋とゲオで比較（2026年11月）</span>
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             2026年11月15日に駿河屋公式の買取検索で確認した通常の買取価格は、ドラクエ11 SがSwitch版2,400円・Switch 2版2,800円・PS4版1,600円、ドラクエ3（HD-2D版）がSwitch版1,600円・PS5版1,000円です。同じ日にゲオの宅配買取で表示された最高買取価格は、ドラクエ11 SがSwitch版・Switch 2版・PS4版とも2,500円、ドラクエ3がSwitch版1,500円・PS5版1,300円でした。無印のドラクエ11（PS4・3DS）は、駿河屋では価格の掲載がなく、ゲオではPS4版100円・3DS版50円です。当サイトでは、シリーズ19件のランキング、10月からの価格の動き、レトロドラクエの価格もあわせて掲載しています。
           </p>

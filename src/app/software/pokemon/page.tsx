@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 const PAGE_TITLE = 'ポケモンソフトの買取価格ランキング【2026年11月】駿河屋・ゲオ・ブックオフ実測比較｜GB〜Switch43本';
 
 export const metadata: Metadata = {
@@ -183,6 +184,7 @@ export default function PokemonPage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ポケモンソフト（カセット）の買取価格ランキング｜駿河屋・ゲオ・ブックオフ比較
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             ポケモン本編・LEGENDSシリーズの国内版ソフト43本（GB・GBA・DS・3DS・Switch）の買取価格を、2026年11月16日に駿河屋公式で確認してランキングにしました。Switch・DS・3DSの主要作品は、同日にゲオ宅配買取・ブックオフ店舗の公式価格とも比較しています。最も高いのはGBの青（14,000円）、Switchの通常版は1,600〜2,500円です。
           </p>

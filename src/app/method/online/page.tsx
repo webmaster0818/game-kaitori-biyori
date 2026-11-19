@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 export const metadata: Metadata = {
   title: 'ゲーム宅配買取おすすめ15社比較｜送料・返送料・ダンボール無料・査定日数で選ぶ',
@@ -235,6 +236,7 @@ export default function OnlinePage() {
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ゲーム宅配買取おすすめ15社比較｜送料・返送料・ダンボール・査定日数で選ぶ
           </h1>
+          <GeoTakuhaiNotice />
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             「送料は本当に無料か」「キャンセルした場合の返送料はかかるか」「段ボールはもらえるか」など、宅配買取で迷いやすいポイントを、15サービスの<strong>送料・返送料・キャンセル条件・梱包キット・箱なし/故障品対応・レトロ対応・査定日数</strong>で横並びに比較しています。数値はすべて各社公式の確認済み情報（2026年6〜7月確認）にもとづいており、各社の検証レビューにリンクしています。買取価格は<Link href="/price-index/" style={{ color: '#34D399' }}>公式価格を実測した価格DB</Link>で、送る前に比較できます。
           </p>

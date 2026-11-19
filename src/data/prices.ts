@@ -3,11 +3,11 @@
 // 運用: 定期的にこの crossStorePrices を最新の公式買取価格で更新する（最終実測日=PRICE_SURVEY_DATE）。
 //   - 全て各社公式買取ページで確認した実価格（創作禁止・確認できない店は null）
 //   - 価格は完品（箱・説明書あり）想定の参考買取価格。店舗/在庫/状態で変動。
-//   - ブックオフ=高価買取情報ページの店頭参考価格 / ゲオ・駿河屋=宅配(通信)買取の参考価格
+//   - ソフト: ブックオフ=高価買取情報ページの店舗買取価格 / ゲオ=高価買取品リストの店頭参考買取価格 / 駿河屋=公式買取検索の掲載価格
 // ============================================================
 
-export const PRICE_SURVEY_DATE = '2026-10-15'; // 最終調査日
-export const PRICE_PREV_SURVEY_DATE: string | null = '2026-09-16'; // 前回調査日（前回比の基準。2026-09-16→10-15は約4週間空いている点に注意）
+export const PRICE_SURVEY_DATE = '2026-11-19'; // 最終調査日
+export const PRICE_PREV_SURVEY_DATE: string | null = '2026-10-15'; // 前回調査日（前回比の基準。2026-10-15→11-19は5週間空いている点に注意）
 
 export type StoreKey = 'bookoff' | 'geo' | 'surugaya' | 'retrog';
 
@@ -27,23 +27,24 @@ export type TitlePrice = {
   note?: string;
 };
 
-// 2026-10-15 各社公式買取ページで確認（店舗横断マトリクス）
-// prices=2026-10-15調査値 / prevPrices=2026-09-16調査値（前回比用）
-// bookoff=高価買取リスト全111件(2026-10-15最終更新表記・bookoff.co.jp/selllist/game/index.html・Puppeteerで全6ページ取得) / geo=「Switch」「Switch2」高価買取品リスト掲載分のみ(掲載なしは省略・更新日表記なし)。
-// ★駿河屋(surugaya)はブラウザUA付きcurlで公式買取検索(search_buy)を実測（国内通常版・型番照合）。「メールにてお見積」表示は価格非公表として省略。
-// ★レトログ(retrog)は2026-10-15に価格表(2026/10/14更新表記)の取得に成功。対象10タイトルの通常版は掲載なし。
+// 2026-11-19 各社公式買取ページで確認（店舗横断マトリクス）
+// prices=2026-11-19調査値 / prevPrices=2026-10-15調査値（前回比用）
+// bookoff=高価買取情報 全111件(bookoff.co.jp/selllist/game/index.html〜index_6.html・「最終更新日 2026年11月19日」表記・店舗買取価格。JANコードで照合)
+// geo=「Switch」(29件)「Switch2」(23件)高価買取品リスト(geo-online.co.jp/store_info/buy/Switch/・/Switch2/)の店頭参考買取価格。掲載なしは省略・更新日表記なし。curlは403のためヘッドレスChromeで取得
+// ★駿河屋(surugaya)はブラウザUA付きcurlで公式買取検索(search_buy?search_word=<JANコード>)を実測（国内通常版・JAN/型番照合）。「メールにてお見積」表示は価格非公表として省略。
+// ★レトログ(retrog)は2026-11-19のソフト調査では確認していない（10/15時点でも対象タイトルの通常版は掲載なし）。
 export const crossStorePrices: TitlePrice[] = [
-  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 2500 }, prevPrices: { bookoff: 3300, surugaya: 1300 }, note: 'ブックオフ3,300→2,500円(-800円)。駿河屋は今回「メールにてお見積」表示で価格非公表(前回1,300円)。ゲオは高価買取リスト掲載なし継続' },
-  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { bookoff: 3500, geo: 4500, surugaya: 4200 }, prevPrices: { geo: 5000, surugaya: 4200 }, note: 'ブックオフが3,500円で高価買取リストに再掲載。ゲオ5,000→4,500円に軟化も最高値継続。駿河屋4,200円据置。Fodlan Collectionは駿河屋15,000円' },
-  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 2500 }, prevPrices: { bookoff: 3000, geo: 3500, surugaya: 2500 }, note: 'ブックオフ3,000→2,700円・ゲオ3,500→3,000円と軟化。駿河屋2,500円据置。Switch 2 Edition+ジャンボリーTVはブックオフ・ゲオとも4,000円' },
-  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3200, geo: 3800, surugaya: 2700 }, prevPrices: { bookoff: 3500, geo: 4000, surugaya: 2400 }, note: 'ブックオフ3,500→3,200円・ゲオ4,000→3,800円と軟化。駿河屋は2,400→2,700円に増額(「価格上昇中」表示)。ゲオ3,800円が最高値継続' },
-  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 2500, geo: 3000, surugaya: 3000 }, prevPrices: { bookoff: 2700, geo: 3000, surugaya: 2900 }, note: 'ブックオフ2,700→2,500円に軟化。駿河屋2,900→3,000円でゲオと並び最高値。エキスパンション・パス版は駿河屋5,300円' },
-  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 2000, geo: 2500, surugaya: 2500 }, prevPrices: { bookoff: 2500, geo: 3000, surugaya: 2500 }, note: 'ブックオフ2,500→2,000円・ゲオ3,000→2,500円と軟化。駿河屋2,500円据置。Switch 2 Editionはブックオフ・ゲオとも4,500円' },
-  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 1200, surugaya: 2200 }, prevPrices: { bookoff: 1500 }, note: 'ブックオフ1,500→1,200円と軟化継続。駿河屋は通常版(HAC-P-ACBAA)2,200円の掲載を再確認(「価格上昇中」表示)。ゲオは掲載なし。Switch 2 Editionはブックオフ2,500円/ゲオ3,000円' },
-  { title: 'マリオカート ワールド', platform: 'Switch2', prices: { bookoff: 4500, geo: 4500, surugaya: 5300 }, prevPrices: { bookoff: 5000, geo: 5000, surugaya: 5300 }, note: 'ブックオフ・ゲオとも5,000→4,500円に軟化。駿河屋5,300円据置で最高値継続' },
-  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1500, surugaya: 2500 }, prevPrices: { bookoff: 2000, surugaya: 1800 }, note: 'ブックオフ2,000→1,500円に軟化。駿河屋は1,800→2,500円に増額(「価格上昇中」表示)し最高値が交代。+コース追加パス版は駿河屋5,500円据置。ゲオは掲載なし' },
-  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1700, surugaya: 2000 }, prevPrices: { bookoff: 1700, surugaya: 1600 }, note: 'ブックオフ1,700円据置。駿河屋1,600→2,000円に増額(「価格上昇中」表示)し最高値が交代' },
-  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1200, surugaya: 1800 }, prevPrices: { bookoff: 1200, surugaya: 1600 }, note: 'ブックオフ1,200円据置。駿河屋1,600→1,800円に増額(「価格上昇中」表示)。駿河屋が最高値継続' },
+  { title: 'スーパーマリオ 3Dコレクション', platform: 'Switch', prices: { bookoff: 2000 }, prevPrices: { bookoff: 2500 }, note: 'ブックオフ2,500→2,000円(-500円)。駿河屋は10/15に続き「メールにてお見積」表示で価格非公表。ゲオは高価買取リストに掲載なし' },
+  { title: 'ファイアーエムブレム 風花雪月', platform: 'Switch', prices: { bookoff: 3500, geo: 4500, surugaya: 3800 }, prevPrices: { bookoff: 3500, geo: 4500, surugaya: 4200 }, note: 'ブックオフ3,500円・ゲオ4,500円とも据置で、ゲオが最高値。駿河屋(通常版 HAC-P-ANVYA)は4,200→3,800円(-400円)' },
+  { title: 'スーパーマリオパーティ ジャンボリー', platform: 'Switch', prices: { bookoff: 2700, geo: 3000, surugaya: 3000 }, prevPrices: { bookoff: 2700, geo: 3000, surugaya: 2500 }, note: 'ブックオフ2,700円・ゲオ3,000円とも据置。駿河屋は2,500→3,000円(+500円)でゲオと同額の最高値。Switch 2 Edition＋ジャンボリーTVはブックオフ3,500円(10/15は4,000円)で、ゲオのSwitch2高価買取リストには11/19時点で掲載なし' },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL', platform: 'Switch', prices: { bookoff: 3000, geo: 3500, surugaya: 3000 }, prevPrices: { bookoff: 3200, geo: 3800, surugaya: 2700 }, note: 'ブックオフ3,200→3,000円(-200円)・ゲオ3,800→3,500円(-300円)と下落。駿河屋は2,700→3,000円(+300円)。ゲオ3,500円が最高値' },
+  { title: 'スプラトゥーン3', platform: 'Switch', prices: { bookoff: 2400, geo: 3000, surugaya: 2500 }, prevPrices: { bookoff: 2500, geo: 3000, surugaya: 3000 }, note: 'ゲオ3,000円据置。駿河屋は3,000→2,500円(-500円)、ブックオフは2,500→2,400円(-100円)と下落し、10/15はゲオと駿河屋が同額だった最高値はゲオ単独に' },
+  { title: 'ゼルダの伝説 ティアーズ オブ ザ キングダム（通常版）', platform: 'Switch', prices: { bookoff: 1700, surugaya: 2500 }, prevPrices: { bookoff: 2000, geo: 2500, surugaya: 2500 }, note: '駿河屋(通常版 HAC-P-AXN7A)2,500円据置で最高値。ブックオフは2,000→1,700円(-300円)。ゲオは10/15の2,500円から、11/19は高価買取リストに掲載なし。Switch 2 Editionはブックオフ・ゲオとも4,500円' },
+  { title: 'あつまれ どうぶつの森', platform: 'Switch', prices: { bookoff: 1200, surugaya: 2200 }, prevPrices: { bookoff: 1200, surugaya: 2200 }, note: '通常版はブックオフ1,200円・駿河屋(HAC-P-ACBAA)2,200円とも据置。ゲオは高価買取リストに掲載なし。Switch 2 Editionはブックオフ2,500円・ゲオ3,000円' },
+  { title: 'マリオカート ワールド', platform: 'Switch2', prices: { bookoff: 3500, geo: 4000, surugaya: 5300 }, prevPrices: { bookoff: 4500, geo: 4500, surugaya: 5300 }, note: 'ブックオフ4,500→3,500円(-1,000円)・ゲオ4,500→4,000円(-500円)と下落。駿河屋(BEE-P-AAAAA)は5,300円据置で最高値' },
+  { title: 'マリオカート8 デラックス', platform: 'Switch', prices: { bookoff: 1700, surugaya: 1800 }, prevPrices: { bookoff: 1500, surugaya: 2500 }, note: '駿河屋(HAC-P-AABPA)は2,500→1,800円(-700円)と下落、ブックオフは1,500→1,700円(+200円)。差は100円に縮まり、駿河屋が最高値。ゲオは高価買取リストに掲載なし' },
+  { title: 'ポケットモンスター スカーレット', platform: 'Switch', prices: { bookoff: 1200, surugaya: 2000 }, prevPrices: { bookoff: 1700, surugaya: 2000 }, note: '駿河屋(HAC-P-ALZXA)2,000円据置で最高値。ブックオフは1,700→1,200円(-500円)。ゲオは高価買取リストに掲載なし' },
+  { title: 'ポケットモンスター バイオレット', platform: 'Switch', prices: { bookoff: 1000, surugaya: 2200 }, prevPrices: { bookoff: 1200, surugaya: 1800 }, note: '駿河屋(HAC-P-ALZYA)は1,800→2,200円(+400円)で最高値、スカーレット(2,000円)を上回りました。ブックオフは1,200→1,000円(-200円)。ゲオは高価買取リストに掲載なし' },
 ];
 
 

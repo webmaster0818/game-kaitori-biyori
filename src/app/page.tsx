@@ -3,6 +3,7 @@ import AuthorBox from '@/components/AuthorBox'
 import { crossStorePrices, hardwarePrices, analyzeTitle, PRICE_SURVEY_DATE, HARDWARE_SURVEY_DATE, STORE_LABELS, type PriceAnalysis } from '@/data/prices';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 import ConsoleBuild from '@/components/ConsoleBuild';
+import GeoTakuhaiNotice from '@/components/GeoTakuhaiNotice';
 
 const services = [
   {
@@ -165,9 +166,18 @@ const steps = [
   { step: 5, title: '現金を受け取る', description: '査定額に納得できれば買取成立です。宅配買取は振込、出張買取・店舗買取はその場で現金を受け取れます。キャンセルも無料です。' },
 ];
 
+// FAQ「ゲームソフトの買取相場」用: crossStorePrices の Switch 通常版の最安〜最高
+const switchSoftValues = crossStorePrices
+  .filter((t) => t.platform === 'Switch')
+  .flatMap((t) => Object.values(t.prices).filter((v): v is number => typeof v === 'number'));
+const switchSoftCount = crossStorePrices.filter((t) => t.platform === 'Switch').length;
+const switchSoftMin = Math.min(...switchSoftValues);
+const switchSoftMax = Math.max(...switchSoftValues);
+const softSurveyLabel = PRICE_SURVEY_DATE.replace(/^(\d+)-0?(\d+)-0?(\d+)$/, '$1年$2月$3日');
+
 const faqs = [
   { q: 'ゲーム買取で最も高く売れるサービスはどこですか？', a: 'ゲームの種類や状態によって最適なサービスは異なるため、一概には申し上げられません。ヒカカク！の一括査定を利用すると最大20社の見積もりを比較できるため、最高値のサービスを見つけやすくなります。' },
-  { q: 'ゲームソフトの買取相場はどのくらいですか？', a: '人気タイトルのSwitch用ソフトで500円〜3,000円程度が目安です。限定版や希少ソフトは、それ以上の価格になることもあります。新品未開封品は特に高い査定額が期待できます。' },
+  { q: 'ゲームソフトの買取相場はどのくらいですか？', a: `当サイトが${softSurveyLabel}にブックオフ・ゲオ・駿河屋の公式買取価格を実測したSwitchの人気ソフト${switchSoftCount}タイトル（通常版・完品前提）では、${switchSoftMin.toLocaleString()}円〜${switchSoftMax.toLocaleString()}円でした。限定版や希少ソフトは、それ以上の価格になることもあります。新品未開封品は特に高い査定額が期待できます。` },
   { q: '壊れたゲーム機も買取してもらえますか？', a: 'サービスによります。ヒカカク！経由の一部業者やティファナでは、ジャンク品の買取に対応している場合があります。ご利用前に各サービスへご確認ください。' },
   { q: '宅配買取の送料はかかりますか？', a: 'ほとんどのサービスで送料は無料です。ヒカカク！経由の業者などでは、専用の宅配キット（段ボール・緩衝材）を無料で提供しています。なお、買取ウリエルは宅配買取の案内がなく、出張・催事・店舗での買取です（2026年10月21日公式確認）。' },
   { q: '買取にかかる時間はどのくらいですか？', a: '店舗買取・出張買取は即日、宅配買取は商品到着から1〜3営業日で査定結果が届きます。買取ウリエルの出張買取は最短で翌日以降の訪問で、査定後その場で現金を受け取れます。' },
@@ -215,6 +225,7 @@ export default function HomePage() {
             <h1 className="text-3xl md:text-5xl font-normal leading-tight mb-5" style={{ letterSpacing: '-1.2px' }}>
               ゲーム買取のおすすめ<span style={{ fontWeight: 500 }}>サービス比較</span>
             </h1>
+          <GeoTakuhaiNotice />
             <p className="text-sm md:text-base mb-7" style={{ color: 'rgba(255,255,255,0.76)', lineHeight: '25px' }}>
               当サイトでは、主要なゲーム買取サービスを共通の項目で比較しています。Switch・PS5・レトロゲームまで、<br className="hidden md:block" />
               お手持ちのゲームを最も高く売却できるサービスをお探しいただけます。
@@ -248,7 +259,7 @@ export default function HomePage() {
             <ul className="text-sm space-y-1.5 mb-4" style={{ color: 'var(--color-text-light)' }}>
               <li>①<span className="font-bold">宅配でまとめて売りたい場合</span> → 送料・査定料・振込手数料無料の<Link href="/review/game-oukoku/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ゲーム王国</Link>／段ボール最大10箱無料の<Link href="/review/kaitori-world/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>カイトリワールド</Link></li>
               <li>②<span className="font-bold">当日中に現金化したい場合</span> → 全国700店舗超の<Link href="/review/bookoff/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>ブックオフ店頭</Link>（店頭査定は通常30分〜1時間程度）</li>
-              <li>③<span className="font-bold">少しでも高く売りたい場合</span> → 店舗ごとの価格は毎週変動するため、下の<span className="font-bold">最新の実測・最高値の店</span>で現時点の最高値の店舗をご確認のうえ、売却することをおすすめします</li>
+              <li>③<span className="font-bold">少しでも高く売りたい場合</span> → 店舗ごとの価格は予告なく変わるため、下の<span className="font-bold">最新の実測・最高値の店</span>で現時点の最高値の店舗をご確認のうえ、売却することをおすすめします</li>
             </ul>
             <ul className="text-sm space-y-2 mb-5" style={{ color: 'var(--color-text-light)' }}>
               <li>・<span className="font-bold">少しでも高く売りたい</span> → まず<Link href="/price-index/" style={{ color: 'var(--color-electric-green)', fontWeight: 700 }}>最新の実測買取価格</Link>で最高値の店舗をご確認ください（下表）。複数社を比較する場合は、一括査定（ヒカカク！）が適しています</li>
