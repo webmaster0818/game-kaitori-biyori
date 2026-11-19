@@ -6,7 +6,7 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証',
   description:
-    'ワンダーレックス（WonderREX）の評判・口コミについて、「ひどい」「怪しい」と言われる理由を検証しています。運営はREXT株式会社（RIZAPグループ／東京都公安委員会 古物商許可 第307732117178号）で、店頭・宅配・出張の3方式でゲーム・レトロゲームに対応する正規の買取事業者です。',
+    'ワンダーレックスの「ひどい」「怪しい」という評判を検証しています。運営はREXT株式会社（RIZAPグループ・古物商許可 第307732117178号）です。ゲームは店頭買取の対象で、宅配買取は対象品目にゲームがなく、受付も一時休止中です（2026年11月19日確認）。',
   keywords: ['ワンダーレックス', 'ワンダーレックス 評判', 'ワンダーレックス 口コミ', 'ワンダーレックス 怪しい', 'ワンダーレックス ゲーム', 'WonderREX 買取'],
   openGraph: {
     images: ['/og.png'],
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 
 const features = [
   { title: 'RIZAPグループの正規リユース事業者', description: '運営はREXT株式会社（RIZAPグループ企業）。東京都公安委員会の古物商許可（第307732117178号・令和3年5月14日）を持つ正規の買取・リユース事業者です。上場グループの傘下で運営体制が明確な点は、安心材料の一つといえます。' },
-  { title: '店頭・宅配・出張の3方式に対応', description: '買取方法は店頭・宅配・出張の3方式です。茨城・千葉を中心に約36店舗の実店舗を構える店頭買取が業態の中心で、その場で査定・現金化したい方に適しています。宅配・出張にも対応しています。' },
+  { title: '店頭・宅配・出張の3方式に対応', description: '買取方法は店頭・出張・宅配の3方式です。店舗は全国42店舗（茨城19・千葉9・海外1を含む・公式店舗一覧 2026年11月19日確認）で、その場で査定・現金化したい方に適しています。宅配買取は対象品目がブランド品・時計・貴金属・ファッション・カメラなどに限られ、2026年11月19日時点では受付を一時休止しています。' },
   { title: 'ゲーム・レトロゲームが買取対象', description: '公式の取扱品目「ゲーム・CD・DVD」にゲーム／レトロゲーム、ゲーム機／レトロゲーム機本体が明記されています。旧世代のレトロ機・ソフトも対象に含まれる点は、レトロゲームを処分したい方にとって選択肢の一つになります。' },
-  { title: '査定料無料・お手持ちの段ボール利用で加算特典', description: '査定料は店頭・宅配とも無料です。宅配買取は送料も無料です。さらに、ご自身で用意した段ボールで送ると成約額に+500円が加算される特典があります（成約額3,000円以上が対象）。' },
+  { title: '査定料無料・お手持ちの段ボール利用で加算特典', description: '査定料は無料です。宅配買取は査定料・配送料・キット代・振込手数料が無料で、ご自身で用意した段ボールで送ると成約額に500円が上乗せされます（成約額3,000円以上が対象）。ただし宅配買取は2026年11月19日時点で受付を一時休止しており、対象品目にゲームは含まれません。' },
 ];
 
 const steps = [
-  { step: 1, title: '買取方法を選ぶ（店頭・宅配・出張）', description: '店頭・宅配・出張の3方式から選びます。ゲームは店頭導線が中心の業態のため、確実に売りたい場合は近くの店舗（茨城・千葉中心）への持ち込みが分かりやすい選択です。' },
-  { step: 2, title: '申込み・持ち込み／発送', description: '宅配の場合は公式サイトから申し込み、商品を梱包して発送します（送料無料）。店頭の場合はそのまま持ち込みます。いずれも本人確認書類の提出が必要です。' },
+  { step: 1, title: '買取方法を選ぶ（店頭・宅配・出張）', description: 'ゲームを売る場合は、近くの店舗（茨城・千葉が中心）への持ち込みが基本です。宅配買取は対象品目にゲームがなく、2026年11月19日時点では受付も一時休止しています。' },
+  { step: 2, title: '申込み・持ち込み／発送', description: '店頭の場合は商品と本人確認書類を持ち込みます。宅配買取（ゲームは対象外・2026年11月19日時点で受付休止中）は、公式サイトから申し込んで梱包・発送する流れで、20歳未満は利用できません。' },
   { step: 3, title: '査定・結果提示', description: '商品を査定し、買取金額が提示されます。査定料は無料です。店頭ならその場で結果が分かり、そのままキャンセルしても無料です。' },
   { step: 4, title: '成約で支払い', description: '金額に納得した場合は成約し、支払いに進みます。宅配の振込手数料は無料です。宅配で成約しない場合、返送料はお客様のご負担となる点にご注意ください。' },
 ];
@@ -40,17 +40,17 @@ const targets = [
 
 const faqs = [
   { q: 'ワンダーレックスは「ひどい」「怪しい」という評判は本当ですか？', a: '運営元はREXT株式会社（RIZAPグループ企業）で、東京都公安委員会の古物商許可（第307732117178号・令和3年5月14日）を持つ正規のリユース事業者です。会社情報・許可番号が公開されており、「怪しい」といえる根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。ヒカカク!の口コミ89件（2026年11月17日取得）は総合1.99点で、★1が58件と低い評価が多くなっています。ただし、ゲームの売却に触れた投稿は3件で、多くは衣類・ブランド品などの投稿です（最新の投稿は2024年4月）。ゲームやトレカは専門店の方が高いこともあるため、当サイトの価格インデックスで比較してから判断することをおすすめします。' },
-  { q: '宅配買取でゲームは売れますか？', a: '公式の取扱品目にはゲーム／レトロゲーム、ゲーム機本体が明記されており、店頭ではゲームが買取対象です。ただし公式の宅配買取ページの訴求はブランド・貴金属・時計・カメラが中心で、宅配でのゲーム買取可否は公式に明記がありません（要確認）。ゲームは店頭導線が中心と考えられるため、宅配で送りたい場合は事前に公式へゲームの宅配買取が可能か問い合わせることをおすすめします。' },
+  { q: '宅配買取でゲームは売れますか？', a: '売れません。公式の宅配買取ページには「宅配買取ではこれらのアイテムのみお買取いたします」として、ブランドアイテム・ジュエリー・腕時計・貴金属・ファッション・カメラが挙げられており、ゲームは含まれていません。対象外の品物を送った場合の返送料はお客様負担です。また、2026年11月19日時点で宅配買取の受付はシステムメンテナンスのため一時休止しています（再開時期は未定）。ゲームは店頭買取の対象です。' },
   { q: '送料・返送料・査定料はかかりますか？', a: '査定料は店頭・宅配とも無料です。宅配買取の送料は無料、振込手数料も無料です。ただし宅配でキャンセル（成約しない）場合の返送料はお客様負担となります。店頭ではその場でのキャンセルも無料です。出張買取の出張費については公式に明記がないため、ご利用前に公式サイトにてご確認ください。' },
   { q: '自分で用意した段ボールで送ると得になりますか？', a: '公式では、自分で用意した段ボールを使って宅配買取に送ると成約額に+500円が加算される特典があります（成約額3,000円以上が対象）。まとめて送り、成約額が条件を満たす場合は買取金額が増えます。適用条件は変更される場合があるため、申込前に公式で最新の条件をご確認ください。' },
   { q: 'ゲームの実際の買取価格はいくらですか？', a: 'ゲーム系の個別タイトルの買取価格は公式に公開されておらず、実際の金額は問い合わせが必要です。買取価格は時期・在庫・状態で変動します。1点でも高く売りたい場合は、当サイトの公式価格を実測した買取価格インデックスで専門店の価格と比べてから判断することをおすすめします。レトロゲームやプレミア価格が付くソフトは、ゲーム専門店の方が高くなるケースがあります。' },
-  { q: 'クーリングオフや店舗の場所について教えてください。', a: '買取（売却）は原則クーリングオフの対象外で、ワンダーレックスの公式にクーリングオフに関する明示記載は確認できませんでした（確認不可）。店舗は茨城・千葉を中心に約36店舗を展開しています。最新の店舗一覧・営業時間・取扱可否は公式サイトでご確認ください。' },
+  { q: 'クーリングオフや店舗の場所について教えてください。', a: '買取（売却）は原則クーリングオフの対象外で、ワンダーレックスの公式にクーリングオフに関する明示記載は確認できませんでした（確認不可）。店舗は全国42店舗（茨城19・千葉9・海外1を含む・公式店舗一覧 2026年11月19日確認）です。最新の店舗一覧・営業時間・取扱可否は公式サイトでご確認ください。' },
 ];
 
 export default function WonderrexReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-11-17", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ワンダーレックスの評判・口コミはひどい？ゲーム買取の実態・手数料を検証", "datePublished": "2026-07-10", "dateModified": "2026-11-19", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ワンダーレックス' }]} />
 
@@ -61,7 +61,7 @@ export default function WonderrexReviewPage() {
             ワンダーレックスの評判・口コミはひどい？<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>ゲーム買取の実態を検証</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            ワンダーレックスは、RIZAPグループのREXT株式会社が運営する、店頭・宅配・出張に対応したリユース買取サービスです。茨城・千葉を中心とした約36店舗での店頭買取が中心で、ゲーム／レトロゲームも買取対象です。ただし、宅配でのゲーム買取可否と実際の買取価格は公式に明記がないため、事前の確認が必要です。当サイトでは、「ひどい・怪しい」と言われる理由の実態と、適した利用者・注意点を公式情報をもとに整理しています。
+            ワンダーレックスは、RIZAPグループのREXT株式会社が運営する、店頭・宅配・出張に対応したリユース買取サービスです。茨城・千葉を中心とした全国42店舗での店頭買取が中心で、ゲーム／レトロゲームも買取対象です。宅配買取は対象品目にゲームがなく、2026年11月19日時点では受付も一時休止しています。ゲームの買取価格は公式に公開されていないため、事前の確認が必要です。当サイトでは、「ひどい・怪しい」と言われる理由の実態と、適した利用者・注意点を公式情報をもとに整理しています。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.wonderrex.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-2.5 px-6">
@@ -78,9 +78,9 @@ export default function WonderrexReviewPage() {
         {/* Conclusion */}
         <section className="mb-12">
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
-            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>RIZAPグループで古物商許可を持つ正規事業者、店頭中心でゲーム・レトロゲームに対応（宅配でのゲーム買取可否と価格は要確認）</h2>
+            <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>RIZAPグループで古物商許可を持つ正規事業者、店頭でゲーム・レトロゲームに対応（宅配はゲーム対象外・受付休止中）</h2>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
-              ワンダーレックス（WonderREX）はREXT株式会社（RIZAPグループ企業／東京都公安委員会 古物商許可 第307732117178号）が運営する正規のリユース買取サービスです。店頭・宅配・出張の3方式に対応し、公式の取扱品目にゲーム／レトロゲーム、ゲーム機本体が明記されています。会社情報・許可番号が公開されており、「怪しい」といえる根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。一方で<strong>ゲームの買取は茨城・千葉を中心とした店頭が主体で、宅配でのゲーム買取可否は公式に明記がない</strong>点、また<strong>ゲーム系の実際の買取価格は公式に公開されておらず、問い合わせが必要</strong>な点にご注意ください。近くに店舗がある方や、まとめて処分したい方に適したサービスです。
+              ワンダーレックス（WonderREX）はREXT株式会社（RIZAPグループ企業／東京都公安委員会 古物商許可 第307732117178号）が運営する正規のリユース買取サービスです。店頭・出張・宅配の3方式があり、公式の取扱品目にゲーム／レトロゲーム、ゲーム機本体が明記されています。会社情報・許可番号が公開されており、「怪しい」といえる根拠は確認できません（断定ではなく、確認項目にもとづく評価です）。一方で<strong>ゲームの買取は店頭が主体で、宅配買取の対象品目にゲームは含まれない（宅配は2026年11月19日時点で受付休止中）</strong>点、また<strong>ゲーム系の実際の買取価格は公式に公開されておらず、問い合わせが必要</strong>な点にご注意ください。近くに店舗がある方や、まとめて処分したい方に適したサービスです。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>現在最も高い業者を価格で確認する</Link>／<Link href="/review/hikakaku/" style={{ color: 'var(--color-electric-green)' }}>専門店の宅配買取（ヒカカク系）と比較する</Link>／<Link href="/review/kaitori-ouji/" style={{ color: 'var(--color-electric-green)' }}>返送料まで無料の宅配買取（買取王子）と比較する</Link>
@@ -110,12 +110,12 @@ export default function WonderrexReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>運営会社</th><td className="py-2">REXT株式会社（RIZAPグループ企業／非上場）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">東京都新宿区西新宿8-17-1 住友不動産新宿グランドタワー36階</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">東京都公安委員会 第307732117178号（令和3年5月14日）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方法</th><td className="py-2">店頭・宅配・出張の3方式（茨城・千葉を中心に約36店舗の店頭が中心）</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>買取方法</th><td className="py-2">店頭・出張・宅配の3方式。店舗は全国42店舗（茨城19・千葉9ほか・海外1）。宅配はゲーム対象外で、2026年11月19日時点で受付休止中</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>主な取扱品目</th><td className="py-2">ゲーム／レトロゲーム・ゲーム機本体／CD・DVD／ブランド品・貴金属・時計・カメラ・家電・衣類 など幅広く</td></tr>
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>費用</th><td className="py-2">査定料無料（店頭・宅配とも）。宅配は送料・振込手数料無料。宅配キャンセル時の返送料はお客様負担</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ワンダーレックス（WonderREX）公式サイト（会社概要・買取案内）2026年7月10日確認。宅配でのゲーム買取可否は公式に明記なし＝要確認。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：REXT株式会社 会社概要（rext.jp）・ワンダーレックス公式サイトの宅配買取ページ・店舗一覧・よくあるご質問（2026年11月19日確認）。古物商許可番号は2026年7月10日確認。</p>
           </div>
         </section>
 
@@ -131,7 +131,7 @@ export default function WonderrexReviewPage() {
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>振込手数料</th><td className="py-2">無料（宅配）</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ワンダーレックス公式サイト（買取案内）2026年7月10日確認。補足特典：自分で用意した段ボールで送ると成約額に+500円加算（成約額3,000円以上が対象）。返送料まで無料のサービスを希望する場合は、返送料無料を明記している他社との比較をおすすめします。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ワンダーレックス公式サイト（宅配買取ページ・よくあるご質問）2026年11月19日確認。補足特典：自分で用意した段ボールで送ると成約額に500円上乗せ（成約額3,000円以上が対象）。宅配買取は2026年11月19日時点で受付を一時休止しています。返送料まで無料のサービスを希望する場合は、返送料無料を明記している他社との比較をおすすめします。</p>
           </div>
         </section>
 
@@ -171,7 +171,7 @@ export default function WonderrexReviewPage() {
             <div className="glass-card p-6">
               <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>デメリット</h3>
               <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>- 宅配でのゲーム買取可否は公式に明記なし（要確認）</li>
+                <li>- 宅配買取の対象品目にゲームは含まれない（宅配は2026年11月19日時点で受付休止中）</li>
                 <li>- ゲーム系の実際の買取価格は非公開（問い合わせが必要）</li>
                 <li>- 宅配キャンセル時の返送料はお客様負担</li>
                 <li>- 店頭は茨城・千葉中心で地域が限られる</li>
@@ -211,7 +211,7 @@ export default function WonderrexReviewPage() {
             ))}
           </div>
           <p className="text-xs mt-4" style={{ color: 'var(--color-text-lighter)' }}>
-            ※ 取扱品目・買取可否は店舗や時期により変更される場合があります。特に宅配でのゲーム買取可否は公式に明記がないため、事前に公式サイト・店舗へご確認ください。
+            ※ 取扱品目・買取可否は店舗や時期により変更される場合があります。宅配買取の対象品目にゲームは含まれません（2026年11月19日確認）。ゲームの買取可否は店舗へご確認ください。
           </p>
         </section>
 
@@ -249,7 +249,7 @@ export default function WonderrexReviewPage() {
           <a href="https://www.wonderrex.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-accent py-3 px-8 inline-block">
             ワンダーレックスの公式サイトを見る
           </a>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※料金・条件・取扱品目は変更される場合があります。特に宅配でのゲーム買取可否や実際の買取価格は、申込前に公式サイトで最新情報をご確認ください。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※料金・条件・取扱品目は変更される場合があります。特に宅配買取の受付再開（2026年11月19日時点で休止中）や実際の買取価格は、申込前に公式サイトで最新情報をご確認ください。</p>
         </section>
 
         {/* Internal Links */}
