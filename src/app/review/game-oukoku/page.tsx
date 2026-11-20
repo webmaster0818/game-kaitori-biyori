@@ -46,7 +46,7 @@ const faqs = [
 export default function GameOukokuReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-11", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲーム王国の評判・口コミ｜ヒカカク2,485件の星分布と公式条件で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-20", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲーム王国' }]} />
 
       {/* Hero */}
@@ -109,11 +109,12 @@ export default function GameOukokuReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>所在地</th><td className="py-2">大阪府大阪市東成区中本2丁目1-13 大阪スポンジャービル6階</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>古物商許可</th><td className="py-2">大阪府公安委員会許可 第621180142468号</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>送料・手数料</th><td className="py-2">送料・査定料・振込手数料無料（送料無料は佐川急便の集荷限定）。梱包キットは1申込2箱まで無料</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定・入金</th><td className="py-2">到着後1〜3営業日で査定連絡。振込情報の確認後、最短当日〜翌営業日に入金（土日除く）</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル</th><td className="py-2">査定後キャンセルの返送料はゲーム王国負担（無料）。一部商品のみの返送も可能。返送は約3営業日。買取成立後のキャンセルは不可</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定・入金</th><td className="py-2">到着後3営業日以内にメールで査定連絡。振込情報の確認後、最短当日〜翌営業日に入金（土日除く）。受取は本人名義の銀行口座への振込のみ</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>利用できる年齢</th><td className="py-2">18歳以上（高校生を含む）。18歳未満の方は保護者の方の申込が必要</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル</th><td className="py-2">査定後キャンセルの返送料はゲーム王国負担（無料）。一部商品のみの返送も可能。返送までに1〜3営業日ほど。買取成立後のキャンセルは不可</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・買取の流れ）2026年10月18日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・買取の流れ・利用規約 第12条）2026年10月18日確認・2026年11月20日に再確認</p>
           </div>
         </section>
 
@@ -129,13 +130,13 @@ export default function GameOukokuReviewPage() {
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料（ゲーム王国負担）。一部商品のみの返送も可能</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・利用規約 第12条）2026年10月18日確認。査定額に納得できなければ費用負担なしで返送してもらえます。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式サイト（会社概要・FAQ・利用規約 第12条）2026年11月20日確認。査定額に納得できなければ費用負担なしで返送してもらえます。</p>
           </div>
         </section>
 
         {/* Price Examples */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />公式の参考買取価格の例（2026年10月18日確認）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />公式の参考買取価格の例（2026年11月20日確認）</h2>
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <thead>
@@ -147,7 +148,7 @@ export default function GameOukokuReviewPage() {
                 <tr><td className="py-2 pr-4">Nintendo Switch 有機ELモデル</td><td className="py-2 font-bold" style={{ color: 'var(--color-electric-green)' }}>18,000円</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式 機種別買取価格ページ（PS5・Switch、2026年10月18日閲覧）。2026年6月12日時点はPS5 Pro 70,000円・PS5 40,000円でした。参考価格は付属品完備・動作良好が前提で、欠品・状態により減額されます。価格は日々変動します。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ゲーム王国公式 機種別買取価格ページ（PS5・Switch、2026年10月18日閲覧・2026年11月20日に同額を確認）。2026年6月12日時点はPS5 Pro 70,000円・PS5 40,000円でした。参考価格は付属品完備・動作良好が前提で、欠品・状態により減額されます。価格は日々変動します。</p>
           </div>
         </section>
 
