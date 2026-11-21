@@ -233,7 +233,7 @@ export default function HighValueSoftwarePage() {
             このページは「どのソフトがいくらで売れるか」をタイトル単位で扱っています。買取店の選び方（送料・振込日数・口コミを含めた比較）は、<Link href="/" className="underline font-bold" style={{ color: '#FFFFFF' }}>ゲーム買取おすすめランキング（トップページ）</Link>でご確認ください。
           </p>
           <p className="text-sm leading-relaxed mb-4" style={{ color: '#E2E8F0' }}>
-            ジョーシンの買取価格一覧をお探しの方へ：ジョーシンのWeb買取「買取のジョー」は2026年11月12日時点で一時停止中（復旧日は未定）のため、このページには掲載していません。店頭買取の状況と口コミ評価は<Link href="/review/joshin/" className="underline font-bold" style={{ color: '#FFFFFF' }}>ジョーシンのゲーム買取の現状</Link>にまとめています。
+            ジョーシンの買取価格一覧をお探しの方へ：ジョーシンのWeb買取「買取のジョー」は2026年11月21日時点で一時停止中（復旧日は未定）のため、このページには掲載していません。店頭買取の状況と口コミ評価は<Link href="/review/joshin/" className="underline font-bold" style={{ color: '#FFFFFF' }}>ジョーシンのゲーム買取の現状</Link>にまとめています。
           </p>
           <p className="text-xs" style={{ color: '#94A3B8' }}>最終確認日: {SURVEY_DATE_LABEL}（ブックオフ・ゲオ・駿河屋の公式ページ）</p>
           <div className="flex flex-wrap gap-3 mt-4">

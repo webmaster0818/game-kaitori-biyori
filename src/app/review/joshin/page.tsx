@@ -5,7 +5,7 @@ import AuthorBox from '@/components/AuthorBox';
 
 const TITLE = 'ジョーシンのゲーム買取価格一覧は見られる？Web買取「買取のジョー」一時停止中の店頭買取と口コミ評価を確認【2026年11月】';
 const DESC =
-  'ジョーシンのゲーム買取について、2026年11月12日に公式で確認した内容をまとめています。Web買取「買取のジョー」は一時停止中で復旧日は未定、買取は実施店舗の店頭で受け付けています。ヒカカクの評価3.87（117件）と、価格を比べる方法も掲載しています。';
+  'ジョーシンのゲーム買取について、2026年11月21日に公式で確認した内容をまとめています。Web買取「買取のジョー」は一時停止中で復旧日は未定、買取は実施店舗の店頭で受け付けています。ヒカカクの評価3.87（117件）と、価格を比べる方法も掲載しています。';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,7 +46,7 @@ const ratings = [
 const faqs = [
   {
     q: 'ジョーシンのゲーム買取価格一覧は見られますか？',
-    a: '2026年11月12日時点で、ジョーシンのWeb買取サイト「買取のジョー」は一時停止中で、公式はWeb買取の申込とマイページが利用できないと案内しています。価格の検索ができるかどうかは、当サイトの環境から買取サイトを開けなかったため確認できていません。売りたいソフトの価格は、店頭で査定を受けて確かめるか、価格を公開している他社の買取サイトで目安を調べる方法があります。',
+    a: '2026年11月21日時点で、ジョーシンのWeb買取サイト「買取のジョー」は一時停止中で、公式はWeb買取の申込とマイページが利用できないと案内しています。価格の検索ができるかどうかは、当サイトの環境から買取サイトを開けなかったため確認できていません。売りたいソフトの価格は、店頭で査定を受けて確かめるか、価格を公開している他社の買取サイトで目安を調べる方法があります。',
   },
   {
     q: 'ジョーシンでゲームの買取は今もしていますか？',
@@ -54,11 +54,11 @@ const faqs = [
   },
   {
     q: '買取のジョーはいつ再開しますか？',
-    a: '公式の告知では復旧予定日時は「未定」です（2026年11月12日確認）。告知の理由は「メンテナンス実施に伴い」と書かれています。同社は2026年10月16日に不正アクセスを認識し、一部のサービスを停止していると公表していますが、買取のジョーの停止との関係は公式には明記されていません。',
+    a: '公式の告知では復旧予定日時は「未定」です（2026年11月21日確認）。告知の理由は「メンテナンス実施に伴い」と書かれています。同社は2026年10月16日に不正アクセスを認識し、一部のサービスを停止していると公表していますが、買取のジョーの停止との関係は公式には明記されていません。',
   },
   {
     q: 'ジョーシンの買取の口コミ・評判はどうですか？',
-    a: '買取業者の口コミサイト「ヒカカク！」では、Joshin(ジョーシン)の総合評価は3.87点・117件です（星5が40件、星4が37件、星3が29件、星2が7件、星1が4件。2026年11月12日確認）。ゲームの口コミでは、店頭での対応の早さや、まとめ売りで上乗せがあった点が評価されています。一方で、読み込めないソフトは買い取ってもらえなかった、古いソフトは低い金額だったという声もあります。ページの見出しは「2023年2月最新」で、数年前の投稿も含まれます。',
+    a: '買取業者の口コミサイト「ヒカカク！」では、Joshin(ジョーシン)の総合評価は3.87点・117件です（星5が40件、星4が37件、星3が29件、星2が7件、星1が4件。2026年11月21日確認）。ページの見出しは「2023年2月最新」で、ゲーム以外の買取の口コミと数年前の投稿を含みます。',
   },
   {
     q: 'ジョーシンと他の店ではどちらが高く売れますか？',
@@ -69,7 +69,7 @@ const faqs = [
 export default function JoshinReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: TITLE, datePublished: '2026-11-12', dateModified: '2026-11-12', author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: TITLE, datePublished: '2026-11-12', dateModified: '2026-11-21', author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ジョーシン' }]} />
 
@@ -80,7 +80,7 @@ export default function JoshinReviewPage() {
             <span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>Web買取は一時停止中・店頭買取と口コミ評価</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed" style={{ color: '#CBD5E1' }}>
-            最終更新日：2026年11月12日（公式の告知・店舗情報・口コミサイトを同日に確認）
+            最終更新日：2026年11月21日（公式の告知・店舗情報・口コミサイトを同日に確認）
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function JoshinReviewPage() {
           <div className="glass-card p-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
             <h2 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>結論：Web買取「買取のジョー」は一時停止中で、買取は実施店舗の店頭で受け付けています</h2>
             <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1" style={{ color: 'var(--color-text-light)' }}>
-              <li>ジョーシンのWeb買取サイト「買取のジョー」は<strong>一時停止中で、復旧予定日時は未定</strong>です（2026年11月12日 公式確認）。</li>
+              <li>ジョーシンのWeb買取サイト「買取のジョー」は<strong>一時停止中で、復旧予定日時は未定</strong>です（2026年11月21日 公式確認）。</li>
               <li>公式は、買取を希望する場合は<strong>最寄りの買取実施店舗で店頭買取</strong>を利用するよう案内しています。店舗ごとに「ゲーム買取(本体・ソフト)」の表示を確認してください。</li>
               <li>Web上の買取価格一覧は、当サイトの環境から開けず、<strong>掲載の有無を確認できていません</strong>。価格の目安は、価格を公開している他社の買取サイトで調べられます（下の「価格を比べる方法」）。</li>
               <li>口コミサイト「ヒカカク！」の評価は<strong>3.87点・117件</strong>です（ゲーム以外の買取を含む）。</li>
@@ -99,7 +99,7 @@ export default function JoshinReviewPage() {
         </section>
 
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ジョーシンの買取の現状（2026年11月12日確認）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ジョーシンの買取の現状（2026年11月21日確認）</h2>
           <div className="glass-card p-6 overflow-x-auto">
             <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
               <tbody>
@@ -112,7 +112,7 @@ export default function JoshinReviewPage() {
               </tbody>
             </table>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              出典：<a href="https://www.joshin.co.jp/ja/contact/jokaitori.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">株式会社Joshin「買取のジョー 一時停止のご案内」</a>／<a href="https://store.joshin.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Joshin 店舗情報</a>（いずれも2026年11月12日確認）。店舗検索の項目は絞り込みの選択肢として確認したもので、実施店舗の数は数えていません。
+              出典：<a href="https://www.joshin.co.jp/ja/contact/jokaitori.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">株式会社Joshin「買取のジョー 一時停止のご案内」</a>／<a href="https://store.joshin.co.jp/" target="_blank" rel="noopener noreferrer nofollow" className="underline">Joshin 店舗情報</a>（いずれも2026年11月21日確認）。店舗検索の項目は絞り込みの選択肢として確認したもので、実施店舗の数は数えていません。
             </p>
           </div>
         </section>
@@ -129,7 +129,7 @@ export default function JoshinReviewPage() {
               ))}
             </ul>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
-              出典：<a href="https://www.joshin.co.jp/ja/news.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">株式会社Joshin ニュース一覧</a>（2026年10月17日・10月19日・10月26日〔第2報〕の公表資料。2026年11月12日確認）。件数は漏洩した可能性のある最大件数で、漏洩が確定した件数ではないと説明されています。
+              出典：<a href="https://www.joshin.co.jp/ja/news.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">株式会社Joshin ニュース一覧</a>（2026年10月17日・10月19日・10月26日〔第2報〕の公表資料。2026年11月21日確認）。件数は漏洩した可能性のある最大件数で、漏洩が確定した件数ではないと説明されています。
             </p>
           </div>
         </section>
@@ -156,14 +156,10 @@ export default function JoshinReviewPage() {
               </tbody>
             </table>
             <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>
-              星4以上は117件中77件（約66%）です。ゲームの買取に関する口コミでは、次のような内容が見られます（当サイトによる要約で、原文の転載ではありません）。
+              星4以上は117件中77件（約66%）です。個々の口コミの内容は投稿時期や買取品目がさまざまなため、当サイトでは傾向の要約を掲載していません。内容は出典ページで直接ご確認ください。
             </p>
-            <ul className="text-sm leading-relaxed list-disc pl-5 space-y-1 mb-3" style={{ color: 'var(--color-text-light)' }}>
-              <li>評価されている点：店頭での査定が早い、店員の対応が丁寧、複数本をまとめて売ると上乗せがあった</li>
-              <li>不満の点：自宅で遊べても読み込めないソフトは買い取ってもらえなかった、古いソフトは低い金額だった、査定に時間がかかった</li>
-            </ul>
             <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>
-              出典：<a href="https://hikakaku.com/company/25/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク！ Joshin(ジョーシン)の買取情報・口コミ・評判</a>（2026年11月12日確認）。ページの見出しは「2023年2月最新」で、スマートフォンなどゲーム以外の買取の口コミと、数年前の投稿を含みます。現在の店頭の対応を保証するものではありません。
+              出典：<a href="https://hikakaku.com/company/25/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク！ Joshin(ジョーシン)の買取情報・口コミ・評判</a>（2026年11月21日確認）。ページの見出しは「2023年2月最新」で、スマートフォンなどゲーム以外の買取の口コミと、数年前の投稿を含みます。現在の店頭の対応を保証するものではありません。
             </p>
           </div>
         </section>
@@ -198,7 +194,7 @@ export default function JoshinReviewPage() {
         </section>
 
         <p className="text-xs mb-8" style={{ color: 'var(--color-text-light)' }}>
-          ※当サイトはジョーシンと提携していません。内容は2026年11月12日の確認時点のもので、停止・再開の状況は変わる場合があります。来店前に公式の店舗情報をご確認ください。
+          ※当サイトはジョーシンと提携していません。内容は2026年11月21日の確認時点のもので、停止・再開の状況は変わる場合があります。来店前に公式の店舗情報をご確認ください。
         </p>
 
         <AuthorBox />
