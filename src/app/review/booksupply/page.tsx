@@ -50,7 +50,7 @@ const faqs = [
 export default function BooksupplyReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックサプライの評判・口コミは悪い？ゲーム宅配買取の手数料・実態を検証", "datePublished": "2026-07-10", "dateModified": "2026-07-10", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ブックサプライの評判・口コミは悪い？ゲーム宅配買取の手数料・実態を検証", "datePublished": "2026-07-10", "dateModified": "2026-11-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": faqs.map((f) => ({"@type": "Question", "name": f.q, "acceptedAnswer": {"@type": "Answer", "text": f.a}}))}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ブックサプライ' }]} />
 
@@ -215,28 +215,30 @@ export default function BooksupplyReviewPage() {
           </p>
         </section>
 
-        {/* Review Tendency */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト・比較メディア調査）</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・まとめて送るだけで処分でき手間が少ない</li>
-                <li>・ゲーム機・DVDは思ったより値が付いた</li>
-                <li>・段ボール無料で始めやすい</li>
-              </ul>
+        {/* ヒカカク!の口コミ（出典つき・2026年11月22日取得） */}
+        <section className="mb-12" id="reviews">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />ヒカカク!に掲載されているブックサプライの口コミ</h2>
+          <div className="glass-card p-6 text-sm" style={{ color: 'var(--color-text-light)' }}>
+            <p className="mb-3">買取比較サイト「ヒカカク!」の「ブックサプライ」のページでは、<strong>総合評価2.33点（5点満点）・口コミ110件</strong>、最新の投稿日は2024年12月23日です（2026年11月22日取得）。</p>
+            <div className="overflow-x-auto mb-3">
+              <table className="w-full text-sm">
+                <thead><tr><th className="text-left p-2">★5</th><th className="text-left p-2">★4</th><th className="text-left p-2">★3</th><th className="text-left p-2">★2</th><th className="text-left p-2">★1</th><th className="text-left p-2">「悪い・ひどい・買取が安い」の比率（ヒカカク!表示）</th></tr></thead>
+                <tbody><tr><td className="p-2">24件</td><td className="p-2">12件</td><td className="p-2">4件</td><td className="p-2">6件</td><td className="p-2">64件</td><td className="p-2">63.6%</td></tr></tbody>
+              </table>
             </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・本の査定額が想定より安かった</li>
-                <li>・お試し査定と最終査定額に差があった</li>
-                <li>・少額だと送料・返送料の負担が気になる</li>
-              </ul>
-            </div>
+            <p className="mb-3">一覧の本文を当サイトで読んで数えたところ（1件が複数の内容に触れる場合は重複して数えています）、多かった内容は次のとおりです。</p>
+            <ul className="space-y-1 mb-3">
+              <li>・査定額が想定より安かった：57件（他社の買取額と比べて安かったとする投稿16件を含みます）</li>
+              <li>・査定額が1,000円未満で寄付扱いとなり、入金がなかった：16件</li>
+              <li>・査定・入金に時間がかかった、連絡がなかった：16件</li>
+              <li>・事前のWeb査定（お試し査定）と最終査定額の差が大きかった：13件</li>
+              <li>・返送が着払い・不可などで、キャンセルしにくかった：13件</li>
+              <li>・査定額に満足した：26件（DVD・新しい本・全巻セット・専門書のまとめ売りなど）</li>
+              <li>・査定・入金が早かった：18件／段ボール無料・集荷で手軽だった：18件</li>
+            </ul>
+            <p className="mb-3">110件の多くは本・コミック・DVDの売却で、ゲーム機・ソフトの売却に触れた投稿は6件です（★4〜5が2件、★1〜2が4件）。ゲームの買取の評価として読むには件数が少なく、最新の投稿も2024年12月のため、現在の査定と異なる場合があります。</p>
+            <p className="text-xs">出典：<a href="https://hikakaku.com/company/860/reviews/" target="_blank" rel="noopener noreferrer nofollow" className="underline">ヒカカク!「ブックサプライ 買取」のクチコミ一覧</a>（2026年11月22日取得・2ページ）。総合評価・件数・星別件数・比率はヒカカク!の表示で、内容別とゲームに触れた投稿の件数は当サイトが一覧の本文から数えたものです。口コミは個人の体験で、投稿時点の内容です。当サイトでは出典と取得日を確認できない口コミは掲載しておりません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店の価格と比較してから判断することをおすすめします。</p>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年7月調査）。個別の体験を保証するものではありません。ゲームを高く売りたい場合は、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>公式価格を実測した買取価格インデックス</Link>で専門店の価格と比較してから判断することをおすすめします。</p>
         </section>
 
         {/* FAQ */}
