@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: 'ハードオフのゲーム買取価格表はある？評判・口コミ97件の集計と他店の公開価格（2026年10月）',
+  title: 'ハードオフのゲーム買取価格表はある？公式の買取強化・買取できない品物と他5店の公開価格【2026年11月】',
   description:
-    'ハードオフはゲームの買取価格表を公開していません。代わりに使えるオファー買取の評判（App Storeレビュー97件を集計）、ジャンク買取、4つの買取方式と、価格を公開している5店のSwitch 2実測価格（2026年10月20日）を掲載しています。',
-  keywords: ['ハードオフ ゲーム買取', 'ハードオフ 買取 評判', 'ハードオフ ジャンク 買取', 'ハードオフ ゲーム 安い', 'ハードオフ 宅配買取'],
+    'ハードオフはゲームの買取価格表を公開していません（2026年11月22日 公式で確認）。公式に載っている買取強化品目・買取できない品物（ケースがないディスク等）と、価格を公開している5店のSwitch 2実測価格（11月15日）、オファー買取レビュー97件の集計を掲載しています。',
+  keywords: ['ハードオフ ゲーム買取', 'ハードオフ ゲーム買取 表', 'ハードオフ ゲームソフト 買取価格', 'ハードオフ 買取 評判', 'ハードオフ ジャンク 買取', 'ハードオフ ゲーム 安い', 'ハードオフ 宅配買取'],
   openGraph: {
     images: ['/og.png'],
-    title: 'ハードオフのゲーム買取価格表はある？評判・口コミを検証',
-    description: 'ジャンク買取に対応し、全国1,000店超を展開するハードオフのゲーム買取を、公式情報と口コミ傾向で検証しています。',
+    title: 'ハードオフのゲーム買取価格表はある？公式の買取条件と他5店の公開価格【2026年11月】',
+    description: 'ハードオフはゲームの買取価格表を公開していません。公式で確認できる買取強化品目・買取できない品物と、価格を公開している5店のSwitch 2実測価格を掲載しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -34,6 +34,8 @@ const dislikeReasons = [
 const faqs = [
   { q: 'ハードオフのゲーム買取は安いですか？', a: '品物によって異なります。ハードオフは買取価格表を公開しておらず、グループのデータベースと店舗の地域性で査定額が決まる仕組みのため、人気タイトルはゲーム専門店やゲオ・ブックオフの公表価格より安くなる場合があります。一方、他店で断られるジャンク品・古い機種に値が付くのは強みです。人気作は当サイトの価格インデックスで相場を確認してから売却先を選ぶことをおすすめします。' },
   { q: '壊れたゲーム機でも本当に買い取ってもらえますか？', a: '公式FAQに「壊れていてもジャンク品として店頭にて販売しています。喜んで買取させていただきます」と明記されています。ジャンク品の買取・販売はハードオフの代表的な取り組みです（ジャンクは店頭買取が基本で、販売時の保証対象外という扱い）。' },
+  { q: 'ハードオフのゲーム買取価格表はどこで見られますか？', a: 'ハードオフはゲームの買取価格表を公開していません。公式サイト・宅配買取サイトのいずれにも商品ごとの買取価格はなく、宅配買取サイトの「買取実績」も品名のみで金額の記載はありません（2026年11月22日 当サイト確認）。売る前に金額を知りたい場合は、アプリ・Webの「オファー買取」で見積もりを受け取る方法があります。比較の目安として、価格を公開している5店のSwitch 2の買取価格を本ページに掲載しています。' },
+  { q: 'ケースがないゲームソフトや箱のない本体も売れますか？', a: '本体は、箱や説明書がなくても売れます（宅配買取の公式案内では、バッテリーや専用コードなど動作に必要なものがあればよいとされています）。一方、ケースがないディスク系のソフトは、PCゲームソフト・オンライン用ソフトとともに「ハードオフグループではお取り扱いできません」と公式に記載されています（2026年11月22日 当サイト確認）。' },
   { q: 'ハードオフに宅配買取はありますか？', a: 'あります。公式の宅配買取（takuhai-kaitori.hardoff.co.jp）は送料・手数料が0円で、ゲームは買取強化カテゴリーに含まれています。段ボールは利用者が用意します（梱包資材の事前送付はギター本体とカメラのみが対象です）。集荷は佐川急便が自宅に伺う方式で、入金は売買契約の成立後2〜4営業日です。18歳未満は利用できません。買取できない品物を送った場合や、期日までに返答がなかった場合の返却送料は利用者の負担になることがあります（公式「ご利用ガイド」2026年11月14日確認）。' },
   { q: 'オファー買取とは何ですか？', a: '公式アプリ/Webに売りたい品を出品すると、全国のハードオフグループ店舗が査定して最大5件の買取オファー（見積もり）が届く仕組みです。金額を承認すると自宅集荷され、最終査定の確定後2〜4営業日で入金されます。送料は無料です（取扱対象外品などは着払いで返却）。「売る前に値段が分かる」点で、価格表非公開という弱点を補えます。' },
   { q: '古物商許可は取得していますか？', a: '株式会社ハードオフコーポレーションは新潟県公安委員会の古物商許可（許可番号461060001043）を取得している正規のリユース事業者です。東証プライム上場企業（証券コード2674）でもあります。' },
@@ -43,7 +45,7 @@ const faqs = [
 export default function HardoffReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取は安い？評判・口コミとジャンク買取・4つの買取方式を検証", "datePublished": "2026-07-03", "dateModified": "2026-11-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ハードオフのゲーム買取価格表はある？公式の買取強化・買取できない品物と他5店の公開価格", "datePublished": "2026-07-03", "dateModified": "2026-11-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ハードオフ' }]} />
 
       {/* Hero */}
@@ -51,7 +53,7 @@ export default function HardoffReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>店頭・ジャンクOK</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月14日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月22日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             ハードオフのゲーム買取<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「安い？」の実態とジャンク買取を検証</span>
@@ -86,7 +88,7 @@ export default function HardoffReviewPage() {
           <h2 className="section-heading mb-6"><span className="section-heading-bar" />ハードオフのゲーム買取価格表はある？</h2>
           <div className="glass-card p-6">
             <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>
-              ハードオフは、ゲームの買取価格表を公式に公開していません（査定は店舗ごとに行われ、店舗の地域性も価格の変動要因になると公式FAQに記載されています）。売る前に金額を知る方法は、アプリの「オファー買取」で見積もりを受け取る方法です。公式の宅配買取サイトのゲームカテゴリーにも商品ごとの買取価格の一覧はなく、掲載されている「参考価格」はまとめ売りの例2件（15,000円・5,000円）のみです（2026年11月14日 当サイト確認）。比較の目安として、買取価格を公開している店舗の価格を当サイトで実測した結果を以下に掲載します。
+              <strong>結論：ハードオフは、ゲームの買取価格表を公式に公開していません。</strong>査定は店舗ごとに行われ、店舗の地域性も価格の変動要因になると公式FAQに記載されています。宅配買取サイトのゲームカテゴリーの「買取実績」にも品名5点（PS5本体・PS5用コントローラー・初代スーパーファミコン本体・SFCソフト1本・ファミコンソフト1本）が載っているのみで、金額の記載はありません（2026年11月22日 当サイト確認）。売る前に金額を知る方法は、アプリの「オファー買取」で見積もりを受け取る方法です。公式の宅配買取サイトのゲームカテゴリーにも商品ごとの買取価格の一覧はなく、掲載されている「参考価格」はまとめ売りの例2件（15,000円・5,000円）のみです（2026年11月14日 当サイト確認）。比較の目安として、買取価格を公開している店舗の価格を当サイトで実測した結果を以下に掲載します。
             </p>
             <div className="overflow-x-auto">
               <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
@@ -98,18 +100,38 @@ export default function HardoffReviewPage() {
                 </thead>
                 <tbody>
                   <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ハードオフ</td><td className="py-2 text-right">価格表の公開なし（店頭査定・オファー買取）</td></tr>
-                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">買取ルデヤ（新品・未開封のみ）</td><td className="py-2 text-right">49,000円</td></tr>
-                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">駿河屋</td><td className="py-2 text-right">38,000円</td></tr>
-                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ソフマップ（ラクウル）</td><td className="py-2 text-right">36,000円</td></tr>
-                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ふるいち</td><td className="py-2 text-right">36,000円</td></tr>
-                  <tr><td className="py-2 pr-4">ブックオフ（店頭）</td><td className="py-2 text-right">35,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">買取ルデヤ（新品・未開封のみ）</td><td className="py-2 text-right">51,500円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">駿河屋</td><td className="py-2 text-right">37,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ソフマップ（ラクウル・参考価格）</td><td className="py-2 text-right">36,000円</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ふるいち（買取上限金額）</td><td className="py-2 text-right">36,000円</td></tr>
+                  <tr><td className="py-2 pr-4">ブックオフ（店舗価格）</td><td className="py-2 text-right">35,000円</td></tr>
                 </tbody>
               </table>
             </div>
             <p className="text-sm leading-relaxed mt-4" style={{ color: 'var(--color-text-light)' }}>
               ハードオフで査定を受ける際は、上記のような公開価格を控えておくと、提示額が妥当かどうかを判断しやすくなります。他の機種・ソフトの実測価格は<Link href="/hardware/switch2/" style={{ color: 'var(--color-electric-green)' }}>Switch2 買取価格（5店比較）</Link>、<Link href="/software/high-value/" style={{ color: 'var(--color-electric-green)' }}>高く売れるゲームソフト</Link>、<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>価格インデックス</Link>に掲載しています。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各店の公式買取ページ（2026年10月20日 当サイト実測）。価格は日々変動するため、売却の直前に各社の公式ページでご確認ください。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各店の公式買取ページ（2026年11月15日 当サイト実測。ソフマップ（ラクウル）はシステムメンテナンスのため11月16日に確認）。前回（10月20日）の実測では、ルデヤ49,000円・駿河屋38,000円でした。価格は日々変動するため、売却の直前に各社の公式ページでご確認ください。</p>
+          </div>
+        </section>
+
+        {/* 公式で確認できる買取条件（2026-11-22 追加） */}
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />価格表の代わりに公式で確認できること（ゲームの買取条件）</h2>
+          <div className="glass-card p-6 overflow-x-auto">
+            <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-text-light)' }}>価格表はありませんが、ハードオフ宅配買取の公式サイトには、ゲームの買取強化品目や買取できない品物が掲載されています。持ち込む前・送る前に確認しておくと、断られる品物を避けられます。</p>
+            <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <tbody>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>買取強化中</th><td className="py-2">レトロゲーム機（ファミコン・スーパーファミコンなど）、レトロゲームソフト（ファミコン・セガサターン・PCエンジンなど）、PlayStation（レトロから最新モデルまで）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>ハードオフグループ全体で買取できない品物</th><td className="py-2">PCゲームソフト、オンライン用ソフト、ケースがないディスク系のソフト</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>宅配買取で扱えない品物</th><td className="py-2">140サイズに収まらないもの、情報の完全消去がされていないもの（店頭・オファー買取などでは扱える場合があります）</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>箱・説明書</th><td className="py-2">不要（バッテリーや専用コードなど、動作に必要なものは必要）。汚れ・黄ばみがあっても送付できます</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>動作しない品物</th><td className="py-2">宅配買取では、ゲームに支障がない程度の動作不良なら買取できる可能性が高い一方、電源が入らないなど機能が完全に使えないものは難しい場合があるとされ、店頭買取の利用が案内されています</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>売る前の注意</th><td className="py-2">SDカード・メモリーカードは取り出し、Wi-Fi設定などの個人情報は初期化します</td></tr>
+                  <tr><th className="text-left py-2 pr-4 whitespace-nowrap align-top" style={{ color: 'var(--color-deep-blue)' }}>金額の目安</th><td className="py-2">商品ごとの価格はなく、まとめ売りの参考価格2例（ゲームウォッチ・ファミコンソフトなど4点で15,000円、ファミコン・スーパーファミコン・プレステ・セガサターンのソフト計80本で5,000円）のみ</td></tr>
+              </tbody>
+            </table>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://takuhai-kaitori.hardoff.co.jp/category-6" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ハードオフ宅配買取「買取カテゴリー・ゲーム」</a>、<a href="https://takuhai-kaitori.hardoff.co.jp/not-covered" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>「買取できない品物」</a>（いずれも2026年11月22日 当サイト確認）。店頭での扱いは店舗により異なる場合があるため、持ち込む前に店舗へご確認ください。</p>
           </div>
         </section>
 
