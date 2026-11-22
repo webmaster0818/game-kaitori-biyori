@@ -84,7 +84,7 @@ const faqs = [
 export default function GeoReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取の評判・口コミ【2026年11月】ダンボール・ポイント・梱包・入金まで解説", "datePublished": "2026-03-15", "dateModified": "2026-11-16", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲオ宅配買取の評判・口コミ【2026年11月】ダンボール・ポイント・梱包・入金まで解説", "datePublished": "2026-03-15", "dateModified": "2026-11-22", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ゲオ宅配買取' }]} />
 
       {/* Hero */}
@@ -126,7 +126,7 @@ export default function GeoReviewPage() {
           </div>
 
           <div className="rounded-lg p-4 mb-6 text-sm leading-relaxed" style={{ background: 'rgba(52,211,153,0.10)', border: '1px solid rgba(52,211,153,0.45)', color: '#D1FAE5' }}>
-            <p>ゲオの宅配買取は、不正アクセスへの対応により2026年10月17日21時から停止していましたが、10月29日に再開しています。また、システムメンテナンスのため、2026年11月18日（水）22時から11月19日（木）10時（予定）まで、査定金額の承認受付と振込が停止されます。</p>
+            <p>ゲオの宅配買取は、不正アクセスへの対応により2026年10月17日21時から停止していましたが、10月29日に再開しています。その後、2026年11月18日（水）22時から11月19日（木）10時（予定）のシステムメンテナンスで査定金額の承認受付と振込が停止され、11月19日からは新規の買取申込の受付も停止されました（終了時期は未定）。11月22日の確認では公式サイトの通常のページが表示されていますが、再開のお知らせは確認できていません（ページ上部の案内をご覧ください）。</p>
             <p className="text-xs mt-2">出典：ゲオの買取 おしらせ「<a href={OFFICIAL.resume} target="_blank" rel="noopener noreferrer nofollow" className="underline">緊急メンテナンス終了・サービス再開のお知らせ</a>」（2026年10月29日）・「<a href={OFFICIAL.maintenance} target="_blank" rel="noopener noreferrer nofollow" className="underline">メンテナンスに伴うサービス一時停止のお知らせ</a>」（2026年11月12日）、{CHECKED}確認。<a href="https://2nd-rtl.com/news/82093/" target="_blank" rel="noopener noreferrer nofollow" className="underline">株式会社セカンドリテイリング「当社グループWEBサイト・アプリの再開状況について」</a>（2026年10月30日9時更新・同日確認）。</p>
           </div>
           <div className="flex flex-wrap gap-3">
