@@ -7,7 +7,7 @@ import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 export const metadata: Metadata = {
   title: 'カイトリワールド（買取ワールド）の評判・口コミは怪しい？ウリドキ3.9（168件）・11月キャンペーン・減額を検証【2026年11月】',
   description:
-    'カイトリワールドが怪しいと言われる理由を検証します。運営はゲーム専門店を22年間営むメディアワールド株式会社（古物商許可 第306701605637号）です。減額の基準、入金日数、送料無料の条件（査定3,000円以上）、7日間の自動承認、5日間の「価格保証買取」を、公式情報（2026年9月確認）をもとに解説します。',
+    'カイトリワールドが怪しいと言われる理由を、公式情報（2026年11月23日確認）とウリドキの最新口コミ20件の集計で検証します。返送料が自己負担になる条件、減額、入金日数、送料無料の条件も解説します。',
   keywords: ['カイトリワールド 評判', 'カイトリワールド 口コミ', 'カイトリワールド 怪しい', 'メディアワールド 怪しい', '買取ワールド 評判', 'カイトリワールド 入金'],
   openGraph: {
     images: ['/og.png'],
@@ -28,7 +28,7 @@ const features = [
 
 const steps = [
   { step: 1, title: '買取申込み（かんたん買取 or 価格保証買取）', description: '公式サイトから申し込みます。すぐに発送する「かんたん買取」と、申込時の価格を5日間保証する「価格保証買取」の2方式から選べます。' },
-  { step: 2, title: '梱包・発送', description: '無料の買取用段ボール（最大10箱）または手持ちの箱で梱包して発送します。集荷依頼も可能です。フィギュアは緩衝材で十分に保護することをおすすめします。' },
+  { step: 2, title: '梱包・発送', description: '無料の買取用段ボール（最大10箱）または手持ちの箱で梱包して発送します。初めて利用する場合は、本人確認のため「集荷」での発送をお願いしていると公式FAQに記載されています。フィギュアは緩衝材で十分に保護することをおすすめします。' },
   { step: 3, title: '査定（到着日に連絡）', description: '商品到着日に査定結果が連絡されます（混雑時は1〜2日）。掲載されている買取価格は箱・付属品が揃った完品状態が前提で、汚れ・傷・欠品があると減額されます。' },
   { step: 4, title: '承諾・入金', description: '査定額を承諾すると、振込手続きに進みます。振込手数料は無料です。なお、査定結果の通知から7日以内に回答しない場合は自動承認として扱われる点にご注意ください。' },
 ];
@@ -36,14 +36,15 @@ const steps = [
 const dislikeReasons = [
   { reason: '知名度が高くない', fact: '宅配買取の開始は2015年8月で、大手チェーンと比べると知名度は高くありません。ただし運営元のメディアワールド株式会社は東京でゲーム専門店を22年間運営しており、古物商許可（東京都公安委員会 第306701605637号）も公式サイトに明記されています。' },
   { reason: '掲載価格と実際の査定額のギャップ', fact: '公式サイトに「掲載価格は完品状態が前提」と明記されており、箱の傷・汚れ・欠品で減額されます。掲載価格を前提に発送すると、状態によっては想定より低い査定額になることがあり、これが「怪しい」という印象につながりやすいと考えられます。' },
-  { reason: '口コミの評価が分かれている', fact: '「入金が速い」「まとめて売れて便利」という好意的な声がある一方、「減額が厳しい」「繁忙期は査定連絡が遅い」という不満の声もレビューサイトで見られます。減額基準を理解したうえでの利用をおすすめします。' },
+  { reason: '口コミの評価が分かれている', fact: 'ウリドキの新しい順20件では★4以上が7件、★2以下が13件でした（2026年11月23日に当サイトで集計）。★2以下の13件のうち9件は、未開封フィギュアの外箱のキズ・シワによる減額への不満です。ゲーム機・ゲームソフトの売却に限ると4件中3件が★4以上で、売る品物によって評価が大きく異なります。' },
 ];
 
 const faqs = [
   { q: 'カイトリワールドは怪しい業者ですか？', a: '運営元はメディアワールド株式会社（東京都足立区竹の塚7-6-1）で、東京都公安委員会の古物商許可（第306701605637号）を取得しています。東京でゲーム専門店を22年間運営してきた実績があり、実在の事業者が運営する正規の買取サービスです。「怪しい」という検索が多いのは、知名度が高くないことと、完品前提の掲載価格と実査定額のギャップが主な理由と考えられます。' },
   { q: '送料無料に条件はありますか？', a: '査定結果が3,000円以上の場合は無料です。3,000円未満の場合は宅配便500円・宅配便以外200円が査定金額から差し引かれます（2023年3月16日申込分より）。少量で送るよりも、ある程度まとめて送る方が有利です。' },
   { q: '入金はどのくらいで届きますか？', a: '商品到着日（混雑時1〜2日）に査定結果が連絡され、買取金額を承諾するとすぐに振込手続きが行われます。特定商取引法の表記では「買取了承メール到着から最短2日（土日祝を除く銀行営業日）」とされています。振込手数料は無料です。' },
-  { q: '査定額に納得できない場合、返送料はかかりますか？', a: '査定額に不満がある場合は1点から返送無料（条件付き）です。ただし、買取承諾後や「査定結果連絡不要（自動承認）」で申し込んだ場合は返送不可、全品返送・返送依頼品以外の買取金額が5,000円未満の場合などは着払い（自己負担）になります。事前に条件をご確認ください。' },
+  { q: '査定額に納得できない場合、返送料はかかりますか？', a: '査定額に不満がある場合は1点から返送無料（条件付き）です。ただし、買取承諾後や「査定結果連絡不要（自動承認）」で申し込んだ場合は返送不可です。また、全品返送、返送する品以外の買取額が5,000円未満、査定額300円未満の商品、買取価格が付かない商品、申込明細にない商品などは着払い（自己負担）になります（公式FAQ・2026年11月23日確認）。' },
+  { q: '初めての利用でも自分で発送できますか？', a: '公式FAQでは、初めて利用する方には本人確認のため「集荷」での発送をお願いしていると記載されています。申込時に配送方法で「集荷を依頼」を選ぶと、無料の買取用段ボール（最大10箱）もあわせて依頼できます（2026年11月23日確認）。' },
   { q: '査定結果を放置するとどうなりますか？', a: '査定結果の通知から7日以内に承認・返送の回答をしない場合、「承認」扱いとなり支払い手続きが進みます（自動承認ルール）。返送を希望する場合は、必ず7日以内にご連絡ください。また、返送された商品を7日間受け取らない場合は所有権放棄とみなされます。' },
   { q: '梱包用の段ボールは無料ですか？', a: 'はい、買取用の段ボールは最大10箱まで無料で送付されます。集荷時に持参を依頼することも可能です。' },
   { q: '箱なしのゲームやフィギュアでも買取できますか？', a: '箱なしでも買取対象になる場合がありますが、掲載されている買取価格は完品状態が前提のため減額されます。高く売るためには、箱・説明書・付属品をできる限り揃えて送ることをおすすめします。' },
@@ -55,7 +56,7 @@ const faqs = [
 export default function KaitoriWorldReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？運営会社メディアワールドの実態・送料・入金日数・減額条件を解説", "datePublished": "2026-03-15", "dateModified": "2026-11-13", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "カイトリワールドの評判・口コミは怪しい？運営会社メディアワールドの実態・送料・入金日数・減額条件を解説", "datePublished": "2026-03-15", "dateModified": "2026-11-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'カイトリワールド' }]} />
 
       {/* Hero */}
@@ -63,7 +64,7 @@ export default function KaitoriWorldReviewPage() {
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>ホビー総合</span>
-            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月13日 更新</span>
+            <span className="tag-pill text-xs" style={{ background: 'rgba(59,130,246,0.2)', color: '#93C5FD' }}>2026年11月23日 更新</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
             カイトリワールドの評判・口コミ<span className="text-base md:text-lg font-normal ml-2" style={{ color: '#CBD5E1' }}>「怪しい」と言われる理由の検証</span>
@@ -91,7 +92,7 @@ export default function KaitoriWorldReviewPage() {
               カイトリワールドは、東京でゲーム専門店を22年間運営するメディアワールド株式会社（古物商許可：東京都公安委員会 第306701605637号）の正規サービスです。査定と振込の早さに強みがありますが、掲載されている買取価格は箱・付属品が揃った完品状態が前提のため、状態によっては減額されます。また、送料無料には「査定3,000円以上」という条件があります。この2点を理解したうえでご利用いただくと、ゲームとホビーをまとめて売却できるサービスです。
             </p>
             <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>
-              <strong style={{ color: 'var(--color-deep-blue)' }}>口コミ・評判の結論：</strong>買取口コミサイトのウリドキでは総合3.9（168件）です（2026年11月13日確認。同サイトで最も新しい口コミは2025年5月20日の投稿のため、直近の評判は反映されていない点にご注意ください）。良い評価は「到着当日に査定・入金された」「プラモデルや完成品フィギュアが他店より高かった」、低い評価は「外箱のキズ・シワで減額された」「返送料を請求された」という内容が中心です。2026年11月は、ホビー最大30%アップ・ゲーム最大20%アップ（いずれも11月30日23:59まで）などのキャンペーンが公式サイトに掲載されています。
+              <strong style={{ color: 'var(--color-deep-blue)' }}>口コミ・評判の結論：</strong>買取口コミサイトのウリドキでは総合3.9（168件）です（2026年11月23日確認。同サイトで最も新しい口コミは2025年5月20日の投稿のため、直近の評判は反映されていない点にご注意ください）。当サイトがウリドキの新しい順20件（2023年7月9日〜2025年5月20日の投稿）を読んで分類したところ、★4以上は7件、★2以下は13件でした。低い評価の多くはフィギュアの売却で、「未開封でも外箱のキズ・シワで1〜2割減額された」が9件、「返送料を着払いで請求された」が6件です。一方、ゲーム機・ゲームソフトの売却は4件中3件が★4以上で、「到着当日〜翌日に査定・入金された」という声が6件ありました。2026年11月は、ホビー最大30%アップ・ゲーム最大20%アップ（いずれも11月30日23:59まで）などのキャンペーンが公式サイトに掲載されています。
             </p>
             <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
               関連：<Link href="/price-index/" style={{ color: 'var(--color-electric-green)' }}>現在最も高い業者を買取価格DBで確認する</Link>／<Link href="/condition-guide/" style={{ color: 'var(--color-electric-green)' }}>箱なし・傷あり・ジャンク品の売却可否を状態別マップで確認する</Link>／<Link href="/compare/mercari-vs-kaitori/" style={{ color: 'var(--color-electric-green)' }}>メルカリと買取の手取り額をシミュレーションで比較する</Link>
@@ -131,7 +132,7 @@ export default function KaitoriWorldReviewPage() {
                 <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>利用条件</th><td className="py-2">18歳未満は利用不可</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（会社案内・特定商取引法に基づく表記）2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（「カイトリワールドについて」・特定商取引法に基づく表記）2026年11月23日確認</p>
           </div>
         </section>
 
@@ -144,10 +145,10 @@ export default function KaitoriWorldReviewPage() {
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>出張費</th><td className="py-2">－（宅配買取のため出張買取なし）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>査定料</th><td className="py-2">無料</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>キャンセル料</th><td className="py-2">無料</td></tr>
-                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">無料。ただし公式FAQに「買取額が5,000円未満の場合など返送に条件がある」旨の記載があるため、キャンセルの可能性がある少額品は事前の確認を推奨</td></tr>
+                <tr><th className="text-left py-2 pr-4 whitespace-nowrap" style={{ color: 'var(--color-deep-blue)' }}>返送料（売らない場合）</th><td className="py-2">原則1点から無料。ただし、全品返送、返送する品以外の買取額が5,000円未満、査定額300円未満の商品、買取価格が付かない商品などは着払い（利用者負担）。条件は下記の「返送料が利用者負担になる条件」をご確認ください</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（会社案内・FAQ）2026年7月9日確認。送料無料は査定合計3,000円以上が条件です。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（よくある質問・ご返送について）2026年11月23日確認。送料無料は査定合計3,000円以上が条件です。振込手数料は無料ですが、セブンペイメント（コンビニ受取）を選ぶと手数料480円（税込）が買取金額から差し引かれます。</p>
           </div>
         </section>
 
@@ -177,16 +178,33 @@ export default function KaitoriWorldReviewPage() {
               </thead>
               <tbody>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">送料</td><td className="py-2">査定3,000円以上で無料。未満は宅配便500円／宅配便以外200円を査定額から差し引き</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">梱包材</td><td className="py-2">買取用段ボール最大10箱まで無料</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">梱包材</td><td className="py-2">買取用段ボール最大10箱まで無料。依頼した箱数より届いた荷物が少ない場合などは、1箱500円が査定額から差し引かれることがある</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">振込手数料</td><td className="py-2">無料</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">査定連絡</td><td className="py-2">商品到着日（混雑時1〜2日）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">入金</td><td className="py-2">承諾後すぐ振込手続き（特商法表記では承諾メール到着から最短2営業日）</td></tr>
-                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">返送（キャンセル）</td><td className="py-2">査定額に不満がある場合は1点から返送無料。ただし買取承諾後・自動承認申込は返送不可。全品返送や返送依頼品以外の買取金額5,000円未満などは着払い</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">入金</td><td className="py-2">承諾後すぐ振込手続き（特商法表記では承諾メール到着から最短2営業日）。振込手数料は無料、セブンペイメントは手数料480円</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">返送（キャンセル）</td><td className="py-2">査定額に不満がある場合は1点から返送無料。ただし買取承諾後・自動承認申込は返送不可。着払いになる条件は下の表のとおり</td></tr>
+                <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">初回の発送方法</td><td className="py-2">初めて利用する場合は本人確認のため「集荷」を依頼（自分で発送できるのは2回目以降）</td></tr>
                 <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4 font-bold whitespace-nowrap">自動承認</td><td className="py-2">査定結果の通知から7日以内に未回答の場合は「承認」扱いで支払い手続きへ</td></tr>
                 <tr><td className="py-2 pr-4 font-bold whitespace-nowrap">返戻品の受取</td><td className="py-2">返送品が到着から7日経過しても受け取られない場合、所有権放棄とみなして処分</td></tr>
               </tbody>
             </table>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（「買取の流れ」「返品について」「買取ダンボールについて」）2026年6月12日確認</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト（「買取の流れ」「ご返送について」「買取ダンボール無料サービス」「よくある質問」）2026年11月23日確認</p>
+          </div>
+          <div className="glass-card p-6 mt-6 overflow-x-auto" id="return-fee">
+            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>返送料が利用者負担（着払い）になる条件</h3>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>口コミで不満の多い返送料について、公式FAQに記載されている条件を整理しました。次のいずれかに当てはまる場合、返送料は利用者の負担になります。</p>
+            <ul className="space-y-1 text-sm" style={{ color: 'var(--color-text-light)' }}>
+              <li>・査定を依頼した商品をすべて返送する場合</li>
+              <li>・返送する品以外の買取額が5,000円未満の場合</li>
+              <li>・査定額が300円未満の商品、買取価格が付かない商品</li>
+              <li>・申込時の明細に記載のない商品</li>
+              <li>・価格保証期間が切れたことによる減額商品、申込時の価格保証金額と査定額に相違がない商品</li>
+              <li>・同一商品を複数点申し込んだ際の減額商品</li>
+              <li>・取り扱いのない商品（PCゲーム・サンプル品・偽造品など）</li>
+              <li>・申込情報や書類の不備、送り間違いなど、査定結果以外の理由による返送</li>
+            </ul>
+            <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>少額のソフトを数本だけ送ってキャンセルすると、返送料の負担が買取額を上回ることがあります（ウリドキには、ソフト2本の返送で着払い940円を支払ったという2024年5月の投稿があります）。返送の可能性がある場合は、合計額が5,000円を超えるようにまとめて送るか、申込前に公式サイトで見積もりを確認することをおすすめします。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式「よくある質問」「ご返送について」（2026年11月23日確認）。返送無料サービスは内容の変更・終了がありうると公式に記載されています。</p>
           </div>
         </section>
 
@@ -238,9 +256,9 @@ export default function KaitoriWorldReviewPage() {
 
         {/* Review Tendency */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミの傾向（レビューサイト・SNS調査）</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />口コミ・評判（ウリドキ・ヒカカク！の掲載内容を当サイトで集計）</h2>
           <div className="glass-card p-6 mb-6">
-            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>口コミサイトの評点（ウリドキ 2026年11月13日・ヒカカク！ 10月26日確認）</h3>
+            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>口コミサイトの評点（ウリドキ 2026年11月23日・ヒカカク！ 10月26日確認）</h3>
             <div className="overflow-x-auto">
               <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
                 <thead>
@@ -259,36 +277,57 @@ export default function KaitoriWorldReviewPage() {
             <p className="text-sm leading-relaxed mt-3" style={{ color: 'var(--color-text-light)' }}>
               件数の多いウリドキでは、高評価の口コミに「到着当日に査定・入金された」「プラモデルや完成品フィギュアが他店より高かった」という内容が多く見られます。低評価の口コミでは「未開封のフィギュアでも外箱のキズ・シワで減額された」「返送を選んだら返送料を着払いで請求された」という内容が目立ちます。公式の「1点から返送無料」には条件があるため、返送の条件は下記の「送料・返送・自動承認ルールの一覧」でご確認ください。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ウリドキ「カイトリワールドの買取に関する口コミ・評判」（2026年11月13日再確認・評点と件数は10月26日から変化なし）、ヒカカク！「カイトリワールド」店舗ページ（2026年10月26日確認）。評点・件数は各サイトの集計で、投稿により変動します。ヒカカク！は件数が少ないため、傾向の判断にはウリドキの件数を参考にしています。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ウリドキ「カイトリワールドの買取に関する口コミ・評判」（2026年11月23日再確認・評点と件数は10月26日から変化なし）、ヒカカク！「カイトリワールド」店舗ページ（2026年10月26日確認）。評点・件数は各サイトの集計で、投稿により変動します。ヒカカク！は件数が少ないため、傾向の判断にはウリドキの件数を参考にしています。</p>
           </div>
           <div className="glass-card p-6 mb-6" style={{ borderLeft: '4px solid var(--color-accent-orange)' }}>
             <h3 className="font-bold mb-2" style={{ color: 'var(--color-deep-blue)' }}>2026年11月のキャンペーン（公式サイト掲載）</h3>
             <p className="text-sm leading-relaxed" style={{ color: 'var(--color-text-light)' }}>
               公式サイトでは、2026年11月1日0:00〜11月30日23:59の期間で「まとめ売り強化月間・ホビー還元祭」（ホビー対象・査定合計3,000円以上で買取最大30%アップ）、「ゲーム買取祭り」（ゲーム限定で買取最大20%アップ）、人気本体の買取アップ額を2倍にする「倍々ゲーム祭り」が掲載されています。あわせて「冬の買取BIGチャンス」（2026年11月7日0:00〜12月6日23:59申込分。査定額合計5,000円ごとに抽選1回分、賞品はSwitch2・Amazonギフトカード）も掲載されています。初めて利用する方向けの買取金額アップ（最大1,000円）は随時開催、メディアワールド通販で購入すると買取額3%アップのクーポンが付く「買って売ってキャンペーン」は終了日未定と記載されています。10月はキャンペーン期間が延長されたことがあるため、対象期間と条件は申込前に公式サイトでご確認ください。
             </p>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト トップページ（2026年11月2日確認、11月13日に再確認）</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：カイトリワールド公式サイト トップページ（2026年11月2日確認、11月23日に再確認）</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-electric-green)' }}>好意的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・査定から入金までが早かった</li>
-                <li>・ゲームとフィギュアをまとめて処分できた</li>
-                <li>・梱包キットが無料で手間がかからなかった</li>
-                <li>・フィギュア・ホビー系の査定が相場より高めだった</li>
-              </ul>
+          <div className="glass-card p-6" id="review-breakdown">
+            <h3 className="font-bold mb-3" style={{ color: 'var(--color-deep-blue)' }}>ウリドキの新しい順20件の内訳（当サイト集計）</h3>
+            <p className="text-sm leading-relaxed mb-3" style={{ color: 'var(--color-text-light)' }}>ウリドキの口コミ一覧の1ページ目（新しい順20件・投稿日 2023年7月9日〜2025年5月20日）を当サイトで1件ずつ読み、売った品物と内容で分類しました。</p>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm" style={{ color: 'var(--color-text-light)' }}>
+                <thead>
+                  <tr className="border-b-2" style={{ borderColor: 'rgba(0,0,0,0.1)' }}>
+                    <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>売った品物（ウリドキの分類）</th>
+                    <th className="text-left py-2 pr-4" style={{ color: 'var(--color-deep-blue)' }}>件数</th>
+                    <th className="text-left py-2" style={{ color: 'var(--color-deep-blue)' }}>★4以上／★2以下</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">ゲーム機本体・ゲームソフト</td><td className="py-2 pr-4">4件</td><td className="py-2">3件／1件</td></tr>
+                  <tr className="border-b" style={{ borderColor: 'rgba(0,0,0,0.06)' }}><td className="py-2 pr-4">フィギュア・プラモデル</td><td className="py-2 pr-4">13件</td><td className="py-2">4件／9件</td></tr>
+                  <tr><td className="py-2 pr-4">その他のおもちゃ（ぬいぐるみ・プラモデル等）</td><td className="py-2 pr-4">3件</td><td className="py-2">0件／3件</td></tr>
+                </tbody>
+              </table>
             </div>
-            <div className="glass-card p-6">
-              <h3 className="font-bold mb-3" style={{ color: 'var(--color-accent-orange)' }}>否定的な口コミに多い内容</h3>
-              <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
-                <li>・箱の傷や汚れによる減額が厳しい（未開封フィギュアの外箱のキズ・シワを含む）</li>
-                <li>・返送を選んだ際に返送料を請求された</li>
-                <li>・繁忙期は査定結果の連絡が遅れた</li>
-                <li>・サポートの返信に時間がかかった</li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-5">
+              <div>
+                <h4 className="font-bold mb-2 text-sm" style={{ color: 'var(--color-electric-green)' }}>好意的な内容（20件中・重複あり）</h4>
+                <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・査定・入金が早い（到着当日〜翌日に査定、承諾当日に振込など）：6件</li>
+                  <li>・他店の見積もりより買取価格が高かった（ゲーム機・ガンプラ・完成品フィギュア）：4件</li>
+                  <li>・箱付きの一番くじフィギュアは大半が満額だった：1件</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold mb-2 text-sm" style={{ color: 'var(--color-accent-orange)' }}>否定的な内容（20件中・重複あり）</h4>
+                <ul className="space-y-2 text-sm" style={{ color: 'var(--color-text-light)' }}>
+                  <li>・未開封フィギュアでも外箱のキズ・シワ・日焼けで1〜2割以上減額された：9件</li>
+                  <li>・返送料（着払い）を請求された：6件</li>
+                  <li>・箱・説明書なしのソフトが大きく減額された（例：3,500円→700円）：1件</li>
+                  <li>・掲載のない商品の見積もり回答が集荷日までに来なかった：1件</li>
+                  <li>・本人確認書類の住所が発送元の住所と一致せず手続きが止まった：1件</li>
+                </ul>
+              </div>
             </div>
+            <p className="text-sm leading-relaxed mt-4" style={{ color: 'var(--color-text-light)' }}>集計から、ゲーム機・ゲームソフトは査定の早さが評価されている一方、箱の状態が価格を大きく左右するフィギュアは減額への不満が集中していることが分かります。フィギュアを売る場合は、箱の状態を申込前に確認し、返送の可能性がある場合は上記の返送料の条件を確認してからご利用ください。</p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：ウリドキ「カイトリワールドの買取に関する口コミ・評判」1ページ目（2026年11月23日確認・総合3.9／168件）。分類は当サイトによるもので、1件の口コミが複数の内容に該当する場合は重複して数えています。ウリドキの最新の投稿は2025年5月20日のため、現在の査定基準と異なる可能性があります。</p>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※主要レビューサイト・比較メディアに掲載されている口コミの傾向を当サイトで整理したものです（2026年6月調査、10月26日にウリドキの口コミで再確認）。個別の体験を保証するものではありません。</p>
         </section>
 
         {/* Recommended */}
