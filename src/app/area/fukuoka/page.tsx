@@ -1,227 +1,109 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
-import Breadcrumb from '@/components/Breadcrumb';
-import AuthorBox from '@/components/AuthorBox'
+import AreaGuide from '@/components/AreaGuide';
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
+// 2026-11-24 作り直し：店舗は公式店舗ページで確認できたものだけ（src/data/area-stores.ts）。title は変えていない。
 export const metadata: Metadata = {
-  title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド',
-  description:
-    '福岡でゲームを高く売れる買取店舗を、エリア別に紹介しています。天神（ブックオフ・ゲオ・駿河屋）、博多、小倉の人気店舗と特徴を比較し、宅配・出張買取サービスもあわせて紹介します。',
-  keywords: ['ゲーム買取 福岡', 'ゲーム買取 福岡 おすすめ', 'ゲーム買取 天神', 'ゲーム買取 博多', 'ゲーム買取 北九州'],
+  title: "福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド",
+  description: "福岡の天神・博多・小倉で、ゲームの買取を受け付けている店舗を、ブックオフ・ゲオ・駿河屋の公式店舗ページで2026年11月24日に確かめて掲載しています。宅配買取もあわせて紹介します。",
   openGraph: {
     images: ['/og.png'],
-    title: '福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド',
-    description: '福岡のゲーム買取店をエリア別に紹介し、天神・博多・小倉の人気店舗を比較しています。',
+    title: "福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド",
+    description: "福岡の天神・博多・小倉で、ゲームの買取を受け付けている店舗を、ブックオフ・ゲオ・駿河屋の公式店舗ページで2026年11月24日に確かめて掲載しています。宅配買取もあわせて紹介します。",
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
-const areas = [
-  {
-    name: '天神エリア',
-    description: '九州最大の繁華街です。大手チェーンから専門店まで買取店が充実しており、西鉄・地下鉄でのアクセスにも優れています。',
-    shops: [
-      { name: 'ブックオフ 天神店', feature: '天神の中心部に位置する大型店舗です。ゲーム・書籍・DVDを一括で売ることができ、まとめ売りボーナスもあります。', genre: '全般', priceLevel: '中' },
-      { name: 'ゲオ 天神店', feature: '全国チェーンならではの安定感があります。ゲームソフト・本体の買取価格をアプリで事前に確認でき、スマートフォンの買取にも対応しています。', genre: '全般・スマホ', priceLevel: '中' },
-      { name: '駿河屋 博多マルイ店（博多駅直結）', feature: 'レトロゲーム・フィギュアの買取に定評があります。ネット通販のデータにもとづく精度の高い査定が特長で、九州唯一の駿河屋店舗です。', genre: 'レトロ・フィギュア', priceLevel: '中〜高' },
-      { name: 'まんだらけ 福岡店', feature: 'レトロゲーム・限定版・プレミアソフトの買取に強みがあり、コレクター向けの査定に定評があります。', genre: 'レトロ・プレミア', priceLevel: '高（レア品）' },
-    ],
-  },
-  {
-    name: '博多エリア',
-    description: '新幹線が停車するJR博多駅の周辺です。出張帰りや旅行のついでに立ち寄りやすい立地です。',
-    shops: [
-      { name: 'ブックオフ 博多駅前店', feature: '博多駅から徒歩5分です。ゲームから書籍まで幅広く対応しており、即日現金化が可能です。', genre: '全般', priceLevel: '中' },
-      { name: 'ゲオ 博多駅東店', feature: '査定額が安定しています。本人確認書類があればその場で現金化でき、ゲーム周辺機器の買取にも対応しています。', genre: '全般', priceLevel: '中' },
-      { name: 'トレーダー 博多店', feature: '新作ゲーム・フィギュアの買取に強みがあり、発売直後の高額買取に定評があります。', genre: '新作・フィギュア', priceLevel: '高（新作）' },
-    ],
-  },
-  {
-    name: '小倉エリア（北九州）',
-    description: '北九州市の中心地です。福岡市に次ぐ規模の商業エリアで、駅周辺に買取店が点在しています。',
-    shops: [
-      { name: 'ブックオフ 小倉駅前店', feature: '小倉駅から徒歩3分の立地です。ゲーム・CD・DVDまで幅広く対応しています。', genre: '全般', priceLevel: '中' },
-      { name: 'ゲオ 小倉店', feature: '全国チェーンのゲオの店舗です。買取価格検索アプリで、事前に相場を確認できます。', genre: '全般', priceLevel: '中' },
-      { name: 'まんが倉庫 小倉店', feature: 'ゲーム・トレカ・フィギュアまで幅広く対応しています。九州発のチェーンで、まとめ売りに強みがあります。', genre: '全般・トレカ', priceLevel: '中' },
-    ],
-  },
-];
-
-const highPriceTips = [
-  { tip: '天神エリアで複数店を回る', detail: '天神エリアにはブックオフ、ゲオ、駿河屋、まんだらけが揃っています。2〜3店で査定を受け、最も高い査定額の店舗を選ぶことをおすすめします。' },
-  { tip: '新作は発売直後に売る', detail: '新作ゲームは発売後1〜2週間以内が最も高く売れます。トレーダー博多店やゲオは、新作の買取に強みがあります。' },
-  { tip: 'レトロゲームは駿河屋・まんだらけへ', detail: 'レトロゲームやプレミアソフトは、駿河屋福岡天神店やまんだらけ福岡店で大幅に高値がつく傾向があります。' },
-  { tip: '付属品・箱を揃える', detail: '箱・説明書・付属品の有無によって、査定額が2〜5倍変わることがあります。売る前に、付属品が揃っているかをご確認ください。' },
-  { tip: '宅配買取も活用する', detail: '福岡県にお住まいの方は、宅配買取も選択肢になります。ヒカカク！で一括査定を依頼すると、全国の業者の査定額を比較して最も高い業者を選べます。' },
-];
-
-const faqs = [
-  { q: '福岡でゲームを最も高く買い取ってくれる店はどこですか？', a: 'ゲームの種類によって異なります。新作ゲームならトレーダー博多店、レトロゲームなら駿河屋福岡天神店やまんだらけ福岡店が高額査定の傾向があります。複数店で査定を受け、比較することをおすすめします。' },
-  { q: '天神で即日現金化できる店はありますか？', a: 'はい、ブックオフ天神店やゲオ天神店では本人確認書類の提示で即日現金化が可能です。査定時間は10点程度なら15〜30分で完了します。' },
-  { q: '福岡で出張買取に対応している業者はありますか？', a: '大手の出張買取は対応エリアが変わりやすいため、申し込み前に各社の公式サイトにて最新情報をご確認ください（例：買取ウリエルの出張買取は九州も対応エリアに含まれますが、ゲームの買取は東京・神奈川・千葉・埼玉が対象で、福岡県は対象外です。2026年10月21日公式確認）。福岡では、送料無料の宅配買取（カイトリワールド・ゲーム王国・駿河屋など）の利用をおすすめします。' },
-  { q: '九州在住ですが宅配買取のほうがお得ですか？', a: '宅配買取は店舗運営コストが低い分、買取価格が高めになる傾向があります。ヒカカク！なら最大20社に一括査定でき、送料無料の業者も多いため九州にお住まいの方にも十分なメリットがあります。' },
-  { q: '北九州（小倉）からゲームを売る場合、どの方法がおすすめですか？', a: '小倉駅周辺のブックオフやゲオで即日売却するか、宅配買取を利用することをおすすめします。天神まで出向く場合は、駿河屋やまんだらけでレトロゲームの高額査定が期待できます。' },
-];
-
-export default function FukuokaPage() {
+export default function Page() {
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "福岡のゲーム買取おすすめ店舗｜天神・博多・小倉エリア別ガイド", "datePublished": "2026-05-19", "dateModified": "2026-06-14", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
-      <Breadcrumb items={[{ name: 'エリア別', href: '/' }, { name: '福岡' }]} />
-
-      {/* Hero */}
-      <section className="hero-gradient text-white py-12 md:py-16">
-        <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(251,191,36,0.2)', color: '#FBBF24' }}>エリア別ガイド</span>
-          <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            福岡のゲーム買取おすすめ店舗ガイド
-          </h1>
-          <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            天神・博多・小倉のエリア別に、ゲーム買取店を紹介しています。大手チェーンから専門店まで、福岡県内で目的に合った買取店をお選びいただけます。
-          </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新: 2026年5月</p>
-        </div>
-      </section>
-
-      <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Area Guides */}
-        {areas.map((area) => (
-          <section key={area.name} className="mb-12">
-            <h2 className="section-heading mb-6"><span className="section-heading-bar" />{area.name}</h2>
-            <p className="text-sm mb-6" style={{ color: 'var(--color-text-light)' }}>{area.description}</p>
-            <div className="overflow-x-auto">
-              <table className="comparison-table">
-                <thead>
-                  <tr>
-                    <th>店舗名</th>
-                    <th>特徴</th>
-                    <th>得意ジャンル</th>
-                    <th>価格帯</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {area.shops.map((shop) => (
-                    <tr key={shop.name}>
-                      <td className="font-bold text-sm">{shop.name}</td>
-                      <td className="text-sm">{shop.feature}</td>
-                      <td className="text-sm">{shop.genre}</td>
-                      <td className="text-sm font-bold" style={{ color: shop.priceLevel.includes('高') ? 'var(--color-electric-green)' : 'var(--color-text-light)' }}>{shop.priceLevel}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </section>
-        ))}
-
-        {/* Online Alternative */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />店舗に行けない場合のオンライン買取</h2>
-          <div className="glass-card p-6">
-            <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
-              福岡県内でも、仕事が忙しい方や大量のゲームを売りたい方にはオンラインサービスがおすすめです。
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>ヒカカク！</h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最大20社に一括で査定を依頼でき、自宅にいながら最も高い買取業者を探せます。送料無料の業者も多数あります。</p>
-              </div>
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>ゲーム王国（宅配買取）</h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>福岡からも送料無料（佐川集荷）で利用できます。故障品・箱なしの商品も買取対象で、最短で当日に入金されます。</p>
-              </div>
-              <div className="p-4 rounded-lg" style={{ background: 'var(--color-bg-alt)' }}>
-                <h3 className="font-bold text-sm mb-2" style={{ color: 'var(--color-deep-blue)' }}>駿河屋（宅配買取）</h3>
-                <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>レトロゲームの宅配買取に強みがあります。全国どこからでも送料無料で利用できます。</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* High Price Tips */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />福岡で高く売るためのポイント</h2>
-          <div className="space-y-4">
-            {highPriceTips.map((item, i) => (
-              <div key={item.tip} className="glass-card p-5 flex items-start gap-4">
-                <div className="text-2xl font-black shrink-0" style={{ color: 'var(--color-electric-green)', opacity: 0.3 }}>
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-                <div>
-                  <h3 className="font-bold mb-1" style={{ color: 'var(--color-deep-blue)' }}>{item.tip}</h3>
-                  <p className="text-sm" style={{ color: 'var(--color-text-light)' }}>{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />よくある質問</h2>
-          <div>
-            {faqs.map((faq, i) => (
-              <details key={i} className="faq-item">
-                <summary>{faq.q}</summary>
-                <div className="faq-answer">{faq.a}</div>
-              </details>
-            ))}
-          </div>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html: JSON.stringify({
-                '@context': 'https://schema.org',
-                '@type': 'FAQPage',
-                mainEntity: faqs.map((faq) => ({
-                  '@type': 'Question',
-                  name: faq.q,
-                  acceptedAnswer: { '@type': 'Answer', text: faq.a },
-                })),
-              }),
-            }}
-          />
-        </section>
-
-        {/* CTA */}
-        <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>
-            福岡で<span style={{ color: 'var(--color-electric-green)' }}>最高値</span>を見つける方法
-          </h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            店舗への持ち込み・オンライン買取のいずれの場合も、まず複数社の査定額を比較することをおすすめします。
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/" className="btn-primary py-3 px-8">
-              おすすめランキングを見る
-            </Link>
-          </div>
-        </section>
-
-        {/* Internal Links */}
-        <section className="mt-12">
-          <h3 className="font-bold mb-4" style={{ color: 'var(--color-deep-blue)' }}>他のエリアガイド</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link href="/area/tokyo/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>東京のゲーム買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>秋葉原・新宿・池袋エリア別ガイド</p>
-            </Link>
-            <Link href="/area/osaka/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>大阪のゲーム買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>日本橋・梅田・難波エリア別ガイド</p>
-            </Link>
-            <Link href="/area/nagoya/" className="glass-card p-4 card-hover block">
-              <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>名古屋のゲーム買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>大須・栄・名駅エリア別ガイド</p>
-            </Link>
-          </div>
-        </section>
-        <KaitoriWorldCta compact />
-        <AuthorBox />
-      </div>
-    </>
+    <AreaGuide
+      pref="fukuoka"
+      city="福岡"
+      headline="福岡のゲーム買取おすすめ店舗ガイド"
+      lead="天神、博多、小倉に分けて、公式店舗ページでゲームの買取を確認できた店舗を掲載しています。住所・営業時間を公式の記載どおりにまとめています。"
+      dateModified="2026-11-24"
+      beforeAuthor={<KaitoriWorldCta compact />}
+      groups={[
+  {
+    "key": "tenjin",
+    "name": "天神エリア",
+    "description": "天神・大名の周辺です。まんだらけ 福岡店（大名）はフロアガイドにゲーム売場がありますが、公式の買取ページでゲームの買取の記載を確認できなかったため、一覧には載せていません。"
+  },
+  {
+    "key": "hakata",
+    "name": "博多駅周辺エリア",
+    "description": "博多駅の周辺です。駿河屋 博多マルイ店は博多駅に直結する博多マルイの6Fにあります。博多駅筑紫口のゲオモバイル博多駅筑紫口店は、店舗ページの買取品目にゲームの記載がありませんでした。"
+  },
+  {
+    "key": "kokura",
+    "name": "小倉エリア",
+    "description": "北九州市小倉北区の店舗です。駿河屋 小倉あるあるCity店は、あるあるCityの2階・4階にあります。"
+  }
+]}
+      points={[
+  {
+    "title": "駿河屋は、店舗によって取扱商品と買取の受付が違います",
+    "text": "駿河屋の店舗ページには店舗ごとの「取扱商品」が書かれており、多くの店舗で「取扱商品以外は買取対象外」としています。買取を受け付けていない店舗もあるため、ゲームが取扱商品に含まれているかを店舗ページでご確認ください。"
+  },
+  {
+    "title": "ブックオフは、品目によって買取の受付時間が違う店舗があります",
+    "text": "BOOKOFFの店舗ページには「買取受付時間」が書かれており、ブランド品・貴金属・腕時計やトレカなど、品目によって受付の終了時刻が早い店舗があります。ゲーム機本体とソフトで受付時間が分かれている店舗もあるため、来店前に店舗ページをご確認ください。"
+  },
+  {
+    "title": "ゲオの買取受付は、閉店の30分前までの店舗が多くあります",
+    "text": "当サイトで確認したゲオ・ゲオモバイルの店舗ページでは、【買取受付時間】が営業終了の30分前までと書かれていました。また、ゲオモバイルにはゲームの買取を行っていない店舗もあるため、店舗ページの「お取扱い品目」の買取欄をご確認ください。"
+  }
+]}
+      online={[
+  {
+    "name": "ヒカカク！",
+    "href": "/review/hikakaku/",
+    "text": "複数の買取業者に一括で査定を依頼できるサービスです。仕組みと利用時の注意点を評判ページで紹介しています。"
+  },
+  {
+    "name": "駿河屋（宅配買取）",
+    "href": "/review/surugaya/",
+    "text": "店頭のほかに宅配買取も受け付けています。宅配買取の条件は駿河屋の評判ページで紹介しています。"
+  },
+  {
+    "name": "ネットオフ（宅配買取）",
+    "href": "/review/netoff/",
+    "text": "店舗を持たない宅配専門の買取です。申し込み方法と条件は評判ページで紹介しています。"
+  }
+]}
+      faqs={[
+  {
+    "q": "天神でゲームを売れる店舗はどこですか。",
+    "a": "当サイトが公式店舗ページで確認できたのは、BOOKOFF SUPER BAZAAR ミーナ天神店（ミーナ天神7F）と、ゲオモバイル福岡天神西通り店です（2026年11月24日確認）。"
+  },
+  {
+    "q": "博多駅の近くでゲームを売れる店舗はありますか。",
+    "a": "駿河屋 博多マルイ店、BOOKOFF 福岡博多口店、ゲオ福岡博多口店で、ゲームの買取を公式ページで確認できました（2026年11月24日確認）。"
+  },
+  {
+    "q": "ゲオモバイルならどの店舗でもゲームを売れますか。",
+    "a": "いいえ。ゲオモバイル博多駅筑紫口店は、店舗ページの買取品目にゲームの記載がありませんでした。来店前に店舗ページの「お取扱い品目」をご確認ください。"
+  }
+]}
+      links={[
+  {
+    "href": "/area/hiroshima/",
+    "title": "広島のゲーム買取",
+    "text": "紙屋町・広島駅・西区エリア別ガイド"
+  },
+  {
+    "href": "/area/osaka/",
+    "title": "大阪のゲーム買取",
+    "text": "日本橋・梅田・難波エリア別ガイド"
+  },
+  {
+    "href": "/area/kobe/",
+    "title": "神戸のゲーム買取",
+    "text": "三宮・ハーバーランドのガイド"
+  }
+]}
+    />
   );
 }

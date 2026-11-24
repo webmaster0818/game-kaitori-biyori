@@ -21,9 +21,10 @@ type Props = {
   faqs: AreaFaq[];
   links: { href: string; title: string; text: string }[];
   dateModified: string;
+  beforeAuthor?: React.ReactNode;
 };
 
-export default function AreaGuide({ pref, city, headline, lead, groups, points, online, faqs, links, dateModified }: Props) {
+export default function AreaGuide({ pref, city, headline, lead, groups, points, online, faqs, links, dateModified, beforeAuthor }: Props) {
   const stores = areaStores.filter((s) => s.pref === pref);
   return (
     <>
@@ -145,6 +146,7 @@ export default function AreaGuide({ pref, city, headline, lead, groups, points, 
             ))}
           </div>
         </section>
+        {beforeAuthor}
         <AuthorBox />
       </div>
     </>
