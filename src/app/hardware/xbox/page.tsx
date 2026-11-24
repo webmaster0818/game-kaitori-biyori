@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import HardwareMeasured from '@/components/HardwareMeasured';
 
 export const metadata: Metadata = {
   title: 'Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】',
@@ -18,14 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'Xbox Series X', good: '30,000〜40,000円', fair: '22,000〜29,000円', poor: '12,000〜21,000円' },
-  { model: 'Xbox Series S', good: '15,000〜22,000円', fair: '10,000〜14,000円', poor: '5,000〜9,000円' },
-  { model: 'Xbox One X', good: '10,000〜16,000円', fair: '6,000〜9,000円', poor: '3,000〜5,000円' },
-  { model: 'Xbox One S', good: '6,000〜10,000円', fair: '3,000〜5,000円', poor: '1,000〜2,000円' },
-  { model: 'Xbox One（初期型）', good: '4,000〜7,000円', fair: '2,000〜3,000円', poor: '500〜1,500円' },
-];
-
 const demandInfo = [
   { title: '日本国内の需要は限定的', description: '日本ではPlayStationやSwitchが圧倒的なシェアを持つため、Xboxの中古需要は限られています。そのため買取価格もPS5と比べると低めの傾向があります。' },
   { title: '海外輸出における需要', description: '一方、海外（特に北米・欧州）ではXboxの人気は高く、海外輸出を行う買取業者であれば相場より高めの買取価格を提示してくれることがあります。' },
@@ -40,17 +33,17 @@ const services = [
 
 const faqs = [
   { q: 'Xboxは日本でも買い取ってもらえますか？', a: 'はい、買取可能です。日本国内での需要は限られますが、海外輸出を行う業者や専門業者であれば適正価格で買い取ってもらえます。ヒカカク！で複数社に査定を依頼することをおすすめします。' },
-  { q: 'Xbox Series Xの買取相場はどのくらいですか？', a: '状態や付属品の有無によりますが、22,000〜40,000円が目安です。箱・付属品完備の美品であれば上限に近い金額が期待できます。' },
+  { q: 'Xbox Series Xの買取相場はどのくらいですか？', a: '当サイトが2026年11月24日に確認した金額は、Xbox Series X（RRT-00015）が駿河屋50,000円・ブックオフ16,000円でした。ゲオにも「Xbox Series X 1TB ディスクモデル」の掲載がありますが、型番の表記がなく同じ商品か確認できないため、表には載せていません。' },
   { q: 'Game Passに加入したままでも売れますか？', a: '売ること自体は可能ですが、必ず売却前にGame Passのサブスクリプションを解除し、Microsoftアカウントからサインアウトしてください。アカウントに紐づいたゲームライセンスは譲渡できません。' },
   { q: 'Xbox Oneの初期化方法を教えてください', a: '「設定」→「システム」→「本体の情報」→「本体のリセット」→「すべてリセットして削除」を選択します。Microsoftアカウントのサインアウトも忘れずに行ってください。' },
-  { q: 'Xboxのコントローラーだけでも売れますか？', a: 'はい、Xboxワイヤレスコントローラー単品でも2,000〜4,000円程度で買取可能です。Eliteコントローラーは5,000〜10,000円と高額査定が期待できます。限定デザインモデルは、さらに高値がつく傾向があります。' },
+  { q: 'Xboxのコントローラーだけでも売れますか？', a: 'Xboxワイヤレスコントローラーも買取の対象になっています。当サイトではコントローラー単品の買取価格を実測していないため、金額は各社の買取価格検索でご確認ください。' },
   { q: 'Xboxのゲームソフトは買い取ってもらえますか？', a: 'はい、パッケージ版のXboxソフトは買取対象です。ただし日本語版の需要は低いため、買取価格は控えめな傾向があります。北米版などは海外需要がある場合もあります。' },
 ];
 
 export default function XboxPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "Xbox買取おすすめ3選｜Series X/S・Xbox Oneの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Xbox' }]} />
 
       {/* Hero */}
@@ -72,33 +65,7 @@ export default function XboxPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Price Table */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>美品（箱あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <HardwareMeasured family="Xbox" label="Xbox" />
 
         {/* Xbox Demand */}
         <section className="mb-12">

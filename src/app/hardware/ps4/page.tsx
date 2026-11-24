@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import HardwareMeasured from '@/components/HardwareMeasured';
 
 export const metadata: Metadata = {
   title: 'PS4買取おすすめ3選｜プレステ4はまだ売れる【2026年相場】',
@@ -18,14 +19,8 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'PS4（初期型・CUH-1000系）', good: '8,000〜12,000円', fair: '5,000〜7,000円', poor: '2,000〜4,000円' },
-  { model: 'PS4 Slim（CUH-2000系）', good: '12,000〜18,000円', fair: '8,000〜11,000円', poor: '4,000〜7,000円' },
-  { model: 'PS4 Pro（CUH-7000系）', good: '18,000〜25,000円', fair: '12,000〜17,000円', poor: '6,000〜11,000円' },
-];
-
 const whySellReasons = [
-  { title: 'PS5未対応タイトルの需要', description: 'PS4専用タイトルや、PS4版を好むユーザーが一定数存在します。特に海外では依然としてPS4の需要が高い状況です。' },
+  { title: 'PS5未対応タイトルの需要', description: 'PS4専用タイトルや、PS4版を好むユーザーが一定数存在します。' },
   { title: '価格帯の人気', description: 'PS5より手頃な価格で購入できるため、ライトゲーマーや子供用として中古PS4の需要があります。' },
   { title: '豊富なソフトライブラリ', description: 'PS4には数千タイトルの名作がそろっており、過去の作品を楽しみたいユーザーの需要が継続しています。' },
   { title: 'メディアプレイヤーとしての価値', description: 'Blu-ray再生、動画配信サービスの視聴など、ゲーム以外の用途でも需要があります。' },
@@ -46,18 +41,18 @@ const services = [
 ];
 
 const faqs = [
-  { q: '古いPS4でも買い取ってもらえますか？', a: 'はい、初期型（CUH-1000系）でも買取可能です。動作品であれば2,000円以上の値段がつくのが一般的です。ジャンク品でも、パーツ取りの需要があるため買い取る業者があります。' },
-  { q: 'PS4の買取相場はどのくらいですか？', a: 'モデルや状態によりますが、初期型で5,000〜12,000円、Slimで8,000〜18,000円、Proで12,000〜25,000円が目安です。箱・付属品完備の美品であれば上限に近い査定額が期待できます。' },
-  { q: 'PS4のコントローラーだけでも売れますか？', a: 'はい、DUALSHOCK 4単品でも1,500〜3,000円程度で買取可能です。限定カラーや特別モデルはさらに高値がつきます。スティックの状態が良いものほど査定額が上がります。' },
+  { q: '古いPS4でも買い取ってもらえますか？', a: 'はい、初期型（CUH-1000系）も買取の対象です。当サイトが2026年11月24日に確認した時点では、初期型の買取価格は駿河屋で9,700円（CUH-1000AB01）〜13,000円（CUH-1200AB01）、ブックオフの宅配買取で8,000円（箱説なしは6,000円）でした。ジャンク品の扱いは店によって異なるため、各社の買取条件をご確認ください。' },
+  { q: 'PS4の買取相場はどのくらいですか？', a: '当サイトが2026年11月24日に各社の公式ページで確認した金額は、初期型（CUH-1200AB01）が駿河屋13,000円・ブックオフ8,000円・ゲオ16,000円、Slim（CUH-2200AB01）が14,000円・10,000円・18,000円、Pro（CUH-7200BB01）が16,000円・12,001円・22,000円でした。ゲオは状態が最も良い場合の「最高価格」、ブックオフは宅配買取の参考価格です。' },
+  { q: 'PS4のコントローラーだけでも売れますか？', a: 'DUALSHOCK 4は単品でも買取の対象になっています。当サイトではコントローラー単品の買取価格を実測していないため、金額は各社の買取価格検索でご確認ください。' },
   { q: 'PS4の初期化方法を教えてください', a: '「設定」→「初期化」→「PS4を初期化する」→「フル」を選択します。事前にPSNアカウントのサインアウトと「いつも使うPS4」の登録解除を行ってください。' },
-  { q: 'PS4とPS4 Proはどちらが高く売れますか？', a: 'PS4 Proのほうが高値がつきます。4K対応やハイパフォーマンスモードを求めるユーザーの需要があり、Proは通常のPS4より5,000〜10,000円ほど高い買取価格になります。' },
-  { q: 'ディスクを読み込まないPS4でも売れますか？', a: 'ジャンク品として買取可能な場合があります。買取価格は大幅に下がりますが、パーツ取り需要があるため1,000〜3,000円程度の値段がつくことがあります。ヒカカク！でジャンク品に対応する業者を探すことをおすすめします。' },
+  { q: 'PS4とPS4 Proはどちらが高く売れますか？', a: '2026年11月24日の実測では、3社ともPS4 Proのほうが高く、駿河屋は初期型13,000円に対してPro 16,000円、ゲオは16,000円に対して22,000円でした。' },
+  { q: 'ディスクを読み込まないPS4でも売れますか？', a: '動作に不具合がある本体の扱いは店によって異なります。当サイトではジャンク品の買取価格を実測していないため、各社の買取条件（ジャンク品・動作不良品の扱い）をご確認ください。' },
 ];
 
 export default function PS4Page() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4買取おすすめ3選｜プレステ4はまだ売れる【2026年相場】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "PS4買取おすすめ3選｜プレステ4はまだ売れる【2026年相場】", "datePublished": "2026-03-15", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'PlayStation 4' }]} />
 
       {/* Hero */}
@@ -79,33 +74,7 @@ export default function PS4Page() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Price Table */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。実際の買取価格は状態・付属品・時期により変動します。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>美品（箱あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <HardwareMeasured family="PS4" label="PS4" />
 
         {/* Why Still Sells */}
         <section className="mb-12">
@@ -160,40 +129,6 @@ export default function PS4Page() {
                     <td>{s.area}</td>
                     <td>{s.method}</td>
                     <td>{s.point}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Price Comparison by Service */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />業者別買取価格比較</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ PS4 Slim（CUH-2000系）の参考買取価格です。時期・在庫状況により変動します。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>業者名</th>
-                  <th>美品</th>
-                  <th>良品</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { name: 'ヒカカク！', good: '最大18,000円', fair: '最大13,000円', note: '一括査定で最高値を比較' },
-                  { name: 'ゲオ', good: '~14,000円', fair: '~10,000円', note: 'まとめ売りでUP' },
-                  { name: 'ブックオフ', good: '~12,000円', fair: '~8,000円', note: '店舗により変動' },
-                  { name: '駿河屋', good: '~13,000円', fair: '~9,000円', note: '宅配買取対応' },
-                  { name: '買取ウリエル', good: '価格表非公開', fair: '価格表非公開', note: '出張査定で提示（ゲームは1都3県のみ）' },
-                ].map((row) => (
-                  <tr key={row.name}>
-                    <td className="font-bold">{row.name}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{row.note}</td>
                   </tr>
                 ))}
               </tbody>

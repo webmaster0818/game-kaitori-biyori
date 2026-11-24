@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import HardwareMeasured from '@/components/HardwareMeasured';
 
 export const metadata: Metadata = {
   title: 'レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】',
@@ -18,18 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'ファミリーコンピュータ', good: '3,000〜8,000円', fair: '1,500〜2,500円', poor: '500〜1,000円' },
-  { model: 'スーパーファミコン', good: '3,000〜7,000円', fair: '1,500〜2,500円', poor: '500〜1,000円' },
-  { model: 'メガドライブ', good: '5,000〜12,000円', fair: '3,000〜4,500円', poor: '1,000〜2,500円' },
-  { model: 'PCエンジン', good: '8,000〜20,000円', fair: '4,000〜7,000円', poor: '2,000〜3,500円' },
-  { model: 'ネオジオ（AES）', good: '30,000〜80,000円', fair: '15,000〜29,000円', poor: '8,000〜14,000円' },
-  { model: 'セガサターン', good: '5,000〜10,000円', fair: '2,500〜4,500円', poor: '1,000〜2,000円' },
-  { model: 'NINTENDO 64', good: '4,000〜8,000円', fair: '2,000〜3,500円', poor: '800〜1,500円' },
-  { model: 'ドリームキャスト', good: '4,000〜8,000円', fair: '2,000〜3,500円', poor: '800〜1,500円' },
-  { model: 'ゲームキューブ', good: '5,000〜12,000円', fair: '3,000〜4,500円', poor: '1,500〜2,500円' },
-];
-
 const popularReasons = [
   { title: 'コレクター需要の高まり', description: '30〜50代の大人が子供時代に遊んだゲームを再び手に入れたいという「懐かしさ需要」が年々増加しています。' },
   { title: '生産終了による希少性', description: '新品が手に入らないため、状態の良い中古品ほど価値が上がります。特に箱・説明書付きの完品は非常に高値で取引されています。' },
@@ -38,9 +27,9 @@ const popularReasons = [
 ];
 
 const premiumConditions = [
-  { title: '箱・説明書付きの完品', description: '箱なし（裸）と完品では買取価格が2〜10倍以上変わる場合があります。特にファミコン・スーファミの完品は非常に高値がつきます。' },
-  { title: '希少タイトル・限定版', description: '生産数が少ないタイトルや限定版にはプレミア価格がつきます。ネオジオのソフトは特に高額で、100万円を超えるタイトルも存在します。' },
-  { title: '未開封品', description: 'シュリンク（ビニール包装）付きの未開封品は、中古品の何倍もの価格がつきます。未開封の状態を維持している場合は、開封せずに査定に出すことをおすすめします。' },
+  { title: '箱・説明書付きの完品', description: '2026年11月24日の確認では、ブックオフの宅配買取でスーパーファミコンとNINTENDO64の【箱説なし】が400円でした。駿河屋の通常買取価格（スーパーファミコン5,500円など）は、箱・説明書・付属品がそろっていることが前提です。' },
+  { title: '希少タイトル・限定版', description: '生産数が少ないタイトルや限定版は、高い買取価格がつくことがあります。' },
+  { title: '未開封品', description: 'シュリンク（ビニール包装）付きの未開封品は、中古品より高い価格がつくことがあります。未開封の状態を維持している場合は、開封せずに査定に出すことをおすすめします。' },
   { title: '動作品であること', description: '正常に動作することが大前提です。ジャンク品は買取価格が大幅に下がるため、売却前に動作確認を行うことをおすすめします。' },
   { title: '状態の良さ（黄ばみなし）', description: 'スーパーファミコンなどは経年による黄ばみが発生しやすく、黄ばみの少ない本体は高値がつきます。保管環境が重要です。' },
 ];
@@ -52,9 +41,9 @@ const services = [
 ];
 
 const faqs = [
-  { q: 'レトロゲームの買取相場はどのくらいですか？', a: '機種や状態により大きく異なります。ファミコン本体で1,500〜8,000円、ネオジオ（AES）は15,000〜80,000円と幅があります。ソフト単体でも希少タイトルは数万円〜数十万円の価値がつくことがあります。' },
+  { q: 'レトロゲームの買取相場はどのくらいですか？', a: '当サイトが2026年11月24日に確認した駿河屋の買取価格（箱・説明書・付属品そろい）は、ファミコン8,000円、スーパーファミコン5,500円、メガドライブ13,000円、PCエンジン14,000円、ネオジオ（AES）75,000円などでした。ブックオフの宅配買取は、2001年以前に発売された本体を原則として対象外としており、ほとんどの機種で金額が表示されていませんでした。' },
   { q: '動かないレトロゲーム機でも売れますか？', a: 'ジャンク品でも買取可能な業者があります。パーツ取り需要やコレクター向けの外装需要があるため、故障している場合も、まずは査定に出すことをおすすめします。ただし買取価格は動作品と比べて大幅に下がります。' },
-  { q: 'ソフトだけでも買い取ってもらえますか？', a: 'はい、ソフト単体でも買取可能です。特にレトロゲームのソフトは本体以上に高額になることが多くあります。希少タイトルは裸（カートリッジのみ）でも数千円〜数万円の値段がつきます。' },
+  { q: 'ソフトだけでも買い取ってもらえますか？', a: 'はい、ソフト単体も買取の対象です。当サイトではレトロゲームのソフトの買取価格を実測していないため、金額は各社の買取価格検索でご確認ください。' },
   { q: 'レトロゲームを売る前に行うべきことは何ですか？', a: '動作確認、端子部分の清掃（接点復活剤の使用）、外装の拭き掃除が基本です。箱や説明書がある場合は必ず一緒に査定に出してください。付属品の有無で価格が大きく変わります。' },
   { q: 'レトロゲームの買取に最も適したサービスはどこですか？', a: 'ヒカカク！をおすすめします。レトロゲーム専門の買取業者が多数参加しており、一括査定で最高値を比較しやすい点が最大の強みです。専門知識のある業者による適正査定が期待できます。' },
   { q: 'レトロゲームの相場は今後どうなりますか？', a: '全体的に上昇傾向が続いています。コレクター人口の増加と供給量の減少により、特に希少タイトルや状態の良い完品は今後も値上がりが予想されます。相場の動向を確認し、売り時を見極めることが重要です。' },
@@ -63,7 +52,7 @@ const faqs = [
 export default function RetroPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲーム買取おすすめ3選｜ファミコン・スーファミの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'レトロゲーム' }]} />
 
       {/* Hero */}
@@ -103,33 +92,7 @@ export default function RetroPage() {
           </div>
         </section>
 
-        {/* Price Table */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />機種別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 本体のみの参考相場です。ソフトの相場はタイトルにより大きく異なります。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>機種</th>
-                  <th>完品（箱・説明書あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <HardwareMeasured family="Retro" label="レトロゲーム機" />
 
         {/* Premium Conditions */}
         <section className="mb-12">

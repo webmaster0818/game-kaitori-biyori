@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import HardwareMeasured from '@/components/HardwareMeasured';
 
 export const metadata: Metadata = {
   title: 'ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】',
@@ -18,15 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'ゲームボーイ（初代）', good: '3,000〜8,000円', fair: '1,500〜2,500円', poor: '500〜1,000円' },
-  { model: 'ゲームボーイポケット', good: '2,500〜6,000円', fair: '1,200〜2,200円', poor: '400〜1,000円' },
-  { model: 'ゲームボーイカラー', good: '3,000〜7,000円', fair: '1,500〜2,500円', poor: '500〜1,200円' },
-  { model: 'ゲームボーイアドバンス', good: '4,000〜10,000円', fair: '2,000〜3,500円', poor: '800〜1,800円' },
-  { model: 'ゲームボーイアドバンスSP', good: '5,000〜12,000円', fair: '3,000〜4,500円', poor: '1,500〜2,500円' },
-  { model: 'ゲームボーイミクロ', good: '15,000〜35,000円', fair: '8,000〜14,000円', poor: '4,000〜7,000円' },
-];
-
 const collectorReasons = [
   { title: 'ノスタルジー需要', description: '1989年の初代ゲームボーイ発売当時に子供だった世代（30〜40代）が、懐かしさから再購入するケースが増えています。特に、実機でのプレイを希望する層が多く見られます。' },
   { title: '海外コレクターの高い需要', description: '日本のゲームボーイは海外で「Japanese Original」として高い価値を持ちます。限定カラーや日本語版ソフトは海外オークションで高額取引されています。' },
@@ -34,18 +26,11 @@ const collectorReasons = [
   { title: 'レトロゲームブームの波及', description: 'レトロゲーム全体のブームにより、ゲームボーイも再評価されています。特にゲームボーイミクロは生産数の少なさから高額化が顕著です。' },
 ];
 
-const premiumSoftware = [
-  { title: 'ポケットモンスター 赤・緑・青・ピカチュウ', price: '箱・説明書付き: 3,000〜10,000円', note: '初版は特にプレミア' },
-  { title: 'ポケットモンスター 金・銀・クリスタル', price: '箱・説明書付き: 2,000〜8,000円', note: 'クリスタルが最も高値' },
-  { title: 'マザー1+2（GBA）', price: '箱・説明書付き: 3,000〜6,000円', note: '名作RPGとして根強い人気' },
-  { title: 'ファイアーエムブレム 封印の剣（GBA）', price: '箱・説明書付き: 2,000〜5,000円', note: 'FEシリーズの人気タイトル' },
-];
-
 const conditionDifference = [
-  { condition: '未開封品', multiplier: '通常の3〜10倍', description: 'シュリンク付きの未開封品は最高ランクです。保存状態が良いほど価値が高くなります。' },
-  { condition: '完品（箱・説明書付き）', multiplier: '通常の2〜5倍', description: '箱と説明書がそろった完品は、本体のみの場合と比べて大幅に高値がつきます。' },
-  { condition: '本体のみ（動作品）', multiplier: '基準価格', description: '動作する本体のみの状態です。液晶の状態やボタンの反応により査定額が変動します。' },
-  { condition: 'ジャンク品', multiplier: '基準の1/3〜1/5', description: '故障品でもMOD需要があるため、値段がつきます。液晶割れは特に減額の対象となります。' },
+  { condition: '未開封品', multiplier: '店により異なる（当サイトでは未実測）', description: 'シュリンク付きの未開封品は最高ランクです。保存状態が良いほど価値が高くなります。' },
+  { condition: '完品（箱・説明書付き）', multiplier: '駿河屋の通常買取価格の前提', description: '駿河屋の通常買取価格は、箱・説明書・付属品がそろっていることが前提で、必要な付属品が欠けると大きく減額されます（駿河屋「減額基準リスト」）。' },
+  { condition: '本体のみ（動作品）', multiplier: '店により異なる', description: '動作する本体のみの状態です。液晶の状態やボタンの反応により査定額が変動します。' },
+  { condition: 'ジャンク品', multiplier: '店により異なる（当サイトでは未実測）', description: '故障品でもMOD需要があるため、値段がつきます。液晶割れは特に減額の対象となります。' },
 ];
 
 const services = [
@@ -55,9 +40,9 @@ const services = [
 ];
 
 const faqs = [
-  { q: 'ゲームボーイの買取相場はどのくらいですか？', a: 'モデルや状態により異なります。初代ゲームボーイは1,500〜8,000円、ゲームボーイアドバンスSPは3,000〜12,000円、ゲームボーイミクロは8,000〜35,000円が目安です。限定カラーや完品は、さらに高値がつく傾向があります。' },
+  { q: 'ゲームボーイの買取相場はどのくらいですか？', a: '当サイトが2026年11月24日に確認した駿河屋の買取価格（箱・説明書・付属品そろい）は、初代16,000円、ポケット13,000円、カラー13,000円、アドバンス16,000円、アドバンスSP 15,000円、ミクロ26,000円でした。ゲオは初代を掲載しておらず、ブックオフの宅配買取は初代・ポケット・カラーを掲載していませんでした。' },
   { q: '壊れたゲームボーイでも売れますか？', a: 'はい、ジャンク品でもMOD（改造）素材としての需要があるため買取可能です。液晶が映らない、ボタンが効かないなどの故障でも値段がつくことがあります。ただし買取価格は動作品と比べて大幅に下がります。' },
-  { q: 'ゲームボーイのソフトだけでも売れますか？', a: 'はい、ソフト単体でも買取可能です。特にポケモンシリーズやファイアーエムブレムなどの人気タイトルは単体でも数千円の値段がつきます。箱・説明書付きの完品はさらに高額です。' },
+  { q: 'ゲームボーイのソフトだけでも売れますか？', a: 'はい、ソフト単体も買取の対象です。当サイトではゲームボーイのソフトの買取価格を実測していないため、金額は各社の買取価格検索でご確認ください。' },
   { q: 'ゲームボーイミクロはなぜ高いのですか？', a: 'ゲームボーイミクロは2005年に発売された最後のゲームボーイシリーズで、生産期間が短く流通量が少ないためです。コンパクトなデザインも人気で、コレクターアイテムとしての価値が高まっています。' },
   { q: 'ゲームボーイの電池交換は必要ですか？', a: '買取に出す際は電池交換は不要です。カートリッジ内蔵電池が切れているソフトでも買取可能です。ただし、電池が残っているほうが、わずかにプラス査定となることがあります。' },
   { q: 'どのサービスがゲームボーイ買取におすすめですか？', a: 'ヒカカク！をおすすめします。レトロゲーム・ゲームボーイ専門の買取業者が複数参加しており、一般的なリサイクルショップでは適正に評価されにくいゲームボーイの価値を、適正に査定する業者を探せます。' },
@@ -66,7 +51,7 @@ const faqs = [
 export default function GameboyPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームボーイ買取おすすめ3選｜GB・GBC・GBAの買取相場【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'ゲームボーイ' }]} />
 
       {/* Hero */}
@@ -88,33 +73,7 @@ export default function GameboyPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Price Table */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。限定カラーや特別モデルはさらに高額になる場合があります。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>完品（箱・説明書あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <HardwareMeasured family="Game Boy" label="ゲームボーイ" />
 
         {/* Collector Reasons */}
         <section className="mb-12">
@@ -127,32 +86,6 @@ export default function GameboyPage() {
               </div>
             ))}
           </div>
-        </section>
-
-        {/* Premium Software */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />プレミアソフト情報</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>タイトル</th>
-                  <th>買取相場</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {premiumSoftware.map((s) => (
-                  <tr key={s.title}>
-                    <td className="font-bold">{s.title}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{s.price}</td>
-                    <td className="text-sm" style={{ color: 'var(--color-text-light)' }}>{s.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs mt-2" style={{ color: 'var(--color-text-lighter)' }}>※ 上記は一般的な人気タイトルの例です。希少なタイトルはさらに高額になる場合があります。</p>
         </section>
 
         {/* Condition Difference */}

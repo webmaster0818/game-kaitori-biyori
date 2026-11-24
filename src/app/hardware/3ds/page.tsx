@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import HardwareMeasured from '@/components/HardwareMeasured';
 
 export const metadata: Metadata = {
   title: '3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】',
@@ -18,16 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-const priceData = [
-  { model: 'Nintendo 3DS', good: '5,000〜9,000円', fair: '3,000〜4,500円', poor: '1,000〜2,500円' },
-  { model: 'Nintendo 3DS LL', good: '6,000〜11,000円', fair: '3,500〜5,500円', poor: '1,500〜3,000円' },
-  { model: 'New Nintendo 3DS', good: '8,000〜15,000円', fair: '5,000〜7,500円', poor: '2,500〜4,500円' },
-  { model: 'New Nintendo 3DS LL', good: '9,000〜16,000円', fair: '5,500〜8,500円', poor: '3,000〜5,000円' },
-  { model: 'Nintendo 2DS', good: '4,000〜7,000円', fair: '2,000〜3,500円', poor: '800〜1,500円' },
-  { model: 'Nintendo DS', good: '2,000〜4,000円', fair: '1,000〜1,800円', poor: '300〜800円' },
-  { model: 'Nintendo DS Lite', good: '2,500〜5,000円', fair: '1,200〜2,200円', poor: '500〜1,000円' },
-];
-
 const futureValue = [
   { title: '生産終了で供給が減少', description: '3DSは2020年に、DSは2013年に生産を終了しています。新品の流通がなくなったため、状態の良い中古品の価値は今後も上昇が見込まれます。' },
   { title: 'eショップ終了の影響', description: 'ニンテンドーeショップの終了により、パッケージ版ソフトの価値が相対的に上昇しています。本体の需要もそれに伴い高まっています。' },
@@ -41,8 +32,8 @@ const services = [
 ];
 
 const faqs = [
-  { q: '3DSの買取相場はどのくらいですか？', a: 'モデルや状態によりますが、通常の3DSで3,000〜9,000円、New 3DSで5,000〜15,000円が目安です。限定カラーや特別モデルはさらに高値がつきます。' },
-  { q: '古いDSでも買い取ってもらえますか？', a: 'はい、初代DSやDS Liteも買取可能です。動作品であれば1,000〜5,000円程度の値段がつきます。限定カラーや状態の良いものは、さらに高額になる傾向があります。' },
+  { q: '3DSの買取相場はどのくらいですか？', a: '当サイトが2026年11月24日に確認した駿河屋の買取価格は、3DS 13,000円、3DS LL 16,000円、New 3DS 22,000円、New 3DS LL 25,000円でした。ブックオフ（宅配買取の参考価格）とゲオ（最高価格）の金額は、上の表をご覧ください。色によって価格が変わります。' },
+  { q: '古いDSでも買い取ってもらえますか？', a: 'はい、DS・DS Liteも買取の対象です。2026年11月24日の確認では、DS（ピュアホワイト）が駿河屋10,000円・ブックオフ2,700円・ゲオ2,500円、DS Lite（クリスタルホワイト）が11,000円・4,000円・4,500円で、店による差が大きい機種です。' },
   { q: '3DSのSDカードのデータはどう消去しますか？', a: '本体の「設定」→「データ管理」→「Nintendo 3DSデータ管理」→「ソフト管理」からソフトデータを削除できます。SDカードはPCに接続してフォーマットするか、本体の「設定」→「その他の設定」→「初期化」→「本体の初期化」で全データを消去できます。' },
   { q: '生産終了した3DS/DSの価値は今後上がりますか？', a: '上昇傾向にあります。特にeショップ終了後はパッケージ版ソフトの需要が高まっており、それに伴い本体の需要も増加しています。限定モデルや状態の良い完品は特に値上がりが期待されます。' },
   { q: '画面に傷がある3DSでも売れますか？', a: 'はい、買取可能です。ただし画面の傷は減額要因となります。上画面・下画面ともに傷が少ないほど高額査定につながります。保護フィルムが貼ってある状態であれば、傷なしと同等の評価がつくことがあります。' },
@@ -52,7 +43,7 @@ const faqs = [
 export default function ThreeDSPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "3DS・DS買取おすすめ3選｜生産終了で今後値上がりの可能性【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-11-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ハード別', href: '/' }, { name: 'Nintendo 3DS・DS' }]} />
 
       {/* Hero */}
@@ -74,33 +65,7 @@ export default function ThreeDSPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* Price Table */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モデル別 買取相場一覧</h2>
-          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>※ 2026年時点の参考相場です。限定モデルや特別カラーはさらに高額になる場合があります。</p>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>美品（箱あり）</th>
-                  <th>良品</th>
-                  <th>傷・汚れあり</th>
-                </tr>
-              </thead>
-              <tbody>
-                {priceData.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold">{row.model}</td>
-                    <td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{row.good}</td>
-                    <td>{row.fair}</td>
-                    <td>{row.poor}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <HardwareMeasured family="3DS/DS" label="3DS・DS" />
 
         {/* Future Value */}
         <section className="mb-12">
