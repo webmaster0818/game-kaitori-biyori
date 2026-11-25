@@ -4,14 +4,14 @@ import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 
 export const metadata: Metadata = {
-  title: '駿河屋のゲーム買取の評判・口コミ｜レトロゲームの買取価格と手数料・送料を公式で検証【2026年11月】',
+  title: '駿河屋のゲーム買取の評判・口コミ｜Switch 2・PS5・レトロゲームの買取価格と手数料を公式で検証【2026年11月】',
   description:
-    '駿河屋のゲーム買取を、公式の買取Q&A・減額基準・買取検索（2026年11月15日確認）とヒカカク493件の星分布で検証しています。送料無料の条件、通信買取手数料660〜990円、査定4〜14日、レトロゲームの買取価格と箱・説明書の扱いをまとめています。',
+    '駿河屋のゲーム買取を公式の買取検索（2026年11月25日：Switch 2本体37,000円・マリオカート ワールド5,300円ほか）とヒカカク493件の星分布で検証しています。送料無料の条件、手数料660〜990円を引いた手取り、査定日数、レトロゲームの価格もまとめています。',
   keywords: ['駿河屋 ゲーム 買取', '駿河屋 レトロゲーム 買取', '駿河屋 買取 評判', '駿河屋 口コミ', '駿河屋 査定'],
   openGraph: {
     images: ['/og.png'],
-    title: '駿河屋のゲーム買取の評判・口コミ｜レトロゲームの買取価格と手数料・送料を公式で検証【2026年11月】',
-    description: '駿河屋のゲーム買取を、公式の送料・手数料・減額基準とレトロゲームの買取価格、ヒカカク493件の星分布で検証しています。',
+    title: '駿河屋のゲーム買取の評判・口コミ｜Switch 2・PS5・レトロゲームの買取価格と手数料を公式で検証【2026年11月】',
+    description: '駿河屋のゲーム買取を、Switch 2・PS5・レトロゲームの公式買取価格（2026年11月25日確認）、送料・手数料・減額基準、ヒカカク493件の星分布で検証しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
@@ -41,7 +41,7 @@ const faqs = [
   { q: '査定額に納得できない場合はキャンセルできますか？', a: '承諾前であればキャンセルできますが、返送料は利用者負担です。一部の商品だけのキャンセルは、あんしん買取で見積もりを受けた商品を自動承諾なしで申し込んだ場合に限られ、かんたん買取と、あんしん買取に追加で同梱した商品は一部だけのキャンセルを受け付けていません。自動承諾を選んだ場合は、あんしん買取・かんたん買取ともに荷物到着後のキャンセル・返送はできません。また、あんしん買取で状態に不備がない場合や減額が見積もり合計の5％未満の場合は、承諾の手続きが省略されて入金に進みます（公式 買取Q&A・あんしん買取、2026年11月15日確認）。' },
   { q: '駿河屋ではレトロゲームはいくらで売れますか？', a: '2026年11月15日の駿河屋公式の買取検索では、スーパーファミコンのクロノトリガーが2,500円（10月28日は2,200円）、スーパーメトロイドが8,100円、ファミコンのMOTHERが11,000円（美品22,000円）、スーパーファミコンのレンダリング・レンジャーR2が290,400円でした。MOTHERの外箱のみ2,000円・説明書のみ1,500円のように、付属品だけにも買取価格が付くタイトルがあります。価格は日々変わるため、売却前に商品ページでご確認ください。' },
   { q: '店舗での買取はできますか？', a: '公式の店舗一覧では、駿河屋リアルストア110店舗・フレンドリーショップ50店舗の計160店舗（2026年10月16日時点）が全国にあります。秋葉原・池袋・名古屋・大阪日本橋などには買取センターもあります。通常の店頭持込は店舗の在庫状況や商品状態で価格が変わる場合がありますが、あんしん買取の査定結果メールの取引番号を対象店舗に持ち込む「あんしん持込」では、通信買取と同じ価格で買い取ると公式の買取Q&Aで案内されています（ネットの通信買取キャンペーンは店舗では適用外）。対象店舗は公式の「O2O買取サービスあんしん持込」のページに掲載されています。' },
-  { q: '現行のSwitchやPS5のソフトも買取対象ですか？', a: '現行タイトルも買取対象で、商品ページで買取価格を事前に確認できます。宅配では通信買取手数料（660〜990円）が差し引かれるため、少数のソフトを売る場合は手数料を引いた手取りで他社と比較することをおすすめします。' },
+  { q: '現行のSwitchやPS5のソフトも買取対象ですか？', a: '現行タイトルも買取対象で、商品ページで買取価格を事前に確認できます。2026年11月25日の公式買取検索では、マリオカート ワールドが5,300円、ドンキーコング バナンザが4,500円、PS5のEA SPORTS FC 27が4,600円、Switch 2本体（日本語・国内専用）が37,000円でした。宅配では通信買取手数料（660〜990円）が差し引かれるため、マリオカート ワールド1本をあんしん買取（銀行振込）で売ると手取りは4,420円です。少数のソフトを売る場合は、手数料を引いた手取りで他社と比較することをおすすめします。' },
 ];
 
 const retroPrices = [
@@ -59,10 +59,31 @@ const retroPrices = [
   { title: 'スーパーマリオカート（SFC）', price: '1,200円', note: '—' },
 ];
 
+// 現行機（2026-11-25 駿河屋 公式買取検索 search_buy を当サイトが実測・型番/JANで照合）
+const currentHardware = [
+  { title: 'Nintendo Switch 2本体（日本語・国内専用）', code: 'BEE-S-KB6CA', price: '37,000円' },
+  { title: 'Nintendo Switch 2本体 マリオカート ワールド セット（日本語・国内専用）', code: 'BEE-S-KB6PA', price: '38,000円' },
+  { title: 'Nintendo Switch 2本体（多言語対応）', code: 'BEE-S-KB6AA', price: '60,000円' },
+  { title: 'Nintendo Switch本体（有機ELモデル）ホワイト', code: 'HEG-S-KAAAA', price: '13,000円' },
+  { title: 'プレイステーション5 Pro本体', code: 'CFI-7000B01', price: '110,000円' },
+  { title: 'プレイステーション5本体（slimモデル・ディスクドライブ搭載）', code: 'CFI-2000A01', price: '65,000円' },
+  { title: 'プレイステーション5本体（slimモデル）デジタル・エディション', code: 'CFI-2000B01', price: '56,000円' },
+];
+const currentSoft = [
+  { title: 'マリオカート ワールド（Switch 2）', code: 'BEE-P-AAAAA', price: 5300 },
+  { title: 'EA SPORTS FC 27（PS5）', code: 'ELJM-31019', price: 4600 },
+  { title: 'ドンキーコング バナンザ（Switch 2）', code: 'BEE-P-AAACA', price: 4500 },
+  { title: 'ファイナルファンタジー レゾナンス（PS5）', code: 'ELJM-30964', price: 4500 },
+  { title: '大乱闘スマッシュブラザーズ SPECIAL（Switch）', code: 'HAC-P-AAABA', price: 3000 },
+  { title: 'あつまれ どうぶつの森 Nintendo Switch 2 Edition（Switch 2）', code: 'JAN 4902370553901', price: 2700 },
+  { title: 'あつまれ どうぶつの森（Switch）', code: 'HAC-P-ACBAA', price: 2200 },
+];
+const yen = (n: number) => n.toLocaleString('ja-JP') + '円';
+
 export default function SurugayaReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋のゲーム買取の評判・口コミ｜レトロゲームの買取価格と手数料・送料を公式で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "駿河屋のゲーム買取の評判・口コミ｜Switch 2・PS5・レトロゲームの買取価格と手数料を公式で検証", "datePublished": "2026-03-15", "dateModified": "2026-11-25", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: '駿河屋' }]} />
 
       {/* Hero */}
@@ -72,10 +93,10 @@ export default function SurugayaReviewPage() {
             <span className="tag-pill text-xs" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>現行ゲーム・レトロゲーム買取</span>
           </div>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            駿河屋のゲーム買取<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>評判・口コミとレトロゲームの買取価格（2026年11月）</span>
+            駿河屋のゲーム買取<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>評判・口コミとSwitch 2・PS5・レトロゲームの買取価格（2026年11月）</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            駿河屋は、商品ごとの買取価格を公式サイトで公開している中古ホビー・ゲームの買取サービスです。ヒカカクの口コミは493件・総合2.57点で、★1が213件、★5が95件と評価が分かれています（2026年11月15日確認）。評価が分かれる主な理由は、宅配の通信買取手数料（660〜990円）、査定期間（到着後4〜14日）、箱・説明書の欠品による減額です。レトロゲームの買取価格は、2026年11月15日の公式買取検索でスーパーファミコンのクロノトリガーが2,500円、ファミコンのMOTHERが11,000円でした（下の表）。
+            駿河屋は、商品ごとの買取価格を公式サイトで公開している中古ホビー・ゲームの買取サービスです。ヒカカクの口コミは493件・総合2.57点で、★1が213件、★5が95件と評価が分かれています（2026年11月15日確認）。評価が分かれる主な理由は、宅配の通信買取手数料（660〜990円）、査定期間（到着後4〜14日）、箱・説明書の欠品による減額です。2026年11月25日の公式買取検索では、Nintendo Switch 2本体（日本語・国内専用）が37,000円、マリオカート ワールドが5,300円、プレイステーション5 Pro本体が110,000円でした。レトロゲームは11月15日にスーパーファミコンのクロノトリガーが2,500円、ファミコンのMOTHERが11,000円でした（下の表）。
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="https://www.suruga-ya.jp/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-2.5 px-6">
@@ -103,6 +124,34 @@ export default function SurugayaReviewPage() {
             </ul>
             <p className="text-xs mt-4" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋公式の<a href="https://www.suruga-ya.jp/man/kaitori/kaitoritop.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">買取TOP</a>・<a href="https://www.suruga-ya.jp/man/kaitoriqa/kaitoriqa.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">買取Q&A</a>・<a href="https://www.suruga-ya.jp/man/hyou/kaitorihin.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">減額基準リスト</a>・<a href="https://www.suruga-ya.jp/man/kaitori/shop_ansin.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">O2O買取サービスあんしん持込</a>（いずれも2026年11月15日閲覧）。詳しい条件は下の「公式仕様」の表をご覧ください。</p>
           </div>
+        </section>
+
+        {/* 現行機の買取価格 */}
+        <section className="mb-12" id="current">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />駿河屋の現行ゲーム買取価格（Switch 2・Switch・PS5／2026年11月25日確認）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>駿河屋公式の買取検索で、現行機の本体とソフトの買取価格を型番・JANコードで照合して確認しました。Switch 2本体は日本語・国内専用版が37,000円で、多言語対応版（60,000円）とは価格が大きく異なります。売る前に、本体裏面や外箱の型番をご確認ください。</p>
+          <div className="overflow-x-auto mb-6">
+            <table className="comparison-table">
+              <thead><tr><th>本体</th><th>型番</th><th>駿河屋の買取価格</th></tr></thead>
+              <tbody>
+                {currentHardware.map((r) => (
+                  <tr key={r.code}><td className="font-bold">{r.title}</td><td className="text-sm">{r.code}</td><td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{r.price}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>ソフトは、宅配の「あんしん買取」（銀行振込）で1本だけ売った場合の手取りもあわせて計算しました。あんしん買取は見積額3,000円以上で送料無料（着払い）になり、通信買取手数料880円が買取合計額から差し引かれます。</p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead><tr><th>ソフト</th><th>型番・JAN</th><th>駿河屋の買取価格</th><th>1本だけ宅配で売った場合の手取り（当サイト計算）</th></tr></thead>
+              <tbody>
+                {currentSoft.map((r) => (
+                  <tr key={r.code}><td className="font-bold">{r.title}</td><td className="text-sm">{r.code}</td><td style={{ color: 'var(--color-electric-green)' }} className="font-bold">{yen(r.price)}</td><td className="text-sm">{r.price >= 3000 ? `${yen(r.price - 880)}（送料無料）` : `${yen(r.price - 880)}から送料（元払い）を差し引いた額`}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs mt-2" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://www.suruga-ya.jp/kaitori/kaitori.html" target="_blank" rel="noopener noreferrer nofollow" className="underline">駿河屋公式の買取検索</a>（2026年11月25日閲覧。国内通常版を型番・JANコードで照合）。表示は完品・状態良好を前提とした通常の買取価格で、在庫・相場により日々変動します。手取りは、あんしん買取の銀行振込の通信買取手数料880円・送料無料の条件（見積額3,000円以上）から当サイトが計算した目安で、査定での減額は含みません。店頭買取では通信買取手数料はかかりません。ほかの店との比較は<Link href="/hardware/ranking/" className="underline">ゲーム機本体の買取価格ランキング</Link>・<Link href="/software/ps5-soft/" className="underline">PS5ソフトの買取価格</Link>・<Link href="/software/high-value/" className="underline">高く売れるゲームソフトのランキング</Link>をご覧ください。</p>
         </section>
 
         {/* レトロゲーム買取価格の例 */}
