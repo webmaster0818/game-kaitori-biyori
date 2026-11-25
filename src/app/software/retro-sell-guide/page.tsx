@@ -34,7 +34,7 @@ const conditionRows = [
 
 const tips = [
   { tip: '専門店と大手の両方で査定を比較する', detail: 'レトロ・プレミア品は駿河屋/まんだらけ/レトログ等の専門店、新作が混在する場合は大手も併用することをおすすめします。同じソフトで数倍の差がつくことがあります。' },
-  { tip: '箱・説明書・付属品は捨てずに揃える', detail: '完品（箱・説明書あり）とソフトのみでは2〜10倍の差がつくことがあります。実家で探して揃えるだけで、査定額が大きく変わります。' },
+  { tip: '箱・説明書・付属品は捨てずに揃える', detail: '駿河屋の買取価格は状態（通常・美品・未開封）や付属品の有無で分かれて掲載されています。箱・説明書が見つかれば、あわせて査定に出してください。' },
   { tip: 'まとめ売りは送料・梱包無料の宅配買取を利用する', detail: '大量のレトロゲームは宅配買取が効率的です。送料・梱包用段ボールが無料の業者を選ぶと、手取りを最大化できます。' },
   { tip: '清掃は軽い拭き取りにとどめ、分解はしない', detail: 'ケースの簡単な拭き取りは査定時の印象を良くします。ただし分解や強い薬剤の使用は、故障・減額のおそれがあるため避けてください。' },
 ];
@@ -49,7 +49,7 @@ const faqs = [
 export default function RetroSellGuidePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-06-23", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "実家のレトロゲームを売るなら？まとめ売り・箱なし・動作不良OKの買取店比較【2026年】", "datePublished": "2026-06-23", "dateModified": "2026-11-25", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: '実家のレトロゲームを売るなら' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">

@@ -35,7 +35,7 @@ const premiumReasons = [
   { title: '生産数が少ない', description: '発売当時の出荷本数が少ないタイトルは、現存する数も限られるため希少価値が高まります。特にサターンやメガドライブの末期タイトルに多い傾向があります。' },
   { title: 'ジャンルの名作', description: 'シューティングや格闘ゲームなど、コアなファン層を持つジャンルの名作は、コレクター需要により高値が安定しています。' },
   { title: 'リメイク・移植がない', description: '他のハードに移植されていないタイトルは、オリジナル版でしか遊べないため需要が高まります。' },
-  { title: '状態の良い完品が少ない', description: '箱・説明書・付属品がすべて揃った「完品」は年々減少しているため、完品の買取価格は上昇傾向にあります。' },
+  { title: '状態の良い完品が少ない', description: '駿河屋の買取価格は「美品」「未開封」など状態ごとに分かれており、上の表でも MOTHER は通常11,000円・美品22,000円と差がありました（2026年10月28日確認）。箱・説明書がそろっているかで査定が変わるため、売却前に付属品をご確認ください。' },
 ];
 
 const fakeWarnings = [
@@ -47,7 +47,7 @@ const fakeWarnings = [
 const storageTips = [
   { title: '直射日光を避ける', description: 'ラベルの日焼け・変色を防ぐため、暗所での保管をおすすめします。日焼けしたラベルは買取価格の大幅な減額原因になります。' },
   { title: '湿気対策', description: '基板の腐食や端子の酸化を防ぐため、乾燥剤と一緒に保管することをおすすめします。特に梅雨の時期は注意が必要です。' },
-  { title: '箱は潰さない', description: '箱の有無で買取価格が2〜5倍変わることもあります。箱は立てて保管し、潰れないようご注意ください。' },
+  { title: '箱は潰さない', description: '上の表のとおり、駿河屋では状態によって買取価格が分かれています（クロノトリガーは外箱のみで600円）。箱は立てて保管し、潰れないようご注意ください。' },
   { title: '端子の清掃', description: '定期的に接点復活剤で端子を清掃すると、動作不良を防げます。売却前にも端子のクリーニングを忘れずに行ってください。' },
 ];
 
@@ -69,7 +69,7 @@ const faqs = [
 export default function RetroSoftPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-10-28", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "レトロゲームソフト買取おすすめ3選｜プレミアソフトを高く売るコツ【2026年】", "datePublished": "2026-03-15", "dateModified": "2026-11-25", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'レトロゲームソフト' }]} />
 
       {/* Hero */}

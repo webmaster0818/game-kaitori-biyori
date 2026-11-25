@@ -2,72 +2,84 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
+import KaitoriWorldCta from '@/components/KaitoriWorldCta';
 
 export const metadata: Metadata = {
   title: 'モンハンの買取価格はいくら？ワイルズ・ライズの相場を店舗横断で比較・売り時も解説',
   description:
-    'モンスターハンターシリーズの買取相場を2026年6月の調査データで一覧化しています。ワイルズ・ライズ・サンブレイク・ストーリーズ2・ワールド/アイスボーンを店舗横断で比較し、新作の影響と高く売るコツについても解説します。',
+    'モンハンワイルズ・ストーリーズ3・ストーリーズ2・ライズ・アイスボーンの買取価格を、駿河屋・ブックオフ・ゲオの公式買取ページで2026年11月25日に確認した価格で比較しています。JANコードと出典URLを明記しています。',
   keywords: ['モンハン 買取', 'モンスターハンター 買取価格', 'モンハンワイルズ 買取', 'モンハンライズ 売る', 'モンハン 相場'],
   openGraph: {
     images: ['/og.png'],
     title: 'モンハンの買取価格はいくら？店舗横断で相場比較',
-    description: 'モンハンシリーズの買取相場を店舗横断で比較しています。新作の影響についても解説します。',
+    description: 'モンハンシリーズ10商品の買取価格を、駿河屋・ブックオフ・ゲオの公式買取ページで2026年11月25日に確認した価格で比較しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
-// 2026年6月時点。各社公式買取ページおよび買取価格比較サイトの集計値（完品前提・店舗/状態/在庫により変動）
+// 2026-11-25 各社公式買取ページで確認（推測値・比較サイトの値は使用しない。掲載がない店は「—」）
+// 駿河屋=公式買取検索 search_buy?search_word=<JAN> の掲載価格（JAN・型番で照合）。「メールにてお見積」表示は価格非公表として扱う
+// ブックオフ=高価買取情報 ゲーム（bookoff.co.jp/selllist/game/index.html〜index_6.html・「最終更新日 2026年11月19日」表記）。モンハン作品の掲載なし（PlayStation系ソフトの掲載もなし）
+// ゲオ=高価買取品リスト PS5/Switch/Switch2（geo-online.co.jp/store_info/buy/PS5/・/Switch/・/Switch2/）をヘッドレスChromeで取得。モンハン作品の掲載なし（PS4のリストは存在しない）
+// Switch 2版ワイルズの発売予定日=カプコン公式 https://www.monsterhunter.com/wilds/ja-jp/ の「2026年12月4日（金）発売予定（Nintendo Switch™ 2）」表記（2026-11-25確認）
+// data/price-history.csv（当サイトの週次実測）にモンハン作品の記録はなし
+const SURVEY_DATE_LABEL = '2026年11月25日';
+const surugayaUrl = (jan: string) => `https://www.suruga-ya.jp/kaitori/search_buy?search_word=${jan}`;
+
 const priceData = [
-  { title: 'モンスターハンターワイルズ', platform: 'PS5', price: '800〜1,450円', trend: '下降', note: '定価9,900円に対し、供給過多で発売後に急落。店舗差が大きい' },
-  { title: 'モンスターハンターワイルズ', platform: 'Switch2', price: '未発売（開発中）', trend: '—', note: '2026年6月に開発中であることが正式発表。発売時期未定' },
-  { title: 'モンスターハンターライズ', platform: 'Switch', price: '300〜900円', trend: '低位安定', note: '廉価版登場で相場は低水準' },
-  { title: 'モンスターハンターライズ + サンブレイク セット', platform: 'Switch', price: '500〜1,000円', trend: '低位安定', note: '拡張同梱でもセットは1,000円前後' },
-  { title: 'モンスターハンターストーリーズ2 〜破滅の翼〜', platform: 'Switch', price: '未開封2,000円前後 / 中古は低位', note: '未開封品と中古品で価格差が非常に大きい', trend: '二極化' },
-  { title: 'モンスターハンターワールド：アイスボーン マスターエディション', platform: 'PS4', price: '500〜1,300円', trend: '安定', note: '通常版とBest Price版で査定差あり' },
+  { title: 'モンスターハンターワイルズ', platform: 'PS5', jan: '4976219131797', surugaya: '1,000円', bookoff: '—', geo: '—', note: 'ゲオのPS5高価買取品リストには掲載なし' },
+  { title: 'モンスターハンターワイルズ デラックスエディション', platform: 'Switch 2', jan: '4976219141383', surugaya: '価格の掲載なし', bookoff: '—', geo: '—', note: '駿河屋は「メールにてお見積」表示。カプコン公式サイトではNintendo Switch 2版は2026年12月4日発売予定と案内されています' },
+  { title: 'モンスターハンターストーリーズ3 -運命の双竜-', platform: 'PS5', jan: '4976219137737', surugaya: '1,800円', bookoff: '—', geo: '—', note: '型番 ELJM-30820' },
+  { title: 'モンスターハンターストーリーズ3 -運命の双竜-', platform: 'Switch 2', jan: '4976219137744', surugaya: '2,000円', bookoff: '—', geo: '—', note: '型番 POT-P-AAWXA。ゲオのSwitch2高価買取品リストには掲載なし' },
+  { title: 'モンスターハンターストーリーズ2 〜破滅の翼〜', platform: 'Switch', jan: '4976219118156', surugaya: '1,200円', bookoff: '—', geo: '—', note: '型番 HAC-P-AS44A（通常版）' },
+  { title: 'モンスターハンターライズ', platform: 'Switch', jan: '4976219115803', surugaya: '400円', bookoff: '—', geo: '—', note: '型番 HAC-P-AXSEA（通常版）' },
+  { title: 'モンスターハンターライズ ＋ サンブレイク セット', platform: 'Switch', jan: '4976219122177', surugaya: '700円', bookoff: '—', geo: '—', note: '型番 HAC-4-AXSEAR1' },
+  { title: 'モンスターハンターライズ＋サンブレイク セット Best Price', platform: 'Switch', jan: '4976219135603', surugaya: '1,100円', bookoff: '—', geo: '—', note: '型番 HAC-4-AXSEAR3。駿河屋の商品名に「サンブレイクのDLコードは使用できません」と記載があります' },
+  { title: 'モンスターハンターライズ モンスターハンターストーリーズ2 ツインパック', platform: 'Switch', jan: '4976219120777', surugaya: '2,100円', bookoff: '—', geo: '—', note: '型番 CPCS-01176' },
+  { title: 'モンスターハンターワールド：アイスボーン マスターエディション Best Price', platform: 'PS4', jan: '4976219114011', surugaya: '700円', bookoff: '—', geo: '—', note: '型番 PLJM-16710。通常版（JAN 4976219102018）は駿河屋で「メールにてお見積」表示' },
 ];
 
 const shopComparison = [
-  { shop: 'ゲーム買取ブラザーズ', wilds: '1,450円', rise: '900円', riseSet: '1,000円', feature: '多くのタイトルで上位の高査定' },
-  { shop: 'ゲオ（GEO）', wilds: '800〜1,300円', rise: '500円', riseSet: '500円', feature: '即日現金化。店頭持込も可' },
-  { shop: 'ブックオフ', wilds: '300〜1,001円', rise: '500円', riseSet: '—', feature: '店頭で手軽に利用可能。価格はやや控えめ' },
-  { shop: '駿河屋', wilds: '（要確認）', rise: '300円', riseSet: '800円', feature: 'セット・限定版の評価が比較的高い' },
-  { shop: 'ネットオフ', wilds: '（要確認）', rise: '195円', riseSet: '260円', feature: 'まとめ売り向き。単体は控えめ' },
+  { shop: '駿河屋', kind: '公式買取検索の掲載価格（JANコードで検索）', url: 'https://www.suruga-ya.jp/kaitori/', urlLabel: 'suruga-ya.jp/kaitori/', scope: '上表の全商品をJANコードで検索しました。「メールにてお見積」表示の商品は「価格の掲載なし」としています' },
+  { shop: 'ブックオフ', kind: '高価買取情報（ゲーム）の店舗買取価格。ページ上の表記は「最終更新日 2026年11月19日」です', url: 'https://www.bookoff.co.jp/selllist/game/index.html', urlLabel: 'bookoff.co.jp/selllist/game/', scope: '2026年11月25日時点の高価買取リスト（Switch・Switch2・DS・3DS・本体）にモンハン作品の掲載はありませんでした' },
+  { shop: 'ゲオ', kind: '高価買取品リスト（PS5・Switch・Switch2）の店頭参考買取価格', url: 'https://geo-online.co.jp/store_info/buy/PS5/', urlLabel: 'geo-online.co.jp/store_info/buy/PS5/・/Switch/・/Switch2/', scope: '3つのリストのいずれにもモンハン作品の掲載はありませんでした。PS4の高価買取品リストはありません。ゲオ宅配買取は2026年11月19日から新規受付を停止しています' },
+  { shop: 'カプコン（発売情報）', kind: 'モンスターハンターワイルズ公式サイトの発売日表記', url: 'https://www.monsterhunter.com/wilds/ja-jp/', urlLabel: 'monsterhunter.com/wilds/ja-jp/', scope: '「2026年12月4日（金）発売予定（Nintendo Switch™ 2）」の表記を確認しました（価格情報ではありません）' },
 ];
 
 const tips = [
-  { title: '新作ワイルズは早めの売却が基本', description: 'モンハンワイルズは定価9,900円ながら、供給過多（カプコンが追加生産が想定以下と公表）で発売後に急落しています。新作・話題作は発売直後〜数ヶ月が最も高いため、遊び終えたら早めの売却が有利です。' },
-  { title: 'Switch 2版ワイルズの発表による影響', description: '2026年6月にSwitch 2版ワイルズの開発が正式発表されました。発売されるとPS5版の中古相場をさらに押し下げる可能性があります。PS5版をお持ちの場合は、発売前の売却をおすすめします。' },
-  { title: 'ライズ系は低水準のため、まとめ売りも検討', description: 'ライズ・サンブレイクセットは廉価版の登場で500〜1,000円台の低水準です。単体で高値は狙いにくいため、他のソフトとまとめて売り、送料・手数料を抑える方が手取りで有利なことがあります。' },
-  { title: 'ストーリーズ2は未開封かどうかで価格が大きく変わる', description: 'ストーリーズ2は未開封だと2,000円前後のプレミアがつく一方、開封済み中古はほぼ値がつかないこともあります。未開封品は専門店・フリマも含めて比較することをおすすめします。' },
+  { title: '同じタイトルでも版（型番）ごとに価格が異なります', description: '駿河屋では、モンスターハンターライズ（通常版・HAC-P-AXSEA）が400円、ライズ＋サンブレイク セット（HAC-4-AXSEAR1）が700円、ライズ＋サンブレイク セット Best Price（HAC-4-AXSEAR3）が1,100円でした（2026年11月25日確認）。お手持ちのパッケージの型番・JANコードで検索してから価格をご確認ください。' },
+  { title: 'ワイルズはPS5版とSwitch 2版で状況が異なります', description: 'PS5版は駿河屋で1,000円の価格が掲載されています。Switch 2版（デラックスエディション）は、カプコン公式サイトで2026年12月4日発売予定と案内されており、駿河屋では「メールにてお見積」表示で価格の掲載がありませんでした。発売後の価格は、各社の公式買取ページでご確認ください。' },
+  { title: 'ストーリーズ3はSwitch 2版とPS5版で200円の差がありました', description: 'モンスターハンターストーリーズ3は、駿河屋でSwitch 2版2,000円・PS5版1,800円でした。ハードの異なる版をお持ちの場合も、それぞれのJANコードで価格をご確認ください。' },
+  { title: 'ブックオフ・ゲオでは店頭での査定額をご確認ください', description: '2026年11月25日時点で、ブックオフの高価買取情報（ゲーム）とゲオの高価買取品リスト（PS5・Switch・Switch2）には、モンハン作品の掲載がありませんでした。両社で売却する場合は、店頭での査定額をご確認ください。ゲオ宅配買取は2026年11月19日から新規受付を停止しています。' },
 ];
 
 const faqs = [
-  { q: 'モンハンで現在最も高く売れるのはどれですか？', a: '2026年6月時点では、最新作のモンスターハンターワイルズ（PS5）が800〜1,450円で相対的に高めですが、供給過多で発売後に急落しており、定価9,900円からは大きく下がっています。ストーリーズ2は未開封なら2,000円前後のプレミアがつきます。ライズ・サンブレイク系は500〜1,000円台の低水準です。' },
-  { q: 'モンハンワイルズはなぜ買取が安いのですか？', a: '人気作ですが出荷・流通量が多く、カプコンが追加生産（リピート）販売が想定を下回ったと公表するなど供給過多気味で、中古相場が弱含みです。定価9,900円に対し2026年6月には店舗により800円台まで下落しています。さらにSwitch 2版の開発も発表されており、PS5版の下押し要因になっています。' },
-  { q: 'モンハンワイルズはいつ売るべきですか？', a: 'できるだけ早めの売却をおすすめします。新作は発売直後が最も高く、時間とともに下落します。特にワイルズはSwitch 2版の開発が発表済みで、発売されるとPS5版がさらに下がる可能性があります。遊び終えているなら早期売却が有利です。' },
-  { q: 'モンハンライズ・サンブレイクは高く売れますか？', a: '買取価格は低水準です。ライズ単体で300〜900円、ライズ＋サンブレイクのセットでも500〜1,000円程度です。廉価版（Best Price）が発売されたことも相場の下押し要因です。単体で高く売るのは難しいため、他のソフトとまとめて売り、送料無料条件を満たして手取りを上げる方法が現実的です。' },
-  { q: 'モンハンストーリーズ2が「0円」と表示されることがあるのはなぜですか？', a: 'ストーリーズ2は中古の通常状態だと需要が弱く、店舗によっては買取0円表示になることがあります。一方で未開封品は2,000円前後のプレミアがつきます。状態（未開封か否か）で価格差が極端なシリーズなので、未開封品は必ず複数店で査定を比較することをおすすめします。' },
+  { q: 'モンハンで現在最も高く売れるのはどれですか？', a: '2026年11月25日に当サイトが駿河屋で確認した範囲では、モンスターハンターライズ モンスターハンターストーリーズ2 ツインパック（2,100円）、モンスターハンターストーリーズ3（Switch 2版・2,000円）、同PS5版（1,800円）の順でした。ブックオフ・ゲオの高価買取リストにはモンハン作品の掲載がありませんでした。価格は日々変動するため、売却直前に各社の公式買取ページをご確認ください。' },
+  { q: 'モンハンワイルズ（PS5）の買取価格はいくらですか？', a: '2026年11月25日の確認では、駿河屋の買取価格は1,000円でした（JAN 4976219131797）。ブックオフの高価買取情報、ゲオのPS5高価買取品リストには掲載がありませんでした。' },
+  { q: 'Switch 2版のモンハンワイルズは発売されていますか？', a: 'カプコンの「モンスターハンターワイルズ」公式サイトでは、Nintendo Switch 2版の発売日を2026年12月4日（金）発売予定と案内しています（2026年11月25日確認）。駿河屋のSwitch 2版デラックスエディション（JAN 4976219141383）は「メールにてお見積」表示で、価格の掲載はありませんでした。' },
+  { q: 'モンハンライズ・サンブレイクはいくらで売れますか？', a: '駿河屋では、ライズ（通常版）400円、ライズ＋サンブレイク セット700円、ライズ＋サンブレイク セット Best Price 1,100円でした（2026年11月25日確認）。Best Price版は駿河屋の商品名に「サンブレイクのDLコードは使用できません」と記載があります。版によって価格が異なるため、JANコードでご確認ください。' },
+  { q: 'アイスボーン マスターエディションは売れますか？', a: '駿河屋では、Best Price版（JAN 4976219114011）が700円でした。通常版（JAN 4976219102018）は「メールにてお見積」表示で、価格の掲載はありませんでした（2026年11月25日確認）。' },
 ];
 
-const PAGE_TITLE = 'モンハンの買取価格｜ワイルズ・ライズ等の相場と売り時';
+const PAGE_TITLE = 'モンハンの買取価格はいくら？ワイルズ・ライズの相場を店舗横断で比較・売り時も解説';
 
 export default function MonsterHunterPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-06-18", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": PAGE_TITLE, "datePublished": "2026-06-18", "dateModified": "2026-11-25", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'ソフト別', href: '/' }, { name: 'モンハンの買取価格' }]} />
 
       {/* Hero */}
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
-          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取相場</span>
+          <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>シリーズ別買取価格</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">モンハンの買取価格</h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            モンスターハンターワイルズ（PS5）、ライズ／サンブレイク、ストーリーズ2、ワールド／アイスボーンなど主要タイトルの買取相場を2026年6月の調査データで一覧化しました。新作の供給過多やSwitch 2版発表が相場に与える影響も解説します。
+            モンスターハンターワイルズ（PS5／Switch 2）、ストーリーズ3（PS5／Switch 2）、ストーリーズ2、ライズ／サンブレイク、ワールド：アイスボーンの買取価格を、駿河屋・ブックオフ・ゲオの公式買取ページで確認した価格で比較しています。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>調査時点: 2026年6月（各社公式買取ページ・買取価格比較サイト集計）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>調査日: {SURVEY_DATE_LABEL}（駿河屋・ブックオフ・ゲオの公式買取ページで確認）</p>
           <div className="flex flex-wrap gap-3 mt-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-2.5 px-6">おすすめ買取サービスを見る</Link>
           </div>
@@ -77,54 +89,54 @@ export default function MonsterHunterPage() {
       <div className="max-w-4xl mx-auto px-4 py-12">
         {/* Price Table */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モンハン主要タイトルの買取相場一覧</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モンハン主要タイトルの店舗別買取価格（{SURVEY_DATE_LABEL}確認）</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
-                <tr><th>タイトル</th><th>ハード</th><th>買取相場</th><th>傾向</th></tr>
+                <tr><th>タイトル</th><th>ハード</th><th>駿河屋</th><th>ブックオフ</th><th>ゲオ（店頭参考）</th></tr>
               </thead>
               <tbody>
                 {priceData.map((g) => (
-                  <tr key={g.title + g.platform}>
-                    <td className="font-bold text-sm">{g.title}<span className="block text-xs font-normal" style={{ color: 'var(--color-text-light)' }}>{g.note}</span></td>
+                  <tr key={g.jan}>
+                    <td className="font-bold text-sm">{g.title}{g.note && <span className="block text-xs font-normal" style={{ color: 'var(--color-text-light)' }}>{g.note}</span>}</td>
                     <td className="text-sm">{g.platform}</td>
-                    <td className="font-bold text-sm" style={{ color: 'var(--color-electric-green)' }}>{g.price}</td>
-                    <td className="text-sm">{g.trend}</td>
+                    <td className="text-sm"><a href={surugayaUrl(g.jan)} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>{g.surugaya}</a></td>
+                    <td className="text-sm">{g.bookoff}</td>
+                    <td className="text-sm">{g.geo}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：各社公式買取ページおよび買取価格比較サイトの集計（2026年6月時点）。完品前提で、店舗・状態・在庫により変動します。売却直前に各社公式でご確認ください。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：駿河屋 公式買取検索（JANコードで検索・価格のリンク先）、ブックオフ 高価買取情報（ゲーム）、ゲオ 高価買取品リスト（PS5・Switch・Switch2）。いずれも{SURVEY_DATE_LABEL}に当サイトが確認した掲載価格です。「—」は各社の高価買取リストに掲載がなかったことを示します。価格は完品を前提とした参考価格で、状態・在庫により変動します。売却前に、各社の公式買取ページにて最新の価格をご確認ください。</p>
         </section>
 
-        {/* Shop Comparison */}
+        {/* Sources */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />店舗横断比較</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />価格の確認方法と出典</h2>
           <div className="overflow-x-auto">
             <table className="comparison-table">
               <thead>
-                <tr><th>買取店</th><th>ワイルズ(PS5)</th><th>ライズ</th><th>ライズ+サンブレイク</th><th>特徴</th></tr>
+                <tr><th>確認先</th><th>確認した内容</th><th>出典</th><th>掲載範囲</th></tr>
               </thead>
               <tbody>
                 {shopComparison.map((s) => (
                   <tr key={s.shop}>
                     <td className="font-bold text-sm">{s.shop}</td>
-                    <td className="text-sm">{s.wilds}</td>
-                    <td className="text-sm">{s.rise}</td>
-                    <td className="text-sm">{s.riseSet}</td>
-                    <td className="text-sm">{s.feature}</td>
+                    <td className="text-sm">{s.kind}</td>
+                    <td className="text-sm"><a href={s.url} target="_blank" rel="noopener noreferrer nofollow" style={{ textDecoration: 'underline' }}>{s.urlLabel}</a></td>
+                    <td className="text-sm">{s.scope}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>※2026年6月時点の集計値。新作ワイルズは特に店舗差・時期差が大きいため、複数社の比較を推奨します。</p>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>確認日：{SURVEY_DATE_LABEL}。当サイトでは、各社の公式ページで確認できた価格のみを掲載しています。当サイトの週次調査（価格履歴）にはモンハン作品の記録がないため、過去からの値動きは掲載していません。</p>
         </section>
 
         {/* Tips */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モンハンを高く売るコツ</h2>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />モンハンを売る前に確認したいこと</h2>
           <div className="space-y-4">
             {tips.map((tip, i) => (
               <div key={tip.title} className="glass-card p-5 flex items-start gap-4">
@@ -154,8 +166,8 @@ export default function MonsterHunterPage() {
 
         {/* CTA */}
         <section className="glass-card-dark p-8 text-center">
-          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>モンハンを<span style={{ color: 'var(--color-electric-green)' }}>高値のうちに</span>売却するために</h2>
-          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>新作ほど下落が早い分野です。Switch 2版の発表もあり、PS5版は早めの比較・売却が有利です。複数店の価格をご確認ください。</p>
+          <h2 className="text-xl font-extrabold mb-3" style={{ color: '#FFFFFF' }}>モンハンを<span style={{ color: 'var(--color-electric-green)' }}>納得の価格</span>で売却するために</h2>
+          <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>同じタイトルでも、ハードや版（型番）によって買取価格は異なります。売却前に、JANコードで複数店の公式買取価格をご確認ください。</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/compare/kaitori-ranking/" className="btn-primary py-3 px-8">おすすめランキングを見る</Link>
           </div>
@@ -171,11 +183,11 @@ export default function MonsterHunterPage() {
             </Link>
             <Link href="/software/ps5-soft/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>PS5ソフト買取</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最新タイトルの買取相場</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>最新タイトルの買取価格</p>
             </Link>
             <Link href="/software/zelda/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>ゼルダの伝説買取価格</p>
-              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>シリーズの相場一覧</p>
+              <p className="text-xs" style={{ color: 'var(--color-text-light)' }}>シリーズの価格一覧</p>
             </Link>
             <Link href="/price-index/" className="glass-card p-4 card-hover block">
               <p className="font-bold text-sm" style={{ color: 'var(--color-deep-blue)' }}>買取価格インデックス</p>
@@ -191,16 +203,9 @@ export default function MonsterHunterPage() {
             </Link>
           </div>
         </section>
+        <KaitoriWorldCta compact />
         <AuthorBox />
       </div>
     </>
   );
-      <section className="py-8 px-4">
-        <div className="max-w-3xl mx-auto">
-          <Link href="/software/high-value/" className="block bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-xl p-5 text-center shadow hover:opacity-95 transition">
-            <span className="font-bold text-lg">📈 最新の「高く売れるゲームソフト」ランキングを見る</span>
-            <span className="block text-sm opacity-90 mt-1">ブックオフ・ゲオ・駿河屋の公式買取価格を定期的に実測更新中</span>
-          </Link>
-        </div>
-      </section>
 }
