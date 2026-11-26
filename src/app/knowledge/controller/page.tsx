@@ -6,76 +6,104 @@ import AuthorBox from '@/components/AuthorBox'
 export const metadata: Metadata = {
   title: 'ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】',
   description:
-    'PS5/Switch/Xbox用コントローラーの買取相場を、プラットフォーム別の一覧表で掲載しています。限定カラーのプレミア価格、箱なしの影響、クリーニング方法、おすすめの買取店についても解説します。',
+    'PS5・Switch・Switch 2・Xbox用コントローラー22品の駿河屋の買取価格を、型番・JANコードで検索して2026年11月26日に実測した表で掲載しています。限定モデルと通常モデルの差、付属品の注意点、売る前の手入れもまとめています。',
   keywords: ['コントローラー 買取', 'Joy-Con 買取', 'DualSense 買取', 'Xbox コントローラー 売る'],
   openGraph: {
     images: ['/og.png'],
     title: 'ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】',
-    description: 'ゲームコントローラーの買取相場をプラットフォーム別に比較しています。',
+    description: 'ゲームコントローラー22品の駿河屋の買取価格を、2026年11月26日に型番・JANコードで実測した表で掲載しています。',
     type: 'article',
     locale: 'ja_JP',
     siteName: 'ゲーム買取びより',
   },
 };
 
-const ps5Controllers = [
-  { model: 'DualSense ワイヤレスコントローラー（白）', good: '3,500〜4,500円', fair: '2,500〜3,400円', poor: '1,000〜2,400円', note: '標準カラー。最も流通量が多いモデル' },
-  { model: 'DualSense ワイヤレスコントローラー（黒/赤/青等）', good: '4,000〜5,000円', fair: '3,000〜3,900円', poor: '1,500〜2,900円', note: 'カラーバリエーションはやや高値' },
-  { model: 'DualSense Edge', good: '12,000〜16,000円', fair: '8,000〜11,000円', poor: '4,000〜7,000円', note: '上位モデル。背面ボタン付き' },
-  { model: 'DualSense（限定モデル）', good: '5,000〜10,000円', fair: '3,500〜4,900円', poor: '2,000〜3,400円', note: 'ゲームコラボ等の限定カラー' },
+type Row = { model: string; code: string; jan: string; price: string; note?: string };
+
+const CHECKED = '2026年11月26日';
+
+const ps5Controllers: Row[] = [
+  { model: 'DualSense（ホワイト）', code: 'CFI-ZCT2J', jan: '4948872417303', price: '4,300円' },
+  { model: 'DualSense（ミッドナイト ブラック）', code: 'CFI-ZCT1J01', jan: '4948872415163', price: '3,300円' },
+  { model: 'DualSense（コズミック レッド）', code: 'CFI-ZCT2J02', jan: '4948872417228', price: '5,000円' },
+  { model: 'DualSense Edge', code: 'CFI-ZCP1J', jan: '4948872415712', price: '15,000円' },
+  { model: 'DualSense Edge（ホワイト・新型番）', code: 'CFI-ZCP2J', jan: '4948872417969', price: 'メールにてお見積', note: '金額の表示なし' },
 ];
 
-const switchControllers = [
-  { model: 'Joy-Con（L/R）セット（ネオンブルー/レッド）', good: '4,000〜5,500円', fair: '2,500〜3,900円', poor: '1,000〜2,400円', note: '標準カラー。ドリフト問題に注意' },
-  { model: 'Joy-Con（限定カラー）', good: '5,000〜8,000円', fair: '3,500〜4,900円', poor: '1,500〜3,400円', note: 'ゼルダ/スプラ等のコラボカラー' },
-  { model: 'Nintendo Switch Proコントローラー', good: '4,000〜5,500円', fair: '2,500〜3,900円', poor: '1,000〜2,400円', note: '人気モデル。ゲームコラボ版は高値' },
-  { model: 'Proコントローラー（限定モデル）', good: '5,500〜9,000円', fair: '3,500〜5,400円', poor: '2,000〜3,400円', note: 'ゼルダ/モンハン等のコラボ' },
+const switchControllers: Row[] = [
+  { model: 'Joy-Con（L）ネオンブルー／（R）ネオンレッド', code: 'HAC-A-JACAA', jan: '4902370536027', price: '2,500円' },
+  { model: 'Joy-Con（L）ネオンレッド／（R）ネオンブルー', code: 'HAC-A-JAEAA', jan: '4902370536034', price: '2,700円' },
+  { model: 'Joy-Con（L）ネオンブルー（片方のみ）', code: 'HAC-A-JLBAA', jan: '4902370535938', price: '1,300円' },
+  { model: 'Nintendo Switch Proコントローラー', code: 'HAC-A-FSSKA', jan: '4902370535730', price: '1,800円' },
+  { model: 'Joy-Con 2（L）ライトブルー／（R）ライトレッド', code: 'BEE-A-JAAAA', jan: '4902370552744', price: '4,300円', note: 'Switch 2 用' },
+  { model: 'Joy-Con 2（R）ライトレッド（片方のみ）', code: 'BEE-A-JRKCA', jan: '4902370552720', price: '2,200円', note: 'Switch 2 用' },
+  { model: 'Nintendo Switch 2 Proコントローラー', code: 'BEE-A-FSSKA', jan: '4902370552843', price: '3,300円', note: 'Switch 2 用' },
 ];
 
-const xboxControllers = [
-  { model: 'Xbox ワイヤレスコントローラー（標準）', good: '3,000〜4,000円', fair: '2,000〜2,900円', poor: '800〜1,900円', note: 'PC兼用で需要あり' },
-  { model: 'Xbox Elite ワイヤレスコントローラー Series 2', good: '8,000〜12,000円', fair: '5,000〜7,900円', poor: '3,000〜4,900円', note: 'プロ仕様。パーツ完備で高値' },
-  { model: 'Xbox Elite ワイヤレスコントローラー Series 2 Core', good: '5,000〜7,000円', fair: '3,500〜4,900円', poor: '1,500〜3,400円', note: 'Eliteの廉価版' },
-  { model: 'Xbox Design Lab コントローラー', good: '3,500〜6,000円', fair: '2,500〜3,400円', poor: '1,000〜2,400円', note: 'カスタムデザイン。希少性で価格変動' },
+const xboxControllers: Row[] = [
+  { model: 'Xbox ワイヤレス コントローラー（カーボン ブラック）', code: 'EP2-29931', jan: '4549576262710', price: '4,500円' },
+  { model: 'Xbox Elite ワイヤレス コントローラー シリーズ 2', code: 'FST-00009', jan: '4549576126906', price: '5,600円' },
+  { model: 'Xbox Elite ワイヤレス コントローラー シリーズ 2 Core（ホワイト）', code: '4IK-00003', jan: '4549576186054', price: '5,000円' },
 ];
 
-const limitedColorPremium = [
-  { controller: 'DualSense GOD OF WAR モデル', premium: '＋2,000〜5,000円', rarity: '高' },
-  { controller: 'Joy-Con ゼルダの伝説 特別デザイン', premium: '＋1,500〜3,000円', rarity: '高' },
-  { controller: 'Proコントローラー モンスターハンターライズ', premium: '＋1,500〜4,000円', rarity: '中' },
-  { controller: 'DualSense スパイダーマン2 モデル', premium: '＋1,500〜3,000円', rarity: '中' },
-  { controller: 'Xbox Elite Series 2 Halo モデル', premium: '＋3,000〜6,000円', rarity: '高' },
-  { controller: 'Joy-Con ポケモン Let\'s Go カラー', premium: '＋2,000〜4,000円', rarity: '高' },
+const limitedModels: Row[] = [
+  { model: 'DualSense ゴッド・オブ・ウォー ラグナロク リミテッドエディション', code: 'CFI-ZCT1JZ1', jan: '4948872415620', price: '8,100円', note: '通常の黒（3,300円）より4,800円高い' },
+  { model: 'DualSense "原神" リミテッドエディション', code: 'CFI-ZCT2JZE', jan: '4948872417457', price: '7,500円', note: '通常の白（4,300円）より3,200円高い' },
+  { model: 'DualSense "アストロボット" リミテッドエディション', code: 'CFI-ZCT1JZ3', jan: '4948872416306', price: '5,800円', note: '通常の白（4,300円）より1,500円高い' },
+  { model: 'DualSense Edge 30周年アニバーサリー リミテッドエディション', code: 'CFI-ZCP1J30', jan: '4948872416504', price: '36,000円', note: '通常の Edge（15,000円）の2.4倍' },
+  { model: 'Nintendo Switch Proコントローラー モンスターハンターライズエディション', code: 'HAC-A-FSSKN', jan: '4902370547627', price: '3,200円', note: '通常の Proコン（1,800円）より1,400円高い' },
+  { model: 'Nintendo Switch Proコントローラー ゼルダの伝説 ティアーズ オブ ザ キングダムエディション', code: 'HAC-A-FSSKU', jan: '4902370550504', price: '3,200円', note: '通常の Proコン（1,800円）より1,400円高い' },
+  { model: 'Nintendo Switch 2 Proコントローラー ゼルダの伝説 40周年 アニバーサリーエディション', code: 'BEE-A-FSTDA', jan: '4902370554564', price: '8,000円', note: 'ディスプレイスタンド付き。通常の Switch 2 Proコン（3,300円）より4,700円高い' },
+  { model: 'Xbox Elite シリーズ 2 Halo Infinite リミテッドエディション', code: 'RFZ-00005', jan: '4549576167893', price: '17,000円', note: '通常の Elite シリーズ 2（5,600円）の約3倍' },
 ];
 
-const boxImpact = [
-  { item: 'DualSense（標準カラー）', withBox: '3,500〜4,500円', withoutBox: '2,500〜3,500円', diff: '約1,000円' },
-  { item: 'DualSense Edge', withBox: '12,000〜16,000円', withoutBox: '8,000〜12,000円', diff: '約4,000円' },
-  { item: 'Joy-Con（L/R）セット', withBox: '4,000〜5,500円', withoutBox: '2,500〜4,000円', diff: '約1,500円' },
-  { item: 'Switch Proコントローラー', withBox: '4,000〜5,500円', withoutBox: '2,500〜4,000円', diff: '約1,500円' },
-  { item: 'Xbox Elite Series 2', withBox: '8,000〜12,000円', withoutBox: '5,000〜8,000円', diff: '約3,000円' },
-];
+const suruUrl = (jan: string) => `https://www.suruga-ya.jp/kaitori/search_buy?search_word=${jan}`;
+
+function PriceTable({ rows }: { rows: Row[] }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="comparison-table">
+        <thead>
+          <tr>
+            <th>商品（型番）</th>
+            <th>駿河屋 買取価格</th>
+            <th>備考</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr key={row.jan}>
+              <td className="text-sm"><span className="font-bold">{row.model}</span><br /><span className="text-xs" style={{ color: 'var(--color-text-light)' }}>{row.code}／JAN {row.jan}</span></td>
+              <td className="font-bold"><a href={suruUrl(row.jan)} target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }} className="underline">{row.price}</a></td>
+              <td className="text-xs">{row.note ?? ''}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 const cleaningTips = [
-  { part: 'ボタン周り', method: '綿棒にイソプロピルアルコールを含ませ、ボタンの隙間を優しく拭き取ります。爪楊枝でゴミを取り除く方法も有効ですが、傷をつけないようご注意ください。', effect: '見た目の印象が大きく改善し、査定額が500〜1,000円上がる効果が見込めます。' },
-  { part: 'アナログスティック', method: 'スティックの根元に溜まった汚れを綿棒で取り除きます。スティックのゴム部分は消毒用ウェットティッシュで拭き上げます。', effect: 'ドリフトと汚れの区別がつくため、不要な減額を防げます。' },
-  { part: '本体表面', method: 'マイクロファイバークロスで乾拭きします。頑固な汚れは、薄めた中性洗剤で拭いた後に乾拭きします。', effect: '第一印象を左右する最も重要なポイントです。' },
-  { part: '充電端子', method: 'エアダスターでホコリを吹き飛ばし、綿棒で端子部分を清掃します。汚れは接触不良の原因になるため、重要な工程です。', effect: '動作確認時のトラブルを未然に防げます。' },
+  { part: 'ボタン周り・表面', method: 'マイクロファイバークロスで乾拭きし、ボタンの隙間のほこりは綿棒で取り除きます。水分を直接かけないようにしてください。' },
+  { part: 'アナログスティック', method: 'スティックの根元にたまった汚れを綿棒で取り除きます。汚れを落としたうえで、スティックが勝手に動く症状（ドリフト）が残るかを確かめておくと、査定時に状態を正しく伝えられます。' },
+  { part: '充電端子', method: 'エアダスターでほこりを飛ばします。端子に汚れが残ると、査定時の動作確認で充電できないと判断されるおそれがあります。' },
+  { part: '付属品', method: 'DualSense Edge や Xbox Elite は、交換用スティック・背面ボタン・ケース・ケーブルなどの付属品が多いモデルです。購入時の内容物をそろえてから送ります。' },
 ];
 
 const faqs = [
-  { q: 'ゲームコントローラーだけでも買取してもらえますか？', a: 'はい、コントローラー単体での買取に対応している店舗が多くあります。ヒカカク！、ゲオ、ブックオフ、駿河屋などの主要買取店はコントローラーのみの査定に対応しています。ただし、一部のオンライン買取では最低買取金額（500〜1,000円）を設けている場合があるので事前確認をおすすめします。' },
-  { q: 'Joy-Conのスティックドリフトがある場合、買取してもらえますか？', a: 'はい、ドリフトがあっても買取可能ですが、大幅な減額（良品の40〜60%程度）になります。任天堂の無償修理の対象であれば、修理してから売るほうが有利です。ドリフトの修理費用は有償でも2,000〜3,000円程度のため、修理後の買取価格との差額を計算したうえで判断することをおすすめします。' },
-  { q: '限定カラーのコントローラーはどれくらいプレミアがつきますか？', a: 'ゲームコラボの限定カラーは標準モデルの1.5〜2倍の買取価格になることがあります。例えばGOD OF WAR限定DualSenseは＋2,000〜5,000円、ゼルダ限定Joy-Conは＋1,500〜3,000円のプレミアです。箱付き完品であることがプレミア価格の条件となる傾向があります。' },
-  { q: '箱なしのコントローラーはどれくらい減額されますか？', a: '標準モデルで約1,000〜1,500円、高額モデル（DualSense Edge、Xbox Elite等）で約3,000〜4,000円の減額です。限定モデルの場合はさらに差が大きくなります。コントローラーの箱は比較的コンパクトなので、購入時から保管しておくことを強くおすすめします。' },
-  { q: 'DualSense Edgeの買取相場はいくらですか？', a: '良品で12,000〜16,000円、並品で8,000〜11,000円が目安です。付属の背面ボタンパーツ、スティックキャップ、USB-Cケーブルが揃っているかが重要なポイントです。定価が約30,000円と高額なため、買取でも他のコントローラーより高値がつきます。' },
-  { q: 'コントローラーを高く売るコツは何ですか？', a: '最も効果的なのは「クリーニング」と「付属品の完備」です。ボタン周り・スティック・表面を丁寧に清掃するだけで査定額が500〜2,000円上がることが期待できます。また、箱・説明書・ケーブルを揃えることで1,000〜4,000円のプラスになります。複数のコントローラーがある場合は、まとめ売りボーナスの活用もおすすめします。' },
+  { q: 'ゲームコントローラーだけでも買い取ってもらえますか？', a: `はい。駿河屋の買取検索では、コントローラー単体に個別の買取価格が付いています（${CHECKED}確認）。本ページの表は、すべて駿河屋で型番・JANコードを検索した結果です。ほかの買取店の単体買取の可否・最低金額は、各社の買取ページでご確認ください。` },
+  { q: '限定モデルはどれくらい高く売れますか？', a: `モデルによって差が大きく、${CHECKED}の駿河屋の実測では、DualSense ゴッド・オブ・ウォー ラグナロク リミテッドエディションが8,100円（通常の黒は3,300円）、Xbox Elite シリーズ 2 Halo Infinite リミテッドエディションが17,000円（通常の Elite シリーズ 2 は5,600円）でした。一方、アストロボット版のように差が1,500円程度のものもあり、限定モデルであれば一律に高くなるわけではありません。` },
+  { q: 'DualSense Edge の買取価格はいくらですか？', a: `${CHECKED}の駿河屋の買取価格は、DualSense Edge（CFI-ZCP1J）が15,000円、30周年アニバーサリー リミテッドエディションが36,000円でした。新型番のホワイト（CFI-ZCP2J）は金額が表示されず「メールにてお見積」でした。駿河屋の買取価格は箱・説明書・付属品がそろっている前提のため、交換用パーツやケースもそろえて送ることをおすすめします。` },
+  { q: 'Switch の Proコントローラーと Joy-Con はどちらが高く売れますか？', a: `${CHECKED}の駿河屋の実測では、Joy-Con（L）ネオンブルー／（R）ネオンレッドのセットが2,500円、Nintendo Switch Proコントローラー（通常版）が1,800円で、Joy-Con のセットのほうが高い結果でした。Switch 2 用は Joy-Con 2 のセットが4,300円、Switch 2 Proコントローラーが3,300円です。` },
+  { q: '箱なしや付属品が欠けている場合はどうなりますか？', a: '駿河屋の買取価格は、箱・説明書・付属品がそろっている前提の通常買取価格で、必要な付属品が欠けると減額されると案内されています（駿河屋「減額基準リスト」）。減額の幅は商品ごとに異なり、当サイトでは実測していません。箱なしで売る場合の考え方は、箱なし買取ガイドをご覧ください。' },
+  { q: 'スティックが勝手に動く（ドリフト）コントローラーも売れますか？', a: '動作に不具合があるものは、通常の買取価格どおりにはならず、減額やジャンク扱いになるのが一般的です。扱いは買取店ごとに異なるため、申し込みの際に症状を正確に伝えてください。修理してから売るかどうかを考える場合は、メーカーの修理受付ページで受付条件と料金を確認してから判断してください。' },
 ];
 
 export default function ControllerPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-05-24", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ゲームコントローラーの買取相場｜Joy-Con・DualSense・Eliteまで【2026年版】", "datePublished": "2026-03-15", "dateModified": "2026-11-26", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'コントローラー買取相場' }]} />
 
       {/* Hero */}
@@ -86,7 +114,7 @@ export default function ControllerPage() {
             ゲームコントローラーの買取相場
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
-            Joy-Con・DualSense・DualSense Edge・Xbox Eliteなど、主要なゲームコントローラーの買取相場をプラットフォーム別の一覧表でご紹介します。限定カラーのプレミア価格、箱なしの場合の減額幅、売る前のクリーニング方法、おすすめの買取店もあわせて解説します。
+            Joy-Con・DualSense・DualSense Edge・Xbox Eliteなど、コントローラー22品の駿河屋の買取価格を、2026年11月26日に型番・JANコードで検索して実測しました。限定モデルと通常モデルの差、付属品の注意点、売る前の手入れもまとめています。
           </p>
           <div className="flex flex-wrap gap-3">
             <Link href="/" className="btn-primary py-2.5 px-6">
@@ -97,143 +125,46 @@ export default function ControllerPage() {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 py-12">
-        {/* PS5コントローラー */}
-        <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />PS5コントローラー（DualSense）買取相場</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>良品</th>
-                  <th>並品</th>
-                  <th>難あり</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ps5Controllers.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold text-sm">{row.model}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.good}</td>
-                    <td className="text-sm">{row.fair}</td>
-                    <td className="text-sm">{row.poor}</td>
-                    <td className="text-xs">{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+        <section className="mb-8 rounded-xl p-5" style={{ background: 'rgba(16,185,129,0.08)', border: '1px solid rgba(16,185,129,0.3)' }}>
+          <h2 className="font-extrabold mb-3" style={{ color: 'var(--color-deep-blue)' }}>結論：通常モデルは1,800〜5,600円（片方のみの Joy-Con を除く）、上位モデル・限定モデルは差が大きい</h2>
+          <ul className="text-sm space-y-1.5" style={{ color: 'var(--color-text)' }}>
+            <li>・{CHECKED}に駿河屋の買取検索で、コントローラー22品を型番・JANコードで1品ずつ検索しました。</li>
+            <li>・通常モデル（片方のみの Joy-Con を除く）は Switch Proコントローラーの1,800円から Xbox Elite シリーズ 2 の5,600円まででした。DualSense Edge は15,000円です。</li>
+            <li>・限定モデルは、通常モデルより1,400円高いものから約3倍のものまであり、モデルによって大きく異なります。</li>
+            <li>・価格は日々変わります。売る前に、表の金額のリンク（駿河屋の検索結果）で最新の価格をご確認ください。</li>
+          </ul>
         </section>
 
-        {/* Switchコントローラー */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switchコントローラー（Joy-Con/Proコン）買取相場</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>良品</th>
-                  <th>並品</th>
-                  <th>難あり</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {switchControllers.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold text-sm">{row.model}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.good}</td>
-                    <td className="text-sm">{row.fair}</td>
-                    <td className="text-sm">{row.poor}</td>
-                    <td className="text-xs">{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />PS5コントローラー（DualSense）の買取価格</h2>
+          <PriceTable rows={ps5Controllers} />
         </section>
 
-        {/* Xboxコントローラー */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Xboxコントローラー買取相場</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>モデル</th>
-                  <th>良品</th>
-                  <th>並品</th>
-                  <th>難あり</th>
-                  <th>備考</th>
-                </tr>
-              </thead>
-              <tbody>
-                {xboxControllers.map((row) => (
-                  <tr key={row.model}>
-                    <td className="font-bold text-sm">{row.model}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.good}</td>
-                    <td className="text-sm">{row.fair}</td>
-                    <td className="text-sm">{row.poor}</td>
-                    <td className="text-xs">{row.note}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Switch・Switch 2 コントローラー（Joy-Con・Proコン）の買取価格</h2>
+          <PriceTable rows={switchControllers} />
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>同じネオンカラーでも、左右の色の組み合わせ（型番）で価格が異なりました。売るときは本体裏や箱の型番を確認してください。</p>
         </section>
 
-        {/* 限定カラープレミア */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />限定カラーのプレミア価格</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>コントローラー</th>
-                  <th>プレミア額</th>
-                  <th>希少性</th>
-                </tr>
-              </thead>
-              <tbody>
-                {limitedColorPremium.map((row) => (
-                  <tr key={row.controller}>
-                    <td className="font-bold text-sm">{row.controller}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.premium}</td>
-                    <td className="text-sm">{row.rarity}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />Xboxコントローラーの買取価格</h2>
+          <PriceTable rows={xboxControllers} />
         </section>
 
-        {/* 箱なしの影響 */}
         <section className="mb-12">
-          <h2 className="section-heading mb-6"><span className="section-heading-bar" />箱なしの買取価格への影響</h2>
-          <div className="overflow-x-auto">
-            <table className="comparison-table">
-              <thead>
-                <tr>
-                  <th>コントローラー</th>
-                  <th>箱あり</th>
-                  <th>箱なし</th>
-                  <th>差額</th>
-                </tr>
-              </thead>
-              <tbody>
-                {boxImpact.map((row) => (
-                  <tr key={row.item}>
-                    <td className="font-bold text-sm">{row.item}</td>
-                    <td className="font-bold" style={{ color: 'var(--color-electric-green)' }}>{row.withBox}</td>
-                    <td className="text-sm">{row.withoutBox}</td>
-                    <td className="text-sm font-bold" style={{ color: '#EF4444' }}>-{row.diff}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />限定モデルの買取価格と通常モデルとの差</h2>
+          <PriceTable rows={limitedModels} />
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>差額・倍率は、同じ日に測った駿河屋の通常モデルの買取価格と比べて当サイトで計算したものです。</p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />測り方と注意点</h2>
+          <ul className="text-sm space-y-2" style={{ color: 'var(--color-text)' }}>
+            <li>・{CHECKED}に、駿河屋の買取検索（suruga-ya.jp/kaitori）で型番・JANコードを入力し、表示された買取価格を転記しました。金額のリンク先は、その JAN コードでの検索結果です。</li>
+            <li>・駿河屋の買取価格は、箱・説明書・付属品がそろっている前提の通常買取価格です。必要な付属品が欠けると減額されます（駿河屋「減額基準リスト」）。</li>
+            <li>・「メールにてお見積」と表示された商品は、金額が出ていないためそのまま記載しています。</li>
+            <li>・ほかの買取店の価格は測っていないため、本ページでは比べていません。本体の買取価格を3社で比べた表は <Link href="/hardware/ps5/" className="underline">PS5</Link>・<Link href="/hardware/switch/" className="underline">Switch</Link> の各ページにあります。</li>
+          </ul>
         </section>
 
         {/* クリーニング方法 */}
@@ -245,7 +176,6 @@ export default function ControllerPage() {
                 <tr>
                   <th>箇所</th>
                   <th>クリーニング方法</th>
-                  <th>効果</th>
                 </tr>
               </thead>
               <tbody>
@@ -253,7 +183,6 @@ export default function ControllerPage() {
                   <tr key={row.part}>
                     <td className="font-bold">{row.part}</td>
                     <td className="text-sm">{row.method}</td>
-                    <td className="text-sm">{row.effect}</td>
                   </tr>
                 ))}
               </tbody>
@@ -294,7 +223,7 @@ export default function ControllerPage() {
             コントローラーの<span style={{ color: 'var(--color-electric-green)' }}>買取価格</span>の確認
           </h2>
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
-            限定モデルには想定以上の高値がつくこともあります。まずは無料の一括査定のご利用をおすすめします。
+            限定モデルは通常モデルとの差が大きいものがあります。型番を確かめたうえで、各社の買取価格をご確認ください。
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/" className="btn-primary py-3 px-8">
@@ -322,7 +251,7 @@ export default function ControllerPage() {
           </div>
         </section>
 
-        <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年5月</p>
+        <p className="text-xs mt-8 text-center" style={{ color: 'var(--color-text-light)' }}>最終更新: 2026年11月26日（買取価格は駿河屋で実測）</p>
         <AuthorBox />
       </div>
     </>
