@@ -39,7 +39,7 @@ const quickAnswers = [
   },
   {
     q: '評判は？',
-    a: '買取比較サイト「ヒカカク！」では総合評価4.13点・口コミ1,825件（星5が930件、星1が44件）と表示されています（2026年11月15日確認）。ただし同サイトは星3が561件と多く、広告パートナーを含む場合があると注記しているため、目安としてご覧ください。',
+    a: '買取比較サイト「ヒカカク！」では総合評価4.13点・口コミ1,825件（星5が930件、星1が44件）と表示されています（2026年11月15日確認）。ただし同サイトは星3が561件と多く、広告パートナーを含む場合があると注記しているため、目安としてご覧ください。当サイトが2026年11月26日に一覧の最新60件を集計したところ、すべて星4以上で、ゲーム関連は4件、ほぼ同じ文面の口コミが18件ありました。本文つきの星1（3件）は、いずれも合計が数百円だったという内容です。',
   },
 ];
 
@@ -80,7 +80,7 @@ const faqs = [
 export default function HobbyCollectReviewPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの買取不可の品目と評判｜怪しい？運営会社・古物商許可を公式で確認", "datePublished": "2026-03-15", "dateModified": "2026-11-15", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Article", "headline": "ホビーコレクトの買取不可の品目と評判｜怪しい？運営会社・古物商許可を公式で確認", "datePublished": "2026-03-15", "dateModified": "2026-11-26", "author": {"@type": "Organization", "name": "ゲーム買取びより編集部", "description": "各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較している編集部"}, "publisher": {"@type": "Organization", "name": "ゲーム買取びより"}}) }} />
       <Breadcrumb items={[{ name: 'レビュー', href: '/' }, { name: 'ホビーコレクト' }]} />
 
       {/* Hero */}
@@ -335,7 +335,27 @@ export default function HobbyCollectReviewPage() {
               <li>・星3が561件と全体の約3割を占め、星2（3件）との差が大きい分布です。同サイトのページには「広告パートナーが含まれる場合があります」と記載されているため、評点は目安としてご覧ください。</li>
               <li>・当サイトでは個々の口コミの真偽は確認していません。不満点については口コミの傾向ではなく、公式に記載された条件（返送料が着払い、使用できないものは買取不可）をご確認ください。</li>
             </ul>
-            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/company/11268/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ヒカカク！「ホビーコレクト」</a>（2026年11月15日確認）。評価は投稿者個人の体験にもとづくもので、品目・状態により異なります。当サイトでは体験談の創作は行っていません。</p>
+            <h3 className="font-bold mt-6 mb-3" style={{ color: 'var(--color-deep-blue)' }}>口コミ本文の集計（当サイト調べ・2026年11月26日）</h3>
+            <p className="text-sm mb-3" style={{ color: 'var(--color-text-light)' }}>
+              星の平均だけでは判断しにくいため、ヒカカク！のクチコミ一覧に表示される本文つきの口コミを当サイトで読み、次のとおり集計しました。
+            </p>
+            <div className="overflow-x-auto">
+              <table className="comparison-table">
+                <thead>
+                  <tr><th>集計の対象</th><th>当サイトの集計結果</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td className="text-sm">一覧の最新60件（2026年3月21日〜4月23日の投稿）</td><td className="text-sm">星5が50件・星4が10件で、星3以下は0件です。最新の投稿は2026年4月23日で、それ以降の投稿は表示されていません（11月26日時点）。</td></tr>
+                  <tr><td className="text-sm">60件の品目</td><td className="text-sm">フィギュア20件、アニメグッズ7件、ポケモンカード5件、プラモデル4件などで、ゲーム機・ゲームソフトの口コミは4件（ドリームキャスト、ニンテンドー3DS LL、ゲームボーイアドバンス、ネオジオ）でした。</td></tr>
+                  <tr><td className="text-sm">60件の文面</td><td className="text-sm">「段ボールに詰めて配送するだけで完結する仕組みは…これ以上ない手段」とほぼ同じ文が10件、「誠実な検品に好感が持てました」が8件あり、いずれかを含む口コミは計18件でした（投稿者名は別々です）。投稿者の地域は東京都・大阪市・横浜市で55件を占めます。</td></tr>
+                  <tr><td className="text-sm">星1の本文つき口コミ（3件）</td><td className="text-sm">2021年6月・2022年2月・2024年11月の投稿で、3件とも「多数の品を送ったが合計が数百円（180円・120円・370円）だった」という内容です。うち1件は「返送料の方が高くつくため査定に従った」と書いています。星1は44件と表示されていますが、本文が表示されるのはこの3件です。</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-sm mt-3" style={{ color: 'var(--color-text-light)' }}>
+              当サイトでは、ゲームを売る方にとって参考になる口コミは多くないと考えています。星1の口コミで共通する不満（少額の査定と返送料）は公式の条件（キャンセル時の返送料は着払い）と一致するため、少額品をまとめて送る場合は、返送料が無料の業者とも比較することをおすすめします。
+            </p>
+            <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>出典：<a href="https://hikakaku.com/company/11268/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>ヒカカク！「ホビーコレクト」</a>（評点・件数は2026年11月15日確認、11月26日に同じ値を再確認）、<a href="https://hikakaku.com/company/11268/reviews/" target="_blank" rel="noopener noreferrer nofollow" style={{ color: 'var(--color-electric-green)' }}>同 クチコミ一覧</a>（本文の集計は2026年11月26日）。評価は投稿者個人の体験にもとづくもので、品目・状態により異なります。当サイトでは体験談の創作は行っていません。</p>
           </div>
         </section>
 
