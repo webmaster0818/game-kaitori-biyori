@@ -1,0 +1,28 @@
+# ブックオフ宅配買取 買取価格検索 https://sell.bookoff.co.jp/online/search/keyword/<型番> 2026-11-27 取得（参考買取価格）
+# 型番	掲載名	参考買取価格
+CFI-1200A01	PlayStation 5(CFI-1200A01) (本体×1、ワイヤレスコントローラー×1、ベース×1、電源コード×1、HDMIケーブル×1、USBケー)	39,000
+CFI-1200A01	【箱説なし】PlayStation 5(CFI-1200A01) (DualSense、電源コード、HDMIケーブル、DualSense充電用USBケーブル付)	36,000
+CFI-2000A01	PlayStation 5(model group slim)(CFI2000A01) (本体(ディスクドライブ装着済)×1、DualSenseワイヤレスコントローラー×1、横置き用フット×)	57,000
+CFI-2000A01	【箱説なし】PlayStation 5(model group slim)(CFI2000A01) (DualSenseワイヤレスコントローラー×1、HDMIケーブル×1、電源コード×1、USBケーブル)	54,500
+CFI-2000B01	PlayStation 5 デジタル・エディション(model group slim)(CFI2000B01) (本体×1、DualSenseワイヤレスコントローラー×1、横置き用フット×2、HDMIケーブル×1、)	25,000
+CFI-2000B01	【箱説なし】PlayStation 5 デジタル・エディション(model group slim)(CFI2000B01) (DualSenseワイヤレスコントローラー×1、HDMIケーブル×1、電源コード×1、USBケーブル)	22,500
+CUH-2200AB01	PlayStation4 ジェット・ブラック 500GB(CUH2200AB01) (「プレイステーション 4」本体 (HDD 500GB、本体色:ジェット・ブラック)、ワイヤレスコント)	10,000
+CUH-2200AB01	【箱説なし】PlayStation4 ジェット・ブラック 500GB(CUH2200AB01) (ワイヤレスコントローラ、電源コード、HDMIケーブル、USBケーブル付)	8,000
+CUH-7200BB01	PlayStation4 Pro 1TB:ジェット・ブラック(CUH7200BB01) (「プレイステーション 4」本体 (PlayStation4 Pro、HDD 1TB、本体色:ジェット)	12,001
+CUH-7200BB01	【本体同梱版】PlayStation4 Pro モンスターハンターワールド:アイスボーン マスターエディション Starter Pack 1TB(CUH7200BB01) (PS4本体(HDD:1TB)、ワイヤレスコントローラー(DUALSHOCK4)、PS4用ソフトウェア)	15,000
+HAC-S-KABAA	Nintendo Switch Joy-Con(L) ネオンブルー/(R) ネオンレッド(HACSKABAA) (本体、Joy-Con(L) ネオンブルー×1、Joy-Con(R) ネオンレッド×1個、Ninten)	3,000
+HAC-S-KABAA	Nintendo Switch本体 カラーカスタマイズ(ニンテンドーストア限定)(HACSKABAA) (Joy-Con(L/R)、Joy-Conストラップ(L/R)、Nintendo SwitchACアダ)	3,000
+HAC-S-KABAA	【箱説なし】Nintendo Switch Joy-Con(L) ネオンブルー/(R) ネオンレッド(HACSKABAA) (コントローラー×2、ACアダプター、ドック、グリップ、HDMIケーブル付)	2,250
+HAC-S-KABAA	【箱説なし】Nintendo Switch本体 カラーカスタマイズ(ニンテンドーストア限定)(HACSKABAA) (コントローラー×2、ACアダプター、ドック、グリップ、HDMIケーブル付)	2,250
+HAD-S-KABAA	Nintendo Switch Joy-Con(L) ネオンブルー/(R) ネオンレッド(HADSKABAA)(バッテリー拡張モデル) (本体、Joy-Con(L) ネオンブルー×1、Joy-Con(R) ネオンレッド×1個、Ninten)	4,000
+HAD-S-KABAA	【箱説なし】Nintendo Switch Joy-Con(L) ネオンブルー/(R) ネオンレッド(HADSKABAA)(バッテリー拡張モデル) (Joy-Con(L)、(R)、ACアダプター、ドック、グリップ、HDMIケーブル付)	3,000
+HDH-S-GAZAA	Nintendo Switch Lite グレー(HDHSGAZAA) (Nintendo Switch Lite本体、Nintendo Switch ACアダプター、セーフ)	4,000
+HDH-S-GAZAA	【箱説なし】Nintendo Switch Lite グレー(HDHSGAZAA) (ACアダプター付)	3,000
+HEG-S-KAAAA	Nintendo Switch(有機ELモデル) Joy-Con(L)/(R) ホワイト(HEGSKAAAA) (本体、Joy-Con(L)ホワイト×1、Joy-Con(R)ホワイト×1、Nintendo Swit)	11,000
+HEG-S-KAAAA	【箱説なし】Nintendo Switch(有機ELモデル) Joy-Con(L)/(R) ホワイト(HEGSKAAAA) (コントローラー×2、ACアダプター、ドッグ、Joy-Conグリップ、HDMIケーブル付)	8,800
+PCH-2000ZA11	【箱説なし】PlayStationVita Wi-Fiモデル:ブラック(PCH2000ZA11) (USBケーブル、ACアダプター、電源コード付)	5,300
+PCH-2000ZA11	PlayStationVita Wi-Fiモデル:ブラック(PCH2000ZA11) (USBケーブル×1、ACアダプター×1、電源コード×1付)	5,900
+RED-S-VAAA	Newニンテンドー3DS LL:メタリックブラック(REDSVAAA) (専用タッチペン、microSDHCメモリーカード(4GB)、ARカード6枚、かんたんスタートガイド、)	17,000
+RED-S-VAAA	【箱説なし】Newニンテンドー3DS LL:メタリックブラック(REDSVAAA) (タッチペン1本(本体付属)、SDメモリーカード(4GB)付)	15,000
+RRT-00015	Xbox Series X(RRT-00015) (本体(1TB SSD 内蔵)、ワイヤレスコントローラー(カーボンブラック)、電源ケーブル、ウルトラハ)	16,000
+RRT-00015	【箱説なし】Xbox Series X(RRT-00015) (ワイヤレスコントローラー(カーボンブラック)、電源ケーブル、ウルトラハイスピードHDMIケーブル付)	12,500
