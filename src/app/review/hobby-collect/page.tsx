@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox'
 import KaitoriWorldCta from '@/components/KaitoriWorldCta';
+import HobbyCollectCta from '@/components/HobbyCollectCta';
 
 export const metadata: Metadata = {
   title: 'ホビーコレクトの買取不可の品目と評判｜怪しい？運営会社・古物商許可を公式で確認【2026年11月】',
@@ -394,10 +395,8 @@ export default function HobbyCollectReviewPage() {
           <p className="text-sm mb-6" style={{ color: '#94A3B8' }}>
             ゲームの良品時の目安金額が公式サイトに掲載されています。買取不可の品目とキャンセル時の返送料（着払い）をご確認のうえご利用ください。
           </p>
+          <div className="mb-6"><HobbyCollectCta /></div>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://recycle-net.jp/game/" target="_blank" rel="noopener noreferrer nofollow" className="btn-primary py-3 px-8">
-              公式サイトで買取額を見る
-            </a>
             <Link href="/" className="btn-outline py-3 px-8" style={{ borderColor: 'rgba(255,255,255,0.2)', color: '#CBD5E1' }}>
               他のサービスと比較
             </Link>
