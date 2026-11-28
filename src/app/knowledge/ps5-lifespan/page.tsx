@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import AuthorBox from '@/components/AuthorBox';
 
-const TITLE = 'PS5の寿命は？全型番が修理受付中、メーカー保証1年と延長保証・修理料金・型番別の買取価格【2026年11月18日確認】';
+const TITLE = 'PS5の寿命は？壊れやすい型番の情報と全型番の修理受付状況、メーカー保証・修理料金・型番別の買取価格【2026年11月】';
 const DESCRIPTION =
-  'PS5の寿命をSIE公式のアフターサービス受付終了製品の一覧で2026年11月18日に確認しました。PS5の型番は一覧に1つも載っておらず、すべて修理受付中です。メーカー保証1年と延長保証、SIEの修理料金（メイン基板の交換30,800円など）、駿河屋の型番別買取価格をまとめています。';
+  'PS5の寿命をSIE公式の受付終了製品一覧で確認しました。PS5は全型番が修理受付中です。壊れやすい型番に関する公式データの有無と海外の報道、メーカー保証と延長保証、SIEの修理料金（メイン基板の交換30,800円など）、駿河屋の型番別買取価格をまとめています。';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -26,6 +26,9 @@ const SURVEY_DATE = '2026年11月18日';
 const SIE_END = 'https://www.playstation.com/ja-jp/support/hardware/repairs-no-longer-available/';
 const SIE_REPAIR = 'https://www.playstation.com/ja-jp/support/hardware/repairs/';
 const SIE_WARRANTY = 'https://www.playstation.com/ja-jp/support/hardware/repairs-extended-warranty-service/';
+const UPDATED = '2026年11月28日';
+const SIE_PS5 = 'https://www.playstation.com/ja-jp/ps5/';
+const SIE_SUPPORT_PS5 = 'https://www.playstation.com/ja-jp/support/hardware/ps5/';
 const SURUGAYA_SEARCH = 'https://www.suruga-ya.jp/kaitori/search_buy?category=&search_word=';
 
 // 駿河屋 公式買取検索で型番を検索した掲載価格（2026-11-18）。発売日は駿河屋の記載
@@ -67,6 +70,7 @@ const linkStyle = { color: 'var(--color-electric-green)', fontWeight: 700 } as c
 
 const faqs = [
   { q: 'PS5の寿命は何年ですか？', a: 'SIEは本体の寿命を年数では公表していません。当サイトでは、メーカーの修理が受けられる期間をひとつの目安として、SIEのアフターサービス受付終了製品の一覧を確認しました。2026年11月18日時点で、一覧にPS5の型番は1つも記載されておらず、2020年11月12日発売（駿河屋の記載）の初期型CFI-1000も修理を受け付けています。' },
+  { q: 'PS5に壊れやすい型番はありますか？', a: 'SIEは型番別の故障率や故障件数を公表しておらず、当サイトでも型番ごとの壊れやすさを示す公式のデータは確認できませんでした（2026年11月28日時点）。海外では、初期型のCFI-1000・CFI-1100で冷却に使われている液体金属のずれや漏れを指摘する報道（BGR 2026年10月30日、iXBT 2026年8月6日）がありますが、分解した愛好家や修理業者の少数の事例にもとづくもので、SIEの見解ではありません。なお、駿河屋の買取価格はCFI-1000A01・CFI-1100A01・CFI-1200A01のいずれも50,000円で、型番による差は付いていません（2026年11月18日）。' },
   { q: 'PS5の保証期間はどのくらいですか？', a: 'SIEの延長保証サービスのページでは、メーカー保証期間はお買い上げ日から1年間と記載されています。延長保証（PS5 4,400円・PS5 Pro 5,000円）はメーカー保証の1年目が終わるまでに加入が必要です。2026年11月16日〜2027年1月29日のキャンペーン期間に加入すると、保証期間が6か月延長され最大3年6か月になるとSIEは案内しています。' },
   { q: '保証が切れたPS5は修理と売却のどちらがよいですか？', a: 'SIEの修理料金（オンライン修理）はメイン基板の交換30,800円、電源ブロックの交換13,200円です。駿河屋のCFI-1200A01の買取価格は50,000円（2026年11月18日・動作品の掲載価格）で、メイン基板の交換料金を上回っています。PS4（CUH-2200）ではメイン基板の交換料金が買取価格を上回っていたため、PS5は修理して使い続ける選択肢を取りやすい状況です。' },
   { q: 'PS5を長く使うために気をつけることは？', a: 'SIEのサポートページでは、PS5の側面と背面の通風孔をふさがないこと、本体の周囲に少なくとも10cmの空間を確保すること、通風孔やその周囲にほこりをためないことが案内されています。通気性の悪い場所では本体に熱がこもり、冷却が追いつかないと電源が切れる構造になっていると記載されています。' },
@@ -76,19 +80,19 @@ const faqs = [
 export default function Ps5LifespanPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'PS5の寿命は？全型番が修理受付中、メーカー保証1年と延長保証・修理料金・型番別の買取価格', datePublished: '2026-11-18', dateModified: '2026-11-18', author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'Article', headline: 'PS5の寿命は？壊れやすい型番の情報と全型番の修理受付状況、メーカー保証・修理料金・型番別の買取価格', datePublished: '2026-11-18', dateModified: '2026-11-28', author: { '@type': 'Organization', name: 'ゲーム買取びより編集部', description: '各社公式買取ページの掲載価格を定期的に実測し、確認日を記載して比較する編集部' }, publisher: { '@type': 'Organization', name: 'ゲーム買取びより' } }) }} />
       <Breadcrumb items={[{ name: 'お役立ち', href: '/' }, { name: 'PS5の寿命' }]} />
 
       <section className="hero-gradient text-white py-12 md:py-16">
         <div className="max-w-4xl mx-auto px-4 relative z-10">
           <span className="tag-pill text-xs mb-4 inline-block" style={{ background: 'rgba(16,185,129,0.2)', color: '#34D399' }}>お役立ち情報</span>
           <h1 className="text-2xl md:text-4xl font-extrabold mb-4 leading-tight">
-            PS5の寿命と修理・保証の期間<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>修理受付の状況・保証・修理料金・買取価格をSIEと駿河屋の公式ページで確認【{SURVEY_DATE}】</span>
+            PS5の寿命と壊れやすい型番・修理・保証の期間<span className="block text-base md:text-lg font-normal mt-2" style={{ color: '#CBD5E1' }}>修理受付の状況・保証・修理料金・買取価格をSIEと駿河屋の公式ページで確認【{SURVEY_DATE}】</span>
           </h1>
           <p className="text-sm md:text-base leading-relaxed mb-6" style={{ color: '#CBD5E1' }}>
             SIEはPS5の寿命を年数で公表していません。メーカー修理の受付期間で見ると、{SURVEY_DATE}時点でSIEのアフターサービス受付終了製品の一覧にPS5の型番は1つもなく、2020年発売の初期型を含むすべての型番が修理を受け付けています。
           </p>
-          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新日：{SURVEY_DATE}（SIE・駿河屋の公式ページを同日に確認）</p>
+          <p className="text-xs" style={{ color: '#94A3B8' }}>最終更新日：{UPDATED}（修理受付・保証・修理料金・買取価格は{SURVEY_DATE}にSIE・駿河屋の公式ページで確認）</p>
         </div>
       </section>
 
@@ -99,9 +103,36 @@ export default function Ps5LifespanPage() {
             <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>修理受付：</span>SIEの受付終了製品の一覧にPS5の記載はありません（{SURVEY_DATE}確認）。</li>
             <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>保証：</span>メーカー保証はお買い上げ日から1年。延長保証（PS5 4,400円）は1年目のうちに加入が必要です。</li>
             <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>修理料金：</span>メイン基板の交換30,800円、電源ブロックの交換13,200円（オンライン修理・税込）。</li>
+            <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>壊れやすい型番：</span>SIEは型番別の故障率を公表していません。初期型（CFI-1000・1100）の液体金属を指摘する海外報道はありますが、少数の事例報告です（<a href="#fragile" style={linkStyle}>詳しく</a>）。</li>
             <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>買取価格：</span>初期型CFI-1000A01も駿河屋で50,000円。メイン基板の交換料金より高い掲載価格です。</li>
           </ul>
           <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>修理受付の状況は変わることがあります。受付終了の予定はSIEの一覧でご確認ください。</p>
+        </section>
+
+        <section className="mb-12" id="fragile">
+          <h2 className="section-heading mb-6"><span className="section-heading-bar" />壊れやすい型番はある？公式の情報と海外の報道（{UPDATED}確認）</h2>
+          <p className="text-sm mb-4" style={{ color: 'var(--color-text-light)' }}>
+            結論として、SIEは型番別の故障率や故障件数を公表しておらず、当サイトでも型番ごとの壊れやすさを比べられる公式のデータは確認できませんでした。確認できた情報を、出典の種類ごとに分けて掲載しています。
+          </p>
+          <div className="overflow-x-auto">
+            <table className="comparison-table">
+              <thead><tr><th>出典</th><th>内容</th><th>受け止め方</th></tr></thead>
+              <tbody>
+                <tr><td className="font-bold text-sm">SIE サポートページ</td><td className="text-sm">PS5のサポート情報を「CFI-1000 model group」と「CFI-2000／2100／7000 model group」の2つに分けて案内しています。</td><td className="text-sm">設計の世代の区切りを示すもので、故障の多さを示すものではありません。</td></tr>
+                <tr><td className="font-bold text-sm">SIE PS5製品ページ</td><td className="text-sm">新デザインのPS5は、従来モデルと比べてサイズが30%以上小型化し、重さはディスクドライブ搭載モデルで18%、デジタル・エディションで24%軽くなったと記載しています。</td><td className="text-sm">内部の設計が変わったことは公式に確認できますが、耐久性の比較は記載されていません。</td></tr>
+                <tr><td className="font-bold text-sm">BGR（米国・2026年10月30日）</td><td className="text-sm">中古で買う場合は初期型のCFI-1000／1100を避けるよう述べ、理由に冷却用の液体金属が漏れる可能性を挙げています。根拠は愛好家による分解とされ、調べた台数は示されていません。</td><td className="text-sm">報道機関による指摘で、SIEの見解ではありません。</td></tr>
+                <tr><td className="font-bold text-sm">iXBT（2026年8月6日）</td><td className="text-sm">修理を扱うYouTubeチャンネル「TronicsFix」が、過熱の相談があったPS5を2台分解し、いずれも液体金属がずれていたと伝えています。</td><td className="text-sm">2台の事例報告で、型番全体の故障率を示すものではありません。</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <ul className="space-y-2 text-sm mt-4" style={{ color: 'var(--color-text-light)' }}>
+            <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>買取価格には差が出ていません：</span>駿河屋の掲載価格は、CFI-1000A01・CFI-1100A01・CFI-1200A01のいずれも50,000円でした（{SURVEY_DATE}・<a href="#price" style={linkStyle}>型番別の買取価格</a>）。買取の現場では、初期型だから減額という扱いは見られません。</li>
+            <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>型番の確認：</span>型番は本体と箱に記載されています。中古で購入する場合や手放す場合は、型番とメーカー保証・延長保証の残り期間をあわせて確認すると判断しやすくなります。</li>
+            <li>・<span className="font-bold" style={{ color: 'var(--color-deep-blue)' }}>熱への対策：</span>SIEは型番を分けずに、通風孔をふさがず本体の周囲に10cm以上の空間を確保するよう案内しています。熱で電源が落ちる症状が続く場合は、<a href="#fee" style={linkStyle}>SIEの修理料金</a>と買取価格を比べて判断してください。</li>
+          </ul>
+          <p className="text-xs mt-3" style={{ color: 'var(--color-text-light)' }}>
+            出典：<a href={SIE_SUPPORT_PS5} target="_blank" rel="noopener noreferrer nofollow" style={linkStyle}>SIE PS5 サポート</a>・<a href={SIE_PS5} target="_blank" rel="noopener noreferrer nofollow" style={linkStyle}>SIE PS5製品ページ</a>（{UPDATED}確認）、<a href="https://bgr.com/2297719/used-playstation-5-model-avoid-launch/" target="_blank" rel="noopener noreferrer nofollow" style={linkStyle}>BGR</a>（2026年10月30日）、<a href="https://ixbt.games/en/news/2026/08/06/426687-starye-ps5-vse-cashhe-peregrevaiutsia-servis-ukazal-na-konstruktivnyi-nedostatok-sony.html" target="_blank" rel="noopener noreferrer nofollow" style={linkStyle}>iXBT</a>（2026年8月6日）。海外報道は事例の報告であり、型番ごとの故障率を示すものではありません。
+          </p>
         </section>
 
         <section className="mb-12" id="end">
